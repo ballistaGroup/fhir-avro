@@ -1,0 +1,60 @@
+{
+    "name": "ValueSet",
+    "type": "record",
+    "namespace": "org.hl7.fhir.avro.models",
+    "fields": [
+      {
+        "name": "resourceType",
+        "type": "string"
+      },
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "description",
+        "type": "string"
+      },
+      {
+        "name": "status",
+        "type": "string"
+      },
+      {
+        "name": "experimental",
+        "type": "boolean"
+      },
+      {
+        "name": "date",
+        "type": "int",
+        "logicalType": "date"
+      },
+      {
+        "name": "publisher",
+        "type": "string"
+      },
+      {
+        "name": "compose",
+        "type": {
+          "name": "compose",
+          "type": "record",
+          "fields": [
+            {
+              "name": "include",
+              "type": {
+                "type": "array",
+                "items": ["SimpleCode", "ValueSetPointer"]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }

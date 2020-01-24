@@ -1,0 +1,81 @@
+{
+    "name": "Patient",
+    "type": "record",
+    "namespace": "org.hl7.fhir.avro.models",
+    "fields": [
+      {
+        "name": "resourceType",
+        "type": "string"
+      },
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "identifier",
+        "type": {
+          "type": "array",
+          "items": {
+            "name": "identifier_record",
+            "type": "record",
+            "fields": [
+              {
+                "name": "system",
+                "type": "string"
+              },
+              {
+                "name": "value",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "name",
+        "type": {
+          "type": "array",
+          "items": {
+            "name": "name_record",
+            "type": "record",
+            "fields": [
+              {
+                "name": "use",
+                "type": "string"
+              },
+              {
+                "name": "family",
+                "type": "string"
+              },
+              {
+                "name": "given",
+                "type": {
+                  "type": "array",
+                  "items": "string"
+                }
+              },
+              {
+                "name": "prefix",
+                "type": {
+                  "type": "array",
+                  "items": "string"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "gender",
+        "type": "string"
+      },
+      {
+        "name": "birthDate",
+        "type": ["null", "string"]
+      },
+      {
+        "name": "maritalStatus",
+        "type": ["null", "CodeableConcept"]
+      }
+    ]
+  }

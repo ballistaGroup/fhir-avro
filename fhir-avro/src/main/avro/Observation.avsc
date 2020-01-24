@@ -1,0 +1,50 @@
+{
+    "name": "Observation",
+    "type": "record",
+    "namespace": "org.hl7.fhir.avro.models",
+    "fields": [
+      {
+        "name": "resourceType",
+        "type": "string"
+      },
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "status",
+        "type": "string"
+      },
+      {
+        "name": "category",
+        "type": ["CodeableConcept", "null"]
+      },
+      {
+        "name": "code",
+        "type": "CodeableConcept"
+      },
+      {
+        "name": "subject",
+        "type": "Reference"
+      },
+      {
+        "name": "encounter",
+        "type": ["null", "Reference"],
+        "default" : null
+      },
+      {
+        "name": "effectiveDateTime",
+        "type": "int",
+        "logicalType": "date"
+      },
+      {
+        "name": "issued",
+        "type": "int",
+        "logicalType": "date"
+      },
+      {
+        "name": "value",
+        "type": ["null", "string", "Quantity"]
+      }
+    ]
+  }

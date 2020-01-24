@@ -1,0 +1,21 @@
+{
+    "name": "Bundle",
+    "type": "record",
+    "namespace": "org.hl7.fhir.avro.models",
+    "fields": [
+        {
+            "name" : "children",
+            "type": {
+                "type" : "array",
+                "items" : [
+                    "org.hl7.fhir.avro.models.Patient", 
+                    "org.hl7.fhir.avro.models.Observation",
+                    "org.hl7.fhir.avro.models.MedicationStatement",
+                    "org.hl7.fhir.avro.models.AllergyIntolerance",
+                    "org.hl7.fhir.avro.models.Condition"
+                ]
+            }
+        }
+    ]
+    
+}

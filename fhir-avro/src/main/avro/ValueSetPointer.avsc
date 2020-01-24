@@ -1,0 +1,15 @@
+{
+  "name": "ValueSetPointer",
+  "namespace": "org.hl7.fhir.avro.models",
+  "type": "record",
+  "fields": [
+    {
+      "name": "valueSet",
+      "type": "string"
+    }
+  ]
+}
+
+
+
+    

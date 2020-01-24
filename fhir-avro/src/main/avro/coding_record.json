@@ -1,0 +1,19 @@
+{
+    "name": "coding_record",
+    "type": "record",
+    "namespace": "org.hl7.fhir.avro",
+    "fields": [
+      {
+        "name": "system",
+        "type": "string"
+      },
+      {
+        "name": "code",
+        "type": "string"
+      },
+      {
+        "name": "display",
+        "type": "string"
+      }
+    ]
+  }

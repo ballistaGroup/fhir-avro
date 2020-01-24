@@ -1,0 +1,41 @@
+{
+    "name": "Condition",
+    "type": "record",
+    "namespace": "org.hl7.fhir.avro.models",
+    "fields": [
+      {
+        "name": "resourceType",
+        "type": "string"
+      },
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "clinicalStatus",
+        "type": ["string", "null"]
+      },
+      {
+        "name": "verificationStatus",
+        "type": ["string", "null"]
+      },
+      {
+        "name": "code",
+        "type": "CodeableConcept"
+      },
+      {
+        "name": "subject",
+        "type": "Reference"
+      },
+      {
+        "name": "encounter",
+        "type": ["null", "Reference"],
+        "default" : null
+      },
+      {
+        "name": "onsetDateTime",
+        "type": "int",
+        "logicalType": "date"
+      }
+    ]
+  }

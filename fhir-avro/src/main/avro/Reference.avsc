@@ -1,0 +1,11 @@
+{
+    "name": "Reference",
+    "namespace": "org.hl7.fhir.avro.models",
+    "type": "record",
+    "fields": [
+      {
+        "name": "reference",
+        "type": "string"
+      }
+    ]
+}

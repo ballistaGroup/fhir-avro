@@ -1,0 +1,51 @@
+{
+  "name": "Procedure",
+  "type": "record",
+  "namespace": "org.hl7.fhir.avro.models",
+  "fields": [
+    {
+      "name": "resourceType",
+      "type": "string"
+    },
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "status",
+      "type": "string"
+    },
+    {
+      "name": "code",
+      "type": "CodeableConcept"
+    },
+    {
+      "name": "subject",
+      "type": "Reference"
+    },
+    {
+      "name": "encounter",
+      "type": ["null", "Reference"],
+      "default" : null
+    },
+    {
+      "name": "performedPeriod",
+      "type": {
+        "name": "performedPeriod",
+        "type": "record",
+        "fields": [
+          {
+            "name": "start",
+            "type": "int",
+            "logicalType": "date"
+          },
+          {
+            "name": "end",
+            "type": "int",
+            "logicalType": "date"
+          }
+        ]
+      }
+    }
+  ]
+}

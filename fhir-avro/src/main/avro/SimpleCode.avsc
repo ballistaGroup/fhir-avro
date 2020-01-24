@@ -1,0 +1,19 @@
+{
+  "name": "SimpleCode",
+  "namespace": "org.hl7.fhir.avro.models",
+  "type": "record",
+  "fields": [
+    {
+      "name": "code",
+      "type": "string"
+    },
+    {
+      "name": "display",
+      "type": ["string", "null"]
+    }
+  ]
+}
+
+
+
+    
