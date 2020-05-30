@@ -1,18 +1,18 @@
 {
     "name": "Bundle",
     "type": "record",
-    "namespace": "org.hl7.fhir.avro.models",
+    "namespace": "io.carrera.fhir.avro.models",
     "fields": [
         {
             "name" : "children",
             "type": {
                 "type" : "array",
                 "items" : [
-                    "org.hl7.fhir.avro.models.Patient", 
-                    "org.hl7.fhir.avro.models.Observation",
-                    "org.hl7.fhir.avro.models.MedicationStatement",
-                    "org.hl7.fhir.avro.models.AllergyIntolerance",
-                    "org.hl7.fhir.avro.models.Condition"
+                    "io.carrera.fhir.avro.models.Patient",
+                    "io.carrera.fhir.avro.models.Observation",
+                    "io.carrera.fhir.avro.models.MedicationStatement",
+                    "io.carrera.fhir.avro.models.AllergyIntolerance",
+                    "io.carrera.fhir.avro.models.Condition"
                 ]
             }
         }

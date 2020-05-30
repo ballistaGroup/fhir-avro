@@ -1,7 +1,7 @@
 {
     "name": "coding_record",
     "type": "record",
-    "namespace": "org.hl7.fhir.avro",
+    "namespace": "io.carrera.fhir.avro.models",
     "fields": [
       {
         "name": "system",

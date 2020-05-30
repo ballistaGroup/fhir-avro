@@ -1,6 +1,6 @@
 {
   "name": "SimpleCode",
-  "namespace": "org.hl7.fhir.avro.models",
+  "namespace": "io.carrera.fhir.avro.models",
   "type": "record",
   "fields": [
     {

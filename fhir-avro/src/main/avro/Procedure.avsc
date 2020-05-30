@@ -1,7 +1,7 @@
 {
   "name": "Procedure",
   "type": "record",
-  "namespace": "org.hl7.fhir.avro.models",
+  "namespace": "io.carrera.fhir.avro.models",
   "fields": [
     {
       "name": "resourceType",
