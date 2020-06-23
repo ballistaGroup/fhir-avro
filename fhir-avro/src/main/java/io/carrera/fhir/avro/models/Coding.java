@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Coding extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -3728283694237335855L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Coding\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"},{\"name\":\"display\",\"type\":\"string\"}]}");
+  private static final long serialVersionUID = 7297540648989100459L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Coding\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"system\",\"type\":[\"string\",\"null\"]},{\"name\":\"code\",\"type\":[\"string\",\"null\"]},{\"name\":\"display\",\"type\":[\"string\",\"null\"]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -418,11 +418,29 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
-    out.writeString(this.system);
+    if (this.system == null) {
+      out.writeIndex(1);
+      out.writeNull();
+    } else {
+      out.writeIndex(0);
+      out.writeString(this.system);
+    }
 
-    out.writeString(this.code);
+    if (this.code == null) {
+      out.writeIndex(1);
+      out.writeNull();
+    } else {
+      out.writeIndex(0);
+      out.writeString(this.code);
+    }
 
-    out.writeString(this.display);
+    if (this.display == null) {
+      out.writeIndex(1);
+      out.writeNull();
+    } else {
+      out.writeIndex(0);
+      out.writeString(this.display);
+    }
 
   }
 
@@ -431,25 +449,55 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
   {
     org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
     if (fieldOrder == null) {
-      this.system = in.readString(this.system instanceof Utf8 ? (Utf8)this.system : null);
+      if (in.readIndex() != 0) {
+        in.readNull();
+        this.system = null;
+      } else {
+        this.system = in.readString(this.system instanceof Utf8 ? (Utf8)this.system : null);
+      }
 
-      this.code = in.readString(this.code instanceof Utf8 ? (Utf8)this.code : null);
+      if (in.readIndex() != 0) {
+        in.readNull();
+        this.code = null;
+      } else {
+        this.code = in.readString(this.code instanceof Utf8 ? (Utf8)this.code : null);
+      }
 
-      this.display = in.readString(this.display instanceof Utf8 ? (Utf8)this.display : null);
+      if (in.readIndex() != 0) {
+        in.readNull();
+        this.display = null;
+      } else {
+        this.display = in.readString(this.display instanceof Utf8 ? (Utf8)this.display : null);
+      }
 
     } else {
       for (int i = 0; i < 3; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
-          this.system = in.readString(this.system instanceof Utf8 ? (Utf8)this.system : null);
+          if (in.readIndex() != 0) {
+            in.readNull();
+            this.system = null;
+          } else {
+            this.system = in.readString(this.system instanceof Utf8 ? (Utf8)this.system : null);
+          }
           break;
 
         case 1:
-          this.code = in.readString(this.code instanceof Utf8 ? (Utf8)this.code : null);
+          if (in.readIndex() != 0) {
+            in.readNull();
+            this.code = null;
+          } else {
+            this.code = in.readString(this.code instanceof Utf8 ? (Utf8)this.code : null);
+          }
           break;
 
         case 2:
-          this.display = in.readString(this.display instanceof Utf8 ? (Utf8)this.display : null);
+          if (in.readIndex() != 0) {
+            in.readNull();
+            this.display = null;
+          } else {
+            this.display = in.readString(this.display instanceof Utf8 ? (Utf8)this.display : null);
+          }
           break;
 
         default:

@@ -13,15 +13,15 @@
             "fields": [
               {
                 "name": "system",
-                "type": "string"
+                "type": ["string", "null"]
               },
               {
                 "name": "code",
-                "type": "string"
+                "type": ["string", "null"]
               },
               {
                 "name": "display",
-                "type": "string"
+                "type": ["string", "null"]
               }
             ]
           }
