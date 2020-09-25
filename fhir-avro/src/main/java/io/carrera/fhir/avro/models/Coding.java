@@ -71,9 +71,9 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence system;
-  @Deprecated public java.lang.CharSequence code;
-  @Deprecated public java.lang.CharSequence display;
+   private java.lang.CharSequence system;
+   private java.lang.CharSequence code;
+   private java.lang.CharSequence display;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -102,7 +102,7 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
     case 0: return system;
     case 1: return code;
     case 2: return display;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -113,7 +113,7 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
     case 0: system = (java.lang.CharSequence)value$; break;
     case 1: code = (java.lang.CharSequence)value$; break;
     case 2: display = (java.lang.CharSequence)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 

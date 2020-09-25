@@ -71,8 +71,8 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.util.List<io.carrera.fhir.avro.models.Coding> coding;
-  @Deprecated public java.lang.CharSequence text;
+   private java.util.List<io.carrera.fhir.avro.models.Coding> coding;
+   private java.lang.CharSequence text;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -98,7 +98,7 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
     switch (field$) {
     case 0: return coding;
     case 1: return text;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -108,7 +108,7 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
     switch (field$) {
     case 0: coding = (java.util.List<io.carrera.fhir.avro.models.Coding>)value$; break;
     case 1: text = (java.lang.CharSequence)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 

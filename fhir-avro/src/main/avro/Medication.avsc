@@ -1,0 +1,78 @@
+{
+  "name" : "Medication",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "resourceType",
+    "type" : "string"
+  }, {
+    "name" : "id",
+    "type" : [ "null",
+    {
+     "name" : "id",
+     "type" : "string"
+   } ]
+  }, {
+    "name" : "implicitRules",
+    "type" : [ "null", {
+                            "name" : "uri",
+                            "type" : "string"
+                          } ]
+  }, {
+    "name" : "language",
+    "type" : [ "null", {
+                            "name" : "code",
+                            "type" : "string"
+                          } ]
+  }, {
+    "name" : "text",
+    "type" : [ "null", {
+                                                   "name" : "Narrative",
+                                                   "type" : "string"
+                                                 } ]
+  }, {
+    "name" : "code",
+    "type" : [ "null",
+    {
+     "name" : "CodeableConcept",
+     "type" : "string"
+   } ]
+  }, {
+    "name" : "status",
+    "type" : [ "null",
+    {
+     "name" : "code",
+     "type" : "string"
+   }  ]
+  }, {
+    "name" : "manufacturer",
+    "type" : [ "null",
+    {
+     "name" : "Reference",
+     "type" : "string"
+   }  ]
+  }, {
+    "name" : "form",
+    "type" : [ "null",
+    {
+     "name" : "CodeableConcept",
+     "type" : "string"
+   }  ]
+  }, {
+    "name" : "amount",
+    "type" : [ "null",
+    {
+     "name" : "Ratio",
+     "type" : "string"
+   }  ]
+  }, {
+    "name" : "ingredient",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ]
+  }, {
+    "name" : "batch",
+    "type" : [ "null", "string" ]
+  } ],
+  "namespace" : "com.optum.fhir.avro.models"
+}

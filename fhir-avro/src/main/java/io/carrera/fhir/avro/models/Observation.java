@@ -14,11 +14,14 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Observation extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 8253896336423666976L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Observation\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"},{\"name\":\"display\",\"type\":\"string\"}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]},\"null\"]},{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"effectiveDateTime\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"issued\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"value\",\"type\":[\"null\",\"string\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":\"float\"},{\"name\":\"unit\",\"type\":\"string\"},{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"}]}]}]}");
+  private static final long serialVersionUID = -373398972945619761L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Observation\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"string\",\"null\"]},{\"name\":\"code\",\"type\":[\"string\",\"null\"]},{\"name\":\"display\",\"type\":[\"string\",\"null\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]},\"null\"]},{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"effective\",\"type\":[\"null\",{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}]},{\"name\":\"issued\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"value\",\"type\":[\"null\",\"string\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":\"float\"},{\"name\":\"unit\",\"type\":\"string\"},{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"}]}]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
+static {
+    MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.TimestampMillisConversion());
+  }
 
   private static final BinaryMessageEncoder<Observation> ENCODER =
       new BinaryMessageEncoder<Observation>(MODEL$, SCHEMA$);
@@ -71,16 +74,16 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence resourceType;
-  @Deprecated public java.lang.CharSequence id;
-  @Deprecated public java.lang.CharSequence status;
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept category;
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept code;
-  @Deprecated public io.carrera.fhir.avro.models.Reference subject;
-  @Deprecated public io.carrera.fhir.avro.models.Reference encounter;
-  @Deprecated public int effectiveDateTime;
-  @Deprecated public int issued;
-  @Deprecated public java.lang.Object value;
+   private java.lang.CharSequence resourceType;
+   private java.lang.CharSequence id;
+   private java.lang.CharSequence status;
+   private io.carrera.fhir.avro.models.CodeableConcept category;
+   private io.carrera.fhir.avro.models.CodeableConcept code;
+   private io.carrera.fhir.avro.models.Reference subject;
+   private io.carrera.fhir.avro.models.Reference encounter;
+   private java.time.Instant effective;
+   private int issued;
+   private java.lang.Object value;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -98,11 +101,11 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
    * @param code The new value for code
    * @param subject The new value for subject
    * @param encounter The new value for encounter
-   * @param effectiveDateTime The new value for effectiveDateTime
+   * @param effective The new value for effective
    * @param issued The new value for issued
    * @param value The new value for value
    */
-  public Observation(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.lang.Integer effectiveDateTime, java.lang.Integer issued, java.lang.Object value) {
+  public Observation(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.time.Instant effective, java.lang.Integer issued, java.lang.Object value) {
     this.resourceType = resourceType;
     this.id = id;
     this.status = status;
@@ -110,7 +113,7 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
     this.code = code;
     this.subject = subject;
     this.encounter = encounter;
-    this.effectiveDateTime = effectiveDateTime;
+    this.effective = effective;
     this.issued = issued;
     this.value = value;
   }
@@ -127,10 +130,10 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
     case 4: return code;
     case 5: return subject;
     case 6: return encounter;
-    case 7: return effectiveDateTime;
+    case 7: return effective;
     case 8: return issued;
     case 9: return value;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -145,10 +148,10 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
     case 4: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     case 5: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 6: encounter = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 7: effectiveDateTime = (java.lang.Integer)value$; break;
+    case 7: effective = (java.time.Instant)value$; break;
     case 8: issued = (java.lang.Integer)value$; break;
     case 9: value = value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -272,20 +275,20 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
   }
 
   /**
-   * Gets the value of the 'effectiveDateTime' field.
-   * @return The value of the 'effectiveDateTime' field.
+   * Gets the value of the 'effective' field.
+   * @return The value of the 'effective' field.
    */
-  public int getEffectiveDateTime() {
-    return effectiveDateTime;
+  public java.time.Instant getEffective() {
+    return effective;
   }
 
 
   /**
-   * Sets the value of the 'effectiveDateTime' field.
+   * Sets the value of the 'effective' field.
    * @param value the value to set.
    */
-  public void setEffectiveDateTime(int value) {
-    this.effectiveDateTime = value;
+  public void setEffective(java.time.Instant value) {
+    this.effective = value;
   }
 
   /**
@@ -374,7 +377,7 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
     private io.carrera.fhir.avro.models.Reference.Builder subjectBuilder;
     private io.carrera.fhir.avro.models.Reference encounter;
     private io.carrera.fhir.avro.models.Reference.Builder encounterBuilder;
-    private int effectiveDateTime;
+    private java.time.Instant effective;
     private int issued;
     private java.lang.Object value;
 
@@ -429,8 +432,8 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
       if (other.hasEncounterBuilder()) {
         this.encounterBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getEncounterBuilder());
       }
-      if (isValidValue(fields()[7], other.effectiveDateTime)) {
-        this.effectiveDateTime = data().deepCopy(fields()[7].schema(), other.effectiveDateTime);
+      if (isValidValue(fields()[7], other.effective)) {
+        this.effective = data().deepCopy(fields()[7].schema(), other.effective);
         fieldSetFlags()[7] = other.fieldSetFlags()[7];
       }
       if (isValidValue(fields()[8], other.issued)) {
@@ -481,8 +484,8 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
         fieldSetFlags()[6] = true;
       }
       this.encounterBuilder = null;
-      if (isValidValue(fields()[7], other.effectiveDateTime)) {
-        this.effectiveDateTime = data().deepCopy(fields()[7].schema(), other.effectiveDateTime);
+      if (isValidValue(fields()[7], other.effective)) {
+        this.effective = data().deepCopy(fields()[7].schema(), other.effective);
         fieldSetFlags()[7] = true;
       }
       if (isValidValue(fields()[8], other.issued)) {
@@ -916,40 +919,41 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
     }
 
     /**
-      * Gets the value of the 'effectiveDateTime' field.
+      * Gets the value of the 'effective' field.
       * @return The value.
       */
-    public int getEffectiveDateTime() {
-      return effectiveDateTime;
+    public java.time.Instant getEffective() {
+      return effective;
     }
 
 
     /**
-      * Sets the value of the 'effectiveDateTime' field.
-      * @param value The value of 'effectiveDateTime'.
+      * Sets the value of the 'effective' field.
+      * @param value The value of 'effective'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Observation.Builder setEffectiveDateTime(int value) {
+    public io.carrera.fhir.avro.models.Observation.Builder setEffective(java.time.Instant value) {
       validate(fields()[7], value);
-      this.effectiveDateTime = value;
+      this.effective = value;
       fieldSetFlags()[7] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'effectiveDateTime' field has been set.
-      * @return True if the 'effectiveDateTime' field has been set, false otherwise.
+      * Checks whether the 'effective' field has been set.
+      * @return True if the 'effective' field has been set, false otherwise.
       */
-    public boolean hasEffectiveDateTime() {
+    public boolean hasEffective() {
       return fieldSetFlags()[7];
     }
 
 
     /**
-      * Clears the value of the 'effectiveDateTime' field.
+      * Clears the value of the 'effective' field.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Observation.Builder clearEffectiveDateTime() {
+    public io.carrera.fhir.avro.models.Observation.Builder clearEffective() {
+      effective = null;
       fieldSetFlags()[7] = false;
       return this;
     }
@@ -1081,7 +1085,7 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
         } else {
           record.encounter = fieldSetFlags()[6] ? this.encounter : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[6]);
         }
-        record.effectiveDateTime = fieldSetFlags()[7] ? this.effectiveDateTime : (java.lang.Integer) defaultValue(fields()[7]);
+        record.effective = fieldSetFlags()[7] ? this.effective : (java.time.Instant) defaultValue(fields()[7]);
         record.issued = fieldSetFlags()[8] ? this.issued : (java.lang.Integer) defaultValue(fields()[8]);
         record.value = fieldSetFlags()[9] ? this.value :  defaultValue(fields()[9]);
         return record;

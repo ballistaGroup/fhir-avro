@@ -1,0 +1,88 @@
+{
+  "name" : "Goal",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "resourceType",
+    "type" : "string"
+  }, {
+    "name" : "identifier",
+    "type" : [ "null", {
+      "type" : "string"
+    } ]
+  }, {
+    "name" : "lifecycleStatus",
+    "type" : [ "null", {
+      "type" : "string"
+    } ]
+  }, {
+    "name" : "achievementStatus",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "category",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ]
+  }, {
+    "name" : "priority",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "description",
+    "type" : "string"
+  }, {
+    "name" : "subject",
+    "type" : "string"
+  }, {
+    "name" : "startDate",
+    "type" : [ "null", {
+      "type" : "int",
+      "logicalType" : "date"
+    } ]
+  }, {
+    "name" : "startCodeableConcept",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "target",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ]
+  }, {
+    "name" : "statusDate",
+    "type" : [ "null", {
+      "type" : "int",
+      "logicalType" : "date"
+    } ]
+  }, {
+    "name" : "statusReason",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "expressedBy",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "addresses",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ]
+  }, {
+    "name" : "note",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ]
+  }, {
+    "name" : "outcomeCode",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ]
+  }, {
+    "name" : "outcomeReference",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ]
+  } ],
+  "namespace" : "com.optum.fhir.avro.models"
+}

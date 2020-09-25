@@ -1,0 +1,6 @@
+{
+  "name" : "dateTime",
+  "type" : "long",
+  "logicalType" : "timestamp-millis",
+  "namespace" : "com.optum.fhir.avro.models"
+}

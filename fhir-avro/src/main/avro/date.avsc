@@ -1,0 +1,6 @@
+{
+  "name" : "date",
+  "type" : "int",
+  "logicalType" : "date",
+  "namespace" : "com.optum.fhir.avro.models"
+}
