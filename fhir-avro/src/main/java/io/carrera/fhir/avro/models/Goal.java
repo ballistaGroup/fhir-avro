@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.optum.fhir.avro.models;
+package io.carrera.fhir.avro.models;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Goal extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 2711868023707572030L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Goal\",\"namespace\":\"com.optum.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"identifier\",\"type\":[\"null\",\"string\"]},{\"name\":\"lifecycleStatus\",\"type\":[\"null\",\"string\"]},{\"name\":\"achievementStatus\",\"type\":[\"null\",\"string\"]},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"priority\",\"type\":[\"null\",\"string\"]},{\"name\":\"description\",\"type\":\"string\"},{\"name\":\"subject\",\"type\":\"string\"},{\"name\":\"startDate\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"}]},{\"name\":\"startCodeableConcept\",\"type\":[\"null\",\"string\"]},{\"name\":\"target\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"statusDate\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"}]},{\"name\":\"statusReason\",\"type\":[\"null\",\"string\"]},{\"name\":\"expressedBy\",\"type\":[\"null\",\"string\"]},{\"name\":\"addresses\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"note\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"outcomeCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"outcomeReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]}]}");
+  private static final long serialVersionUID = 6686149623311178909L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Goal\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"identifier\",\"type\":[\"null\",\"string\"]},{\"name\":\"lifecycleStatus\",\"type\":[\"null\",\"string\"]},{\"name\":\"achievementStatus\",\"type\":[\"null\",\"string\"]},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"priority\",\"type\":[\"null\",\"string\"]},{\"name\":\"description\",\"type\":\"string\"},{\"name\":\"subject\",\"type\":\"string\"},{\"name\":\"startDate\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"}]},{\"name\":\"startCodeableConcept\",\"type\":[\"null\",\"string\"]},{\"name\":\"target\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"statusDate\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"}]},{\"name\":\"statusReason\",\"type\":[\"null\",\"string\"]},{\"name\":\"expressedBy\",\"type\":[\"null\",\"string\"]},{\"name\":\"addresses\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"note\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"outcomeCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"outcomeReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -505,8 +505,8 @@ static {
    * Creates a new Goal RecordBuilder.
    * @return A new Goal RecordBuilder
    */
-  public static com.optum.fhir.avro.models.Goal.Builder newBuilder() {
-    return new com.optum.fhir.avro.models.Goal.Builder();
+  public static io.carrera.fhir.avro.models.Goal.Builder newBuilder() {
+    return new io.carrera.fhir.avro.models.Goal.Builder();
   }
 
   /**
@@ -514,11 +514,11 @@ static {
    * @param other The existing builder to copy.
    * @return A new Goal RecordBuilder
    */
-  public static com.optum.fhir.avro.models.Goal.Builder newBuilder(com.optum.fhir.avro.models.Goal.Builder other) {
+  public static io.carrera.fhir.avro.models.Goal.Builder newBuilder(io.carrera.fhir.avro.models.Goal.Builder other) {
     if (other == null) {
-      return new com.optum.fhir.avro.models.Goal.Builder();
+      return new io.carrera.fhir.avro.models.Goal.Builder();
     } else {
-      return new com.optum.fhir.avro.models.Goal.Builder(other);
+      return new io.carrera.fhir.avro.models.Goal.Builder(other);
     }
   }
 
@@ -527,11 +527,11 @@ static {
    * @param other The existing instance to copy.
    * @return A new Goal RecordBuilder
    */
-  public static com.optum.fhir.avro.models.Goal.Builder newBuilder(com.optum.fhir.avro.models.Goal other) {
+  public static io.carrera.fhir.avro.models.Goal.Builder newBuilder(io.carrera.fhir.avro.models.Goal other) {
     if (other == null) {
-      return new com.optum.fhir.avro.models.Goal.Builder();
+      return new io.carrera.fhir.avro.models.Goal.Builder();
     } else {
-      return new com.optum.fhir.avro.models.Goal.Builder(other);
+      return new io.carrera.fhir.avro.models.Goal.Builder(other);
     }
   }
 
@@ -570,7 +570,7 @@ static {
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.optum.fhir.avro.models.Goal.Builder other) {
+    private Builder(io.carrera.fhir.avro.models.Goal.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.resourceType)) {
         this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
@@ -650,7 +650,7 @@ static {
      * Creates a Builder by copying an existing Goal instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.optum.fhir.avro.models.Goal other) {
+    private Builder(io.carrera.fhir.avro.models.Goal other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.resourceType)) {
         this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
@@ -740,7 +740,7 @@ static {
       * @param value The value of 'resourceType'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setResourceType(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setResourceType(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.resourceType = value;
       fieldSetFlags()[0] = true;
@@ -760,7 +760,7 @@ static {
       * Clears the value of the 'resourceType' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearResourceType() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearResourceType() {
       resourceType = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -780,7 +780,7 @@ static {
       * @param value The value of 'identifier'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setIdentifier(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setIdentifier(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.identifier = value;
       fieldSetFlags()[1] = true;
@@ -800,7 +800,7 @@ static {
       * Clears the value of the 'identifier' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearIdentifier() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearIdentifier() {
       identifier = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -820,7 +820,7 @@ static {
       * @param value The value of 'lifecycleStatus'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setLifecycleStatus(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setLifecycleStatus(java.lang.CharSequence value) {
       validate(fields()[2], value);
       this.lifecycleStatus = value;
       fieldSetFlags()[2] = true;
@@ -840,7 +840,7 @@ static {
       * Clears the value of the 'lifecycleStatus' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearLifecycleStatus() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearLifecycleStatus() {
       lifecycleStatus = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -860,7 +860,7 @@ static {
       * @param value The value of 'achievementStatus'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setAchievementStatus(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setAchievementStatus(java.lang.CharSequence value) {
       validate(fields()[3], value);
       this.achievementStatus = value;
       fieldSetFlags()[3] = true;
@@ -880,7 +880,7 @@ static {
       * Clears the value of the 'achievementStatus' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearAchievementStatus() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearAchievementStatus() {
       achievementStatus = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -900,7 +900,7 @@ static {
       * @param value The value of 'category'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setCategory(java.util.List<java.lang.CharSequence> value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setCategory(java.util.List<java.lang.CharSequence> value) {
       validate(fields()[4], value);
       this.category = value;
       fieldSetFlags()[4] = true;
@@ -920,7 +920,7 @@ static {
       * Clears the value of the 'category' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearCategory() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearCategory() {
       category = null;
       fieldSetFlags()[4] = false;
       return this;
@@ -940,7 +940,7 @@ static {
       * @param value The value of 'priority'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setPriority(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setPriority(java.lang.CharSequence value) {
       validate(fields()[5], value);
       this.priority = value;
       fieldSetFlags()[5] = true;
@@ -960,7 +960,7 @@ static {
       * Clears the value of the 'priority' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearPriority() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearPriority() {
       priority = null;
       fieldSetFlags()[5] = false;
       return this;
@@ -980,7 +980,7 @@ static {
       * @param value The value of 'description'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setDescription(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setDescription(java.lang.CharSequence value) {
       validate(fields()[6], value);
       this.description = value;
       fieldSetFlags()[6] = true;
@@ -1000,7 +1000,7 @@ static {
       * Clears the value of the 'description' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearDescription() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearDescription() {
       description = null;
       fieldSetFlags()[6] = false;
       return this;
@@ -1020,7 +1020,7 @@ static {
       * @param value The value of 'subject'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setSubject(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setSubject(java.lang.CharSequence value) {
       validate(fields()[7], value);
       this.subject = value;
       fieldSetFlags()[7] = true;
@@ -1040,7 +1040,7 @@ static {
       * Clears the value of the 'subject' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearSubject() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearSubject() {
       subject = null;
       fieldSetFlags()[7] = false;
       return this;
@@ -1060,7 +1060,7 @@ static {
       * @param value The value of 'startDate'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setStartDate(java.time.LocalDate value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setStartDate(java.time.LocalDate value) {
       validate(fields()[8], value);
       this.startDate = value;
       fieldSetFlags()[8] = true;
@@ -1080,7 +1080,7 @@ static {
       * Clears the value of the 'startDate' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearStartDate() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearStartDate() {
       startDate = null;
       fieldSetFlags()[8] = false;
       return this;
@@ -1100,7 +1100,7 @@ static {
       * @param value The value of 'startCodeableConcept'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setStartCodeableConcept(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setStartCodeableConcept(java.lang.CharSequence value) {
       validate(fields()[9], value);
       this.startCodeableConcept = value;
       fieldSetFlags()[9] = true;
@@ -1120,7 +1120,7 @@ static {
       * Clears the value of the 'startCodeableConcept' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearStartCodeableConcept() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearStartCodeableConcept() {
       startCodeableConcept = null;
       fieldSetFlags()[9] = false;
       return this;
@@ -1140,7 +1140,7 @@ static {
       * @param value The value of 'target'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setTarget(java.util.List<java.lang.CharSequence> value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setTarget(java.util.List<java.lang.CharSequence> value) {
       validate(fields()[10], value);
       this.target = value;
       fieldSetFlags()[10] = true;
@@ -1160,7 +1160,7 @@ static {
       * Clears the value of the 'target' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearTarget() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearTarget() {
       target = null;
       fieldSetFlags()[10] = false;
       return this;
@@ -1180,7 +1180,7 @@ static {
       * @param value The value of 'statusDate'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setStatusDate(java.time.LocalDate value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setStatusDate(java.time.LocalDate value) {
       validate(fields()[11], value);
       this.statusDate = value;
       fieldSetFlags()[11] = true;
@@ -1200,7 +1200,7 @@ static {
       * Clears the value of the 'statusDate' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearStatusDate() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearStatusDate() {
       statusDate = null;
       fieldSetFlags()[11] = false;
       return this;
@@ -1220,7 +1220,7 @@ static {
       * @param value The value of 'statusReason'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setStatusReason(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setStatusReason(java.lang.CharSequence value) {
       validate(fields()[12], value);
       this.statusReason = value;
       fieldSetFlags()[12] = true;
@@ -1240,7 +1240,7 @@ static {
       * Clears the value of the 'statusReason' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearStatusReason() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearStatusReason() {
       statusReason = null;
       fieldSetFlags()[12] = false;
       return this;
@@ -1260,7 +1260,7 @@ static {
       * @param value The value of 'expressedBy'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setExpressedBy(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setExpressedBy(java.lang.CharSequence value) {
       validate(fields()[13], value);
       this.expressedBy = value;
       fieldSetFlags()[13] = true;
@@ -1280,7 +1280,7 @@ static {
       * Clears the value of the 'expressedBy' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearExpressedBy() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearExpressedBy() {
       expressedBy = null;
       fieldSetFlags()[13] = false;
       return this;
@@ -1300,7 +1300,7 @@ static {
       * @param value The value of 'addresses'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setAddresses(java.util.List<java.lang.CharSequence> value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setAddresses(java.util.List<java.lang.CharSequence> value) {
       validate(fields()[14], value);
       this.addresses = value;
       fieldSetFlags()[14] = true;
@@ -1320,7 +1320,7 @@ static {
       * Clears the value of the 'addresses' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearAddresses() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearAddresses() {
       addresses = null;
       fieldSetFlags()[14] = false;
       return this;
@@ -1340,7 +1340,7 @@ static {
       * @param value The value of 'note'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setNote(java.util.List<java.lang.CharSequence> value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setNote(java.util.List<java.lang.CharSequence> value) {
       validate(fields()[15], value);
       this.note = value;
       fieldSetFlags()[15] = true;
@@ -1360,7 +1360,7 @@ static {
       * Clears the value of the 'note' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearNote() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearNote() {
       note = null;
       fieldSetFlags()[15] = false;
       return this;
@@ -1380,7 +1380,7 @@ static {
       * @param value The value of 'outcomeCode'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setOutcomeCode(java.util.List<java.lang.CharSequence> value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setOutcomeCode(java.util.List<java.lang.CharSequence> value) {
       validate(fields()[16], value);
       this.outcomeCode = value;
       fieldSetFlags()[16] = true;
@@ -1400,7 +1400,7 @@ static {
       * Clears the value of the 'outcomeCode' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearOutcomeCode() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearOutcomeCode() {
       outcomeCode = null;
       fieldSetFlags()[16] = false;
       return this;
@@ -1420,7 +1420,7 @@ static {
       * @param value The value of 'outcomeReference'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder setOutcomeReference(java.util.List<java.lang.CharSequence> value) {
+    public io.carrera.fhir.avro.models.Goal.Builder setOutcomeReference(java.util.List<java.lang.CharSequence> value) {
       validate(fields()[17], value);
       this.outcomeReference = value;
       fieldSetFlags()[17] = true;
@@ -1440,7 +1440,7 @@ static {
       * Clears the value of the 'outcomeReference' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Goal.Builder clearOutcomeReference() {
+    public io.carrera.fhir.avro.models.Goal.Builder clearOutcomeReference() {
       outcomeReference = null;
       fieldSetFlags()[17] = false;
       return this;

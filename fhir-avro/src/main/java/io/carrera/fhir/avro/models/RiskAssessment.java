@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.optum.fhir.avro.models;
+package io.carrera.fhir.avro.models;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class RiskAssessment extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 2274370332163483249L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"RiskAssessment\",\"namespace\":\"com.optum.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"meta\",\"type\":[\"null\",\"string\"]},{\"name\":\"implicitRules\",\"type\":[\"null\",\"string\"]},{\"name\":\"language\",\"type\":[\"null\",\"string\"]},{\"name\":\"text\",\"type\":[\"null\",\"string\"]},{\"name\":\"contained\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"identifier\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"basedOn\",\"type\":[\"null\",\"string\"]},{\"name\":\"parent\",\"type\":[\"null\",\"string\"]},{\"name\":\"status\",\"type\":[\"null\",\"string\"]},{\"name\":\"method\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"subject\",\"type\":\"string\"},{\"name\":\"encounter\",\"type\":[\"null\",\"string\"]},{\"name\":\"occurrenceDateTime\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]},{\"name\":\"occurrencePeriod\",\"type\":[\"null\",\"string\"]},{\"name\":\"condition\",\"type\":[\"null\",\"string\"]},{\"name\":\"performer\",\"type\":[\"null\",\"string\"]},{\"name\":\"reasonCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"reasonReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"basis\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"prediction\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"mitigation\",\"type\":[\"null\",\"string\"]},{\"name\":\"note\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]}]}");
+  private static final long serialVersionUID = -6887954656896147284L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"RiskAssessment\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"meta\",\"type\":[\"null\",\"string\"]},{\"name\":\"implicitRules\",\"type\":[\"null\",\"string\"]},{\"name\":\"language\",\"type\":[\"null\",\"string\"]},{\"name\":\"text\",\"type\":[\"null\",\"string\"]},{\"name\":\"contained\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"identifier\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"basedOn\",\"type\":[\"null\",\"string\"]},{\"name\":\"parent\",\"type\":[\"null\",\"string\"]},{\"name\":\"status\",\"type\":[\"null\",\"string\"]},{\"name\":\"method\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"subject\",\"type\":\"string\"},{\"name\":\"encounter\",\"type\":[\"null\",\"string\"]},{\"name\":\"occurrenceDateTime\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]},{\"name\":\"occurrencePeriod\",\"type\":[\"null\",\"string\"]},{\"name\":\"condition\",\"type\":[\"null\",\"string\"]},{\"name\":\"performer\",\"type\":[\"null\",\"string\"]},{\"name\":\"reasonCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"reasonReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"basis\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"prediction\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"mitigation\",\"type\":[\"null\",\"string\"]},{\"name\":\"note\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -681,8 +681,8 @@ static {
    * Creates a new RiskAssessment RecordBuilder.
    * @return A new RiskAssessment RecordBuilder
    */
-  public static com.optum.fhir.avro.models.RiskAssessment.Builder newBuilder() {
-    return new com.optum.fhir.avro.models.RiskAssessment.Builder();
+  public static io.carrera.fhir.avro.models.RiskAssessment.Builder newBuilder() {
+    return new io.carrera.fhir.avro.models.RiskAssessment.Builder();
   }
 
   /**
@@ -690,11 +690,11 @@ static {
    * @param other The existing builder to copy.
    * @return A new RiskAssessment RecordBuilder
    */
-  public static com.optum.fhir.avro.models.RiskAssessment.Builder newBuilder(com.optum.fhir.avro.models.RiskAssessment.Builder other) {
+  public static io.carrera.fhir.avro.models.RiskAssessment.Builder newBuilder(io.carrera.fhir.avro.models.RiskAssessment.Builder other) {
     if (other == null) {
-      return new com.optum.fhir.avro.models.RiskAssessment.Builder();
+      return new io.carrera.fhir.avro.models.RiskAssessment.Builder();
     } else {
-      return new com.optum.fhir.avro.models.RiskAssessment.Builder(other);
+      return new io.carrera.fhir.avro.models.RiskAssessment.Builder(other);
     }
   }
 
@@ -703,11 +703,11 @@ static {
    * @param other The existing instance to copy.
    * @return A new RiskAssessment RecordBuilder
    */
-  public static com.optum.fhir.avro.models.RiskAssessment.Builder newBuilder(com.optum.fhir.avro.models.RiskAssessment other) {
+  public static io.carrera.fhir.avro.models.RiskAssessment.Builder newBuilder(io.carrera.fhir.avro.models.RiskAssessment other) {
     if (other == null) {
-      return new com.optum.fhir.avro.models.RiskAssessment.Builder();
+      return new io.carrera.fhir.avro.models.RiskAssessment.Builder();
     } else {
-      return new com.optum.fhir.avro.models.RiskAssessment.Builder(other);
+      return new io.carrera.fhir.avro.models.RiskAssessment.Builder(other);
     }
   }
 
@@ -754,7 +754,7 @@ static {
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.optum.fhir.avro.models.RiskAssessment.Builder other) {
+    private Builder(io.carrera.fhir.avro.models.RiskAssessment.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.resourceType)) {
         this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
@@ -866,7 +866,7 @@ static {
      * Creates a Builder by copying an existing RiskAssessment instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.optum.fhir.avro.models.RiskAssessment other) {
+    private Builder(io.carrera.fhir.avro.models.RiskAssessment other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.resourceType)) {
         this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
@@ -988,7 +988,7 @@ static {
       * @param value The value of 'resourceType'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setResourceType(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setResourceType(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.resourceType = value;
       fieldSetFlags()[0] = true;
@@ -1008,7 +1008,7 @@ static {
       * Clears the value of the 'resourceType' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearResourceType() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearResourceType() {
       resourceType = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -1028,7 +1028,7 @@ static {
       * @param value The value of 'meta'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setMeta(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setMeta(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.meta = value;
       fieldSetFlags()[1] = true;
@@ -1048,7 +1048,7 @@ static {
       * Clears the value of the 'meta' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearMeta() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearMeta() {
       meta = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -1068,7 +1068,7 @@ static {
       * @param value The value of 'implicitRules'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setImplicitRules(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setImplicitRules(java.lang.CharSequence value) {
       validate(fields()[2], value);
       this.implicitRules = value;
       fieldSetFlags()[2] = true;
@@ -1088,7 +1088,7 @@ static {
       * Clears the value of the 'implicitRules' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearImplicitRules() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearImplicitRules() {
       implicitRules = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -1108,7 +1108,7 @@ static {
       * @param value The value of 'language'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setLanguage(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setLanguage(java.lang.CharSequence value) {
       validate(fields()[3], value);
       this.language = value;
       fieldSetFlags()[3] = true;
@@ -1128,7 +1128,7 @@ static {
       * Clears the value of the 'language' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearLanguage() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearLanguage() {
       language = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -1148,7 +1148,7 @@ static {
       * @param value The value of 'text'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setText(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setText(java.lang.CharSequence value) {
       validate(fields()[4], value);
       this.text = value;
       fieldSetFlags()[4] = true;
@@ -1168,7 +1168,7 @@ static {
       * Clears the value of the 'text' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearText() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearText() {
       text = null;
       fieldSetFlags()[4] = false;
       return this;
@@ -1188,7 +1188,7 @@ static {
       * @param value The value of 'contained'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setContained(java.util.List<java.lang.CharSequence> value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setContained(java.util.List<java.lang.CharSequence> value) {
       validate(fields()[5], value);
       this.contained = value;
       fieldSetFlags()[5] = true;
@@ -1208,7 +1208,7 @@ static {
       * Clears the value of the 'contained' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearContained() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearContained() {
       contained = null;
       fieldSetFlags()[5] = false;
       return this;
@@ -1228,7 +1228,7 @@ static {
       * @param value The value of 'extension'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setExtension(java.util.List<java.lang.CharSequence> value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setExtension(java.util.List<java.lang.CharSequence> value) {
       validate(fields()[6], value);
       this.extension = value;
       fieldSetFlags()[6] = true;
@@ -1248,7 +1248,7 @@ static {
       * Clears the value of the 'extension' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearExtension() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearExtension() {
       extension = null;
       fieldSetFlags()[6] = false;
       return this;
@@ -1268,7 +1268,7 @@ static {
       * @param value The value of 'modifierExtension'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setModifierExtension(java.util.List<java.lang.CharSequence> value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setModifierExtension(java.util.List<java.lang.CharSequence> value) {
       validate(fields()[7], value);
       this.modifierExtension = value;
       fieldSetFlags()[7] = true;
@@ -1288,7 +1288,7 @@ static {
       * Clears the value of the 'modifierExtension' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearModifierExtension() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearModifierExtension() {
       modifierExtension = null;
       fieldSetFlags()[7] = false;
       return this;
@@ -1308,7 +1308,7 @@ static {
       * @param value The value of 'identifier'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setIdentifier(java.util.List<java.lang.CharSequence> value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setIdentifier(java.util.List<java.lang.CharSequence> value) {
       validate(fields()[8], value);
       this.identifier = value;
       fieldSetFlags()[8] = true;
@@ -1328,7 +1328,7 @@ static {
       * Clears the value of the 'identifier' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearIdentifier() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearIdentifier() {
       identifier = null;
       fieldSetFlags()[8] = false;
       return this;
@@ -1348,7 +1348,7 @@ static {
       * @param value The value of 'basedOn'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setBasedOn(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setBasedOn(java.lang.CharSequence value) {
       validate(fields()[9], value);
       this.basedOn = value;
       fieldSetFlags()[9] = true;
@@ -1368,7 +1368,7 @@ static {
       * Clears the value of the 'basedOn' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearBasedOn() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearBasedOn() {
       basedOn = null;
       fieldSetFlags()[9] = false;
       return this;
@@ -1388,7 +1388,7 @@ static {
       * @param value The value of 'parent'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setParent(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setParent(java.lang.CharSequence value) {
       validate(fields()[10], value);
       this.parent = value;
       fieldSetFlags()[10] = true;
@@ -1408,7 +1408,7 @@ static {
       * Clears the value of the 'parent' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearParent() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearParent() {
       parent = null;
       fieldSetFlags()[10] = false;
       return this;
@@ -1428,7 +1428,7 @@ static {
       * @param value The value of 'status'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setStatus(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setStatus(java.lang.CharSequence value) {
       validate(fields()[11], value);
       this.status = value;
       fieldSetFlags()[11] = true;
@@ -1448,7 +1448,7 @@ static {
       * Clears the value of the 'status' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearStatus() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearStatus() {
       status = null;
       fieldSetFlags()[11] = false;
       return this;
@@ -1468,7 +1468,7 @@ static {
       * @param value The value of 'method'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setMethod(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setMethod(java.lang.CharSequence value) {
       validate(fields()[12], value);
       this.method = value;
       fieldSetFlags()[12] = true;
@@ -1488,7 +1488,7 @@ static {
       * Clears the value of the 'method' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearMethod() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearMethod() {
       method = null;
       fieldSetFlags()[12] = false;
       return this;
@@ -1508,7 +1508,7 @@ static {
       * @param value The value of 'code'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setCode(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setCode(java.lang.CharSequence value) {
       validate(fields()[13], value);
       this.code = value;
       fieldSetFlags()[13] = true;
@@ -1528,7 +1528,7 @@ static {
       * Clears the value of the 'code' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearCode() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearCode() {
       code = null;
       fieldSetFlags()[13] = false;
       return this;
@@ -1548,7 +1548,7 @@ static {
       * @param value The value of 'subject'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setSubject(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setSubject(java.lang.CharSequence value) {
       validate(fields()[14], value);
       this.subject = value;
       fieldSetFlags()[14] = true;
@@ -1568,7 +1568,7 @@ static {
       * Clears the value of the 'subject' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearSubject() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearSubject() {
       subject = null;
       fieldSetFlags()[14] = false;
       return this;
@@ -1588,7 +1588,7 @@ static {
       * @param value The value of 'encounter'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setEncounter(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setEncounter(java.lang.CharSequence value) {
       validate(fields()[15], value);
       this.encounter = value;
       fieldSetFlags()[15] = true;
@@ -1608,7 +1608,7 @@ static {
       * Clears the value of the 'encounter' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearEncounter() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearEncounter() {
       encounter = null;
       fieldSetFlags()[15] = false;
       return this;
@@ -1628,7 +1628,7 @@ static {
       * @param value The value of 'occurrenceDateTime'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setOccurrenceDateTime(java.lang.Object value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setOccurrenceDateTime(java.lang.Object value) {
       validate(fields()[16], value);
       this.occurrenceDateTime = value;
       fieldSetFlags()[16] = true;
@@ -1648,7 +1648,7 @@ static {
       * Clears the value of the 'occurrenceDateTime' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearOccurrenceDateTime() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearOccurrenceDateTime() {
       occurrenceDateTime = null;
       fieldSetFlags()[16] = false;
       return this;
@@ -1668,7 +1668,7 @@ static {
       * @param value The value of 'occurrencePeriod'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setOccurrencePeriod(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setOccurrencePeriod(java.lang.CharSequence value) {
       validate(fields()[17], value);
       this.occurrencePeriod = value;
       fieldSetFlags()[17] = true;
@@ -1688,7 +1688,7 @@ static {
       * Clears the value of the 'occurrencePeriod' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearOccurrencePeriod() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearOccurrencePeriod() {
       occurrencePeriod = null;
       fieldSetFlags()[17] = false;
       return this;
@@ -1708,7 +1708,7 @@ static {
       * @param value The value of 'condition'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setCondition(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setCondition(java.lang.CharSequence value) {
       validate(fields()[18], value);
       this.condition = value;
       fieldSetFlags()[18] = true;
@@ -1728,7 +1728,7 @@ static {
       * Clears the value of the 'condition' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearCondition() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearCondition() {
       condition = null;
       fieldSetFlags()[18] = false;
       return this;
@@ -1748,7 +1748,7 @@ static {
       * @param value The value of 'performer'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setPerformer(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setPerformer(java.lang.CharSequence value) {
       validate(fields()[19], value);
       this.performer = value;
       fieldSetFlags()[19] = true;
@@ -1768,7 +1768,7 @@ static {
       * Clears the value of the 'performer' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearPerformer() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearPerformer() {
       performer = null;
       fieldSetFlags()[19] = false;
       return this;
@@ -1788,7 +1788,7 @@ static {
       * @param value The value of 'reasonCode'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setReasonCode(java.util.List<java.lang.CharSequence> value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setReasonCode(java.util.List<java.lang.CharSequence> value) {
       validate(fields()[20], value);
       this.reasonCode = value;
       fieldSetFlags()[20] = true;
@@ -1808,7 +1808,7 @@ static {
       * Clears the value of the 'reasonCode' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearReasonCode() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearReasonCode() {
       reasonCode = null;
       fieldSetFlags()[20] = false;
       return this;
@@ -1828,7 +1828,7 @@ static {
       * @param value The value of 'reasonReference'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setReasonReference(java.util.List<java.lang.CharSequence> value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setReasonReference(java.util.List<java.lang.CharSequence> value) {
       validate(fields()[21], value);
       this.reasonReference = value;
       fieldSetFlags()[21] = true;
@@ -1848,7 +1848,7 @@ static {
       * Clears the value of the 'reasonReference' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearReasonReference() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearReasonReference() {
       reasonReference = null;
       fieldSetFlags()[21] = false;
       return this;
@@ -1868,7 +1868,7 @@ static {
       * @param value The value of 'basis'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setBasis(java.util.List<java.lang.CharSequence> value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setBasis(java.util.List<java.lang.CharSequence> value) {
       validate(fields()[22], value);
       this.basis = value;
       fieldSetFlags()[22] = true;
@@ -1888,7 +1888,7 @@ static {
       * Clears the value of the 'basis' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearBasis() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearBasis() {
       basis = null;
       fieldSetFlags()[22] = false;
       return this;
@@ -1908,7 +1908,7 @@ static {
       * @param value The value of 'prediction'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setPrediction(java.util.List<java.lang.CharSequence> value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setPrediction(java.util.List<java.lang.CharSequence> value) {
       validate(fields()[23], value);
       this.prediction = value;
       fieldSetFlags()[23] = true;
@@ -1928,7 +1928,7 @@ static {
       * Clears the value of the 'prediction' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearPrediction() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearPrediction() {
       prediction = null;
       fieldSetFlags()[23] = false;
       return this;
@@ -1948,7 +1948,7 @@ static {
       * @param value The value of 'mitigation'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setMitigation(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setMitigation(java.lang.CharSequence value) {
       validate(fields()[24], value);
       this.mitigation = value;
       fieldSetFlags()[24] = true;
@@ -1968,7 +1968,7 @@ static {
       * Clears the value of the 'mitigation' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearMitigation() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearMitigation() {
       mitigation = null;
       fieldSetFlags()[24] = false;
       return this;
@@ -1988,7 +1988,7 @@ static {
       * @param value The value of 'note'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder setNote(java.util.List<java.lang.CharSequence> value) {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setNote(java.util.List<java.lang.CharSequence> value) {
       validate(fields()[25], value);
       this.note = value;
       fieldSetFlags()[25] = true;
@@ -2008,7 +2008,7 @@ static {
       * Clears the value of the 'note' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.RiskAssessment.Builder clearNote() {
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearNote() {
       note = null;
       fieldSetFlags()[25] = false;
       return this;

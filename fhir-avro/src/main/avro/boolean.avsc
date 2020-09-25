@@ -1,5 +1,5 @@
 {
   "name" : "boolean",
   "type" : "boolean",
-  "namespace" : "com.optum.fhir.avro.models"
+  "namespace" : "io.carrera.fhir.avro.models"
 }

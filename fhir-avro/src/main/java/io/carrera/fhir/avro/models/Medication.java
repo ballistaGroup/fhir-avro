@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.optum.fhir.avro.models;
+package io.carrera.fhir.avro.models;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Medication extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 8098390593222099113L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Medication\",\"namespace\":\"com.optum.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"implicitRules\",\"type\":[\"null\",\"string\"]},{\"name\":\"language\",\"type\":[\"null\",\"string\"]},{\"name\":\"text\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"status\",\"type\":[\"null\",\"string\"]},{\"name\":\"manufacturer\",\"type\":[\"null\",\"string\"]},{\"name\":\"form\",\"type\":[\"null\",\"string\"]},{\"name\":\"amount\",\"type\":[\"null\",\"string\"]},{\"name\":\"ingredient\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"batch\",\"type\":[\"null\",\"string\"]}]}");
+  private static final long serialVersionUID = -5809166195618271088L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Medication\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"implicitRules\",\"type\":[\"null\",\"string\"]},{\"name\":\"language\",\"type\":[\"null\",\"string\"]},{\"name\":\"text\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"status\",\"type\":[\"null\",\"string\"]},{\"name\":\"manufacturer\",\"type\":[\"null\",\"string\"]},{\"name\":\"form\",\"type\":[\"null\",\"string\"]},{\"name\":\"amount\",\"type\":[\"null\",\"string\"]},{\"name\":\"ingredient\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"batch\",\"type\":[\"null\",\"string\"]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -370,8 +370,8 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
    * Creates a new Medication RecordBuilder.
    * @return A new Medication RecordBuilder
    */
-  public static com.optum.fhir.avro.models.Medication.Builder newBuilder() {
-    return new com.optum.fhir.avro.models.Medication.Builder();
+  public static io.carrera.fhir.avro.models.Medication.Builder newBuilder() {
+    return new io.carrera.fhir.avro.models.Medication.Builder();
   }
 
   /**
@@ -379,11 +379,11 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
    * @param other The existing builder to copy.
    * @return A new Medication RecordBuilder
    */
-  public static com.optum.fhir.avro.models.Medication.Builder newBuilder(com.optum.fhir.avro.models.Medication.Builder other) {
+  public static io.carrera.fhir.avro.models.Medication.Builder newBuilder(io.carrera.fhir.avro.models.Medication.Builder other) {
     if (other == null) {
-      return new com.optum.fhir.avro.models.Medication.Builder();
+      return new io.carrera.fhir.avro.models.Medication.Builder();
     } else {
-      return new com.optum.fhir.avro.models.Medication.Builder(other);
+      return new io.carrera.fhir.avro.models.Medication.Builder(other);
     }
   }
 
@@ -392,11 +392,11 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
    * @param other The existing instance to copy.
    * @return A new Medication RecordBuilder
    */
-  public static com.optum.fhir.avro.models.Medication.Builder newBuilder(com.optum.fhir.avro.models.Medication other) {
+  public static io.carrera.fhir.avro.models.Medication.Builder newBuilder(io.carrera.fhir.avro.models.Medication other) {
     if (other == null) {
-      return new com.optum.fhir.avro.models.Medication.Builder();
+      return new io.carrera.fhir.avro.models.Medication.Builder();
     } else {
-      return new com.optum.fhir.avro.models.Medication.Builder(other);
+      return new io.carrera.fhir.avro.models.Medication.Builder(other);
     }
   }
 
@@ -429,7 +429,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.optum.fhir.avro.models.Medication.Builder other) {
+    private Builder(io.carrera.fhir.avro.models.Medication.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.resourceType)) {
         this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
@@ -485,7 +485,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
      * Creates a Builder by copying an existing Medication instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.optum.fhir.avro.models.Medication other) {
+    private Builder(io.carrera.fhir.avro.models.Medication other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.resourceType)) {
         this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
@@ -551,7 +551,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'resourceType'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder setResourceType(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Medication.Builder setResourceType(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.resourceType = value;
       fieldSetFlags()[0] = true;
@@ -571,7 +571,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * Clears the value of the 'resourceType' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder clearResourceType() {
+    public io.carrera.fhir.avro.models.Medication.Builder clearResourceType() {
       resourceType = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -591,7 +591,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'id'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder setId(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Medication.Builder setId(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.id = value;
       fieldSetFlags()[1] = true;
@@ -611,7 +611,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * Clears the value of the 'id' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder clearId() {
+    public io.carrera.fhir.avro.models.Medication.Builder clearId() {
       id = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -631,7 +631,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'implicitRules'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder setImplicitRules(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Medication.Builder setImplicitRules(java.lang.CharSequence value) {
       validate(fields()[2], value);
       this.implicitRules = value;
       fieldSetFlags()[2] = true;
@@ -651,7 +651,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * Clears the value of the 'implicitRules' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder clearImplicitRules() {
+    public io.carrera.fhir.avro.models.Medication.Builder clearImplicitRules() {
       implicitRules = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -671,7 +671,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'language'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder setLanguage(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Medication.Builder setLanguage(java.lang.CharSequence value) {
       validate(fields()[3], value);
       this.language = value;
       fieldSetFlags()[3] = true;
@@ -691,7 +691,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * Clears the value of the 'language' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder clearLanguage() {
+    public io.carrera.fhir.avro.models.Medication.Builder clearLanguage() {
       language = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -711,7 +711,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'text'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder setText(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Medication.Builder setText(java.lang.CharSequence value) {
       validate(fields()[4], value);
       this.text = value;
       fieldSetFlags()[4] = true;
@@ -731,7 +731,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * Clears the value of the 'text' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder clearText() {
+    public io.carrera.fhir.avro.models.Medication.Builder clearText() {
       text = null;
       fieldSetFlags()[4] = false;
       return this;
@@ -751,7 +751,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'code'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder setCode(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Medication.Builder setCode(java.lang.CharSequence value) {
       validate(fields()[5], value);
       this.code = value;
       fieldSetFlags()[5] = true;
@@ -771,7 +771,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * Clears the value of the 'code' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder clearCode() {
+    public io.carrera.fhir.avro.models.Medication.Builder clearCode() {
       code = null;
       fieldSetFlags()[5] = false;
       return this;
@@ -791,7 +791,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'status'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder setStatus(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Medication.Builder setStatus(java.lang.CharSequence value) {
       validate(fields()[6], value);
       this.status = value;
       fieldSetFlags()[6] = true;
@@ -811,7 +811,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * Clears the value of the 'status' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder clearStatus() {
+    public io.carrera.fhir.avro.models.Medication.Builder clearStatus() {
       status = null;
       fieldSetFlags()[6] = false;
       return this;
@@ -831,7 +831,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'manufacturer'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder setManufacturer(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Medication.Builder setManufacturer(java.lang.CharSequence value) {
       validate(fields()[7], value);
       this.manufacturer = value;
       fieldSetFlags()[7] = true;
@@ -851,7 +851,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * Clears the value of the 'manufacturer' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder clearManufacturer() {
+    public io.carrera.fhir.avro.models.Medication.Builder clearManufacturer() {
       manufacturer = null;
       fieldSetFlags()[7] = false;
       return this;
@@ -871,7 +871,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'form'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder setForm(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Medication.Builder setForm(java.lang.CharSequence value) {
       validate(fields()[8], value);
       this.form = value;
       fieldSetFlags()[8] = true;
@@ -891,7 +891,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * Clears the value of the 'form' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder clearForm() {
+    public io.carrera.fhir.avro.models.Medication.Builder clearForm() {
       form = null;
       fieldSetFlags()[8] = false;
       return this;
@@ -911,7 +911,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'amount'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder setAmount(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Medication.Builder setAmount(java.lang.CharSequence value) {
       validate(fields()[9], value);
       this.amount = value;
       fieldSetFlags()[9] = true;
@@ -931,7 +931,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * Clears the value of the 'amount' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder clearAmount() {
+    public io.carrera.fhir.avro.models.Medication.Builder clearAmount() {
       amount = null;
       fieldSetFlags()[9] = false;
       return this;
@@ -951,7 +951,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'ingredient'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder setIngredient(java.util.List<java.lang.CharSequence> value) {
+    public io.carrera.fhir.avro.models.Medication.Builder setIngredient(java.util.List<java.lang.CharSequence> value) {
       validate(fields()[10], value);
       this.ingredient = value;
       fieldSetFlags()[10] = true;
@@ -971,7 +971,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * Clears the value of the 'ingredient' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder clearIngredient() {
+    public io.carrera.fhir.avro.models.Medication.Builder clearIngredient() {
       ingredient = null;
       fieldSetFlags()[10] = false;
       return this;
@@ -991,7 +991,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'batch'.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder setBatch(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Medication.Builder setBatch(java.lang.CharSequence value) {
       validate(fields()[11], value);
       this.batch = value;
       fieldSetFlags()[11] = true;
@@ -1011,7 +1011,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * Clears the value of the 'batch' field.
       * @return This builder.
       */
-    public com.optum.fhir.avro.models.Medication.Builder clearBatch() {
+    public io.carrera.fhir.avro.models.Medication.Builder clearBatch() {
       batch = null;
       fieldSetFlags()[11] = false;
       return this;
