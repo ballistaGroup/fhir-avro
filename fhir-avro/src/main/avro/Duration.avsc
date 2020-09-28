@@ -1,0 +1,27 @@
+{
+  "name" : "Duration",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "id",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "extension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "comparator",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "unit",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "system",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "code",
+    "type" : [ "null", "string" ]
+  } ],
+  "namespace" : "io.carrera.fhir.avro.models"
+}

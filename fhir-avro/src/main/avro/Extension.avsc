@@ -1,0 +1,18 @@
+{
+  "name" : "Extension",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "id",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "extension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "url",
+    "type" : [ "null", "string" ]
+  } ],
+  "namespace" : "io.carrera.fhir.avro.models"
+}

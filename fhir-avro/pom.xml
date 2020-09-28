@@ -34,15 +34,31 @@
          <include>**/*.avsc</include>
         </includes>
         <imports>
+            <import>${project.basedir}/src/main/avro/Extension.avsc</import>
+            <import>${project.basedir}/src/main/avro/Coding.avsc</import>
+            <import>${project.basedir}/src/main/avro/Meta.avsc</import>
+            <import>${project.basedir}/src/main/avro/Narrative.avsc</import>
+            <import>${project.basedir}/src/main/avro/Period.avsc</import>
             <import>${project.basedir}/src/main/avro/Quantity.avsc</import>
+            <import>${project.basedir}/src/main/avro/Range.avsc</import>
+            <import>${project.basedir}/src/main/avro/Ratio.avsc</import>
+            <import>${project.basedir}/src/main/avro/Duration.avsc</import>
             <import>${project.basedir}/src/main/avro/CodeableConcept.avsc</import>
             <import>${project.basedir}/src/main/avro/Reference.avsc</import>
+            <import>${project.basedir}/src/main/avro/Identifier.avsc</import>
             <import>${project.basedir}/src/main/avro/ValueSetPointer.avsc</import>
             <import>${project.basedir}/src/main/avro/Patient.avsc</import>
             <import>${project.basedir}/src/main/avro/Condition.avsc</import>
+            <import>${project.basedir}/src/main/avro/Medication_Batch.avsc</import>
+            <import>${project.basedir}/src/main/avro/Medication_Ingredient.avsc</import>
+            <import>${project.basedir}/src/main/avro/Medication.avsc</import>
             <import>${project.basedir}/src/main/avro/MedicationStatement.avsc</import>
             <import>${project.basedir}/src/main/avro/AllergyIntolerance.avsc</import>
             <import>${project.basedir}/src/main/avro/Observation.avsc</import>
+            <import>${project.basedir}/src/main/avro/RiskAssessment_Prediction.avsc</import>
+            <import>${project.basedir}/src/main/avro/RiskAssessment.avsc</import>
+            <import>${project.basedir}/src/main/avro/Goal_Target.avsc</import>
+            <import>${project.basedir}/src/main/avro/Goal.avsc</import>
         </imports>
       </configuration>
     </execution>

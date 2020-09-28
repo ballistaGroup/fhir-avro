@@ -4,104 +4,60 @@
   "fields" : [ {
     "name" : "resourceType",
     "type" : "string"
-  },
-  {
+  }, {
+    "name" : "id",
+    "type" : [ "null", "string" ]
+  }, {
     "name" : "meta",
-    "type" : [ "null",
-    {
-     "name" : "Meta",
-     "type" : "string"
-   } ]
+    "type" : [ "null", "Meta" ]
   }, {
     "name" : "implicitRules",
-    "type" : [ "null",
-    {
-     "name" : "uri",
-     "type" : "string"
-   } ]
+    "type" : [ "null", "string" ]
   }, {
     "name" : "language",
-    "type" : [ "null",
-    {
-     "name" : "code",
-     "type" : "string"
-   } ]
+    "type" : [ "null", "string" ]
   }, {
     "name" : "text",
-    "type" : [ "null",
-    {
-     "name" : "Narrative",
-     "type" : "string"
-   } ]
-  }, {
-    "name" : "contained",
-    "type" : [ "null", {
-      "type" : "array",
-      "items" : "string"
-    } ]
+    "type" : [ "null", "Narrative" ]
   }, {
     "name" : "extension",
     "type" : [ "null", {
       "type" : "array",
-      "items" : "string"
+      "items" : "Extension"
     } ]
   }, {
     "name" : "modifierExtension",
     "type" : [ "null", {
       "type" : "array",
-      "items" : "string"
+      "items" : "Extension"
     } ]
   }, {
     "name" : "identifier",
     "type" : [ "null", {
       "type" : "array",
-      "items" : "string"
+      "items" : "Identifier"
     } ]
   }, {
     "name" : "basedOn",
-    "type" : [ "null",
-    {
-     "name" : "Reference",
-     "type" : "string"
-   } ]
+    "type" : [ "null", "Reference" ]
   }, {
     "name" : "parent",
-    "type" : [ "null",
-    {
-     "name" : "Reference",
-     "type" : "string"
-   } ]
+    "type" : [ "null", "Reference" ]
   }, {
     "name" : "status",
-    "type" : [ "null",
-    {
-     "name" : "code",
-     "type" : "string"
-   } ]
+    "type" : [ "null", "string" ]
   }, {
     "name" : "method",
-    "type" : [ "null",
-    {
-     "name" : "CodeableConcept",
-     "type" : "string"
-   } ]
+    "type" : [ "null", "CodeableConcept" ]
   }, {
     "name" : "code",
-    "type" : [ "null",
-    {
-     "name" : "CodeableConcept",
-     "type" : "string"
-   } ]
+    "type" : [ "null", "CodeableConcept" ]
   }, {
     "name" : "subject",
-    "type" : "string"
+    "type" : "Reference"
   }, {
     "name" : "encounter",
-    "type" : [ "null",
-    {
-     "name" : "Reference",
-     "type" : "string"
-   }  ]
+    "type" : [ "null", "Reference" ]
   }, {
     "name" : "occurrenceDateTime",
     "type" : [ "null", {
@@ -113,46 +69,43 @@
     } ]
   }, {
     "name" : "occurrencePeriod",
-    "type" : [ "null", "string" ]
+    "type" : [ "null", "Period" ]
   }, {
     "name" : "condition",
-    "type" : [ "null", "string" ]
+    "type" : [ "null", "Reference" ]
   }, {
     "name" : "performer",
-    "type" : [ "null", "string" ]
+    "type" : [ "null", "Reference" ]
   }, {
     "name" : "reasonCode",
     "type" : [ "null", {
       "type" : "array",
-      "items" : "string"
+      "items" : "CodeableConcept"
     } ]
   }, {
     "name" : "reasonReference",
     "type" : [ "null", {
       "type" : "array",
-      "items" : "string"
+      "items" : "Reference"
     } ]
   }, {
     "name" : "basis",
     "type" : [ "null", {
       "type" : "array",
-      "items" : "string"
+      "items" : "Reference"
     } ]
   }, {
     "name" : "prediction",
     "type" : [ "null", {
       "type" : "array",
-      "items" : "string"
+      "items" : "RiskAssessment_Prediction"
     } ]
   }, {
     "name" : "mitigation",
     "type" : [ "null", "string" ]
   }, {
     "name" : "note",
-    "type" : [ "null", {
-      "type" : "array",
-      "items" : "string"
-    } ]
+    "type" : [ "null", "string"]
   } ],
   "namespace" : "io.carrera.fhir.avro.models"
 }

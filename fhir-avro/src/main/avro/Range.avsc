@@ -1,0 +1,21 @@
+{
+  "name" : "Range",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "id",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "extension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "low",
+    "type" : [ "null", "Quantity" ]
+  }, {
+    "name" : "high",
+    "type" : [ "null", "Quantity" ]
+  } ],
+  "namespace" : "io.carrera.fhir.avro.models"
+}

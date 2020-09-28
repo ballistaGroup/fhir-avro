@@ -6,73 +6,61 @@
     "type" : "string"
   }, {
     "name" : "id",
-    "type" : [ "null",
-    {
-     "name" : "id",
-     "type" : "string"
-   } ]
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "meta",
+    "type" : [ "null", "Meta" ]
   }, {
     "name" : "implicitRules",
-    "type" : [ "null", {
-                            "name" : "uri",
-                            "type" : "string"
-                          } ]
+    "type" : [ "null", "string" ]
   }, {
     "name" : "language",
-    "type" : [ "null", {
-                            "name" : "code",
-                            "type" : "string"
-                          } ]
+    "type" : [ "null", "string" ]
   }, {
     "name" : "text",
+    "type" : [ "null", "Narrative" ]
+  }, {
+    "name" : "extension",
     "type" : [ "null", {
-                                                   "name" : "Narrative",
-                                                   "type" : "string"
-                                                 } ]
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "modifierExtension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "identifier",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Identifier"
+    } ]
   }, {
     "name" : "code",
-    "type" : [ "null",
-    {
-     "name" : "CodeableConcept",
-     "type" : "string"
-   } ]
+    "type" : [ "null", "CodeableConcept" ]
   }, {
     "name" : "status",
-    "type" : [ "null",
-    {
-     "name" : "code",
-     "type" : "string"
-   }  ]
+    "type" : [ "null", "string" ]
   }, {
     "name" : "manufacturer",
-    "type" : [ "null",
-    {
-     "name" : "Reference",
-     "type" : "string"
-   }  ]
+    "type" : [ "null", "Reference" ]
   }, {
     "name" : "form",
-    "type" : [ "null",
-    {
-     "name" : "CodeableConcept",
-     "type" : "string"
-   }  ]
+    "type" : [ "null", "CodeableConcept" ]
   }, {
     "name" : "amount",
-    "type" : [ "null",
-    {
-     "name" : "Ratio",
-     "type" : "string"
-   }  ]
+    "type" : [ "null", "Ratio" ]
   }, {
     "name" : "ingredient",
     "type" : [ "null", {
       "type" : "array",
-      "items" : "string"
+      "items" : "Medication_Ingredient"
     } ]
   }, {
     "name" : "batch",
-    "type" : [ "null", "string" ]
+    "type" : [ "null", "Medication_Batch" ]
   } ],
   "namespace" : "io.carrera.fhir.avro.models"
 }

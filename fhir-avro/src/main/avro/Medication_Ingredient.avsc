@@ -1,0 +1,33 @@
+{
+  "name" : "Medication_Ingredient",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "id",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "extension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "modifierExtension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "itemCodeableConcept",
+    "type" : [ "null", "CodeableConcept" ]
+  }, {
+    "name" : "itemReference",
+    "type" : [ "null", "Reference" ]
+  }, {
+    "name" : "isActive",
+    "type" : [ "null", "boolean" ]
+  }, {
+    "name" : "strength",
+    "type" : [ "null", "Ratio" ]
+  } ],
+  "namespace" : "io.carrera.fhir.avro.models"
+}

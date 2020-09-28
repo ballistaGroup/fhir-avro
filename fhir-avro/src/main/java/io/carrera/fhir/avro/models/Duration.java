@@ -13,24 +13,24 @@ import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
-public class Coding extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 126953001174818844L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Coding\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"version\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"display\",\"type\":[\"null\",\"string\"]},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"]}]}");
+public class Duration extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+  private static final long serialVersionUID = 8374633054778502199L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Duration\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"]},{\"name\":\"unit\",\"type\":[\"null\",\"string\"]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
 
-  private static final BinaryMessageEncoder<Coding> ENCODER =
-      new BinaryMessageEncoder<Coding>(MODEL$, SCHEMA$);
+  private static final BinaryMessageEncoder<Duration> ENCODER =
+      new BinaryMessageEncoder<Duration>(MODEL$, SCHEMA$);
 
-  private static final BinaryMessageDecoder<Coding> DECODER =
-      new BinaryMessageDecoder<Coding>(MODEL$, SCHEMA$);
+  private static final BinaryMessageDecoder<Duration> DECODER =
+      new BinaryMessageDecoder<Duration>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageEncoder instance used by this class.
    * @return the message encoder used by this class
    */
-  public static BinaryMessageEncoder<Coding> getEncoder() {
+  public static BinaryMessageEncoder<Duration> getEncoder() {
     return ENCODER;
   }
 
@@ -38,7 +38,7 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
    * Return the BinaryMessageDecoder instance used by this class.
    * @return the message decoder used by this class
    */
-  public static BinaryMessageDecoder<Coding> getDecoder() {
+  public static BinaryMessageDecoder<Duration> getDecoder() {
     return DECODER;
   }
 
@@ -47,12 +47,12 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
    * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
    * @return a BinaryMessageDecoder instance for this class backed by the given SchemaStore
    */
-  public static BinaryMessageDecoder<Coding> createDecoder(SchemaStore resolver) {
-    return new BinaryMessageDecoder<Coding>(MODEL$, SCHEMA$, resolver);
+  public static BinaryMessageDecoder<Duration> createDecoder(SchemaStore resolver) {
+    return new BinaryMessageDecoder<Duration>(MODEL$, SCHEMA$, resolver);
   }
 
   /**
-   * Serializes this Coding to a ByteBuffer.
+   * Serializes this Duration to a ByteBuffer.
    * @return a buffer holding the serialized data for this instance
    * @throws java.io.IOException if this instance could not be serialized
    */
@@ -61,49 +61,46 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
   }
 
   /**
-   * Deserializes a Coding from a ByteBuffer.
+   * Deserializes a Duration from a ByteBuffer.
    * @param b a byte buffer holding serialized data for an instance of this class
-   * @return a Coding instance decoded from the given buffer
+   * @return a Duration instance decoded from the given buffer
    * @throws java.io.IOException if the given bytes could not be deserialized into an instance of this class
    */
-  public static Coding fromByteBuffer(
+  public static Duration fromByteBuffer(
       java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
   }
 
    private java.lang.CharSequence id;
    private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
+   private java.lang.CharSequence comparator;
+   private java.lang.CharSequence unit;
    private java.lang.CharSequence system;
-   private java.lang.CharSequence version;
    private java.lang.CharSequence code;
-   private java.lang.CharSequence display;
-   private java.lang.Boolean userSelected;
 
   /**
    * Default constructor.  Note that this does not initialize fields
    * to their default values from the schema.  If that is desired then
    * one should use <code>newBuilder()</code>.
    */
-  public Coding() {}
+  public Duration() {}
 
   /**
    * All-args constructor.
    * @param id The new value for id
    * @param extension The new value for extension
+   * @param comparator The new value for comparator
+   * @param unit The new value for unit
    * @param system The new value for system
-   * @param version The new value for version
    * @param code The new value for code
-   * @param display The new value for display
-   * @param userSelected The new value for userSelected
    */
-  public Coding(java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.lang.CharSequence system, java.lang.CharSequence version, java.lang.CharSequence code, java.lang.CharSequence display, java.lang.Boolean userSelected) {
+  public Duration(java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.lang.CharSequence comparator, java.lang.CharSequence unit, java.lang.CharSequence system, java.lang.CharSequence code) {
     this.id = id;
     this.extension = extension;
+    this.comparator = comparator;
+    this.unit = unit;
     this.system = system;
-    this.version = version;
     this.code = code;
-    this.display = display;
-    this.userSelected = userSelected;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -113,11 +110,10 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
     switch (field$) {
     case 0: return id;
     case 1: return extension;
-    case 2: return system;
-    case 3: return version;
-    case 4: return code;
-    case 5: return display;
-    case 6: return userSelected;
+    case 2: return comparator;
+    case 3: return unit;
+    case 4: return system;
+    case 5: return code;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -128,11 +124,10 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
     switch (field$) {
     case 0: id = (java.lang.CharSequence)value$; break;
     case 1: extension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 2: system = (java.lang.CharSequence)value$; break;
-    case 3: version = (java.lang.CharSequence)value$; break;
-    case 4: code = (java.lang.CharSequence)value$; break;
-    case 5: display = (java.lang.CharSequence)value$; break;
-    case 6: userSelected = (java.lang.Boolean)value$; break;
+    case 2: comparator = (java.lang.CharSequence)value$; break;
+    case 3: unit = (java.lang.CharSequence)value$; break;
+    case 4: system = (java.lang.CharSequence)value$; break;
+    case 5: code = (java.lang.CharSequence)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -172,6 +167,40 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
   }
 
   /**
+   * Gets the value of the 'comparator' field.
+   * @return The value of the 'comparator' field.
+   */
+  public java.lang.CharSequence getComparator() {
+    return comparator;
+  }
+
+
+  /**
+   * Sets the value of the 'comparator' field.
+   * @param value the value to set.
+   */
+  public void setComparator(java.lang.CharSequence value) {
+    this.comparator = value;
+  }
+
+  /**
+   * Gets the value of the 'unit' field.
+   * @return The value of the 'unit' field.
+   */
+  public java.lang.CharSequence getUnit() {
+    return unit;
+  }
+
+
+  /**
+   * Sets the value of the 'unit' field.
+   * @param value the value to set.
+   */
+  public void setUnit(java.lang.CharSequence value) {
+    this.unit = value;
+  }
+
+  /**
    * Gets the value of the 'system' field.
    * @return The value of the 'system' field.
    */
@@ -186,23 +215,6 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
    */
   public void setSystem(java.lang.CharSequence value) {
     this.system = value;
-  }
-
-  /**
-   * Gets the value of the 'version' field.
-   * @return The value of the 'version' field.
-   */
-  public java.lang.CharSequence getVersion() {
-    return version;
-  }
-
-
-  /**
-   * Sets the value of the 'version' field.
-   * @param value the value to set.
-   */
-  public void setVersion(java.lang.CharSequence value) {
-    this.version = value;
   }
 
   /**
@@ -223,87 +235,52 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
   }
 
   /**
-   * Gets the value of the 'display' field.
-   * @return The value of the 'display' field.
+   * Creates a new Duration RecordBuilder.
+   * @return A new Duration RecordBuilder
    */
-  public java.lang.CharSequence getDisplay() {
-    return display;
-  }
-
-
-  /**
-   * Sets the value of the 'display' field.
-   * @param value the value to set.
-   */
-  public void setDisplay(java.lang.CharSequence value) {
-    this.display = value;
+  public static io.carrera.fhir.avro.models.Duration.Builder newBuilder() {
+    return new io.carrera.fhir.avro.models.Duration.Builder();
   }
 
   /**
-   * Gets the value of the 'userSelected' field.
-   * @return The value of the 'userSelected' field.
-   */
-  public java.lang.Boolean getUserSelected() {
-    return userSelected;
-  }
-
-
-  /**
-   * Sets the value of the 'userSelected' field.
-   * @param value the value to set.
-   */
-  public void setUserSelected(java.lang.Boolean value) {
-    this.userSelected = value;
-  }
-
-  /**
-   * Creates a new Coding RecordBuilder.
-   * @return A new Coding RecordBuilder
-   */
-  public static io.carrera.fhir.avro.models.Coding.Builder newBuilder() {
-    return new io.carrera.fhir.avro.models.Coding.Builder();
-  }
-
-  /**
-   * Creates a new Coding RecordBuilder by copying an existing Builder.
+   * Creates a new Duration RecordBuilder by copying an existing Builder.
    * @param other The existing builder to copy.
-   * @return A new Coding RecordBuilder
+   * @return A new Duration RecordBuilder
    */
-  public static io.carrera.fhir.avro.models.Coding.Builder newBuilder(io.carrera.fhir.avro.models.Coding.Builder other) {
+  public static io.carrera.fhir.avro.models.Duration.Builder newBuilder(io.carrera.fhir.avro.models.Duration.Builder other) {
     if (other == null) {
-      return new io.carrera.fhir.avro.models.Coding.Builder();
+      return new io.carrera.fhir.avro.models.Duration.Builder();
     } else {
-      return new io.carrera.fhir.avro.models.Coding.Builder(other);
+      return new io.carrera.fhir.avro.models.Duration.Builder(other);
     }
   }
 
   /**
-   * Creates a new Coding RecordBuilder by copying an existing Coding instance.
+   * Creates a new Duration RecordBuilder by copying an existing Duration instance.
    * @param other The existing instance to copy.
-   * @return A new Coding RecordBuilder
+   * @return A new Duration RecordBuilder
    */
-  public static io.carrera.fhir.avro.models.Coding.Builder newBuilder(io.carrera.fhir.avro.models.Coding other) {
+  public static io.carrera.fhir.avro.models.Duration.Builder newBuilder(io.carrera.fhir.avro.models.Duration other) {
     if (other == null) {
-      return new io.carrera.fhir.avro.models.Coding.Builder();
+      return new io.carrera.fhir.avro.models.Duration.Builder();
     } else {
-      return new io.carrera.fhir.avro.models.Coding.Builder(other);
+      return new io.carrera.fhir.avro.models.Duration.Builder(other);
     }
   }
 
   /**
-   * RecordBuilder for Coding instances.
+   * RecordBuilder for Duration instances.
    */
   @org.apache.avro.specific.AvroGenerated
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Coding>
-    implements org.apache.avro.data.RecordBuilder<Coding> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Duration>
+    implements org.apache.avro.data.RecordBuilder<Duration> {
 
     private java.lang.CharSequence id;
     private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
+    private java.lang.CharSequence comparator;
+    private java.lang.CharSequence unit;
     private java.lang.CharSequence system;
-    private java.lang.CharSequence version;
     private java.lang.CharSequence code;
-    private java.lang.CharSequence display;
-    private java.lang.Boolean userSelected;
 
     /** Creates a new Builder */
     private Builder() {
@@ -314,7 +291,7 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(io.carrera.fhir.avro.models.Coding.Builder other) {
+    private Builder(io.carrera.fhir.avro.models.Duration.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -324,33 +301,29 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
         this.extension = data().deepCopy(fields()[1].schema(), other.extension);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
-      if (isValidValue(fields()[2], other.system)) {
-        this.system = data().deepCopy(fields()[2].schema(), other.system);
+      if (isValidValue(fields()[2], other.comparator)) {
+        this.comparator = data().deepCopy(fields()[2].schema(), other.comparator);
         fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
-      if (isValidValue(fields()[3], other.version)) {
-        this.version = data().deepCopy(fields()[3].schema(), other.version);
+      if (isValidValue(fields()[3], other.unit)) {
+        this.unit = data().deepCopy(fields()[3].schema(), other.unit);
         fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
-      if (isValidValue(fields()[4], other.code)) {
-        this.code = data().deepCopy(fields()[4].schema(), other.code);
+      if (isValidValue(fields()[4], other.system)) {
+        this.system = data().deepCopy(fields()[4].schema(), other.system);
         fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
-      if (isValidValue(fields()[5], other.display)) {
-        this.display = data().deepCopy(fields()[5].schema(), other.display);
+      if (isValidValue(fields()[5], other.code)) {
+        this.code = data().deepCopy(fields()[5].schema(), other.code);
         fieldSetFlags()[5] = other.fieldSetFlags()[5];
-      }
-      if (isValidValue(fields()[6], other.userSelected)) {
-        this.userSelected = data().deepCopy(fields()[6].schema(), other.userSelected);
-        fieldSetFlags()[6] = other.fieldSetFlags()[6];
       }
     }
 
     /**
-     * Creates a Builder by copying an existing Coding instance
+     * Creates a Builder by copying an existing Duration instance
      * @param other The existing instance to copy.
      */
-    private Builder(io.carrera.fhir.avro.models.Coding other) {
+    private Builder(io.carrera.fhir.avro.models.Duration other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -360,25 +333,21 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
         this.extension = data().deepCopy(fields()[1].schema(), other.extension);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.system)) {
-        this.system = data().deepCopy(fields()[2].schema(), other.system);
+      if (isValidValue(fields()[2], other.comparator)) {
+        this.comparator = data().deepCopy(fields()[2].schema(), other.comparator);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.version)) {
-        this.version = data().deepCopy(fields()[3].schema(), other.version);
+      if (isValidValue(fields()[3], other.unit)) {
+        this.unit = data().deepCopy(fields()[3].schema(), other.unit);
         fieldSetFlags()[3] = true;
       }
-      if (isValidValue(fields()[4], other.code)) {
-        this.code = data().deepCopy(fields()[4].schema(), other.code);
+      if (isValidValue(fields()[4], other.system)) {
+        this.system = data().deepCopy(fields()[4].schema(), other.system);
         fieldSetFlags()[4] = true;
       }
-      if (isValidValue(fields()[5], other.display)) {
-        this.display = data().deepCopy(fields()[5].schema(), other.display);
+      if (isValidValue(fields()[5], other.code)) {
+        this.code = data().deepCopy(fields()[5].schema(), other.code);
         fieldSetFlags()[5] = true;
-      }
-      if (isValidValue(fields()[6], other.userSelected)) {
-        this.userSelected = data().deepCopy(fields()[6].schema(), other.userSelected);
-        fieldSetFlags()[6] = true;
       }
     }
 
@@ -396,7 +365,7 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
       * @param value The value of 'id'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Coding.Builder setId(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Duration.Builder setId(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.id = value;
       fieldSetFlags()[0] = true;
@@ -416,7 +385,7 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
       * Clears the value of the 'id' field.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Coding.Builder clearId() {
+    public io.carrera.fhir.avro.models.Duration.Builder clearId() {
       id = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -436,7 +405,7 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
       * @param value The value of 'extension'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Coding.Builder setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
+    public io.carrera.fhir.avro.models.Duration.Builder setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
       validate(fields()[1], value);
       this.extension = value;
       fieldSetFlags()[1] = true;
@@ -456,9 +425,89 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
       * Clears the value of the 'extension' field.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Coding.Builder clearExtension() {
+    public io.carrera.fhir.avro.models.Duration.Builder clearExtension() {
       extension = null;
       fieldSetFlags()[1] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'comparator' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getComparator() {
+      return comparator;
+    }
+
+
+    /**
+      * Sets the value of the 'comparator' field.
+      * @param value The value of 'comparator'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Duration.Builder setComparator(java.lang.CharSequence value) {
+      validate(fields()[2], value);
+      this.comparator = value;
+      fieldSetFlags()[2] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'comparator' field has been set.
+      * @return True if the 'comparator' field has been set, false otherwise.
+      */
+    public boolean hasComparator() {
+      return fieldSetFlags()[2];
+    }
+
+
+    /**
+      * Clears the value of the 'comparator' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Duration.Builder clearComparator() {
+      comparator = null;
+      fieldSetFlags()[2] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'unit' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getUnit() {
+      return unit;
+    }
+
+
+    /**
+      * Sets the value of the 'unit' field.
+      * @param value The value of 'unit'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Duration.Builder setUnit(java.lang.CharSequence value) {
+      validate(fields()[3], value);
+      this.unit = value;
+      fieldSetFlags()[3] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'unit' field has been set.
+      * @return True if the 'unit' field has been set, false otherwise.
+      */
+    public boolean hasUnit() {
+      return fieldSetFlags()[3];
+    }
+
+
+    /**
+      * Clears the value of the 'unit' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Duration.Builder clearUnit() {
+      unit = null;
+      fieldSetFlags()[3] = false;
       return this;
     }
 
@@ -476,10 +525,10 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
       * @param value The value of 'system'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Coding.Builder setSystem(java.lang.CharSequence value) {
-      validate(fields()[2], value);
+    public io.carrera.fhir.avro.models.Duration.Builder setSystem(java.lang.CharSequence value) {
+      validate(fields()[4], value);
       this.system = value;
-      fieldSetFlags()[2] = true;
+      fieldSetFlags()[4] = true;
       return this;
     }
 
@@ -488,7 +537,7 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
       * @return True if the 'system' field has been set, false otherwise.
       */
     public boolean hasSystem() {
-      return fieldSetFlags()[2];
+      return fieldSetFlags()[4];
     }
 
 
@@ -496,49 +545,9 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
       * Clears the value of the 'system' field.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Coding.Builder clearSystem() {
+    public io.carrera.fhir.avro.models.Duration.Builder clearSystem() {
       system = null;
-      fieldSetFlags()[2] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'version' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getVersion() {
-      return version;
-    }
-
-
-    /**
-      * Sets the value of the 'version' field.
-      * @param value The value of 'version'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Coding.Builder setVersion(java.lang.CharSequence value) {
-      validate(fields()[3], value);
-      this.version = value;
-      fieldSetFlags()[3] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'version' field has been set.
-      * @return True if the 'version' field has been set, false otherwise.
-      */
-    public boolean hasVersion() {
-      return fieldSetFlags()[3];
-    }
-
-
-    /**
-      * Clears the value of the 'version' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Coding.Builder clearVersion() {
-      version = null;
-      fieldSetFlags()[3] = false;
+      fieldSetFlags()[4] = false;
       return this;
     }
 
@@ -556,10 +565,10 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
       * @param value The value of 'code'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Coding.Builder setCode(java.lang.CharSequence value) {
-      validate(fields()[4], value);
+    public io.carrera.fhir.avro.models.Duration.Builder setCode(java.lang.CharSequence value) {
+      validate(fields()[5], value);
       this.code = value;
-      fieldSetFlags()[4] = true;
+      fieldSetFlags()[5] = true;
       return this;
     }
 
@@ -568,7 +577,7 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
       * @return True if the 'code' field has been set, false otherwise.
       */
     public boolean hasCode() {
-      return fieldSetFlags()[4];
+      return fieldSetFlags()[5];
     }
 
 
@@ -576,104 +585,23 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
       * Clears the value of the 'code' field.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Coding.Builder clearCode() {
+    public io.carrera.fhir.avro.models.Duration.Builder clearCode() {
       code = null;
-      fieldSetFlags()[4] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'display' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getDisplay() {
-      return display;
-    }
-
-
-    /**
-      * Sets the value of the 'display' field.
-      * @param value The value of 'display'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Coding.Builder setDisplay(java.lang.CharSequence value) {
-      validate(fields()[5], value);
-      this.display = value;
-      fieldSetFlags()[5] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'display' field has been set.
-      * @return True if the 'display' field has been set, false otherwise.
-      */
-    public boolean hasDisplay() {
-      return fieldSetFlags()[5];
-    }
-
-
-    /**
-      * Clears the value of the 'display' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Coding.Builder clearDisplay() {
-      display = null;
       fieldSetFlags()[5] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'userSelected' field.
-      * @return The value.
-      */
-    public java.lang.Boolean getUserSelected() {
-      return userSelected;
-    }
-
-
-    /**
-      * Sets the value of the 'userSelected' field.
-      * @param value The value of 'userSelected'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Coding.Builder setUserSelected(java.lang.Boolean value) {
-      validate(fields()[6], value);
-      this.userSelected = value;
-      fieldSetFlags()[6] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'userSelected' field has been set.
-      * @return True if the 'userSelected' field has been set, false otherwise.
-      */
-    public boolean hasUserSelected() {
-      return fieldSetFlags()[6];
-    }
-
-
-    /**
-      * Clears the value of the 'userSelected' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Coding.Builder clearUserSelected() {
-      userSelected = null;
-      fieldSetFlags()[6] = false;
       return this;
     }
 
     @Override
     @SuppressWarnings("unchecked")
-    public Coding build() {
+    public Duration build() {
       try {
-        Coding record = new Coding();
+        Duration record = new Duration();
         record.id = fieldSetFlags()[0] ? this.id : (java.lang.CharSequence) defaultValue(fields()[0]);
         record.extension = fieldSetFlags()[1] ? this.extension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[1]);
-        record.system = fieldSetFlags()[2] ? this.system : (java.lang.CharSequence) defaultValue(fields()[2]);
-        record.version = fieldSetFlags()[3] ? this.version : (java.lang.CharSequence) defaultValue(fields()[3]);
-        record.code = fieldSetFlags()[4] ? this.code : (java.lang.CharSequence) defaultValue(fields()[4]);
-        record.display = fieldSetFlags()[5] ? this.display : (java.lang.CharSequence) defaultValue(fields()[5]);
-        record.userSelected = fieldSetFlags()[6] ? this.userSelected : (java.lang.Boolean) defaultValue(fields()[6]);
+        record.comparator = fieldSetFlags()[2] ? this.comparator : (java.lang.CharSequence) defaultValue(fields()[2]);
+        record.unit = fieldSetFlags()[3] ? this.unit : (java.lang.CharSequence) defaultValue(fields()[3]);
+        record.system = fieldSetFlags()[4] ? this.system : (java.lang.CharSequence) defaultValue(fields()[4]);
+        record.code = fieldSetFlags()[5] ? this.code : (java.lang.CharSequence) defaultValue(fields()[5]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -684,8 +612,8 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumWriter<Coding>
-    WRITER$ = (org.apache.avro.io.DatumWriter<Coding>)MODEL$.createDatumWriter(SCHEMA$);
+  private static final org.apache.avro.io.DatumWriter<Duration>
+    WRITER$ = (org.apache.avro.io.DatumWriter<Duration>)MODEL$.createDatumWriter(SCHEMA$);
 
   @Override public void writeExternal(java.io.ObjectOutput out)
     throws java.io.IOException {
@@ -693,8 +621,8 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumReader<Coding>
-    READER$ = (org.apache.avro.io.DatumReader<Coding>)MODEL$.createDatumReader(SCHEMA$);
+  private static final org.apache.avro.io.DatumReader<Duration>
+    READER$ = (org.apache.avro.io.DatumReader<Duration>)MODEL$.createDatumReader(SCHEMA$);
 
   @Override public void readExternal(java.io.ObjectInput in)
     throws java.io.IOException {
@@ -733,6 +661,22 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
         throw new java.util.ConcurrentModificationException("Array-size written was " + size0 + ", but element count was " + actualSize0 + ".");
     }
 
+    if (this.comparator == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeString(this.comparator);
+    }
+
+    if (this.unit == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeString(this.unit);
+    }
+
     if (this.system == null) {
       out.writeIndex(0);
       out.writeNull();
@@ -741,36 +685,12 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
       out.writeString(this.system);
     }
 
-    if (this.version == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeString(this.version);
-    }
-
     if (this.code == null) {
       out.writeIndex(0);
       out.writeNull();
     } else {
       out.writeIndex(1);
       out.writeString(this.code);
-    }
-
-    if (this.display == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeString(this.display);
-    }
-
-    if (this.userSelected == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeBoolean(this.userSelected);
     }
 
   }
@@ -812,16 +732,23 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
 
       if (in.readIndex() != 1) {
         in.readNull();
-        this.system = null;
+        this.comparator = null;
       } else {
-        this.system = in.readString(this.system instanceof Utf8 ? (Utf8)this.system : null);
+        this.comparator = in.readString(this.comparator instanceof Utf8 ? (Utf8)this.comparator : null);
       }
 
       if (in.readIndex() != 1) {
         in.readNull();
-        this.version = null;
+        this.unit = null;
       } else {
-        this.version = in.readString(this.version instanceof Utf8 ? (Utf8)this.version : null);
+        this.unit = in.readString(this.unit instanceof Utf8 ? (Utf8)this.unit : null);
+      }
+
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.system = null;
+      } else {
+        this.system = in.readString(this.system instanceof Utf8 ? (Utf8)this.system : null);
       }
 
       if (in.readIndex() != 1) {
@@ -831,22 +758,8 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
         this.code = in.readString(this.code instanceof Utf8 ? (Utf8)this.code : null);
       }
 
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.display = null;
-      } else {
-        this.display = in.readString(this.display instanceof Utf8 ? (Utf8)this.display : null);
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.userSelected = null;
-      } else {
-        this.userSelected = in.readBoolean();
-      }
-
     } else {
-      for (int i = 0; i < 7; i++) {
+      for (int i = 0; i < 6; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
           if (in.readIndex() != 1) {
@@ -885,45 +798,36 @@ public class Coding extends org.apache.avro.specific.SpecificRecordBase implemen
         case 2:
           if (in.readIndex() != 1) {
             in.readNull();
-            this.system = null;
+            this.comparator = null;
           } else {
-            this.system = in.readString(this.system instanceof Utf8 ? (Utf8)this.system : null);
+            this.comparator = in.readString(this.comparator instanceof Utf8 ? (Utf8)this.comparator : null);
           }
           break;
 
         case 3:
           if (in.readIndex() != 1) {
             in.readNull();
-            this.version = null;
+            this.unit = null;
           } else {
-            this.version = in.readString(this.version instanceof Utf8 ? (Utf8)this.version : null);
+            this.unit = in.readString(this.unit instanceof Utf8 ? (Utf8)this.unit : null);
           }
           break;
 
         case 4:
           if (in.readIndex() != 1) {
             in.readNull();
-            this.code = null;
+            this.system = null;
           } else {
-            this.code = in.readString(this.code instanceof Utf8 ? (Utf8)this.code : null);
+            this.system = in.readString(this.system instanceof Utf8 ? (Utf8)this.system : null);
           }
           break;
 
         case 5:
           if (in.readIndex() != 1) {
             in.readNull();
-            this.display = null;
+            this.code = null;
           } else {
-            this.display = in.readString(this.display instanceof Utf8 ? (Utf8)this.display : null);
-          }
-          break;
-
-        case 6:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.userSelected = null;
-          } else {
-            this.userSelected = in.readBoolean();
+            this.code = in.readString(this.code instanceof Utf8 ? (Utf8)this.code : null);
           }
           break;
 

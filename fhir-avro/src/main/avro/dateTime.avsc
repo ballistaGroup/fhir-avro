@@ -1,6 +1,0 @@
-{
-  "name" : "dateTime",
-  "type" : "long",
-  "logicalType" : "timestamp-millis",
-  "namespace" : "io.carrera.fhir.avro.models"
-}

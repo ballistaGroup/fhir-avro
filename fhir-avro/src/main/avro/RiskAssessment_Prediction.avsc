@@ -1,0 +1,45 @@
+{
+  "name" : "RiskAssessment_Prediction",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "id",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "extension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "modifierExtension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "outcome",
+    "type" : [ "null", "CodeableConcept" ]
+  }, {
+    "name" : "probabilityDecimal",
+    "type" : [ "null", "double" ]
+  }, {
+    "name" : "probabilityRange",
+    "type" : [ "null", "Range" ]
+  }, {
+    "name" : "qualitativeRisk",
+    "type" : [ "null", "CodeableConcept" ]
+  }, {
+    "name" : "relativeRisk",
+    "type" : [ "null", "double" ]
+  }, {
+    "name" : "whenPeriod",
+    "type" : [ "null", "Period" ]
+  }, {
+    "name" : "whenRange",
+    "type" : [ "null", "Range" ]
+  }, {
+    "name" : "rationale",
+    "type" : [ "null", "string" ]
+  } ],
+  "namespace" : "io.carrera.fhir.avro.models"
+}

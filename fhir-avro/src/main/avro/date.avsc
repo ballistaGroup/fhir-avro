@@ -1,6 +1,0 @@
-{
-  "name" : "date",
-  "type" : "int",
-  "logicalType" : "date",
-  "namespace" : "io.carrera.fhir.avro.models"
-}
