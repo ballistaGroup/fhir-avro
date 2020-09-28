@@ -1,0 +1,111 @@
+{
+  "name" : "Goal",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "resourceType",
+    "type" : "string"
+  }, {
+    "name" : "id",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "meta",
+    "type" : [ "null", "Meta" ]
+  }, {
+    "name" : "implicitRules",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "language",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "text",
+    "type" : [ "null", "Narrative" ]
+  }, {
+    "name" : "extension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "modifierExtension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "identifier",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Identifier"
+    } ]
+  }, {
+    "name" : "lifecycleStatus",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "achievementStatus",
+    "type" : [ "null", "CodeableConcept" ]
+  }, {
+    "name" : "category",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "CodeableConcept"
+    } ]
+  }, {
+    "name" : "priority",
+    "type" : [ "null", "CodeableConcept" ]
+  }, {
+    "name" : "description",
+    "type" : "CodeableConcept"
+  }, {
+    "name" : "subject",
+    "type" : "Reference"
+  }, {
+    "name" : "startDate",
+    "type" : [ "null", {
+      "type" : "int",
+      "logicalType" : "date"
+    } ]
+  }, {
+    "name" : "startCodeableConcept",
+    "type" : [ "null", "CodeableConcept" ]
+  }, {
+    "name" : "target",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Goal_Target"
+    } ]
+  }, {
+    "name" : "statusDate",
+    "type" : [ "null", {
+                           "type" : "int",
+                           "logicalType" : "date"
+                         } ]
+  }, {
+    "name" : "statusReason",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "expressedBy",
+    "type" : [ "null", "Reference" ]
+  }, {
+    "name" : "addresses",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Reference"
+    } ]
+  }, {
+    "name" : "note",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "outcomeCode",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "CodeableConcept"
+    } ]
+  }, {
+    "name" : "outcomeReference",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Reference"
+    } ]
+  } ],
+  "namespace" : "io.carrera.fhir.avro.models"
+}

@@ -1,0 +1,111 @@
+{
+  "name" : "RiskAssessment",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "resourceType",
+    "type" : "string"
+  }, {
+    "name" : "id",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "meta",
+    "type" : [ "null", "Meta" ]
+  }, {
+    "name" : "implicitRules",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "language",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "text",
+    "type" : [ "null", "Narrative" ]
+  }, {
+    "name" : "extension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "modifierExtension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "identifier",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Identifier"
+    } ]
+  }, {
+    "name" : "basedOn",
+    "type" : [ "null", "Reference" ]
+  }, {
+    "name" : "parent",
+    "type" : [ "null", "Reference" ]
+  }, {
+    "name" : "status",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "method",
+    "type" : [ "null", "CodeableConcept" ]
+  }, {
+    "name" : "code",
+    "type" : [ "null", "CodeableConcept" ]
+  }, {
+    "name" : "subject",
+    "type" : "Reference"
+  }, {
+    "name" : "encounter",
+    "type" : [ "null", "Reference" ]
+  }, {
+    "name" : "occurrenceDateTime",
+    "type" : [ "null", {
+      "type" : "int",
+      "logicalType" : "date"
+    }, {
+      "type" : "long",
+      "logicalType" : "local-timestamp-micros"
+    } ]
+  }, {
+    "name" : "occurrencePeriod",
+    "type" : [ "null", "Period" ]
+  }, {
+    "name" : "condition",
+    "type" : [ "null", "Reference" ]
+  }, {
+    "name" : "performer",
+    "type" : [ "null", "Reference" ]
+  }, {
+    "name" : "reasonCode",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "CodeableConcept"
+    } ]
+  }, {
+    "name" : "reasonReference",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Reference"
+    } ]
+  }, {
+    "name" : "basis",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Reference"
+    } ]
+  }, {
+    "name" : "prediction",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "RiskAssessment_Prediction"
+    } ]
+  }, {
+    "name" : "mitigation",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "note",
+    "type" : [ "null", "string"]
+  } ],
+  "namespace" : "io.carrera.fhir.avro.models"
+}

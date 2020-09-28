@@ -1,0 +1,30 @@
+{
+  "name" : "Identifier",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "id",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "extension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "use",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "type",
+    "type" : [ "null", "CodeableConcept" ]
+  }, {
+    "name" : "system",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "period",
+    "type" : [ "null", "Period" ]
+  }, {
+    "name" : "assigner",
+    "type" : [ "null", "Reference" ]
+  } ],
+  "namespace" : "io.carrera.fhir.avro.models"
+}

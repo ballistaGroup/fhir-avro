@@ -1,0 +1,30 @@
+{
+  "name" : "Coding",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "id",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "extension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "system",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "version",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "code",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "display",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "userSelected",
+    "type" : [ "null", "boolean" ]
+  } ],
+  "namespace" : "io.carrera.fhir.avro.models"
+}

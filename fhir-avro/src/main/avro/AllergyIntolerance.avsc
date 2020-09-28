@@ -26,6 +26,21 @@
       {
         "name": "patient",
         "type": "Reference"
+      },
+      {
+        "name" : "type",
+        "type" : [ "null", {
+         "name": "x",
+         "type" : "enum",
+         "symbols" : [ "allergy", "intolerance" ]
+        } ]
+      },
+      {
+        "name" : "category",
+        "type" : [ "null", {
+         "type" : "array",
+         "items" : "string"
+        } ]
       }
     ]
   }

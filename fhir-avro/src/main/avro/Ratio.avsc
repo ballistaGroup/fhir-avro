@@ -1,0 +1,21 @@
+{
+  "name" : "Ratio",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "id",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "extension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "numerator",
+    "type" : [ "null", "Quantity" ]
+  }, {
+    "name" : "denominator",
+    "type" : [ "null", "Quantity" ]
+  } ],
+  "namespace" : "io.carrera.fhir.avro.models"
+}

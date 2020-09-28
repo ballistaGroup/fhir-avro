@@ -1,0 +1,33 @@
+{
+  "name" : "Medication_Batch",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "id",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "extension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "modifierExtension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "lotNumber",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "expirationDate",
+    "type" : [ "null", {
+                           "type" : "int",
+                           "logicalType" : "date"
+                         }, {
+                           "type" : "long",
+                           "logicalType" : "local-timestamp-micros"
+                         } ]
+  } ],
+  "namespace" : "io.carrera.fhir.avro.models"
+}

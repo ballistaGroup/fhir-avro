@@ -1,0 +1,45 @@
+{
+  "name" : "Meta",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "id",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "extension",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Extension"
+    } ]
+  }, {
+    "name" : "versionId",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "lastUpdated",
+    "type" : [ "null", {
+                           "type" : "long",
+                           "logicalType" : "local-timestamp-micros"
+                         } ]
+  }, {
+    "name" : "source",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "profile",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" :  "string"
+    } ]
+  }, {
+    "name" : "security",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Coding"
+    } ]
+  }, {
+    "name" : "tag",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Coding"
+    } ]
+  } ],
+  "namespace" : "io.carrera.fhir.avro.models"
+}
