@@ -14,11 +14,14 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Patient extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -5331945567512204974L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Patient\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"identifier\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"identifier_record\",\"fields\":[{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"value\",\"type\":\"string\"}]}}},{\"name\":\"name\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"name_record\",\"fields\":[{\"name\":\"use\",\"type\":\"string\"},{\"name\":\"family\",\"type\":\"string\"},{\"name\":\"given\",\"type\":{\"type\":\"array\",\"items\":\"string\"}},{\"name\":\"prefix\",\"type\":{\"type\":\"array\",\"items\":\"string\"}}]}}},{\"name\":\"gender\",\"type\":\"string\"},{\"name\":\"birthDate\",\"type\":[\"null\",\"string\"]},{\"name\":\"maritalStatus\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"},{\"name\":\"display\",\"type\":\"string\"}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}]}]}");
+  private static final long serialVersionUID = 2418865544686110971L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Patient\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"identifier\",\"type\":{\"type\":\"array\",\"items\":[\"null\",{\"type\":\"record\",\"name\":\"Identifier\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"use\",\"type\":[\"null\",\"string\"]},{\"name\":\"type\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"version\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"display\",\"type\":[\"null\",\"string\"]},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"period\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]}]}]},{\"name\":\"assigner\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}]}]}]}},{\"name\":\"name\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"name_record\",\"fields\":[{\"name\":\"use\",\"type\":\"string\"},{\"name\":\"family\",\"type\":\"string\"},{\"name\":\"given\",\"type\":{\"type\":\"array\",\"items\":\"string\"}},{\"name\":\"prefix\",\"type\":{\"type\":\"array\",\"items\":\"string\"}}]}}},{\"name\":\"gender\",\"type\":\"string\"},{\"name\":\"birthDate\",\"type\":[\"null\",\"string\"]},{\"name\":\"maritalStatus\",\"type\":[\"null\",\"CodeableConcept\"]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
+static {
+    MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.DateConversion());
+  }
 
   private static final BinaryMessageEncoder<Patient> ENCODER =
       new BinaryMessageEncoder<Patient>(MODEL$, SCHEMA$);
@@ -71,13 +74,13 @@ public class Patient extends org.apache.avro.specific.SpecificRecordBase impleme
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence resourceType;
-  @Deprecated public java.lang.CharSequence id;
-  @Deprecated public java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier;
-  @Deprecated public java.util.List<io.carrera.fhir.avro.models.name_record> name;
-  @Deprecated public java.lang.CharSequence gender;
-  @Deprecated public java.lang.CharSequence birthDate;
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept maritalStatus;
+   private java.lang.CharSequence resourceType;
+   private java.lang.CharSequence id;
+   private java.util.List<io.carrera.fhir.avro.models.Identifier> identifier;
+   private java.util.List<io.carrera.fhir.avro.models.name_record> name;
+   private java.lang.CharSequence gender;
+   private java.lang.CharSequence birthDate;
+   private io.carrera.fhir.avro.models.CodeableConcept maritalStatus;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -96,7 +99,7 @@ public class Patient extends org.apache.avro.specific.SpecificRecordBase impleme
    * @param birthDate The new value for birthDate
    * @param maritalStatus The new value for maritalStatus
    */
-  public Patient(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier, java.util.List<io.carrera.fhir.avro.models.name_record> name, java.lang.CharSequence gender, java.lang.CharSequence birthDate, io.carrera.fhir.avro.models.CodeableConcept maritalStatus) {
+  public Patient(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.Identifier> identifier, java.util.List<io.carrera.fhir.avro.models.name_record> name, java.lang.CharSequence gender, java.lang.CharSequence birthDate, io.carrera.fhir.avro.models.CodeableConcept maritalStatus) {
     this.resourceType = resourceType;
     this.id = id;
     this.identifier = identifier;
@@ -118,7 +121,7 @@ public class Patient extends org.apache.avro.specific.SpecificRecordBase impleme
     case 4: return gender;
     case 5: return birthDate;
     case 6: return maritalStatus;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -128,12 +131,12 @@ public class Patient extends org.apache.avro.specific.SpecificRecordBase impleme
     switch (field$) {
     case 0: resourceType = (java.lang.CharSequence)value$; break;
     case 1: id = (java.lang.CharSequence)value$; break;
-    case 2: identifier = (java.util.List<io.carrera.fhir.avro.models.identifier_record>)value$; break;
+    case 2: identifier = (java.util.List<io.carrera.fhir.avro.models.Identifier>)value$; break;
     case 3: name = (java.util.List<io.carrera.fhir.avro.models.name_record>)value$; break;
     case 4: gender = (java.lang.CharSequence)value$; break;
     case 5: birthDate = (java.lang.CharSequence)value$; break;
     case 6: maritalStatus = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -175,7 +178,7 @@ public class Patient extends org.apache.avro.specific.SpecificRecordBase impleme
    * Gets the value of the 'identifier' field.
    * @return The value of the 'identifier' field.
    */
-  public java.util.List<io.carrera.fhir.avro.models.identifier_record> getIdentifier() {
+  public java.util.List<io.carrera.fhir.avro.models.Identifier> getIdentifier() {
     return identifier;
   }
 
@@ -184,7 +187,7 @@ public class Patient extends org.apache.avro.specific.SpecificRecordBase impleme
    * Sets the value of the 'identifier' field.
    * @param value the value to set.
    */
-  public void setIdentifier(java.util.List<io.carrera.fhir.avro.models.identifier_record> value) {
+  public void setIdentifier(java.util.List<io.carrera.fhir.avro.models.Identifier> value) {
     this.identifier = value;
   }
 
@@ -299,7 +302,7 @@ public class Patient extends org.apache.avro.specific.SpecificRecordBase impleme
 
     private java.lang.CharSequence resourceType;
     private java.lang.CharSequence id;
-    private java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier;
+    private java.util.List<io.carrera.fhir.avro.models.Identifier> identifier;
     private java.util.List<io.carrera.fhir.avro.models.name_record> name;
     private java.lang.CharSequence gender;
     private java.lang.CharSequence birthDate;
@@ -471,7 +474,7 @@ public class Patient extends org.apache.avro.specific.SpecificRecordBase impleme
       * Gets the value of the 'identifier' field.
       * @return The value.
       */
-    public java.util.List<io.carrera.fhir.avro.models.identifier_record> getIdentifier() {
+    public java.util.List<io.carrera.fhir.avro.models.Identifier> getIdentifier() {
       return identifier;
     }
 
@@ -481,7 +484,7 @@ public class Patient extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'identifier'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Patient.Builder setIdentifier(java.util.List<io.carrera.fhir.avro.models.identifier_record> value) {
+    public io.carrera.fhir.avro.models.Patient.Builder setIdentifier(java.util.List<io.carrera.fhir.avro.models.Identifier> value) {
       validate(fields()[2], value);
       this.identifier = value;
       fieldSetFlags()[2] = true;
@@ -709,7 +712,7 @@ public class Patient extends org.apache.avro.specific.SpecificRecordBase impleme
         Patient record = new Patient();
         record.resourceType = fieldSetFlags()[0] ? this.resourceType : (java.lang.CharSequence) defaultValue(fields()[0]);
         record.id = fieldSetFlags()[1] ? this.id : (java.lang.CharSequence) defaultValue(fields()[1]);
-        record.identifier = fieldSetFlags()[2] ? this.identifier : (java.util.List<io.carrera.fhir.avro.models.identifier_record>) defaultValue(fields()[2]);
+        record.identifier = fieldSetFlags()[2] ? this.identifier : (java.util.List<io.carrera.fhir.avro.models.Identifier>) defaultValue(fields()[2]);
         record.name = fieldSetFlags()[3] ? this.name : (java.util.List<io.carrera.fhir.avro.models.name_record>) defaultValue(fields()[3]);
         record.gender = fieldSetFlags()[4] ? this.gender : (java.lang.CharSequence) defaultValue(fields()[4]);
         record.birthDate = fieldSetFlags()[5] ? this.birthDate : (java.lang.CharSequence) defaultValue(fields()[5]);
@@ -750,207 +753,6 @@ public class Patient extends org.apache.avro.specific.SpecificRecordBase impleme
     READER$.read(this, SpecificData.getDecoder(in));
   }
 
-  @Override protected boolean hasCustomCoders() { return true; }
-
-  @Override public void customEncode(org.apache.avro.io.Encoder out)
-    throws java.io.IOException
-  {
-    out.writeString(this.resourceType);
-
-    out.writeString(this.id);
-
-    long size0 = this.identifier.size();
-    out.writeArrayStart();
-    out.setItemCount(size0);
-    long actualSize0 = 0;
-    for (io.carrera.fhir.avro.models.identifier_record e0: this.identifier) {
-      actualSize0++;
-      out.startItem();
-      e0.customEncode(out);
-    }
-    out.writeArrayEnd();
-    if (actualSize0 != size0)
-      throw new java.util.ConcurrentModificationException("Array-size written was " + size0 + ", but element count was " + actualSize0 + ".");
-
-    long size1 = this.name.size();
-    out.writeArrayStart();
-    out.setItemCount(size1);
-    long actualSize1 = 0;
-    for (io.carrera.fhir.avro.models.name_record e1: this.name) {
-      actualSize1++;
-      out.startItem();
-      e1.customEncode(out);
-    }
-    out.writeArrayEnd();
-    if (actualSize1 != size1)
-      throw new java.util.ConcurrentModificationException("Array-size written was " + size1 + ", but element count was " + actualSize1 + ".");
-
-    out.writeString(this.gender);
-
-    if (this.birthDate == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeString(this.birthDate);
-    }
-
-    if (this.maritalStatus == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      this.maritalStatus.customEncode(out);
-    }
-
-  }
-
-  @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
-    throws java.io.IOException
-  {
-    org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
-    if (fieldOrder == null) {
-      this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
-
-      this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-
-      long size0 = in.readArrayStart();
-      java.util.List<io.carrera.fhir.avro.models.identifier_record> a0 = this.identifier;
-      if (a0 == null) {
-        a0 = new SpecificData.Array<io.carrera.fhir.avro.models.identifier_record>((int)size0, SCHEMA$.getField("identifier").schema());
-        this.identifier = a0;
-      } else a0.clear();
-      SpecificData.Array<io.carrera.fhir.avro.models.identifier_record> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.identifier_record>)a0 : null);
-      for ( ; 0 < size0; size0 = in.arrayNext()) {
-        for ( ; size0 != 0; size0--) {
-          io.carrera.fhir.avro.models.identifier_record e0 = (ga0 != null ? ga0.peek() : null);
-          if (e0 == null) {
-            e0 = new io.carrera.fhir.avro.models.identifier_record();
-          }
-          e0.customDecode(in);
-          a0.add(e0);
-        }
-      }
-
-      long size1 = in.readArrayStart();
-      java.util.List<io.carrera.fhir.avro.models.name_record> a1 = this.name;
-      if (a1 == null) {
-        a1 = new SpecificData.Array<io.carrera.fhir.avro.models.name_record>((int)size1, SCHEMA$.getField("name").schema());
-        this.name = a1;
-      } else a1.clear();
-      SpecificData.Array<io.carrera.fhir.avro.models.name_record> ga1 = (a1 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.name_record>)a1 : null);
-      for ( ; 0 < size1; size1 = in.arrayNext()) {
-        for ( ; size1 != 0; size1--) {
-          io.carrera.fhir.avro.models.name_record e1 = (ga1 != null ? ga1.peek() : null);
-          if (e1 == null) {
-            e1 = new io.carrera.fhir.avro.models.name_record();
-          }
-          e1.customDecode(in);
-          a1.add(e1);
-        }
-      }
-
-      this.gender = in.readString(this.gender instanceof Utf8 ? (Utf8)this.gender : null);
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.birthDate = null;
-      } else {
-        this.birthDate = in.readString(this.birthDate instanceof Utf8 ? (Utf8)this.birthDate : null);
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.maritalStatus = null;
-      } else {
-        if (this.maritalStatus == null) {
-          this.maritalStatus = new io.carrera.fhir.avro.models.CodeableConcept();
-        }
-        this.maritalStatus.customDecode(in);
-      }
-
-    } else {
-      for (int i = 0; i < 7; i++) {
-        switch (fieldOrder[i].pos()) {
-        case 0:
-          this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
-          break;
-
-        case 1:
-          this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-          break;
-
-        case 2:
-          long size0 = in.readArrayStart();
-          java.util.List<io.carrera.fhir.avro.models.identifier_record> a0 = this.identifier;
-          if (a0 == null) {
-            a0 = new SpecificData.Array<io.carrera.fhir.avro.models.identifier_record>((int)size0, SCHEMA$.getField("identifier").schema());
-            this.identifier = a0;
-          } else a0.clear();
-          SpecificData.Array<io.carrera.fhir.avro.models.identifier_record> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.identifier_record>)a0 : null);
-          for ( ; 0 < size0; size0 = in.arrayNext()) {
-            for ( ; size0 != 0; size0--) {
-              io.carrera.fhir.avro.models.identifier_record e0 = (ga0 != null ? ga0.peek() : null);
-              if (e0 == null) {
-                e0 = new io.carrera.fhir.avro.models.identifier_record();
-              }
-              e0.customDecode(in);
-              a0.add(e0);
-            }
-          }
-          break;
-
-        case 3:
-          long size1 = in.readArrayStart();
-          java.util.List<io.carrera.fhir.avro.models.name_record> a1 = this.name;
-          if (a1 == null) {
-            a1 = new SpecificData.Array<io.carrera.fhir.avro.models.name_record>((int)size1, SCHEMA$.getField("name").schema());
-            this.name = a1;
-          } else a1.clear();
-          SpecificData.Array<io.carrera.fhir.avro.models.name_record> ga1 = (a1 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.name_record>)a1 : null);
-          for ( ; 0 < size1; size1 = in.arrayNext()) {
-            for ( ; size1 != 0; size1--) {
-              io.carrera.fhir.avro.models.name_record e1 = (ga1 != null ? ga1.peek() : null);
-              if (e1 == null) {
-                e1 = new io.carrera.fhir.avro.models.name_record();
-              }
-              e1.customDecode(in);
-              a1.add(e1);
-            }
-          }
-          break;
-
-        case 4:
-          this.gender = in.readString(this.gender instanceof Utf8 ? (Utf8)this.gender : null);
-          break;
-
-        case 5:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.birthDate = null;
-          } else {
-            this.birthDate = in.readString(this.birthDate instanceof Utf8 ? (Utf8)this.birthDate : null);
-          }
-          break;
-
-        case 6:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.maritalStatus = null;
-          } else {
-            if (this.maritalStatus == null) {
-              this.maritalStatus = new io.carrera.fhir.avro.models.CodeableConcept();
-            }
-            this.maritalStatus.customDecode(in);
-          }
-          break;
-
-        default:
-          throw new java.io.IOException("Corrupt ResolvingDecoder.");
-        }
-      }
-    }
-  }
 }
 
 

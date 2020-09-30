@@ -71,8 +71,8 @@ public class performedPeriod extends org.apache.avro.specific.SpecificRecordBase
     return DECODER.decode(b);
   }
 
-  @Deprecated public int start;
-  @Deprecated public int end;
+   private int start;
+   private int end;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -98,7 +98,7 @@ public class performedPeriod extends org.apache.avro.specific.SpecificRecordBase
     switch (field$) {
     case 0: return start;
     case 1: return end;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -108,7 +108,7 @@ public class performedPeriod extends org.apache.avro.specific.SpecificRecordBase
     switch (field$) {
     case 0: start = (java.lang.Integer)value$; break;
     case 1: end = (java.lang.Integer)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 

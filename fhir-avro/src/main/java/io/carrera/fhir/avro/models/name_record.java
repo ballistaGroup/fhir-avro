@@ -71,10 +71,10 @@ public class name_record extends org.apache.avro.specific.SpecificRecordBase imp
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence use;
-  @Deprecated public java.lang.CharSequence family;
-  @Deprecated public java.util.List<java.lang.CharSequence> given;
-  @Deprecated public java.util.List<java.lang.CharSequence> prefix;
+   private java.lang.CharSequence use;
+   private java.lang.CharSequence family;
+   private java.util.List<java.lang.CharSequence> given;
+   private java.util.List<java.lang.CharSequence> prefix;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -106,7 +106,7 @@ public class name_record extends org.apache.avro.specific.SpecificRecordBase imp
     case 1: return family;
     case 2: return given;
     case 3: return prefix;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -118,7 +118,7 @@ public class name_record extends org.apache.avro.specific.SpecificRecordBase imp
     case 1: family = (java.lang.CharSequence)value$; break;
     case 2: given = (java.util.List<java.lang.CharSequence>)value$; break;
     case 3: prefix = (java.util.List<java.lang.CharSequence>)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 

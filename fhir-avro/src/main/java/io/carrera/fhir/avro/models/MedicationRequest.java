@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 7796845940849860420L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MedicationRequest\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"intent\",\"type\":\"string\"},{\"name\":\"medicationCodeableConcept\",\"type\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"},{\"name\":\"display\",\"type\":\"string\"}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"authoredOn\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"requester\",\"type\":\"Reference\"}]}");
+  private static final long serialVersionUID = -1031422267101583455L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MedicationRequest\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"intent\",\"type\":\"string\"},{\"name\":\"medicationCodeableConcept\",\"type\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"version\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"display\",\"type\":[\"null\",\"string\"]},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"authoredOn\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"requester\",\"type\":\"Reference\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,15 +71,15 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence resourceType;
-  @Deprecated public java.lang.CharSequence id;
-  @Deprecated public java.lang.CharSequence status;
-  @Deprecated public java.lang.CharSequence intent;
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept;
-  @Deprecated public io.carrera.fhir.avro.models.Reference subject;
-  @Deprecated public io.carrera.fhir.avro.models.Reference encounter;
-  @Deprecated public int authoredOn;
-  @Deprecated public io.carrera.fhir.avro.models.Reference requester;
+   private java.lang.CharSequence resourceType;
+   private java.lang.CharSequence id;
+   private java.lang.CharSequence status;
+   private java.lang.CharSequence intent;
+   private io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept;
+   private io.carrera.fhir.avro.models.Reference subject;
+   private io.carrera.fhir.avro.models.Reference encounter;
+   private int authoredOn;
+   private io.carrera.fhir.avro.models.Reference requester;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -126,7 +126,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
     case 6: return encounter;
     case 7: return authoredOn;
     case 8: return requester;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -143,7 +143,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
     case 6: encounter = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 7: authoredOn = (java.lang.Integer)value$; break;
     case 8: requester = (io.carrera.fhir.avro.models.Reference)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 

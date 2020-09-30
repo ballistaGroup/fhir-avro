@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 8753465387889242611L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"DiagnosticReport\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"},{\"name\":\"display\",\"type\":\"string\"}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}},{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"effectiveDateTime\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"issued\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"result\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"result_record\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"},{\"name\":\"display\",\"type\":\"string\"}]}}}]}");
+  private static final long serialVersionUID = 1939458641104765170L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"DiagnosticReport\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"version\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"display\",\"type\":[\"null\",\"string\"]},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}},{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"effectiveDateTime\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"issued\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"result\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"result_record\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"},{\"name\":\"display\",\"type\":\"string\"}]}}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,16 +71,16 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence resourceType;
-  @Deprecated public java.lang.CharSequence id;
-  @Deprecated public java.lang.CharSequence status;
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept category;
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept code;
-  @Deprecated public io.carrera.fhir.avro.models.Reference subject;
-  @Deprecated public io.carrera.fhir.avro.models.Reference encounter;
-  @Deprecated public int effectiveDateTime;
-  @Deprecated public int issued;
-  @Deprecated public java.util.List<io.carrera.fhir.avro.models.result_record> result;
+   private java.lang.CharSequence resourceType;
+   private java.lang.CharSequence id;
+   private java.lang.CharSequence status;
+   private io.carrera.fhir.avro.models.CodeableConcept category;
+   private io.carrera.fhir.avro.models.CodeableConcept code;
+   private io.carrera.fhir.avro.models.Reference subject;
+   private io.carrera.fhir.avro.models.Reference encounter;
+   private int effectiveDateTime;
+   private int issued;
+   private java.util.List<io.carrera.fhir.avro.models.result_record> result;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -130,7 +130,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
     case 7: return effectiveDateTime;
     case 8: return issued;
     case 9: return result;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -148,7 +148,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
     case 7: effectiveDateTime = (java.lang.Integer)value$; break;
     case 8: issued = (java.lang.Integer)value$; break;
     case 9: result = (java.util.List<io.carrera.fhir.avro.models.result_record>)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 

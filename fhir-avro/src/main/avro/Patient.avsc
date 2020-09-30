@@ -15,20 +15,7 @@
         "name": "identifier",
         "type": {
           "type": "array",
-          "items": {
-            "name": "identifier_record",
-            "type": "record",
-            "fields": [
-              {
-                "name": "system",
-                "type": "string"
-              },
-              {
-                "name": "value",
-                "type": "string"
-              }
-            ]
-          }
+          "items": ["null", "Identifier"]
         }
       },
       {

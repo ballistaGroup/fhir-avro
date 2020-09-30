@@ -71,8 +71,8 @@ public class result_record extends org.apache.avro.specific.SpecificRecordBase i
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence reference;
-  @Deprecated public java.lang.CharSequence display;
+   private java.lang.CharSequence reference;
+   private java.lang.CharSequence display;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -98,7 +98,7 @@ public class result_record extends org.apache.avro.specific.SpecificRecordBase i
     switch (field$) {
     case 0: return reference;
     case 1: return display;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -108,7 +108,7 @@ public class result_record extends org.apache.avro.specific.SpecificRecordBase i
     switch (field$) {
     case 0: reference = (java.lang.CharSequence)value$; break;
     case 1: display = (java.lang.CharSequence)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
