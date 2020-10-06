@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Observation extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 4990626093126368139L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Observation\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"version\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"display\",\"type\":[\"null\",\"string\"]},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]},\"null\"]},{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"effective\",\"type\":[\"null\",{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}]},{\"name\":\"issued\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"value\",\"type\":[\"null\",\"string\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":\"float\"},{\"name\":\"unit\",\"type\":\"string\"},{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"}]}]}]}");
+  private static final long serialVersionUID = 6040935895895546690L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Observation\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"code\",\"type\":[\"null\",\"string\"]}]}}}]},\"null\"]},{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"effective\",\"type\":[\"null\",{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}]},{\"name\":\"issued\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"value\",\"type\":[\"null\",\"string\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":\"float\"},{\"name\":\"unit\",\"type\":\"string\"},{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"}]}]},{\"name\":\"interpretation\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -84,6 +84,7 @@ static {
    private java.time.Instant effective;
    private int issued;
    private java.lang.Object value;
+   private java.util.List<io.carrera.fhir.avro.models.CodeableConcept> interpretation;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -104,8 +105,9 @@ static {
    * @param effective The new value for effective
    * @param issued The new value for issued
    * @param value The new value for value
+   * @param interpretation The new value for interpretation
    */
-  public Observation(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.time.Instant effective, java.lang.Integer issued, java.lang.Object value) {
+  public Observation(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.time.Instant effective, java.lang.Integer issued, java.lang.Object value, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> interpretation) {
     this.resourceType = resourceType;
     this.id = id;
     this.status = status;
@@ -116,6 +118,7 @@ static {
     this.effective = effective;
     this.issued = issued;
     this.value = value;
+    this.interpretation = interpretation;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -133,6 +136,7 @@ static {
     case 7: return effective;
     case 8: return issued;
     case 9: return value;
+    case 10: return interpretation;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -151,6 +155,7 @@ static {
     case 7: effective = (java.time.Instant)value$; break;
     case 8: issued = (java.lang.Integer)value$; break;
     case 9: value = value$; break;
+    case 10: interpretation = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -326,6 +331,23 @@ static {
   }
 
   /**
+   * Gets the value of the 'interpretation' field.
+   * @return The value of the 'interpretation' field.
+   */
+  public java.util.List<io.carrera.fhir.avro.models.CodeableConcept> getInterpretation() {
+    return interpretation;
+  }
+
+
+  /**
+   * Sets the value of the 'interpretation' field.
+   * @param value the value to set.
+   */
+  public void setInterpretation(java.util.List<io.carrera.fhir.avro.models.CodeableConcept> value) {
+    this.interpretation = value;
+  }
+
+  /**
    * Creates a new Observation RecordBuilder.
    * @return A new Observation RecordBuilder
    */
@@ -380,6 +402,7 @@ static {
     private java.time.Instant effective;
     private int issued;
     private java.lang.Object value;
+    private java.util.List<io.carrera.fhir.avro.models.CodeableConcept> interpretation;
 
     /** Creates a new Builder */
     private Builder() {
@@ -444,6 +467,10 @@ static {
         this.value = data().deepCopy(fields()[9].schema(), other.value);
         fieldSetFlags()[9] = other.fieldSetFlags()[9];
       }
+      if (isValidValue(fields()[10], other.interpretation)) {
+        this.interpretation = data().deepCopy(fields()[10].schema(), other.interpretation);
+        fieldSetFlags()[10] = other.fieldSetFlags()[10];
+      }
     }
 
     /**
@@ -495,6 +522,10 @@ static {
       if (isValidValue(fields()[9], other.value)) {
         this.value = data().deepCopy(fields()[9].schema(), other.value);
         fieldSetFlags()[9] = true;
+      }
+      if (isValidValue(fields()[10], other.interpretation)) {
+        this.interpretation = data().deepCopy(fields()[10].schema(), other.interpretation);
+        fieldSetFlags()[10] = true;
       }
     }
 
@@ -1037,6 +1068,46 @@ static {
       return this;
     }
 
+    /**
+      * Gets the value of the 'interpretation' field.
+      * @return The value.
+      */
+    public java.util.List<io.carrera.fhir.avro.models.CodeableConcept> getInterpretation() {
+      return interpretation;
+    }
+
+
+    /**
+      * Sets the value of the 'interpretation' field.
+      * @param value The value of 'interpretation'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Observation.Builder setInterpretation(java.util.List<io.carrera.fhir.avro.models.CodeableConcept> value) {
+      validate(fields()[10], value);
+      this.interpretation = value;
+      fieldSetFlags()[10] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'interpretation' field has been set.
+      * @return True if the 'interpretation' field has been set, false otherwise.
+      */
+    public boolean hasInterpretation() {
+      return fieldSetFlags()[10];
+    }
+
+
+    /**
+      * Clears the value of the 'interpretation' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Observation.Builder clearInterpretation() {
+      interpretation = null;
+      fieldSetFlags()[10] = false;
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     public Observation build() {
@@ -1088,6 +1159,7 @@ static {
         record.effective = fieldSetFlags()[7] ? this.effective : (java.time.Instant) defaultValue(fields()[7]);
         record.issued = fieldSetFlags()[8] ? this.issued : (java.lang.Integer) defaultValue(fields()[8]);
         record.value = fieldSetFlags()[9] ? this.value :  defaultValue(fields()[9]);
+        record.interpretation = fieldSetFlags()[10] ? this.interpretation : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[10]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;

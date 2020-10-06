@@ -2,19 +2,13 @@
     "name": "CodeableConcept",
     "type": "record",
     "namespace": "io.carrera.fhir.avro.models",
-    "fields": [
-      {
+    "fields": [{
         "name": "coding",
         "type": {
           "type": "array",
           "items": "Coding"
         }
-      },
-      {
-        "name": "text",
-        "type": ["string", "null"]
-      }
-    ]
+    }]
 }
 
 

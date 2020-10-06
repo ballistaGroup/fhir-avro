@@ -14,14 +14,11 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Medication extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 5868563571785101443L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Medication\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"meta\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Meta\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"versionId\",\"type\":[\"null\",\"string\"]},{\"name\":\"lastUpdated\",\"type\":[\"null\",{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]},{\"name\":\"source\",\"type\":[\"null\",\"string\"]},{\"name\":\"profile\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"security\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"version\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"display\",\"type\":[\"null\",\"string\"]},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"]}]}}]},{\"name\":\"tag\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Coding\"}]}]}]},{\"name\":\"implicitRules\",\"type\":[\"null\",\"string\"]},{\"name\":\"language\",\"type\":[\"null\",\"string\"]},{\"name\":\"text\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Narrative\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"status\",\"type\":[\"null\",\"string\"]},{\"name\":\"div\",\"type\":\"string\"}]}]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"identifier\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Identifier\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"use\",\"type\":[\"null\",\"string\"]},{\"name\":\"type\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":\"Coding\"}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"period\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]}]}]},{\"name\":\"assigner\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}]}]}}]},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"status\",\"type\":[\"null\",\"string\"]},{\"name\":\"manufacturer\",\"type\":[\"null\",\"Reference\"]},{\"name\":\"form\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"amount\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Ratio\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"numerator\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":\"float\"},{\"name\":\"unit\",\"type\":\"string\"},{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"}]}]},{\"name\":\"denominator\",\"type\":[\"null\",\"Quantity\"]}]}]},{\"name\":\"ingredient\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Medication_Ingredient\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"itemCodeableConcept\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"itemReference\",\"type\":[\"null\",\"Reference\"]},{\"name\":\"isActive\",\"type\":[\"null\",\"boolean\"]},{\"name\":\"strength\",\"type\":[\"null\",\"Ratio\"]}]}}]},{\"name\":\"batch\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Medication_Batch\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"lotNumber\",\"type\":[\"null\",\"string\"]},{\"name\":\"expirationDate\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]}]}]}]}");
+  private static final long serialVersionUID = -3196958965767347089L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Medication\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"code\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"code\",\"type\":[\"null\",\"string\"]}]}}}]}]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
-static {
-    MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.DateConversion());
-  }
 
   private static final BinaryMessageEncoder<Medication> ENCODER =
       new BinaryMessageEncoder<Medication>(MODEL$, SCHEMA$);
@@ -74,22 +71,7 @@ static {
     return DECODER.decode(b);
   }
 
-   private java.lang.CharSequence resourceType;
-   private java.lang.CharSequence id;
-   private io.carrera.fhir.avro.models.Meta meta;
-   private java.lang.CharSequence implicitRules;
-   private java.lang.CharSequence language;
-   private io.carrera.fhir.avro.models.Narrative text;
-   private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
-   private java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension;
-   private java.util.List<io.carrera.fhir.avro.models.Identifier> identifier;
    private io.carrera.fhir.avro.models.CodeableConcept code;
-   private java.lang.CharSequence status;
-   private io.carrera.fhir.avro.models.Reference manufacturer;
-   private io.carrera.fhir.avro.models.CodeableConcept form;
-   private io.carrera.fhir.avro.models.Ratio amount;
-   private java.util.List<io.carrera.fhir.avro.models.Medication_Ingredient> ingredient;
-   private io.carrera.fhir.avro.models.Medication_Batch batch;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -100,40 +82,10 @@ static {
 
   /**
    * All-args constructor.
-   * @param resourceType The new value for resourceType
-   * @param id The new value for id
-   * @param meta The new value for meta
-   * @param implicitRules The new value for implicitRules
-   * @param language The new value for language
-   * @param text The new value for text
-   * @param extension The new value for extension
-   * @param modifierExtension The new value for modifierExtension
-   * @param identifier The new value for identifier
    * @param code The new value for code
-   * @param status The new value for status
-   * @param manufacturer The new value for manufacturer
-   * @param form The new value for form
-   * @param amount The new value for amount
-   * @param ingredient The new value for ingredient
-   * @param batch The new value for batch
    */
-  public Medication(java.lang.CharSequence resourceType, java.lang.CharSequence id, io.carrera.fhir.avro.models.Meta meta, java.lang.CharSequence implicitRules, java.lang.CharSequence language, io.carrera.fhir.avro.models.Narrative text, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension, java.util.List<io.carrera.fhir.avro.models.Identifier> identifier, io.carrera.fhir.avro.models.CodeableConcept code, java.lang.CharSequence status, io.carrera.fhir.avro.models.Reference manufacturer, io.carrera.fhir.avro.models.CodeableConcept form, io.carrera.fhir.avro.models.Ratio amount, java.util.List<io.carrera.fhir.avro.models.Medication_Ingredient> ingredient, io.carrera.fhir.avro.models.Medication_Batch batch) {
-    this.resourceType = resourceType;
-    this.id = id;
-    this.meta = meta;
-    this.implicitRules = implicitRules;
-    this.language = language;
-    this.text = text;
-    this.extension = extension;
-    this.modifierExtension = modifierExtension;
-    this.identifier = identifier;
+  public Medication(io.carrera.fhir.avro.models.CodeableConcept code) {
     this.code = code;
-    this.status = status;
-    this.manufacturer = manufacturer;
-    this.form = form;
-    this.amount = amount;
-    this.ingredient = ingredient;
-    this.batch = batch;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -141,22 +93,7 @@ static {
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return resourceType;
-    case 1: return id;
-    case 2: return meta;
-    case 3: return implicitRules;
-    case 4: return language;
-    case 5: return text;
-    case 6: return extension;
-    case 7: return modifierExtension;
-    case 8: return identifier;
-    case 9: return code;
-    case 10: return status;
-    case 11: return manufacturer;
-    case 12: return form;
-    case 13: return amount;
-    case 14: return ingredient;
-    case 15: return batch;
+    case 0: return code;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -165,177 +102,9 @@ static {
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: resourceType = (java.lang.CharSequence)value$; break;
-    case 1: id = (java.lang.CharSequence)value$; break;
-    case 2: meta = (io.carrera.fhir.avro.models.Meta)value$; break;
-    case 3: implicitRules = (java.lang.CharSequence)value$; break;
-    case 4: language = (java.lang.CharSequence)value$; break;
-    case 5: text = (io.carrera.fhir.avro.models.Narrative)value$; break;
-    case 6: extension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 7: modifierExtension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 8: identifier = (java.util.List<io.carrera.fhir.avro.models.Identifier>)value$; break;
-    case 9: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 10: status = (java.lang.CharSequence)value$; break;
-    case 11: manufacturer = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 12: form = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 13: amount = (io.carrera.fhir.avro.models.Ratio)value$; break;
-    case 14: ingredient = (java.util.List<io.carrera.fhir.avro.models.Medication_Ingredient>)value$; break;
-    case 15: batch = (io.carrera.fhir.avro.models.Medication_Batch)value$; break;
+    case 0: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
-  }
-
-  /**
-   * Gets the value of the 'resourceType' field.
-   * @return The value of the 'resourceType' field.
-   */
-  public java.lang.CharSequence getResourceType() {
-    return resourceType;
-  }
-
-
-  /**
-   * Sets the value of the 'resourceType' field.
-   * @param value the value to set.
-   */
-  public void setResourceType(java.lang.CharSequence value) {
-    this.resourceType = value;
-  }
-
-  /**
-   * Gets the value of the 'id' field.
-   * @return The value of the 'id' field.
-   */
-  public java.lang.CharSequence getId() {
-    return id;
-  }
-
-
-  /**
-   * Sets the value of the 'id' field.
-   * @param value the value to set.
-   */
-  public void setId(java.lang.CharSequence value) {
-    this.id = value;
-  }
-
-  /**
-   * Gets the value of the 'meta' field.
-   * @return The value of the 'meta' field.
-   */
-  public io.carrera.fhir.avro.models.Meta getMeta() {
-    return meta;
-  }
-
-
-  /**
-   * Sets the value of the 'meta' field.
-   * @param value the value to set.
-   */
-  public void setMeta(io.carrera.fhir.avro.models.Meta value) {
-    this.meta = value;
-  }
-
-  /**
-   * Gets the value of the 'implicitRules' field.
-   * @return The value of the 'implicitRules' field.
-   */
-  public java.lang.CharSequence getImplicitRules() {
-    return implicitRules;
-  }
-
-
-  /**
-   * Sets the value of the 'implicitRules' field.
-   * @param value the value to set.
-   */
-  public void setImplicitRules(java.lang.CharSequence value) {
-    this.implicitRules = value;
-  }
-
-  /**
-   * Gets the value of the 'language' field.
-   * @return The value of the 'language' field.
-   */
-  public java.lang.CharSequence getLanguage() {
-    return language;
-  }
-
-
-  /**
-   * Sets the value of the 'language' field.
-   * @param value the value to set.
-   */
-  public void setLanguage(java.lang.CharSequence value) {
-    this.language = value;
-  }
-
-  /**
-   * Gets the value of the 'text' field.
-   * @return The value of the 'text' field.
-   */
-  public io.carrera.fhir.avro.models.Narrative getText() {
-    return text;
-  }
-
-
-  /**
-   * Sets the value of the 'text' field.
-   * @param value the value to set.
-   */
-  public void setText(io.carrera.fhir.avro.models.Narrative value) {
-    this.text = value;
-  }
-
-  /**
-   * Gets the value of the 'extension' field.
-   * @return The value of the 'extension' field.
-   */
-  public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
-    return extension;
-  }
-
-
-  /**
-   * Sets the value of the 'extension' field.
-   * @param value the value to set.
-   */
-  public void setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-    this.extension = value;
-  }
-
-  /**
-   * Gets the value of the 'modifierExtension' field.
-   * @return The value of the 'modifierExtension' field.
-   */
-  public java.util.List<io.carrera.fhir.avro.models.Extension> getModifierExtension() {
-    return modifierExtension;
-  }
-
-
-  /**
-   * Sets the value of the 'modifierExtension' field.
-   * @param value the value to set.
-   */
-  public void setModifierExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-    this.modifierExtension = value;
-  }
-
-  /**
-   * Gets the value of the 'identifier' field.
-   * @return The value of the 'identifier' field.
-   */
-  public java.util.List<io.carrera.fhir.avro.models.Identifier> getIdentifier() {
-    return identifier;
-  }
-
-
-  /**
-   * Sets the value of the 'identifier' field.
-   * @param value the value to set.
-   */
-  public void setIdentifier(java.util.List<io.carrera.fhir.avro.models.Identifier> value) {
-    this.identifier = value;
   }
 
   /**
@@ -353,108 +122,6 @@ static {
    */
   public void setCode(io.carrera.fhir.avro.models.CodeableConcept value) {
     this.code = value;
-  }
-
-  /**
-   * Gets the value of the 'status' field.
-   * @return The value of the 'status' field.
-   */
-  public java.lang.CharSequence getStatus() {
-    return status;
-  }
-
-
-  /**
-   * Sets the value of the 'status' field.
-   * @param value the value to set.
-   */
-  public void setStatus(java.lang.CharSequence value) {
-    this.status = value;
-  }
-
-  /**
-   * Gets the value of the 'manufacturer' field.
-   * @return The value of the 'manufacturer' field.
-   */
-  public io.carrera.fhir.avro.models.Reference getManufacturer() {
-    return manufacturer;
-  }
-
-
-  /**
-   * Sets the value of the 'manufacturer' field.
-   * @param value the value to set.
-   */
-  public void setManufacturer(io.carrera.fhir.avro.models.Reference value) {
-    this.manufacturer = value;
-  }
-
-  /**
-   * Gets the value of the 'form' field.
-   * @return The value of the 'form' field.
-   */
-  public io.carrera.fhir.avro.models.CodeableConcept getForm() {
-    return form;
-  }
-
-
-  /**
-   * Sets the value of the 'form' field.
-   * @param value the value to set.
-   */
-  public void setForm(io.carrera.fhir.avro.models.CodeableConcept value) {
-    this.form = value;
-  }
-
-  /**
-   * Gets the value of the 'amount' field.
-   * @return The value of the 'amount' field.
-   */
-  public io.carrera.fhir.avro.models.Ratio getAmount() {
-    return amount;
-  }
-
-
-  /**
-   * Sets the value of the 'amount' field.
-   * @param value the value to set.
-   */
-  public void setAmount(io.carrera.fhir.avro.models.Ratio value) {
-    this.amount = value;
-  }
-
-  /**
-   * Gets the value of the 'ingredient' field.
-   * @return The value of the 'ingredient' field.
-   */
-  public java.util.List<io.carrera.fhir.avro.models.Medication_Ingredient> getIngredient() {
-    return ingredient;
-  }
-
-
-  /**
-   * Sets the value of the 'ingredient' field.
-   * @param value the value to set.
-   */
-  public void setIngredient(java.util.List<io.carrera.fhir.avro.models.Medication_Ingredient> value) {
-    this.ingredient = value;
-  }
-
-  /**
-   * Gets the value of the 'batch' field.
-   * @return The value of the 'batch' field.
-   */
-  public io.carrera.fhir.avro.models.Medication_Batch getBatch() {
-    return batch;
-  }
-
-
-  /**
-   * Sets the value of the 'batch' field.
-   * @param value the value to set.
-   */
-  public void setBatch(io.carrera.fhir.avro.models.Medication_Batch value) {
-    this.batch = value;
   }
 
   /**
@@ -498,29 +165,8 @@ static {
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Medication>
     implements org.apache.avro.data.RecordBuilder<Medication> {
 
-    private java.lang.CharSequence resourceType;
-    private java.lang.CharSequence id;
-    private io.carrera.fhir.avro.models.Meta meta;
-    private io.carrera.fhir.avro.models.Meta.Builder metaBuilder;
-    private java.lang.CharSequence implicitRules;
-    private java.lang.CharSequence language;
-    private io.carrera.fhir.avro.models.Narrative text;
-    private io.carrera.fhir.avro.models.Narrative.Builder textBuilder;
-    private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
-    private java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension;
-    private java.util.List<io.carrera.fhir.avro.models.Identifier> identifier;
     private io.carrera.fhir.avro.models.CodeableConcept code;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder codeBuilder;
-    private java.lang.CharSequence status;
-    private io.carrera.fhir.avro.models.Reference manufacturer;
-    private io.carrera.fhir.avro.models.Reference.Builder manufacturerBuilder;
-    private io.carrera.fhir.avro.models.CodeableConcept form;
-    private io.carrera.fhir.avro.models.CodeableConcept.Builder formBuilder;
-    private io.carrera.fhir.avro.models.Ratio amount;
-    private io.carrera.fhir.avro.models.Ratio.Builder amountBuilder;
-    private java.util.List<io.carrera.fhir.avro.models.Medication_Ingredient> ingredient;
-    private io.carrera.fhir.avro.models.Medication_Batch batch;
-    private io.carrera.fhir.avro.models.Medication_Batch.Builder batchBuilder;
 
     /** Creates a new Builder */
     private Builder() {
@@ -533,90 +179,12 @@ static {
      */
     private Builder(io.carrera.fhir.avro.models.Medication.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.resourceType)) {
-        this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
+      if (isValidValue(fields()[0], other.code)) {
+        this.code = data().deepCopy(fields()[0].schema(), other.code);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
-      }
-      if (isValidValue(fields()[1], other.id)) {
-        this.id = data().deepCopy(fields()[1].schema(), other.id);
-        fieldSetFlags()[1] = other.fieldSetFlags()[1];
-      }
-      if (isValidValue(fields()[2], other.meta)) {
-        this.meta = data().deepCopy(fields()[2].schema(), other.meta);
-        fieldSetFlags()[2] = other.fieldSetFlags()[2];
-      }
-      if (other.hasMetaBuilder()) {
-        this.metaBuilder = io.carrera.fhir.avro.models.Meta.newBuilder(other.getMetaBuilder());
-      }
-      if (isValidValue(fields()[3], other.implicitRules)) {
-        this.implicitRules = data().deepCopy(fields()[3].schema(), other.implicitRules);
-        fieldSetFlags()[3] = other.fieldSetFlags()[3];
-      }
-      if (isValidValue(fields()[4], other.language)) {
-        this.language = data().deepCopy(fields()[4].schema(), other.language);
-        fieldSetFlags()[4] = other.fieldSetFlags()[4];
-      }
-      if (isValidValue(fields()[5], other.text)) {
-        this.text = data().deepCopy(fields()[5].schema(), other.text);
-        fieldSetFlags()[5] = other.fieldSetFlags()[5];
-      }
-      if (other.hasTextBuilder()) {
-        this.textBuilder = io.carrera.fhir.avro.models.Narrative.newBuilder(other.getTextBuilder());
-      }
-      if (isValidValue(fields()[6], other.extension)) {
-        this.extension = data().deepCopy(fields()[6].schema(), other.extension);
-        fieldSetFlags()[6] = other.fieldSetFlags()[6];
-      }
-      if (isValidValue(fields()[7], other.modifierExtension)) {
-        this.modifierExtension = data().deepCopy(fields()[7].schema(), other.modifierExtension);
-        fieldSetFlags()[7] = other.fieldSetFlags()[7];
-      }
-      if (isValidValue(fields()[8], other.identifier)) {
-        this.identifier = data().deepCopy(fields()[8].schema(), other.identifier);
-        fieldSetFlags()[8] = other.fieldSetFlags()[8];
-      }
-      if (isValidValue(fields()[9], other.code)) {
-        this.code = data().deepCopy(fields()[9].schema(), other.code);
-        fieldSetFlags()[9] = other.fieldSetFlags()[9];
       }
       if (other.hasCodeBuilder()) {
         this.codeBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getCodeBuilder());
-      }
-      if (isValidValue(fields()[10], other.status)) {
-        this.status = data().deepCopy(fields()[10].schema(), other.status);
-        fieldSetFlags()[10] = other.fieldSetFlags()[10];
-      }
-      if (isValidValue(fields()[11], other.manufacturer)) {
-        this.manufacturer = data().deepCopy(fields()[11].schema(), other.manufacturer);
-        fieldSetFlags()[11] = other.fieldSetFlags()[11];
-      }
-      if (other.hasManufacturerBuilder()) {
-        this.manufacturerBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getManufacturerBuilder());
-      }
-      if (isValidValue(fields()[12], other.form)) {
-        this.form = data().deepCopy(fields()[12].schema(), other.form);
-        fieldSetFlags()[12] = other.fieldSetFlags()[12];
-      }
-      if (other.hasFormBuilder()) {
-        this.formBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getFormBuilder());
-      }
-      if (isValidValue(fields()[13], other.amount)) {
-        this.amount = data().deepCopy(fields()[13].schema(), other.amount);
-        fieldSetFlags()[13] = other.fieldSetFlags()[13];
-      }
-      if (other.hasAmountBuilder()) {
-        this.amountBuilder = io.carrera.fhir.avro.models.Ratio.newBuilder(other.getAmountBuilder());
-      }
-      if (isValidValue(fields()[14], other.ingredient)) {
-        this.ingredient = data().deepCopy(fields()[14].schema(), other.ingredient);
-        fieldSetFlags()[14] = other.fieldSetFlags()[14];
-      }
-      if (isValidValue(fields()[15], other.batch)) {
-        this.batch = data().deepCopy(fields()[15].schema(), other.batch);
-        fieldSetFlags()[15] = other.fieldSetFlags()[15];
-      }
-      if (other.hasBatchBuilder()) {
-        this.batchBuilder = io.carrera.fhir.avro.models.Medication_Batch.newBuilder(other.getBatchBuilder());
       }
     }
 
@@ -626,507 +194,11 @@ static {
      */
     private Builder(io.carrera.fhir.avro.models.Medication other) {
       super(SCHEMA$);
-      if (isValidValue(fields()[0], other.resourceType)) {
-        this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
+      if (isValidValue(fields()[0], other.code)) {
+        this.code = data().deepCopy(fields()[0].schema(), other.code);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.id)) {
-        this.id = data().deepCopy(fields()[1].schema(), other.id);
-        fieldSetFlags()[1] = true;
-      }
-      if (isValidValue(fields()[2], other.meta)) {
-        this.meta = data().deepCopy(fields()[2].schema(), other.meta);
-        fieldSetFlags()[2] = true;
-      }
-      this.metaBuilder = null;
-      if (isValidValue(fields()[3], other.implicitRules)) {
-        this.implicitRules = data().deepCopy(fields()[3].schema(), other.implicitRules);
-        fieldSetFlags()[3] = true;
-      }
-      if (isValidValue(fields()[4], other.language)) {
-        this.language = data().deepCopy(fields()[4].schema(), other.language);
-        fieldSetFlags()[4] = true;
-      }
-      if (isValidValue(fields()[5], other.text)) {
-        this.text = data().deepCopy(fields()[5].schema(), other.text);
-        fieldSetFlags()[5] = true;
-      }
-      this.textBuilder = null;
-      if (isValidValue(fields()[6], other.extension)) {
-        this.extension = data().deepCopy(fields()[6].schema(), other.extension);
-        fieldSetFlags()[6] = true;
-      }
-      if (isValidValue(fields()[7], other.modifierExtension)) {
-        this.modifierExtension = data().deepCopy(fields()[7].schema(), other.modifierExtension);
-        fieldSetFlags()[7] = true;
-      }
-      if (isValidValue(fields()[8], other.identifier)) {
-        this.identifier = data().deepCopy(fields()[8].schema(), other.identifier);
-        fieldSetFlags()[8] = true;
-      }
-      if (isValidValue(fields()[9], other.code)) {
-        this.code = data().deepCopy(fields()[9].schema(), other.code);
-        fieldSetFlags()[9] = true;
-      }
       this.codeBuilder = null;
-      if (isValidValue(fields()[10], other.status)) {
-        this.status = data().deepCopy(fields()[10].schema(), other.status);
-        fieldSetFlags()[10] = true;
-      }
-      if (isValidValue(fields()[11], other.manufacturer)) {
-        this.manufacturer = data().deepCopy(fields()[11].schema(), other.manufacturer);
-        fieldSetFlags()[11] = true;
-      }
-      this.manufacturerBuilder = null;
-      if (isValidValue(fields()[12], other.form)) {
-        this.form = data().deepCopy(fields()[12].schema(), other.form);
-        fieldSetFlags()[12] = true;
-      }
-      this.formBuilder = null;
-      if (isValidValue(fields()[13], other.amount)) {
-        this.amount = data().deepCopy(fields()[13].schema(), other.amount);
-        fieldSetFlags()[13] = true;
-      }
-      this.amountBuilder = null;
-      if (isValidValue(fields()[14], other.ingredient)) {
-        this.ingredient = data().deepCopy(fields()[14].schema(), other.ingredient);
-        fieldSetFlags()[14] = true;
-      }
-      if (isValidValue(fields()[15], other.batch)) {
-        this.batch = data().deepCopy(fields()[15].schema(), other.batch);
-        fieldSetFlags()[15] = true;
-      }
-      this.batchBuilder = null;
-    }
-
-    /**
-      * Gets the value of the 'resourceType' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getResourceType() {
-      return resourceType;
-    }
-
-
-    /**
-      * Sets the value of the 'resourceType' field.
-      * @param value The value of 'resourceType'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder setResourceType(java.lang.CharSequence value) {
-      validate(fields()[0], value);
-      this.resourceType = value;
-      fieldSetFlags()[0] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'resourceType' field has been set.
-      * @return True if the 'resourceType' field has been set, false otherwise.
-      */
-    public boolean hasResourceType() {
-      return fieldSetFlags()[0];
-    }
-
-
-    /**
-      * Clears the value of the 'resourceType' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder clearResourceType() {
-      resourceType = null;
-      fieldSetFlags()[0] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'id' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getId() {
-      return id;
-    }
-
-
-    /**
-      * Sets the value of the 'id' field.
-      * @param value The value of 'id'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder setId(java.lang.CharSequence value) {
-      validate(fields()[1], value);
-      this.id = value;
-      fieldSetFlags()[1] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'id' field has been set.
-      * @return True if the 'id' field has been set, false otherwise.
-      */
-    public boolean hasId() {
-      return fieldSetFlags()[1];
-    }
-
-
-    /**
-      * Clears the value of the 'id' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder clearId() {
-      id = null;
-      fieldSetFlags()[1] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'meta' field.
-      * @return The value.
-      */
-    public io.carrera.fhir.avro.models.Meta getMeta() {
-      return meta;
-    }
-
-
-    /**
-      * Sets the value of the 'meta' field.
-      * @param value The value of 'meta'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder setMeta(io.carrera.fhir.avro.models.Meta value) {
-      validate(fields()[2], value);
-      this.metaBuilder = null;
-      this.meta = value;
-      fieldSetFlags()[2] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'meta' field has been set.
-      * @return True if the 'meta' field has been set, false otherwise.
-      */
-    public boolean hasMeta() {
-      return fieldSetFlags()[2];
-    }
-
-    /**
-     * Gets the Builder instance for the 'meta' field and creates one if it doesn't exist yet.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.Meta.Builder getMetaBuilder() {
-      if (metaBuilder == null) {
-        if (hasMeta()) {
-          setMetaBuilder(io.carrera.fhir.avro.models.Meta.newBuilder(meta));
-        } else {
-          setMetaBuilder(io.carrera.fhir.avro.models.Meta.newBuilder());
-        }
-      }
-      return metaBuilder;
-    }
-
-    /**
-     * Sets the Builder instance for the 'meta' field
-     * @param value The builder instance that must be set.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.Medication.Builder setMetaBuilder(io.carrera.fhir.avro.models.Meta.Builder value) {
-      clearMeta();
-      metaBuilder = value;
-      return this;
-    }
-
-    /**
-     * Checks whether the 'meta' field has an active Builder instance
-     * @return True if the 'meta' field has an active Builder instance
-     */
-    public boolean hasMetaBuilder() {
-      return metaBuilder != null;
-    }
-
-    /**
-      * Clears the value of the 'meta' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder clearMeta() {
-      meta = null;
-      metaBuilder = null;
-      fieldSetFlags()[2] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'implicitRules' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getImplicitRules() {
-      return implicitRules;
-    }
-
-
-    /**
-      * Sets the value of the 'implicitRules' field.
-      * @param value The value of 'implicitRules'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder setImplicitRules(java.lang.CharSequence value) {
-      validate(fields()[3], value);
-      this.implicitRules = value;
-      fieldSetFlags()[3] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'implicitRules' field has been set.
-      * @return True if the 'implicitRules' field has been set, false otherwise.
-      */
-    public boolean hasImplicitRules() {
-      return fieldSetFlags()[3];
-    }
-
-
-    /**
-      * Clears the value of the 'implicitRules' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder clearImplicitRules() {
-      implicitRules = null;
-      fieldSetFlags()[3] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'language' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getLanguage() {
-      return language;
-    }
-
-
-    /**
-      * Sets the value of the 'language' field.
-      * @param value The value of 'language'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder setLanguage(java.lang.CharSequence value) {
-      validate(fields()[4], value);
-      this.language = value;
-      fieldSetFlags()[4] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'language' field has been set.
-      * @return True if the 'language' field has been set, false otherwise.
-      */
-    public boolean hasLanguage() {
-      return fieldSetFlags()[4];
-    }
-
-
-    /**
-      * Clears the value of the 'language' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder clearLanguage() {
-      language = null;
-      fieldSetFlags()[4] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'text' field.
-      * @return The value.
-      */
-    public io.carrera.fhir.avro.models.Narrative getText() {
-      return text;
-    }
-
-
-    /**
-      * Sets the value of the 'text' field.
-      * @param value The value of 'text'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder setText(io.carrera.fhir.avro.models.Narrative value) {
-      validate(fields()[5], value);
-      this.textBuilder = null;
-      this.text = value;
-      fieldSetFlags()[5] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'text' field has been set.
-      * @return True if the 'text' field has been set, false otherwise.
-      */
-    public boolean hasText() {
-      return fieldSetFlags()[5];
-    }
-
-    /**
-     * Gets the Builder instance for the 'text' field and creates one if it doesn't exist yet.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.Narrative.Builder getTextBuilder() {
-      if (textBuilder == null) {
-        if (hasText()) {
-          setTextBuilder(io.carrera.fhir.avro.models.Narrative.newBuilder(text));
-        } else {
-          setTextBuilder(io.carrera.fhir.avro.models.Narrative.newBuilder());
-        }
-      }
-      return textBuilder;
-    }
-
-    /**
-     * Sets the Builder instance for the 'text' field
-     * @param value The builder instance that must be set.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.Medication.Builder setTextBuilder(io.carrera.fhir.avro.models.Narrative.Builder value) {
-      clearText();
-      textBuilder = value;
-      return this;
-    }
-
-    /**
-     * Checks whether the 'text' field has an active Builder instance
-     * @return True if the 'text' field has an active Builder instance
-     */
-    public boolean hasTextBuilder() {
-      return textBuilder != null;
-    }
-
-    /**
-      * Clears the value of the 'text' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder clearText() {
-      text = null;
-      textBuilder = null;
-      fieldSetFlags()[5] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'extension' field.
-      * @return The value.
-      */
-    public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
-      return extension;
-    }
-
-
-    /**
-      * Sets the value of the 'extension' field.
-      * @param value The value of 'extension'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-      validate(fields()[6], value);
-      this.extension = value;
-      fieldSetFlags()[6] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'extension' field has been set.
-      * @return True if the 'extension' field has been set, false otherwise.
-      */
-    public boolean hasExtension() {
-      return fieldSetFlags()[6];
-    }
-
-
-    /**
-      * Clears the value of the 'extension' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder clearExtension() {
-      extension = null;
-      fieldSetFlags()[6] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'modifierExtension' field.
-      * @return The value.
-      */
-    public java.util.List<io.carrera.fhir.avro.models.Extension> getModifierExtension() {
-      return modifierExtension;
-    }
-
-
-    /**
-      * Sets the value of the 'modifierExtension' field.
-      * @param value The value of 'modifierExtension'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder setModifierExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-      validate(fields()[7], value);
-      this.modifierExtension = value;
-      fieldSetFlags()[7] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'modifierExtension' field has been set.
-      * @return True if the 'modifierExtension' field has been set, false otherwise.
-      */
-    public boolean hasModifierExtension() {
-      return fieldSetFlags()[7];
-    }
-
-
-    /**
-      * Clears the value of the 'modifierExtension' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder clearModifierExtension() {
-      modifierExtension = null;
-      fieldSetFlags()[7] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'identifier' field.
-      * @return The value.
-      */
-    public java.util.List<io.carrera.fhir.avro.models.Identifier> getIdentifier() {
-      return identifier;
-    }
-
-
-    /**
-      * Sets the value of the 'identifier' field.
-      * @param value The value of 'identifier'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder setIdentifier(java.util.List<io.carrera.fhir.avro.models.Identifier> value) {
-      validate(fields()[8], value);
-      this.identifier = value;
-      fieldSetFlags()[8] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'identifier' field has been set.
-      * @return True if the 'identifier' field has been set, false otherwise.
-      */
-    public boolean hasIdentifier() {
-      return fieldSetFlags()[8];
-    }
-
-
-    /**
-      * Clears the value of the 'identifier' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder clearIdentifier() {
-      identifier = null;
-      fieldSetFlags()[8] = false;
-      return this;
     }
 
     /**
@@ -1144,10 +216,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Medication.Builder setCode(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[9], value);
+      validate(fields()[0], value);
       this.codeBuilder = null;
       this.code = value;
-      fieldSetFlags()[9] = true;
+      fieldSetFlags()[0] = true;
       return this;
     }
 
@@ -1156,7 +228,7 @@ static {
       * @return True if the 'code' field has been set, false otherwise.
       */
     public boolean hasCode() {
-      return fieldSetFlags()[9];
+      return fieldSetFlags()[0];
     }
 
     /**
@@ -1200,387 +272,7 @@ static {
     public io.carrera.fhir.avro.models.Medication.Builder clearCode() {
       code = null;
       codeBuilder = null;
-      fieldSetFlags()[9] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'status' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getStatus() {
-      return status;
-    }
-
-
-    /**
-      * Sets the value of the 'status' field.
-      * @param value The value of 'status'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder setStatus(java.lang.CharSequence value) {
-      validate(fields()[10], value);
-      this.status = value;
-      fieldSetFlags()[10] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'status' field has been set.
-      * @return True if the 'status' field has been set, false otherwise.
-      */
-    public boolean hasStatus() {
-      return fieldSetFlags()[10];
-    }
-
-
-    /**
-      * Clears the value of the 'status' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder clearStatus() {
-      status = null;
-      fieldSetFlags()[10] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'manufacturer' field.
-      * @return The value.
-      */
-    public io.carrera.fhir.avro.models.Reference getManufacturer() {
-      return manufacturer;
-    }
-
-
-    /**
-      * Sets the value of the 'manufacturer' field.
-      * @param value The value of 'manufacturer'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder setManufacturer(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[11], value);
-      this.manufacturerBuilder = null;
-      this.manufacturer = value;
-      fieldSetFlags()[11] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'manufacturer' field has been set.
-      * @return True if the 'manufacturer' field has been set, false otherwise.
-      */
-    public boolean hasManufacturer() {
-      return fieldSetFlags()[11];
-    }
-
-    /**
-     * Gets the Builder instance for the 'manufacturer' field and creates one if it doesn't exist yet.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.Reference.Builder getManufacturerBuilder() {
-      if (manufacturerBuilder == null) {
-        if (hasManufacturer()) {
-          setManufacturerBuilder(io.carrera.fhir.avro.models.Reference.newBuilder(manufacturer));
-        } else {
-          setManufacturerBuilder(io.carrera.fhir.avro.models.Reference.newBuilder());
-        }
-      }
-      return manufacturerBuilder;
-    }
-
-    /**
-     * Sets the Builder instance for the 'manufacturer' field
-     * @param value The builder instance that must be set.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.Medication.Builder setManufacturerBuilder(io.carrera.fhir.avro.models.Reference.Builder value) {
-      clearManufacturer();
-      manufacturerBuilder = value;
-      return this;
-    }
-
-    /**
-     * Checks whether the 'manufacturer' field has an active Builder instance
-     * @return True if the 'manufacturer' field has an active Builder instance
-     */
-    public boolean hasManufacturerBuilder() {
-      return manufacturerBuilder != null;
-    }
-
-    /**
-      * Clears the value of the 'manufacturer' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder clearManufacturer() {
-      manufacturer = null;
-      manufacturerBuilder = null;
-      fieldSetFlags()[11] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'form' field.
-      * @return The value.
-      */
-    public io.carrera.fhir.avro.models.CodeableConcept getForm() {
-      return form;
-    }
-
-
-    /**
-      * Sets the value of the 'form' field.
-      * @param value The value of 'form'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder setForm(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[12], value);
-      this.formBuilder = null;
-      this.form = value;
-      fieldSetFlags()[12] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'form' field has been set.
-      * @return True if the 'form' field has been set, false otherwise.
-      */
-    public boolean hasForm() {
-      return fieldSetFlags()[12];
-    }
-
-    /**
-     * Gets the Builder instance for the 'form' field and creates one if it doesn't exist yet.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.CodeableConcept.Builder getFormBuilder() {
-      if (formBuilder == null) {
-        if (hasForm()) {
-          setFormBuilder(io.carrera.fhir.avro.models.CodeableConcept.newBuilder(form));
-        } else {
-          setFormBuilder(io.carrera.fhir.avro.models.CodeableConcept.newBuilder());
-        }
-      }
-      return formBuilder;
-    }
-
-    /**
-     * Sets the Builder instance for the 'form' field
-     * @param value The builder instance that must be set.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.Medication.Builder setFormBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
-      clearForm();
-      formBuilder = value;
-      return this;
-    }
-
-    /**
-     * Checks whether the 'form' field has an active Builder instance
-     * @return True if the 'form' field has an active Builder instance
-     */
-    public boolean hasFormBuilder() {
-      return formBuilder != null;
-    }
-
-    /**
-      * Clears the value of the 'form' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder clearForm() {
-      form = null;
-      formBuilder = null;
-      fieldSetFlags()[12] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'amount' field.
-      * @return The value.
-      */
-    public io.carrera.fhir.avro.models.Ratio getAmount() {
-      return amount;
-    }
-
-
-    /**
-      * Sets the value of the 'amount' field.
-      * @param value The value of 'amount'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder setAmount(io.carrera.fhir.avro.models.Ratio value) {
-      validate(fields()[13], value);
-      this.amountBuilder = null;
-      this.amount = value;
-      fieldSetFlags()[13] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'amount' field has been set.
-      * @return True if the 'amount' field has been set, false otherwise.
-      */
-    public boolean hasAmount() {
-      return fieldSetFlags()[13];
-    }
-
-    /**
-     * Gets the Builder instance for the 'amount' field and creates one if it doesn't exist yet.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.Ratio.Builder getAmountBuilder() {
-      if (amountBuilder == null) {
-        if (hasAmount()) {
-          setAmountBuilder(io.carrera.fhir.avro.models.Ratio.newBuilder(amount));
-        } else {
-          setAmountBuilder(io.carrera.fhir.avro.models.Ratio.newBuilder());
-        }
-      }
-      return amountBuilder;
-    }
-
-    /**
-     * Sets the Builder instance for the 'amount' field
-     * @param value The builder instance that must be set.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.Medication.Builder setAmountBuilder(io.carrera.fhir.avro.models.Ratio.Builder value) {
-      clearAmount();
-      amountBuilder = value;
-      return this;
-    }
-
-    /**
-     * Checks whether the 'amount' field has an active Builder instance
-     * @return True if the 'amount' field has an active Builder instance
-     */
-    public boolean hasAmountBuilder() {
-      return amountBuilder != null;
-    }
-
-    /**
-      * Clears the value of the 'amount' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder clearAmount() {
-      amount = null;
-      amountBuilder = null;
-      fieldSetFlags()[13] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'ingredient' field.
-      * @return The value.
-      */
-    public java.util.List<io.carrera.fhir.avro.models.Medication_Ingredient> getIngredient() {
-      return ingredient;
-    }
-
-
-    /**
-      * Sets the value of the 'ingredient' field.
-      * @param value The value of 'ingredient'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder setIngredient(java.util.List<io.carrera.fhir.avro.models.Medication_Ingredient> value) {
-      validate(fields()[14], value);
-      this.ingredient = value;
-      fieldSetFlags()[14] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'ingredient' field has been set.
-      * @return True if the 'ingredient' field has been set, false otherwise.
-      */
-    public boolean hasIngredient() {
-      return fieldSetFlags()[14];
-    }
-
-
-    /**
-      * Clears the value of the 'ingredient' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder clearIngredient() {
-      ingredient = null;
-      fieldSetFlags()[14] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'batch' field.
-      * @return The value.
-      */
-    public io.carrera.fhir.avro.models.Medication_Batch getBatch() {
-      return batch;
-    }
-
-
-    /**
-      * Sets the value of the 'batch' field.
-      * @param value The value of 'batch'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder setBatch(io.carrera.fhir.avro.models.Medication_Batch value) {
-      validate(fields()[15], value);
-      this.batchBuilder = null;
-      this.batch = value;
-      fieldSetFlags()[15] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'batch' field has been set.
-      * @return True if the 'batch' field has been set, false otherwise.
-      */
-    public boolean hasBatch() {
-      return fieldSetFlags()[15];
-    }
-
-    /**
-     * Gets the Builder instance for the 'batch' field and creates one if it doesn't exist yet.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.Medication_Batch.Builder getBatchBuilder() {
-      if (batchBuilder == null) {
-        if (hasBatch()) {
-          setBatchBuilder(io.carrera.fhir.avro.models.Medication_Batch.newBuilder(batch));
-        } else {
-          setBatchBuilder(io.carrera.fhir.avro.models.Medication_Batch.newBuilder());
-        }
-      }
-      return batchBuilder;
-    }
-
-    /**
-     * Sets the Builder instance for the 'batch' field
-     * @param value The builder instance that must be set.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.Medication.Builder setBatchBuilder(io.carrera.fhir.avro.models.Medication_Batch.Builder value) {
-      clearBatch();
-      batchBuilder = value;
-      return this;
-    }
-
-    /**
-     * Checks whether the 'batch' field has an active Builder instance
-     * @return True if the 'batch' field has an active Builder instance
-     */
-    public boolean hasBatchBuilder() {
-      return batchBuilder != null;
-    }
-
-    /**
-      * Clears the value of the 'batch' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication.Builder clearBatch() {
-      batch = null;
-      batchBuilder = null;
-      fieldSetFlags()[15] = false;
+      fieldSetFlags()[0] = false;
       return this;
     }
 
@@ -1589,33 +281,6 @@ static {
     public Medication build() {
       try {
         Medication record = new Medication();
-        record.resourceType = fieldSetFlags()[0] ? this.resourceType : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.id = fieldSetFlags()[1] ? this.id : (java.lang.CharSequence) defaultValue(fields()[1]);
-        if (metaBuilder != null) {
-          try {
-            record.meta = this.metaBuilder.build();
-          } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("meta"));
-            throw e;
-          }
-        } else {
-          record.meta = fieldSetFlags()[2] ? this.meta : (io.carrera.fhir.avro.models.Meta) defaultValue(fields()[2]);
-        }
-        record.implicitRules = fieldSetFlags()[3] ? this.implicitRules : (java.lang.CharSequence) defaultValue(fields()[3]);
-        record.language = fieldSetFlags()[4] ? this.language : (java.lang.CharSequence) defaultValue(fields()[4]);
-        if (textBuilder != null) {
-          try {
-            record.text = this.textBuilder.build();
-          } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("text"));
-            throw e;
-          }
-        } else {
-          record.text = fieldSetFlags()[5] ? this.text : (io.carrera.fhir.avro.models.Narrative) defaultValue(fields()[5]);
-        }
-        record.extension = fieldSetFlags()[6] ? this.extension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[6]);
-        record.modifierExtension = fieldSetFlags()[7] ? this.modifierExtension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[7]);
-        record.identifier = fieldSetFlags()[8] ? this.identifier : (java.util.List<io.carrera.fhir.avro.models.Identifier>) defaultValue(fields()[8]);
         if (codeBuilder != null) {
           try {
             record.code = this.codeBuilder.build();
@@ -1624,49 +289,7 @@ static {
             throw e;
           }
         } else {
-          record.code = fieldSetFlags()[9] ? this.code : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[9]);
-        }
-        record.status = fieldSetFlags()[10] ? this.status : (java.lang.CharSequence) defaultValue(fields()[10]);
-        if (manufacturerBuilder != null) {
-          try {
-            record.manufacturer = this.manufacturerBuilder.build();
-          } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("manufacturer"));
-            throw e;
-          }
-        } else {
-          record.manufacturer = fieldSetFlags()[11] ? this.manufacturer : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[11]);
-        }
-        if (formBuilder != null) {
-          try {
-            record.form = this.formBuilder.build();
-          } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("form"));
-            throw e;
-          }
-        } else {
-          record.form = fieldSetFlags()[12] ? this.form : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[12]);
-        }
-        if (amountBuilder != null) {
-          try {
-            record.amount = this.amountBuilder.build();
-          } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("amount"));
-            throw e;
-          }
-        } else {
-          record.amount = fieldSetFlags()[13] ? this.amount : (io.carrera.fhir.avro.models.Ratio) defaultValue(fields()[13]);
-        }
-        record.ingredient = fieldSetFlags()[14] ? this.ingredient : (java.util.List<io.carrera.fhir.avro.models.Medication_Ingredient>) defaultValue(fields()[14]);
-        if (batchBuilder != null) {
-          try {
-            record.batch = this.batchBuilder.build();
-          } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("batch"));
-            throw e;
-          }
-        } else {
-          record.batch = fieldSetFlags()[15] ? this.batch : (io.carrera.fhir.avro.models.Medication_Batch) defaultValue(fields()[15]);
+          record.code = fieldSetFlags()[0] ? this.code : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[0]);
         }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
@@ -1695,6 +318,57 @@ static {
     READER$.read(this, SpecificData.getDecoder(in));
   }
 
+  @Override protected boolean hasCustomCoders() { return true; }
+
+  @Override public void customEncode(org.apache.avro.io.Encoder out)
+    throws java.io.IOException
+  {
+    if (this.code == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      this.code.customEncode(out);
+    }
+
+  }
+
+  @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
+    throws java.io.IOException
+  {
+    org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
+    if (fieldOrder == null) {
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.code = null;
+      } else {
+        if (this.code == null) {
+          this.code = new io.carrera.fhir.avro.models.CodeableConcept();
+        }
+        this.code.customDecode(in);
+      }
+
+    } else {
+      for (int i = 0; i < 1; i++) {
+        switch (fieldOrder[i].pos()) {
+        case 0:
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.code = null;
+          } else {
+            if (this.code == null) {
+              this.code = new io.carrera.fhir.avro.models.CodeableConcept();
+            }
+            this.code.customDecode(in);
+          }
+          break;
+
+        default:
+          throw new java.io.IOException("Corrupt ResolvingDecoder.");
+        }
+      }
+    }
+  }
 }
 
 

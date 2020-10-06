@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Narrative extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 2934505292044858233L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Narrative\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"status\",\"type\":[\"null\",\"string\"]},{\"name\":\"div\",\"type\":\"string\"}]}");
+  private static final long serialVersionUID = -7554294907916487361L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Narrative\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"status\",\"type\":[\"null\",\"string\"]},{\"name\":\"div\",\"type\":\"string\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -72,7 +72,6 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
   }
 
    private java.lang.CharSequence id;
-   private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
    private java.lang.CharSequence status;
    private java.lang.CharSequence div;
 
@@ -86,13 +85,11 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
   /**
    * All-args constructor.
    * @param id The new value for id
-   * @param extension The new value for extension
    * @param status The new value for status
    * @param div The new value for div
    */
-  public Narrative(java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.lang.CharSequence status, java.lang.CharSequence div) {
+  public Narrative(java.lang.CharSequence id, java.lang.CharSequence status, java.lang.CharSequence div) {
     this.id = id;
-    this.extension = extension;
     this.status = status;
     this.div = div;
   }
@@ -103,9 +100,8 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
   public java.lang.Object get(int field$) {
     switch (field$) {
     case 0: return id;
-    case 1: return extension;
-    case 2: return status;
-    case 3: return div;
+    case 1: return status;
+    case 2: return div;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -115,9 +111,8 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
     case 0: id = (java.lang.CharSequence)value$; break;
-    case 1: extension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 2: status = (java.lang.CharSequence)value$; break;
-    case 3: div = (java.lang.CharSequence)value$; break;
+    case 1: status = (java.lang.CharSequence)value$; break;
+    case 2: div = (java.lang.CharSequence)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -137,23 +132,6 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
    */
   public void setId(java.lang.CharSequence value) {
     this.id = value;
-  }
-
-  /**
-   * Gets the value of the 'extension' field.
-   * @return The value of the 'extension' field.
-   */
-  public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
-    return extension;
-  }
-
-
-  /**
-   * Sets the value of the 'extension' field.
-   * @param value the value to set.
-   */
-  public void setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-    this.extension = value;
   }
 
   /**
@@ -232,7 +210,6 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
     implements org.apache.avro.data.RecordBuilder<Narrative> {
 
     private java.lang.CharSequence id;
-    private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
     private java.lang.CharSequence status;
     private java.lang.CharSequence div;
 
@@ -251,17 +228,13 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
         this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
-      if (isValidValue(fields()[1], other.extension)) {
-        this.extension = data().deepCopy(fields()[1].schema(), other.extension);
+      if (isValidValue(fields()[1], other.status)) {
+        this.status = data().deepCopy(fields()[1].schema(), other.status);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
-      if (isValidValue(fields()[2], other.status)) {
-        this.status = data().deepCopy(fields()[2].schema(), other.status);
+      if (isValidValue(fields()[2], other.div)) {
+        this.div = data().deepCopy(fields()[2].schema(), other.div);
         fieldSetFlags()[2] = other.fieldSetFlags()[2];
-      }
-      if (isValidValue(fields()[3], other.div)) {
-        this.div = data().deepCopy(fields()[3].schema(), other.div);
-        fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
     }
 
@@ -275,17 +248,13 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
         this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.extension)) {
-        this.extension = data().deepCopy(fields()[1].schema(), other.extension);
+      if (isValidValue(fields()[1], other.status)) {
+        this.status = data().deepCopy(fields()[1].schema(), other.status);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.status)) {
-        this.status = data().deepCopy(fields()[2].schema(), other.status);
+      if (isValidValue(fields()[2], other.div)) {
+        this.div = data().deepCopy(fields()[2].schema(), other.div);
         fieldSetFlags()[2] = true;
-      }
-      if (isValidValue(fields()[3], other.div)) {
-        this.div = data().deepCopy(fields()[3].schema(), other.div);
-        fieldSetFlags()[3] = true;
       }
     }
 
@@ -330,46 +299,6 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
     }
 
     /**
-      * Gets the value of the 'extension' field.
-      * @return The value.
-      */
-    public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
-      return extension;
-    }
-
-
-    /**
-      * Sets the value of the 'extension' field.
-      * @param value The value of 'extension'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Narrative.Builder setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-      validate(fields()[1], value);
-      this.extension = value;
-      fieldSetFlags()[1] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'extension' field has been set.
-      * @return True if the 'extension' field has been set, false otherwise.
-      */
-    public boolean hasExtension() {
-      return fieldSetFlags()[1];
-    }
-
-
-    /**
-      * Clears the value of the 'extension' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Narrative.Builder clearExtension() {
-      extension = null;
-      fieldSetFlags()[1] = false;
-      return this;
-    }
-
-    /**
       * Gets the value of the 'status' field.
       * @return The value.
       */
@@ -384,9 +313,9 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Narrative.Builder setStatus(java.lang.CharSequence value) {
-      validate(fields()[2], value);
+      validate(fields()[1], value);
       this.status = value;
-      fieldSetFlags()[2] = true;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
@@ -395,7 +324,7 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
       * @return True if the 'status' field has been set, false otherwise.
       */
     public boolean hasStatus() {
-      return fieldSetFlags()[2];
+      return fieldSetFlags()[1];
     }
 
 
@@ -405,7 +334,7 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
       */
     public io.carrera.fhir.avro.models.Narrative.Builder clearStatus() {
       status = null;
-      fieldSetFlags()[2] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -424,9 +353,9 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Narrative.Builder setDiv(java.lang.CharSequence value) {
-      validate(fields()[3], value);
+      validate(fields()[2], value);
       this.div = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[2] = true;
       return this;
     }
 
@@ -435,7 +364,7 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
       * @return True if the 'div' field has been set, false otherwise.
       */
     public boolean hasDiv() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[2];
     }
 
 
@@ -445,7 +374,7 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
       */
     public io.carrera.fhir.avro.models.Narrative.Builder clearDiv() {
       div = null;
-      fieldSetFlags()[3] = false;
+      fieldSetFlags()[2] = false;
       return this;
     }
 
@@ -455,9 +384,8 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
       try {
         Narrative record = new Narrative();
         record.id = fieldSetFlags()[0] ? this.id : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.extension = fieldSetFlags()[1] ? this.extension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[1]);
-        record.status = fieldSetFlags()[2] ? this.status : (java.lang.CharSequence) defaultValue(fields()[2]);
-        record.div = fieldSetFlags()[3] ? this.div : (java.lang.CharSequence) defaultValue(fields()[3]);
+        record.status = fieldSetFlags()[1] ? this.status : (java.lang.CharSequence) defaultValue(fields()[1]);
+        record.div = fieldSetFlags()[2] ? this.div : (java.lang.CharSequence) defaultValue(fields()[2]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -498,25 +426,6 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
       out.writeString(this.id);
     }
 
-    if (this.extension == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      long size0 = this.extension.size();
-      out.writeArrayStart();
-      out.setItemCount(size0);
-      long actualSize0 = 0;
-      for (io.carrera.fhir.avro.models.Extension e0: this.extension) {
-        actualSize0++;
-        out.startItem();
-        e0.customEncode(out);
-      }
-      out.writeArrayEnd();
-      if (actualSize0 != size0)
-        throw new java.util.ConcurrentModificationException("Array-size written was " + size0 + ", but element count was " + actualSize0 + ".");
-    }
-
     if (this.status == null) {
       out.writeIndex(0);
       out.writeNull();
@@ -543,29 +452,6 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
 
       if (in.readIndex() != 1) {
         in.readNull();
-        this.extension = null;
-      } else {
-        long size0 = in.readArrayStart();
-        java.util.List<io.carrera.fhir.avro.models.Extension> a0 = this.extension;
-        if (a0 == null) {
-          a0 = new SpecificData.Array<io.carrera.fhir.avro.models.Extension>((int)size0, SCHEMA$.getField("extension").schema().getTypes().get(1));
-          this.extension = a0;
-        } else a0.clear();
-        SpecificData.Array<io.carrera.fhir.avro.models.Extension> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.Extension>)a0 : null);
-        for ( ; 0 < size0; size0 = in.arrayNext()) {
-          for ( ; size0 != 0; size0--) {
-            io.carrera.fhir.avro.models.Extension e0 = (ga0 != null ? ga0.peek() : null);
-            if (e0 == null) {
-              e0 = new io.carrera.fhir.avro.models.Extension();
-            }
-            e0.customDecode(in);
-            a0.add(e0);
-          }
-        }
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
         this.status = null;
       } else {
         this.status = in.readString(this.status instanceof Utf8 ? (Utf8)this.status : null);
@@ -574,7 +460,7 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
       this.div = in.readString(this.div instanceof Utf8 ? (Utf8)this.div : null);
 
     } else {
-      for (int i = 0; i < 4; i++) {
+      for (int i = 0; i < 3; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
           if (in.readIndex() != 1) {
@@ -588,38 +474,13 @@ public class Narrative extends org.apache.avro.specific.SpecificRecordBase imple
         case 1:
           if (in.readIndex() != 1) {
             in.readNull();
-            this.extension = null;
-          } else {
-            long size0 = in.readArrayStart();
-            java.util.List<io.carrera.fhir.avro.models.Extension> a0 = this.extension;
-            if (a0 == null) {
-              a0 = new SpecificData.Array<io.carrera.fhir.avro.models.Extension>((int)size0, SCHEMA$.getField("extension").schema().getTypes().get(1));
-              this.extension = a0;
-            } else a0.clear();
-            SpecificData.Array<io.carrera.fhir.avro.models.Extension> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.Extension>)a0 : null);
-            for ( ; 0 < size0; size0 = in.arrayNext()) {
-              for ( ; size0 != 0; size0--) {
-                io.carrera.fhir.avro.models.Extension e0 = (ga0 != null ? ga0.peek() : null);
-                if (e0 == null) {
-                  e0 = new io.carrera.fhir.avro.models.Extension();
-                }
-                e0.customDecode(in);
-                a0.add(e0);
-              }
-            }
-          }
-          break;
-
-        case 2:
-          if (in.readIndex() != 1) {
-            in.readNull();
             this.status = null;
           } else {
             this.status = in.readString(this.status instanceof Utf8 ? (Utf8)this.status : null);
           }
           break;
 
-        case 3:
+        case 2:
           this.div = in.readString(this.div instanceof Utf8 ? (Utf8)this.div : null);
           break;
 

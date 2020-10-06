@@ -5,12 +5,6 @@
     "name" : "id",
     "type" : [ "null", "string" ]
   }, {
-    "name" : "extension",
-    "type" : [ "null", {
-      "type" : "array",
-      "items" : "Extension"
-    } ]
-  }, {
     "name" : "status",
     "type" : [ "null", "string"]
   }, {

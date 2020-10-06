@@ -4,6 +4,16 @@
     "namespace": "io.carrera.fhir.avro.models",
     "fields": [
       {
+        "name": "birthDate",
+        "type": ["null", "string"]
+      },
+
+
+
+
+
+
+      {
         "name": "resourceType",
         "type": "string"
       },
@@ -55,10 +65,6 @@
       {
         "name": "gender",
         "type": "string"
-      },
-      {
-        "name": "birthDate",
-        "type": ["null", "string"]
       },
       {
         "name": "maritalStatus",

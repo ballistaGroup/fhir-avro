@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Meta extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -1904302100709623092L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Meta\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"versionId\",\"type\":[\"null\",\"string\"]},{\"name\":\"lastUpdated\",\"type\":[\"null\",{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]},{\"name\":\"source\",\"type\":[\"null\",\"string\"]},{\"name\":\"profile\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"security\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"version\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"display\",\"type\":[\"null\",\"string\"]},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"]}]}}]},{\"name\":\"tag\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Coding\"}]}]}");
+  private static final long serialVersionUID = 9051548033077596472L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Meta\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"versionId\",\"type\":[\"null\",\"string\"]},{\"name\":\"lastUpdated\",\"type\":[\"null\",{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]},{\"name\":\"source\",\"type\":[\"null\",\"string\"]},{\"name\":\"profile\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"security\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"code\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"tag\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Coding\"}]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -72,7 +72,6 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
   }
 
    private java.lang.CharSequence id;
-   private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
    private java.lang.CharSequence versionId;
    private java.lang.Long lastUpdated;
    private java.lang.CharSequence source;
@@ -90,7 +89,6 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
   /**
    * All-args constructor.
    * @param id The new value for id
-   * @param extension The new value for extension
    * @param versionId The new value for versionId
    * @param lastUpdated The new value for lastUpdated
    * @param source The new value for source
@@ -98,9 +96,8 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
    * @param security The new value for security
    * @param tag The new value for tag
    */
-  public Meta(java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.lang.CharSequence versionId, java.lang.Long lastUpdated, java.lang.CharSequence source, java.util.List<java.lang.CharSequence> profile, java.util.List<io.carrera.fhir.avro.models.Coding> security, java.util.List<io.carrera.fhir.avro.models.Coding> tag) {
+  public Meta(java.lang.CharSequence id, java.lang.CharSequence versionId, java.lang.Long lastUpdated, java.lang.CharSequence source, java.util.List<java.lang.CharSequence> profile, java.util.List<io.carrera.fhir.avro.models.Coding> security, java.util.List<io.carrera.fhir.avro.models.Coding> tag) {
     this.id = id;
-    this.extension = extension;
     this.versionId = versionId;
     this.lastUpdated = lastUpdated;
     this.source = source;
@@ -115,13 +112,12 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
   public java.lang.Object get(int field$) {
     switch (field$) {
     case 0: return id;
-    case 1: return extension;
-    case 2: return versionId;
-    case 3: return lastUpdated;
-    case 4: return source;
-    case 5: return profile;
-    case 6: return security;
-    case 7: return tag;
+    case 1: return versionId;
+    case 2: return lastUpdated;
+    case 3: return source;
+    case 4: return profile;
+    case 5: return security;
+    case 6: return tag;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -131,13 +127,12 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
     case 0: id = (java.lang.CharSequence)value$; break;
-    case 1: extension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 2: versionId = (java.lang.CharSequence)value$; break;
-    case 3: lastUpdated = (java.lang.Long)value$; break;
-    case 4: source = (java.lang.CharSequence)value$; break;
-    case 5: profile = (java.util.List<java.lang.CharSequence>)value$; break;
-    case 6: security = (java.util.List<io.carrera.fhir.avro.models.Coding>)value$; break;
-    case 7: tag = (java.util.List<io.carrera.fhir.avro.models.Coding>)value$; break;
+    case 1: versionId = (java.lang.CharSequence)value$; break;
+    case 2: lastUpdated = (java.lang.Long)value$; break;
+    case 3: source = (java.lang.CharSequence)value$; break;
+    case 4: profile = (java.util.List<java.lang.CharSequence>)value$; break;
+    case 5: security = (java.util.List<io.carrera.fhir.avro.models.Coding>)value$; break;
+    case 6: tag = (java.util.List<io.carrera.fhir.avro.models.Coding>)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -157,23 +152,6 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
    */
   public void setId(java.lang.CharSequence value) {
     this.id = value;
-  }
-
-  /**
-   * Gets the value of the 'extension' field.
-   * @return The value of the 'extension' field.
-   */
-  public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
-    return extension;
-  }
-
-
-  /**
-   * Sets the value of the 'extension' field.
-   * @param value the value to set.
-   */
-  public void setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-    this.extension = value;
   }
 
   /**
@@ -320,7 +298,6 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
     implements org.apache.avro.data.RecordBuilder<Meta> {
 
     private java.lang.CharSequence id;
-    private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
     private java.lang.CharSequence versionId;
     private java.lang.Long lastUpdated;
     private java.lang.CharSequence source;
@@ -343,33 +320,29 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
         this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
-      if (isValidValue(fields()[1], other.extension)) {
-        this.extension = data().deepCopy(fields()[1].schema(), other.extension);
+      if (isValidValue(fields()[1], other.versionId)) {
+        this.versionId = data().deepCopy(fields()[1].schema(), other.versionId);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
-      if (isValidValue(fields()[2], other.versionId)) {
-        this.versionId = data().deepCopy(fields()[2].schema(), other.versionId);
+      if (isValidValue(fields()[2], other.lastUpdated)) {
+        this.lastUpdated = data().deepCopy(fields()[2].schema(), other.lastUpdated);
         fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
-      if (isValidValue(fields()[3], other.lastUpdated)) {
-        this.lastUpdated = data().deepCopy(fields()[3].schema(), other.lastUpdated);
+      if (isValidValue(fields()[3], other.source)) {
+        this.source = data().deepCopy(fields()[3].schema(), other.source);
         fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
-      if (isValidValue(fields()[4], other.source)) {
-        this.source = data().deepCopy(fields()[4].schema(), other.source);
+      if (isValidValue(fields()[4], other.profile)) {
+        this.profile = data().deepCopy(fields()[4].schema(), other.profile);
         fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
-      if (isValidValue(fields()[5], other.profile)) {
-        this.profile = data().deepCopy(fields()[5].schema(), other.profile);
+      if (isValidValue(fields()[5], other.security)) {
+        this.security = data().deepCopy(fields()[5].schema(), other.security);
         fieldSetFlags()[5] = other.fieldSetFlags()[5];
       }
-      if (isValidValue(fields()[6], other.security)) {
-        this.security = data().deepCopy(fields()[6].schema(), other.security);
+      if (isValidValue(fields()[6], other.tag)) {
+        this.tag = data().deepCopy(fields()[6].schema(), other.tag);
         fieldSetFlags()[6] = other.fieldSetFlags()[6];
-      }
-      if (isValidValue(fields()[7], other.tag)) {
-        this.tag = data().deepCopy(fields()[7].schema(), other.tag);
-        fieldSetFlags()[7] = other.fieldSetFlags()[7];
       }
     }
 
@@ -383,33 +356,29 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
         this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.extension)) {
-        this.extension = data().deepCopy(fields()[1].schema(), other.extension);
+      if (isValidValue(fields()[1], other.versionId)) {
+        this.versionId = data().deepCopy(fields()[1].schema(), other.versionId);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.versionId)) {
-        this.versionId = data().deepCopy(fields()[2].schema(), other.versionId);
+      if (isValidValue(fields()[2], other.lastUpdated)) {
+        this.lastUpdated = data().deepCopy(fields()[2].schema(), other.lastUpdated);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.lastUpdated)) {
-        this.lastUpdated = data().deepCopy(fields()[3].schema(), other.lastUpdated);
+      if (isValidValue(fields()[3], other.source)) {
+        this.source = data().deepCopy(fields()[3].schema(), other.source);
         fieldSetFlags()[3] = true;
       }
-      if (isValidValue(fields()[4], other.source)) {
-        this.source = data().deepCopy(fields()[4].schema(), other.source);
+      if (isValidValue(fields()[4], other.profile)) {
+        this.profile = data().deepCopy(fields()[4].schema(), other.profile);
         fieldSetFlags()[4] = true;
       }
-      if (isValidValue(fields()[5], other.profile)) {
-        this.profile = data().deepCopy(fields()[5].schema(), other.profile);
+      if (isValidValue(fields()[5], other.security)) {
+        this.security = data().deepCopy(fields()[5].schema(), other.security);
         fieldSetFlags()[5] = true;
       }
-      if (isValidValue(fields()[6], other.security)) {
-        this.security = data().deepCopy(fields()[6].schema(), other.security);
+      if (isValidValue(fields()[6], other.tag)) {
+        this.tag = data().deepCopy(fields()[6].schema(), other.tag);
         fieldSetFlags()[6] = true;
-      }
-      if (isValidValue(fields()[7], other.tag)) {
-        this.tag = data().deepCopy(fields()[7].schema(), other.tag);
-        fieldSetFlags()[7] = true;
       }
     }
 
@@ -454,46 +423,6 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
     }
 
     /**
-      * Gets the value of the 'extension' field.
-      * @return The value.
-      */
-    public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
-      return extension;
-    }
-
-
-    /**
-      * Sets the value of the 'extension' field.
-      * @param value The value of 'extension'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Meta.Builder setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-      validate(fields()[1], value);
-      this.extension = value;
-      fieldSetFlags()[1] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'extension' field has been set.
-      * @return True if the 'extension' field has been set, false otherwise.
-      */
-    public boolean hasExtension() {
-      return fieldSetFlags()[1];
-    }
-
-
-    /**
-      * Clears the value of the 'extension' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Meta.Builder clearExtension() {
-      extension = null;
-      fieldSetFlags()[1] = false;
-      return this;
-    }
-
-    /**
       * Gets the value of the 'versionId' field.
       * @return The value.
       */
@@ -508,9 +437,9 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Meta.Builder setVersionId(java.lang.CharSequence value) {
-      validate(fields()[2], value);
+      validate(fields()[1], value);
       this.versionId = value;
-      fieldSetFlags()[2] = true;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
@@ -519,7 +448,7 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       * @return True if the 'versionId' field has been set, false otherwise.
       */
     public boolean hasVersionId() {
-      return fieldSetFlags()[2];
+      return fieldSetFlags()[1];
     }
 
 
@@ -529,7 +458,7 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       */
     public io.carrera.fhir.avro.models.Meta.Builder clearVersionId() {
       versionId = null;
-      fieldSetFlags()[2] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -548,9 +477,9 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Meta.Builder setLastUpdated(java.lang.Long value) {
-      validate(fields()[3], value);
+      validate(fields()[2], value);
       this.lastUpdated = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[2] = true;
       return this;
     }
 
@@ -559,7 +488,7 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       * @return True if the 'lastUpdated' field has been set, false otherwise.
       */
     public boolean hasLastUpdated() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[2];
     }
 
 
@@ -569,7 +498,7 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       */
     public io.carrera.fhir.avro.models.Meta.Builder clearLastUpdated() {
       lastUpdated = null;
-      fieldSetFlags()[3] = false;
+      fieldSetFlags()[2] = false;
       return this;
     }
 
@@ -588,9 +517,9 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Meta.Builder setSource(java.lang.CharSequence value) {
-      validate(fields()[4], value);
+      validate(fields()[3], value);
       this.source = value;
-      fieldSetFlags()[4] = true;
+      fieldSetFlags()[3] = true;
       return this;
     }
 
@@ -599,7 +528,7 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       * @return True if the 'source' field has been set, false otherwise.
       */
     public boolean hasSource() {
-      return fieldSetFlags()[4];
+      return fieldSetFlags()[3];
     }
 
 
@@ -609,7 +538,7 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       */
     public io.carrera.fhir.avro.models.Meta.Builder clearSource() {
       source = null;
-      fieldSetFlags()[4] = false;
+      fieldSetFlags()[3] = false;
       return this;
     }
 
@@ -628,9 +557,9 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Meta.Builder setProfile(java.util.List<java.lang.CharSequence> value) {
-      validate(fields()[5], value);
+      validate(fields()[4], value);
       this.profile = value;
-      fieldSetFlags()[5] = true;
+      fieldSetFlags()[4] = true;
       return this;
     }
 
@@ -639,7 +568,7 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       * @return True if the 'profile' field has been set, false otherwise.
       */
     public boolean hasProfile() {
-      return fieldSetFlags()[5];
+      return fieldSetFlags()[4];
     }
 
 
@@ -649,7 +578,7 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       */
     public io.carrera.fhir.avro.models.Meta.Builder clearProfile() {
       profile = null;
-      fieldSetFlags()[5] = false;
+      fieldSetFlags()[4] = false;
       return this;
     }
 
@@ -668,9 +597,9 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Meta.Builder setSecurity(java.util.List<io.carrera.fhir.avro.models.Coding> value) {
-      validate(fields()[6], value);
+      validate(fields()[5], value);
       this.security = value;
-      fieldSetFlags()[6] = true;
+      fieldSetFlags()[5] = true;
       return this;
     }
 
@@ -679,7 +608,7 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       * @return True if the 'security' field has been set, false otherwise.
       */
     public boolean hasSecurity() {
-      return fieldSetFlags()[6];
+      return fieldSetFlags()[5];
     }
 
 
@@ -689,7 +618,7 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       */
     public io.carrera.fhir.avro.models.Meta.Builder clearSecurity() {
       security = null;
-      fieldSetFlags()[6] = false;
+      fieldSetFlags()[5] = false;
       return this;
     }
 
@@ -708,9 +637,9 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Meta.Builder setTag(java.util.List<io.carrera.fhir.avro.models.Coding> value) {
-      validate(fields()[7], value);
+      validate(fields()[6], value);
       this.tag = value;
-      fieldSetFlags()[7] = true;
+      fieldSetFlags()[6] = true;
       return this;
     }
 
@@ -719,7 +648,7 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       * @return True if the 'tag' field has been set, false otherwise.
       */
     public boolean hasTag() {
-      return fieldSetFlags()[7];
+      return fieldSetFlags()[6];
     }
 
 
@@ -729,7 +658,7 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       */
     public io.carrera.fhir.avro.models.Meta.Builder clearTag() {
       tag = null;
-      fieldSetFlags()[7] = false;
+      fieldSetFlags()[6] = false;
       return this;
     }
 
@@ -739,13 +668,12 @@ public class Meta extends org.apache.avro.specific.SpecificRecordBase implements
       try {
         Meta record = new Meta();
         record.id = fieldSetFlags()[0] ? this.id : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.extension = fieldSetFlags()[1] ? this.extension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[1]);
-        record.versionId = fieldSetFlags()[2] ? this.versionId : (java.lang.CharSequence) defaultValue(fields()[2]);
-        record.lastUpdated = fieldSetFlags()[3] ? this.lastUpdated : (java.lang.Long) defaultValue(fields()[3]);
-        record.source = fieldSetFlags()[4] ? this.source : (java.lang.CharSequence) defaultValue(fields()[4]);
-        record.profile = fieldSetFlags()[5] ? this.profile : (java.util.List<java.lang.CharSequence>) defaultValue(fields()[5]);
-        record.security = fieldSetFlags()[6] ? this.security : (java.util.List<io.carrera.fhir.avro.models.Coding>) defaultValue(fields()[6]);
-        record.tag = fieldSetFlags()[7] ? this.tag : (java.util.List<io.carrera.fhir.avro.models.Coding>) defaultValue(fields()[7]);
+        record.versionId = fieldSetFlags()[1] ? this.versionId : (java.lang.CharSequence) defaultValue(fields()[1]);
+        record.lastUpdated = fieldSetFlags()[2] ? this.lastUpdated : (java.lang.Long) defaultValue(fields()[2]);
+        record.source = fieldSetFlags()[3] ? this.source : (java.lang.CharSequence) defaultValue(fields()[3]);
+        record.profile = fieldSetFlags()[4] ? this.profile : (java.util.List<java.lang.CharSequence>) defaultValue(fields()[4]);
+        record.security = fieldSetFlags()[5] ? this.security : (java.util.List<io.carrera.fhir.avro.models.Coding>) defaultValue(fields()[5]);
+        record.tag = fieldSetFlags()[6] ? this.tag : (java.util.List<io.carrera.fhir.avro.models.Coding>) defaultValue(fields()[6]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;

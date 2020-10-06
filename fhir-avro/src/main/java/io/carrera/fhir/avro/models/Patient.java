@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Patient extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 2418865544686110971L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Patient\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"identifier\",\"type\":{\"type\":\"array\",\"items\":[\"null\",{\"type\":\"record\",\"name\":\"Identifier\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"use\",\"type\":[\"null\",\"string\"]},{\"name\":\"type\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"version\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"display\",\"type\":[\"null\",\"string\"]},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"period\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]}]}]},{\"name\":\"assigner\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}]}]}]}},{\"name\":\"name\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"name_record\",\"fields\":[{\"name\":\"use\",\"type\":\"string\"},{\"name\":\"family\",\"type\":\"string\"},{\"name\":\"given\",\"type\":{\"type\":\"array\",\"items\":\"string\"}},{\"name\":\"prefix\",\"type\":{\"type\":\"array\",\"items\":\"string\"}}]}}},{\"name\":\"gender\",\"type\":\"string\"},{\"name\":\"birthDate\",\"type\":[\"null\",\"string\"]},{\"name\":\"maritalStatus\",\"type\":[\"null\",\"CodeableConcept\"]}]}");
+  private static final long serialVersionUID = -6750015565659478114L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Patient\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"birthDate\",\"type\":[\"null\",\"string\"]},{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"identifier\",\"type\":{\"type\":\"array\",\"items\":[\"null\",{\"type\":\"record\",\"name\":\"Identifier\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"use\",\"type\":[\"null\",\"string\"]},{\"name\":\"type\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"code\",\"type\":[\"null\",\"string\"]}]}}}]}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"period\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]}]}]},{\"name\":\"assigner\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}]}]}]}},{\"name\":\"name\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"name_record\",\"fields\":[{\"name\":\"use\",\"type\":\"string\"},{\"name\":\"family\",\"type\":\"string\"},{\"name\":\"given\",\"type\":{\"type\":\"array\",\"items\":\"string\"}},{\"name\":\"prefix\",\"type\":{\"type\":\"array\",\"items\":\"string\"}}]}}},{\"name\":\"gender\",\"type\":\"string\"},{\"name\":\"maritalStatus\",\"type\":[\"null\",\"CodeableConcept\"]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -74,12 +74,12 @@ static {
     return DECODER.decode(b);
   }
 
+   private java.lang.CharSequence birthDate;
    private java.lang.CharSequence resourceType;
    private java.lang.CharSequence id;
    private java.util.List<io.carrera.fhir.avro.models.Identifier> identifier;
    private java.util.List<io.carrera.fhir.avro.models.name_record> name;
    private java.lang.CharSequence gender;
-   private java.lang.CharSequence birthDate;
    private io.carrera.fhir.avro.models.CodeableConcept maritalStatus;
 
   /**
@@ -91,21 +91,21 @@ static {
 
   /**
    * All-args constructor.
+   * @param birthDate The new value for birthDate
    * @param resourceType The new value for resourceType
    * @param id The new value for id
    * @param identifier The new value for identifier
    * @param name The new value for name
    * @param gender The new value for gender
-   * @param birthDate The new value for birthDate
    * @param maritalStatus The new value for maritalStatus
    */
-  public Patient(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.Identifier> identifier, java.util.List<io.carrera.fhir.avro.models.name_record> name, java.lang.CharSequence gender, java.lang.CharSequence birthDate, io.carrera.fhir.avro.models.CodeableConcept maritalStatus) {
+  public Patient(java.lang.CharSequence birthDate, java.lang.CharSequence resourceType, java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.Identifier> identifier, java.util.List<io.carrera.fhir.avro.models.name_record> name, java.lang.CharSequence gender, io.carrera.fhir.avro.models.CodeableConcept maritalStatus) {
+    this.birthDate = birthDate;
     this.resourceType = resourceType;
     this.id = id;
     this.identifier = identifier;
     this.name = name;
     this.gender = gender;
-    this.birthDate = birthDate;
     this.maritalStatus = maritalStatus;
   }
 
@@ -114,12 +114,12 @@ static {
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return resourceType;
-    case 1: return id;
-    case 2: return identifier;
-    case 3: return name;
-    case 4: return gender;
-    case 5: return birthDate;
+    case 0: return birthDate;
+    case 1: return resourceType;
+    case 2: return id;
+    case 3: return identifier;
+    case 4: return name;
+    case 5: return gender;
     case 6: return maritalStatus;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
@@ -129,15 +129,32 @@ static {
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: resourceType = (java.lang.CharSequence)value$; break;
-    case 1: id = (java.lang.CharSequence)value$; break;
-    case 2: identifier = (java.util.List<io.carrera.fhir.avro.models.Identifier>)value$; break;
-    case 3: name = (java.util.List<io.carrera.fhir.avro.models.name_record>)value$; break;
-    case 4: gender = (java.lang.CharSequence)value$; break;
-    case 5: birthDate = (java.lang.CharSequence)value$; break;
+    case 0: birthDate = (java.lang.CharSequence)value$; break;
+    case 1: resourceType = (java.lang.CharSequence)value$; break;
+    case 2: id = (java.lang.CharSequence)value$; break;
+    case 3: identifier = (java.util.List<io.carrera.fhir.avro.models.Identifier>)value$; break;
+    case 4: name = (java.util.List<io.carrera.fhir.avro.models.name_record>)value$; break;
+    case 5: gender = (java.lang.CharSequence)value$; break;
     case 6: maritalStatus = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
+  }
+
+  /**
+   * Gets the value of the 'birthDate' field.
+   * @return The value of the 'birthDate' field.
+   */
+  public java.lang.CharSequence getBirthDate() {
+    return birthDate;
+  }
+
+
+  /**
+   * Sets the value of the 'birthDate' field.
+   * @param value the value to set.
+   */
+  public void setBirthDate(java.lang.CharSequence value) {
+    this.birthDate = value;
   }
 
   /**
@@ -226,23 +243,6 @@ static {
   }
 
   /**
-   * Gets the value of the 'birthDate' field.
-   * @return The value of the 'birthDate' field.
-   */
-  public java.lang.CharSequence getBirthDate() {
-    return birthDate;
-  }
-
-
-  /**
-   * Sets the value of the 'birthDate' field.
-   * @param value the value to set.
-   */
-  public void setBirthDate(java.lang.CharSequence value) {
-    this.birthDate = value;
-  }
-
-  /**
    * Gets the value of the 'maritalStatus' field.
    * @return The value of the 'maritalStatus' field.
    */
@@ -300,12 +300,12 @@ static {
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Patient>
     implements org.apache.avro.data.RecordBuilder<Patient> {
 
+    private java.lang.CharSequence birthDate;
     private java.lang.CharSequence resourceType;
     private java.lang.CharSequence id;
     private java.util.List<io.carrera.fhir.avro.models.Identifier> identifier;
     private java.util.List<io.carrera.fhir.avro.models.name_record> name;
     private java.lang.CharSequence gender;
-    private java.lang.CharSequence birthDate;
     private io.carrera.fhir.avro.models.CodeableConcept maritalStatus;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder maritalStatusBuilder;
 
@@ -320,28 +320,28 @@ static {
      */
     private Builder(io.carrera.fhir.avro.models.Patient.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.resourceType)) {
-        this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
+      if (isValidValue(fields()[0], other.birthDate)) {
+        this.birthDate = data().deepCopy(fields()[0].schema(), other.birthDate);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
-      if (isValidValue(fields()[1], other.id)) {
-        this.id = data().deepCopy(fields()[1].schema(), other.id);
+      if (isValidValue(fields()[1], other.resourceType)) {
+        this.resourceType = data().deepCopy(fields()[1].schema(), other.resourceType);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
-      if (isValidValue(fields()[2], other.identifier)) {
-        this.identifier = data().deepCopy(fields()[2].schema(), other.identifier);
+      if (isValidValue(fields()[2], other.id)) {
+        this.id = data().deepCopy(fields()[2].schema(), other.id);
         fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
-      if (isValidValue(fields()[3], other.name)) {
-        this.name = data().deepCopy(fields()[3].schema(), other.name);
+      if (isValidValue(fields()[3], other.identifier)) {
+        this.identifier = data().deepCopy(fields()[3].schema(), other.identifier);
         fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
-      if (isValidValue(fields()[4], other.gender)) {
-        this.gender = data().deepCopy(fields()[4].schema(), other.gender);
+      if (isValidValue(fields()[4], other.name)) {
+        this.name = data().deepCopy(fields()[4].schema(), other.name);
         fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
-      if (isValidValue(fields()[5], other.birthDate)) {
-        this.birthDate = data().deepCopy(fields()[5].schema(), other.birthDate);
+      if (isValidValue(fields()[5], other.gender)) {
+        this.gender = data().deepCopy(fields()[5].schema(), other.gender);
         fieldSetFlags()[5] = other.fieldSetFlags()[5];
       }
       if (isValidValue(fields()[6], other.maritalStatus)) {
@@ -359,28 +359,28 @@ static {
      */
     private Builder(io.carrera.fhir.avro.models.Patient other) {
       super(SCHEMA$);
-      if (isValidValue(fields()[0], other.resourceType)) {
-        this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
+      if (isValidValue(fields()[0], other.birthDate)) {
+        this.birthDate = data().deepCopy(fields()[0].schema(), other.birthDate);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.id)) {
-        this.id = data().deepCopy(fields()[1].schema(), other.id);
+      if (isValidValue(fields()[1], other.resourceType)) {
+        this.resourceType = data().deepCopy(fields()[1].schema(), other.resourceType);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.identifier)) {
-        this.identifier = data().deepCopy(fields()[2].schema(), other.identifier);
+      if (isValidValue(fields()[2], other.id)) {
+        this.id = data().deepCopy(fields()[2].schema(), other.id);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.name)) {
-        this.name = data().deepCopy(fields()[3].schema(), other.name);
+      if (isValidValue(fields()[3], other.identifier)) {
+        this.identifier = data().deepCopy(fields()[3].schema(), other.identifier);
         fieldSetFlags()[3] = true;
       }
-      if (isValidValue(fields()[4], other.gender)) {
-        this.gender = data().deepCopy(fields()[4].schema(), other.gender);
+      if (isValidValue(fields()[4], other.name)) {
+        this.name = data().deepCopy(fields()[4].schema(), other.name);
         fieldSetFlags()[4] = true;
       }
-      if (isValidValue(fields()[5], other.birthDate)) {
-        this.birthDate = data().deepCopy(fields()[5].schema(), other.birthDate);
+      if (isValidValue(fields()[5], other.gender)) {
+        this.gender = data().deepCopy(fields()[5].schema(), other.gender);
         fieldSetFlags()[5] = true;
       }
       if (isValidValue(fields()[6], other.maritalStatus)) {
@@ -388,6 +388,46 @@ static {
         fieldSetFlags()[6] = true;
       }
       this.maritalStatusBuilder = null;
+    }
+
+    /**
+      * Gets the value of the 'birthDate' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getBirthDate() {
+      return birthDate;
+    }
+
+
+    /**
+      * Sets the value of the 'birthDate' field.
+      * @param value The value of 'birthDate'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Patient.Builder setBirthDate(java.lang.CharSequence value) {
+      validate(fields()[0], value);
+      this.birthDate = value;
+      fieldSetFlags()[0] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'birthDate' field has been set.
+      * @return True if the 'birthDate' field has been set, false otherwise.
+      */
+    public boolean hasBirthDate() {
+      return fieldSetFlags()[0];
+    }
+
+
+    /**
+      * Clears the value of the 'birthDate' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Patient.Builder clearBirthDate() {
+      birthDate = null;
+      fieldSetFlags()[0] = false;
+      return this;
     }
 
     /**
@@ -405,9 +445,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Patient.Builder setResourceType(java.lang.CharSequence value) {
-      validate(fields()[0], value);
+      validate(fields()[1], value);
       this.resourceType = value;
-      fieldSetFlags()[0] = true;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
@@ -416,7 +456,7 @@ static {
       * @return True if the 'resourceType' field has been set, false otherwise.
       */
     public boolean hasResourceType() {
-      return fieldSetFlags()[0];
+      return fieldSetFlags()[1];
     }
 
 
@@ -426,7 +466,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Patient.Builder clearResourceType() {
       resourceType = null;
-      fieldSetFlags()[0] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -445,9 +485,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Patient.Builder setId(java.lang.CharSequence value) {
-      validate(fields()[1], value);
+      validate(fields()[2], value);
       this.id = value;
-      fieldSetFlags()[1] = true;
+      fieldSetFlags()[2] = true;
       return this;
     }
 
@@ -456,7 +496,7 @@ static {
       * @return True if the 'id' field has been set, false otherwise.
       */
     public boolean hasId() {
-      return fieldSetFlags()[1];
+      return fieldSetFlags()[2];
     }
 
 
@@ -466,7 +506,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Patient.Builder clearId() {
       id = null;
-      fieldSetFlags()[1] = false;
+      fieldSetFlags()[2] = false;
       return this;
     }
 
@@ -485,9 +525,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Patient.Builder setIdentifier(java.util.List<io.carrera.fhir.avro.models.Identifier> value) {
-      validate(fields()[2], value);
+      validate(fields()[3], value);
       this.identifier = value;
-      fieldSetFlags()[2] = true;
+      fieldSetFlags()[3] = true;
       return this;
     }
 
@@ -496,7 +536,7 @@ static {
       * @return True if the 'identifier' field has been set, false otherwise.
       */
     public boolean hasIdentifier() {
-      return fieldSetFlags()[2];
+      return fieldSetFlags()[3];
     }
 
 
@@ -506,7 +546,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Patient.Builder clearIdentifier() {
       identifier = null;
-      fieldSetFlags()[2] = false;
+      fieldSetFlags()[3] = false;
       return this;
     }
 
@@ -525,9 +565,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Patient.Builder setName(java.util.List<io.carrera.fhir.avro.models.name_record> value) {
-      validate(fields()[3], value);
+      validate(fields()[4], value);
       this.name = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[4] = true;
       return this;
     }
 
@@ -536,7 +576,7 @@ static {
       * @return True if the 'name' field has been set, false otherwise.
       */
     public boolean hasName() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[4];
     }
 
 
@@ -546,7 +586,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Patient.Builder clearName() {
       name = null;
-      fieldSetFlags()[3] = false;
+      fieldSetFlags()[4] = false;
       return this;
     }
 
@@ -565,9 +605,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Patient.Builder setGender(java.lang.CharSequence value) {
-      validate(fields()[4], value);
+      validate(fields()[5], value);
       this.gender = value;
-      fieldSetFlags()[4] = true;
+      fieldSetFlags()[5] = true;
       return this;
     }
 
@@ -576,7 +616,7 @@ static {
       * @return True if the 'gender' field has been set, false otherwise.
       */
     public boolean hasGender() {
-      return fieldSetFlags()[4];
+      return fieldSetFlags()[5];
     }
 
 
@@ -586,46 +626,6 @@ static {
       */
     public io.carrera.fhir.avro.models.Patient.Builder clearGender() {
       gender = null;
-      fieldSetFlags()[4] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'birthDate' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getBirthDate() {
-      return birthDate;
-    }
-
-
-    /**
-      * Sets the value of the 'birthDate' field.
-      * @param value The value of 'birthDate'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Patient.Builder setBirthDate(java.lang.CharSequence value) {
-      validate(fields()[5], value);
-      this.birthDate = value;
-      fieldSetFlags()[5] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'birthDate' field has been set.
-      * @return True if the 'birthDate' field has been set, false otherwise.
-      */
-    public boolean hasBirthDate() {
-      return fieldSetFlags()[5];
-    }
-
-
-    /**
-      * Clears the value of the 'birthDate' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Patient.Builder clearBirthDate() {
-      birthDate = null;
       fieldSetFlags()[5] = false;
       return this;
     }
@@ -710,12 +710,12 @@ static {
     public Patient build() {
       try {
         Patient record = new Patient();
-        record.resourceType = fieldSetFlags()[0] ? this.resourceType : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.id = fieldSetFlags()[1] ? this.id : (java.lang.CharSequence) defaultValue(fields()[1]);
-        record.identifier = fieldSetFlags()[2] ? this.identifier : (java.util.List<io.carrera.fhir.avro.models.Identifier>) defaultValue(fields()[2]);
-        record.name = fieldSetFlags()[3] ? this.name : (java.util.List<io.carrera.fhir.avro.models.name_record>) defaultValue(fields()[3]);
-        record.gender = fieldSetFlags()[4] ? this.gender : (java.lang.CharSequence) defaultValue(fields()[4]);
-        record.birthDate = fieldSetFlags()[5] ? this.birthDate : (java.lang.CharSequence) defaultValue(fields()[5]);
+        record.birthDate = fieldSetFlags()[0] ? this.birthDate : (java.lang.CharSequence) defaultValue(fields()[0]);
+        record.resourceType = fieldSetFlags()[1] ? this.resourceType : (java.lang.CharSequence) defaultValue(fields()[1]);
+        record.id = fieldSetFlags()[2] ? this.id : (java.lang.CharSequence) defaultValue(fields()[2]);
+        record.identifier = fieldSetFlags()[3] ? this.identifier : (java.util.List<io.carrera.fhir.avro.models.Identifier>) defaultValue(fields()[3]);
+        record.name = fieldSetFlags()[4] ? this.name : (java.util.List<io.carrera.fhir.avro.models.name_record>) defaultValue(fields()[4]);
+        record.gender = fieldSetFlags()[5] ? this.gender : (java.lang.CharSequence) defaultValue(fields()[5]);
         if (maritalStatusBuilder != null) {
           try {
             record.maritalStatus = this.maritalStatusBuilder.build();

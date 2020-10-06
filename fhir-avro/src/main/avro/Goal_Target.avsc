@@ -2,53 +2,29 @@
   "name" : "Goal_Target",
   "type" : "record",
   "fields" : [ {
-    "name" : "id",
-    "type" : [ "null", "string" ]
-  }, {
-    "name" : "extension",
-    "type" : [ "null", {
-      "type" : "array",
-      "items" : "Extension"
-    } ]
-  }, {
-    "name" : "modifierExtension",
-    "type" : [ "null", {
-      "type" : "array",
-      "items" : "Extension"
-    } ]
-  }, {
-    "name" : "measure",
-    "type" : [ "null", "CodeableConcept" ]
-  }, {
-    "name" : "detailQuantity",
-    "type" : [ "null", "Quantity" ]
-  }, {
-    "name" : "detailRange",
-    "type" : [ "null", "Range" ]
-  }, {
-    "name" : "detailCodeableConcept",
-    "type" : [ "null", "CodeableConcept" ]
-  }, {
-    "name" : "detailString",
-    "type" : [ "null", "string" ]
-  }, {
-    "name" : "detailBoolean",
-    "type" : [ "null", "boolean" ]
-  }, {
-    "name" : "detailInteger",
-    "type" : [ "null", "int" ]
-  }, {
-    "name" : "detailRatio",
-    "type" : [ "null", "Ratio" ]
-  }, {
-    "name" : "dueDate",
-    "type" : [ "null", {
-      "type" : "int",
-      "logicalType" : "date"
-    } ]
-  }, {
-    "name" : "dueDuration",
-    "type" : [ "null", "Duration" ]
-  } ],
+       "name" : "measure",
+       "type" : [ "null", "CodeableConcept" ]
+     }, {
+       "name" : "detailQuantity",
+       "type" : [ "null", "Quantity" ]
+     }, {
+       "name" : "detailRange",
+       "type" : [ "null", "Range" ]
+     }, {
+       "name" : "detailCodeableConcept",
+       "type" : [ "null", "CodeableConcept" ]
+     }, {
+       "name" : "detailString",
+       "type" : [ "null", "string" ]
+     }, {
+       "name" : "detailBoolean",
+       "type" : [ "null", "boolean" ]
+     }, {
+       "name" : "detailInteger",
+       "type" : [ "null", "int" ]
+     }, {
+       "name" : "detailRatio",
+       "type" : [ "null", "Ratio" ]
+     }],
   "namespace" : "io.carrera.fhir.avro.models"
 }

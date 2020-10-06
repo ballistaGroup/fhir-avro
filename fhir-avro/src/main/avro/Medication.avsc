@@ -2,65 +2,8 @@
   "name" : "Medication",
   "type" : "record",
   "fields" : [ {
-    "name" : "resourceType",
-    "type" : "string"
-  }, {
-    "name" : "id",
-    "type" : [ "null", "string" ]
-  }, {
-    "name" : "meta",
-    "type" : [ "null", "Meta" ]
-  }, {
-    "name" : "implicitRules",
-    "type" : [ "null", "string" ]
-  }, {
-    "name" : "language",
-    "type" : [ "null", "string" ]
-  }, {
-    "name" : "text",
-    "type" : [ "null", "Narrative" ]
-  }, {
-    "name" : "extension",
-    "type" : [ "null", {
-      "type" : "array",
-      "items" : "Extension"
-    } ]
-  }, {
-    "name" : "modifierExtension",
-    "type" : [ "null", {
-      "type" : "array",
-      "items" : "Extension"
-    } ]
-  }, {
-    "name" : "identifier",
-    "type" : [ "null", {
-      "type" : "array",
-      "items" : "Identifier"
-    } ]
-  }, {
-    "name" : "code",
-    "type" : [ "null", "CodeableConcept" ]
-  }, {
-    "name" : "status",
-    "type" : [ "null", "string" ]
-  }, {
-    "name" : "manufacturer",
-    "type" : [ "null", "Reference" ]
-  }, {
-    "name" : "form",
-    "type" : [ "null", "CodeableConcept" ]
-  }, {
-    "name" : "amount",
-    "type" : [ "null", "Ratio" ]
-  }, {
-    "name" : "ingredient",
-    "type" : [ "null", {
-      "type" : "array",
-      "items" : "Medication_Ingredient"
-    } ]
-  }, {
-    "name" : "batch",
-    "type" : [ "null", "Medication_Batch" ]
-  } ],
+                  "name" : "code",
+                  "type" : [ "null", "CodeableConcept" ]
+                }],
   "namespace" : "io.carrera.fhir.avro.models"
 }

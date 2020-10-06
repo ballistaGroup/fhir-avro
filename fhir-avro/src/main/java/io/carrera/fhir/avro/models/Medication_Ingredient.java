@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Medication_Ingredient extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 1263623130568745129L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Medication_Ingredient\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"itemCodeableConcept\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"version\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"display\",\"type\":[\"null\",\"string\"]},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}]},{\"name\":\"itemReference\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}]},{\"name\":\"isActive\",\"type\":[\"null\",\"boolean\"]},{\"name\":\"strength\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Ratio\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"numerator\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":\"float\"},{\"name\":\"unit\",\"type\":\"string\"},{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"}]}]},{\"name\":\"denominator\",\"type\":[\"null\",\"Quantity\"]}]}]}]}");
+  private static final long serialVersionUID = 304314780900480439L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Medication_Ingredient\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"itemCodeableConcept\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"code\",\"type\":[\"null\",\"string\"]}]}}}]}]},{\"name\":\"itemReference\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}]},{\"name\":\"isActive\",\"type\":[\"null\",\"boolean\"]},{\"name\":\"strength\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Ratio\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"numerator\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":\"float\"},{\"name\":\"unit\",\"type\":\"string\"},{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"}]}]},{\"name\":\"denominator\",\"type\":[\"null\",\"Quantity\"]}]}]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -72,8 +72,6 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
   }
 
    private java.lang.CharSequence id;
-   private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
-   private java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension;
    private io.carrera.fhir.avro.models.CodeableConcept itemCodeableConcept;
    private io.carrera.fhir.avro.models.Reference itemReference;
    private java.lang.Boolean isActive;
@@ -89,17 +87,13 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
   /**
    * All-args constructor.
    * @param id The new value for id
-   * @param extension The new value for extension
-   * @param modifierExtension The new value for modifierExtension
    * @param itemCodeableConcept The new value for itemCodeableConcept
    * @param itemReference The new value for itemReference
    * @param isActive The new value for isActive
    * @param strength The new value for strength
    */
-  public Medication_Ingredient(java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension, io.carrera.fhir.avro.models.CodeableConcept itemCodeableConcept, io.carrera.fhir.avro.models.Reference itemReference, java.lang.Boolean isActive, io.carrera.fhir.avro.models.Ratio strength) {
+  public Medication_Ingredient(java.lang.CharSequence id, io.carrera.fhir.avro.models.CodeableConcept itemCodeableConcept, io.carrera.fhir.avro.models.Reference itemReference, java.lang.Boolean isActive, io.carrera.fhir.avro.models.Ratio strength) {
     this.id = id;
-    this.extension = extension;
-    this.modifierExtension = modifierExtension;
     this.itemCodeableConcept = itemCodeableConcept;
     this.itemReference = itemReference;
     this.isActive = isActive;
@@ -112,12 +106,10 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
   public java.lang.Object get(int field$) {
     switch (field$) {
     case 0: return id;
-    case 1: return extension;
-    case 2: return modifierExtension;
-    case 3: return itemCodeableConcept;
-    case 4: return itemReference;
-    case 5: return isActive;
-    case 6: return strength;
+    case 1: return itemCodeableConcept;
+    case 2: return itemReference;
+    case 3: return isActive;
+    case 4: return strength;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -127,12 +119,10 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
     case 0: id = (java.lang.CharSequence)value$; break;
-    case 1: extension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 2: modifierExtension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 3: itemCodeableConcept = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 4: itemReference = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 5: isActive = (java.lang.Boolean)value$; break;
-    case 6: strength = (io.carrera.fhir.avro.models.Ratio)value$; break;
+    case 1: itemCodeableConcept = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 2: itemReference = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 3: isActive = (java.lang.Boolean)value$; break;
+    case 4: strength = (io.carrera.fhir.avro.models.Ratio)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -152,40 +142,6 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
    */
   public void setId(java.lang.CharSequence value) {
     this.id = value;
-  }
-
-  /**
-   * Gets the value of the 'extension' field.
-   * @return The value of the 'extension' field.
-   */
-  public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
-    return extension;
-  }
-
-
-  /**
-   * Sets the value of the 'extension' field.
-   * @param value the value to set.
-   */
-  public void setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-    this.extension = value;
-  }
-
-  /**
-   * Gets the value of the 'modifierExtension' field.
-   * @return The value of the 'modifierExtension' field.
-   */
-  public java.util.List<io.carrera.fhir.avro.models.Extension> getModifierExtension() {
-    return modifierExtension;
-  }
-
-
-  /**
-   * Sets the value of the 'modifierExtension' field.
-   * @param value the value to set.
-   */
-  public void setModifierExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-    this.modifierExtension = value;
   }
 
   /**
@@ -298,8 +254,6 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
     implements org.apache.avro.data.RecordBuilder<Medication_Ingredient> {
 
     private java.lang.CharSequence id;
-    private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
-    private java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension;
     private io.carrera.fhir.avro.models.CodeableConcept itemCodeableConcept;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder itemCodeableConceptBuilder;
     private io.carrera.fhir.avro.models.Reference itemReference;
@@ -323,35 +277,27 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
         this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
-      if (isValidValue(fields()[1], other.extension)) {
-        this.extension = data().deepCopy(fields()[1].schema(), other.extension);
+      if (isValidValue(fields()[1], other.itemCodeableConcept)) {
+        this.itemCodeableConcept = data().deepCopy(fields()[1].schema(), other.itemCodeableConcept);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
-      }
-      if (isValidValue(fields()[2], other.modifierExtension)) {
-        this.modifierExtension = data().deepCopy(fields()[2].schema(), other.modifierExtension);
-        fieldSetFlags()[2] = other.fieldSetFlags()[2];
-      }
-      if (isValidValue(fields()[3], other.itemCodeableConcept)) {
-        this.itemCodeableConcept = data().deepCopy(fields()[3].schema(), other.itemCodeableConcept);
-        fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
       if (other.hasItemCodeableConceptBuilder()) {
         this.itemCodeableConceptBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getItemCodeableConceptBuilder());
       }
-      if (isValidValue(fields()[4], other.itemReference)) {
-        this.itemReference = data().deepCopy(fields()[4].schema(), other.itemReference);
-        fieldSetFlags()[4] = other.fieldSetFlags()[4];
+      if (isValidValue(fields()[2], other.itemReference)) {
+        this.itemReference = data().deepCopy(fields()[2].schema(), other.itemReference);
+        fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
       if (other.hasItemReferenceBuilder()) {
         this.itemReferenceBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getItemReferenceBuilder());
       }
-      if (isValidValue(fields()[5], other.isActive)) {
-        this.isActive = data().deepCopy(fields()[5].schema(), other.isActive);
-        fieldSetFlags()[5] = other.fieldSetFlags()[5];
+      if (isValidValue(fields()[3], other.isActive)) {
+        this.isActive = data().deepCopy(fields()[3].schema(), other.isActive);
+        fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
-      if (isValidValue(fields()[6], other.strength)) {
-        this.strength = data().deepCopy(fields()[6].schema(), other.strength);
-        fieldSetFlags()[6] = other.fieldSetFlags()[6];
+      if (isValidValue(fields()[4], other.strength)) {
+        this.strength = data().deepCopy(fields()[4].schema(), other.strength);
+        fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
       if (other.hasStrengthBuilder()) {
         this.strengthBuilder = io.carrera.fhir.avro.models.Ratio.newBuilder(other.getStrengthBuilder());
@@ -368,31 +314,23 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
         this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.extension)) {
-        this.extension = data().deepCopy(fields()[1].schema(), other.extension);
+      if (isValidValue(fields()[1], other.itemCodeableConcept)) {
+        this.itemCodeableConcept = data().deepCopy(fields()[1].schema(), other.itemCodeableConcept);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.modifierExtension)) {
-        this.modifierExtension = data().deepCopy(fields()[2].schema(), other.modifierExtension);
+      this.itemCodeableConceptBuilder = null;
+      if (isValidValue(fields()[2], other.itemReference)) {
+        this.itemReference = data().deepCopy(fields()[2].schema(), other.itemReference);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.itemCodeableConcept)) {
-        this.itemCodeableConcept = data().deepCopy(fields()[3].schema(), other.itemCodeableConcept);
+      this.itemReferenceBuilder = null;
+      if (isValidValue(fields()[3], other.isActive)) {
+        this.isActive = data().deepCopy(fields()[3].schema(), other.isActive);
         fieldSetFlags()[3] = true;
       }
-      this.itemCodeableConceptBuilder = null;
-      if (isValidValue(fields()[4], other.itemReference)) {
-        this.itemReference = data().deepCopy(fields()[4].schema(), other.itemReference);
+      if (isValidValue(fields()[4], other.strength)) {
+        this.strength = data().deepCopy(fields()[4].schema(), other.strength);
         fieldSetFlags()[4] = true;
-      }
-      this.itemReferenceBuilder = null;
-      if (isValidValue(fields()[5], other.isActive)) {
-        this.isActive = data().deepCopy(fields()[5].schema(), other.isActive);
-        fieldSetFlags()[5] = true;
-      }
-      if (isValidValue(fields()[6], other.strength)) {
-        this.strength = data().deepCopy(fields()[6].schema(), other.strength);
-        fieldSetFlags()[6] = true;
       }
       this.strengthBuilder = null;
     }
@@ -438,86 +376,6 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
     }
 
     /**
-      * Gets the value of the 'extension' field.
-      * @return The value.
-      */
-    public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
-      return extension;
-    }
-
-
-    /**
-      * Sets the value of the 'extension' field.
-      * @param value The value of 'extension'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication_Ingredient.Builder setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-      validate(fields()[1], value);
-      this.extension = value;
-      fieldSetFlags()[1] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'extension' field has been set.
-      * @return True if the 'extension' field has been set, false otherwise.
-      */
-    public boolean hasExtension() {
-      return fieldSetFlags()[1];
-    }
-
-
-    /**
-      * Clears the value of the 'extension' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication_Ingredient.Builder clearExtension() {
-      extension = null;
-      fieldSetFlags()[1] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'modifierExtension' field.
-      * @return The value.
-      */
-    public java.util.List<io.carrera.fhir.avro.models.Extension> getModifierExtension() {
-      return modifierExtension;
-    }
-
-
-    /**
-      * Sets the value of the 'modifierExtension' field.
-      * @param value The value of 'modifierExtension'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication_Ingredient.Builder setModifierExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-      validate(fields()[2], value);
-      this.modifierExtension = value;
-      fieldSetFlags()[2] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'modifierExtension' field has been set.
-      * @return True if the 'modifierExtension' field has been set, false otherwise.
-      */
-    public boolean hasModifierExtension() {
-      return fieldSetFlags()[2];
-    }
-
-
-    /**
-      * Clears the value of the 'modifierExtension' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication_Ingredient.Builder clearModifierExtension() {
-      modifierExtension = null;
-      fieldSetFlags()[2] = false;
-      return this;
-    }
-
-    /**
       * Gets the value of the 'itemCodeableConcept' field.
       * @return The value.
       */
@@ -532,10 +390,10 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Medication_Ingredient.Builder setItemCodeableConcept(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[3], value);
+      validate(fields()[1], value);
       this.itemCodeableConceptBuilder = null;
       this.itemCodeableConcept = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
@@ -544,7 +402,7 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
       * @return True if the 'itemCodeableConcept' field has been set, false otherwise.
       */
     public boolean hasItemCodeableConcept() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[1];
     }
 
     /**
@@ -588,7 +446,7 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
     public io.carrera.fhir.avro.models.Medication_Ingredient.Builder clearItemCodeableConcept() {
       itemCodeableConcept = null;
       itemCodeableConceptBuilder = null;
-      fieldSetFlags()[3] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -607,10 +465,10 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Medication_Ingredient.Builder setItemReference(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[4], value);
+      validate(fields()[2], value);
       this.itemReferenceBuilder = null;
       this.itemReference = value;
-      fieldSetFlags()[4] = true;
+      fieldSetFlags()[2] = true;
       return this;
     }
 
@@ -619,7 +477,7 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
       * @return True if the 'itemReference' field has been set, false otherwise.
       */
     public boolean hasItemReference() {
-      return fieldSetFlags()[4];
+      return fieldSetFlags()[2];
     }
 
     /**
@@ -663,7 +521,7 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
     public io.carrera.fhir.avro.models.Medication_Ingredient.Builder clearItemReference() {
       itemReference = null;
       itemReferenceBuilder = null;
-      fieldSetFlags()[4] = false;
+      fieldSetFlags()[2] = false;
       return this;
     }
 
@@ -682,9 +540,9 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Medication_Ingredient.Builder setIsActive(java.lang.Boolean value) {
-      validate(fields()[5], value);
+      validate(fields()[3], value);
       this.isActive = value;
-      fieldSetFlags()[5] = true;
+      fieldSetFlags()[3] = true;
       return this;
     }
 
@@ -693,7 +551,7 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
       * @return True if the 'isActive' field has been set, false otherwise.
       */
     public boolean hasIsActive() {
-      return fieldSetFlags()[5];
+      return fieldSetFlags()[3];
     }
 
 
@@ -703,7 +561,7 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
       */
     public io.carrera.fhir.avro.models.Medication_Ingredient.Builder clearIsActive() {
       isActive = null;
-      fieldSetFlags()[5] = false;
+      fieldSetFlags()[3] = false;
       return this;
     }
 
@@ -722,10 +580,10 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Medication_Ingredient.Builder setStrength(io.carrera.fhir.avro.models.Ratio value) {
-      validate(fields()[6], value);
+      validate(fields()[4], value);
       this.strengthBuilder = null;
       this.strength = value;
-      fieldSetFlags()[6] = true;
+      fieldSetFlags()[4] = true;
       return this;
     }
 
@@ -734,7 +592,7 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
       * @return True if the 'strength' field has been set, false otherwise.
       */
     public boolean hasStrength() {
-      return fieldSetFlags()[6];
+      return fieldSetFlags()[4];
     }
 
     /**
@@ -778,7 +636,7 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
     public io.carrera.fhir.avro.models.Medication_Ingredient.Builder clearStrength() {
       strength = null;
       strengthBuilder = null;
-      fieldSetFlags()[6] = false;
+      fieldSetFlags()[4] = false;
       return this;
     }
 
@@ -788,8 +646,6 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
       try {
         Medication_Ingredient record = new Medication_Ingredient();
         record.id = fieldSetFlags()[0] ? this.id : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.extension = fieldSetFlags()[1] ? this.extension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[1]);
-        record.modifierExtension = fieldSetFlags()[2] ? this.modifierExtension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[2]);
         if (itemCodeableConceptBuilder != null) {
           try {
             record.itemCodeableConcept = this.itemCodeableConceptBuilder.build();
@@ -798,7 +654,7 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
             throw e;
           }
         } else {
-          record.itemCodeableConcept = fieldSetFlags()[3] ? this.itemCodeableConcept : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[3]);
+          record.itemCodeableConcept = fieldSetFlags()[1] ? this.itemCodeableConcept : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[1]);
         }
         if (itemReferenceBuilder != null) {
           try {
@@ -808,9 +664,9 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
             throw e;
           }
         } else {
-          record.itemReference = fieldSetFlags()[4] ? this.itemReference : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[4]);
+          record.itemReference = fieldSetFlags()[2] ? this.itemReference : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[2]);
         }
-        record.isActive = fieldSetFlags()[5] ? this.isActive : (java.lang.Boolean) defaultValue(fields()[5]);
+        record.isActive = fieldSetFlags()[3] ? this.isActive : (java.lang.Boolean) defaultValue(fields()[3]);
         if (strengthBuilder != null) {
           try {
             record.strength = this.strengthBuilder.build();
@@ -819,7 +675,7 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
             throw e;
           }
         } else {
-          record.strength = fieldSetFlags()[6] ? this.strength : (io.carrera.fhir.avro.models.Ratio) defaultValue(fields()[6]);
+          record.strength = fieldSetFlags()[4] ? this.strength : (io.carrera.fhir.avro.models.Ratio) defaultValue(fields()[4]);
         }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
@@ -859,44 +715,6 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
     } else {
       out.writeIndex(1);
       out.writeString(this.id);
-    }
-
-    if (this.extension == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      long size0 = this.extension.size();
-      out.writeArrayStart();
-      out.setItemCount(size0);
-      long actualSize0 = 0;
-      for (io.carrera.fhir.avro.models.Extension e0: this.extension) {
-        actualSize0++;
-        out.startItem();
-        e0.customEncode(out);
-      }
-      out.writeArrayEnd();
-      if (actualSize0 != size0)
-        throw new java.util.ConcurrentModificationException("Array-size written was " + size0 + ", but element count was " + actualSize0 + ".");
-    }
-
-    if (this.modifierExtension == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      long size1 = this.modifierExtension.size();
-      out.writeArrayStart();
-      out.setItemCount(size1);
-      long actualSize1 = 0;
-      for (io.carrera.fhir.avro.models.Extension e1: this.modifierExtension) {
-        actualSize1++;
-        out.startItem();
-        e1.customEncode(out);
-      }
-      out.writeArrayEnd();
-      if (actualSize1 != size1)
-        throw new java.util.ConcurrentModificationException("Array-size written was " + size1 + ", but element count was " + actualSize1 + ".");
     }
 
     if (this.itemCodeableConcept == null) {
@@ -947,52 +765,6 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
 
       if (in.readIndex() != 1) {
         in.readNull();
-        this.extension = null;
-      } else {
-        long size0 = in.readArrayStart();
-        java.util.List<io.carrera.fhir.avro.models.Extension> a0 = this.extension;
-        if (a0 == null) {
-          a0 = new SpecificData.Array<io.carrera.fhir.avro.models.Extension>((int)size0, SCHEMA$.getField("extension").schema().getTypes().get(1));
-          this.extension = a0;
-        } else a0.clear();
-        SpecificData.Array<io.carrera.fhir.avro.models.Extension> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.Extension>)a0 : null);
-        for ( ; 0 < size0; size0 = in.arrayNext()) {
-          for ( ; size0 != 0; size0--) {
-            io.carrera.fhir.avro.models.Extension e0 = (ga0 != null ? ga0.peek() : null);
-            if (e0 == null) {
-              e0 = new io.carrera.fhir.avro.models.Extension();
-            }
-            e0.customDecode(in);
-            a0.add(e0);
-          }
-        }
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.modifierExtension = null;
-      } else {
-        long size1 = in.readArrayStart();
-        java.util.List<io.carrera.fhir.avro.models.Extension> a1 = this.modifierExtension;
-        if (a1 == null) {
-          a1 = new SpecificData.Array<io.carrera.fhir.avro.models.Extension>((int)size1, SCHEMA$.getField("modifierExtension").schema().getTypes().get(1));
-          this.modifierExtension = a1;
-        } else a1.clear();
-        SpecificData.Array<io.carrera.fhir.avro.models.Extension> ga1 = (a1 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.Extension>)a1 : null);
-        for ( ; 0 < size1; size1 = in.arrayNext()) {
-          for ( ; size1 != 0; size1--) {
-            io.carrera.fhir.avro.models.Extension e1 = (ga1 != null ? ga1.peek() : null);
-            if (e1 == null) {
-              e1 = new io.carrera.fhir.avro.models.Extension();
-            }
-            e1.customDecode(in);
-            a1.add(e1);
-          }
-        }
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
         this.itemCodeableConcept = null;
       } else {
         if (this.itemCodeableConcept == null) {
@@ -1029,7 +801,7 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
       }
 
     } else {
-      for (int i = 0; i < 7; i++) {
+      for (int i = 0; i < 5; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
           if (in.readIndex() != 1) {
@@ -1043,56 +815,6 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
         case 1:
           if (in.readIndex() != 1) {
             in.readNull();
-            this.extension = null;
-          } else {
-            long size0 = in.readArrayStart();
-            java.util.List<io.carrera.fhir.avro.models.Extension> a0 = this.extension;
-            if (a0 == null) {
-              a0 = new SpecificData.Array<io.carrera.fhir.avro.models.Extension>((int)size0, SCHEMA$.getField("extension").schema().getTypes().get(1));
-              this.extension = a0;
-            } else a0.clear();
-            SpecificData.Array<io.carrera.fhir.avro.models.Extension> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.Extension>)a0 : null);
-            for ( ; 0 < size0; size0 = in.arrayNext()) {
-              for ( ; size0 != 0; size0--) {
-                io.carrera.fhir.avro.models.Extension e0 = (ga0 != null ? ga0.peek() : null);
-                if (e0 == null) {
-                  e0 = new io.carrera.fhir.avro.models.Extension();
-                }
-                e0.customDecode(in);
-                a0.add(e0);
-              }
-            }
-          }
-          break;
-
-        case 2:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.modifierExtension = null;
-          } else {
-            long size1 = in.readArrayStart();
-            java.util.List<io.carrera.fhir.avro.models.Extension> a1 = this.modifierExtension;
-            if (a1 == null) {
-              a1 = new SpecificData.Array<io.carrera.fhir.avro.models.Extension>((int)size1, SCHEMA$.getField("modifierExtension").schema().getTypes().get(1));
-              this.modifierExtension = a1;
-            } else a1.clear();
-            SpecificData.Array<io.carrera.fhir.avro.models.Extension> ga1 = (a1 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.Extension>)a1 : null);
-            for ( ; 0 < size1; size1 = in.arrayNext()) {
-              for ( ; size1 != 0; size1--) {
-                io.carrera.fhir.avro.models.Extension e1 = (ga1 != null ? ga1.peek() : null);
-                if (e1 == null) {
-                  e1 = new io.carrera.fhir.avro.models.Extension();
-                }
-                e1.customDecode(in);
-                a1.add(e1);
-              }
-            }
-          }
-          break;
-
-        case 3:
-          if (in.readIndex() != 1) {
-            in.readNull();
             this.itemCodeableConcept = null;
           } else {
             if (this.itemCodeableConcept == null) {
@@ -1102,7 +824,7 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
           }
           break;
 
-        case 4:
+        case 2:
           if (in.readIndex() != 1) {
             in.readNull();
             this.itemReference = null;
@@ -1114,7 +836,7 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
           }
           break;
 
-        case 5:
+        case 3:
           if (in.readIndex() != 1) {
             in.readNull();
             this.isActive = null;
@@ -1123,7 +845,7 @@ public class Medication_Ingredient extends org.apache.avro.specific.SpecificReco
           }
           break;
 
-        case 6:
+        case 4:
           if (in.readIndex() != 1) {
             in.readNull();
             this.strength = null;

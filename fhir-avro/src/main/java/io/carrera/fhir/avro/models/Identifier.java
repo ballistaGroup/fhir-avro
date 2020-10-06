@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Identifier extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -6794704295149440944L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Identifier\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"use\",\"type\":[\"null\",\"string\"]},{\"name\":\"type\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"version\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"display\",\"type\":[\"null\",\"string\"]},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"period\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]}]}]},{\"name\":\"assigner\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}]}]}");
+  private static final long serialVersionUID = -3676168890373058994L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Identifier\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"use\",\"type\":[\"null\",\"string\"]},{\"name\":\"type\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"code\",\"type\":[\"null\",\"string\"]}]}}}]}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"period\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]}]}]},{\"name\":\"assigner\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -75,7 +75,6 @@ static {
   }
 
    private java.lang.CharSequence id;
-   private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
    private java.lang.CharSequence use;
    private io.carrera.fhir.avro.models.CodeableConcept type;
    private java.lang.CharSequence system;
@@ -92,16 +91,14 @@ static {
   /**
    * All-args constructor.
    * @param id The new value for id
-   * @param extension The new value for extension
    * @param use The new value for use
    * @param type The new value for type
    * @param system The new value for system
    * @param period The new value for period
    * @param assigner The new value for assigner
    */
-  public Identifier(java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.lang.CharSequence use, io.carrera.fhir.avro.models.CodeableConcept type, java.lang.CharSequence system, io.carrera.fhir.avro.models.Period period, io.carrera.fhir.avro.models.Reference assigner) {
+  public Identifier(java.lang.CharSequence id, java.lang.CharSequence use, io.carrera.fhir.avro.models.CodeableConcept type, java.lang.CharSequence system, io.carrera.fhir.avro.models.Period period, io.carrera.fhir.avro.models.Reference assigner) {
     this.id = id;
-    this.extension = extension;
     this.use = use;
     this.type = type;
     this.system = system;
@@ -115,12 +112,11 @@ static {
   public java.lang.Object get(int field$) {
     switch (field$) {
     case 0: return id;
-    case 1: return extension;
-    case 2: return use;
-    case 3: return type;
-    case 4: return system;
-    case 5: return period;
-    case 6: return assigner;
+    case 1: return use;
+    case 2: return type;
+    case 3: return system;
+    case 4: return period;
+    case 5: return assigner;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -130,12 +126,11 @@ static {
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
     case 0: id = (java.lang.CharSequence)value$; break;
-    case 1: extension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 2: use = (java.lang.CharSequence)value$; break;
-    case 3: type = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 4: system = (java.lang.CharSequence)value$; break;
-    case 5: period = (io.carrera.fhir.avro.models.Period)value$; break;
-    case 6: assigner = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 1: use = (java.lang.CharSequence)value$; break;
+    case 2: type = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 3: system = (java.lang.CharSequence)value$; break;
+    case 4: period = (io.carrera.fhir.avro.models.Period)value$; break;
+    case 5: assigner = (io.carrera.fhir.avro.models.Reference)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -155,23 +150,6 @@ static {
    */
   public void setId(java.lang.CharSequence value) {
     this.id = value;
-  }
-
-  /**
-   * Gets the value of the 'extension' field.
-   * @return The value of the 'extension' field.
-   */
-  public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
-    return extension;
-  }
-
-
-  /**
-   * Sets the value of the 'extension' field.
-   * @param value the value to set.
-   */
-  public void setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-    this.extension = value;
   }
 
   /**
@@ -301,7 +279,6 @@ static {
     implements org.apache.avro.data.RecordBuilder<Identifier> {
 
     private java.lang.CharSequence id;
-    private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
     private java.lang.CharSequence use;
     private io.carrera.fhir.avro.models.CodeableConcept type;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder typeBuilder;
@@ -326,35 +303,31 @@ static {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
-      if (isValidValue(fields()[1], other.extension)) {
-        this.extension = data().deepCopy(fields()[1].schema(), other.extension);
+      if (isValidValue(fields()[1], other.use)) {
+        this.use = data().deepCopy(fields()[1].schema(), other.use);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
-      if (isValidValue(fields()[2], other.use)) {
-        this.use = data().deepCopy(fields()[2].schema(), other.use);
+      if (isValidValue(fields()[2], other.type)) {
+        this.type = data().deepCopy(fields()[2].schema(), other.type);
         fieldSetFlags()[2] = other.fieldSetFlags()[2];
-      }
-      if (isValidValue(fields()[3], other.type)) {
-        this.type = data().deepCopy(fields()[3].schema(), other.type);
-        fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
       if (other.hasTypeBuilder()) {
         this.typeBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getTypeBuilder());
       }
-      if (isValidValue(fields()[4], other.system)) {
-        this.system = data().deepCopy(fields()[4].schema(), other.system);
-        fieldSetFlags()[4] = other.fieldSetFlags()[4];
+      if (isValidValue(fields()[3], other.system)) {
+        this.system = data().deepCopy(fields()[3].schema(), other.system);
+        fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
-      if (isValidValue(fields()[5], other.period)) {
-        this.period = data().deepCopy(fields()[5].schema(), other.period);
-        fieldSetFlags()[5] = other.fieldSetFlags()[5];
+      if (isValidValue(fields()[4], other.period)) {
+        this.period = data().deepCopy(fields()[4].schema(), other.period);
+        fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
       if (other.hasPeriodBuilder()) {
         this.periodBuilder = io.carrera.fhir.avro.models.Period.newBuilder(other.getPeriodBuilder());
       }
-      if (isValidValue(fields()[6], other.assigner)) {
-        this.assigner = data().deepCopy(fields()[6].schema(), other.assigner);
-        fieldSetFlags()[6] = other.fieldSetFlags()[6];
+      if (isValidValue(fields()[5], other.assigner)) {
+        this.assigner = data().deepCopy(fields()[5].schema(), other.assigner);
+        fieldSetFlags()[5] = other.fieldSetFlags()[5];
       }
       if (other.hasAssignerBuilder()) {
         this.assignerBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getAssignerBuilder());
@@ -371,31 +344,27 @@ static {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.extension)) {
-        this.extension = data().deepCopy(fields()[1].schema(), other.extension);
+      if (isValidValue(fields()[1], other.use)) {
+        this.use = data().deepCopy(fields()[1].schema(), other.use);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.use)) {
-        this.use = data().deepCopy(fields()[2].schema(), other.use);
+      if (isValidValue(fields()[2], other.type)) {
+        this.type = data().deepCopy(fields()[2].schema(), other.type);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.type)) {
-        this.type = data().deepCopy(fields()[3].schema(), other.type);
+      this.typeBuilder = null;
+      if (isValidValue(fields()[3], other.system)) {
+        this.system = data().deepCopy(fields()[3].schema(), other.system);
         fieldSetFlags()[3] = true;
       }
-      this.typeBuilder = null;
-      if (isValidValue(fields()[4], other.system)) {
-        this.system = data().deepCopy(fields()[4].schema(), other.system);
+      if (isValidValue(fields()[4], other.period)) {
+        this.period = data().deepCopy(fields()[4].schema(), other.period);
         fieldSetFlags()[4] = true;
       }
-      if (isValidValue(fields()[5], other.period)) {
-        this.period = data().deepCopy(fields()[5].schema(), other.period);
-        fieldSetFlags()[5] = true;
-      }
       this.periodBuilder = null;
-      if (isValidValue(fields()[6], other.assigner)) {
-        this.assigner = data().deepCopy(fields()[6].schema(), other.assigner);
-        fieldSetFlags()[6] = true;
+      if (isValidValue(fields()[5], other.assigner)) {
+        this.assigner = data().deepCopy(fields()[5].schema(), other.assigner);
+        fieldSetFlags()[5] = true;
       }
       this.assignerBuilder = null;
     }
@@ -441,46 +410,6 @@ static {
     }
 
     /**
-      * Gets the value of the 'extension' field.
-      * @return The value.
-      */
-    public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
-      return extension;
-    }
-
-
-    /**
-      * Sets the value of the 'extension' field.
-      * @param value The value of 'extension'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Identifier.Builder setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-      validate(fields()[1], value);
-      this.extension = value;
-      fieldSetFlags()[1] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'extension' field has been set.
-      * @return True if the 'extension' field has been set, false otherwise.
-      */
-    public boolean hasExtension() {
-      return fieldSetFlags()[1];
-    }
-
-
-    /**
-      * Clears the value of the 'extension' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Identifier.Builder clearExtension() {
-      extension = null;
-      fieldSetFlags()[1] = false;
-      return this;
-    }
-
-    /**
       * Gets the value of the 'use' field.
       * @return The value.
       */
@@ -495,9 +424,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Identifier.Builder setUse(java.lang.CharSequence value) {
-      validate(fields()[2], value);
+      validate(fields()[1], value);
       this.use = value;
-      fieldSetFlags()[2] = true;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
@@ -506,7 +435,7 @@ static {
       * @return True if the 'use' field has been set, false otherwise.
       */
     public boolean hasUse() {
-      return fieldSetFlags()[2];
+      return fieldSetFlags()[1];
     }
 
 
@@ -516,7 +445,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Identifier.Builder clearUse() {
       use = null;
-      fieldSetFlags()[2] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -535,10 +464,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Identifier.Builder setType(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[3], value);
+      validate(fields()[2], value);
       this.typeBuilder = null;
       this.type = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[2] = true;
       return this;
     }
 
@@ -547,7 +476,7 @@ static {
       * @return True if the 'type' field has been set, false otherwise.
       */
     public boolean hasType() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[2];
     }
 
     /**
@@ -591,7 +520,7 @@ static {
     public io.carrera.fhir.avro.models.Identifier.Builder clearType() {
       type = null;
       typeBuilder = null;
-      fieldSetFlags()[3] = false;
+      fieldSetFlags()[2] = false;
       return this;
     }
 
@@ -610,9 +539,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Identifier.Builder setSystem(java.lang.CharSequence value) {
-      validate(fields()[4], value);
+      validate(fields()[3], value);
       this.system = value;
-      fieldSetFlags()[4] = true;
+      fieldSetFlags()[3] = true;
       return this;
     }
 
@@ -621,7 +550,7 @@ static {
       * @return True if the 'system' field has been set, false otherwise.
       */
     public boolean hasSystem() {
-      return fieldSetFlags()[4];
+      return fieldSetFlags()[3];
     }
 
 
@@ -631,7 +560,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Identifier.Builder clearSystem() {
       system = null;
-      fieldSetFlags()[4] = false;
+      fieldSetFlags()[3] = false;
       return this;
     }
 
@@ -650,10 +579,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Identifier.Builder setPeriod(io.carrera.fhir.avro.models.Period value) {
-      validate(fields()[5], value);
+      validate(fields()[4], value);
       this.periodBuilder = null;
       this.period = value;
-      fieldSetFlags()[5] = true;
+      fieldSetFlags()[4] = true;
       return this;
     }
 
@@ -662,7 +591,7 @@ static {
       * @return True if the 'period' field has been set, false otherwise.
       */
     public boolean hasPeriod() {
-      return fieldSetFlags()[5];
+      return fieldSetFlags()[4];
     }
 
     /**
@@ -706,7 +635,7 @@ static {
     public io.carrera.fhir.avro.models.Identifier.Builder clearPeriod() {
       period = null;
       periodBuilder = null;
-      fieldSetFlags()[5] = false;
+      fieldSetFlags()[4] = false;
       return this;
     }
 
@@ -725,10 +654,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Identifier.Builder setAssigner(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[6], value);
+      validate(fields()[5], value);
       this.assignerBuilder = null;
       this.assigner = value;
-      fieldSetFlags()[6] = true;
+      fieldSetFlags()[5] = true;
       return this;
     }
 
@@ -737,7 +666,7 @@ static {
       * @return True if the 'assigner' field has been set, false otherwise.
       */
     public boolean hasAssigner() {
-      return fieldSetFlags()[6];
+      return fieldSetFlags()[5];
     }
 
     /**
@@ -781,7 +710,7 @@ static {
     public io.carrera.fhir.avro.models.Identifier.Builder clearAssigner() {
       assigner = null;
       assignerBuilder = null;
-      fieldSetFlags()[6] = false;
+      fieldSetFlags()[5] = false;
       return this;
     }
 
@@ -791,8 +720,7 @@ static {
       try {
         Identifier record = new Identifier();
         record.id = fieldSetFlags()[0] ? this.id : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.extension = fieldSetFlags()[1] ? this.extension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[1]);
-        record.use = fieldSetFlags()[2] ? this.use : (java.lang.CharSequence) defaultValue(fields()[2]);
+        record.use = fieldSetFlags()[1] ? this.use : (java.lang.CharSequence) defaultValue(fields()[1]);
         if (typeBuilder != null) {
           try {
             record.type = this.typeBuilder.build();
@@ -801,9 +729,9 @@ static {
             throw e;
           }
         } else {
-          record.type = fieldSetFlags()[3] ? this.type : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[3]);
+          record.type = fieldSetFlags()[2] ? this.type : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[2]);
         }
-        record.system = fieldSetFlags()[4] ? this.system : (java.lang.CharSequence) defaultValue(fields()[4]);
+        record.system = fieldSetFlags()[3] ? this.system : (java.lang.CharSequence) defaultValue(fields()[3]);
         if (periodBuilder != null) {
           try {
             record.period = this.periodBuilder.build();
@@ -812,7 +740,7 @@ static {
             throw e;
           }
         } else {
-          record.period = fieldSetFlags()[5] ? this.period : (io.carrera.fhir.avro.models.Period) defaultValue(fields()[5]);
+          record.period = fieldSetFlags()[4] ? this.period : (io.carrera.fhir.avro.models.Period) defaultValue(fields()[4]);
         }
         if (assignerBuilder != null) {
           try {
@@ -822,7 +750,7 @@ static {
             throw e;
           }
         } else {
-          record.assigner = fieldSetFlags()[6] ? this.assigner : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[6]);
+          record.assigner = fieldSetFlags()[5] ? this.assigner : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[5]);
         }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {

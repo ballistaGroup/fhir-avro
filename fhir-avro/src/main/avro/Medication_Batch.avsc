@@ -5,18 +5,6 @@
     "name" : "id",
     "type" : [ "null", "string" ]
   }, {
-    "name" : "extension",
-    "type" : [ "null", {
-      "type" : "array",
-      "items" : "Extension"
-    } ]
-  }, {
-    "name" : "modifierExtension",
-    "type" : [ "null", {
-      "type" : "array",
-      "items" : "Extension"
-    } ]
-  }, {
     "name" : "lotNumber",
     "type" : [ "null", "string" ]
   }, {

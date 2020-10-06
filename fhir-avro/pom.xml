@@ -48,6 +48,7 @@
             <import>${project.basedir}/src/main/avro/Identifier.avsc</import>
             <import>${project.basedir}/src/main/avro/ValueSetPointer.avsc</import>
             <import>${project.basedir}/src/main/avro/Patient.avsc</import>
+            <import>${project.basedir}/src/main/avro/Condition_Stage.avsc</import>
             <import>${project.basedir}/src/main/avro/Condition.avsc</import>
             <import>${project.basedir}/src/main/avro/Medication_Batch.avsc</import>
             <import>${project.basedir}/src/main/avro/Medication_Ingredient.avsc</import>

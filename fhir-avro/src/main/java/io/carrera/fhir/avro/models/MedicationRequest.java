@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -1031422267101583455L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MedicationRequest\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"intent\",\"type\":\"string\"},{\"name\":\"medicationCodeableConcept\",\"type\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"version\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"display\",\"type\":[\"null\",\"string\"]},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"authoredOn\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"requester\",\"type\":\"Reference\"}]}");
+  private static final long serialVersionUID = 2383236103545079963L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MedicationRequest\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"medicationCodeableConcept\",\"type\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"code\",\"type\":[\"null\",\"string\"]}]}}}]}},{\"name\":\"medicationReference\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}]},{\"name\":\"authoredOn\",\"type\":\"int\",\"logicalType\":\"date\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,15 +71,9 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
     return DECODER.decode(b);
   }
 
-   private java.lang.CharSequence resourceType;
-   private java.lang.CharSequence id;
-   private java.lang.CharSequence status;
-   private java.lang.CharSequence intent;
    private io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept;
-   private io.carrera.fhir.avro.models.Reference subject;
-   private io.carrera.fhir.avro.models.Reference encounter;
+   private io.carrera.fhir.avro.models.Reference medicationReference;
    private int authoredOn;
-   private io.carrera.fhir.avro.models.Reference requester;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -90,26 +84,14 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
 
   /**
    * All-args constructor.
-   * @param resourceType The new value for resourceType
-   * @param id The new value for id
-   * @param status The new value for status
-   * @param intent The new value for intent
    * @param medicationCodeableConcept The new value for medicationCodeableConcept
-   * @param subject The new value for subject
-   * @param encounter The new value for encounter
+   * @param medicationReference The new value for medicationReference
    * @param authoredOn The new value for authoredOn
-   * @param requester The new value for requester
    */
-  public MedicationRequest(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, java.lang.CharSequence intent, io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.lang.Integer authoredOn, io.carrera.fhir.avro.models.Reference requester) {
-    this.resourceType = resourceType;
-    this.id = id;
-    this.status = status;
-    this.intent = intent;
+  public MedicationRequest(io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept, io.carrera.fhir.avro.models.Reference medicationReference, java.lang.Integer authoredOn) {
     this.medicationCodeableConcept = medicationCodeableConcept;
-    this.subject = subject;
-    this.encounter = encounter;
+    this.medicationReference = medicationReference;
     this.authoredOn = authoredOn;
-    this.requester = requester;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -117,15 +99,9 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return resourceType;
-    case 1: return id;
-    case 2: return status;
-    case 3: return intent;
-    case 4: return medicationCodeableConcept;
-    case 5: return subject;
-    case 6: return encounter;
-    case 7: return authoredOn;
-    case 8: return requester;
+    case 0: return medicationCodeableConcept;
+    case 1: return medicationReference;
+    case 2: return authoredOn;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -134,85 +110,11 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: resourceType = (java.lang.CharSequence)value$; break;
-    case 1: id = (java.lang.CharSequence)value$; break;
-    case 2: status = (java.lang.CharSequence)value$; break;
-    case 3: intent = (java.lang.CharSequence)value$; break;
-    case 4: medicationCodeableConcept = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 5: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 6: encounter = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 7: authoredOn = (java.lang.Integer)value$; break;
-    case 8: requester = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 0: medicationCodeableConcept = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 1: medicationReference = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 2: authoredOn = (java.lang.Integer)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
-  }
-
-  /**
-   * Gets the value of the 'resourceType' field.
-   * @return The value of the 'resourceType' field.
-   */
-  public java.lang.CharSequence getResourceType() {
-    return resourceType;
-  }
-
-
-  /**
-   * Sets the value of the 'resourceType' field.
-   * @param value the value to set.
-   */
-  public void setResourceType(java.lang.CharSequence value) {
-    this.resourceType = value;
-  }
-
-  /**
-   * Gets the value of the 'id' field.
-   * @return The value of the 'id' field.
-   */
-  public java.lang.CharSequence getId() {
-    return id;
-  }
-
-
-  /**
-   * Sets the value of the 'id' field.
-   * @param value the value to set.
-   */
-  public void setId(java.lang.CharSequence value) {
-    this.id = value;
-  }
-
-  /**
-   * Gets the value of the 'status' field.
-   * @return The value of the 'status' field.
-   */
-  public java.lang.CharSequence getStatus() {
-    return status;
-  }
-
-
-  /**
-   * Sets the value of the 'status' field.
-   * @param value the value to set.
-   */
-  public void setStatus(java.lang.CharSequence value) {
-    this.status = value;
-  }
-
-  /**
-   * Gets the value of the 'intent' field.
-   * @return The value of the 'intent' field.
-   */
-  public java.lang.CharSequence getIntent() {
-    return intent;
-  }
-
-
-  /**
-   * Sets the value of the 'intent' field.
-   * @param value the value to set.
-   */
-  public void setIntent(java.lang.CharSequence value) {
-    this.intent = value;
   }
 
   /**
@@ -233,37 +135,20 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
   }
 
   /**
-   * Gets the value of the 'subject' field.
-   * @return The value of the 'subject' field.
+   * Gets the value of the 'medicationReference' field.
+   * @return The value of the 'medicationReference' field.
    */
-  public io.carrera.fhir.avro.models.Reference getSubject() {
-    return subject;
+  public io.carrera.fhir.avro.models.Reference getMedicationReference() {
+    return medicationReference;
   }
 
 
   /**
-   * Sets the value of the 'subject' field.
+   * Sets the value of the 'medicationReference' field.
    * @param value the value to set.
    */
-  public void setSubject(io.carrera.fhir.avro.models.Reference value) {
-    this.subject = value;
-  }
-
-  /**
-   * Gets the value of the 'encounter' field.
-   * @return The value of the 'encounter' field.
-   */
-  public io.carrera.fhir.avro.models.Reference getEncounter() {
-    return encounter;
-  }
-
-
-  /**
-   * Sets the value of the 'encounter' field.
-   * @param value the value to set.
-   */
-  public void setEncounter(io.carrera.fhir.avro.models.Reference value) {
-    this.encounter = value;
+  public void setMedicationReference(io.carrera.fhir.avro.models.Reference value) {
+    this.medicationReference = value;
   }
 
   /**
@@ -281,23 +166,6 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
    */
   public void setAuthoredOn(int value) {
     this.authoredOn = value;
-  }
-
-  /**
-   * Gets the value of the 'requester' field.
-   * @return The value of the 'requester' field.
-   */
-  public io.carrera.fhir.avro.models.Reference getRequester() {
-    return requester;
-  }
-
-
-  /**
-   * Sets the value of the 'requester' field.
-   * @param value the value to set.
-   */
-  public void setRequester(io.carrera.fhir.avro.models.Reference value) {
-    this.requester = value;
   }
 
   /**
@@ -341,19 +209,11 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<MedicationRequest>
     implements org.apache.avro.data.RecordBuilder<MedicationRequest> {
 
-    private java.lang.CharSequence resourceType;
-    private java.lang.CharSequence id;
-    private java.lang.CharSequence status;
-    private java.lang.CharSequence intent;
     private io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder medicationCodeableConceptBuilder;
-    private io.carrera.fhir.avro.models.Reference subject;
-    private io.carrera.fhir.avro.models.Reference.Builder subjectBuilder;
-    private io.carrera.fhir.avro.models.Reference encounter;
-    private io.carrera.fhir.avro.models.Reference.Builder encounterBuilder;
+    private io.carrera.fhir.avro.models.Reference medicationReference;
+    private io.carrera.fhir.avro.models.Reference.Builder medicationReferenceBuilder;
     private int authoredOn;
-    private io.carrera.fhir.avro.models.Reference requester;
-    private io.carrera.fhir.avro.models.Reference.Builder requesterBuilder;
 
     /** Creates a new Builder */
     private Builder() {
@@ -366,53 +226,23 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
      */
     private Builder(io.carrera.fhir.avro.models.MedicationRequest.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.resourceType)) {
-        this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
+      if (isValidValue(fields()[0], other.medicationCodeableConcept)) {
+        this.medicationCodeableConcept = data().deepCopy(fields()[0].schema(), other.medicationCodeableConcept);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
-      }
-      if (isValidValue(fields()[1], other.id)) {
-        this.id = data().deepCopy(fields()[1].schema(), other.id);
-        fieldSetFlags()[1] = other.fieldSetFlags()[1];
-      }
-      if (isValidValue(fields()[2], other.status)) {
-        this.status = data().deepCopy(fields()[2].schema(), other.status);
-        fieldSetFlags()[2] = other.fieldSetFlags()[2];
-      }
-      if (isValidValue(fields()[3], other.intent)) {
-        this.intent = data().deepCopy(fields()[3].schema(), other.intent);
-        fieldSetFlags()[3] = other.fieldSetFlags()[3];
-      }
-      if (isValidValue(fields()[4], other.medicationCodeableConcept)) {
-        this.medicationCodeableConcept = data().deepCopy(fields()[4].schema(), other.medicationCodeableConcept);
-        fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
       if (other.hasMedicationCodeableConceptBuilder()) {
         this.medicationCodeableConceptBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getMedicationCodeableConceptBuilder());
       }
-      if (isValidValue(fields()[5], other.subject)) {
-        this.subject = data().deepCopy(fields()[5].schema(), other.subject);
-        fieldSetFlags()[5] = other.fieldSetFlags()[5];
+      if (isValidValue(fields()[1], other.medicationReference)) {
+        this.medicationReference = data().deepCopy(fields()[1].schema(), other.medicationReference);
+        fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
-      if (other.hasSubjectBuilder()) {
-        this.subjectBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getSubjectBuilder());
+      if (other.hasMedicationReferenceBuilder()) {
+        this.medicationReferenceBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getMedicationReferenceBuilder());
       }
-      if (isValidValue(fields()[6], other.encounter)) {
-        this.encounter = data().deepCopy(fields()[6].schema(), other.encounter);
-        fieldSetFlags()[6] = other.fieldSetFlags()[6];
-      }
-      if (other.hasEncounterBuilder()) {
-        this.encounterBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getEncounterBuilder());
-      }
-      if (isValidValue(fields()[7], other.authoredOn)) {
-        this.authoredOn = data().deepCopy(fields()[7].schema(), other.authoredOn);
-        fieldSetFlags()[7] = other.fieldSetFlags()[7];
-      }
-      if (isValidValue(fields()[8], other.requester)) {
-        this.requester = data().deepCopy(fields()[8].schema(), other.requester);
-        fieldSetFlags()[8] = other.fieldSetFlags()[8];
-      }
-      if (other.hasRequesterBuilder()) {
-        this.requesterBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getRequesterBuilder());
+      if (isValidValue(fields()[2], other.authoredOn)) {
+        this.authoredOn = data().deepCopy(fields()[2].schema(), other.authoredOn);
+        fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
     }
 
@@ -422,206 +252,20 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
      */
     private Builder(io.carrera.fhir.avro.models.MedicationRequest other) {
       super(SCHEMA$);
-      if (isValidValue(fields()[0], other.resourceType)) {
-        this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
+      if (isValidValue(fields()[0], other.medicationCodeableConcept)) {
+        this.medicationCodeableConcept = data().deepCopy(fields()[0].schema(), other.medicationCodeableConcept);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.id)) {
-        this.id = data().deepCopy(fields()[1].schema(), other.id);
+      this.medicationCodeableConceptBuilder = null;
+      if (isValidValue(fields()[1], other.medicationReference)) {
+        this.medicationReference = data().deepCopy(fields()[1].schema(), other.medicationReference);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.status)) {
-        this.status = data().deepCopy(fields()[2].schema(), other.status);
+      this.medicationReferenceBuilder = null;
+      if (isValidValue(fields()[2], other.authoredOn)) {
+        this.authoredOn = data().deepCopy(fields()[2].schema(), other.authoredOn);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.intent)) {
-        this.intent = data().deepCopy(fields()[3].schema(), other.intent);
-        fieldSetFlags()[3] = true;
-      }
-      if (isValidValue(fields()[4], other.medicationCodeableConcept)) {
-        this.medicationCodeableConcept = data().deepCopy(fields()[4].schema(), other.medicationCodeableConcept);
-        fieldSetFlags()[4] = true;
-      }
-      this.medicationCodeableConceptBuilder = null;
-      if (isValidValue(fields()[5], other.subject)) {
-        this.subject = data().deepCopy(fields()[5].schema(), other.subject);
-        fieldSetFlags()[5] = true;
-      }
-      this.subjectBuilder = null;
-      if (isValidValue(fields()[6], other.encounter)) {
-        this.encounter = data().deepCopy(fields()[6].schema(), other.encounter);
-        fieldSetFlags()[6] = true;
-      }
-      this.encounterBuilder = null;
-      if (isValidValue(fields()[7], other.authoredOn)) {
-        this.authoredOn = data().deepCopy(fields()[7].schema(), other.authoredOn);
-        fieldSetFlags()[7] = true;
-      }
-      if (isValidValue(fields()[8], other.requester)) {
-        this.requester = data().deepCopy(fields()[8].schema(), other.requester);
-        fieldSetFlags()[8] = true;
-      }
-      this.requesterBuilder = null;
-    }
-
-    /**
-      * Gets the value of the 'resourceType' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getResourceType() {
-      return resourceType;
-    }
-
-
-    /**
-      * Sets the value of the 'resourceType' field.
-      * @param value The value of 'resourceType'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder setResourceType(java.lang.CharSequence value) {
-      validate(fields()[0], value);
-      this.resourceType = value;
-      fieldSetFlags()[0] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'resourceType' field has been set.
-      * @return True if the 'resourceType' field has been set, false otherwise.
-      */
-    public boolean hasResourceType() {
-      return fieldSetFlags()[0];
-    }
-
-
-    /**
-      * Clears the value of the 'resourceType' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder clearResourceType() {
-      resourceType = null;
-      fieldSetFlags()[0] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'id' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getId() {
-      return id;
-    }
-
-
-    /**
-      * Sets the value of the 'id' field.
-      * @param value The value of 'id'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder setId(java.lang.CharSequence value) {
-      validate(fields()[1], value);
-      this.id = value;
-      fieldSetFlags()[1] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'id' field has been set.
-      * @return True if the 'id' field has been set, false otherwise.
-      */
-    public boolean hasId() {
-      return fieldSetFlags()[1];
-    }
-
-
-    /**
-      * Clears the value of the 'id' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder clearId() {
-      id = null;
-      fieldSetFlags()[1] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'status' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getStatus() {
-      return status;
-    }
-
-
-    /**
-      * Sets the value of the 'status' field.
-      * @param value The value of 'status'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder setStatus(java.lang.CharSequence value) {
-      validate(fields()[2], value);
-      this.status = value;
-      fieldSetFlags()[2] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'status' field has been set.
-      * @return True if the 'status' field has been set, false otherwise.
-      */
-    public boolean hasStatus() {
-      return fieldSetFlags()[2];
-    }
-
-
-    /**
-      * Clears the value of the 'status' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder clearStatus() {
-      status = null;
-      fieldSetFlags()[2] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'intent' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getIntent() {
-      return intent;
-    }
-
-
-    /**
-      * Sets the value of the 'intent' field.
-      * @param value The value of 'intent'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder setIntent(java.lang.CharSequence value) {
-      validate(fields()[3], value);
-      this.intent = value;
-      fieldSetFlags()[3] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'intent' field has been set.
-      * @return True if the 'intent' field has been set, false otherwise.
-      */
-    public boolean hasIntent() {
-      return fieldSetFlags()[3];
-    }
-
-
-    /**
-      * Clears the value of the 'intent' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder clearIntent() {
-      intent = null;
-      fieldSetFlags()[3] = false;
-      return this;
     }
 
     /**
@@ -639,10 +283,10 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.MedicationRequest.Builder setMedicationCodeableConcept(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[4], value);
+      validate(fields()[0], value);
       this.medicationCodeableConceptBuilder = null;
       this.medicationCodeableConcept = value;
-      fieldSetFlags()[4] = true;
+      fieldSetFlags()[0] = true;
       return this;
     }
 
@@ -651,7 +295,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
       * @return True if the 'medicationCodeableConcept' field has been set, false otherwise.
       */
     public boolean hasMedicationCodeableConcept() {
-      return fieldSetFlags()[4];
+      return fieldSetFlags()[0];
     }
 
     /**
@@ -695,157 +339,82 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
     public io.carrera.fhir.avro.models.MedicationRequest.Builder clearMedicationCodeableConcept() {
       medicationCodeableConcept = null;
       medicationCodeableConceptBuilder = null;
-      fieldSetFlags()[4] = false;
+      fieldSetFlags()[0] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'subject' field.
+      * Gets the value of the 'medicationReference' field.
       * @return The value.
       */
-    public io.carrera.fhir.avro.models.Reference getSubject() {
-      return subject;
+    public io.carrera.fhir.avro.models.Reference getMedicationReference() {
+      return medicationReference;
     }
 
 
     /**
-      * Sets the value of the 'subject' field.
-      * @param value The value of 'subject'.
+      * Sets the value of the 'medicationReference' field.
+      * @param value The value of 'medicationReference'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder setSubject(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[5], value);
-      this.subjectBuilder = null;
-      this.subject = value;
-      fieldSetFlags()[5] = true;
+    public io.carrera.fhir.avro.models.MedicationRequest.Builder setMedicationReference(io.carrera.fhir.avro.models.Reference value) {
+      validate(fields()[1], value);
+      this.medicationReferenceBuilder = null;
+      this.medicationReference = value;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'subject' field has been set.
-      * @return True if the 'subject' field has been set, false otherwise.
+      * Checks whether the 'medicationReference' field has been set.
+      * @return True if the 'medicationReference' field has been set, false otherwise.
       */
-    public boolean hasSubject() {
-      return fieldSetFlags()[5];
+    public boolean hasMedicationReference() {
+      return fieldSetFlags()[1];
     }
 
     /**
-     * Gets the Builder instance for the 'subject' field and creates one if it doesn't exist yet.
+     * Gets the Builder instance for the 'medicationReference' field and creates one if it doesn't exist yet.
      * @return This builder.
      */
-    public io.carrera.fhir.avro.models.Reference.Builder getSubjectBuilder() {
-      if (subjectBuilder == null) {
-        if (hasSubject()) {
-          setSubjectBuilder(io.carrera.fhir.avro.models.Reference.newBuilder(subject));
+    public io.carrera.fhir.avro.models.Reference.Builder getMedicationReferenceBuilder() {
+      if (medicationReferenceBuilder == null) {
+        if (hasMedicationReference()) {
+          setMedicationReferenceBuilder(io.carrera.fhir.avro.models.Reference.newBuilder(medicationReference));
         } else {
-          setSubjectBuilder(io.carrera.fhir.avro.models.Reference.newBuilder());
+          setMedicationReferenceBuilder(io.carrera.fhir.avro.models.Reference.newBuilder());
         }
       }
-      return subjectBuilder;
+      return medicationReferenceBuilder;
     }
 
     /**
-     * Sets the Builder instance for the 'subject' field
+     * Sets the Builder instance for the 'medicationReference' field
      * @param value The builder instance that must be set.
      * @return This builder.
      */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder setSubjectBuilder(io.carrera.fhir.avro.models.Reference.Builder value) {
-      clearSubject();
-      subjectBuilder = value;
+    public io.carrera.fhir.avro.models.MedicationRequest.Builder setMedicationReferenceBuilder(io.carrera.fhir.avro.models.Reference.Builder value) {
+      clearMedicationReference();
+      medicationReferenceBuilder = value;
       return this;
     }
 
     /**
-     * Checks whether the 'subject' field has an active Builder instance
-     * @return True if the 'subject' field has an active Builder instance
+     * Checks whether the 'medicationReference' field has an active Builder instance
+     * @return True if the 'medicationReference' field has an active Builder instance
      */
-    public boolean hasSubjectBuilder() {
-      return subjectBuilder != null;
+    public boolean hasMedicationReferenceBuilder() {
+      return medicationReferenceBuilder != null;
     }
 
     /**
-      * Clears the value of the 'subject' field.
+      * Clears the value of the 'medicationReference' field.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder clearSubject() {
-      subject = null;
-      subjectBuilder = null;
-      fieldSetFlags()[5] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'encounter' field.
-      * @return The value.
-      */
-    public io.carrera.fhir.avro.models.Reference getEncounter() {
-      return encounter;
-    }
-
-
-    /**
-      * Sets the value of the 'encounter' field.
-      * @param value The value of 'encounter'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder setEncounter(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[6], value);
-      this.encounterBuilder = null;
-      this.encounter = value;
-      fieldSetFlags()[6] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'encounter' field has been set.
-      * @return True if the 'encounter' field has been set, false otherwise.
-      */
-    public boolean hasEncounter() {
-      return fieldSetFlags()[6];
-    }
-
-    /**
-     * Gets the Builder instance for the 'encounter' field and creates one if it doesn't exist yet.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.Reference.Builder getEncounterBuilder() {
-      if (encounterBuilder == null) {
-        if (hasEncounter()) {
-          setEncounterBuilder(io.carrera.fhir.avro.models.Reference.newBuilder(encounter));
-        } else {
-          setEncounterBuilder(io.carrera.fhir.avro.models.Reference.newBuilder());
-        }
-      }
-      return encounterBuilder;
-    }
-
-    /**
-     * Sets the Builder instance for the 'encounter' field
-     * @param value The builder instance that must be set.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder setEncounterBuilder(io.carrera.fhir.avro.models.Reference.Builder value) {
-      clearEncounter();
-      encounterBuilder = value;
-      return this;
-    }
-
-    /**
-     * Checks whether the 'encounter' field has an active Builder instance
-     * @return True if the 'encounter' field has an active Builder instance
-     */
-    public boolean hasEncounterBuilder() {
-      return encounterBuilder != null;
-    }
-
-    /**
-      * Clears the value of the 'encounter' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder clearEncounter() {
-      encounter = null;
-      encounterBuilder = null;
-      fieldSetFlags()[6] = false;
+    public io.carrera.fhir.avro.models.MedicationRequest.Builder clearMedicationReference() {
+      medicationReference = null;
+      medicationReferenceBuilder = null;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -864,9 +433,9 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.MedicationRequest.Builder setAuthoredOn(int value) {
-      validate(fields()[7], value);
+      validate(fields()[2], value);
       this.authoredOn = value;
-      fieldSetFlags()[7] = true;
+      fieldSetFlags()[2] = true;
       return this;
     }
 
@@ -875,7 +444,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
       * @return True if the 'authoredOn' field has been set, false otherwise.
       */
     public boolean hasAuthoredOn() {
-      return fieldSetFlags()[7];
+      return fieldSetFlags()[2];
     }
 
 
@@ -884,82 +453,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.MedicationRequest.Builder clearAuthoredOn() {
-      fieldSetFlags()[7] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'requester' field.
-      * @return The value.
-      */
-    public io.carrera.fhir.avro.models.Reference getRequester() {
-      return requester;
-    }
-
-
-    /**
-      * Sets the value of the 'requester' field.
-      * @param value The value of 'requester'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder setRequester(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[8], value);
-      this.requesterBuilder = null;
-      this.requester = value;
-      fieldSetFlags()[8] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'requester' field has been set.
-      * @return True if the 'requester' field has been set, false otherwise.
-      */
-    public boolean hasRequester() {
-      return fieldSetFlags()[8];
-    }
-
-    /**
-     * Gets the Builder instance for the 'requester' field and creates one if it doesn't exist yet.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.Reference.Builder getRequesterBuilder() {
-      if (requesterBuilder == null) {
-        if (hasRequester()) {
-          setRequesterBuilder(io.carrera.fhir.avro.models.Reference.newBuilder(requester));
-        } else {
-          setRequesterBuilder(io.carrera.fhir.avro.models.Reference.newBuilder());
-        }
-      }
-      return requesterBuilder;
-    }
-
-    /**
-     * Sets the Builder instance for the 'requester' field
-     * @param value The builder instance that must be set.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder setRequesterBuilder(io.carrera.fhir.avro.models.Reference.Builder value) {
-      clearRequester();
-      requesterBuilder = value;
-      return this;
-    }
-
-    /**
-     * Checks whether the 'requester' field has an active Builder instance
-     * @return True if the 'requester' field has an active Builder instance
-     */
-    public boolean hasRequesterBuilder() {
-      return requesterBuilder != null;
-    }
-
-    /**
-      * Clears the value of the 'requester' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder clearRequester() {
-      requester = null;
-      requesterBuilder = null;
-      fieldSetFlags()[8] = false;
+      fieldSetFlags()[2] = false;
       return this;
     }
 
@@ -968,10 +462,6 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
     public MedicationRequest build() {
       try {
         MedicationRequest record = new MedicationRequest();
-        record.resourceType = fieldSetFlags()[0] ? this.resourceType : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.id = fieldSetFlags()[1] ? this.id : (java.lang.CharSequence) defaultValue(fields()[1]);
-        record.status = fieldSetFlags()[2] ? this.status : (java.lang.CharSequence) defaultValue(fields()[2]);
-        record.intent = fieldSetFlags()[3] ? this.intent : (java.lang.CharSequence) defaultValue(fields()[3]);
         if (medicationCodeableConceptBuilder != null) {
           try {
             record.medicationCodeableConcept = this.medicationCodeableConceptBuilder.build();
@@ -980,39 +470,19 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
             throw e;
           }
         } else {
-          record.medicationCodeableConcept = fieldSetFlags()[4] ? this.medicationCodeableConcept : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[4]);
+          record.medicationCodeableConcept = fieldSetFlags()[0] ? this.medicationCodeableConcept : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[0]);
         }
-        if (subjectBuilder != null) {
+        if (medicationReferenceBuilder != null) {
           try {
-            record.subject = this.subjectBuilder.build();
+            record.medicationReference = this.medicationReferenceBuilder.build();
           } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("subject"));
+            e.addParentField(record.getSchema().getField("medicationReference"));
             throw e;
           }
         } else {
-          record.subject = fieldSetFlags()[5] ? this.subject : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[5]);
+          record.medicationReference = fieldSetFlags()[1] ? this.medicationReference : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[1]);
         }
-        if (encounterBuilder != null) {
-          try {
-            record.encounter = this.encounterBuilder.build();
-          } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("encounter"));
-            throw e;
-          }
-        } else {
-          record.encounter = fieldSetFlags()[6] ? this.encounter : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[6]);
-        }
-        record.authoredOn = fieldSetFlags()[7] ? this.authoredOn : (java.lang.Integer) defaultValue(fields()[7]);
-        if (requesterBuilder != null) {
-          try {
-            record.requester = this.requesterBuilder.build();
-          } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("requester"));
-            throw e;
-          }
-        } else {
-          record.requester = fieldSetFlags()[8] ? this.requester : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[8]);
-        }
+        record.authoredOn = fieldSetFlags()[2] ? this.authoredOn : (java.lang.Integer) defaultValue(fields()[2]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -1045,29 +515,17 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
-    out.writeString(this.resourceType);
-
-    out.writeString(this.id);
-
-    out.writeString(this.status);
-
-    out.writeString(this.intent);
-
     this.medicationCodeableConcept.customEncode(out);
 
-    this.subject.customEncode(out);
-
-    if (this.encounter == null) {
+    if (this.medicationReference == null) {
       out.writeIndex(0);
       out.writeNull();
     } else {
       out.writeIndex(1);
-      this.encounter.customEncode(out);
+      this.medicationReference.customEncode(out);
     }
 
     out.writeInt(this.authoredOn);
-
-    this.requester.customEncode(out);
 
   }
 
@@ -1076,95 +534,47 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
   {
     org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
     if (fieldOrder == null) {
-      this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
-
-      this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-
-      this.status = in.readString(this.status instanceof Utf8 ? (Utf8)this.status : null);
-
-      this.intent = in.readString(this.intent instanceof Utf8 ? (Utf8)this.intent : null);
-
       if (this.medicationCodeableConcept == null) {
         this.medicationCodeableConcept = new io.carrera.fhir.avro.models.CodeableConcept();
       }
       this.medicationCodeableConcept.customDecode(in);
 
-      if (this.subject == null) {
-        this.subject = new io.carrera.fhir.avro.models.Reference();
-      }
-      this.subject.customDecode(in);
-
       if (in.readIndex() != 1) {
         in.readNull();
-        this.encounter = null;
+        this.medicationReference = null;
       } else {
-        if (this.encounter == null) {
-          this.encounter = new io.carrera.fhir.avro.models.Reference();
+        if (this.medicationReference == null) {
+          this.medicationReference = new io.carrera.fhir.avro.models.Reference();
         }
-        this.encounter.customDecode(in);
+        this.medicationReference.customDecode(in);
       }
 
       this.authoredOn = in.readInt();
 
-      if (this.requester == null) {
-        this.requester = new io.carrera.fhir.avro.models.Reference();
-      }
-      this.requester.customDecode(in);
-
     } else {
-      for (int i = 0; i < 9; i++) {
+      for (int i = 0; i < 3; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
-          this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
-          break;
-
-        case 1:
-          this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-          break;
-
-        case 2:
-          this.status = in.readString(this.status instanceof Utf8 ? (Utf8)this.status : null);
-          break;
-
-        case 3:
-          this.intent = in.readString(this.intent instanceof Utf8 ? (Utf8)this.intent : null);
-          break;
-
-        case 4:
           if (this.medicationCodeableConcept == null) {
             this.medicationCodeableConcept = new io.carrera.fhir.avro.models.CodeableConcept();
           }
           this.medicationCodeableConcept.customDecode(in);
           break;
 
-        case 5:
-          if (this.subject == null) {
-            this.subject = new io.carrera.fhir.avro.models.Reference();
-          }
-          this.subject.customDecode(in);
-          break;
-
-        case 6:
+        case 1:
           if (in.readIndex() != 1) {
             in.readNull();
-            this.encounter = null;
+            this.medicationReference = null;
           } else {
-            if (this.encounter == null) {
-              this.encounter = new io.carrera.fhir.avro.models.Reference();
+            if (this.medicationReference == null) {
+              this.medicationReference = new io.carrera.fhir.avro.models.Reference();
             }
-            this.encounter.customDecode(in);
+            this.medicationReference.customDecode(in);
           }
           break;
 
-        case 7:
+        case 2:
           this.authoredOn = in.readInt();
-          break;
-
-        case 8:
-          if (this.requester == null) {
-            this.requester = new io.carrera.fhir.avro.models.Reference();
-          }
-          this.requester.customDecode(in);
           break;
 
         default:

@@ -4,42 +4,17 @@
     "namespace": "io.carrera.fhir.avro.models",
     "fields": [
       {
-        "name": "resourceType",
-        "type": "string"
-      },
-      {
-        "name": "id",
-        "type": "string"
-      },
-      {
-        "name": "status",
-        "type": "string"
-      },
-      {
-        "name": "intent",
-        "type": "string"
-      },
-      {
         "name": "medicationCodeableConcept",
         "type": "CodeableConcept"
       },
       {
-        "name": "subject",
-        "type": "Reference"
-      },
-      {
-        "name": "encounter",
-        "type": ["null", "Reference"],
-        "default" : null
+        "name" : "medicationReference",
+        "type" : [ "null", "Reference" ]
       },
       {
         "name": "authoredOn",
         "type": "int",
         "logicalType": "date"
-      },
-      {
-        "name": "requester",
-        "type": "Reference"
       }
     ]
   }

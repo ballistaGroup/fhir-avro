@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -2172042697791071891L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CodeableConcept\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"version\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"display\",\"type\":[\"null\",\"string\"]},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}");
+  private static final long serialVersionUID = -1085942377731700421L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CodeableConcept\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"code\",\"type\":[\"null\",\"string\"]}]}}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -72,7 +72,6 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
   }
 
    private java.util.List<io.carrera.fhir.avro.models.Coding> coding;
-   private java.lang.CharSequence text;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -84,11 +83,9 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
   /**
    * All-args constructor.
    * @param coding The new value for coding
-   * @param text The new value for text
    */
-  public CodeableConcept(java.util.List<io.carrera.fhir.avro.models.Coding> coding, java.lang.CharSequence text) {
+  public CodeableConcept(java.util.List<io.carrera.fhir.avro.models.Coding> coding) {
     this.coding = coding;
-    this.text = text;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -97,7 +94,6 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
   public java.lang.Object get(int field$) {
     switch (field$) {
     case 0: return coding;
-    case 1: return text;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -107,7 +103,6 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
     case 0: coding = (java.util.List<io.carrera.fhir.avro.models.Coding>)value$; break;
-    case 1: text = (java.lang.CharSequence)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -127,23 +122,6 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
    */
   public void setCoding(java.util.List<io.carrera.fhir.avro.models.Coding> value) {
     this.coding = value;
-  }
-
-  /**
-   * Gets the value of the 'text' field.
-   * @return The value of the 'text' field.
-   */
-  public java.lang.CharSequence getText() {
-    return text;
-  }
-
-
-  /**
-   * Sets the value of the 'text' field.
-   * @param value the value to set.
-   */
-  public void setText(java.lang.CharSequence value) {
-    this.text = value;
   }
 
   /**
@@ -188,7 +166,6 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
     implements org.apache.avro.data.RecordBuilder<CodeableConcept> {
 
     private java.util.List<io.carrera.fhir.avro.models.Coding> coding;
-    private java.lang.CharSequence text;
 
     /** Creates a new Builder */
     private Builder() {
@@ -205,10 +182,6 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
         this.coding = data().deepCopy(fields()[0].schema(), other.coding);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
-      if (isValidValue(fields()[1], other.text)) {
-        this.text = data().deepCopy(fields()[1].schema(), other.text);
-        fieldSetFlags()[1] = other.fieldSetFlags()[1];
-      }
     }
 
     /**
@@ -220,10 +193,6 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
       if (isValidValue(fields()[0], other.coding)) {
         this.coding = data().deepCopy(fields()[0].schema(), other.coding);
         fieldSetFlags()[0] = true;
-      }
-      if (isValidValue(fields()[1], other.text)) {
-        this.text = data().deepCopy(fields()[1].schema(), other.text);
-        fieldSetFlags()[1] = true;
       }
     }
 
@@ -267,53 +236,12 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
       return this;
     }
 
-    /**
-      * Gets the value of the 'text' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getText() {
-      return text;
-    }
-
-
-    /**
-      * Sets the value of the 'text' field.
-      * @param value The value of 'text'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.CodeableConcept.Builder setText(java.lang.CharSequence value) {
-      validate(fields()[1], value);
-      this.text = value;
-      fieldSetFlags()[1] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'text' field has been set.
-      * @return True if the 'text' field has been set, false otherwise.
-      */
-    public boolean hasText() {
-      return fieldSetFlags()[1];
-    }
-
-
-    /**
-      * Clears the value of the 'text' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.CodeableConcept.Builder clearText() {
-      text = null;
-      fieldSetFlags()[1] = false;
-      return this;
-    }
-
     @Override
     @SuppressWarnings("unchecked")
     public CodeableConcept build() {
       try {
         CodeableConcept record = new CodeableConcept();
         record.coding = fieldSetFlags()[0] ? this.coding : (java.util.List<io.carrera.fhir.avro.models.Coding>) defaultValue(fields()[0]);
-        record.text = fieldSetFlags()[1] ? this.text : (java.lang.CharSequence) defaultValue(fields()[1]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -359,14 +287,6 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
     if (actualSize0 != size0)
       throw new java.util.ConcurrentModificationException("Array-size written was " + size0 + ", but element count was " + actualSize0 + ".");
 
-    if (this.text == null) {
-      out.writeIndex(1);
-      out.writeNull();
-    } else {
-      out.writeIndex(0);
-      out.writeString(this.text);
-    }
-
   }
 
   @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
@@ -392,15 +312,8 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
         }
       }
 
-      if (in.readIndex() != 0) {
-        in.readNull();
-        this.text = null;
-      } else {
-        this.text = in.readString(this.text instanceof Utf8 ? (Utf8)this.text : null);
-      }
-
     } else {
-      for (int i = 0; i < 2; i++) {
+      for (int i = 0; i < 1; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
           long size0 = in.readArrayStart();
@@ -419,15 +332,6 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
               e0.customDecode(in);
               a0.add(e0);
             }
-          }
-          break;
-
-        case 1:
-          if (in.readIndex() != 0) {
-            in.readNull();
-            this.text = null;
-          } else {
-            this.text = in.readString(this.text instanceof Utf8 ? (Utf8)this.text : null);
           }
           break;
 

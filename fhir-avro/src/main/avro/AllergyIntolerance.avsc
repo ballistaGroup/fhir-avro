@@ -4,12 +4,12 @@
     "namespace": "io.carrera.fhir.avro.models",
     "fields": [
       {
-        "name": "resourceType",
-        "type": "string"
-      },
-      {
-        "name": "id",
-        "type": "string"
+        "name" : "type",
+        "type" : [ "null", {
+         "name": "x",
+         "type" : "enum",
+         "symbols" : [ "allergy", "intolerance" ]
+        } ]
       },
       {
         "name": "clinicalStatus",
@@ -19,28 +19,16 @@
         "name": "verificationStatus",
         "type": "string"
       },
+     {
+       "name" : "category",
+       "type" : [ "null", {
+        "type" : "array",
+        "items" : "string"
+       } ]
+     },
       {
         "name": "code",
         "type": "CodeableConcept"
-      },
-      {
-        "name": "patient",
-        "type": "Reference"
-      },
-      {
-        "name" : "type",
-        "type" : [ "null", {
-         "name": "x",
-         "type" : "enum",
-         "symbols" : [ "allergy", "intolerance" ]
-        } ]
-      },
-      {
-        "name" : "category",
-        "type" : [ "null", {
-         "type" : "array",
-         "items" : "string"
-        } ]
       }
     ]
   }

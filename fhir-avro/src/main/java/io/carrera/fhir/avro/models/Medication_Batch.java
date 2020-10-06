@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Medication_Batch extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -6415944236492779733L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Medication_Batch\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"lotNumber\",\"type\":[\"null\",\"string\"]},{\"name\":\"expirationDate\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]}]}");
+  private static final long serialVersionUID = -5029155786876844584L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Medication_Batch\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"lotNumber\",\"type\":[\"null\",\"string\"]},{\"name\":\"expirationDate\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -75,8 +75,6 @@ static {
   }
 
    private java.lang.CharSequence id;
-   private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
-   private java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension;
    private java.lang.CharSequence lotNumber;
    private java.lang.Object expirationDate;
 
@@ -90,15 +88,11 @@ static {
   /**
    * All-args constructor.
    * @param id The new value for id
-   * @param extension The new value for extension
-   * @param modifierExtension The new value for modifierExtension
    * @param lotNumber The new value for lotNumber
    * @param expirationDate The new value for expirationDate
    */
-  public Medication_Batch(java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension, java.lang.CharSequence lotNumber, java.lang.Object expirationDate) {
+  public Medication_Batch(java.lang.CharSequence id, java.lang.CharSequence lotNumber, java.lang.Object expirationDate) {
     this.id = id;
-    this.extension = extension;
-    this.modifierExtension = modifierExtension;
     this.lotNumber = lotNumber;
     this.expirationDate = expirationDate;
   }
@@ -109,10 +103,8 @@ static {
   public java.lang.Object get(int field$) {
     switch (field$) {
     case 0: return id;
-    case 1: return extension;
-    case 2: return modifierExtension;
-    case 3: return lotNumber;
-    case 4: return expirationDate;
+    case 1: return lotNumber;
+    case 2: return expirationDate;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -122,10 +114,8 @@ static {
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
     case 0: id = (java.lang.CharSequence)value$; break;
-    case 1: extension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 2: modifierExtension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 3: lotNumber = (java.lang.CharSequence)value$; break;
-    case 4: expirationDate = value$; break;
+    case 1: lotNumber = (java.lang.CharSequence)value$; break;
+    case 2: expirationDate = value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -145,40 +135,6 @@ static {
    */
   public void setId(java.lang.CharSequence value) {
     this.id = value;
-  }
-
-  /**
-   * Gets the value of the 'extension' field.
-   * @return The value of the 'extension' field.
-   */
-  public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
-    return extension;
-  }
-
-
-  /**
-   * Sets the value of the 'extension' field.
-   * @param value the value to set.
-   */
-  public void setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-    this.extension = value;
-  }
-
-  /**
-   * Gets the value of the 'modifierExtension' field.
-   * @return The value of the 'modifierExtension' field.
-   */
-  public java.util.List<io.carrera.fhir.avro.models.Extension> getModifierExtension() {
-    return modifierExtension;
-  }
-
-
-  /**
-   * Sets the value of the 'modifierExtension' field.
-   * @param value the value to set.
-   */
-  public void setModifierExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-    this.modifierExtension = value;
   }
 
   /**
@@ -257,8 +213,6 @@ static {
     implements org.apache.avro.data.RecordBuilder<Medication_Batch> {
 
     private java.lang.CharSequence id;
-    private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
-    private java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension;
     private java.lang.CharSequence lotNumber;
     private java.lang.Object expirationDate;
 
@@ -277,21 +231,13 @@ static {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
-      if (isValidValue(fields()[1], other.extension)) {
-        this.extension = data().deepCopy(fields()[1].schema(), other.extension);
+      if (isValidValue(fields()[1], other.lotNumber)) {
+        this.lotNumber = data().deepCopy(fields()[1].schema(), other.lotNumber);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
-      if (isValidValue(fields()[2], other.modifierExtension)) {
-        this.modifierExtension = data().deepCopy(fields()[2].schema(), other.modifierExtension);
+      if (isValidValue(fields()[2], other.expirationDate)) {
+        this.expirationDate = data().deepCopy(fields()[2].schema(), other.expirationDate);
         fieldSetFlags()[2] = other.fieldSetFlags()[2];
-      }
-      if (isValidValue(fields()[3], other.lotNumber)) {
-        this.lotNumber = data().deepCopy(fields()[3].schema(), other.lotNumber);
-        fieldSetFlags()[3] = other.fieldSetFlags()[3];
-      }
-      if (isValidValue(fields()[4], other.expirationDate)) {
-        this.expirationDate = data().deepCopy(fields()[4].schema(), other.expirationDate);
-        fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
     }
 
@@ -305,21 +251,13 @@ static {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.extension)) {
-        this.extension = data().deepCopy(fields()[1].schema(), other.extension);
+      if (isValidValue(fields()[1], other.lotNumber)) {
+        this.lotNumber = data().deepCopy(fields()[1].schema(), other.lotNumber);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.modifierExtension)) {
-        this.modifierExtension = data().deepCopy(fields()[2].schema(), other.modifierExtension);
+      if (isValidValue(fields()[2], other.expirationDate)) {
+        this.expirationDate = data().deepCopy(fields()[2].schema(), other.expirationDate);
         fieldSetFlags()[2] = true;
-      }
-      if (isValidValue(fields()[3], other.lotNumber)) {
-        this.lotNumber = data().deepCopy(fields()[3].schema(), other.lotNumber);
-        fieldSetFlags()[3] = true;
-      }
-      if (isValidValue(fields()[4], other.expirationDate)) {
-        this.expirationDate = data().deepCopy(fields()[4].schema(), other.expirationDate);
-        fieldSetFlags()[4] = true;
       }
     }
 
@@ -364,86 +302,6 @@ static {
     }
 
     /**
-      * Gets the value of the 'extension' field.
-      * @return The value.
-      */
-    public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
-      return extension;
-    }
-
-
-    /**
-      * Sets the value of the 'extension' field.
-      * @param value The value of 'extension'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication_Batch.Builder setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-      validate(fields()[1], value);
-      this.extension = value;
-      fieldSetFlags()[1] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'extension' field has been set.
-      * @return True if the 'extension' field has been set, false otherwise.
-      */
-    public boolean hasExtension() {
-      return fieldSetFlags()[1];
-    }
-
-
-    /**
-      * Clears the value of the 'extension' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication_Batch.Builder clearExtension() {
-      extension = null;
-      fieldSetFlags()[1] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'modifierExtension' field.
-      * @return The value.
-      */
-    public java.util.List<io.carrera.fhir.avro.models.Extension> getModifierExtension() {
-      return modifierExtension;
-    }
-
-
-    /**
-      * Sets the value of the 'modifierExtension' field.
-      * @param value The value of 'modifierExtension'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication_Batch.Builder setModifierExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-      validate(fields()[2], value);
-      this.modifierExtension = value;
-      fieldSetFlags()[2] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'modifierExtension' field has been set.
-      * @return True if the 'modifierExtension' field has been set, false otherwise.
-      */
-    public boolean hasModifierExtension() {
-      return fieldSetFlags()[2];
-    }
-
-
-    /**
-      * Clears the value of the 'modifierExtension' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Medication_Batch.Builder clearModifierExtension() {
-      modifierExtension = null;
-      fieldSetFlags()[2] = false;
-      return this;
-    }
-
-    /**
       * Gets the value of the 'lotNumber' field.
       * @return The value.
       */
@@ -458,9 +316,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Medication_Batch.Builder setLotNumber(java.lang.CharSequence value) {
-      validate(fields()[3], value);
+      validate(fields()[1], value);
       this.lotNumber = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
@@ -469,7 +327,7 @@ static {
       * @return True if the 'lotNumber' field has been set, false otherwise.
       */
     public boolean hasLotNumber() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[1];
     }
 
 
@@ -479,7 +337,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Medication_Batch.Builder clearLotNumber() {
       lotNumber = null;
-      fieldSetFlags()[3] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -498,9 +356,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Medication_Batch.Builder setExpirationDate(java.lang.Object value) {
-      validate(fields()[4], value);
+      validate(fields()[2], value);
       this.expirationDate = value;
-      fieldSetFlags()[4] = true;
+      fieldSetFlags()[2] = true;
       return this;
     }
 
@@ -509,7 +367,7 @@ static {
       * @return True if the 'expirationDate' field has been set, false otherwise.
       */
     public boolean hasExpirationDate() {
-      return fieldSetFlags()[4];
+      return fieldSetFlags()[2];
     }
 
 
@@ -519,7 +377,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Medication_Batch.Builder clearExpirationDate() {
       expirationDate = null;
-      fieldSetFlags()[4] = false;
+      fieldSetFlags()[2] = false;
       return this;
     }
 
@@ -529,10 +387,8 @@ static {
       try {
         Medication_Batch record = new Medication_Batch();
         record.id = fieldSetFlags()[0] ? this.id : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.extension = fieldSetFlags()[1] ? this.extension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[1]);
-        record.modifierExtension = fieldSetFlags()[2] ? this.modifierExtension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[2]);
-        record.lotNumber = fieldSetFlags()[3] ? this.lotNumber : (java.lang.CharSequence) defaultValue(fields()[3]);
-        record.expirationDate = fieldSetFlags()[4] ? this.expirationDate :  defaultValue(fields()[4]);
+        record.lotNumber = fieldSetFlags()[1] ? this.lotNumber : (java.lang.CharSequence) defaultValue(fields()[1]);
+        record.expirationDate = fieldSetFlags()[2] ? this.expirationDate :  defaultValue(fields()[2]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;

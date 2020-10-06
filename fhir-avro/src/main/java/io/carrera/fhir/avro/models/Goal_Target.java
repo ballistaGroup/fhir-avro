@@ -14,14 +14,11 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Goal_Target extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 2394440274886748931L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Goal_Target\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"measure\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"version\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"display\",\"type\":[\"null\",\"string\"]},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}]},{\"name\":\"detailQuantity\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":\"float\"},{\"name\":\"unit\",\"type\":\"string\"},{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"}]}]},{\"name\":\"detailRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"low\",\"type\":[\"null\",\"Quantity\"]},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"]}]}]},{\"name\":\"detailCodeableConcept\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"detailString\",\"type\":[\"null\",\"string\"]},{\"name\":\"detailBoolean\",\"type\":[\"null\",\"boolean\"]},{\"name\":\"detailInteger\",\"type\":[\"null\",\"int\"]},{\"name\":\"detailRatio\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Ratio\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"numerator\",\"type\":[\"null\",\"Quantity\"]},{\"name\":\"denominator\",\"type\":[\"null\",\"Quantity\"]}]}]},{\"name\":\"dueDate\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"}]},{\"name\":\"dueDuration\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Duration\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"]},{\"name\":\"unit\",\"type\":[\"null\",\"string\"]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]}]}]}]}");
+  private static final long serialVersionUID = -730124436371915795L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Goal_Target\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"measure\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"code\",\"type\":[\"null\",\"string\"]}]}}}]}]},{\"name\":\"detailQuantity\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":\"float\"},{\"name\":\"unit\",\"type\":\"string\"},{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"}]}]},{\"name\":\"detailRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"low\",\"type\":[\"null\",\"Quantity\"]},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"]}]}]},{\"name\":\"detailCodeableConcept\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"detailString\",\"type\":[\"null\",\"string\"]},{\"name\":\"detailBoolean\",\"type\":[\"null\",\"boolean\"]},{\"name\":\"detailInteger\",\"type\":[\"null\",\"int\"]},{\"name\":\"detailRatio\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Ratio\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"numerator\",\"type\":[\"null\",\"Quantity\"]},{\"name\":\"denominator\",\"type\":[\"null\",\"Quantity\"]}]}]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
-static {
-    MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.DateConversion());
-  }
 
   private static final BinaryMessageEncoder<Goal_Target> ENCODER =
       new BinaryMessageEncoder<Goal_Target>(MODEL$, SCHEMA$);
@@ -74,9 +71,6 @@ static {
     return DECODER.decode(b);
   }
 
-   private java.lang.CharSequence id;
-   private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
-   private java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension;
    private io.carrera.fhir.avro.models.CodeableConcept measure;
    private io.carrera.fhir.avro.models.Quantity detailQuantity;
    private io.carrera.fhir.avro.models.Range detailRange;
@@ -85,8 +79,6 @@ static {
    private java.lang.Boolean detailBoolean;
    private java.lang.Integer detailInteger;
    private io.carrera.fhir.avro.models.Ratio detailRatio;
-   private java.time.LocalDate dueDate;
-   private io.carrera.fhir.avro.models.Duration dueDuration;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -97,9 +89,6 @@ static {
 
   /**
    * All-args constructor.
-   * @param id The new value for id
-   * @param extension The new value for extension
-   * @param modifierExtension The new value for modifierExtension
    * @param measure The new value for measure
    * @param detailQuantity The new value for detailQuantity
    * @param detailRange The new value for detailRange
@@ -108,13 +97,8 @@ static {
    * @param detailBoolean The new value for detailBoolean
    * @param detailInteger The new value for detailInteger
    * @param detailRatio The new value for detailRatio
-   * @param dueDate The new value for dueDate
-   * @param dueDuration The new value for dueDuration
    */
-  public Goal_Target(java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension, io.carrera.fhir.avro.models.CodeableConcept measure, io.carrera.fhir.avro.models.Quantity detailQuantity, io.carrera.fhir.avro.models.Range detailRange, io.carrera.fhir.avro.models.CodeableConcept detailCodeableConcept, java.lang.CharSequence detailString, java.lang.Boolean detailBoolean, java.lang.Integer detailInteger, io.carrera.fhir.avro.models.Ratio detailRatio, java.time.LocalDate dueDate, io.carrera.fhir.avro.models.Duration dueDuration) {
-    this.id = id;
-    this.extension = extension;
-    this.modifierExtension = modifierExtension;
+  public Goal_Target(io.carrera.fhir.avro.models.CodeableConcept measure, io.carrera.fhir.avro.models.Quantity detailQuantity, io.carrera.fhir.avro.models.Range detailRange, io.carrera.fhir.avro.models.CodeableConcept detailCodeableConcept, java.lang.CharSequence detailString, java.lang.Boolean detailBoolean, java.lang.Integer detailInteger, io.carrera.fhir.avro.models.Ratio detailRatio) {
     this.measure = measure;
     this.detailQuantity = detailQuantity;
     this.detailRange = detailRange;
@@ -123,8 +107,6 @@ static {
     this.detailBoolean = detailBoolean;
     this.detailInteger = detailInteger;
     this.detailRatio = detailRatio;
-    this.dueDate = dueDate;
-    this.dueDuration = dueDuration;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -132,19 +114,14 @@ static {
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return id;
-    case 1: return extension;
-    case 2: return modifierExtension;
-    case 3: return measure;
-    case 4: return detailQuantity;
-    case 5: return detailRange;
-    case 6: return detailCodeableConcept;
-    case 7: return detailString;
-    case 8: return detailBoolean;
-    case 9: return detailInteger;
-    case 10: return detailRatio;
-    case 11: return dueDate;
-    case 12: return dueDuration;
+    case 0: return measure;
+    case 1: return detailQuantity;
+    case 2: return detailRange;
+    case 3: return detailCodeableConcept;
+    case 4: return detailString;
+    case 5: return detailBoolean;
+    case 6: return detailInteger;
+    case 7: return detailRatio;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -153,72 +130,16 @@ static {
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: id = (java.lang.CharSequence)value$; break;
-    case 1: extension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 2: modifierExtension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 3: measure = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 4: detailQuantity = (io.carrera.fhir.avro.models.Quantity)value$; break;
-    case 5: detailRange = (io.carrera.fhir.avro.models.Range)value$; break;
-    case 6: detailCodeableConcept = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 7: detailString = (java.lang.CharSequence)value$; break;
-    case 8: detailBoolean = (java.lang.Boolean)value$; break;
-    case 9: detailInteger = (java.lang.Integer)value$; break;
-    case 10: detailRatio = (io.carrera.fhir.avro.models.Ratio)value$; break;
-    case 11: dueDate = (java.time.LocalDate)value$; break;
-    case 12: dueDuration = (io.carrera.fhir.avro.models.Duration)value$; break;
+    case 0: measure = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 1: detailQuantity = (io.carrera.fhir.avro.models.Quantity)value$; break;
+    case 2: detailRange = (io.carrera.fhir.avro.models.Range)value$; break;
+    case 3: detailCodeableConcept = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 4: detailString = (java.lang.CharSequence)value$; break;
+    case 5: detailBoolean = (java.lang.Boolean)value$; break;
+    case 6: detailInteger = (java.lang.Integer)value$; break;
+    case 7: detailRatio = (io.carrera.fhir.avro.models.Ratio)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
-  }
-
-  /**
-   * Gets the value of the 'id' field.
-   * @return The value of the 'id' field.
-   */
-  public java.lang.CharSequence getId() {
-    return id;
-  }
-
-
-  /**
-   * Sets the value of the 'id' field.
-   * @param value the value to set.
-   */
-  public void setId(java.lang.CharSequence value) {
-    this.id = value;
-  }
-
-  /**
-   * Gets the value of the 'extension' field.
-   * @return The value of the 'extension' field.
-   */
-  public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
-    return extension;
-  }
-
-
-  /**
-   * Sets the value of the 'extension' field.
-   * @param value the value to set.
-   */
-  public void setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-    this.extension = value;
-  }
-
-  /**
-   * Gets the value of the 'modifierExtension' field.
-   * @return The value of the 'modifierExtension' field.
-   */
-  public java.util.List<io.carrera.fhir.avro.models.Extension> getModifierExtension() {
-    return modifierExtension;
-  }
-
-
-  /**
-   * Sets the value of the 'modifierExtension' field.
-   * @param value the value to set.
-   */
-  public void setModifierExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-    this.modifierExtension = value;
   }
 
   /**
@@ -358,40 +279,6 @@ static {
   }
 
   /**
-   * Gets the value of the 'dueDate' field.
-   * @return The value of the 'dueDate' field.
-   */
-  public java.time.LocalDate getDueDate() {
-    return dueDate;
-  }
-
-
-  /**
-   * Sets the value of the 'dueDate' field.
-   * @param value the value to set.
-   */
-  public void setDueDate(java.time.LocalDate value) {
-    this.dueDate = value;
-  }
-
-  /**
-   * Gets the value of the 'dueDuration' field.
-   * @return The value of the 'dueDuration' field.
-   */
-  public io.carrera.fhir.avro.models.Duration getDueDuration() {
-    return dueDuration;
-  }
-
-
-  /**
-   * Sets the value of the 'dueDuration' field.
-   * @param value the value to set.
-   */
-  public void setDueDuration(io.carrera.fhir.avro.models.Duration value) {
-    this.dueDuration = value;
-  }
-
-  /**
    * Creates a new Goal_Target RecordBuilder.
    * @return A new Goal_Target RecordBuilder
    */
@@ -432,9 +319,6 @@ static {
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Goal_Target>
     implements org.apache.avro.data.RecordBuilder<Goal_Target> {
 
-    private java.lang.CharSequence id;
-    private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
-    private java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension;
     private io.carrera.fhir.avro.models.CodeableConcept measure;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder measureBuilder;
     private io.carrera.fhir.avro.models.Quantity detailQuantity;
@@ -448,9 +332,6 @@ static {
     private java.lang.Integer detailInteger;
     private io.carrera.fhir.avro.models.Ratio detailRatio;
     private io.carrera.fhir.avro.models.Ratio.Builder detailRatioBuilder;
-    private java.time.LocalDate dueDate;
-    private io.carrera.fhir.avro.models.Duration dueDuration;
-    private io.carrera.fhir.avro.models.Duration.Builder dueDurationBuilder;
 
     /** Creates a new Builder */
     private Builder() {
@@ -463,75 +344,52 @@ static {
      */
     private Builder(io.carrera.fhir.avro.models.Goal_Target.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.id)) {
-        this.id = data().deepCopy(fields()[0].schema(), other.id);
+      if (isValidValue(fields()[0], other.measure)) {
+        this.measure = data().deepCopy(fields()[0].schema(), other.measure);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
-      }
-      if (isValidValue(fields()[1], other.extension)) {
-        this.extension = data().deepCopy(fields()[1].schema(), other.extension);
-        fieldSetFlags()[1] = other.fieldSetFlags()[1];
-      }
-      if (isValidValue(fields()[2], other.modifierExtension)) {
-        this.modifierExtension = data().deepCopy(fields()[2].schema(), other.modifierExtension);
-        fieldSetFlags()[2] = other.fieldSetFlags()[2];
-      }
-      if (isValidValue(fields()[3], other.measure)) {
-        this.measure = data().deepCopy(fields()[3].schema(), other.measure);
-        fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
       if (other.hasMeasureBuilder()) {
         this.measureBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getMeasureBuilder());
       }
-      if (isValidValue(fields()[4], other.detailQuantity)) {
-        this.detailQuantity = data().deepCopy(fields()[4].schema(), other.detailQuantity);
-        fieldSetFlags()[4] = other.fieldSetFlags()[4];
+      if (isValidValue(fields()[1], other.detailQuantity)) {
+        this.detailQuantity = data().deepCopy(fields()[1].schema(), other.detailQuantity);
+        fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
       if (other.hasDetailQuantityBuilder()) {
         this.detailQuantityBuilder = io.carrera.fhir.avro.models.Quantity.newBuilder(other.getDetailQuantityBuilder());
       }
-      if (isValidValue(fields()[5], other.detailRange)) {
-        this.detailRange = data().deepCopy(fields()[5].schema(), other.detailRange);
-        fieldSetFlags()[5] = other.fieldSetFlags()[5];
+      if (isValidValue(fields()[2], other.detailRange)) {
+        this.detailRange = data().deepCopy(fields()[2].schema(), other.detailRange);
+        fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
       if (other.hasDetailRangeBuilder()) {
         this.detailRangeBuilder = io.carrera.fhir.avro.models.Range.newBuilder(other.getDetailRangeBuilder());
       }
-      if (isValidValue(fields()[6], other.detailCodeableConcept)) {
-        this.detailCodeableConcept = data().deepCopy(fields()[6].schema(), other.detailCodeableConcept);
-        fieldSetFlags()[6] = other.fieldSetFlags()[6];
+      if (isValidValue(fields()[3], other.detailCodeableConcept)) {
+        this.detailCodeableConcept = data().deepCopy(fields()[3].schema(), other.detailCodeableConcept);
+        fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
       if (other.hasDetailCodeableConceptBuilder()) {
         this.detailCodeableConceptBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getDetailCodeableConceptBuilder());
       }
-      if (isValidValue(fields()[7], other.detailString)) {
-        this.detailString = data().deepCopy(fields()[7].schema(), other.detailString);
+      if (isValidValue(fields()[4], other.detailString)) {
+        this.detailString = data().deepCopy(fields()[4].schema(), other.detailString);
+        fieldSetFlags()[4] = other.fieldSetFlags()[4];
+      }
+      if (isValidValue(fields()[5], other.detailBoolean)) {
+        this.detailBoolean = data().deepCopy(fields()[5].schema(), other.detailBoolean);
+        fieldSetFlags()[5] = other.fieldSetFlags()[5];
+      }
+      if (isValidValue(fields()[6], other.detailInteger)) {
+        this.detailInteger = data().deepCopy(fields()[6].schema(), other.detailInteger);
+        fieldSetFlags()[6] = other.fieldSetFlags()[6];
+      }
+      if (isValidValue(fields()[7], other.detailRatio)) {
+        this.detailRatio = data().deepCopy(fields()[7].schema(), other.detailRatio);
         fieldSetFlags()[7] = other.fieldSetFlags()[7];
-      }
-      if (isValidValue(fields()[8], other.detailBoolean)) {
-        this.detailBoolean = data().deepCopy(fields()[8].schema(), other.detailBoolean);
-        fieldSetFlags()[8] = other.fieldSetFlags()[8];
-      }
-      if (isValidValue(fields()[9], other.detailInteger)) {
-        this.detailInteger = data().deepCopy(fields()[9].schema(), other.detailInteger);
-        fieldSetFlags()[9] = other.fieldSetFlags()[9];
-      }
-      if (isValidValue(fields()[10], other.detailRatio)) {
-        this.detailRatio = data().deepCopy(fields()[10].schema(), other.detailRatio);
-        fieldSetFlags()[10] = other.fieldSetFlags()[10];
       }
       if (other.hasDetailRatioBuilder()) {
         this.detailRatioBuilder = io.carrera.fhir.avro.models.Ratio.newBuilder(other.getDetailRatioBuilder());
-      }
-      if (isValidValue(fields()[11], other.dueDate)) {
-        this.dueDate = data().deepCopy(fields()[11].schema(), other.dueDate);
-        fieldSetFlags()[11] = other.fieldSetFlags()[11];
-      }
-      if (isValidValue(fields()[12], other.dueDuration)) {
-        this.dueDuration = data().deepCopy(fields()[12].schema(), other.dueDuration);
-        fieldSetFlags()[12] = other.fieldSetFlags()[12];
-      }
-      if (other.hasDueDurationBuilder()) {
-        this.dueDurationBuilder = io.carrera.fhir.avro.models.Duration.newBuilder(other.getDueDurationBuilder());
       }
     }
 
@@ -541,184 +399,43 @@ static {
      */
     private Builder(io.carrera.fhir.avro.models.Goal_Target other) {
       super(SCHEMA$);
-      if (isValidValue(fields()[0], other.id)) {
-        this.id = data().deepCopy(fields()[0].schema(), other.id);
+      if (isValidValue(fields()[0], other.measure)) {
+        this.measure = data().deepCopy(fields()[0].schema(), other.measure);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.extension)) {
-        this.extension = data().deepCopy(fields()[1].schema(), other.extension);
+      this.measureBuilder = null;
+      if (isValidValue(fields()[1], other.detailQuantity)) {
+        this.detailQuantity = data().deepCopy(fields()[1].schema(), other.detailQuantity);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.modifierExtension)) {
-        this.modifierExtension = data().deepCopy(fields()[2].schema(), other.modifierExtension);
+      this.detailQuantityBuilder = null;
+      if (isValidValue(fields()[2], other.detailRange)) {
+        this.detailRange = data().deepCopy(fields()[2].schema(), other.detailRange);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.measure)) {
-        this.measure = data().deepCopy(fields()[3].schema(), other.measure);
+      this.detailRangeBuilder = null;
+      if (isValidValue(fields()[3], other.detailCodeableConcept)) {
+        this.detailCodeableConcept = data().deepCopy(fields()[3].schema(), other.detailCodeableConcept);
         fieldSetFlags()[3] = true;
       }
-      this.measureBuilder = null;
-      if (isValidValue(fields()[4], other.detailQuantity)) {
-        this.detailQuantity = data().deepCopy(fields()[4].schema(), other.detailQuantity);
+      this.detailCodeableConceptBuilder = null;
+      if (isValidValue(fields()[4], other.detailString)) {
+        this.detailString = data().deepCopy(fields()[4].schema(), other.detailString);
         fieldSetFlags()[4] = true;
       }
-      this.detailQuantityBuilder = null;
-      if (isValidValue(fields()[5], other.detailRange)) {
-        this.detailRange = data().deepCopy(fields()[5].schema(), other.detailRange);
+      if (isValidValue(fields()[5], other.detailBoolean)) {
+        this.detailBoolean = data().deepCopy(fields()[5].schema(), other.detailBoolean);
         fieldSetFlags()[5] = true;
       }
-      this.detailRangeBuilder = null;
-      if (isValidValue(fields()[6], other.detailCodeableConcept)) {
-        this.detailCodeableConcept = data().deepCopy(fields()[6].schema(), other.detailCodeableConcept);
+      if (isValidValue(fields()[6], other.detailInteger)) {
+        this.detailInteger = data().deepCopy(fields()[6].schema(), other.detailInteger);
         fieldSetFlags()[6] = true;
       }
-      this.detailCodeableConceptBuilder = null;
-      if (isValidValue(fields()[7], other.detailString)) {
-        this.detailString = data().deepCopy(fields()[7].schema(), other.detailString);
+      if (isValidValue(fields()[7], other.detailRatio)) {
+        this.detailRatio = data().deepCopy(fields()[7].schema(), other.detailRatio);
         fieldSetFlags()[7] = true;
       }
-      if (isValidValue(fields()[8], other.detailBoolean)) {
-        this.detailBoolean = data().deepCopy(fields()[8].schema(), other.detailBoolean);
-        fieldSetFlags()[8] = true;
-      }
-      if (isValidValue(fields()[9], other.detailInteger)) {
-        this.detailInteger = data().deepCopy(fields()[9].schema(), other.detailInteger);
-        fieldSetFlags()[9] = true;
-      }
-      if (isValidValue(fields()[10], other.detailRatio)) {
-        this.detailRatio = data().deepCopy(fields()[10].schema(), other.detailRatio);
-        fieldSetFlags()[10] = true;
-      }
       this.detailRatioBuilder = null;
-      if (isValidValue(fields()[11], other.dueDate)) {
-        this.dueDate = data().deepCopy(fields()[11].schema(), other.dueDate);
-        fieldSetFlags()[11] = true;
-      }
-      if (isValidValue(fields()[12], other.dueDuration)) {
-        this.dueDuration = data().deepCopy(fields()[12].schema(), other.dueDuration);
-        fieldSetFlags()[12] = true;
-      }
-      this.dueDurationBuilder = null;
-    }
-
-    /**
-      * Gets the value of the 'id' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getId() {
-      return id;
-    }
-
-
-    /**
-      * Sets the value of the 'id' field.
-      * @param value The value of 'id'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Goal_Target.Builder setId(java.lang.CharSequence value) {
-      validate(fields()[0], value);
-      this.id = value;
-      fieldSetFlags()[0] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'id' field has been set.
-      * @return True if the 'id' field has been set, false otherwise.
-      */
-    public boolean hasId() {
-      return fieldSetFlags()[0];
-    }
-
-
-    /**
-      * Clears the value of the 'id' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Goal_Target.Builder clearId() {
-      id = null;
-      fieldSetFlags()[0] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'extension' field.
-      * @return The value.
-      */
-    public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
-      return extension;
-    }
-
-
-    /**
-      * Sets the value of the 'extension' field.
-      * @param value The value of 'extension'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Goal_Target.Builder setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-      validate(fields()[1], value);
-      this.extension = value;
-      fieldSetFlags()[1] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'extension' field has been set.
-      * @return True if the 'extension' field has been set, false otherwise.
-      */
-    public boolean hasExtension() {
-      return fieldSetFlags()[1];
-    }
-
-
-    /**
-      * Clears the value of the 'extension' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Goal_Target.Builder clearExtension() {
-      extension = null;
-      fieldSetFlags()[1] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'modifierExtension' field.
-      * @return The value.
-      */
-    public java.util.List<io.carrera.fhir.avro.models.Extension> getModifierExtension() {
-      return modifierExtension;
-    }
-
-
-    /**
-      * Sets the value of the 'modifierExtension' field.
-      * @param value The value of 'modifierExtension'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Goal_Target.Builder setModifierExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-      validate(fields()[2], value);
-      this.modifierExtension = value;
-      fieldSetFlags()[2] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'modifierExtension' field has been set.
-      * @return True if the 'modifierExtension' field has been set, false otherwise.
-      */
-    public boolean hasModifierExtension() {
-      return fieldSetFlags()[2];
-    }
-
-
-    /**
-      * Clears the value of the 'modifierExtension' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Goal_Target.Builder clearModifierExtension() {
-      modifierExtension = null;
-      fieldSetFlags()[2] = false;
-      return this;
     }
 
     /**
@@ -736,10 +453,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Goal_Target.Builder setMeasure(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[3], value);
+      validate(fields()[0], value);
       this.measureBuilder = null;
       this.measure = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[0] = true;
       return this;
     }
 
@@ -748,7 +465,7 @@ static {
       * @return True if the 'measure' field has been set, false otherwise.
       */
     public boolean hasMeasure() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[0];
     }
 
     /**
@@ -792,7 +509,7 @@ static {
     public io.carrera.fhir.avro.models.Goal_Target.Builder clearMeasure() {
       measure = null;
       measureBuilder = null;
-      fieldSetFlags()[3] = false;
+      fieldSetFlags()[0] = false;
       return this;
     }
 
@@ -811,10 +528,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Goal_Target.Builder setDetailQuantity(io.carrera.fhir.avro.models.Quantity value) {
-      validate(fields()[4], value);
+      validate(fields()[1], value);
       this.detailQuantityBuilder = null;
       this.detailQuantity = value;
-      fieldSetFlags()[4] = true;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
@@ -823,7 +540,7 @@ static {
       * @return True if the 'detailQuantity' field has been set, false otherwise.
       */
     public boolean hasDetailQuantity() {
-      return fieldSetFlags()[4];
+      return fieldSetFlags()[1];
     }
 
     /**
@@ -867,7 +584,7 @@ static {
     public io.carrera.fhir.avro.models.Goal_Target.Builder clearDetailQuantity() {
       detailQuantity = null;
       detailQuantityBuilder = null;
-      fieldSetFlags()[4] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -886,10 +603,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Goal_Target.Builder setDetailRange(io.carrera.fhir.avro.models.Range value) {
-      validate(fields()[5], value);
+      validate(fields()[2], value);
       this.detailRangeBuilder = null;
       this.detailRange = value;
-      fieldSetFlags()[5] = true;
+      fieldSetFlags()[2] = true;
       return this;
     }
 
@@ -898,7 +615,7 @@ static {
       * @return True if the 'detailRange' field has been set, false otherwise.
       */
     public boolean hasDetailRange() {
-      return fieldSetFlags()[5];
+      return fieldSetFlags()[2];
     }
 
     /**
@@ -942,7 +659,7 @@ static {
     public io.carrera.fhir.avro.models.Goal_Target.Builder clearDetailRange() {
       detailRange = null;
       detailRangeBuilder = null;
-      fieldSetFlags()[5] = false;
+      fieldSetFlags()[2] = false;
       return this;
     }
 
@@ -961,10 +678,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Goal_Target.Builder setDetailCodeableConcept(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[6], value);
+      validate(fields()[3], value);
       this.detailCodeableConceptBuilder = null;
       this.detailCodeableConcept = value;
-      fieldSetFlags()[6] = true;
+      fieldSetFlags()[3] = true;
       return this;
     }
 
@@ -973,7 +690,7 @@ static {
       * @return True if the 'detailCodeableConcept' field has been set, false otherwise.
       */
     public boolean hasDetailCodeableConcept() {
-      return fieldSetFlags()[6];
+      return fieldSetFlags()[3];
     }
 
     /**
@@ -1017,7 +734,7 @@ static {
     public io.carrera.fhir.avro.models.Goal_Target.Builder clearDetailCodeableConcept() {
       detailCodeableConcept = null;
       detailCodeableConceptBuilder = null;
-      fieldSetFlags()[6] = false;
+      fieldSetFlags()[3] = false;
       return this;
     }
 
@@ -1036,9 +753,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Goal_Target.Builder setDetailString(java.lang.CharSequence value) {
-      validate(fields()[7], value);
+      validate(fields()[4], value);
       this.detailString = value;
-      fieldSetFlags()[7] = true;
+      fieldSetFlags()[4] = true;
       return this;
     }
 
@@ -1047,7 +764,7 @@ static {
       * @return True if the 'detailString' field has been set, false otherwise.
       */
     public boolean hasDetailString() {
-      return fieldSetFlags()[7];
+      return fieldSetFlags()[4];
     }
 
 
@@ -1057,7 +774,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Goal_Target.Builder clearDetailString() {
       detailString = null;
-      fieldSetFlags()[7] = false;
+      fieldSetFlags()[4] = false;
       return this;
     }
 
@@ -1076,9 +793,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Goal_Target.Builder setDetailBoolean(java.lang.Boolean value) {
-      validate(fields()[8], value);
+      validate(fields()[5], value);
       this.detailBoolean = value;
-      fieldSetFlags()[8] = true;
+      fieldSetFlags()[5] = true;
       return this;
     }
 
@@ -1087,7 +804,7 @@ static {
       * @return True if the 'detailBoolean' field has been set, false otherwise.
       */
     public boolean hasDetailBoolean() {
-      return fieldSetFlags()[8];
+      return fieldSetFlags()[5];
     }
 
 
@@ -1097,7 +814,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Goal_Target.Builder clearDetailBoolean() {
       detailBoolean = null;
-      fieldSetFlags()[8] = false;
+      fieldSetFlags()[5] = false;
       return this;
     }
 
@@ -1116,9 +833,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Goal_Target.Builder setDetailInteger(java.lang.Integer value) {
-      validate(fields()[9], value);
+      validate(fields()[6], value);
       this.detailInteger = value;
-      fieldSetFlags()[9] = true;
+      fieldSetFlags()[6] = true;
       return this;
     }
 
@@ -1127,7 +844,7 @@ static {
       * @return True if the 'detailInteger' field has been set, false otherwise.
       */
     public boolean hasDetailInteger() {
-      return fieldSetFlags()[9];
+      return fieldSetFlags()[6];
     }
 
 
@@ -1137,7 +854,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Goal_Target.Builder clearDetailInteger() {
       detailInteger = null;
-      fieldSetFlags()[9] = false;
+      fieldSetFlags()[6] = false;
       return this;
     }
 
@@ -1156,10 +873,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Goal_Target.Builder setDetailRatio(io.carrera.fhir.avro.models.Ratio value) {
-      validate(fields()[10], value);
+      validate(fields()[7], value);
       this.detailRatioBuilder = null;
       this.detailRatio = value;
-      fieldSetFlags()[10] = true;
+      fieldSetFlags()[7] = true;
       return this;
     }
 
@@ -1168,7 +885,7 @@ static {
       * @return True if the 'detailRatio' field has been set, false otherwise.
       */
     public boolean hasDetailRatio() {
-      return fieldSetFlags()[10];
+      return fieldSetFlags()[7];
     }
 
     /**
@@ -1212,122 +929,7 @@ static {
     public io.carrera.fhir.avro.models.Goal_Target.Builder clearDetailRatio() {
       detailRatio = null;
       detailRatioBuilder = null;
-      fieldSetFlags()[10] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'dueDate' field.
-      * @return The value.
-      */
-    public java.time.LocalDate getDueDate() {
-      return dueDate;
-    }
-
-
-    /**
-      * Sets the value of the 'dueDate' field.
-      * @param value The value of 'dueDate'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Goal_Target.Builder setDueDate(java.time.LocalDate value) {
-      validate(fields()[11], value);
-      this.dueDate = value;
-      fieldSetFlags()[11] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'dueDate' field has been set.
-      * @return True if the 'dueDate' field has been set, false otherwise.
-      */
-    public boolean hasDueDate() {
-      return fieldSetFlags()[11];
-    }
-
-
-    /**
-      * Clears the value of the 'dueDate' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Goal_Target.Builder clearDueDate() {
-      dueDate = null;
-      fieldSetFlags()[11] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'dueDuration' field.
-      * @return The value.
-      */
-    public io.carrera.fhir.avro.models.Duration getDueDuration() {
-      return dueDuration;
-    }
-
-
-    /**
-      * Sets the value of the 'dueDuration' field.
-      * @param value The value of 'dueDuration'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Goal_Target.Builder setDueDuration(io.carrera.fhir.avro.models.Duration value) {
-      validate(fields()[12], value);
-      this.dueDurationBuilder = null;
-      this.dueDuration = value;
-      fieldSetFlags()[12] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'dueDuration' field has been set.
-      * @return True if the 'dueDuration' field has been set, false otherwise.
-      */
-    public boolean hasDueDuration() {
-      return fieldSetFlags()[12];
-    }
-
-    /**
-     * Gets the Builder instance for the 'dueDuration' field and creates one if it doesn't exist yet.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.Duration.Builder getDueDurationBuilder() {
-      if (dueDurationBuilder == null) {
-        if (hasDueDuration()) {
-          setDueDurationBuilder(io.carrera.fhir.avro.models.Duration.newBuilder(dueDuration));
-        } else {
-          setDueDurationBuilder(io.carrera.fhir.avro.models.Duration.newBuilder());
-        }
-      }
-      return dueDurationBuilder;
-    }
-
-    /**
-     * Sets the Builder instance for the 'dueDuration' field
-     * @param value The builder instance that must be set.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.Goal_Target.Builder setDueDurationBuilder(io.carrera.fhir.avro.models.Duration.Builder value) {
-      clearDueDuration();
-      dueDurationBuilder = value;
-      return this;
-    }
-
-    /**
-     * Checks whether the 'dueDuration' field has an active Builder instance
-     * @return True if the 'dueDuration' field has an active Builder instance
-     */
-    public boolean hasDueDurationBuilder() {
-      return dueDurationBuilder != null;
-    }
-
-    /**
-      * Clears the value of the 'dueDuration' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Goal_Target.Builder clearDueDuration() {
-      dueDuration = null;
-      dueDurationBuilder = null;
-      fieldSetFlags()[12] = false;
+      fieldSetFlags()[7] = false;
       return this;
     }
 
@@ -1336,9 +938,6 @@ static {
     public Goal_Target build() {
       try {
         Goal_Target record = new Goal_Target();
-        record.id = fieldSetFlags()[0] ? this.id : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.extension = fieldSetFlags()[1] ? this.extension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[1]);
-        record.modifierExtension = fieldSetFlags()[2] ? this.modifierExtension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[2]);
         if (measureBuilder != null) {
           try {
             record.measure = this.measureBuilder.build();
@@ -1347,7 +946,7 @@ static {
             throw e;
           }
         } else {
-          record.measure = fieldSetFlags()[3] ? this.measure : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[3]);
+          record.measure = fieldSetFlags()[0] ? this.measure : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[0]);
         }
         if (detailQuantityBuilder != null) {
           try {
@@ -1357,7 +956,7 @@ static {
             throw e;
           }
         } else {
-          record.detailQuantity = fieldSetFlags()[4] ? this.detailQuantity : (io.carrera.fhir.avro.models.Quantity) defaultValue(fields()[4]);
+          record.detailQuantity = fieldSetFlags()[1] ? this.detailQuantity : (io.carrera.fhir.avro.models.Quantity) defaultValue(fields()[1]);
         }
         if (detailRangeBuilder != null) {
           try {
@@ -1367,7 +966,7 @@ static {
             throw e;
           }
         } else {
-          record.detailRange = fieldSetFlags()[5] ? this.detailRange : (io.carrera.fhir.avro.models.Range) defaultValue(fields()[5]);
+          record.detailRange = fieldSetFlags()[2] ? this.detailRange : (io.carrera.fhir.avro.models.Range) defaultValue(fields()[2]);
         }
         if (detailCodeableConceptBuilder != null) {
           try {
@@ -1377,11 +976,11 @@ static {
             throw e;
           }
         } else {
-          record.detailCodeableConcept = fieldSetFlags()[6] ? this.detailCodeableConcept : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[6]);
+          record.detailCodeableConcept = fieldSetFlags()[3] ? this.detailCodeableConcept : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[3]);
         }
-        record.detailString = fieldSetFlags()[7] ? this.detailString : (java.lang.CharSequence) defaultValue(fields()[7]);
-        record.detailBoolean = fieldSetFlags()[8] ? this.detailBoolean : (java.lang.Boolean) defaultValue(fields()[8]);
-        record.detailInteger = fieldSetFlags()[9] ? this.detailInteger : (java.lang.Integer) defaultValue(fields()[9]);
+        record.detailString = fieldSetFlags()[4] ? this.detailString : (java.lang.CharSequence) defaultValue(fields()[4]);
+        record.detailBoolean = fieldSetFlags()[5] ? this.detailBoolean : (java.lang.Boolean) defaultValue(fields()[5]);
+        record.detailInteger = fieldSetFlags()[6] ? this.detailInteger : (java.lang.Integer) defaultValue(fields()[6]);
         if (detailRatioBuilder != null) {
           try {
             record.detailRatio = this.detailRatioBuilder.build();
@@ -1390,18 +989,7 @@ static {
             throw e;
           }
         } else {
-          record.detailRatio = fieldSetFlags()[10] ? this.detailRatio : (io.carrera.fhir.avro.models.Ratio) defaultValue(fields()[10]);
-        }
-        record.dueDate = fieldSetFlags()[11] ? this.dueDate : (java.time.LocalDate) defaultValue(fields()[11]);
-        if (dueDurationBuilder != null) {
-          try {
-            record.dueDuration = this.dueDurationBuilder.build();
-          } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("dueDuration"));
-            throw e;
-          }
-        } else {
-          record.dueDuration = fieldSetFlags()[12] ? this.dueDuration : (io.carrera.fhir.avro.models.Duration) defaultValue(fields()[12]);
+          record.detailRatio = fieldSetFlags()[7] ? this.detailRatio : (io.carrera.fhir.avro.models.Ratio) defaultValue(fields()[7]);
         }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
@@ -1430,6 +1018,249 @@ static {
     READER$.read(this, SpecificData.getDecoder(in));
   }
 
+  @Override protected boolean hasCustomCoders() { return true; }
+
+  @Override public void customEncode(org.apache.avro.io.Encoder out)
+    throws java.io.IOException
+  {
+    if (this.measure == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      this.measure.customEncode(out);
+    }
+
+    if (this.detailQuantity == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      this.detailQuantity.customEncode(out);
+    }
+
+    if (this.detailRange == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      this.detailRange.customEncode(out);
+    }
+
+    if (this.detailCodeableConcept == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      this.detailCodeableConcept.customEncode(out);
+    }
+
+    if (this.detailString == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeString(this.detailString);
+    }
+
+    if (this.detailBoolean == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeBoolean(this.detailBoolean);
+    }
+
+    if (this.detailInteger == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeInt(this.detailInteger);
+    }
+
+    if (this.detailRatio == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      this.detailRatio.customEncode(out);
+    }
+
+  }
+
+  @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
+    throws java.io.IOException
+  {
+    org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
+    if (fieldOrder == null) {
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.measure = null;
+      } else {
+        if (this.measure == null) {
+          this.measure = new io.carrera.fhir.avro.models.CodeableConcept();
+        }
+        this.measure.customDecode(in);
+      }
+
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.detailQuantity = null;
+      } else {
+        if (this.detailQuantity == null) {
+          this.detailQuantity = new io.carrera.fhir.avro.models.Quantity();
+        }
+        this.detailQuantity.customDecode(in);
+      }
+
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.detailRange = null;
+      } else {
+        if (this.detailRange == null) {
+          this.detailRange = new io.carrera.fhir.avro.models.Range();
+        }
+        this.detailRange.customDecode(in);
+      }
+
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.detailCodeableConcept = null;
+      } else {
+        if (this.detailCodeableConcept == null) {
+          this.detailCodeableConcept = new io.carrera.fhir.avro.models.CodeableConcept();
+        }
+        this.detailCodeableConcept.customDecode(in);
+      }
+
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.detailString = null;
+      } else {
+        this.detailString = in.readString(this.detailString instanceof Utf8 ? (Utf8)this.detailString : null);
+      }
+
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.detailBoolean = null;
+      } else {
+        this.detailBoolean = in.readBoolean();
+      }
+
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.detailInteger = null;
+      } else {
+        this.detailInteger = in.readInt();
+      }
+
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.detailRatio = null;
+      } else {
+        if (this.detailRatio == null) {
+          this.detailRatio = new io.carrera.fhir.avro.models.Ratio();
+        }
+        this.detailRatio.customDecode(in);
+      }
+
+    } else {
+      for (int i = 0; i < 8; i++) {
+        switch (fieldOrder[i].pos()) {
+        case 0:
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.measure = null;
+          } else {
+            if (this.measure == null) {
+              this.measure = new io.carrera.fhir.avro.models.CodeableConcept();
+            }
+            this.measure.customDecode(in);
+          }
+          break;
+
+        case 1:
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.detailQuantity = null;
+          } else {
+            if (this.detailQuantity == null) {
+              this.detailQuantity = new io.carrera.fhir.avro.models.Quantity();
+            }
+            this.detailQuantity.customDecode(in);
+          }
+          break;
+
+        case 2:
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.detailRange = null;
+          } else {
+            if (this.detailRange == null) {
+              this.detailRange = new io.carrera.fhir.avro.models.Range();
+            }
+            this.detailRange.customDecode(in);
+          }
+          break;
+
+        case 3:
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.detailCodeableConcept = null;
+          } else {
+            if (this.detailCodeableConcept == null) {
+              this.detailCodeableConcept = new io.carrera.fhir.avro.models.CodeableConcept();
+            }
+            this.detailCodeableConcept.customDecode(in);
+          }
+          break;
+
+        case 4:
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.detailString = null;
+          } else {
+            this.detailString = in.readString(this.detailString instanceof Utf8 ? (Utf8)this.detailString : null);
+          }
+          break;
+
+        case 5:
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.detailBoolean = null;
+          } else {
+            this.detailBoolean = in.readBoolean();
+          }
+          break;
+
+        case 6:
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.detailInteger = null;
+          } else {
+            this.detailInteger = in.readInt();
+          }
+          break;
+
+        case 7:
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.detailRatio = null;
+          } else {
+            if (this.detailRatio == null) {
+              this.detailRatio = new io.carrera.fhir.avro.models.Ratio();
+            }
+            this.detailRatio.customDecode(in);
+          }
+          break;
+
+        default:
+          throw new java.io.IOException("Corrupt ResolvingDecoder.");
+        }
+      }
+    }
+  }
 }
 
 

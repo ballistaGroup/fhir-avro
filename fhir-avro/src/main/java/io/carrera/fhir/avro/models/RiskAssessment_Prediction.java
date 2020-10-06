@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class RiskAssessment_Prediction extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -1641948164777407063L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"RiskAssessment_Prediction\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"outcome\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"version\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"display\",\"type\":[\"null\",\"string\"]},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}]},{\"name\":\"probabilityDecimal\",\"type\":[\"null\",\"double\"]},{\"name\":\"probabilityRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"low\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":\"float\"},{\"name\":\"unit\",\"type\":\"string\"},{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"}]}]},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"]}]}]},{\"name\":\"qualitativeRisk\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"relativeRisk\",\"type\":[\"null\",\"double\"]},{\"name\":\"whenPeriod\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]}]}]},{\"name\":\"whenRange\",\"type\":[\"null\",\"Range\"]},{\"name\":\"rationale\",\"type\":[\"null\",\"string\"]}]}");
+  private static final long serialVersionUID = 8734190471057681304L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"RiskAssessment_Prediction\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"outcome\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"code\",\"type\":[\"null\",\"string\"]}]}}}]}]},{\"name\":\"probabilityDecimal\",\"type\":[\"null\",\"double\"]},{\"name\":\"probabilityRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"low\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":\"float\"},{\"name\":\"unit\",\"type\":\"string\"},{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"}]}]},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"]}]}]},{\"name\":\"qualitativeRisk\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"relativeRisk\",\"type\":[\"null\",\"double\"]},{\"name\":\"whenPeriod\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]}]}]},{\"name\":\"whenRange\",\"type\":[\"null\",\"Range\"]},{\"name\":\"rationale\",\"type\":[\"null\",\"string\"]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -75,8 +75,6 @@ static {
   }
 
    private java.lang.CharSequence id;
-   private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
-   private java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension;
    private io.carrera.fhir.avro.models.CodeableConcept outcome;
    private java.lang.Double probabilityDecimal;
    private io.carrera.fhir.avro.models.Range probabilityRange;
@@ -96,8 +94,6 @@ static {
   /**
    * All-args constructor.
    * @param id The new value for id
-   * @param extension The new value for extension
-   * @param modifierExtension The new value for modifierExtension
    * @param outcome The new value for outcome
    * @param probabilityDecimal The new value for probabilityDecimal
    * @param probabilityRange The new value for probabilityRange
@@ -107,10 +103,8 @@ static {
    * @param whenRange The new value for whenRange
    * @param rationale The new value for rationale
    */
-  public RiskAssessment_Prediction(java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension, io.carrera.fhir.avro.models.CodeableConcept outcome, java.lang.Double probabilityDecimal, io.carrera.fhir.avro.models.Range probabilityRange, io.carrera.fhir.avro.models.CodeableConcept qualitativeRisk, java.lang.Double relativeRisk, io.carrera.fhir.avro.models.Period whenPeriod, io.carrera.fhir.avro.models.Range whenRange, java.lang.CharSequence rationale) {
+  public RiskAssessment_Prediction(java.lang.CharSequence id, io.carrera.fhir.avro.models.CodeableConcept outcome, java.lang.Double probabilityDecimal, io.carrera.fhir.avro.models.Range probabilityRange, io.carrera.fhir.avro.models.CodeableConcept qualitativeRisk, java.lang.Double relativeRisk, io.carrera.fhir.avro.models.Period whenPeriod, io.carrera.fhir.avro.models.Range whenRange, java.lang.CharSequence rationale) {
     this.id = id;
-    this.extension = extension;
-    this.modifierExtension = modifierExtension;
     this.outcome = outcome;
     this.probabilityDecimal = probabilityDecimal;
     this.probabilityRange = probabilityRange;
@@ -127,16 +121,14 @@ static {
   public java.lang.Object get(int field$) {
     switch (field$) {
     case 0: return id;
-    case 1: return extension;
-    case 2: return modifierExtension;
-    case 3: return outcome;
-    case 4: return probabilityDecimal;
-    case 5: return probabilityRange;
-    case 6: return qualitativeRisk;
-    case 7: return relativeRisk;
-    case 8: return whenPeriod;
-    case 9: return whenRange;
-    case 10: return rationale;
+    case 1: return outcome;
+    case 2: return probabilityDecimal;
+    case 3: return probabilityRange;
+    case 4: return qualitativeRisk;
+    case 5: return relativeRisk;
+    case 6: return whenPeriod;
+    case 7: return whenRange;
+    case 8: return rationale;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -146,16 +138,14 @@ static {
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
     case 0: id = (java.lang.CharSequence)value$; break;
-    case 1: extension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 2: modifierExtension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 3: outcome = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 4: probabilityDecimal = (java.lang.Double)value$; break;
-    case 5: probabilityRange = (io.carrera.fhir.avro.models.Range)value$; break;
-    case 6: qualitativeRisk = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 7: relativeRisk = (java.lang.Double)value$; break;
-    case 8: whenPeriod = (io.carrera.fhir.avro.models.Period)value$; break;
-    case 9: whenRange = (io.carrera.fhir.avro.models.Range)value$; break;
-    case 10: rationale = (java.lang.CharSequence)value$; break;
+    case 1: outcome = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 2: probabilityDecimal = (java.lang.Double)value$; break;
+    case 3: probabilityRange = (io.carrera.fhir.avro.models.Range)value$; break;
+    case 4: qualitativeRisk = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 5: relativeRisk = (java.lang.Double)value$; break;
+    case 6: whenPeriod = (io.carrera.fhir.avro.models.Period)value$; break;
+    case 7: whenRange = (io.carrera.fhir.avro.models.Range)value$; break;
+    case 8: rationale = (java.lang.CharSequence)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -175,40 +165,6 @@ static {
    */
   public void setId(java.lang.CharSequence value) {
     this.id = value;
-  }
-
-  /**
-   * Gets the value of the 'extension' field.
-   * @return The value of the 'extension' field.
-   */
-  public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
-    return extension;
-  }
-
-
-  /**
-   * Sets the value of the 'extension' field.
-   * @param value the value to set.
-   */
-  public void setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-    this.extension = value;
-  }
-
-  /**
-   * Gets the value of the 'modifierExtension' field.
-   * @return The value of the 'modifierExtension' field.
-   */
-  public java.util.List<io.carrera.fhir.avro.models.Extension> getModifierExtension() {
-    return modifierExtension;
-  }
-
-
-  /**
-   * Sets the value of the 'modifierExtension' field.
-   * @param value the value to set.
-   */
-  public void setModifierExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-    this.modifierExtension = value;
   }
 
   /**
@@ -389,8 +345,6 @@ static {
     implements org.apache.avro.data.RecordBuilder<RiskAssessment_Prediction> {
 
     private java.lang.CharSequence id;
-    private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
-    private java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension;
     private io.carrera.fhir.avro.models.CodeableConcept outcome;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder outcomeBuilder;
     private java.lang.Double probabilityDecimal;
@@ -420,60 +374,52 @@ static {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
-      if (isValidValue(fields()[1], other.extension)) {
-        this.extension = data().deepCopy(fields()[1].schema(), other.extension);
+      if (isValidValue(fields()[1], other.outcome)) {
+        this.outcome = data().deepCopy(fields()[1].schema(), other.outcome);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
-      }
-      if (isValidValue(fields()[2], other.modifierExtension)) {
-        this.modifierExtension = data().deepCopy(fields()[2].schema(), other.modifierExtension);
-        fieldSetFlags()[2] = other.fieldSetFlags()[2];
-      }
-      if (isValidValue(fields()[3], other.outcome)) {
-        this.outcome = data().deepCopy(fields()[3].schema(), other.outcome);
-        fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
       if (other.hasOutcomeBuilder()) {
         this.outcomeBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getOutcomeBuilder());
       }
-      if (isValidValue(fields()[4], other.probabilityDecimal)) {
-        this.probabilityDecimal = data().deepCopy(fields()[4].schema(), other.probabilityDecimal);
-        fieldSetFlags()[4] = other.fieldSetFlags()[4];
+      if (isValidValue(fields()[2], other.probabilityDecimal)) {
+        this.probabilityDecimal = data().deepCopy(fields()[2].schema(), other.probabilityDecimal);
+        fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
-      if (isValidValue(fields()[5], other.probabilityRange)) {
-        this.probabilityRange = data().deepCopy(fields()[5].schema(), other.probabilityRange);
-        fieldSetFlags()[5] = other.fieldSetFlags()[5];
+      if (isValidValue(fields()[3], other.probabilityRange)) {
+        this.probabilityRange = data().deepCopy(fields()[3].schema(), other.probabilityRange);
+        fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
       if (other.hasProbabilityRangeBuilder()) {
         this.probabilityRangeBuilder = io.carrera.fhir.avro.models.Range.newBuilder(other.getProbabilityRangeBuilder());
       }
-      if (isValidValue(fields()[6], other.qualitativeRisk)) {
-        this.qualitativeRisk = data().deepCopy(fields()[6].schema(), other.qualitativeRisk);
-        fieldSetFlags()[6] = other.fieldSetFlags()[6];
+      if (isValidValue(fields()[4], other.qualitativeRisk)) {
+        this.qualitativeRisk = data().deepCopy(fields()[4].schema(), other.qualitativeRisk);
+        fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
       if (other.hasQualitativeRiskBuilder()) {
         this.qualitativeRiskBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getQualitativeRiskBuilder());
       }
-      if (isValidValue(fields()[7], other.relativeRisk)) {
-        this.relativeRisk = data().deepCopy(fields()[7].schema(), other.relativeRisk);
-        fieldSetFlags()[7] = other.fieldSetFlags()[7];
+      if (isValidValue(fields()[5], other.relativeRisk)) {
+        this.relativeRisk = data().deepCopy(fields()[5].schema(), other.relativeRisk);
+        fieldSetFlags()[5] = other.fieldSetFlags()[5];
       }
-      if (isValidValue(fields()[8], other.whenPeriod)) {
-        this.whenPeriod = data().deepCopy(fields()[8].schema(), other.whenPeriod);
-        fieldSetFlags()[8] = other.fieldSetFlags()[8];
+      if (isValidValue(fields()[6], other.whenPeriod)) {
+        this.whenPeriod = data().deepCopy(fields()[6].schema(), other.whenPeriod);
+        fieldSetFlags()[6] = other.fieldSetFlags()[6];
       }
       if (other.hasWhenPeriodBuilder()) {
         this.whenPeriodBuilder = io.carrera.fhir.avro.models.Period.newBuilder(other.getWhenPeriodBuilder());
       }
-      if (isValidValue(fields()[9], other.whenRange)) {
-        this.whenRange = data().deepCopy(fields()[9].schema(), other.whenRange);
-        fieldSetFlags()[9] = other.fieldSetFlags()[9];
+      if (isValidValue(fields()[7], other.whenRange)) {
+        this.whenRange = data().deepCopy(fields()[7].schema(), other.whenRange);
+        fieldSetFlags()[7] = other.fieldSetFlags()[7];
       }
       if (other.hasWhenRangeBuilder()) {
         this.whenRangeBuilder = io.carrera.fhir.avro.models.Range.newBuilder(other.getWhenRangeBuilder());
       }
-      if (isValidValue(fields()[10], other.rationale)) {
-        this.rationale = data().deepCopy(fields()[10].schema(), other.rationale);
-        fieldSetFlags()[10] = other.fieldSetFlags()[10];
+      if (isValidValue(fields()[8], other.rationale)) {
+        this.rationale = data().deepCopy(fields()[8].schema(), other.rationale);
+        fieldSetFlags()[8] = other.fieldSetFlags()[8];
       }
     }
 
@@ -487,50 +433,42 @@ static {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.extension)) {
-        this.extension = data().deepCopy(fields()[1].schema(), other.extension);
+      if (isValidValue(fields()[1], other.outcome)) {
+        this.outcome = data().deepCopy(fields()[1].schema(), other.outcome);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.modifierExtension)) {
-        this.modifierExtension = data().deepCopy(fields()[2].schema(), other.modifierExtension);
+      this.outcomeBuilder = null;
+      if (isValidValue(fields()[2], other.probabilityDecimal)) {
+        this.probabilityDecimal = data().deepCopy(fields()[2].schema(), other.probabilityDecimal);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.outcome)) {
-        this.outcome = data().deepCopy(fields()[3].schema(), other.outcome);
+      if (isValidValue(fields()[3], other.probabilityRange)) {
+        this.probabilityRange = data().deepCopy(fields()[3].schema(), other.probabilityRange);
         fieldSetFlags()[3] = true;
       }
-      this.outcomeBuilder = null;
-      if (isValidValue(fields()[4], other.probabilityDecimal)) {
-        this.probabilityDecimal = data().deepCopy(fields()[4].schema(), other.probabilityDecimal);
+      this.probabilityRangeBuilder = null;
+      if (isValidValue(fields()[4], other.qualitativeRisk)) {
+        this.qualitativeRisk = data().deepCopy(fields()[4].schema(), other.qualitativeRisk);
         fieldSetFlags()[4] = true;
       }
-      if (isValidValue(fields()[5], other.probabilityRange)) {
-        this.probabilityRange = data().deepCopy(fields()[5].schema(), other.probabilityRange);
+      this.qualitativeRiskBuilder = null;
+      if (isValidValue(fields()[5], other.relativeRisk)) {
+        this.relativeRisk = data().deepCopy(fields()[5].schema(), other.relativeRisk);
         fieldSetFlags()[5] = true;
       }
-      this.probabilityRangeBuilder = null;
-      if (isValidValue(fields()[6], other.qualitativeRisk)) {
-        this.qualitativeRisk = data().deepCopy(fields()[6].schema(), other.qualitativeRisk);
+      if (isValidValue(fields()[6], other.whenPeriod)) {
+        this.whenPeriod = data().deepCopy(fields()[6].schema(), other.whenPeriod);
         fieldSetFlags()[6] = true;
       }
-      this.qualitativeRiskBuilder = null;
-      if (isValidValue(fields()[7], other.relativeRisk)) {
-        this.relativeRisk = data().deepCopy(fields()[7].schema(), other.relativeRisk);
+      this.whenPeriodBuilder = null;
+      if (isValidValue(fields()[7], other.whenRange)) {
+        this.whenRange = data().deepCopy(fields()[7].schema(), other.whenRange);
         fieldSetFlags()[7] = true;
       }
-      if (isValidValue(fields()[8], other.whenPeriod)) {
-        this.whenPeriod = data().deepCopy(fields()[8].schema(), other.whenPeriod);
-        fieldSetFlags()[8] = true;
-      }
-      this.whenPeriodBuilder = null;
-      if (isValidValue(fields()[9], other.whenRange)) {
-        this.whenRange = data().deepCopy(fields()[9].schema(), other.whenRange);
-        fieldSetFlags()[9] = true;
-      }
       this.whenRangeBuilder = null;
-      if (isValidValue(fields()[10], other.rationale)) {
-        this.rationale = data().deepCopy(fields()[10].schema(), other.rationale);
-        fieldSetFlags()[10] = true;
+      if (isValidValue(fields()[8], other.rationale)) {
+        this.rationale = data().deepCopy(fields()[8].schema(), other.rationale);
+        fieldSetFlags()[8] = true;
       }
     }
 
@@ -575,86 +513,6 @@ static {
     }
 
     /**
-      * Gets the value of the 'extension' field.
-      * @return The value.
-      */
-    public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
-      return extension;
-    }
-
-
-    /**
-      * Sets the value of the 'extension' field.
-      * @param value The value of 'extension'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-      validate(fields()[1], value);
-      this.extension = value;
-      fieldSetFlags()[1] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'extension' field has been set.
-      * @return True if the 'extension' field has been set, false otherwise.
-      */
-    public boolean hasExtension() {
-      return fieldSetFlags()[1];
-    }
-
-
-    /**
-      * Clears the value of the 'extension' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder clearExtension() {
-      extension = null;
-      fieldSetFlags()[1] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'modifierExtension' field.
-      * @return The value.
-      */
-    public java.util.List<io.carrera.fhir.avro.models.Extension> getModifierExtension() {
-      return modifierExtension;
-    }
-
-
-    /**
-      * Sets the value of the 'modifierExtension' field.
-      * @param value The value of 'modifierExtension'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder setModifierExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-      validate(fields()[2], value);
-      this.modifierExtension = value;
-      fieldSetFlags()[2] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'modifierExtension' field has been set.
-      * @return True if the 'modifierExtension' field has been set, false otherwise.
-      */
-    public boolean hasModifierExtension() {
-      return fieldSetFlags()[2];
-    }
-
-
-    /**
-      * Clears the value of the 'modifierExtension' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder clearModifierExtension() {
-      modifierExtension = null;
-      fieldSetFlags()[2] = false;
-      return this;
-    }
-
-    /**
       * Gets the value of the 'outcome' field.
       * @return The value.
       */
@@ -669,10 +527,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder setOutcome(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[3], value);
+      validate(fields()[1], value);
       this.outcomeBuilder = null;
       this.outcome = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
@@ -681,7 +539,7 @@ static {
       * @return True if the 'outcome' field has been set, false otherwise.
       */
     public boolean hasOutcome() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[1];
     }
 
     /**
@@ -725,7 +583,7 @@ static {
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder clearOutcome() {
       outcome = null;
       outcomeBuilder = null;
-      fieldSetFlags()[3] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -744,9 +602,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder setProbabilityDecimal(java.lang.Double value) {
-      validate(fields()[4], value);
+      validate(fields()[2], value);
       this.probabilityDecimal = value;
-      fieldSetFlags()[4] = true;
+      fieldSetFlags()[2] = true;
       return this;
     }
 
@@ -755,7 +613,7 @@ static {
       * @return True if the 'probabilityDecimal' field has been set, false otherwise.
       */
     public boolean hasProbabilityDecimal() {
-      return fieldSetFlags()[4];
+      return fieldSetFlags()[2];
     }
 
 
@@ -765,7 +623,7 @@ static {
       */
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder clearProbabilityDecimal() {
       probabilityDecimal = null;
-      fieldSetFlags()[4] = false;
+      fieldSetFlags()[2] = false;
       return this;
     }
 
@@ -784,10 +642,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder setProbabilityRange(io.carrera.fhir.avro.models.Range value) {
-      validate(fields()[5], value);
+      validate(fields()[3], value);
       this.probabilityRangeBuilder = null;
       this.probabilityRange = value;
-      fieldSetFlags()[5] = true;
+      fieldSetFlags()[3] = true;
       return this;
     }
 
@@ -796,7 +654,7 @@ static {
       * @return True if the 'probabilityRange' field has been set, false otherwise.
       */
     public boolean hasProbabilityRange() {
-      return fieldSetFlags()[5];
+      return fieldSetFlags()[3];
     }
 
     /**
@@ -840,7 +698,7 @@ static {
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder clearProbabilityRange() {
       probabilityRange = null;
       probabilityRangeBuilder = null;
-      fieldSetFlags()[5] = false;
+      fieldSetFlags()[3] = false;
       return this;
     }
 
@@ -859,10 +717,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder setQualitativeRisk(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[6], value);
+      validate(fields()[4], value);
       this.qualitativeRiskBuilder = null;
       this.qualitativeRisk = value;
-      fieldSetFlags()[6] = true;
+      fieldSetFlags()[4] = true;
       return this;
     }
 
@@ -871,7 +729,7 @@ static {
       * @return True if the 'qualitativeRisk' field has been set, false otherwise.
       */
     public boolean hasQualitativeRisk() {
-      return fieldSetFlags()[6];
+      return fieldSetFlags()[4];
     }
 
     /**
@@ -915,7 +773,7 @@ static {
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder clearQualitativeRisk() {
       qualitativeRisk = null;
       qualitativeRiskBuilder = null;
-      fieldSetFlags()[6] = false;
+      fieldSetFlags()[4] = false;
       return this;
     }
 
@@ -934,9 +792,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder setRelativeRisk(java.lang.Double value) {
-      validate(fields()[7], value);
+      validate(fields()[5], value);
       this.relativeRisk = value;
-      fieldSetFlags()[7] = true;
+      fieldSetFlags()[5] = true;
       return this;
     }
 
@@ -945,7 +803,7 @@ static {
       * @return True if the 'relativeRisk' field has been set, false otherwise.
       */
     public boolean hasRelativeRisk() {
-      return fieldSetFlags()[7];
+      return fieldSetFlags()[5];
     }
 
 
@@ -955,7 +813,7 @@ static {
       */
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder clearRelativeRisk() {
       relativeRisk = null;
-      fieldSetFlags()[7] = false;
+      fieldSetFlags()[5] = false;
       return this;
     }
 
@@ -974,10 +832,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder setWhenPeriod(io.carrera.fhir.avro.models.Period value) {
-      validate(fields()[8], value);
+      validate(fields()[6], value);
       this.whenPeriodBuilder = null;
       this.whenPeriod = value;
-      fieldSetFlags()[8] = true;
+      fieldSetFlags()[6] = true;
       return this;
     }
 
@@ -986,7 +844,7 @@ static {
       * @return True if the 'whenPeriod' field has been set, false otherwise.
       */
     public boolean hasWhenPeriod() {
-      return fieldSetFlags()[8];
+      return fieldSetFlags()[6];
     }
 
     /**
@@ -1030,7 +888,7 @@ static {
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder clearWhenPeriod() {
       whenPeriod = null;
       whenPeriodBuilder = null;
-      fieldSetFlags()[8] = false;
+      fieldSetFlags()[6] = false;
       return this;
     }
 
@@ -1049,10 +907,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder setWhenRange(io.carrera.fhir.avro.models.Range value) {
-      validate(fields()[9], value);
+      validate(fields()[7], value);
       this.whenRangeBuilder = null;
       this.whenRange = value;
-      fieldSetFlags()[9] = true;
+      fieldSetFlags()[7] = true;
       return this;
     }
 
@@ -1061,7 +919,7 @@ static {
       * @return True if the 'whenRange' field has been set, false otherwise.
       */
     public boolean hasWhenRange() {
-      return fieldSetFlags()[9];
+      return fieldSetFlags()[7];
     }
 
     /**
@@ -1105,7 +963,7 @@ static {
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder clearWhenRange() {
       whenRange = null;
       whenRangeBuilder = null;
-      fieldSetFlags()[9] = false;
+      fieldSetFlags()[7] = false;
       return this;
     }
 
@@ -1124,9 +982,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder setRationale(java.lang.CharSequence value) {
-      validate(fields()[10], value);
+      validate(fields()[8], value);
       this.rationale = value;
-      fieldSetFlags()[10] = true;
+      fieldSetFlags()[8] = true;
       return this;
     }
 
@@ -1135,7 +993,7 @@ static {
       * @return True if the 'rationale' field has been set, false otherwise.
       */
     public boolean hasRationale() {
-      return fieldSetFlags()[10];
+      return fieldSetFlags()[8];
     }
 
 
@@ -1145,7 +1003,7 @@ static {
       */
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder clearRationale() {
       rationale = null;
-      fieldSetFlags()[10] = false;
+      fieldSetFlags()[8] = false;
       return this;
     }
 
@@ -1155,8 +1013,6 @@ static {
       try {
         RiskAssessment_Prediction record = new RiskAssessment_Prediction();
         record.id = fieldSetFlags()[0] ? this.id : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.extension = fieldSetFlags()[1] ? this.extension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[1]);
-        record.modifierExtension = fieldSetFlags()[2] ? this.modifierExtension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[2]);
         if (outcomeBuilder != null) {
           try {
             record.outcome = this.outcomeBuilder.build();
@@ -1165,9 +1021,9 @@ static {
             throw e;
           }
         } else {
-          record.outcome = fieldSetFlags()[3] ? this.outcome : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[3]);
+          record.outcome = fieldSetFlags()[1] ? this.outcome : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[1]);
         }
-        record.probabilityDecimal = fieldSetFlags()[4] ? this.probabilityDecimal : (java.lang.Double) defaultValue(fields()[4]);
+        record.probabilityDecimal = fieldSetFlags()[2] ? this.probabilityDecimal : (java.lang.Double) defaultValue(fields()[2]);
         if (probabilityRangeBuilder != null) {
           try {
             record.probabilityRange = this.probabilityRangeBuilder.build();
@@ -1176,7 +1032,7 @@ static {
             throw e;
           }
         } else {
-          record.probabilityRange = fieldSetFlags()[5] ? this.probabilityRange : (io.carrera.fhir.avro.models.Range) defaultValue(fields()[5]);
+          record.probabilityRange = fieldSetFlags()[3] ? this.probabilityRange : (io.carrera.fhir.avro.models.Range) defaultValue(fields()[3]);
         }
         if (qualitativeRiskBuilder != null) {
           try {
@@ -1186,9 +1042,9 @@ static {
             throw e;
           }
         } else {
-          record.qualitativeRisk = fieldSetFlags()[6] ? this.qualitativeRisk : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[6]);
+          record.qualitativeRisk = fieldSetFlags()[4] ? this.qualitativeRisk : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[4]);
         }
-        record.relativeRisk = fieldSetFlags()[7] ? this.relativeRisk : (java.lang.Double) defaultValue(fields()[7]);
+        record.relativeRisk = fieldSetFlags()[5] ? this.relativeRisk : (java.lang.Double) defaultValue(fields()[5]);
         if (whenPeriodBuilder != null) {
           try {
             record.whenPeriod = this.whenPeriodBuilder.build();
@@ -1197,7 +1053,7 @@ static {
             throw e;
           }
         } else {
-          record.whenPeriod = fieldSetFlags()[8] ? this.whenPeriod : (io.carrera.fhir.avro.models.Period) defaultValue(fields()[8]);
+          record.whenPeriod = fieldSetFlags()[6] ? this.whenPeriod : (io.carrera.fhir.avro.models.Period) defaultValue(fields()[6]);
         }
         if (whenRangeBuilder != null) {
           try {
@@ -1207,9 +1063,9 @@ static {
             throw e;
           }
         } else {
-          record.whenRange = fieldSetFlags()[9] ? this.whenRange : (io.carrera.fhir.avro.models.Range) defaultValue(fields()[9]);
+          record.whenRange = fieldSetFlags()[7] ? this.whenRange : (io.carrera.fhir.avro.models.Range) defaultValue(fields()[7]);
         }
-        record.rationale = fieldSetFlags()[10] ? this.rationale : (java.lang.CharSequence) defaultValue(fields()[10]);
+        record.rationale = fieldSetFlags()[8] ? this.rationale : (java.lang.CharSequence) defaultValue(fields()[8]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;

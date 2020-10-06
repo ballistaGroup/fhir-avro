@@ -47,6 +47,13 @@
       {
         "name": "value",
         "type": ["null", "string", "Quantity"]
+      },
+      {
+        "name" : "interpretation",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : "CodeableConcept"
+        } ]
       }
     ]
   }

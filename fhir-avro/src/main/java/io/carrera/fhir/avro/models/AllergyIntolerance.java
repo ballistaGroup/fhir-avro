@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 2542304662068028169L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"AllergyIntolerance\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"clinicalStatus\",\"type\":\"string\"},{\"name\":\"verificationStatus\",\"type\":\"string\"},{\"name\":\"code\",\"type\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"system\",\"type\":[\"null\",\"string\"]},{\"name\":\"version\",\"type\":[\"null\",\"string\"]},{\"name\":\"code\",\"type\":[\"null\",\"string\"]},{\"name\":\"display\",\"type\":[\"null\",\"string\"]},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}},{\"name\":\"patient\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"type\",\"type\":[\"null\",{\"type\":\"enum\",\"name\":\"x\",\"symbols\":[\"allergy\",\"intolerance\"]}]},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]}]}");
+  private static final long serialVersionUID = -6784738535735106348L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"AllergyIntolerance\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"type\",\"type\":[\"null\",{\"type\":\"enum\",\"name\":\"x\",\"symbols\":[\"allergy\",\"intolerance\"]}]},{\"name\":\"clinicalStatus\",\"type\":\"string\"},{\"name\":\"verificationStatus\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"code\",\"type\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"code\",\"type\":[\"null\",\"string\"]}]}}}]}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,14 +71,11 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
     return DECODER.decode(b);
   }
 
-   private java.lang.CharSequence resourceType;
-   private java.lang.CharSequence id;
+   private io.carrera.fhir.avro.models.x type;
    private java.lang.CharSequence clinicalStatus;
    private java.lang.CharSequence verificationStatus;
-   private io.carrera.fhir.avro.models.CodeableConcept code;
-   private io.carrera.fhir.avro.models.Reference patient;
-   private io.carrera.fhir.avro.models.x type;
    private java.util.List<java.lang.CharSequence> category;
+   private io.carrera.fhir.avro.models.CodeableConcept code;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -89,24 +86,18 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
 
   /**
    * All-args constructor.
-   * @param resourceType The new value for resourceType
-   * @param id The new value for id
+   * @param type The new value for type
    * @param clinicalStatus The new value for clinicalStatus
    * @param verificationStatus The new value for verificationStatus
-   * @param code The new value for code
-   * @param patient The new value for patient
-   * @param type The new value for type
    * @param category The new value for category
+   * @param code The new value for code
    */
-  public AllergyIntolerance(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence clinicalStatus, java.lang.CharSequence verificationStatus, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference patient, io.carrera.fhir.avro.models.x type, java.util.List<java.lang.CharSequence> category) {
-    this.resourceType = resourceType;
-    this.id = id;
+  public AllergyIntolerance(io.carrera.fhir.avro.models.x type, java.lang.CharSequence clinicalStatus, java.lang.CharSequence verificationStatus, java.util.List<java.lang.CharSequence> category, io.carrera.fhir.avro.models.CodeableConcept code) {
+    this.type = type;
     this.clinicalStatus = clinicalStatus;
     this.verificationStatus = verificationStatus;
-    this.code = code;
-    this.patient = patient;
-    this.type = type;
     this.category = category;
+    this.code = code;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -114,14 +105,11 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return resourceType;
-    case 1: return id;
-    case 2: return clinicalStatus;
-    case 3: return verificationStatus;
+    case 0: return type;
+    case 1: return clinicalStatus;
+    case 2: return verificationStatus;
+    case 3: return category;
     case 4: return code;
-    case 5: return patient;
-    case 6: return type;
-    case 7: return category;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -130,50 +118,30 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: resourceType = (java.lang.CharSequence)value$; break;
-    case 1: id = (java.lang.CharSequence)value$; break;
-    case 2: clinicalStatus = (java.lang.CharSequence)value$; break;
-    case 3: verificationStatus = (java.lang.CharSequence)value$; break;
+    case 0: type = (io.carrera.fhir.avro.models.x)value$; break;
+    case 1: clinicalStatus = (java.lang.CharSequence)value$; break;
+    case 2: verificationStatus = (java.lang.CharSequence)value$; break;
+    case 3: category = (java.util.List<java.lang.CharSequence>)value$; break;
     case 4: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 5: patient = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 6: type = (io.carrera.fhir.avro.models.x)value$; break;
-    case 7: category = (java.util.List<java.lang.CharSequence>)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
   /**
-   * Gets the value of the 'resourceType' field.
-   * @return The value of the 'resourceType' field.
+   * Gets the value of the 'type' field.
+   * @return The value of the 'type' field.
    */
-  public java.lang.CharSequence getResourceType() {
-    return resourceType;
+  public io.carrera.fhir.avro.models.x getType() {
+    return type;
   }
 
 
   /**
-   * Sets the value of the 'resourceType' field.
+   * Sets the value of the 'type' field.
    * @param value the value to set.
    */
-  public void setResourceType(java.lang.CharSequence value) {
-    this.resourceType = value;
-  }
-
-  /**
-   * Gets the value of the 'id' field.
-   * @return The value of the 'id' field.
-   */
-  public java.lang.CharSequence getId() {
-    return id;
-  }
-
-
-  /**
-   * Sets the value of the 'id' field.
-   * @param value the value to set.
-   */
-  public void setId(java.lang.CharSequence value) {
-    this.id = value;
+  public void setType(io.carrera.fhir.avro.models.x value) {
+    this.type = value;
   }
 
   /**
@@ -211,57 +179,6 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
   }
 
   /**
-   * Gets the value of the 'code' field.
-   * @return The value of the 'code' field.
-   */
-  public io.carrera.fhir.avro.models.CodeableConcept getCode() {
-    return code;
-  }
-
-
-  /**
-   * Sets the value of the 'code' field.
-   * @param value the value to set.
-   */
-  public void setCode(io.carrera.fhir.avro.models.CodeableConcept value) {
-    this.code = value;
-  }
-
-  /**
-   * Gets the value of the 'patient' field.
-   * @return The value of the 'patient' field.
-   */
-  public io.carrera.fhir.avro.models.Reference getPatient() {
-    return patient;
-  }
-
-
-  /**
-   * Sets the value of the 'patient' field.
-   * @param value the value to set.
-   */
-  public void setPatient(io.carrera.fhir.avro.models.Reference value) {
-    this.patient = value;
-  }
-
-  /**
-   * Gets the value of the 'type' field.
-   * @return The value of the 'type' field.
-   */
-  public io.carrera.fhir.avro.models.x getType() {
-    return type;
-  }
-
-
-  /**
-   * Sets the value of the 'type' field.
-   * @param value the value to set.
-   */
-  public void setType(io.carrera.fhir.avro.models.x value) {
-    this.type = value;
-  }
-
-  /**
    * Gets the value of the 'category' field.
    * @return The value of the 'category' field.
    */
@@ -276,6 +193,23 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
    */
   public void setCategory(java.util.List<java.lang.CharSequence> value) {
     this.category = value;
+  }
+
+  /**
+   * Gets the value of the 'code' field.
+   * @return The value of the 'code' field.
+   */
+  public io.carrera.fhir.avro.models.CodeableConcept getCode() {
+    return code;
+  }
+
+
+  /**
+   * Sets the value of the 'code' field.
+   * @param value the value to set.
+   */
+  public void setCode(io.carrera.fhir.avro.models.CodeableConcept value) {
+    this.code = value;
   }
 
   /**
@@ -319,16 +253,12 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<AllergyIntolerance>
     implements org.apache.avro.data.RecordBuilder<AllergyIntolerance> {
 
-    private java.lang.CharSequence resourceType;
-    private java.lang.CharSequence id;
+    private io.carrera.fhir.avro.models.x type;
     private java.lang.CharSequence clinicalStatus;
     private java.lang.CharSequence verificationStatus;
+    private java.util.List<java.lang.CharSequence> category;
     private io.carrera.fhir.avro.models.CodeableConcept code;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder codeBuilder;
-    private io.carrera.fhir.avro.models.Reference patient;
-    private io.carrera.fhir.avro.models.Reference.Builder patientBuilder;
-    private io.carrera.fhir.avro.models.x type;
-    private java.util.List<java.lang.CharSequence> category;
 
     /** Creates a new Builder */
     private Builder() {
@@ -341,20 +271,20 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
      */
     private Builder(io.carrera.fhir.avro.models.AllergyIntolerance.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.resourceType)) {
-        this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
+      if (isValidValue(fields()[0], other.type)) {
+        this.type = data().deepCopy(fields()[0].schema(), other.type);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
-      if (isValidValue(fields()[1], other.id)) {
-        this.id = data().deepCopy(fields()[1].schema(), other.id);
+      if (isValidValue(fields()[1], other.clinicalStatus)) {
+        this.clinicalStatus = data().deepCopy(fields()[1].schema(), other.clinicalStatus);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
-      if (isValidValue(fields()[2], other.clinicalStatus)) {
-        this.clinicalStatus = data().deepCopy(fields()[2].schema(), other.clinicalStatus);
+      if (isValidValue(fields()[2], other.verificationStatus)) {
+        this.verificationStatus = data().deepCopy(fields()[2].schema(), other.verificationStatus);
         fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
-      if (isValidValue(fields()[3], other.verificationStatus)) {
-        this.verificationStatus = data().deepCopy(fields()[3].schema(), other.verificationStatus);
+      if (isValidValue(fields()[3], other.category)) {
+        this.category = data().deepCopy(fields()[3].schema(), other.category);
         fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
       if (isValidValue(fields()[4], other.code)) {
@@ -364,21 +294,6 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
       if (other.hasCodeBuilder()) {
         this.codeBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getCodeBuilder());
       }
-      if (isValidValue(fields()[5], other.patient)) {
-        this.patient = data().deepCopy(fields()[5].schema(), other.patient);
-        fieldSetFlags()[5] = other.fieldSetFlags()[5];
-      }
-      if (other.hasPatientBuilder()) {
-        this.patientBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getPatientBuilder());
-      }
-      if (isValidValue(fields()[6], other.type)) {
-        this.type = data().deepCopy(fields()[6].schema(), other.type);
-        fieldSetFlags()[6] = other.fieldSetFlags()[6];
-      }
-      if (isValidValue(fields()[7], other.category)) {
-        this.category = data().deepCopy(fields()[7].schema(), other.category);
-        fieldSetFlags()[7] = other.fieldSetFlags()[7];
-      }
     }
 
     /**
@@ -387,20 +302,20 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
      */
     private Builder(io.carrera.fhir.avro.models.AllergyIntolerance other) {
       super(SCHEMA$);
-      if (isValidValue(fields()[0], other.resourceType)) {
-        this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
+      if (isValidValue(fields()[0], other.type)) {
+        this.type = data().deepCopy(fields()[0].schema(), other.type);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.id)) {
-        this.id = data().deepCopy(fields()[1].schema(), other.id);
+      if (isValidValue(fields()[1], other.clinicalStatus)) {
+        this.clinicalStatus = data().deepCopy(fields()[1].schema(), other.clinicalStatus);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.clinicalStatus)) {
-        this.clinicalStatus = data().deepCopy(fields()[2].schema(), other.clinicalStatus);
+      if (isValidValue(fields()[2], other.verificationStatus)) {
+        this.verificationStatus = data().deepCopy(fields()[2].schema(), other.verificationStatus);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.verificationStatus)) {
-        this.verificationStatus = data().deepCopy(fields()[3].schema(), other.verificationStatus);
+      if (isValidValue(fields()[3], other.category)) {
+        this.category = data().deepCopy(fields()[3].schema(), other.category);
         fieldSetFlags()[3] = true;
       }
       if (isValidValue(fields()[4], other.code)) {
@@ -408,98 +323,45 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
         fieldSetFlags()[4] = true;
       }
       this.codeBuilder = null;
-      if (isValidValue(fields()[5], other.patient)) {
-        this.patient = data().deepCopy(fields()[5].schema(), other.patient);
-        fieldSetFlags()[5] = true;
-      }
-      this.patientBuilder = null;
-      if (isValidValue(fields()[6], other.type)) {
-        this.type = data().deepCopy(fields()[6].schema(), other.type);
-        fieldSetFlags()[6] = true;
-      }
-      if (isValidValue(fields()[7], other.category)) {
-        this.category = data().deepCopy(fields()[7].schema(), other.category);
-        fieldSetFlags()[7] = true;
-      }
     }
 
     /**
-      * Gets the value of the 'resourceType' field.
+      * Gets the value of the 'type' field.
       * @return The value.
       */
-    public java.lang.CharSequence getResourceType() {
-      return resourceType;
+    public io.carrera.fhir.avro.models.x getType() {
+      return type;
     }
 
 
     /**
-      * Sets the value of the 'resourceType' field.
-      * @param value The value of 'resourceType'.
+      * Sets the value of the 'type' field.
+      * @param value The value of 'type'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.AllergyIntolerance.Builder setResourceType(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.AllergyIntolerance.Builder setType(io.carrera.fhir.avro.models.x value) {
       validate(fields()[0], value);
-      this.resourceType = value;
+      this.type = value;
       fieldSetFlags()[0] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'resourceType' field has been set.
-      * @return True if the 'resourceType' field has been set, false otherwise.
+      * Checks whether the 'type' field has been set.
+      * @return True if the 'type' field has been set, false otherwise.
       */
-    public boolean hasResourceType() {
+    public boolean hasType() {
       return fieldSetFlags()[0];
     }
 
 
     /**
-      * Clears the value of the 'resourceType' field.
+      * Clears the value of the 'type' field.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.AllergyIntolerance.Builder clearResourceType() {
-      resourceType = null;
+    public io.carrera.fhir.avro.models.AllergyIntolerance.Builder clearType() {
+      type = null;
       fieldSetFlags()[0] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'id' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getId() {
-      return id;
-    }
-
-
-    /**
-      * Sets the value of the 'id' field.
-      * @param value The value of 'id'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.AllergyIntolerance.Builder setId(java.lang.CharSequence value) {
-      validate(fields()[1], value);
-      this.id = value;
-      fieldSetFlags()[1] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'id' field has been set.
-      * @return True if the 'id' field has been set, false otherwise.
-      */
-    public boolean hasId() {
-      return fieldSetFlags()[1];
-    }
-
-
-    /**
-      * Clears the value of the 'id' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.AllergyIntolerance.Builder clearId() {
-      id = null;
-      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -518,9 +380,9 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.AllergyIntolerance.Builder setClinicalStatus(java.lang.CharSequence value) {
-      validate(fields()[2], value);
+      validate(fields()[1], value);
       this.clinicalStatus = value;
-      fieldSetFlags()[2] = true;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
@@ -529,7 +391,7 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
       * @return True if the 'clinicalStatus' field has been set, false otherwise.
       */
     public boolean hasClinicalStatus() {
-      return fieldSetFlags()[2];
+      return fieldSetFlags()[1];
     }
 
 
@@ -539,7 +401,7 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
       */
     public io.carrera.fhir.avro.models.AllergyIntolerance.Builder clearClinicalStatus() {
       clinicalStatus = null;
-      fieldSetFlags()[2] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -558,9 +420,9 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.AllergyIntolerance.Builder setVerificationStatus(java.lang.CharSequence value) {
-      validate(fields()[3], value);
+      validate(fields()[2], value);
       this.verificationStatus = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[2] = true;
       return this;
     }
 
@@ -569,7 +431,7 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
       * @return True if the 'verificationStatus' field has been set, false otherwise.
       */
     public boolean hasVerificationStatus() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[2];
     }
 
 
@@ -579,6 +441,46 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
       */
     public io.carrera.fhir.avro.models.AllergyIntolerance.Builder clearVerificationStatus() {
       verificationStatus = null;
+      fieldSetFlags()[2] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'category' field.
+      * @return The value.
+      */
+    public java.util.List<java.lang.CharSequence> getCategory() {
+      return category;
+    }
+
+
+    /**
+      * Sets the value of the 'category' field.
+      * @param value The value of 'category'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.AllergyIntolerance.Builder setCategory(java.util.List<java.lang.CharSequence> value) {
+      validate(fields()[3], value);
+      this.category = value;
+      fieldSetFlags()[3] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'category' field has been set.
+      * @return True if the 'category' field has been set, false otherwise.
+      */
+    public boolean hasCategory() {
+      return fieldSetFlags()[3];
+    }
+
+
+    /**
+      * Clears the value of the 'category' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.AllergyIntolerance.Builder clearCategory() {
+      category = null;
       fieldSetFlags()[3] = false;
       return this;
     }
@@ -658,170 +560,15 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
       return this;
     }
 
-    /**
-      * Gets the value of the 'patient' field.
-      * @return The value.
-      */
-    public io.carrera.fhir.avro.models.Reference getPatient() {
-      return patient;
-    }
-
-
-    /**
-      * Sets the value of the 'patient' field.
-      * @param value The value of 'patient'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.AllergyIntolerance.Builder setPatient(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[5], value);
-      this.patientBuilder = null;
-      this.patient = value;
-      fieldSetFlags()[5] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'patient' field has been set.
-      * @return True if the 'patient' field has been set, false otherwise.
-      */
-    public boolean hasPatient() {
-      return fieldSetFlags()[5];
-    }
-
-    /**
-     * Gets the Builder instance for the 'patient' field and creates one if it doesn't exist yet.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.Reference.Builder getPatientBuilder() {
-      if (patientBuilder == null) {
-        if (hasPatient()) {
-          setPatientBuilder(io.carrera.fhir.avro.models.Reference.newBuilder(patient));
-        } else {
-          setPatientBuilder(io.carrera.fhir.avro.models.Reference.newBuilder());
-        }
-      }
-      return patientBuilder;
-    }
-
-    /**
-     * Sets the Builder instance for the 'patient' field
-     * @param value The builder instance that must be set.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.AllergyIntolerance.Builder setPatientBuilder(io.carrera.fhir.avro.models.Reference.Builder value) {
-      clearPatient();
-      patientBuilder = value;
-      return this;
-    }
-
-    /**
-     * Checks whether the 'patient' field has an active Builder instance
-     * @return True if the 'patient' field has an active Builder instance
-     */
-    public boolean hasPatientBuilder() {
-      return patientBuilder != null;
-    }
-
-    /**
-      * Clears the value of the 'patient' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.AllergyIntolerance.Builder clearPatient() {
-      patient = null;
-      patientBuilder = null;
-      fieldSetFlags()[5] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'type' field.
-      * @return The value.
-      */
-    public io.carrera.fhir.avro.models.x getType() {
-      return type;
-    }
-
-
-    /**
-      * Sets the value of the 'type' field.
-      * @param value The value of 'type'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.AllergyIntolerance.Builder setType(io.carrera.fhir.avro.models.x value) {
-      validate(fields()[6], value);
-      this.type = value;
-      fieldSetFlags()[6] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'type' field has been set.
-      * @return True if the 'type' field has been set, false otherwise.
-      */
-    public boolean hasType() {
-      return fieldSetFlags()[6];
-    }
-
-
-    /**
-      * Clears the value of the 'type' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.AllergyIntolerance.Builder clearType() {
-      type = null;
-      fieldSetFlags()[6] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'category' field.
-      * @return The value.
-      */
-    public java.util.List<java.lang.CharSequence> getCategory() {
-      return category;
-    }
-
-
-    /**
-      * Sets the value of the 'category' field.
-      * @param value The value of 'category'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.AllergyIntolerance.Builder setCategory(java.util.List<java.lang.CharSequence> value) {
-      validate(fields()[7], value);
-      this.category = value;
-      fieldSetFlags()[7] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'category' field has been set.
-      * @return True if the 'category' field has been set, false otherwise.
-      */
-    public boolean hasCategory() {
-      return fieldSetFlags()[7];
-    }
-
-
-    /**
-      * Clears the value of the 'category' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.AllergyIntolerance.Builder clearCategory() {
-      category = null;
-      fieldSetFlags()[7] = false;
-      return this;
-    }
-
     @Override
     @SuppressWarnings("unchecked")
     public AllergyIntolerance build() {
       try {
         AllergyIntolerance record = new AllergyIntolerance();
-        record.resourceType = fieldSetFlags()[0] ? this.resourceType : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.id = fieldSetFlags()[1] ? this.id : (java.lang.CharSequence) defaultValue(fields()[1]);
-        record.clinicalStatus = fieldSetFlags()[2] ? this.clinicalStatus : (java.lang.CharSequence) defaultValue(fields()[2]);
-        record.verificationStatus = fieldSetFlags()[3] ? this.verificationStatus : (java.lang.CharSequence) defaultValue(fields()[3]);
+        record.type = fieldSetFlags()[0] ? this.type : (io.carrera.fhir.avro.models.x) defaultValue(fields()[0]);
+        record.clinicalStatus = fieldSetFlags()[1] ? this.clinicalStatus : (java.lang.CharSequence) defaultValue(fields()[1]);
+        record.verificationStatus = fieldSetFlags()[2] ? this.verificationStatus : (java.lang.CharSequence) defaultValue(fields()[2]);
+        record.category = fieldSetFlags()[3] ? this.category : (java.util.List<java.lang.CharSequence>) defaultValue(fields()[3]);
         if (codeBuilder != null) {
           try {
             record.code = this.codeBuilder.build();
@@ -832,18 +579,6 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
         } else {
           record.code = fieldSetFlags()[4] ? this.code : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[4]);
         }
-        if (patientBuilder != null) {
-          try {
-            record.patient = this.patientBuilder.build();
-          } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("patient"));
-            throw e;
-          }
-        } else {
-          record.patient = fieldSetFlags()[5] ? this.patient : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[5]);
-        }
-        record.type = fieldSetFlags()[6] ? this.type : (io.carrera.fhir.avro.models.x) defaultValue(fields()[6]);
-        record.category = fieldSetFlags()[7] ? this.category : (java.util.List<java.lang.CharSequence>) defaultValue(fields()[7]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -876,18 +611,6 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
-    out.writeString(this.resourceType);
-
-    out.writeString(this.id);
-
-    out.writeString(this.clinicalStatus);
-
-    out.writeString(this.verificationStatus);
-
-    this.code.customEncode(out);
-
-    this.patient.customEncode(out);
-
     if (this.type == null) {
       out.writeIndex(0);
       out.writeNull();
@@ -895,6 +618,10 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
       out.writeIndex(1);
       out.writeEnum(this.type.ordinal());
     }
+
+    out.writeString(this.clinicalStatus);
+
+    out.writeString(this.verificationStatus);
 
     if (this.category == null) {
       out.writeIndex(0);
@@ -915,6 +642,8 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
         throw new java.util.ConcurrentModificationException("Array-size written was " + size0 + ", but element count was " + actualSize0 + ".");
     }
 
+    this.code.customEncode(out);
+
   }
 
   @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
@@ -922,30 +651,16 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
   {
     org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
     if (fieldOrder == null) {
-      this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
-
-      this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-
-      this.clinicalStatus = in.readString(this.clinicalStatus instanceof Utf8 ? (Utf8)this.clinicalStatus : null);
-
-      this.verificationStatus = in.readString(this.verificationStatus instanceof Utf8 ? (Utf8)this.verificationStatus : null);
-
-      if (this.code == null) {
-        this.code = new io.carrera.fhir.avro.models.CodeableConcept();
-      }
-      this.code.customDecode(in);
-
-      if (this.patient == null) {
-        this.patient = new io.carrera.fhir.avro.models.Reference();
-      }
-      this.patient.customDecode(in);
-
       if (in.readIndex() != 1) {
         in.readNull();
         this.type = null;
       } else {
         this.type = io.carrera.fhir.avro.models.x.values()[in.readEnum()];
       }
+
+      this.clinicalStatus = in.readString(this.clinicalStatus instanceof Utf8 ? (Utf8)this.clinicalStatus : null);
+
+      this.verificationStatus = in.readString(this.verificationStatus instanceof Utf8 ? (Utf8)this.verificationStatus : null);
 
       if (in.readIndex() != 1) {
         in.readNull();
@@ -967,40 +682,15 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
         }
       }
 
+      if (this.code == null) {
+        this.code = new io.carrera.fhir.avro.models.CodeableConcept();
+      }
+      this.code.customDecode(in);
+
     } else {
-      for (int i = 0; i < 8; i++) {
+      for (int i = 0; i < 5; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
-          this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
-          break;
-
-        case 1:
-          this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-          break;
-
-        case 2:
-          this.clinicalStatus = in.readString(this.clinicalStatus instanceof Utf8 ? (Utf8)this.clinicalStatus : null);
-          break;
-
-        case 3:
-          this.verificationStatus = in.readString(this.verificationStatus instanceof Utf8 ? (Utf8)this.verificationStatus : null);
-          break;
-
-        case 4:
-          if (this.code == null) {
-            this.code = new io.carrera.fhir.avro.models.CodeableConcept();
-          }
-          this.code.customDecode(in);
-          break;
-
-        case 5:
-          if (this.patient == null) {
-            this.patient = new io.carrera.fhir.avro.models.Reference();
-          }
-          this.patient.customDecode(in);
-          break;
-
-        case 6:
           if (in.readIndex() != 1) {
             in.readNull();
             this.type = null;
@@ -1009,7 +699,15 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
           }
           break;
 
-        case 7:
+        case 1:
+          this.clinicalStatus = in.readString(this.clinicalStatus instanceof Utf8 ? (Utf8)this.clinicalStatus : null);
+          break;
+
+        case 2:
+          this.verificationStatus = in.readString(this.verificationStatus instanceof Utf8 ? (Utf8)this.verificationStatus : null);
+          break;
+
+        case 3:
           if (in.readIndex() != 1) {
             in.readNull();
             this.category = null;
@@ -1029,6 +727,13 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
               }
             }
           }
+          break;
+
+        case 4:
+          if (this.code == null) {
+            this.code = new io.carrera.fhir.avro.models.CodeableConcept();
+          }
+          this.code.customDecode(in);
           break;
 
         default:

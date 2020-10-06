@@ -4,13 +4,7 @@
   "fields" : [ {
     "name" : "id",
     "type" : [ "null", "string" ]
-  }, {
-    "name" : "extension",
-    "type" : [ "null", {
-      "type" : "array",
-      "items" : "Extension"
-    } ]
-  }, {
+  },  {
     "name" : "comparator",
     "type" : [ "null", "string" ]
   }, {
