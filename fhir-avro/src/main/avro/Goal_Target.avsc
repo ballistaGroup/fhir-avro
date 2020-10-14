@@ -1,0 +1,30 @@
+{
+  "name" : "Goal_Target",
+  "type" : "record",
+  "fields" : [ {
+     "name" : "measure",
+     "type" : [ "null", "CodeableConcept" ]
+   }, {
+     "name" : "detailQuantity",
+     "type" : [ "null", "Quantity" ]
+   }, {
+     "name" : "detailRange",
+     "type" : [ "null", "Range" ]
+   }, {
+     "name" : "detailCodeableConcept",
+     "type" : [ "null", "CodeableConcept" ]
+   }, {
+     "name" : "detailString",
+     "type" : [ "null", "string" ]
+   }, {
+     "name" : "detailBoolean",
+     "type" : [ "null", "boolean" ]
+   }, {
+     "name" : "detailInteger",
+     "type" : [ "null", "int" ]
+   }, {
+     "name" : "detailRatio",
+     "type" : [ "null", "Ratio" ]
+   }],
+  "namespace" : "io.carrera.fhir.avro.models"
+}

@@ -1,0 +1,12 @@
+{
+  "name" : "RiskAssessment",
+  "type" : "record",
+  "fields" : [  {
+    "name" : "prediction",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "RiskAssessment_Prediction"
+    } ]
+  }],
+  "namespace" : "io.carrera.fhir.avro.models"
+}

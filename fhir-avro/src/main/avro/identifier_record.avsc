@@ -1,0 +1,15 @@
+{
+    "name": "identifier_record",
+    "type": "record",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+      {
+        "name": "system",
+        "type": "string"
+      },
+      {
+        "name": "value",
+        "type": "string"
+      }
+    ]
+}

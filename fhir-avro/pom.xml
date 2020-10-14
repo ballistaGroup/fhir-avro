@@ -35,14 +35,25 @@
         </includes>
         <imports>
             <import>${project.basedir}/src/main/avro/Quantity.avsc</import>
+            <import>${project.basedir}/src/main/avro/Coding.avsc</import>
             <import>${project.basedir}/src/main/avro/CodeableConcept.avsc</import>
             <import>${project.basedir}/src/main/avro/Reference.avsc</import>
             <import>${project.basedir}/src/main/avro/ValueSetPointer.avsc</import>
+            <import>${project.basedir}/src/main/avro/identifier_record.avsc</import>
+            <import>${project.basedir}/src/main/avro/name_record.avsc</import>
             <import>${project.basedir}/src/main/avro/Patient.avsc</import>
+            <import>${project.basedir}/src/main/avro/Condition_Stage.avsc</import>
             <import>${project.basedir}/src/main/avro/Condition.avsc</import>
             <import>${project.basedir}/src/main/avro/MedicationStatement.avsc</import>
             <import>${project.basedir}/src/main/avro/AllergyIntolerance.avsc</import>
             <import>${project.basedir}/src/main/avro/Observation.avsc</import>
+            <import>${project.basedir}/src/main/avro/Range.avsc</import>
+            <import>${project.basedir}/src/main/avro/Ratio.avsc</import>
+            <import>${project.basedir}/src/main/avro/Goal_Target.avsc</import>
+            <import>${project.basedir}/src/main/avro/Goal.avsc</import>
+            <import>${project.basedir}/src/main/avro/Period.avsc</import>
+            <import>${project.basedir}/src/main/avro/RiskAssessment_Prediction.avsc</import>
+            <import>${project.basedir}/src/main/avro/RiskAssessment.avsc</import>
         </imports>
       </configuration>
     </execution>

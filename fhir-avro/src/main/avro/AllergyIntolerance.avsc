@@ -12,12 +12,23 @@
         "type": "string"
       },
       {
+        "name" : "type",
+        "type" : [ "null", "string" ]
+      },
+      {
         "name": "clinicalStatus",
         "type": "string"
       },
       {
         "name": "verificationStatus",
         "type": "string"
+      },
+      {
+        "name" : "category",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : "string"
+        } ]
       },
       {
         "name": "code",
