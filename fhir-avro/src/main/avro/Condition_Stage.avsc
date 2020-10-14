@@ -1,0 +1,21 @@
+{
+  "name" : "Condition_Stage",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "id",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "summary",
+    "type" : [ "null", "CodeableConcept" ]
+  }, {
+    "name" : "assessment",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "Reference"
+    } ]
+  }, {
+    "name" : "type",
+    "type" : [ "null", "CodeableConcept" ]
+  } ],
+  "namespace" : "io.carrera.fhir.avro.models"
+}

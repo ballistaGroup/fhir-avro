@@ -1,0 +1,27 @@
+{
+  "name" : "Period",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "id",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "start",
+    "type" : [ "null",  {
+        "type" : "int",
+        "logicalType" : "date"
+      }, {
+        "type" : "long",
+        "logicalType" : "local-timestamp-micros"
+      } ]
+  }, {
+    "name" : "end",
+    "type" : [ "null", {
+        "type" : "int",
+        "logicalType" : "date"
+      }, {
+        "type" : "long",
+        "logicalType" : "local-timestamp-micros"
+      } ]
+  } ],
+  "namespace" : "io.carrera.fhir.avro.models"
+}

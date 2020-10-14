@@ -1,0 +1,29 @@
+{
+    "name": "name_record",
+    "type": "record",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+      {
+        "name": "use",
+        "type": "string"
+      },
+      {
+        "name": "family",
+        "type": "string"
+      },
+      {
+        "name": "given",
+        "type": {
+          "type": "array",
+          "items": "string"
+        }
+      },
+      {
+        "name": "prefix",
+        "type": {
+          "type": "array",
+          "items": "string"
+        }
+      }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+  "name" : "Medication",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "code",
+    "type" : [ "null", "CodeableConcept" ]
+  }],
+  "namespace" : "io.carrera.fhir.avro.models"
+}

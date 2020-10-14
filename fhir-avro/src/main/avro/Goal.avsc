@@ -1,0 +1,33 @@
+{
+  "name" : "Goal",
+  "type" : "record",
+  "fields" : [
+    {
+      "name": "resourceType",
+      "type": "string"
+    },
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name" : "target",
+      "type" : [ "null", {
+        "type" : "array",
+        "items" : "Goal_Target"
+      } ]
+    },
+    {
+      "name" : "startDate",
+      "type" : [ "null", {
+        "type" : "int",
+        "logicalType" : "date"
+      } ]
+    },
+    {
+      "name" : "startCodeableConcept",
+      "type" : [ "null", "CodeableConcept" ]
+    }
+  ],
+  "namespace" : "io.carrera.fhir.avro.models"
+}

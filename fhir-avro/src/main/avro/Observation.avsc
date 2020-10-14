@@ -33,10 +33,12 @@
         "default" : null
       },
       {
-        "name": "effectiveDateTime",
-        "type": "int",
-        "logicalType": "date"
-      },
+          "name" : "effective",
+          "type" : [ "null", {
+            "type" : "long",
+            "logicalType" : "timestamp-millis"
+          }]
+        },
       {
         "name": "issued",
         "type": "int",
@@ -45,6 +47,13 @@
       {
         "name": "value",
         "type": ["null", "string", "Quantity"]
+      },
+      {
+        "name" : "interpretation",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : "CodeableConcept"
+        } ]
       }
     ]
   }
