@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Condition extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -1615671433586456492L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Condition\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"clinicalStatus\",\"type\":[{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"string\",\"null\"]},{\"name\":\"code\",\"type\":[\"string\",\"null\"]},{\"name\":\"display\",\"type\":[\"string\",\"null\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]},\"null\"]},{\"name\":\"verificationStatus\",\"type\":[\"CodeableConcept\",\"null\"]},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"stage\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Condition_Stage\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"summary\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"assessment\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"]}]}}],\"default\":null},{\"name\":\"onsetDateTime\",\"type\":\"int\",\"logicalType\":\"date\"}]}");
+  private static final long serialVersionUID = 704664670320706296L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Condition\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"clinicalStatus\",\"type\":[{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"string\",\"null\"]},{\"name\":\"code\",\"type\":[\"string\",\"null\"]},{\"name\":\"display\",\"type\":[\"string\",\"null\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]},\"null\"]},{\"name\":\"verificationStatus\",\"type\":[\"CodeableConcept\",\"null\"]},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"stage\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Condition_Stage\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"summary\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"assessment\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"]}]}}],\"default\":null},{\"name\":\"onsetDateTime\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -78,6 +78,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
   @Deprecated public io.carrera.fhir.avro.models.Reference subject;
   @Deprecated public java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage;
   @Deprecated public int onsetDateTime;
+  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept code;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -95,8 +96,9 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
    * @param subject The new value for subject
    * @param stage The new value for stage
    * @param onsetDateTime The new value for onsetDateTime
+   * @param code The new value for code
    */
-  public Condition(java.lang.CharSequence resourceType, java.lang.CharSequence id, io.carrera.fhir.avro.models.CodeableConcept clinicalStatus, io.carrera.fhir.avro.models.CodeableConcept verificationStatus, io.carrera.fhir.avro.models.Reference subject, java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage, java.lang.Integer onsetDateTime) {
+  public Condition(java.lang.CharSequence resourceType, java.lang.CharSequence id, io.carrera.fhir.avro.models.CodeableConcept clinicalStatus, io.carrera.fhir.avro.models.CodeableConcept verificationStatus, io.carrera.fhir.avro.models.Reference subject, java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage, java.lang.Integer onsetDateTime, io.carrera.fhir.avro.models.CodeableConcept code) {
     this.resourceType = resourceType;
     this.id = id;
     this.clinicalStatus = clinicalStatus;
@@ -104,6 +106,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
     this.subject = subject;
     this.stage = stage;
     this.onsetDateTime = onsetDateTime;
+    this.code = code;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -118,6 +121,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
     case 4: return subject;
     case 5: return stage;
     case 6: return onsetDateTime;
+    case 7: return code;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -133,6 +137,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
     case 4: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 5: stage = (java.util.List<io.carrera.fhir.avro.models.Condition_Stage>)value$; break;
     case 6: onsetDateTime = (java.lang.Integer)value$; break;
+    case 7: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -257,6 +262,23 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
   }
 
   /**
+   * Gets the value of the 'code' field.
+   * @return The value of the 'code' field.
+   */
+  public io.carrera.fhir.avro.models.CodeableConcept getCode() {
+    return code;
+  }
+
+
+  /**
+   * Sets the value of the 'code' field.
+   * @param value the value to set.
+   */
+  public void setCode(io.carrera.fhir.avro.models.CodeableConcept value) {
+    this.code = value;
+  }
+
+  /**
    * Creates a new Condition RecordBuilder.
    * @return A new Condition RecordBuilder
    */
@@ -307,6 +329,8 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
     private io.carrera.fhir.avro.models.Reference.Builder subjectBuilder;
     private java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage;
     private int onsetDateTime;
+    private io.carrera.fhir.avro.models.CodeableConcept code;
+    private io.carrera.fhir.avro.models.CodeableConcept.Builder codeBuilder;
 
     /** Creates a new Builder */
     private Builder() {
@@ -356,6 +380,13 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
         this.onsetDateTime = data().deepCopy(fields()[6].schema(), other.onsetDateTime);
         fieldSetFlags()[6] = other.fieldSetFlags()[6];
       }
+      if (isValidValue(fields()[7], other.code)) {
+        this.code = data().deepCopy(fields()[7].schema(), other.code);
+        fieldSetFlags()[7] = other.fieldSetFlags()[7];
+      }
+      if (other.hasCodeBuilder()) {
+        this.codeBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getCodeBuilder());
+      }
     }
 
     /**
@@ -395,6 +426,11 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
         this.onsetDateTime = data().deepCopy(fields()[6].schema(), other.onsetDateTime);
         fieldSetFlags()[6] = true;
       }
+      if (isValidValue(fields()[7], other.code)) {
+        this.code = data().deepCopy(fields()[7].schema(), other.code);
+        fieldSetFlags()[7] = true;
+      }
+      this.codeBuilder = null;
     }
 
     /**
@@ -781,6 +817,81 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
       return this;
     }
 
+    /**
+      * Gets the value of the 'code' field.
+      * @return The value.
+      */
+    public io.carrera.fhir.avro.models.CodeableConcept getCode() {
+      return code;
+    }
+
+
+    /**
+      * Sets the value of the 'code' field.
+      * @param value The value of 'code'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Condition.Builder setCode(io.carrera.fhir.avro.models.CodeableConcept value) {
+      validate(fields()[7], value);
+      this.codeBuilder = null;
+      this.code = value;
+      fieldSetFlags()[7] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'code' field has been set.
+      * @return True if the 'code' field has been set, false otherwise.
+      */
+    public boolean hasCode() {
+      return fieldSetFlags()[7];
+    }
+
+    /**
+     * Gets the Builder instance for the 'code' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.CodeableConcept.Builder getCodeBuilder() {
+      if (codeBuilder == null) {
+        if (hasCode()) {
+          setCodeBuilder(io.carrera.fhir.avro.models.CodeableConcept.newBuilder(code));
+        } else {
+          setCodeBuilder(io.carrera.fhir.avro.models.CodeableConcept.newBuilder());
+        }
+      }
+      return codeBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'code' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.Condition.Builder setCodeBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
+      clearCode();
+      codeBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'code' field has an active Builder instance
+     * @return True if the 'code' field has an active Builder instance
+     */
+    public boolean hasCodeBuilder() {
+      return codeBuilder != null;
+    }
+
+    /**
+      * Clears the value of the 'code' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Condition.Builder clearCode() {
+      code = null;
+      codeBuilder = null;
+      fieldSetFlags()[7] = false;
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     public Condition build() {
@@ -820,6 +931,16 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
         }
         record.stage = fieldSetFlags()[5] ? this.stage : (java.util.List<io.carrera.fhir.avro.models.Condition_Stage>) defaultValue(fields()[5]);
         record.onsetDateTime = fieldSetFlags()[6] ? this.onsetDateTime : (java.lang.Integer) defaultValue(fields()[6]);
+        if (codeBuilder != null) {
+          try {
+            record.code = this.codeBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("code"));
+            throw e;
+          }
+        } else {
+          record.code = fieldSetFlags()[7] ? this.code : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[7]);
+        }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -895,6 +1016,14 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
 
     out.writeInt(this.onsetDateTime);
 
+    if (this.code == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      this.code.customEncode(out);
+    }
+
   }
 
   @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
@@ -956,8 +1085,18 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
 
       this.onsetDateTime = in.readInt();
 
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.code = null;
+      } else {
+        if (this.code == null) {
+          this.code = new io.carrera.fhir.avro.models.CodeableConcept();
+        }
+        this.code.customDecode(in);
+      }
+
     } else {
-      for (int i = 0; i < 7; i++) {
+      for (int i = 0; i < 8; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
           this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
@@ -1025,6 +1164,18 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
 
         case 6:
           this.onsetDateTime = in.readInt();
+          break;
+
+        case 7:
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.code = null;
+          } else {
+            if (this.code == null) {
+              this.code = new io.carrera.fhir.avro.models.CodeableConcept();
+            }
+            this.code.customDecode(in);
+          }
           break;
 
         default:
