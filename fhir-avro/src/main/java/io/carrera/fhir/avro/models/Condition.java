@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Condition extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 2344870350346165513L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Condition\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"clinicalStatus\",\"type\":[\"string\",\"null\"]},{\"name\":\"verificationStatus\",\"type\":[\"string\",\"null\"]},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"stage\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Condition_Stage\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"summary\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"string\",\"null\"]},{\"name\":\"code\",\"type\":[\"string\",\"null\"]},{\"name\":\"display\",\"type\":[\"string\",\"null\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}]},{\"name\":\"assessment\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"]}]}}],\"default\":null},{\"name\":\"onsetDateTime\",\"type\":\"int\",\"logicalType\":\"date\"}]}");
+  private static final long serialVersionUID = -1615671433586456492L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Condition\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"clinicalStatus\",\"type\":[{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"string\",\"null\"]},{\"name\":\"code\",\"type\":[\"string\",\"null\"]},{\"name\":\"display\",\"type\":[\"string\",\"null\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]},\"null\"]},{\"name\":\"verificationStatus\",\"type\":[\"CodeableConcept\",\"null\"]},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"stage\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Condition_Stage\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"summary\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"assessment\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"]}]}}],\"default\":null},{\"name\":\"onsetDateTime\",\"type\":\"int\",\"logicalType\":\"date\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -73,8 +73,8 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
 
   @Deprecated public java.lang.CharSequence resourceType;
   @Deprecated public java.lang.CharSequence id;
-  @Deprecated public java.lang.CharSequence clinicalStatus;
-  @Deprecated public java.lang.CharSequence verificationStatus;
+  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept clinicalStatus;
+  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept verificationStatus;
   @Deprecated public io.carrera.fhir.avro.models.Reference subject;
   @Deprecated public java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage;
   @Deprecated public int onsetDateTime;
@@ -96,7 +96,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
    * @param stage The new value for stage
    * @param onsetDateTime The new value for onsetDateTime
    */
-  public Condition(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence clinicalStatus, java.lang.CharSequence verificationStatus, io.carrera.fhir.avro.models.Reference subject, java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage, java.lang.Integer onsetDateTime) {
+  public Condition(java.lang.CharSequence resourceType, java.lang.CharSequence id, io.carrera.fhir.avro.models.CodeableConcept clinicalStatus, io.carrera.fhir.avro.models.CodeableConcept verificationStatus, io.carrera.fhir.avro.models.Reference subject, java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage, java.lang.Integer onsetDateTime) {
     this.resourceType = resourceType;
     this.id = id;
     this.clinicalStatus = clinicalStatus;
@@ -128,8 +128,8 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
     switch (field$) {
     case 0: resourceType = (java.lang.CharSequence)value$; break;
     case 1: id = (java.lang.CharSequence)value$; break;
-    case 2: clinicalStatus = (java.lang.CharSequence)value$; break;
-    case 3: verificationStatus = (java.lang.CharSequence)value$; break;
+    case 2: clinicalStatus = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 3: verificationStatus = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     case 4: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 5: stage = (java.util.List<io.carrera.fhir.avro.models.Condition_Stage>)value$; break;
     case 6: onsetDateTime = (java.lang.Integer)value$; break;
@@ -175,7 +175,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
    * Gets the value of the 'clinicalStatus' field.
    * @return The value of the 'clinicalStatus' field.
    */
-  public java.lang.CharSequence getClinicalStatus() {
+  public io.carrera.fhir.avro.models.CodeableConcept getClinicalStatus() {
     return clinicalStatus;
   }
 
@@ -184,7 +184,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
    * Sets the value of the 'clinicalStatus' field.
    * @param value the value to set.
    */
-  public void setClinicalStatus(java.lang.CharSequence value) {
+  public void setClinicalStatus(io.carrera.fhir.avro.models.CodeableConcept value) {
     this.clinicalStatus = value;
   }
 
@@ -192,7 +192,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
    * Gets the value of the 'verificationStatus' field.
    * @return The value of the 'verificationStatus' field.
    */
-  public java.lang.CharSequence getVerificationStatus() {
+  public io.carrera.fhir.avro.models.CodeableConcept getVerificationStatus() {
     return verificationStatus;
   }
 
@@ -201,7 +201,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
    * Sets the value of the 'verificationStatus' field.
    * @param value the value to set.
    */
-  public void setVerificationStatus(java.lang.CharSequence value) {
+  public void setVerificationStatus(io.carrera.fhir.avro.models.CodeableConcept value) {
     this.verificationStatus = value;
   }
 
@@ -299,8 +299,10 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
 
     private java.lang.CharSequence resourceType;
     private java.lang.CharSequence id;
-    private java.lang.CharSequence clinicalStatus;
-    private java.lang.CharSequence verificationStatus;
+    private io.carrera.fhir.avro.models.CodeableConcept clinicalStatus;
+    private io.carrera.fhir.avro.models.CodeableConcept.Builder clinicalStatusBuilder;
+    private io.carrera.fhir.avro.models.CodeableConcept verificationStatus;
+    private io.carrera.fhir.avro.models.CodeableConcept.Builder verificationStatusBuilder;
     private io.carrera.fhir.avro.models.Reference subject;
     private io.carrera.fhir.avro.models.Reference.Builder subjectBuilder;
     private java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage;
@@ -329,9 +331,15 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
         this.clinicalStatus = data().deepCopy(fields()[2].schema(), other.clinicalStatus);
         fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
+      if (other.hasClinicalStatusBuilder()) {
+        this.clinicalStatusBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getClinicalStatusBuilder());
+      }
       if (isValidValue(fields()[3], other.verificationStatus)) {
         this.verificationStatus = data().deepCopy(fields()[3].schema(), other.verificationStatus);
         fieldSetFlags()[3] = other.fieldSetFlags()[3];
+      }
+      if (other.hasVerificationStatusBuilder()) {
+        this.verificationStatusBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getVerificationStatusBuilder());
       }
       if (isValidValue(fields()[4], other.subject)) {
         this.subject = data().deepCopy(fields()[4].schema(), other.subject);
@@ -368,10 +376,12 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
         this.clinicalStatus = data().deepCopy(fields()[2].schema(), other.clinicalStatus);
         fieldSetFlags()[2] = true;
       }
+      this.clinicalStatusBuilder = null;
       if (isValidValue(fields()[3], other.verificationStatus)) {
         this.verificationStatus = data().deepCopy(fields()[3].schema(), other.verificationStatus);
         fieldSetFlags()[3] = true;
       }
+      this.verificationStatusBuilder = null;
       if (isValidValue(fields()[4], other.subject)) {
         this.subject = data().deepCopy(fields()[4].schema(), other.subject);
         fieldSetFlags()[4] = true;
@@ -471,7 +481,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
       * Gets the value of the 'clinicalStatus' field.
       * @return The value.
       */
-    public java.lang.CharSequence getClinicalStatus() {
+    public io.carrera.fhir.avro.models.CodeableConcept getClinicalStatus() {
       return clinicalStatus;
     }
 
@@ -481,8 +491,9 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'clinicalStatus'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Condition.Builder setClinicalStatus(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Condition.Builder setClinicalStatus(io.carrera.fhir.avro.models.CodeableConcept value) {
       validate(fields()[2], value);
+      this.clinicalStatusBuilder = null;
       this.clinicalStatus = value;
       fieldSetFlags()[2] = true;
       return this;
@@ -496,6 +507,39 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
       return fieldSetFlags()[2];
     }
 
+    /**
+     * Gets the Builder instance for the 'clinicalStatus' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.CodeableConcept.Builder getClinicalStatusBuilder() {
+      if (clinicalStatusBuilder == null) {
+        if (hasClinicalStatus()) {
+          setClinicalStatusBuilder(io.carrera.fhir.avro.models.CodeableConcept.newBuilder(clinicalStatus));
+        } else {
+          setClinicalStatusBuilder(io.carrera.fhir.avro.models.CodeableConcept.newBuilder());
+        }
+      }
+      return clinicalStatusBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'clinicalStatus' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.Condition.Builder setClinicalStatusBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
+      clearClinicalStatus();
+      clinicalStatusBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'clinicalStatus' field has an active Builder instance
+     * @return True if the 'clinicalStatus' field has an active Builder instance
+     */
+    public boolean hasClinicalStatusBuilder() {
+      return clinicalStatusBuilder != null;
+    }
 
     /**
       * Clears the value of the 'clinicalStatus' field.
@@ -503,6 +547,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
       */
     public io.carrera.fhir.avro.models.Condition.Builder clearClinicalStatus() {
       clinicalStatus = null;
+      clinicalStatusBuilder = null;
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -511,7 +556,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
       * Gets the value of the 'verificationStatus' field.
       * @return The value.
       */
-    public java.lang.CharSequence getVerificationStatus() {
+    public io.carrera.fhir.avro.models.CodeableConcept getVerificationStatus() {
       return verificationStatus;
     }
 
@@ -521,8 +566,9 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'verificationStatus'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Condition.Builder setVerificationStatus(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Condition.Builder setVerificationStatus(io.carrera.fhir.avro.models.CodeableConcept value) {
       validate(fields()[3], value);
+      this.verificationStatusBuilder = null;
       this.verificationStatus = value;
       fieldSetFlags()[3] = true;
       return this;
@@ -536,6 +582,39 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
       return fieldSetFlags()[3];
     }
 
+    /**
+     * Gets the Builder instance for the 'verificationStatus' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.CodeableConcept.Builder getVerificationStatusBuilder() {
+      if (verificationStatusBuilder == null) {
+        if (hasVerificationStatus()) {
+          setVerificationStatusBuilder(io.carrera.fhir.avro.models.CodeableConcept.newBuilder(verificationStatus));
+        } else {
+          setVerificationStatusBuilder(io.carrera.fhir.avro.models.CodeableConcept.newBuilder());
+        }
+      }
+      return verificationStatusBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'verificationStatus' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.Condition.Builder setVerificationStatusBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
+      clearVerificationStatus();
+      verificationStatusBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'verificationStatus' field has an active Builder instance
+     * @return True if the 'verificationStatus' field has an active Builder instance
+     */
+    public boolean hasVerificationStatusBuilder() {
+      return verificationStatusBuilder != null;
+    }
 
     /**
       * Clears the value of the 'verificationStatus' field.
@@ -543,6 +622,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
       */
     public io.carrera.fhir.avro.models.Condition.Builder clearVerificationStatus() {
       verificationStatus = null;
+      verificationStatusBuilder = null;
       fieldSetFlags()[3] = false;
       return this;
     }
@@ -708,8 +788,26 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
         Condition record = new Condition();
         record.resourceType = fieldSetFlags()[0] ? this.resourceType : (java.lang.CharSequence) defaultValue(fields()[0]);
         record.id = fieldSetFlags()[1] ? this.id : (java.lang.CharSequence) defaultValue(fields()[1]);
-        record.clinicalStatus = fieldSetFlags()[2] ? this.clinicalStatus : (java.lang.CharSequence) defaultValue(fields()[2]);
-        record.verificationStatus = fieldSetFlags()[3] ? this.verificationStatus : (java.lang.CharSequence) defaultValue(fields()[3]);
+        if (clinicalStatusBuilder != null) {
+          try {
+            record.clinicalStatus = this.clinicalStatusBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("clinicalStatus"));
+            throw e;
+          }
+        } else {
+          record.clinicalStatus = fieldSetFlags()[2] ? this.clinicalStatus : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[2]);
+        }
+        if (verificationStatusBuilder != null) {
+          try {
+            record.verificationStatus = this.verificationStatusBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("verificationStatus"));
+            throw e;
+          }
+        } else {
+          record.verificationStatus = fieldSetFlags()[3] ? this.verificationStatus : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[3]);
+        }
         if (subjectBuilder != null) {
           try {
             record.subject = this.subjectBuilder.build();
@@ -763,7 +861,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
       out.writeNull();
     } else {
       out.writeIndex(0);
-      out.writeString(this.clinicalStatus);
+      this.clinicalStatus.customEncode(out);
     }
 
     if (this.verificationStatus == null) {
@@ -771,7 +869,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
       out.writeNull();
     } else {
       out.writeIndex(0);
-      out.writeString(this.verificationStatus);
+      this.verificationStatus.customEncode(out);
     }
 
     this.subject.customEncode(out);
@@ -812,14 +910,20 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
         in.readNull();
         this.clinicalStatus = null;
       } else {
-        this.clinicalStatus = in.readString(this.clinicalStatus instanceof Utf8 ? (Utf8)this.clinicalStatus : null);
+        if (this.clinicalStatus == null) {
+          this.clinicalStatus = new io.carrera.fhir.avro.models.CodeableConcept();
+        }
+        this.clinicalStatus.customDecode(in);
       }
 
       if (in.readIndex() != 0) {
         in.readNull();
         this.verificationStatus = null;
       } else {
-        this.verificationStatus = in.readString(this.verificationStatus instanceof Utf8 ? (Utf8)this.verificationStatus : null);
+        if (this.verificationStatus == null) {
+          this.verificationStatus = new io.carrera.fhir.avro.models.CodeableConcept();
+        }
+        this.verificationStatus.customDecode(in);
       }
 
       if (this.subject == null) {
@@ -868,7 +972,10 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
             in.readNull();
             this.clinicalStatus = null;
           } else {
-            this.clinicalStatus = in.readString(this.clinicalStatus instanceof Utf8 ? (Utf8)this.clinicalStatus : null);
+            if (this.clinicalStatus == null) {
+              this.clinicalStatus = new io.carrera.fhir.avro.models.CodeableConcept();
+            }
+            this.clinicalStatus.customDecode(in);
           }
           break;
 
@@ -877,7 +984,10 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
             in.readNull();
             this.verificationStatus = null;
           } else {
-            this.verificationStatus = in.readString(this.verificationStatus instanceof Utf8 ? (Utf8)this.verificationStatus : null);
+            if (this.verificationStatus == null) {
+              this.verificationStatus = new io.carrera.fhir.avro.models.CodeableConcept();
+            }
+            this.verificationStatus.customDecode(in);
           }
           break;
 

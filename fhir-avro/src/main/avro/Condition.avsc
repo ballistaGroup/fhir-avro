@@ -13,11 +13,11 @@
         },
         {
           "name": "clinicalStatus",
-          "type": ["string", "null"]
+          "type": ["CodeableConcept", "null"]
         },
         {
           "name": "verificationStatus",
-          "type": ["string", "null"]
+          "type": ["CodeableConcept", "null"]
         },
         {
           "name": "subject",
