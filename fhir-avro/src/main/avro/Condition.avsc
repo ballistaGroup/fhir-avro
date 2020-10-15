@@ -35,6 +35,10 @@
           "name": "onsetDateTime",
           "type": "int",
           "logicalType": "date"
+        },
+        {
+          "name" : "code",
+          "type" : [ "null", "CodeableConcept" ]
         }
     ]
 }
