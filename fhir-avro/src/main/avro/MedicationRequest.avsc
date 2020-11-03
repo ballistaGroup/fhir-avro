@@ -21,7 +21,8 @@
       },
       {
         "name": "medicationCodeableConcept",
-        "type": ["null","CodeableConcept"]
+        "type": ["null","CodeableConcept"],
+        "default" : null
       },
       {
         "name": "subject",
@@ -43,7 +44,8 @@
       },
       {
         "name" : "medicationReference",
-        "type" : [ "null", "Reference" ]
+        "type" : [ "null", "Reference" ],
+        "default" : null
       }
     ]
   }

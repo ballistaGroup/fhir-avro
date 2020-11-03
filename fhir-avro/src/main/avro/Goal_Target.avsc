@@ -6,25 +6,32 @@
      "type" : [ "null", "CodeableConcept" ]
    }, {
      "name" : "detailQuantity",
-     "type" : [ "null", "Quantity" ]
+     "type" : [ "null", "Quantity" ],
+     "default" : null
    }, {
      "name" : "detailRange",
-     "type" : [ "null", "Range" ]
+     "type" : [ "null", "Range" ],
+     "default" : null
    }, {
      "name" : "detailCodeableConcept",
-     "type" : [ "null", "CodeableConcept" ]
+     "type" : [ "null", "CodeableConcept" ],
+     "default" : null
    }, {
      "name" : "detailString",
-     "type" : [ "null", "string" ]
+     "type" : [ "null", "string" ],
+     "default" : null
    }, {
      "name" : "detailBoolean",
-     "type" : [ "null", "boolean" ]
+     "type" : [ "null", "boolean" ],
+     "default" : null
    }, {
      "name" : "detailInteger",
-     "type" : [ "null", "int" ]
+     "type" : [ "null", "int" ],
+     "default" : null
    }, {
      "name" : "detailRatio",
-     "type" : [ "null", "Ratio" ]
+     "type" : [ "null", "Ratio" ],
+     "default" : null
    }],
   "namespace" : "io.carrera.fhir.avro.models"
 }

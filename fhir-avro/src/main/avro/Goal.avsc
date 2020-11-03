@@ -26,7 +26,13 @@
     },
     {
       "name" : "startCodeableConcept",
-      "type" : [ "null", "CodeableConcept" ]
+      "type" : [ "null", "CodeableConcept" ],
+       "default" : null
+    },
+    {
+        "name" : "lifecycleStatus",
+        "type" : [ "null", "string"],
+       "default" : null
     }
   ],
   "namespace" : "io.carrera.fhir.avro.models"
