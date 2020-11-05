@@ -2,8 +2,15 @@
   "name" : "Medication",
   "type" : "record",
   "fields" : [ {
+    "name" : "resourceType",
+    "type" : "string"
+  }, {
+    "name" : "id",
+    "type": "string"
+  }, {
     "name" : "code",
-    "type" : [ "null", "CodeableConcept" ]
+    "type" : [ "null", "CodeableConcept" ],
+    "default": null
   }],
   "namespace" : "io.carrera.fhir.avro.models"
 }

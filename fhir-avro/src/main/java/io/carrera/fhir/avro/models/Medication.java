@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Medication extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -939249286873477290L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Medication\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"code\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"string\",\"null\"]},{\"name\":\"code\",\"type\":[\"string\",\"null\"]},{\"name\":\"display\",\"type\":[\"string\",\"null\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}]}]}");
+  private static final long serialVersionUID = 7765727393655450564L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Medication\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"code\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"string\",\"null\"]},{\"name\":\"code\",\"type\":[\"string\",\"null\"]},{\"name\":\"display\",\"type\":[\"string\",\"null\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,6 +71,8 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
     return DECODER.decode(b);
   }
 
+  @Deprecated public java.lang.CharSequence resourceType;
+  @Deprecated public java.lang.CharSequence id;
   @Deprecated public io.carrera.fhir.avro.models.CodeableConcept code;
 
   /**
@@ -82,9 +84,13 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
 
   /**
    * All-args constructor.
+   * @param resourceType The new value for resourceType
+   * @param id The new value for id
    * @param code The new value for code
    */
-  public Medication(io.carrera.fhir.avro.models.CodeableConcept code) {
+  public Medication(java.lang.CharSequence resourceType, java.lang.CharSequence id, io.carrera.fhir.avro.models.CodeableConcept code) {
+    this.resourceType = resourceType;
+    this.id = id;
     this.code = code;
   }
 
@@ -93,7 +99,9 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return code;
+    case 0: return resourceType;
+    case 1: return id;
+    case 2: return code;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -102,9 +110,45 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 0: resourceType = (java.lang.CharSequence)value$; break;
+    case 1: id = (java.lang.CharSequence)value$; break;
+    case 2: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
+  }
+
+  /**
+   * Gets the value of the 'resourceType' field.
+   * @return The value of the 'resourceType' field.
+   */
+  public java.lang.CharSequence getResourceType() {
+    return resourceType;
+  }
+
+
+  /**
+   * Sets the value of the 'resourceType' field.
+   * @param value the value to set.
+   */
+  public void setResourceType(java.lang.CharSequence value) {
+    this.resourceType = value;
+  }
+
+  /**
+   * Gets the value of the 'id' field.
+   * @return The value of the 'id' field.
+   */
+  public java.lang.CharSequence getId() {
+    return id;
+  }
+
+
+  /**
+   * Sets the value of the 'id' field.
+   * @param value the value to set.
+   */
+  public void setId(java.lang.CharSequence value) {
+    this.id = value;
   }
 
   /**
@@ -165,6 +209,8 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Medication>
     implements org.apache.avro.data.RecordBuilder<Medication> {
 
+    private java.lang.CharSequence resourceType;
+    private java.lang.CharSequence id;
     private io.carrera.fhir.avro.models.CodeableConcept code;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder codeBuilder;
 
@@ -179,9 +225,17 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
      */
     private Builder(io.carrera.fhir.avro.models.Medication.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.code)) {
-        this.code = data().deepCopy(fields()[0].schema(), other.code);
+      if (isValidValue(fields()[0], other.resourceType)) {
+        this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
+      }
+      if (isValidValue(fields()[1], other.id)) {
+        this.id = data().deepCopy(fields()[1].schema(), other.id);
+        fieldSetFlags()[1] = other.fieldSetFlags()[1];
+      }
+      if (isValidValue(fields()[2], other.code)) {
+        this.code = data().deepCopy(fields()[2].schema(), other.code);
+        fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
       if (other.hasCodeBuilder()) {
         this.codeBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getCodeBuilder());
@@ -194,11 +248,99 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
      */
     private Builder(io.carrera.fhir.avro.models.Medication other) {
       super(SCHEMA$);
-      if (isValidValue(fields()[0], other.code)) {
-        this.code = data().deepCopy(fields()[0].schema(), other.code);
+      if (isValidValue(fields()[0], other.resourceType)) {
+        this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
         fieldSetFlags()[0] = true;
       }
+      if (isValidValue(fields()[1], other.id)) {
+        this.id = data().deepCopy(fields()[1].schema(), other.id);
+        fieldSetFlags()[1] = true;
+      }
+      if (isValidValue(fields()[2], other.code)) {
+        this.code = data().deepCopy(fields()[2].schema(), other.code);
+        fieldSetFlags()[2] = true;
+      }
       this.codeBuilder = null;
+    }
+
+    /**
+      * Gets the value of the 'resourceType' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getResourceType() {
+      return resourceType;
+    }
+
+
+    /**
+      * Sets the value of the 'resourceType' field.
+      * @param value The value of 'resourceType'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Medication.Builder setResourceType(java.lang.CharSequence value) {
+      validate(fields()[0], value);
+      this.resourceType = value;
+      fieldSetFlags()[0] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'resourceType' field has been set.
+      * @return True if the 'resourceType' field has been set, false otherwise.
+      */
+    public boolean hasResourceType() {
+      return fieldSetFlags()[0];
+    }
+
+
+    /**
+      * Clears the value of the 'resourceType' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Medication.Builder clearResourceType() {
+      resourceType = null;
+      fieldSetFlags()[0] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'id' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getId() {
+      return id;
+    }
+
+
+    /**
+      * Sets the value of the 'id' field.
+      * @param value The value of 'id'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Medication.Builder setId(java.lang.CharSequence value) {
+      validate(fields()[1], value);
+      this.id = value;
+      fieldSetFlags()[1] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'id' field has been set.
+      * @return True if the 'id' field has been set, false otherwise.
+      */
+    public boolean hasId() {
+      return fieldSetFlags()[1];
+    }
+
+
+    /**
+      * Clears the value of the 'id' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Medication.Builder clearId() {
+      id = null;
+      fieldSetFlags()[1] = false;
+      return this;
     }
 
     /**
@@ -216,10 +358,10 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Medication.Builder setCode(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[0], value);
+      validate(fields()[2], value);
       this.codeBuilder = null;
       this.code = value;
-      fieldSetFlags()[0] = true;
+      fieldSetFlags()[2] = true;
       return this;
     }
 
@@ -228,7 +370,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       * @return True if the 'code' field has been set, false otherwise.
       */
     public boolean hasCode() {
-      return fieldSetFlags()[0];
+      return fieldSetFlags()[2];
     }
 
     /**
@@ -272,7 +414,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
     public io.carrera.fhir.avro.models.Medication.Builder clearCode() {
       code = null;
       codeBuilder = null;
-      fieldSetFlags()[0] = false;
+      fieldSetFlags()[2] = false;
       return this;
     }
 
@@ -281,6 +423,8 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
     public Medication build() {
       try {
         Medication record = new Medication();
+        record.resourceType = fieldSetFlags()[0] ? this.resourceType : (java.lang.CharSequence) defaultValue(fields()[0]);
+        record.id = fieldSetFlags()[1] ? this.id : (java.lang.CharSequence) defaultValue(fields()[1]);
         if (codeBuilder != null) {
           try {
             record.code = this.codeBuilder.build();
@@ -289,7 +433,7 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
             throw e;
           }
         } else {
-          record.code = fieldSetFlags()[0] ? this.code : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[0]);
+          record.code = fieldSetFlags()[2] ? this.code : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[2]);
         }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
@@ -323,6 +467,10 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
+    out.writeString(this.resourceType);
+
+    out.writeString(this.id);
+
     if (this.code == null) {
       out.writeIndex(0);
       out.writeNull();
@@ -338,6 +486,10 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
   {
     org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
     if (fieldOrder == null) {
+      this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
+
+      this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
+
       if (in.readIndex() != 1) {
         in.readNull();
         this.code = null;
@@ -349,9 +501,17 @@ public class Medication extends org.apache.avro.specific.SpecificRecordBase impl
       }
 
     } else {
-      for (int i = 0; i < 1; i++) {
+      for (int i = 0; i < 3; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
+          this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
+          break;
+
+        case 1:
+          this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
+          break;
+
+        case 2:
           if (in.readIndex() != 1) {
             in.readNull();
             this.code = null;
