@@ -5,15 +5,18 @@
     "fields": [
       {
         "name": "system",
-        "type": ["string", "null"]
+        "type": ["null", "string"],
+        "default": null
       },
       {
         "name": "code",
-        "type": ["string", "null"]
+        "type": ["null", "string"],
+        "default": null
       },
       {
         "name": "display",
-        "type": ["string", "null"]
+        "type": ["null", "string"],
+        "default": null
       }
     ]
 }

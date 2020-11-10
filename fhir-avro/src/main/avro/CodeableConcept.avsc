@@ -12,7 +12,8 @@
       },
       {
         "name": "text",
-        "type": ["string", "null"]
+        "type": ["null", "string"],
+        "default": null
       }
     ]
 }

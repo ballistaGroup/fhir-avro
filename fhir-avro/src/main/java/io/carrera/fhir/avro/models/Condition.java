@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Condition extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 704664670320706296L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Condition\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"clinicalStatus\",\"type\":[{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"string\",\"null\"]},{\"name\":\"code\",\"type\":[\"string\",\"null\"]},{\"name\":\"display\",\"type\":[\"string\",\"null\"]}]}}},{\"name\":\"text\",\"type\":[\"string\",\"null\"]}]},\"null\"]},{\"name\":\"verificationStatus\",\"type\":[\"CodeableConcept\",\"null\"]},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"stage\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Condition_Stage\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"summary\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"assessment\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"]}]}}],\"default\":null},{\"name\":\"onsetDateTime\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"]}]}");
+  private static final long serialVersionUID = 3670384735038405633L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Condition\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"clinicalStatus\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"verificationStatus\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"stage\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Condition_Stage\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"summary\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"assessment\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"]}]}}],\"default\":null},{\"name\":\"onsetDateTime\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -978,18 +978,18 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
     out.writeString(this.id);
 
     if (this.clinicalStatus == null) {
-      out.writeIndex(1);
+      out.writeIndex(0);
       out.writeNull();
     } else {
-      out.writeIndex(0);
+      out.writeIndex(1);
       this.clinicalStatus.customEncode(out);
     }
 
     if (this.verificationStatus == null) {
-      out.writeIndex(1);
+      out.writeIndex(0);
       out.writeNull();
     } else {
-      out.writeIndex(0);
+      out.writeIndex(1);
       this.verificationStatus.customEncode(out);
     }
 
@@ -1035,7 +1035,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
 
       this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
 
-      if (in.readIndex() != 0) {
+      if (in.readIndex() != 1) {
         in.readNull();
         this.clinicalStatus = null;
       } else {
@@ -1045,7 +1045,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
         this.clinicalStatus.customDecode(in);
       }
 
-      if (in.readIndex() != 0) {
+      if (in.readIndex() != 1) {
         in.readNull();
         this.verificationStatus = null;
       } else {
@@ -1107,7 +1107,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
           break;
 
         case 2:
-          if (in.readIndex() != 0) {
+          if (in.readIndex() != 1) {
             in.readNull();
             this.clinicalStatus = null;
           } else {
@@ -1119,7 +1119,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
           break;
 
         case 3:
-          if (in.readIndex() != 0) {
+          if (in.readIndex() != 1) {
             in.readNull();
             this.verificationStatus = null;
           } else {
