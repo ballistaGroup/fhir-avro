@@ -13,11 +13,13 @@
         },
         {
           "name": "clinicalStatus",
-          "type": ["CodeableConcept", "null"]
+          "type" : [ "null", "CodeableConcept" ],
+          "default": null
         },
         {
           "name": "verificationStatus",
-          "type": ["CodeableConcept", "null"]
+          "type" : [ "null", "CodeableConcept" ],
+          "default": null
         },
         {
           "name": "subject",
@@ -38,7 +40,8 @@
         },
         {
           "name" : "code",
-          "type" : [ "null", "CodeableConcept" ]
+          "type" : [ "null", "CodeableConcept" ],
+          "default": null
         }
     ]
 }
