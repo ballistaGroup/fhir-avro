@@ -1,42 +1,71 @@
 {
-    "name": "AllergyIntolerance",
-    "type": "record",
-    "namespace": "io.carrera.fhir.avro.models",
-    "fields": [
-      {
-        "name": "resourceType",
-        "type": "string"
-      },
-      {
-        "name": "id",
-        "type": "string"
-      },
-      {
-        "name" : "type",
-        "type" : [ "null", "string" ]
-      },
-      {
-        "name": "clinicalStatus",
-        "type": "string"
-      },
-      {
-        "name": "verificationStatus",
-        "type": "string"
-      },
-      {
-        "name" : "category",
-        "type" : [ "null", {
-          "type" : "array",
-          "items" : "string"
-        } ]
-      },
-      {
-        "name": "code",
-        "type": "CodeableConcept"
-      },
-      {
-        "name": "patient",
-        "type": "Reference"
-      }
-    ]
-  }
+  "name": "AllergyIntolerance",
+  "type": "record",
+  "namespace": "io.carrera.fhir.avro.models",
+  "fields": [
+    {
+      "name": "resourceType",
+      "type": "string"
+    },
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "type",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "clinicalStatus",
+      "type": [
+        "null",
+        "CodeableConcept"
+      ],
+      "default": null
+    },
+    {
+      "name": "verificationStatus",
+      "type": [
+        "null",
+        "CodeableConcept"
+      ],
+      "default": null
+    },
+    {
+      "name": "category",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "string"
+        }
+      ]
+    },
+    {
+      "name": "code",
+      "type": [
+        "null",
+        "CodeableConcept"
+      ],
+      "default": null
+    },
+    {
+      "name": "patient",
+      "type": "Reference"
+    },
+    {
+      "name": "reaction",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "AllergyIntolerance_Reaction"
+        }
+      ],
+      "default": null
+    }
+  ]
+}
