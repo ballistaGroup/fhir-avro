@@ -14,12 +14,13 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Observation extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -9097884549215947444L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Observation\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]},\"null\"]},{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"effective\",\"type\":[\"null\",{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}]},{\"name\":\"issued\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"value\",\"type\":[\"null\",\"string\",\"int\",\"boolean\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":\"float\"},{\"name\":\"unit\",\"type\":\"string\"},{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"}]}]},{\"name\":\"interpretation\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}]}]}");
+  private static final long serialVersionUID = 6925562821753373623L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Observation\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]},\"null\"]},{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"effective\",\"type\":[\"null\",{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"},{\"type\":\"int\",\"logicalType\":\"date\"}]},{\"name\":\"issued\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"value\",\"type\":[\"null\",\"string\",\"int\",\"boolean\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":\"float\"},{\"name\":\"unit\",\"type\":[\"string\",\"null\"]},{\"name\":\"system\",\"type\":[\"string\",\"null\"]},{\"name\":\"code\",\"type\":[\"string\",\"null\"]}]}]},{\"name\":\"interpretation\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
 static {
+    MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.DateConversion());
     MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.TimestampMillisConversion());
   }
 
@@ -81,7 +82,7 @@ static {
   @Deprecated public io.carrera.fhir.avro.models.CodeableConcept code;
   @Deprecated public io.carrera.fhir.avro.models.Reference subject;
   @Deprecated public io.carrera.fhir.avro.models.Reference encounter;
-  @Deprecated public java.time.Instant effective;
+  @Deprecated public java.lang.Object effective;
   @Deprecated public int issued;
   @Deprecated public java.lang.Object value;
   @Deprecated public java.util.List<io.carrera.fhir.avro.models.CodeableConcept> interpretation;
@@ -107,7 +108,7 @@ static {
    * @param value The new value for value
    * @param interpretation The new value for interpretation
    */
-  public Observation(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.time.Instant effective, java.lang.Integer issued, java.lang.Object value, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> interpretation) {
+  public Observation(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.lang.Object effective, java.lang.Integer issued, java.lang.Object value, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> interpretation) {
     this.resourceType = resourceType;
     this.id = id;
     this.status = status;
@@ -152,7 +153,7 @@ static {
     case 4: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     case 5: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 6: encounter = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 7: effective = (java.time.Instant)value$; break;
+    case 7: effective = value$; break;
     case 8: issued = (java.lang.Integer)value$; break;
     case 9: value = value$; break;
     case 10: interpretation = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
@@ -283,7 +284,7 @@ static {
    * Gets the value of the 'effective' field.
    * @return The value of the 'effective' field.
    */
-  public java.time.Instant getEffective() {
+  public java.lang.Object getEffective() {
     return effective;
   }
 
@@ -292,7 +293,7 @@ static {
    * Sets the value of the 'effective' field.
    * @param value the value to set.
    */
-  public void setEffective(java.time.Instant value) {
+  public void setEffective(java.lang.Object value) {
     this.effective = value;
   }
 
@@ -399,7 +400,7 @@ static {
     private io.carrera.fhir.avro.models.Reference.Builder subjectBuilder;
     private io.carrera.fhir.avro.models.Reference encounter;
     private io.carrera.fhir.avro.models.Reference.Builder encounterBuilder;
-    private java.time.Instant effective;
+    private java.lang.Object effective;
     private int issued;
     private java.lang.Object value;
     private java.util.List<io.carrera.fhir.avro.models.CodeableConcept> interpretation;
@@ -953,7 +954,7 @@ static {
       * Gets the value of the 'effective' field.
       * @return The value.
       */
-    public java.time.Instant getEffective() {
+    public java.lang.Object getEffective() {
       return effective;
     }
 
@@ -963,7 +964,7 @@ static {
       * @param value The value of 'effective'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Observation.Builder setEffective(java.time.Instant value) {
+    public io.carrera.fhir.avro.models.Observation.Builder setEffective(java.lang.Object value) {
       validate(fields()[7], value);
       this.effective = value;
       fieldSetFlags()[7] = true;
@@ -1156,7 +1157,7 @@ static {
         } else {
           record.encounter = fieldSetFlags()[6] ? this.encounter : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[6]);
         }
-        record.effective = fieldSetFlags()[7] ? this.effective : (java.time.Instant) defaultValue(fields()[7]);
+        record.effective = fieldSetFlags()[7] ? this.effective :  defaultValue(fields()[7]);
         record.issued = fieldSetFlags()[8] ? this.issued : (java.lang.Integer) defaultValue(fields()[8]);
         record.value = fieldSetFlags()[9] ? this.value :  defaultValue(fields()[9]);
         record.interpretation = fieldSetFlags()[10] ? this.interpretation : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[10]);

@@ -34,10 +34,17 @@
       },
       {
           "name" : "effective",
-          "type" : [ "null", {
-            "type" : "long",
-            "logicalType" : "timestamp-millis"
-          }]
+          "type" : [ 
+            "null", 
+            {
+              "type" : "long",
+              "logicalType" : "timestamp-millis"
+            },
+            {
+              "type": "int",
+              "logicalType": "date"
+            }
+          ]
         },
       {
         "name": "issued",

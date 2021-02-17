@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Quantity extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -560681429799919811L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Quantity\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"value\",\"type\":\"float\"},{\"name\":\"unit\",\"type\":\"string\"},{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"code\",\"type\":\"string\"}]}");
+  private static final long serialVersionUID = 6580077556994977947L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Quantity\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"value\",\"type\":\"float\"},{\"name\":\"unit\",\"type\":[\"string\",\"null\"]},{\"name\":\"system\",\"type\":[\"string\",\"null\"]},{\"name\":\"code\",\"type\":[\"string\",\"null\"]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -491,11 +491,29 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
   {
     out.writeFloat(this.value);
 
-    out.writeString(this.unit);
+    if (this.unit == null) {
+      out.writeIndex(1);
+      out.writeNull();
+    } else {
+      out.writeIndex(0);
+      out.writeString(this.unit);
+    }
 
-    out.writeString(this.system);
+    if (this.system == null) {
+      out.writeIndex(1);
+      out.writeNull();
+    } else {
+      out.writeIndex(0);
+      out.writeString(this.system);
+    }
 
-    out.writeString(this.code);
+    if (this.code == null) {
+      out.writeIndex(1);
+      out.writeNull();
+    } else {
+      out.writeIndex(0);
+      out.writeString(this.code);
+    }
 
   }
 
@@ -506,11 +524,26 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
     if (fieldOrder == null) {
       this.value = in.readFloat();
 
-      this.unit = in.readString(this.unit instanceof Utf8 ? (Utf8)this.unit : null);
+      if (in.readIndex() != 0) {
+        in.readNull();
+        this.unit = null;
+      } else {
+        this.unit = in.readString(this.unit instanceof Utf8 ? (Utf8)this.unit : null);
+      }
 
-      this.system = in.readString(this.system instanceof Utf8 ? (Utf8)this.system : null);
+      if (in.readIndex() != 0) {
+        in.readNull();
+        this.system = null;
+      } else {
+        this.system = in.readString(this.system instanceof Utf8 ? (Utf8)this.system : null);
+      }
 
-      this.code = in.readString(this.code instanceof Utf8 ? (Utf8)this.code : null);
+      if (in.readIndex() != 0) {
+        in.readNull();
+        this.code = null;
+      } else {
+        this.code = in.readString(this.code instanceof Utf8 ? (Utf8)this.code : null);
+      }
 
     } else {
       for (int i = 0; i < 4; i++) {
@@ -520,15 +553,30 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
           break;
 
         case 1:
-          this.unit = in.readString(this.unit instanceof Utf8 ? (Utf8)this.unit : null);
+          if (in.readIndex() != 0) {
+            in.readNull();
+            this.unit = null;
+          } else {
+            this.unit = in.readString(this.unit instanceof Utf8 ? (Utf8)this.unit : null);
+          }
           break;
 
         case 2:
-          this.system = in.readString(this.system instanceof Utf8 ? (Utf8)this.system : null);
+          if (in.readIndex() != 0) {
+            in.readNull();
+            this.system = null;
+          } else {
+            this.system = in.readString(this.system instanceof Utf8 ? (Utf8)this.system : null);
+          }
           break;
 
         case 3:
-          this.code = in.readString(this.code instanceof Utf8 ? (Utf8)this.code : null);
+          if (in.readIndex() != 0) {
+            in.readNull();
+            this.code = null;
+          } else {
+            this.code = in.readString(this.code instanceof Utf8 ? (Utf8)this.code : null);
+          }
           break;
 
         default:
