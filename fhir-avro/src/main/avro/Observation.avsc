@@ -17,7 +17,7 @@
       },
       {
         "name": "category",
-        "type": ["CodeableConcept", "null"]
+        "type": ["null", "CodeableConcept"], "default" : null
       },
       {
         "name": "code",
@@ -29,8 +29,7 @@
       },
       {
         "name": "encounter",
-        "type": ["null", "Reference"],
-        "default" : null
+        "type": ["null", "Reference"], "default" : null
       },
       {
           "name" : "effective",
@@ -44,7 +43,7 @@
               "type": "int",
               "logicalType": "date"
             }
-          ]
+          ], "default" : null
         },
       {
         "name": "issued",
@@ -53,14 +52,14 @@
       },
       {
         "name": "value",
-        "type": ["null", "string", "int", "boolean", "Quantity"]
+        "type": ["null", "string", "int", "boolean", "Quantity"], "default" : null
       },
       {
         "name" : "interpretation",
         "type" : [ "null", {
           "type" : "array",
           "items" : "CodeableConcept"
-        } ]
+        } ], "default" : null
       }
     ]
   }

@@ -3,7 +3,7 @@
   "type" : "record",
   "fields" : [ {
      "name" : "measure",
-     "type" : [ "null", "CodeableConcept" ]
+     "type" : [ "null", "CodeableConcept" ], "default" : null
    }, {
      "name" : "detailQuantity",
      "type" : [ "null", "Quantity" ],

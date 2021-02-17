@@ -3,13 +3,16 @@
   "type" : "record",
   "fields" : [ {
     "name" : "id",
-    "type" : [ "null", "string" ]
+    "type" : [ "null", "string" ],
+    "default": null
   }, {
     "name" : "numerator",
-    "type" : [ "null", "Quantity" ]
+    "type" : [ "null", "Quantity" ],
+    "default": null
   }, {
     "name" : "denominator",
-    "type" : [ "null", "Quantity" ]
+    "type" : [ "null", "Quantity" ],
+    "default": null
   } ],
   "namespace" : "io.carrera.fhir.avro.models"
 }

@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Quantity extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 6580077556994977947L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Quantity\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"value\",\"type\":\"float\"},{\"name\":\"unit\",\"type\":[\"string\",\"null\"]},{\"name\":\"system\",\"type\":[\"string\",\"null\"]},{\"name\":\"code\",\"type\":[\"string\",\"null\"]}]}");
+  private static final long serialVersionUID = 1333887467463220910L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Quantity\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"float\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,7 +71,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
     return DECODER.decode(b);
   }
 
-  @Deprecated public float value;
+  @Deprecated public java.lang.Float value;
   @Deprecated public java.lang.CharSequence unit;
   @Deprecated public java.lang.CharSequence system;
   @Deprecated public java.lang.CharSequence code;
@@ -126,7 +126,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
    * Gets the value of the 'value' field.
    * @return The value of the 'value' field.
    */
-  public float getValue() {
+  public java.lang.Float getValue() {
     return value;
   }
 
@@ -135,7 +135,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
    * Sets the value of the 'value' field.
    * @param value the value to set.
    */
-  public void setValue(float value) {
+  public void setValue(java.lang.Float value) {
     this.value = value;
   }
 
@@ -231,7 +231,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Quantity>
     implements org.apache.avro.data.RecordBuilder<Quantity> {
 
-    private float value;
+    private java.lang.Float value;
     private java.lang.CharSequence unit;
     private java.lang.CharSequence system;
     private java.lang.CharSequence code;
@@ -293,7 +293,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
       * Gets the value of the 'value' field.
       * @return The value.
       */
-    public float getValue() {
+    public java.lang.Float getValue() {
       return value;
     }
 
@@ -303,7 +303,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'value'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Quantity.Builder setValue(float value) {
+    public io.carrera.fhir.avro.models.Quantity.Builder setValue(java.lang.Float value) {
       validate(fields()[0], value);
       this.value = value;
       fieldSetFlags()[0] = true;
@@ -324,6 +324,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Quantity.Builder clearValue() {
+      value = null;
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -489,29 +490,35 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
-    out.writeFloat(this.value);
-
-    if (this.unit == null) {
-      out.writeIndex(1);
+    if (this.value == null) {
+      out.writeIndex(0);
       out.writeNull();
     } else {
+      out.writeIndex(1);
+      out.writeFloat(this.value);
+    }
+
+    if (this.unit == null) {
       out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
       out.writeString(this.unit);
     }
 
     if (this.system == null) {
-      out.writeIndex(1);
+      out.writeIndex(0);
       out.writeNull();
     } else {
-      out.writeIndex(0);
+      out.writeIndex(1);
       out.writeString(this.system);
     }
 
     if (this.code == null) {
-      out.writeIndex(1);
+      out.writeIndex(0);
       out.writeNull();
     } else {
-      out.writeIndex(0);
+      out.writeIndex(1);
       out.writeString(this.code);
     }
 
@@ -522,23 +529,28 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
   {
     org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
     if (fieldOrder == null) {
-      this.value = in.readFloat();
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.value = null;
+      } else {
+        this.value = in.readFloat();
+      }
 
-      if (in.readIndex() != 0) {
+      if (in.readIndex() != 1) {
         in.readNull();
         this.unit = null;
       } else {
         this.unit = in.readString(this.unit instanceof Utf8 ? (Utf8)this.unit : null);
       }
 
-      if (in.readIndex() != 0) {
+      if (in.readIndex() != 1) {
         in.readNull();
         this.system = null;
       } else {
         this.system = in.readString(this.system instanceof Utf8 ? (Utf8)this.system : null);
       }
 
-      if (in.readIndex() != 0) {
+      if (in.readIndex() != 1) {
         in.readNull();
         this.code = null;
       } else {
@@ -549,11 +561,16 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
       for (int i = 0; i < 4; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
-          this.value = in.readFloat();
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.value = null;
+          } else {
+            this.value = in.readFloat();
+          }
           break;
 
         case 1:
-          if (in.readIndex() != 0) {
+          if (in.readIndex() != 1) {
             in.readNull();
             this.unit = null;
           } else {
@@ -562,7 +579,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
           break;
 
         case 2:
-          if (in.readIndex() != 0) {
+          if (in.readIndex() != 1) {
             in.readNull();
             this.system = null;
           } else {
@@ -571,7 +588,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
           break;
 
         case 3:
-          if (in.readIndex() != 0) {
+          if (in.readIndex() != 1) {
             in.readNull();
             this.code = null;
           } else {

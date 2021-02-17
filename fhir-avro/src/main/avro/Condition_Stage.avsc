@@ -3,19 +3,19 @@
   "type" : "record",
   "fields" : [ {
     "name" : "id",
-    "type" : [ "null", "string" ]
+    "type" : [ "null", "string" ], "default" : null
   }, {
     "name" : "summary",
-    "type" : [ "null", "CodeableConcept" ]
+    "type" : [ "null", "CodeableConcept" ], "default" : null
   }, {
     "name" : "assessment",
     "type" : [ "null", {
       "type" : "array",
       "items" : "Reference"
-    } ]
+    } ], "default" : null
   }, {
     "name" : "type",
-    "type" : [ "null", "CodeableConcept" ]
+    "type" : [ "null", "CodeableConcept" ], "default" : null
   } ],
   "namespace" : "io.carrera.fhir.avro.models"
 }
