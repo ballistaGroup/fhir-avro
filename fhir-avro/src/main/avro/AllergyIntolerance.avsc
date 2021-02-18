@@ -16,7 +16,8 @@
       "type": [
         "null",
         "string"
-      ]
+      ],
+      "default": null
     },
     {
       "name": "clinicalStatus",
@@ -42,7 +43,8 @@
           "type": "array",
           "items": "string"
         }
-      ]
+      ],
+      "default": null
     },
     {
       "name": "code",

@@ -1,41 +1,55 @@
 {
-    "name": "Patient",
-    "type": "record",
-    "namespace": "io.carrera.fhir.avro.models",
-    "fields": [
-      {
-        "name": "resourceType",
-        "type": "string"
-      },
-      {
-        "name": "id",
-        "type": "string"
-      },
-      {
-        "name": "identifier",
-        "type": {
-          "type": "array",
-          "items": "identifier_record"
-        }
-      },
-      {
-        "name": "name",
-        "type": {
-          "type": "array",
-          "items": "name_record"
-        }
-      },
-      {
-        "name": "gender",
-        "type": "string"
-      },
-      {
-        "name": "birthDate",
-        "type": ["null", "string"]
-      },
-      {
-        "name": "maritalStatus",
-        "type": ["null", "CodeableConcept"]
+  "name": "Patient",
+  "type": "record",
+  "namespace": "io.carrera.fhir.avro.models",
+  "fields": [
+    {
+      "name": "resourceType",
+      "type": "string"
+    },
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "identifier",
+      "type": {
+        "type": "array",
+        "items": "identifier_record"
       }
-    ]
-  }
+    },
+    {
+      "name": "name",
+      "type": {
+        "type": "array",
+        "items": "name_record"
+      }
+    },
+    {
+      "name": "gender",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "birthDate",
+      "type": [
+        "null",
+        "string",
+        {
+          "type": "int",
+          "logicalType": "date"
+        }
+      ], "default" : null
+    },
+    {
+      "name": "maritalStatus",
+      "type": [
+        "null",
+        "CodeableConcept"
+      ], "default" : null
+    }
+  ]
+}

@@ -6,7 +6,8 @@
     "type" : [ "null", {
       "type" : "array",
       "items" : "RiskAssessment_Prediction"
-    } ]
+    } ],
+    "default": null
   }],
   "namespace" : "io.carrera.fhir.avro.models"
 }

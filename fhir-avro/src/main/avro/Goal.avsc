@@ -15,14 +15,14 @@
       "type" : [ "null", {
         "type" : "array",
         "items" : "Goal_Target"
-      } ]
+      } ], "default" : null
     },
     {
       "name" : "startDate",
       "type" : [ "null", {
         "type" : "int",
         "logicalType" : "date"
-      } ]
+      } ], "default" : null
     },
     {
       "name" : "startCodeableConcept",

@@ -3,7 +3,8 @@
   "type" : "record",
   "fields" : [ {
     "name" : "id",
-    "type" : [ "null", "string" ]
+    "type" : [ "null", "string" ],
+    "default": null
   }, {
     "name" : "start",
     "type" : [ "null",  {
@@ -12,7 +13,8 @@
       }, {
         "type" : "long",
         "logicalType" : "local-timestamp-micros"
-      } ]
+      } ],
+    "default": null
   }, {
     "name" : "end",
     "type" : [ "null", {
@@ -21,7 +23,8 @@
       }, {
         "type" : "long",
         "logicalType" : "local-timestamp-micros"
-      } ]
+      } ],
+    "default": null
   } ],
   "namespace" : "io.carrera.fhir.avro.models"
 }

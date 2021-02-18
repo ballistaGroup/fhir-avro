@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class SimpleCode extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -4179125192673026120L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"SimpleCode\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"code\",\"type\":\"string\"},{\"name\":\"display\",\"type\":[\"string\",\"null\"]}]}");
+  private static final long serialVersionUID = -2172235222053945038L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"SimpleCode\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"code\",\"type\":\"string\"},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -349,10 +349,10 @@ public class SimpleCode extends org.apache.avro.specific.SpecificRecordBase impl
     out.writeString(this.code);
 
     if (this.display == null) {
-      out.writeIndex(1);
+      out.writeIndex(0);
       out.writeNull();
     } else {
-      out.writeIndex(0);
+      out.writeIndex(1);
       out.writeString(this.display);
     }
 
@@ -365,7 +365,7 @@ public class SimpleCode extends org.apache.avro.specific.SpecificRecordBase impl
     if (fieldOrder == null) {
       this.code = in.readString(this.code instanceof Utf8 ? (Utf8)this.code : null);
 
-      if (in.readIndex() != 0) {
+      if (in.readIndex() != 1) {
         in.readNull();
         this.display = null;
       } else {
@@ -380,7 +380,7 @@ public class SimpleCode extends org.apache.avro.specific.SpecificRecordBase impl
           break;
 
         case 1:
-          if (in.readIndex() != 0) {
+          if (in.readIndex() != 1) {
             in.readNull();
             this.display = null;
           } else {

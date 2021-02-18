@@ -3,31 +3,31 @@
   "type" : "record",
   "fields" : [ {
     "name" : "id",
-    "type" : [ "null", "string" ]
+    "type" : [ "null", "string" ], "default" : null
   }, {
     "name" : "outcome",
-    "type" : [ "null", "CodeableConcept" ]
+    "type" : [ "null", "CodeableConcept" ], "default" : null
   }, {
     "name" : "probabilityDecimal",
-    "type" : [ "null", "double" ]
+    "type" : [ "null", "double" ], "default" : null
   }, {
     "name" : "probabilityRange",
-    "type" : [ "null", "Range" ]
+    "type" : [ "null", "Range" ], "default" : null
   }, {
     "name" : "qualitativeRisk",
-    "type" : [ "null", "CodeableConcept" ]
+    "type" : [ "null", "CodeableConcept" ], "default" : null
   }, {
     "name" : "relativeRisk",
-    "type" : [ "null", "double" ]
+    "type" : [ "null", "double" ], "default" : null
   }, {
     "name" : "whenPeriod",
-    "type" : [ "null", "Period" ]
+    "type" : [ "null", "Period" ], "default" : null
   }, {
     "name" : "whenRange",
-    "type" : [ "null", "Range" ]
+    "type" : [ "null", "Range" ], "default" : null
   }, {
     "name" : "rationale",
-    "type" : [ "null", "string" ]
+    "type" : [ "null", "string" ], "default" : null
   } ],
   "namespace" : "io.carrera.fhir.avro.models"
 }

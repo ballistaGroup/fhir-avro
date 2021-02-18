@@ -1,25 +1,42 @@
 {
-    "name": "Quantity",
-    "type": "record",
-    "namespace": "io.carrera.fhir.avro.models",
-    "fields": [
-      {
-        "name": "value",
-        "type": "float"
-      },
-      {
-        "name": "unit",
-        "type": ["string", "null"]
-      },
-      {
-        "name": "system",
-        "type": ["string", "null"]
-      },
-      {
-        "name": "code",
-        "type": ["string", "null"]
-      }
-    ]
+  "name": "Quantity",
+  "type": "record",
+  "namespace": "io.carrera.fhir.avro.models",
+  "fields": [
+    {
+      "name": "value",
+      "type": [
+        "null",
+        "float"
+      ],
+      "default": null
+    },
+    {
+      "name": "unit",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "system",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    }
+  ]
 }
 
 
