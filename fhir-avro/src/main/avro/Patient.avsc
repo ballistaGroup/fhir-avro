@@ -9,21 +9,24 @@
     },
     {
       "name": "id",
-      "type": "string"
+      "type": ["null","string"],
+      "default": null
     },
     {
       "name": "identifier",
-      "type": {
+      "type": ["null",{
         "type": "array",
         "items": "identifier_record"
-      }
+      }],
+      "default": null
     },
     {
       "name": "name",
-      "type": {
+      "type": ["null",{
         "type": "array",
         "items": "name_record"
-      }
+      }],
+      "default": null
     },
     {
       "name": "gender",

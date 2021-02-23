@@ -5,10 +5,11 @@
     "fields": [
       {
         "name": "coding",
-        "type": {
+        "type": ["null", {
           "type": "array",
           "items": "Coding"
-        }
+        }],
+        "default": null
       },
       {
         "name": "text",

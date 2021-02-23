@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -8152356573598577479L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CodeableConcept\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
+  private static final long serialVersionUID = -1493539820642598055L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CodeableConcept\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -346,18 +346,24 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
-    long size0 = this.coding.size();
-    out.writeArrayStart();
-    out.setItemCount(size0);
-    long actualSize0 = 0;
-    for (io.carrera.fhir.avro.models.Coding e0: this.coding) {
-      actualSize0++;
-      out.startItem();
-      e0.customEncode(out);
+    if (this.coding == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      long size0 = this.coding.size();
+      out.writeArrayStart();
+      out.setItemCount(size0);
+      long actualSize0 = 0;
+      for (io.carrera.fhir.avro.models.Coding e0: this.coding) {
+        actualSize0++;
+        out.startItem();
+        e0.customEncode(out);
+      }
+      out.writeArrayEnd();
+      if (actualSize0 != size0)
+        throw new java.util.ConcurrentModificationException("Array-size written was " + size0 + ", but element count was " + actualSize0 + ".");
     }
-    out.writeArrayEnd();
-    if (actualSize0 != size0)
-      throw new java.util.ConcurrentModificationException("Array-size written was " + size0 + ", but element count was " + actualSize0 + ".");
 
     if (this.text == null) {
       out.writeIndex(0);
@@ -374,21 +380,26 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
   {
     org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
     if (fieldOrder == null) {
-      long size0 = in.readArrayStart();
-      java.util.List<io.carrera.fhir.avro.models.Coding> a0 = this.coding;
-      if (a0 == null) {
-        a0 = new SpecificData.Array<io.carrera.fhir.avro.models.Coding>((int)size0, SCHEMA$.getField("coding").schema());
-        this.coding = a0;
-      } else a0.clear();
-      SpecificData.Array<io.carrera.fhir.avro.models.Coding> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.Coding>)a0 : null);
-      for ( ; 0 < size0; size0 = in.arrayNext()) {
-        for ( ; size0 != 0; size0--) {
-          io.carrera.fhir.avro.models.Coding e0 = (ga0 != null ? ga0.peek() : null);
-          if (e0 == null) {
-            e0 = new io.carrera.fhir.avro.models.Coding();
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.coding = null;
+      } else {
+        long size0 = in.readArrayStart();
+        java.util.List<io.carrera.fhir.avro.models.Coding> a0 = this.coding;
+        if (a0 == null) {
+          a0 = new SpecificData.Array<io.carrera.fhir.avro.models.Coding>((int)size0, SCHEMA$.getField("coding").schema().getTypes().get(1));
+          this.coding = a0;
+        } else a0.clear();
+        SpecificData.Array<io.carrera.fhir.avro.models.Coding> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.Coding>)a0 : null);
+        for ( ; 0 < size0; size0 = in.arrayNext()) {
+          for ( ; size0 != 0; size0--) {
+            io.carrera.fhir.avro.models.Coding e0 = (ga0 != null ? ga0.peek() : null);
+            if (e0 == null) {
+              e0 = new io.carrera.fhir.avro.models.Coding();
+            }
+            e0.customDecode(in);
+            a0.add(e0);
           }
-          e0.customDecode(in);
-          a0.add(e0);
         }
       }
 
@@ -403,21 +414,26 @@ public class CodeableConcept extends org.apache.avro.specific.SpecificRecordBase
       for (int i = 0; i < 2; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
-          long size0 = in.readArrayStart();
-          java.util.List<io.carrera.fhir.avro.models.Coding> a0 = this.coding;
-          if (a0 == null) {
-            a0 = new SpecificData.Array<io.carrera.fhir.avro.models.Coding>((int)size0, SCHEMA$.getField("coding").schema());
-            this.coding = a0;
-          } else a0.clear();
-          SpecificData.Array<io.carrera.fhir.avro.models.Coding> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.Coding>)a0 : null);
-          for ( ; 0 < size0; size0 = in.arrayNext()) {
-            for ( ; size0 != 0; size0--) {
-              io.carrera.fhir.avro.models.Coding e0 = (ga0 != null ? ga0.peek() : null);
-              if (e0 == null) {
-                e0 = new io.carrera.fhir.avro.models.Coding();
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.coding = null;
+          } else {
+            long size0 = in.readArrayStart();
+            java.util.List<io.carrera.fhir.avro.models.Coding> a0 = this.coding;
+            if (a0 == null) {
+              a0 = new SpecificData.Array<io.carrera.fhir.avro.models.Coding>((int)size0, SCHEMA$.getField("coding").schema().getTypes().get(1));
+              this.coding = a0;
+            } else a0.clear();
+            SpecificData.Array<io.carrera.fhir.avro.models.Coding> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.Coding>)a0 : null);
+            for ( ; 0 < size0; size0 = in.arrayNext()) {
+              for ( ; size0 != 0; size0--) {
+                io.carrera.fhir.avro.models.Coding e0 = (ga0 != null ? ga0.peek() : null);
+                if (e0 == null) {
+                  e0 = new io.carrera.fhir.avro.models.Coding();
+                }
+                e0.customDecode(in);
+                a0.add(e0);
               }
-              e0.customDecode(in);
-              a0.add(e0);
             }
           }
           break;

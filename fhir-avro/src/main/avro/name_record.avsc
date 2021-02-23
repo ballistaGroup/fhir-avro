@@ -5,25 +5,29 @@
     "fields": [
       {
         "name": "use",
-        "type": "string"
+        "type": ["null", "string"],
+        "default": null
       },
       {
         "name": "family",
-        "type": "string"
+        "type": ["null", "string"],
+        "default": null
       },
       {
         "name": "given",
-        "type": {
+        "type": ["null",{
           "type": "array",
           "items": "string"
-        }
+        }],
+        "default": null
       },
       {
         "name": "prefix",
-        "type": {
+        "type": ["null",{
           "type": "array",
           "items": "string"
-        }
+        }],
+        "default": null
       }
     ]
 }
