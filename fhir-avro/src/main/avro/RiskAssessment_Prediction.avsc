@@ -2,32 +2,37 @@
   "name" : "RiskAssessment_Prediction",
   "type" : "record",
   "fields" : [ {
-    "name" : "id",
-    "type" : [ "null", "string" ], "default" : null
-  }, {
     "name" : "outcome",
-    "type" : [ "null", "CodeableConcept" ], "default" : null
+    "type" : [ "null", "CodeableConcept" ],
+    "default" : null
   }, {
     "name" : "probabilityDecimal",
-    "type" : [ "null", "double" ], "default" : null
+    "type" : [ "null", "double" ],
+    "default" : null
   }, {
     "name" : "probabilityRange",
-    "type" : [ "null", "Range" ], "default" : null
+    "type" : [ "null", "Range" ],
+    "default" : null
   }, {
     "name" : "qualitativeRisk",
-    "type" : [ "null", "CodeableConcept" ], "default" : null
+    "type" : [ "null", "CodeableConcept" ],
+    "default" : null
   }, {
     "name" : "relativeRisk",
-    "type" : [ "null", "double" ], "default" : null
+    "type" : [ "null", "double" ],
+    "default" : null
   }, {
     "name" : "whenPeriod",
-    "type" : [ "null", "Period" ], "default" : null
+    "type" : [ "null", "Period" ],
+    "default" : null
   }, {
     "name" : "whenRange",
-    "type" : [ "null", "Range" ], "default" : null
+    "type" : [ "null", "Range" ],
+    "default" : null
   }, {
     "name" : "rationale",
-    "type" : [ "null", "string" ], "default" : null
+    "type" : [ "null", "string" ],
+    "default" : null
   } ],
   "namespace" : "io.carrera.fhir.avro.models"
 }

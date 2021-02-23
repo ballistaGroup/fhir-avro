@@ -6,7 +6,8 @@
     "type" : "string"
   }, {
     "name" : "id",
-    "type": "string"
+    "type": ["null", "string"],
+    "default": null
   }, {
     "name" : "code",
     "type" : [ "null", "CodeableConcept" ],

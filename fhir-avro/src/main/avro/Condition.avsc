@@ -1,47 +1,52 @@
 {
-    "name": "Condition",
-    "type": "record",
-    "namespace": "io.carrera.fhir.avro.models",
-    "fields": [
-        {
-          "name": "resourceType",
-          "type": "string"
-        },
-        {
-          "name": "id",
-          "type": "string"
-        },
-        {
-          "name": "clinicalStatus",
-          "type" : [ "null", "CodeableConcept" ],
-          "default": null
-        },
-        {
-          "name": "verificationStatus",
-          "type" : [ "null", "CodeableConcept" ],
-          "default": null
-        },
-        {
-          "name": "subject",
-          "type": "Reference"
-        },
-        {
-          "name" : "stage",
-          "type" : [ "null", {
-            "type" : "array",
-            "items" : "Condition_Stage"
-          } ],
-          "default" : null
-        },
-        {
-          "name": "onsetDateTime",
-          "type": "int",
-          "logicalType": "date"
-        },
-        {
-          "name" : "code",
-          "type" : [ "null", "CodeableConcept" ],
-          "default": null
-        }
-    ]
+  "name": "Condition",
+  "type": "record",
+  "namespace": "io.carrera.fhir.avro.models",
+  "fields": [
+    {
+      "name": "resourceType",
+      "type": "string"
+    },
+    {
+      "name": "id",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "clinicalStatus",
+      "type" : [ "null", "CodeableConcept" ],
+      "default": null
+    },
+    {
+      "name": "verificationStatus",
+      "type" : [ "null", "CodeableConcept" ],
+      "default": null
+    },
+    {
+      "name": "subject",
+      "type": "Reference"
+    },
+    {
+      "name" : "stage",
+      "type" : [ "null", {
+        "type" : "array",
+        "items" : "Condition_Stage"
+      } ],
+      "default" : null
+    },
+    {
+      "name": "onsetDateTime",
+      "type": ["null", "int"],
+      "logicalType": "date",
+      "default": null
+    },
+    {
+      "name" : "code",
+      "type" : [ "null", "CodeableConcept" ],
+      "default": null
+    }
+  ]
 }

@@ -9,7 +9,11 @@
     },
     {
       "name": "id",
-      "type": "string"
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
     },
     {
       "name": "status",
@@ -17,7 +21,8 @@
     },
     {
       "name": "code",
-      "type": "CodeableConcept"
+      "type": ["null", "CodeableConcept"],
+      "default": null
     },
     {
       "name": "subject",
@@ -30,22 +35,8 @@
     },
     {
       "name": "performedPeriod",
-      "type": {
-        "name": "performedPeriod",
-        "type": "record",
-        "fields": [
-          {
-            "name": "start",
-            "type": "int",
-            "logicalType": "date"
-          },
-          {
-            "name": "end",
-            "type": "int",
-            "logicalType": "date"
-          }
-        ]
-      }
+      "type": ["null", "Period"],
+      "default": null
     }
   ]
 }

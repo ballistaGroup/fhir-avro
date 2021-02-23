@@ -1,21 +1,25 @@
 {
-    "name": "Bundle",
-    "type": "record",
-    "namespace": "io.carrera.fhir.avro.models",
-    "fields": [
-        {
-            "name" : "children",
-            "type": {
-                "type" : "array",
-                "items" : [
-                    "io.carrera.fhir.avro.models.Patient",
-                    "io.carrera.fhir.avro.models.Observation",
-                    "io.carrera.fhir.avro.models.MedicationStatement",
-                    "io.carrera.fhir.avro.models.AllergyIntolerance",
-                    "io.carrera.fhir.avro.models.Condition"
-                ]
-            }
-        }
-    ]
-    
+  "name": "Bundle",
+  "type": "record",
+  "namespace": "io.carrera.fhir.avro.models",
+  "fields": [
+    {
+      "name" : "children",
+      "type": {
+        "type" : "array",
+        "items" : [
+          "io.carrera.fhir.avro.models.AllergyIntolerance",
+          "io.carrera.fhir.avro.models.Condition",
+          "io.carrera.fhir.avro.models.DiagnosticReport",
+          "io.carrera.fhir.avro.models.Goal",
+          "io.carrera.fhir.avro.models.MedicationRequest",
+          "io.carrera.fhir.avro.models.MedicationStatement",
+          "io.carrera.fhir.avro.models.Patient",
+          "io.carrera.fhir.avro.models.Observation",
+          "io.carrera.fhir.avro.models.ValueSet"
+        ]
+      }
+    }
+  ]
+
 }
