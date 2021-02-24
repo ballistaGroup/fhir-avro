@@ -39,6 +39,10 @@
       "name" : "lifecycleStatus",
       "type" : [ "null", "string"],
       "default" : null
+    },
+    {
+      "name": "subject",
+      "type": "Reference"
     }
   ],
   "namespace" : "io.carrera.fhir.avro.models"
