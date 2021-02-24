@@ -5,11 +5,13 @@
     "fields": [
       {
         "name": "system",
-        "type": "string"
+        "type": ["null", "string"],
+        "default": null
       },
       {
         "name": "value",
-        "type": "string"
+        "type": ["null", "string"],
+        "default": null
       }
     ]
 }

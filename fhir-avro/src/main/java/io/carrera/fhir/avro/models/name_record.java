@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class name_record extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -4563808941300096529L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"name_record\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"use\",\"type\":\"string\"},{\"name\":\"family\",\"type\":\"string\"},{\"name\":\"given\",\"type\":{\"type\":\"array\",\"items\":\"string\"}},{\"name\":\"prefix\",\"type\":{\"type\":\"array\",\"items\":\"string\"}}]}");
+  private static final long serialVersionUID = -2109923348592753124L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"name_record\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"use\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"family\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"given\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null},{\"name\":\"prefix\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -490,35 +490,59 @@ public class name_record extends org.apache.avro.specific.SpecificRecordBase imp
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
-    out.writeString(this.use);
-
-    out.writeString(this.family);
-
-    long size0 = this.given.size();
-    out.writeArrayStart();
-    out.setItemCount(size0);
-    long actualSize0 = 0;
-    for (java.lang.CharSequence e0: this.given) {
-      actualSize0++;
-      out.startItem();
-      out.writeString(e0);
+    if (this.use == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeString(this.use);
     }
-    out.writeArrayEnd();
-    if (actualSize0 != size0)
-      throw new java.util.ConcurrentModificationException("Array-size written was " + size0 + ", but element count was " + actualSize0 + ".");
 
-    long size1 = this.prefix.size();
-    out.writeArrayStart();
-    out.setItemCount(size1);
-    long actualSize1 = 0;
-    for (java.lang.CharSequence e1: this.prefix) {
-      actualSize1++;
-      out.startItem();
-      out.writeString(e1);
+    if (this.family == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeString(this.family);
     }
-    out.writeArrayEnd();
-    if (actualSize1 != size1)
-      throw new java.util.ConcurrentModificationException("Array-size written was " + size1 + ", but element count was " + actualSize1 + ".");
+
+    if (this.given == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      long size0 = this.given.size();
+      out.writeArrayStart();
+      out.setItemCount(size0);
+      long actualSize0 = 0;
+      for (java.lang.CharSequence e0: this.given) {
+        actualSize0++;
+        out.startItem();
+        out.writeString(e0);
+      }
+      out.writeArrayEnd();
+      if (actualSize0 != size0)
+        throw new java.util.ConcurrentModificationException("Array-size written was " + size0 + ", but element count was " + actualSize0 + ".");
+    }
+
+    if (this.prefix == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      long size1 = this.prefix.size();
+      out.writeArrayStart();
+      out.setItemCount(size1);
+      long actualSize1 = 0;
+      for (java.lang.CharSequence e1: this.prefix) {
+        actualSize1++;
+        out.startItem();
+        out.writeString(e1);
+      }
+      out.writeArrayEnd();
+      if (actualSize1 != size1)
+        throw new java.util.ConcurrentModificationException("Array-size written was " + size1 + ", but element count was " + actualSize1 + ".");
+    }
 
   }
 
@@ -527,37 +551,57 @@ public class name_record extends org.apache.avro.specific.SpecificRecordBase imp
   {
     org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
     if (fieldOrder == null) {
-      this.use = in.readString(this.use instanceof Utf8 ? (Utf8)this.use : null);
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.use = null;
+      } else {
+        this.use = in.readString(this.use instanceof Utf8 ? (Utf8)this.use : null);
+      }
 
-      this.family = in.readString(this.family instanceof Utf8 ? (Utf8)this.family : null);
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.family = null;
+      } else {
+        this.family = in.readString(this.family instanceof Utf8 ? (Utf8)this.family : null);
+      }
 
-      long size0 = in.readArrayStart();
-      java.util.List<java.lang.CharSequence> a0 = this.given;
-      if (a0 == null) {
-        a0 = new SpecificData.Array<java.lang.CharSequence>((int)size0, SCHEMA$.getField("given").schema());
-        this.given = a0;
-      } else a0.clear();
-      SpecificData.Array<java.lang.CharSequence> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<java.lang.CharSequence>)a0 : null);
-      for ( ; 0 < size0; size0 = in.arrayNext()) {
-        for ( ; size0 != 0; size0--) {
-          java.lang.CharSequence e0 = (ga0 != null ? ga0.peek() : null);
-          e0 = in.readString(e0 instanceof Utf8 ? (Utf8)e0 : null);
-          a0.add(e0);
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.given = null;
+      } else {
+        long size0 = in.readArrayStart();
+        java.util.List<java.lang.CharSequence> a0 = this.given;
+        if (a0 == null) {
+          a0 = new SpecificData.Array<java.lang.CharSequence>((int)size0, SCHEMA$.getField("given").schema().getTypes().get(1));
+          this.given = a0;
+        } else a0.clear();
+        SpecificData.Array<java.lang.CharSequence> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<java.lang.CharSequence>)a0 : null);
+        for ( ; 0 < size0; size0 = in.arrayNext()) {
+          for ( ; size0 != 0; size0--) {
+            java.lang.CharSequence e0 = (ga0 != null ? ga0.peek() : null);
+            e0 = in.readString(e0 instanceof Utf8 ? (Utf8)e0 : null);
+            a0.add(e0);
+          }
         }
       }
 
-      long size1 = in.readArrayStart();
-      java.util.List<java.lang.CharSequence> a1 = this.prefix;
-      if (a1 == null) {
-        a1 = new SpecificData.Array<java.lang.CharSequence>((int)size1, SCHEMA$.getField("prefix").schema());
-        this.prefix = a1;
-      } else a1.clear();
-      SpecificData.Array<java.lang.CharSequence> ga1 = (a1 instanceof SpecificData.Array ? (SpecificData.Array<java.lang.CharSequence>)a1 : null);
-      for ( ; 0 < size1; size1 = in.arrayNext()) {
-        for ( ; size1 != 0; size1--) {
-          java.lang.CharSequence e1 = (ga1 != null ? ga1.peek() : null);
-          e1 = in.readString(e1 instanceof Utf8 ? (Utf8)e1 : null);
-          a1.add(e1);
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.prefix = null;
+      } else {
+        long size1 = in.readArrayStart();
+        java.util.List<java.lang.CharSequence> a1 = this.prefix;
+        if (a1 == null) {
+          a1 = new SpecificData.Array<java.lang.CharSequence>((int)size1, SCHEMA$.getField("prefix").schema().getTypes().get(1));
+          this.prefix = a1;
+        } else a1.clear();
+        SpecificData.Array<java.lang.CharSequence> ga1 = (a1 instanceof SpecificData.Array ? (SpecificData.Array<java.lang.CharSequence>)a1 : null);
+        for ( ; 0 < size1; size1 = in.arrayNext()) {
+          for ( ; size1 != 0; size1--) {
+            java.lang.CharSequence e1 = (ga1 != null ? ga1.peek() : null);
+            e1 = in.readString(e1 instanceof Utf8 ? (Utf8)e1 : null);
+            a1.add(e1);
+          }
         }
       }
 
@@ -565,43 +609,63 @@ public class name_record extends org.apache.avro.specific.SpecificRecordBase imp
       for (int i = 0; i < 4; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
-          this.use = in.readString(this.use instanceof Utf8 ? (Utf8)this.use : null);
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.use = null;
+          } else {
+            this.use = in.readString(this.use instanceof Utf8 ? (Utf8)this.use : null);
+          }
           break;
 
         case 1:
-          this.family = in.readString(this.family instanceof Utf8 ? (Utf8)this.family : null);
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.family = null;
+          } else {
+            this.family = in.readString(this.family instanceof Utf8 ? (Utf8)this.family : null);
+          }
           break;
 
         case 2:
-          long size0 = in.readArrayStart();
-          java.util.List<java.lang.CharSequence> a0 = this.given;
-          if (a0 == null) {
-            a0 = new SpecificData.Array<java.lang.CharSequence>((int)size0, SCHEMA$.getField("given").schema());
-            this.given = a0;
-          } else a0.clear();
-          SpecificData.Array<java.lang.CharSequence> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<java.lang.CharSequence>)a0 : null);
-          for ( ; 0 < size0; size0 = in.arrayNext()) {
-            for ( ; size0 != 0; size0--) {
-              java.lang.CharSequence e0 = (ga0 != null ? ga0.peek() : null);
-              e0 = in.readString(e0 instanceof Utf8 ? (Utf8)e0 : null);
-              a0.add(e0);
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.given = null;
+          } else {
+            long size0 = in.readArrayStart();
+            java.util.List<java.lang.CharSequence> a0 = this.given;
+            if (a0 == null) {
+              a0 = new SpecificData.Array<java.lang.CharSequence>((int)size0, SCHEMA$.getField("given").schema().getTypes().get(1));
+              this.given = a0;
+            } else a0.clear();
+            SpecificData.Array<java.lang.CharSequence> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<java.lang.CharSequence>)a0 : null);
+            for ( ; 0 < size0; size0 = in.arrayNext()) {
+              for ( ; size0 != 0; size0--) {
+                java.lang.CharSequence e0 = (ga0 != null ? ga0.peek() : null);
+                e0 = in.readString(e0 instanceof Utf8 ? (Utf8)e0 : null);
+                a0.add(e0);
+              }
             }
           }
           break;
 
         case 3:
-          long size1 = in.readArrayStart();
-          java.util.List<java.lang.CharSequence> a1 = this.prefix;
-          if (a1 == null) {
-            a1 = new SpecificData.Array<java.lang.CharSequence>((int)size1, SCHEMA$.getField("prefix").schema());
-            this.prefix = a1;
-          } else a1.clear();
-          SpecificData.Array<java.lang.CharSequence> ga1 = (a1 instanceof SpecificData.Array ? (SpecificData.Array<java.lang.CharSequence>)a1 : null);
-          for ( ; 0 < size1; size1 = in.arrayNext()) {
-            for ( ; size1 != 0; size1--) {
-              java.lang.CharSequence e1 = (ga1 != null ? ga1.peek() : null);
-              e1 = in.readString(e1 instanceof Utf8 ? (Utf8)e1 : null);
-              a1.add(e1);
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.prefix = null;
+          } else {
+            long size1 = in.readArrayStart();
+            java.util.List<java.lang.CharSequence> a1 = this.prefix;
+            if (a1 == null) {
+              a1 = new SpecificData.Array<java.lang.CharSequence>((int)size1, SCHEMA$.getField("prefix").schema().getTypes().get(1));
+              this.prefix = a1;
+            } else a1.clear();
+            SpecificData.Array<java.lang.CharSequence> ga1 = (a1 instanceof SpecificData.Array ? (SpecificData.Array<java.lang.CharSequence>)a1 : null);
+            for ( ; 0 < size1; size1 = in.arrayNext()) {
+              for ( ; size1 != 0; size1--) {
+                java.lang.CharSequence e1 = (ga1 != null ? ga1.peek() : null);
+                e1 = in.readString(e1 instanceof Utf8 ? (Utf8)e1 : null);
+                a1.add(e1);
+              }
             }
           }
           break;

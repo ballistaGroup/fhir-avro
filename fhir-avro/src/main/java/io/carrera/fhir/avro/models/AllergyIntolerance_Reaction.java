@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class AllergyIntolerance_Reaction extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 3993101977470614391L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"AllergyIntolerance_Reaction\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"substance\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"manifestation\",\"type\":{\"type\":\"array\",\"items\":\"CodeableConcept\"}}]}");
+  private static final long serialVersionUID = -4042587140183317018L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"AllergyIntolerance_Reaction\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"substance\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"manifestation\",\"type\":{\"type\":\"array\",\"items\":\"CodeableConcept\"}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,7 +71,6 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence id;
   @Deprecated public io.carrera.fhir.avro.models.CodeableConcept substance;
   @Deprecated public java.util.List<io.carrera.fhir.avro.models.CodeableConcept> manifestation;
 
@@ -84,12 +83,10 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
 
   /**
    * All-args constructor.
-   * @param id The new value for id
    * @param substance The new value for substance
    * @param manifestation The new value for manifestation
    */
-  public AllergyIntolerance_Reaction(java.lang.CharSequence id, io.carrera.fhir.avro.models.CodeableConcept substance, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> manifestation) {
-    this.id = id;
+  public AllergyIntolerance_Reaction(io.carrera.fhir.avro.models.CodeableConcept substance, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> manifestation) {
     this.substance = substance;
     this.manifestation = manifestation;
   }
@@ -99,9 +96,8 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return id;
-    case 1: return substance;
-    case 2: return manifestation;
+    case 0: return substance;
+    case 1: return manifestation;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -110,28 +106,10 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: id = (java.lang.CharSequence)value$; break;
-    case 1: substance = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 2: manifestation = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
+    case 0: substance = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 1: manifestation = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
-  }
-
-  /**
-   * Gets the value of the 'id' field.
-   * @return The value of the 'id' field.
-   */
-  public java.lang.CharSequence getId() {
-    return id;
-  }
-
-
-  /**
-   * Sets the value of the 'id' field.
-   * @param value the value to set.
-   */
-  public void setId(java.lang.CharSequence value) {
-    this.id = value;
   }
 
   /**
@@ -209,7 +187,6 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<AllergyIntolerance_Reaction>
     implements org.apache.avro.data.RecordBuilder<AllergyIntolerance_Reaction> {
 
-    private java.lang.CharSequence id;
     private io.carrera.fhir.avro.models.CodeableConcept substance;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder substanceBuilder;
     private java.util.List<io.carrera.fhir.avro.models.CodeableConcept> manifestation;
@@ -225,20 +202,16 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
      */
     private Builder(io.carrera.fhir.avro.models.AllergyIntolerance_Reaction.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.id)) {
-        this.id = data().deepCopy(fields()[0].schema(), other.id);
+      if (isValidValue(fields()[0], other.substance)) {
+        this.substance = data().deepCopy(fields()[0].schema(), other.substance);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
-      }
-      if (isValidValue(fields()[1], other.substance)) {
-        this.substance = data().deepCopy(fields()[1].schema(), other.substance);
-        fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
       if (other.hasSubstanceBuilder()) {
         this.substanceBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getSubstanceBuilder());
       }
-      if (isValidValue(fields()[2], other.manifestation)) {
-        this.manifestation = data().deepCopy(fields()[2].schema(), other.manifestation);
-        fieldSetFlags()[2] = other.fieldSetFlags()[2];
+      if (isValidValue(fields()[1], other.manifestation)) {
+        this.manifestation = data().deepCopy(fields()[1].schema(), other.manifestation);
+        fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
     }
 
@@ -248,59 +221,15 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
      */
     private Builder(io.carrera.fhir.avro.models.AllergyIntolerance_Reaction other) {
       super(SCHEMA$);
-      if (isValidValue(fields()[0], other.id)) {
-        this.id = data().deepCopy(fields()[0].schema(), other.id);
+      if (isValidValue(fields()[0], other.substance)) {
+        this.substance = data().deepCopy(fields()[0].schema(), other.substance);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.substance)) {
-        this.substance = data().deepCopy(fields()[1].schema(), other.substance);
+      this.substanceBuilder = null;
+      if (isValidValue(fields()[1], other.manifestation)) {
+        this.manifestation = data().deepCopy(fields()[1].schema(), other.manifestation);
         fieldSetFlags()[1] = true;
       }
-      this.substanceBuilder = null;
-      if (isValidValue(fields()[2], other.manifestation)) {
-        this.manifestation = data().deepCopy(fields()[2].schema(), other.manifestation);
-        fieldSetFlags()[2] = true;
-      }
-    }
-
-    /**
-      * Gets the value of the 'id' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getId() {
-      return id;
-    }
-
-
-    /**
-      * Sets the value of the 'id' field.
-      * @param value The value of 'id'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.AllergyIntolerance_Reaction.Builder setId(java.lang.CharSequence value) {
-      validate(fields()[0], value);
-      this.id = value;
-      fieldSetFlags()[0] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'id' field has been set.
-      * @return True if the 'id' field has been set, false otherwise.
-      */
-    public boolean hasId() {
-      return fieldSetFlags()[0];
-    }
-
-
-    /**
-      * Clears the value of the 'id' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.AllergyIntolerance_Reaction.Builder clearId() {
-      id = null;
-      fieldSetFlags()[0] = false;
-      return this;
     }
 
     /**
@@ -318,10 +247,10 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.AllergyIntolerance_Reaction.Builder setSubstance(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[1], value);
+      validate(fields()[0], value);
       this.substanceBuilder = null;
       this.substance = value;
-      fieldSetFlags()[1] = true;
+      fieldSetFlags()[0] = true;
       return this;
     }
 
@@ -330,7 +259,7 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
       * @return True if the 'substance' field has been set, false otherwise.
       */
     public boolean hasSubstance() {
-      return fieldSetFlags()[1];
+      return fieldSetFlags()[0];
     }
 
     /**
@@ -374,7 +303,7 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
     public io.carrera.fhir.avro.models.AllergyIntolerance_Reaction.Builder clearSubstance() {
       substance = null;
       substanceBuilder = null;
-      fieldSetFlags()[1] = false;
+      fieldSetFlags()[0] = false;
       return this;
     }
 
@@ -393,9 +322,9 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.AllergyIntolerance_Reaction.Builder setManifestation(java.util.List<io.carrera.fhir.avro.models.CodeableConcept> value) {
-      validate(fields()[2], value);
+      validate(fields()[1], value);
       this.manifestation = value;
-      fieldSetFlags()[2] = true;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
@@ -404,7 +333,7 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
       * @return True if the 'manifestation' field has been set, false otherwise.
       */
     public boolean hasManifestation() {
-      return fieldSetFlags()[2];
+      return fieldSetFlags()[1];
     }
 
 
@@ -414,7 +343,7 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
       */
     public io.carrera.fhir.avro.models.AllergyIntolerance_Reaction.Builder clearManifestation() {
       manifestation = null;
-      fieldSetFlags()[2] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -423,7 +352,6 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
     public AllergyIntolerance_Reaction build() {
       try {
         AllergyIntolerance_Reaction record = new AllergyIntolerance_Reaction();
-        record.id = fieldSetFlags()[0] ? this.id : (java.lang.CharSequence) defaultValue(fields()[0]);
         if (substanceBuilder != null) {
           try {
             record.substance = this.substanceBuilder.build();
@@ -432,9 +360,9 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
             throw e;
           }
         } else {
-          record.substance = fieldSetFlags()[1] ? this.substance : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[1]);
+          record.substance = fieldSetFlags()[0] ? this.substance : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[0]);
         }
-        record.manifestation = fieldSetFlags()[2] ? this.manifestation : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[2]);
+        record.manifestation = fieldSetFlags()[1] ? this.manifestation : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[1]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -467,14 +395,6 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
-    if (this.id == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeString(this.id);
-    }
-
     if (this.substance == null) {
       out.writeIndex(0);
       out.writeNull();
@@ -505,13 +425,6 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
     if (fieldOrder == null) {
       if (in.readIndex() != 1) {
         in.readNull();
-        this.id = null;
-      } else {
-        this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
         this.substance = null;
       } else {
         if (this.substance == null) {
@@ -539,18 +452,9 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
       }
 
     } else {
-      for (int i = 0; i < 3; i++) {
+      for (int i = 0; i < 2; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.id = null;
-          } else {
-            this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-          }
-          break;
-
-        case 1:
           if (in.readIndex() != 1) {
             in.readNull();
             this.substance = null;
@@ -562,7 +466,7 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
           }
           break;
 
-        case 2:
+        case 1:
           long size0 = in.readArrayStart();
           java.util.List<io.carrera.fhir.avro.models.CodeableConcept> a0 = this.manifestation;
           if (a0 == null) {

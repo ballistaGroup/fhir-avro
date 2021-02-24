@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -2899771919287631670L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MedicationRequest\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"intent\",\"type\":\"string\"},{\"name\":\"medicationCodeableConcept\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"authoredOn\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"requester\",\"type\":\"Reference\"},{\"name\":\"medicationReference\",\"type\":[\"null\",\"Reference\"],\"default\":null}]}");
+  private static final long serialVersionUID = -1835823253533099732L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MedicationRequest\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"intent\",\"type\":\"string\"},{\"name\":\"medicationCodeableConcept\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"authoredOn\",\"type\":[\"null\",\"int\"],\"default\":null,\"logicalType\":\"date\"},{\"name\":\"requester\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"medicationReference\",\"type\":[\"null\",\"Reference\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -78,7 +78,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
   @Deprecated public io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept;
   @Deprecated public io.carrera.fhir.avro.models.Reference subject;
   @Deprecated public io.carrera.fhir.avro.models.Reference encounter;
-  @Deprecated public int authoredOn;
+  @Deprecated public java.lang.Integer authoredOn;
   @Deprecated public io.carrera.fhir.avro.models.Reference requester;
   @Deprecated public io.carrera.fhir.avro.models.Reference medicationReference;
 
@@ -275,7 +275,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
    * Gets the value of the 'authoredOn' field.
    * @return The value of the 'authoredOn' field.
    */
-  public int getAuthoredOn() {
+  public java.lang.Integer getAuthoredOn() {
     return authoredOn;
   }
 
@@ -284,7 +284,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
    * Sets the value of the 'authoredOn' field.
    * @param value the value to set.
    */
-  public void setAuthoredOn(int value) {
+  public void setAuthoredOn(java.lang.Integer value) {
     this.authoredOn = value;
   }
 
@@ -373,7 +373,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
     private io.carrera.fhir.avro.models.Reference.Builder subjectBuilder;
     private io.carrera.fhir.avro.models.Reference encounter;
     private io.carrera.fhir.avro.models.Reference.Builder encounterBuilder;
-    private int authoredOn;
+    private java.lang.Integer authoredOn;
     private io.carrera.fhir.avro.models.Reference requester;
     private io.carrera.fhir.avro.models.Reference.Builder requesterBuilder;
     private io.carrera.fhir.avro.models.Reference medicationReference;
@@ -889,7 +889,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
       * Gets the value of the 'authoredOn' field.
       * @return The value.
       */
-    public int getAuthoredOn() {
+    public java.lang.Integer getAuthoredOn() {
       return authoredOn;
     }
 
@@ -899,7 +899,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
       * @param value The value of 'authoredOn'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder setAuthoredOn(int value) {
+    public io.carrera.fhir.avro.models.MedicationRequest.Builder setAuthoredOn(java.lang.Integer value) {
       validate(fields()[7], value);
       this.authoredOn = value;
       fieldSetFlags()[7] = true;
@@ -920,6 +920,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.MedicationRequest.Builder clearAuthoredOn() {
+      authoredOn = null;
       fieldSetFlags()[7] = false;
       return this;
     }
@@ -1168,7 +1169,13 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
   {
     out.writeString(this.resourceType);
 
-    out.writeString(this.id);
+    if (this.id == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeString(this.id);
+    }
 
     out.writeString(this.status);
 
@@ -1192,9 +1199,21 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
       this.encounter.customEncode(out);
     }
 
-    out.writeInt(this.authoredOn);
+    if (this.authoredOn == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeInt(this.authoredOn);
+    }
 
-    this.requester.customEncode(out);
+    if (this.requester == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      this.requester.customEncode(out);
+    }
 
     if (this.medicationReference == null) {
       out.writeIndex(0);
@@ -1213,7 +1232,12 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
     if (fieldOrder == null) {
       this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
 
-      this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.id = null;
+      } else {
+        this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
+      }
 
       this.status = in.readString(this.status instanceof Utf8 ? (Utf8)this.status : null);
 
@@ -1244,12 +1268,22 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
         this.encounter.customDecode(in);
       }
 
-      this.authoredOn = in.readInt();
-
-      if (this.requester == null) {
-        this.requester = new io.carrera.fhir.avro.models.Reference();
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.authoredOn = null;
+      } else {
+        this.authoredOn = in.readInt();
       }
-      this.requester.customDecode(in);
+
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.requester = null;
+      } else {
+        if (this.requester == null) {
+          this.requester = new io.carrera.fhir.avro.models.Reference();
+        }
+        this.requester.customDecode(in);
+      }
 
       if (in.readIndex() != 1) {
         in.readNull();
@@ -1269,7 +1303,12 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
           break;
 
         case 1:
-          this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.id = null;
+          } else {
+            this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
+          }
           break;
 
         case 2:
@@ -1312,14 +1351,24 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
           break;
 
         case 7:
-          this.authoredOn = in.readInt();
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.authoredOn = null;
+          } else {
+            this.authoredOn = in.readInt();
+          }
           break;
 
         case 8:
-          if (this.requester == null) {
-            this.requester = new io.carrera.fhir.avro.models.Reference();
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.requester = null;
+          } else {
+            if (this.requester == null) {
+              this.requester = new io.carrera.fhir.avro.models.Reference();
+            }
+            this.requester.customDecode(in);
           }
-          this.requester.customDecode(in);
           break;
 
         case 9:

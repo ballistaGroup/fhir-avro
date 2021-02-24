@@ -2,28 +2,24 @@
   "name" : "Period",
   "type" : "record",
   "fields" : [ {
-    "name" : "id",
-    "type" : [ "null", "string" ],
-    "default": null
-  }, {
     "name" : "start",
     "type" : [ "null",  {
-        "type" : "int",
-        "logicalType" : "date"
-      }, {
-        "type" : "long",
-        "logicalType" : "local-timestamp-micros"
-      } ],
+      "type" : "int",
+      "logicalType" : "date"
+    }, {
+      "type" : "long",
+      "logicalType" : "local-timestamp-micros"
+    } ],
     "default": null
   }, {
     "name" : "end",
     "type" : [ "null", {
-        "type" : "int",
-        "logicalType" : "date"
-      }, {
-        "type" : "long",
-        "logicalType" : "local-timestamp-micros"
-      } ],
+      "type" : "int",
+      "logicalType" : "date"
+    }, {
+      "type" : "long",
+      "logicalType" : "local-timestamp-micros"
+    } ],
     "default": null
   } ],
   "namespace" : "io.carrera.fhir.avro.models"

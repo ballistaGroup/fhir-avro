@@ -8,31 +8,37 @@
     },
     {
       "name": "id",
-      "type": "string"
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
     },
     {
       "name" : "target",
       "type" : [ "null", {
         "type" : "array",
         "items" : "Goal_Target"
-      } ], "default" : null
+      } ],
+      "default" : null
     },
     {
       "name" : "startDate",
       "type" : [ "null", {
         "type" : "int",
         "logicalType" : "date"
-      } ], "default" : null
+      } ],
+      "default" : null
     },
     {
       "name" : "startCodeableConcept",
       "type" : [ "null", "CodeableConcept" ],
-       "default" : null
+      "default" : null
     },
     {
-        "name" : "lifecycleStatus",
-        "type" : [ "null", "string"],
-       "default" : null
+      "name" : "lifecycleStatus",
+      "type" : [ "null", "string"],
+      "default" : null
     }
   ],
   "namespace" : "io.carrera.fhir.avro.models"

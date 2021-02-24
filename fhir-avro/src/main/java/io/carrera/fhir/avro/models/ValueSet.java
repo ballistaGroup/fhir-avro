@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class ValueSet extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 5693748466040325905L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"ValueSet\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"title\",\"type\":\"string\"},{\"name\":\"description\",\"type\":\"string\"},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"experimental\",\"type\":\"boolean\"},{\"name\":\"date\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"publisher\",\"type\":\"string\"},{\"name\":\"compose\",\"type\":{\"type\":\"record\",\"name\":\"compose\",\"fields\":[{\"name\":\"include\",\"type\":{\"type\":\"array\",\"items\":[{\"type\":\"record\",\"name\":\"SimpleCode\",\"fields\":[{\"name\":\"code\",\"type\":\"string\"},{\"name\":\"display\",\"type\":[\"string\",\"null\"]}]},{\"type\":\"record\",\"name\":\"ValueSetPointer\",\"fields\":[{\"name\":\"valueSet\",\"type\":\"string\"}]}]}}]}}]}");
+  private static final long serialVersionUID = 8644384603851174965L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"ValueSet\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"name\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"title\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"description\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"experimental\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"date\",\"type\":[\"null\",\"int\"],\"default\":null,\"logicalType\":\"date\"},{\"name\":\"publisher\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"compose\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"compose\",\"fields\":[{\"name\":\"include\",\"type\":{\"type\":\"array\",\"items\":[{\"type\":\"record\",\"name\":\"SimpleCode\",\"fields\":[{\"name\":\"code\",\"type\":\"string\"},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]},{\"type\":\"record\",\"name\":\"ValueSetPointer\",\"fields\":[{\"name\":\"valueSet\",\"type\":\"string\"}]}]}}]}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -77,8 +77,8 @@ public class ValueSet extends org.apache.avro.specific.SpecificRecordBase implem
   @Deprecated public java.lang.CharSequence title;
   @Deprecated public java.lang.CharSequence description;
   @Deprecated public java.lang.CharSequence status;
-  @Deprecated public boolean experimental;
-  @Deprecated public int date;
+  @Deprecated public java.lang.Boolean experimental;
+  @Deprecated public java.lang.Integer date;
   @Deprecated public java.lang.CharSequence publisher;
   @Deprecated public io.carrera.fhir.avro.models.compose compose;
 
@@ -258,7 +258,7 @@ public class ValueSet extends org.apache.avro.specific.SpecificRecordBase implem
    * Gets the value of the 'experimental' field.
    * @return The value of the 'experimental' field.
    */
-  public boolean getExperimental() {
+  public java.lang.Boolean getExperimental() {
     return experimental;
   }
 
@@ -267,7 +267,7 @@ public class ValueSet extends org.apache.avro.specific.SpecificRecordBase implem
    * Sets the value of the 'experimental' field.
    * @param value the value to set.
    */
-  public void setExperimental(boolean value) {
+  public void setExperimental(java.lang.Boolean value) {
     this.experimental = value;
   }
 
@@ -275,7 +275,7 @@ public class ValueSet extends org.apache.avro.specific.SpecificRecordBase implem
    * Gets the value of the 'date' field.
    * @return The value of the 'date' field.
    */
-  public int getDate() {
+  public java.lang.Integer getDate() {
     return date;
   }
 
@@ -284,7 +284,7 @@ public class ValueSet extends org.apache.avro.specific.SpecificRecordBase implem
    * Sets the value of the 'date' field.
    * @param value the value to set.
    */
-  public void setDate(int value) {
+  public void setDate(java.lang.Integer value) {
     this.date = value;
   }
 
@@ -369,8 +369,8 @@ public class ValueSet extends org.apache.avro.specific.SpecificRecordBase implem
     private java.lang.CharSequence title;
     private java.lang.CharSequence description;
     private java.lang.CharSequence status;
-    private boolean experimental;
-    private int date;
+    private java.lang.Boolean experimental;
+    private java.lang.Integer date;
     private java.lang.CharSequence publisher;
     private io.carrera.fhir.avro.models.compose compose;
     private io.carrera.fhir.avro.models.compose.Builder composeBuilder;
@@ -724,7 +724,7 @@ public class ValueSet extends org.apache.avro.specific.SpecificRecordBase implem
       * Gets the value of the 'experimental' field.
       * @return The value.
       */
-    public boolean getExperimental() {
+    public java.lang.Boolean getExperimental() {
       return experimental;
     }
 
@@ -734,7 +734,7 @@ public class ValueSet extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'experimental'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.ValueSet.Builder setExperimental(boolean value) {
+    public io.carrera.fhir.avro.models.ValueSet.Builder setExperimental(java.lang.Boolean value) {
       validate(fields()[6], value);
       this.experimental = value;
       fieldSetFlags()[6] = true;
@@ -755,6 +755,7 @@ public class ValueSet extends org.apache.avro.specific.SpecificRecordBase implem
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.ValueSet.Builder clearExperimental() {
+      experimental = null;
       fieldSetFlags()[6] = false;
       return this;
     }
@@ -763,7 +764,7 @@ public class ValueSet extends org.apache.avro.specific.SpecificRecordBase implem
       * Gets the value of the 'date' field.
       * @return The value.
       */
-    public int getDate() {
+    public java.lang.Integer getDate() {
       return date;
     }
 
@@ -773,7 +774,7 @@ public class ValueSet extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'date'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.ValueSet.Builder setDate(int value) {
+    public io.carrera.fhir.avro.models.ValueSet.Builder setDate(java.lang.Integer value) {
       validate(fields()[7], value);
       this.date = value;
       fieldSetFlags()[7] = true;
@@ -794,6 +795,7 @@ public class ValueSet extends org.apache.avro.specific.SpecificRecordBase implem
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.ValueSet.Builder clearDate() {
+      date = null;
       fieldSetFlags()[7] = false;
       return this;
     }

@@ -1,7 +1,20 @@
 {
   "name" : "RiskAssessment",
   "type" : "record",
-  "fields" : [  {
+  "fields" : [{
+    "name": "id",
+    "type": [
+      "null",
+      "string"
+    ],
+    "default": null
+  }, {
+    "name": "status",
+    "type": "string"
+  }, {
+    "name": "subject",
+    "type": "Reference"
+  }, {
     "name" : "prediction",
     "type" : [ "null", {
       "type" : "array",

@@ -1,37 +1,38 @@
 {
   "name" : "Goal_Target",
   "type" : "record",
-  "fields" : [ {
-     "name" : "measure",
-     "type" : [ "null", "CodeableConcept" ], "default" : null
-   }, {
-     "name" : "detailQuantity",
-     "type" : [ "null", "Quantity" ],
-     "default" : null
-   }, {
-     "name" : "detailRange",
-     "type" : [ "null", "Range" ],
-     "default" : null
-   }, {
-     "name" : "detailCodeableConcept",
-     "type" : [ "null", "CodeableConcept" ],
-     "default" : null
-   }, {
-     "name" : "detailString",
-     "type" : [ "null", "string" ],
-     "default" : null
-   }, {
-     "name" : "detailBoolean",
-     "type" : [ "null", "boolean" ],
-     "default" : null
-   }, {
-     "name" : "detailInteger",
-     "type" : [ "null", "int" ],
-     "default" : null
-   }, {
-     "name" : "detailRatio",
-     "type" : [ "null", "Ratio" ],
-     "default" : null
-   }],
+  "fields" : [{
+    "name" : "measure",
+    "type" : [ "null", "CodeableConcept" ],
+    "default" : null
+  }, {
+    "name" : "detailQuantity",
+    "type" : [ "null", "Quantity" ],
+    "default" : null
+  }, {
+    "name" : "detailRange",
+    "type" : [ "null", "Range" ],
+    "default" : null
+  }, {
+    "name" : "detailCodeableConcept",
+    "type" : [ "null", "CodeableConcept" ],
+    "default" : null
+  }, {
+    "name" : "detailString",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "detailBoolean",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "detailInteger",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "detailRatio",
+    "type" : [ "null", "Ratio" ],
+    "default" : null
+  }],
   "namespace" : "io.carrera.fhir.avro.models"
 }

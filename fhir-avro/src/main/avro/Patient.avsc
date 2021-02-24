@@ -9,21 +9,27 @@
     },
     {
       "name": "id",
-      "type": "string"
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
     },
     {
       "name": "identifier",
-      "type": {
+      "type": ["null",{
         "type": "array",
         "items": "identifier_record"
-      }
+      }],
+      "default": null
     },
     {
       "name": "name",
-      "type": {
+      "type": ["null",{
         "type": "array",
         "items": "name_record"
-      }
+      }],
+      "default": null
     },
     {
       "name": "gender",
@@ -42,14 +48,16 @@
           "type": "int",
           "logicalType": "date"
         }
-      ], "default" : null
+      ],
+      "default" : null
     },
     {
       "name": "maritalStatus",
       "type": [
         "null",
         "CodeableConcept"
-      ], "default" : null
+      ],
+      "default" : null
     }
   ]
 }

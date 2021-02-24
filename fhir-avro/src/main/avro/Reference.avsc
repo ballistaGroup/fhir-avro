@@ -1,11 +1,27 @@
 {
-    "name": "Reference",
-    "namespace": "io.carrera.fhir.avro.models",
-    "type": "record",
-    "fields": [
-      {
-        "name": "reference",
-        "type": "string"
-      }
-    ]
+  "name": "Reference",
+  "namespace": "io.carrera.fhir.avro.models",
+  "type": "record",
+  "fields": [
+    {
+      "name": "reference",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "type",
+      "type": ["null", "string"],
+      "default": null
+    },
+    //{
+    //  "name": "identifier",
+    //  "type": ["null", "identifier_record"],
+    //  "default": null
+    //},
+    {
+      "name": "display",
+      "type": ["null", "string"],
+      "default": null
+    }
+  ]
 }

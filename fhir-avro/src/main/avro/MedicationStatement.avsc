@@ -1,27 +1,31 @@
 {
-    "name": "MedicationStatement",
-    "type": "record",
-    "namespace": "io.carrera.fhir.avro.models",
-    "fields": [
-      {
-        "name": "resourceType",
-        "type": "string"
-      },
-      {
-        "name": "id",
-        "type": "string"
-      },
-      {
-        "name": "status",
-        "type": "string"
-      },
-      {
-        "name": "medicationCodeableConcept",
-        "type": "CodeableConcept"
-      },
-      {
-        "name": "subject",
-        "type": "Reference"
-      }
-    ]
-  }
+  "name": "MedicationStatement",
+  "type": "record",
+  "namespace": "io.carrera.fhir.avro.models",
+  "fields": [
+    {
+      "name": "resourceType",
+      "type": "string"
+    },
+    {
+      "name": "id",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "status",
+      "type": "string"
+    },
+    {
+      "name": "medicationCodeableConcept",
+      "type": "CodeableConcept"
+    },
+    {
+      "name": "subject",
+      "type": "Reference"
+    }
+  ]
+}

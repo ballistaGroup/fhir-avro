@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Reference extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -874995302016814063L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Reference\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}");
+  private static final long serialVersionUID = -1398982543246510293L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Reference\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -72,6 +72,8 @@ public class Reference extends org.apache.avro.specific.SpecificRecordBase imple
   }
 
   @Deprecated public java.lang.CharSequence reference;
+  @Deprecated public java.lang.CharSequence type;
+  @Deprecated public java.lang.CharSequence display;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -83,9 +85,13 @@ public class Reference extends org.apache.avro.specific.SpecificRecordBase imple
   /**
    * All-args constructor.
    * @param reference The new value for reference
+   * @param type The new value for type
+   * @param display The new value for display
    */
-  public Reference(java.lang.CharSequence reference) {
+  public Reference(java.lang.CharSequence reference, java.lang.CharSequence type, java.lang.CharSequence display) {
     this.reference = reference;
+    this.type = type;
+    this.display = display;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -94,6 +100,8 @@ public class Reference extends org.apache.avro.specific.SpecificRecordBase imple
   public java.lang.Object get(int field$) {
     switch (field$) {
     case 0: return reference;
+    case 1: return type;
+    case 2: return display;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -103,6 +111,8 @@ public class Reference extends org.apache.avro.specific.SpecificRecordBase imple
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
     case 0: reference = (java.lang.CharSequence)value$; break;
+    case 1: type = (java.lang.CharSequence)value$; break;
+    case 2: display = (java.lang.CharSequence)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -122,6 +132,40 @@ public class Reference extends org.apache.avro.specific.SpecificRecordBase imple
    */
   public void setReference(java.lang.CharSequence value) {
     this.reference = value;
+  }
+
+  /**
+   * Gets the value of the 'type' field.
+   * @return The value of the 'type' field.
+   */
+  public java.lang.CharSequence getType() {
+    return type;
+  }
+
+
+  /**
+   * Sets the value of the 'type' field.
+   * @param value the value to set.
+   */
+  public void setType(java.lang.CharSequence value) {
+    this.type = value;
+  }
+
+  /**
+   * Gets the value of the 'display' field.
+   * @return The value of the 'display' field.
+   */
+  public java.lang.CharSequence getDisplay() {
+    return display;
+  }
+
+
+  /**
+   * Sets the value of the 'display' field.
+   * @param value the value to set.
+   */
+  public void setDisplay(java.lang.CharSequence value) {
+    this.display = value;
   }
 
   /**
@@ -166,6 +210,8 @@ public class Reference extends org.apache.avro.specific.SpecificRecordBase imple
     implements org.apache.avro.data.RecordBuilder<Reference> {
 
     private java.lang.CharSequence reference;
+    private java.lang.CharSequence type;
+    private java.lang.CharSequence display;
 
     /** Creates a new Builder */
     private Builder() {
@@ -182,6 +228,14 @@ public class Reference extends org.apache.avro.specific.SpecificRecordBase imple
         this.reference = data().deepCopy(fields()[0].schema(), other.reference);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
+      if (isValidValue(fields()[1], other.type)) {
+        this.type = data().deepCopy(fields()[1].schema(), other.type);
+        fieldSetFlags()[1] = other.fieldSetFlags()[1];
+      }
+      if (isValidValue(fields()[2], other.display)) {
+        this.display = data().deepCopy(fields()[2].schema(), other.display);
+        fieldSetFlags()[2] = other.fieldSetFlags()[2];
+      }
     }
 
     /**
@@ -193,6 +247,14 @@ public class Reference extends org.apache.avro.specific.SpecificRecordBase imple
       if (isValidValue(fields()[0], other.reference)) {
         this.reference = data().deepCopy(fields()[0].schema(), other.reference);
         fieldSetFlags()[0] = true;
+      }
+      if (isValidValue(fields()[1], other.type)) {
+        this.type = data().deepCopy(fields()[1].schema(), other.type);
+        fieldSetFlags()[1] = true;
+      }
+      if (isValidValue(fields()[2], other.display)) {
+        this.display = data().deepCopy(fields()[2].schema(), other.display);
+        fieldSetFlags()[2] = true;
       }
     }
 
@@ -236,12 +298,94 @@ public class Reference extends org.apache.avro.specific.SpecificRecordBase imple
       return this;
     }
 
+    /**
+      * Gets the value of the 'type' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getType() {
+      return type;
+    }
+
+
+    /**
+      * Sets the value of the 'type' field.
+      * @param value The value of 'type'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Reference.Builder setType(java.lang.CharSequence value) {
+      validate(fields()[1], value);
+      this.type = value;
+      fieldSetFlags()[1] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'type' field has been set.
+      * @return True if the 'type' field has been set, false otherwise.
+      */
+    public boolean hasType() {
+      return fieldSetFlags()[1];
+    }
+
+
+    /**
+      * Clears the value of the 'type' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Reference.Builder clearType() {
+      type = null;
+      fieldSetFlags()[1] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'display' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getDisplay() {
+      return display;
+    }
+
+
+    /**
+      * Sets the value of the 'display' field.
+      * @param value The value of 'display'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Reference.Builder setDisplay(java.lang.CharSequence value) {
+      validate(fields()[2], value);
+      this.display = value;
+      fieldSetFlags()[2] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'display' field has been set.
+      * @return True if the 'display' field has been set, false otherwise.
+      */
+    public boolean hasDisplay() {
+      return fieldSetFlags()[2];
+    }
+
+
+    /**
+      * Clears the value of the 'display' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Reference.Builder clearDisplay() {
+      display = null;
+      fieldSetFlags()[2] = false;
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     public Reference build() {
       try {
         Reference record = new Reference();
         record.reference = fieldSetFlags()[0] ? this.reference : (java.lang.CharSequence) defaultValue(fields()[0]);
+        record.type = fieldSetFlags()[1] ? this.type : (java.lang.CharSequence) defaultValue(fields()[1]);
+        record.display = fieldSetFlags()[2] ? this.display : (java.lang.CharSequence) defaultValue(fields()[2]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -274,7 +418,29 @@ public class Reference extends org.apache.avro.specific.SpecificRecordBase imple
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
-    out.writeString(this.reference);
+    if (this.reference == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeString(this.reference);
+    }
+
+    if (this.type == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeString(this.type);
+    }
+
+    if (this.display == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeString(this.display);
+    }
 
   }
 
@@ -283,13 +449,55 @@ public class Reference extends org.apache.avro.specific.SpecificRecordBase imple
   {
     org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
     if (fieldOrder == null) {
-      this.reference = in.readString(this.reference instanceof Utf8 ? (Utf8)this.reference : null);
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.reference = null;
+      } else {
+        this.reference = in.readString(this.reference instanceof Utf8 ? (Utf8)this.reference : null);
+      }
+
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.type = null;
+      } else {
+        this.type = in.readString(this.type instanceof Utf8 ? (Utf8)this.type : null);
+      }
+
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.display = null;
+      } else {
+        this.display = in.readString(this.display instanceof Utf8 ? (Utf8)this.display : null);
+      }
 
     } else {
-      for (int i = 0; i < 1; i++) {
+      for (int i = 0; i < 3; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
-          this.reference = in.readString(this.reference instanceof Utf8 ? (Utf8)this.reference : null);
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.reference = null;
+          } else {
+            this.reference = in.readString(this.reference instanceof Utf8 ? (Utf8)this.reference : null);
+          }
+          break;
+
+        case 1:
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.type = null;
+          } else {
+            this.type = in.readString(this.type instanceof Utf8 ? (Utf8)this.type : null);
+          }
+          break;
+
+        case 2:
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.display = null;
+          } else {
+            this.display = in.readString(this.display instanceof Utf8 ? (Utf8)this.display : null);
+          }
           break;
 
         default:

@@ -4,14 +4,6 @@
   "namespace": "io.carrera.fhir.avro.models",
   "fields": [
     {
-      "name": "id",
-      "type": [
-        "null",
-        "string"
-      ],
-      "default": null
-    },
-    {
       "name": "substance",
       "type": [
         "null",

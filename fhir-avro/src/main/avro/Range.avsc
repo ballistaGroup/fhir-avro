@@ -2,10 +2,6 @@
   "name" : "Range",
   "type" : "record",
   "fields" : [ {
-    "name" : "id",
-    "type" : [ "null", "string" ],
-    "default": null
-  }, {
     "name" : "low",
     "type" : [ "null", "Quantity" ],
     "default": null

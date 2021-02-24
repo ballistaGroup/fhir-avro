@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class identifier_record extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 2390229583473032194L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"identifier_record\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"system\",\"type\":\"string\"},{\"name\":\"value\",\"type\":\"string\"}]}");
+  private static final long serialVersionUID = -1741839716568861104L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"identifier_record\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"value\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -346,9 +346,21 @@ public class identifier_record extends org.apache.avro.specific.SpecificRecordBa
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
-    out.writeString(this.system);
+    if (this.system == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeString(this.system);
+    }
 
-    out.writeString(this.value);
+    if (this.value == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeString(this.value);
+    }
 
   }
 
@@ -357,19 +369,39 @@ public class identifier_record extends org.apache.avro.specific.SpecificRecordBa
   {
     org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
     if (fieldOrder == null) {
-      this.system = in.readString(this.system instanceof Utf8 ? (Utf8)this.system : null);
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.system = null;
+      } else {
+        this.system = in.readString(this.system instanceof Utf8 ? (Utf8)this.system : null);
+      }
 
-      this.value = in.readString(this.value instanceof Utf8 ? (Utf8)this.value : null);
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.value = null;
+      } else {
+        this.value = in.readString(this.value instanceof Utf8 ? (Utf8)this.value : null);
+      }
 
     } else {
       for (int i = 0; i < 2; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
-          this.system = in.readString(this.system instanceof Utf8 ? (Utf8)this.system : null);
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.system = null;
+          } else {
+            this.system = in.readString(this.system instanceof Utf8 ? (Utf8)this.system : null);
+          }
           break;
 
         case 1:
-          this.value = in.readString(this.value instanceof Utf8 ? (Utf8)this.value : null);
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.value = null;
+          } else {
+            this.value = in.readString(this.value instanceof Utf8 ? (Utf8)this.value : null);
+          }
           break;
 
         default:

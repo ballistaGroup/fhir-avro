@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 7254902563582750840L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"AllergyIntolerance\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"clinicalStatus\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"verificationStatus\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"patient\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"reaction\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"AllergyIntolerance_Reaction\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"substance\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"manifestation\",\"type\":{\"type\":\"array\",\"items\":\"CodeableConcept\"}}]}}],\"default\":null}]}");
+  private static final long serialVersionUID = -854080888726033082L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"AllergyIntolerance\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"clinicalStatus\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"verificationStatus\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"patient\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"reaction\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"AllergyIntolerance_Reaction\",\"fields\":[{\"name\":\"substance\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"manifestation\",\"type\":{\"type\":\"array\",\"items\":\"CodeableConcept\"}}]}}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -1048,7 +1048,13 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
   {
     out.writeString(this.resourceType);
 
-    out.writeString(this.id);
+    if (this.id == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeString(this.id);
+    }
 
     if (this.type == null) {
       out.writeIndex(0);
@@ -1131,7 +1137,12 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
     if (fieldOrder == null) {
       this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
 
-      this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.id = null;
+      } else {
+        this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
+      }
 
       if (in.readIndex() != 1) {
         in.readNull();
@@ -1226,7 +1237,12 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
           break;
 
         case 1:
-          this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.id = null;
+          } else {
+            this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
+          }
           break;
 
         case 2:

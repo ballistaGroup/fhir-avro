@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Period extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 6287348397219614255L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Period\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null}]}");
+  private static final long serialVersionUID = -818182595686310317L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Period\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -74,7 +74,6 @@ static {
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence id;
   @Deprecated public java.lang.Object start;
   @Deprecated public java.lang.Object end;
 
@@ -87,12 +86,10 @@ static {
 
   /**
    * All-args constructor.
-   * @param id The new value for id
    * @param start The new value for start
    * @param end The new value for end
    */
-  public Period(java.lang.CharSequence id, java.lang.Object start, java.lang.Object end) {
-    this.id = id;
+  public Period(java.lang.Object start, java.lang.Object end) {
     this.start = start;
     this.end = end;
   }
@@ -102,9 +99,8 @@ static {
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return id;
-    case 1: return start;
-    case 2: return end;
+    case 0: return start;
+    case 1: return end;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -113,28 +109,10 @@ static {
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: id = (java.lang.CharSequence)value$; break;
-    case 1: start = value$; break;
-    case 2: end = value$; break;
+    case 0: start = value$; break;
+    case 1: end = value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
-  }
-
-  /**
-   * Gets the value of the 'id' field.
-   * @return The value of the 'id' field.
-   */
-  public java.lang.CharSequence getId() {
-    return id;
-  }
-
-
-  /**
-   * Sets the value of the 'id' field.
-   * @param value the value to set.
-   */
-  public void setId(java.lang.CharSequence value) {
-    this.id = value;
   }
 
   /**
@@ -212,7 +190,6 @@ static {
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Period>
     implements org.apache.avro.data.RecordBuilder<Period> {
 
-    private java.lang.CharSequence id;
     private java.lang.Object start;
     private java.lang.Object end;
 
@@ -227,17 +204,13 @@ static {
      */
     private Builder(io.carrera.fhir.avro.models.Period.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.id)) {
-        this.id = data().deepCopy(fields()[0].schema(), other.id);
+      if (isValidValue(fields()[0], other.start)) {
+        this.start = data().deepCopy(fields()[0].schema(), other.start);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
-      if (isValidValue(fields()[1], other.start)) {
-        this.start = data().deepCopy(fields()[1].schema(), other.start);
+      if (isValidValue(fields()[1], other.end)) {
+        this.end = data().deepCopy(fields()[1].schema(), other.end);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
-      }
-      if (isValidValue(fields()[2], other.end)) {
-        this.end = data().deepCopy(fields()[2].schema(), other.end);
-        fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
     }
 
@@ -247,58 +220,14 @@ static {
      */
     private Builder(io.carrera.fhir.avro.models.Period other) {
       super(SCHEMA$);
-      if (isValidValue(fields()[0], other.id)) {
-        this.id = data().deepCopy(fields()[0].schema(), other.id);
+      if (isValidValue(fields()[0], other.start)) {
+        this.start = data().deepCopy(fields()[0].schema(), other.start);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.start)) {
-        this.start = data().deepCopy(fields()[1].schema(), other.start);
+      if (isValidValue(fields()[1], other.end)) {
+        this.end = data().deepCopy(fields()[1].schema(), other.end);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.end)) {
-        this.end = data().deepCopy(fields()[2].schema(), other.end);
-        fieldSetFlags()[2] = true;
-      }
-    }
-
-    /**
-      * Gets the value of the 'id' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getId() {
-      return id;
-    }
-
-
-    /**
-      * Sets the value of the 'id' field.
-      * @param value The value of 'id'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Period.Builder setId(java.lang.CharSequence value) {
-      validate(fields()[0], value);
-      this.id = value;
-      fieldSetFlags()[0] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'id' field has been set.
-      * @return True if the 'id' field has been set, false otherwise.
-      */
-    public boolean hasId() {
-      return fieldSetFlags()[0];
-    }
-
-
-    /**
-      * Clears the value of the 'id' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Period.Builder clearId() {
-      id = null;
-      fieldSetFlags()[0] = false;
-      return this;
     }
 
     /**
@@ -316,9 +245,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Period.Builder setStart(java.lang.Object value) {
-      validate(fields()[1], value);
+      validate(fields()[0], value);
       this.start = value;
-      fieldSetFlags()[1] = true;
+      fieldSetFlags()[0] = true;
       return this;
     }
 
@@ -327,7 +256,7 @@ static {
       * @return True if the 'start' field has been set, false otherwise.
       */
     public boolean hasStart() {
-      return fieldSetFlags()[1];
+      return fieldSetFlags()[0];
     }
 
 
@@ -337,7 +266,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Period.Builder clearStart() {
       start = null;
-      fieldSetFlags()[1] = false;
+      fieldSetFlags()[0] = false;
       return this;
     }
 
@@ -356,9 +285,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Period.Builder setEnd(java.lang.Object value) {
-      validate(fields()[2], value);
+      validate(fields()[1], value);
       this.end = value;
-      fieldSetFlags()[2] = true;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
@@ -367,7 +296,7 @@ static {
       * @return True if the 'end' field has been set, false otherwise.
       */
     public boolean hasEnd() {
-      return fieldSetFlags()[2];
+      return fieldSetFlags()[1];
     }
 
 
@@ -377,7 +306,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Period.Builder clearEnd() {
       end = null;
-      fieldSetFlags()[2] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -386,9 +315,8 @@ static {
     public Period build() {
       try {
         Period record = new Period();
-        record.id = fieldSetFlags()[0] ? this.id : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.start = fieldSetFlags()[1] ? this.start :  defaultValue(fields()[1]);
-        record.end = fieldSetFlags()[2] ? this.end :  defaultValue(fields()[2]);
+        record.start = fieldSetFlags()[0] ? this.start :  defaultValue(fields()[0]);
+        record.end = fieldSetFlags()[1] ? this.end :  defaultValue(fields()[1]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
