@@ -9,7 +9,10 @@
     },
     {
       "name": "id",
-      "type": ["null","string"],
+      "type": [
+        "null",
+        "string"
+      ],
       "default": null
     },
     {
@@ -45,14 +48,16 @@
           "type": "int",
           "logicalType": "date"
         }
-      ], "default" : null
+      ],
+      "default" : null
     },
     {
       "name": "maritalStatus",
       "type": [
         "null",
         "CodeableConcept"
-      ], "default" : null
+      ],
+      "default" : null
     }
   ]
 }

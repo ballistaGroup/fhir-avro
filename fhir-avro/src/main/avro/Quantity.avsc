@@ -29,7 +29,6 @@
     },
     {
       "name": "code",
-      "type": "string",
       "type": [
         "null",
         "string"
@@ -41,4 +40,3 @@
 
 
 
-    

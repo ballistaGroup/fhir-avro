@@ -1,66 +1,62 @@
 {
-    "name": "DiagnosticReport",
-    "type": "record",
-    "namespace": "io.carrera.fhir.avro.models",
-    "fields": [
-      {
-        "name": "resourceType",
-        "type": "string"
+  "name": "DiagnosticReport",
+  "type": "record",
+  "namespace": "io.carrera.fhir.avro.models",
+  "fields": [
+    {
+      "name": "resourceType",
+      "type": "string"
+    },
+    {
+      "name": "id",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
       },
-      {
-        "name": "id",
-        "type": "string"
-      },
-      {
-        "name": "status",
-        "type": "string"
-      },
-      {
-        "name": "category",
-        "type": "CodeableConcept"
-      },
-      {
-        "name": "code",
-        "type": "CodeableConcept"
-      },
-      {
-        "name": "subject",
-        "type": "Reference"
-      },
-      {
-        "name": "encounter",
-        "type": ["null", "Reference"],
-        "default" : null
-      },
-      {
-        "name": "effectiveDateTime",
-        "type": "int",
-        "logicalType": "date"
-      },
-      {
-        "name": "issued",
-        "type": "int",
-        "logicalType": "date"
-      },
-      {
-        "name": "result",
-        "type": {
-          "type": "array",
-          "items": {
-            "name": "result_record",
-            "type": "record",
-            "fields": [
-              {
-                "name": "reference",
-                "type": "string"
-              },
-              {
-                "name": "display",
-                "type": "string"
-              }
-            ]
-          }
-        }
-      }
-    ]
-  }
+    {
+      "name": "status",
+      "type": "string"
+    },
+    {
+      "name": "category",
+      "type": ["null", "CodeableConcept"],
+      "default": null
+    },
+    {
+      "name": "code",
+      "type": "CodeableConcept"
+    },
+    {
+      "name": "subject",
+      "type": ["null", "Reference"],
+      "default": null
+    },
+    {
+      "name": "encounter",
+      "type": ["null", "Reference"],
+      "default" : null
+    },
+    {
+      "name": "effectiveDateTime",
+      "type": ["null", "int"],
+      "logicalType": "date",
+      "default": null
+    },
+    {
+      "name": "issued",
+      "type": ["null", "int"],
+      "logicalType": "date",
+      "default": null
+    },
+    {
+      "name": "result",
+      "type": ["null", {
+        "type": "array",
+        "items": "Reference"
+      }],
+      "default": null
+    }
+  ]
+}

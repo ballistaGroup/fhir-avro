@@ -2,9 +2,6 @@
   "name" : "Condition_Stage",
   "type" : "record",
   "fields" : [ {
-    "name" : "id",
-    "type" : [ "null", "string" ], "default" : null
-  }, {
     "name" : "summary",
     "type" : [ "null", "CodeableConcept" ], "default" : null
   }, {
