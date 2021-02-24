@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Ratio extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 5077483381873746490L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Ratio\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"numerator\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"float\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"denominator\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}");
+  private static final long serialVersionUID = 6173606672339518289L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Ratio\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"numerator\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"float\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"denominator\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,7 +71,6 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence id;
   @Deprecated public io.carrera.fhir.avro.models.Quantity numerator;
   @Deprecated public io.carrera.fhir.avro.models.Quantity denominator;
 
@@ -84,12 +83,10 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
 
   /**
    * All-args constructor.
-   * @param id The new value for id
    * @param numerator The new value for numerator
    * @param denominator The new value for denominator
    */
-  public Ratio(java.lang.CharSequence id, io.carrera.fhir.avro.models.Quantity numerator, io.carrera.fhir.avro.models.Quantity denominator) {
-    this.id = id;
+  public Ratio(io.carrera.fhir.avro.models.Quantity numerator, io.carrera.fhir.avro.models.Quantity denominator) {
     this.numerator = numerator;
     this.denominator = denominator;
   }
@@ -99,9 +96,8 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return id;
-    case 1: return numerator;
-    case 2: return denominator;
+    case 0: return numerator;
+    case 1: return denominator;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -110,28 +106,10 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: id = (java.lang.CharSequence)value$; break;
-    case 1: numerator = (io.carrera.fhir.avro.models.Quantity)value$; break;
-    case 2: denominator = (io.carrera.fhir.avro.models.Quantity)value$; break;
+    case 0: numerator = (io.carrera.fhir.avro.models.Quantity)value$; break;
+    case 1: denominator = (io.carrera.fhir.avro.models.Quantity)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
-  }
-
-  /**
-   * Gets the value of the 'id' field.
-   * @return The value of the 'id' field.
-   */
-  public java.lang.CharSequence getId() {
-    return id;
-  }
-
-
-  /**
-   * Sets the value of the 'id' field.
-   * @param value the value to set.
-   */
-  public void setId(java.lang.CharSequence value) {
-    this.id = value;
   }
 
   /**
@@ -209,7 +187,6 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Ratio>
     implements org.apache.avro.data.RecordBuilder<Ratio> {
 
-    private java.lang.CharSequence id;
     private io.carrera.fhir.avro.models.Quantity numerator;
     private io.carrera.fhir.avro.models.Quantity.Builder numeratorBuilder;
     private io.carrera.fhir.avro.models.Quantity denominator;
@@ -226,20 +203,16 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
      */
     private Builder(io.carrera.fhir.avro.models.Ratio.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.id)) {
-        this.id = data().deepCopy(fields()[0].schema(), other.id);
+      if (isValidValue(fields()[0], other.numerator)) {
+        this.numerator = data().deepCopy(fields()[0].schema(), other.numerator);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
-      }
-      if (isValidValue(fields()[1], other.numerator)) {
-        this.numerator = data().deepCopy(fields()[1].schema(), other.numerator);
-        fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
       if (other.hasNumeratorBuilder()) {
         this.numeratorBuilder = io.carrera.fhir.avro.models.Quantity.newBuilder(other.getNumeratorBuilder());
       }
-      if (isValidValue(fields()[2], other.denominator)) {
-        this.denominator = data().deepCopy(fields()[2].schema(), other.denominator);
-        fieldSetFlags()[2] = other.fieldSetFlags()[2];
+      if (isValidValue(fields()[1], other.denominator)) {
+        this.denominator = data().deepCopy(fields()[1].schema(), other.denominator);
+        fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
       if (other.hasDenominatorBuilder()) {
         this.denominatorBuilder = io.carrera.fhir.avro.models.Quantity.newBuilder(other.getDenominatorBuilder());
@@ -252,60 +225,16 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
      */
     private Builder(io.carrera.fhir.avro.models.Ratio other) {
       super(SCHEMA$);
-      if (isValidValue(fields()[0], other.id)) {
-        this.id = data().deepCopy(fields()[0].schema(), other.id);
+      if (isValidValue(fields()[0], other.numerator)) {
+        this.numerator = data().deepCopy(fields()[0].schema(), other.numerator);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.numerator)) {
-        this.numerator = data().deepCopy(fields()[1].schema(), other.numerator);
+      this.numeratorBuilder = null;
+      if (isValidValue(fields()[1], other.denominator)) {
+        this.denominator = data().deepCopy(fields()[1].schema(), other.denominator);
         fieldSetFlags()[1] = true;
       }
-      this.numeratorBuilder = null;
-      if (isValidValue(fields()[2], other.denominator)) {
-        this.denominator = data().deepCopy(fields()[2].schema(), other.denominator);
-        fieldSetFlags()[2] = true;
-      }
       this.denominatorBuilder = null;
-    }
-
-    /**
-      * Gets the value of the 'id' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getId() {
-      return id;
-    }
-
-
-    /**
-      * Sets the value of the 'id' field.
-      * @param value The value of 'id'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Ratio.Builder setId(java.lang.CharSequence value) {
-      validate(fields()[0], value);
-      this.id = value;
-      fieldSetFlags()[0] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'id' field has been set.
-      * @return True if the 'id' field has been set, false otherwise.
-      */
-    public boolean hasId() {
-      return fieldSetFlags()[0];
-    }
-
-
-    /**
-      * Clears the value of the 'id' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Ratio.Builder clearId() {
-      id = null;
-      fieldSetFlags()[0] = false;
-      return this;
     }
 
     /**
@@ -323,10 +252,10 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Ratio.Builder setNumerator(io.carrera.fhir.avro.models.Quantity value) {
-      validate(fields()[1], value);
+      validate(fields()[0], value);
       this.numeratorBuilder = null;
       this.numerator = value;
-      fieldSetFlags()[1] = true;
+      fieldSetFlags()[0] = true;
       return this;
     }
 
@@ -335,7 +264,7 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
       * @return True if the 'numerator' field has been set, false otherwise.
       */
     public boolean hasNumerator() {
-      return fieldSetFlags()[1];
+      return fieldSetFlags()[0];
     }
 
     /**
@@ -379,7 +308,7 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
     public io.carrera.fhir.avro.models.Ratio.Builder clearNumerator() {
       numerator = null;
       numeratorBuilder = null;
-      fieldSetFlags()[1] = false;
+      fieldSetFlags()[0] = false;
       return this;
     }
 
@@ -398,10 +327,10 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Ratio.Builder setDenominator(io.carrera.fhir.avro.models.Quantity value) {
-      validate(fields()[2], value);
+      validate(fields()[1], value);
       this.denominatorBuilder = null;
       this.denominator = value;
-      fieldSetFlags()[2] = true;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
@@ -410,7 +339,7 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
       * @return True if the 'denominator' field has been set, false otherwise.
       */
     public boolean hasDenominator() {
-      return fieldSetFlags()[2];
+      return fieldSetFlags()[1];
     }
 
     /**
@@ -454,7 +383,7 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
     public io.carrera.fhir.avro.models.Ratio.Builder clearDenominator() {
       denominator = null;
       denominatorBuilder = null;
-      fieldSetFlags()[2] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -463,7 +392,6 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
     public Ratio build() {
       try {
         Ratio record = new Ratio();
-        record.id = fieldSetFlags()[0] ? this.id : (java.lang.CharSequence) defaultValue(fields()[0]);
         if (numeratorBuilder != null) {
           try {
             record.numerator = this.numeratorBuilder.build();
@@ -472,7 +400,7 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
             throw e;
           }
         } else {
-          record.numerator = fieldSetFlags()[1] ? this.numerator : (io.carrera.fhir.avro.models.Quantity) defaultValue(fields()[1]);
+          record.numerator = fieldSetFlags()[0] ? this.numerator : (io.carrera.fhir.avro.models.Quantity) defaultValue(fields()[0]);
         }
         if (denominatorBuilder != null) {
           try {
@@ -482,7 +410,7 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
             throw e;
           }
         } else {
-          record.denominator = fieldSetFlags()[2] ? this.denominator : (io.carrera.fhir.avro.models.Quantity) defaultValue(fields()[2]);
+          record.denominator = fieldSetFlags()[1] ? this.denominator : (io.carrera.fhir.avro.models.Quantity) defaultValue(fields()[1]);
         }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
@@ -516,14 +444,6 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
-    if (this.id == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeString(this.id);
-    }
-
     if (this.numerator == null) {
       out.writeIndex(0);
       out.writeNull();
@@ -549,13 +469,6 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
     if (fieldOrder == null) {
       if (in.readIndex() != 1) {
         in.readNull();
-        this.id = null;
-      } else {
-        this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
         this.numerator = null;
       } else {
         if (this.numerator == null) {
@@ -575,18 +488,9 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
       }
 
     } else {
-      for (int i = 0; i < 3; i++) {
+      for (int i = 0; i < 2; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.id = null;
-          } else {
-            this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-          }
-          break;
-
-        case 1:
           if (in.readIndex() != 1) {
             in.readNull();
             this.numerator = null;
@@ -598,7 +502,7 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
           }
           break;
 
-        case 2:
+        case 1:
           if (in.readIndex() != 1) {
             in.readNull();
             this.denominator = null;

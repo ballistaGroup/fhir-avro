@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Range extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 2457787532567991166L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Range\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"low\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"float\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}");
+  private static final long serialVersionUID = -8284270193147057048L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Range\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"float\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,7 +71,6 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence id;
   @Deprecated public io.carrera.fhir.avro.models.Quantity low;
   @Deprecated public io.carrera.fhir.avro.models.Quantity high;
 
@@ -84,12 +83,10 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
 
   /**
    * All-args constructor.
-   * @param id The new value for id
    * @param low The new value for low
    * @param high The new value for high
    */
-  public Range(java.lang.CharSequence id, io.carrera.fhir.avro.models.Quantity low, io.carrera.fhir.avro.models.Quantity high) {
-    this.id = id;
+  public Range(io.carrera.fhir.avro.models.Quantity low, io.carrera.fhir.avro.models.Quantity high) {
     this.low = low;
     this.high = high;
   }
@@ -99,9 +96,8 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return id;
-    case 1: return low;
-    case 2: return high;
+    case 0: return low;
+    case 1: return high;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -110,28 +106,10 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: id = (java.lang.CharSequence)value$; break;
-    case 1: low = (io.carrera.fhir.avro.models.Quantity)value$; break;
-    case 2: high = (io.carrera.fhir.avro.models.Quantity)value$; break;
+    case 0: low = (io.carrera.fhir.avro.models.Quantity)value$; break;
+    case 1: high = (io.carrera.fhir.avro.models.Quantity)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
-  }
-
-  /**
-   * Gets the value of the 'id' field.
-   * @return The value of the 'id' field.
-   */
-  public java.lang.CharSequence getId() {
-    return id;
-  }
-
-
-  /**
-   * Sets the value of the 'id' field.
-   * @param value the value to set.
-   */
-  public void setId(java.lang.CharSequence value) {
-    this.id = value;
   }
 
   /**
@@ -209,7 +187,6 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Range>
     implements org.apache.avro.data.RecordBuilder<Range> {
 
-    private java.lang.CharSequence id;
     private io.carrera.fhir.avro.models.Quantity low;
     private io.carrera.fhir.avro.models.Quantity.Builder lowBuilder;
     private io.carrera.fhir.avro.models.Quantity high;
@@ -226,20 +203,16 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
      */
     private Builder(io.carrera.fhir.avro.models.Range.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.id)) {
-        this.id = data().deepCopy(fields()[0].schema(), other.id);
+      if (isValidValue(fields()[0], other.low)) {
+        this.low = data().deepCopy(fields()[0].schema(), other.low);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
-      }
-      if (isValidValue(fields()[1], other.low)) {
-        this.low = data().deepCopy(fields()[1].schema(), other.low);
-        fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
       if (other.hasLowBuilder()) {
         this.lowBuilder = io.carrera.fhir.avro.models.Quantity.newBuilder(other.getLowBuilder());
       }
-      if (isValidValue(fields()[2], other.high)) {
-        this.high = data().deepCopy(fields()[2].schema(), other.high);
-        fieldSetFlags()[2] = other.fieldSetFlags()[2];
+      if (isValidValue(fields()[1], other.high)) {
+        this.high = data().deepCopy(fields()[1].schema(), other.high);
+        fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
       if (other.hasHighBuilder()) {
         this.highBuilder = io.carrera.fhir.avro.models.Quantity.newBuilder(other.getHighBuilder());
@@ -252,60 +225,16 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
      */
     private Builder(io.carrera.fhir.avro.models.Range other) {
       super(SCHEMA$);
-      if (isValidValue(fields()[0], other.id)) {
-        this.id = data().deepCopy(fields()[0].schema(), other.id);
+      if (isValidValue(fields()[0], other.low)) {
+        this.low = data().deepCopy(fields()[0].schema(), other.low);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.low)) {
-        this.low = data().deepCopy(fields()[1].schema(), other.low);
+      this.lowBuilder = null;
+      if (isValidValue(fields()[1], other.high)) {
+        this.high = data().deepCopy(fields()[1].schema(), other.high);
         fieldSetFlags()[1] = true;
       }
-      this.lowBuilder = null;
-      if (isValidValue(fields()[2], other.high)) {
-        this.high = data().deepCopy(fields()[2].schema(), other.high);
-        fieldSetFlags()[2] = true;
-      }
       this.highBuilder = null;
-    }
-
-    /**
-      * Gets the value of the 'id' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getId() {
-      return id;
-    }
-
-
-    /**
-      * Sets the value of the 'id' field.
-      * @param value The value of 'id'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Range.Builder setId(java.lang.CharSequence value) {
-      validate(fields()[0], value);
-      this.id = value;
-      fieldSetFlags()[0] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'id' field has been set.
-      * @return True if the 'id' field has been set, false otherwise.
-      */
-    public boolean hasId() {
-      return fieldSetFlags()[0];
-    }
-
-
-    /**
-      * Clears the value of the 'id' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Range.Builder clearId() {
-      id = null;
-      fieldSetFlags()[0] = false;
-      return this;
     }
 
     /**
@@ -323,10 +252,10 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Range.Builder setLow(io.carrera.fhir.avro.models.Quantity value) {
-      validate(fields()[1], value);
+      validate(fields()[0], value);
       this.lowBuilder = null;
       this.low = value;
-      fieldSetFlags()[1] = true;
+      fieldSetFlags()[0] = true;
       return this;
     }
 
@@ -335,7 +264,7 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
       * @return True if the 'low' field has been set, false otherwise.
       */
     public boolean hasLow() {
-      return fieldSetFlags()[1];
+      return fieldSetFlags()[0];
     }
 
     /**
@@ -379,7 +308,7 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
     public io.carrera.fhir.avro.models.Range.Builder clearLow() {
       low = null;
       lowBuilder = null;
-      fieldSetFlags()[1] = false;
+      fieldSetFlags()[0] = false;
       return this;
     }
 
@@ -398,10 +327,10 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Range.Builder setHigh(io.carrera.fhir.avro.models.Quantity value) {
-      validate(fields()[2], value);
+      validate(fields()[1], value);
       this.highBuilder = null;
       this.high = value;
-      fieldSetFlags()[2] = true;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
@@ -410,7 +339,7 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
       * @return True if the 'high' field has been set, false otherwise.
       */
     public boolean hasHigh() {
-      return fieldSetFlags()[2];
+      return fieldSetFlags()[1];
     }
 
     /**
@@ -454,7 +383,7 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
     public io.carrera.fhir.avro.models.Range.Builder clearHigh() {
       high = null;
       highBuilder = null;
-      fieldSetFlags()[2] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -463,7 +392,6 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
     public Range build() {
       try {
         Range record = new Range();
-        record.id = fieldSetFlags()[0] ? this.id : (java.lang.CharSequence) defaultValue(fields()[0]);
         if (lowBuilder != null) {
           try {
             record.low = this.lowBuilder.build();
@@ -472,7 +400,7 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
             throw e;
           }
         } else {
-          record.low = fieldSetFlags()[1] ? this.low : (io.carrera.fhir.avro.models.Quantity) defaultValue(fields()[1]);
+          record.low = fieldSetFlags()[0] ? this.low : (io.carrera.fhir.avro.models.Quantity) defaultValue(fields()[0]);
         }
         if (highBuilder != null) {
           try {
@@ -482,7 +410,7 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
             throw e;
           }
         } else {
-          record.high = fieldSetFlags()[2] ? this.high : (io.carrera.fhir.avro.models.Quantity) defaultValue(fields()[2]);
+          record.high = fieldSetFlags()[1] ? this.high : (io.carrera.fhir.avro.models.Quantity) defaultValue(fields()[1]);
         }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
@@ -516,14 +444,6 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
-    if (this.id == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeString(this.id);
-    }
-
     if (this.low == null) {
       out.writeIndex(0);
       out.writeNull();
@@ -549,13 +469,6 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
     if (fieldOrder == null) {
       if (in.readIndex() != 1) {
         in.readNull();
-        this.id = null;
-      } else {
-        this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
         this.low = null;
       } else {
         if (this.low == null) {
@@ -575,18 +488,9 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
       }
 
     } else {
-      for (int i = 0; i < 3; i++) {
+      for (int i = 0; i < 2; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.id = null;
-          } else {
-            this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-          }
-          break;
-
-        case 1:
           if (in.readIndex() != 1) {
             in.readNull();
             this.low = null;
@@ -598,7 +502,7 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
           }
           break;
 
-        case 2:
+        case 1:
           if (in.readIndex() != 1) {
             in.readNull();
             this.high = null;

@@ -14,11 +14,14 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Procedure extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -7026351903972179232L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Procedure\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"code\",\"type\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"performedPeriod\",\"type\":{\"type\":\"record\",\"name\":\"performedPeriod\",\"fields\":[{\"name\":\"start\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"end\",\"type\":\"int\",\"logicalType\":\"date\"}]}}]}");
+  private static final long serialVersionUID = -109800848304148494L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Procedure\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"code\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"performedPeriod\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null}]}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
+static {
+    MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.DateConversion());
+  }
 
   private static final BinaryMessageEncoder<Procedure> ENCODER =
       new BinaryMessageEncoder<Procedure>(MODEL$, SCHEMA$);
@@ -77,7 +80,7 @@ public class Procedure extends org.apache.avro.specific.SpecificRecordBase imple
   @Deprecated public io.carrera.fhir.avro.models.CodeableConcept code;
   @Deprecated public io.carrera.fhir.avro.models.Reference subject;
   @Deprecated public io.carrera.fhir.avro.models.Reference encounter;
-  @Deprecated public io.carrera.fhir.avro.models.performedPeriod performedPeriod;
+  @Deprecated public io.carrera.fhir.avro.models.Period performedPeriod;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -96,7 +99,7 @@ public class Procedure extends org.apache.avro.specific.SpecificRecordBase imple
    * @param encounter The new value for encounter
    * @param performedPeriod The new value for performedPeriod
    */
-  public Procedure(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, io.carrera.fhir.avro.models.performedPeriod performedPeriod) {
+  public Procedure(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, io.carrera.fhir.avro.models.Period performedPeriod) {
     this.resourceType = resourceType;
     this.id = id;
     this.status = status;
@@ -132,7 +135,7 @@ public class Procedure extends org.apache.avro.specific.SpecificRecordBase imple
     case 3: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     case 4: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 5: encounter = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 6: performedPeriod = (io.carrera.fhir.avro.models.performedPeriod)value$; break;
+    case 6: performedPeriod = (io.carrera.fhir.avro.models.Period)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -243,7 +246,7 @@ public class Procedure extends org.apache.avro.specific.SpecificRecordBase imple
    * Gets the value of the 'performedPeriod' field.
    * @return The value of the 'performedPeriod' field.
    */
-  public io.carrera.fhir.avro.models.performedPeriod getPerformedPeriod() {
+  public io.carrera.fhir.avro.models.Period getPerformedPeriod() {
     return performedPeriod;
   }
 
@@ -252,7 +255,7 @@ public class Procedure extends org.apache.avro.specific.SpecificRecordBase imple
    * Sets the value of the 'performedPeriod' field.
    * @param value the value to set.
    */
-  public void setPerformedPeriod(io.carrera.fhir.avro.models.performedPeriod value) {
+  public void setPerformedPeriod(io.carrera.fhir.avro.models.Period value) {
     this.performedPeriod = value;
   }
 
@@ -306,8 +309,8 @@ public class Procedure extends org.apache.avro.specific.SpecificRecordBase imple
     private io.carrera.fhir.avro.models.Reference.Builder subjectBuilder;
     private io.carrera.fhir.avro.models.Reference encounter;
     private io.carrera.fhir.avro.models.Reference.Builder encounterBuilder;
-    private io.carrera.fhir.avro.models.performedPeriod performedPeriod;
-    private io.carrera.fhir.avro.models.performedPeriod.Builder performedPeriodBuilder;
+    private io.carrera.fhir.avro.models.Period performedPeriod;
+    private io.carrera.fhir.avro.models.Period.Builder performedPeriodBuilder;
 
     /** Creates a new Builder */
     private Builder() {
@@ -358,7 +361,7 @@ public class Procedure extends org.apache.avro.specific.SpecificRecordBase imple
         fieldSetFlags()[6] = other.fieldSetFlags()[6];
       }
       if (other.hasPerformedPeriodBuilder()) {
-        this.performedPeriodBuilder = io.carrera.fhir.avro.models.performedPeriod.newBuilder(other.getPerformedPeriodBuilder());
+        this.performedPeriodBuilder = io.carrera.fhir.avro.models.Period.newBuilder(other.getPerformedPeriodBuilder());
       }
     }
 
@@ -751,7 +754,7 @@ public class Procedure extends org.apache.avro.specific.SpecificRecordBase imple
       * Gets the value of the 'performedPeriod' field.
       * @return The value.
       */
-    public io.carrera.fhir.avro.models.performedPeriod getPerformedPeriod() {
+    public io.carrera.fhir.avro.models.Period getPerformedPeriod() {
       return performedPeriod;
     }
 
@@ -761,7 +764,7 @@ public class Procedure extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'performedPeriod'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Procedure.Builder setPerformedPeriod(io.carrera.fhir.avro.models.performedPeriod value) {
+    public io.carrera.fhir.avro.models.Procedure.Builder setPerformedPeriod(io.carrera.fhir.avro.models.Period value) {
       validate(fields()[6], value);
       this.performedPeriodBuilder = null;
       this.performedPeriod = value;
@@ -781,12 +784,12 @@ public class Procedure extends org.apache.avro.specific.SpecificRecordBase imple
      * Gets the Builder instance for the 'performedPeriod' field and creates one if it doesn't exist yet.
      * @return This builder.
      */
-    public io.carrera.fhir.avro.models.performedPeriod.Builder getPerformedPeriodBuilder() {
+    public io.carrera.fhir.avro.models.Period.Builder getPerformedPeriodBuilder() {
       if (performedPeriodBuilder == null) {
         if (hasPerformedPeriod()) {
-          setPerformedPeriodBuilder(io.carrera.fhir.avro.models.performedPeriod.newBuilder(performedPeriod));
+          setPerformedPeriodBuilder(io.carrera.fhir.avro.models.Period.newBuilder(performedPeriod));
         } else {
-          setPerformedPeriodBuilder(io.carrera.fhir.avro.models.performedPeriod.newBuilder());
+          setPerformedPeriodBuilder(io.carrera.fhir.avro.models.Period.newBuilder());
         }
       }
       return performedPeriodBuilder;
@@ -797,7 +800,7 @@ public class Procedure extends org.apache.avro.specific.SpecificRecordBase imple
      * @param value The builder instance that must be set.
      * @return This builder.
      */
-    public io.carrera.fhir.avro.models.Procedure.Builder setPerformedPeriodBuilder(io.carrera.fhir.avro.models.performedPeriod.Builder value) {
+    public io.carrera.fhir.avro.models.Procedure.Builder setPerformedPeriodBuilder(io.carrera.fhir.avro.models.Period.Builder value) {
       clearPerformedPeriod();
       performedPeriodBuilder = value;
       return this;
@@ -868,7 +871,7 @@ public class Procedure extends org.apache.avro.specific.SpecificRecordBase imple
             throw e;
           }
         } else {
-          record.performedPeriod = fieldSetFlags()[6] ? this.performedPeriod : (io.carrera.fhir.avro.models.performedPeriod) defaultValue(fields()[6]);
+          record.performedPeriod = fieldSetFlags()[6] ? this.performedPeriod : (io.carrera.fhir.avro.models.Period) defaultValue(fields()[6]);
         }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
@@ -897,123 +900,6 @@ public class Procedure extends org.apache.avro.specific.SpecificRecordBase imple
     READER$.read(this, SpecificData.getDecoder(in));
   }
 
-  @Override protected boolean hasCustomCoders() { return true; }
-
-  @Override public void customEncode(org.apache.avro.io.Encoder out)
-    throws java.io.IOException
-  {
-    out.writeString(this.resourceType);
-
-    out.writeString(this.id);
-
-    out.writeString(this.status);
-
-    this.code.customEncode(out);
-
-    this.subject.customEncode(out);
-
-    if (this.encounter == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      this.encounter.customEncode(out);
-    }
-
-    this.performedPeriod.customEncode(out);
-
-  }
-
-  @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
-    throws java.io.IOException
-  {
-    org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
-    if (fieldOrder == null) {
-      this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
-
-      this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-
-      this.status = in.readString(this.status instanceof Utf8 ? (Utf8)this.status : null);
-
-      if (this.code == null) {
-        this.code = new io.carrera.fhir.avro.models.CodeableConcept();
-      }
-      this.code.customDecode(in);
-
-      if (this.subject == null) {
-        this.subject = new io.carrera.fhir.avro.models.Reference();
-      }
-      this.subject.customDecode(in);
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.encounter = null;
-      } else {
-        if (this.encounter == null) {
-          this.encounter = new io.carrera.fhir.avro.models.Reference();
-        }
-        this.encounter.customDecode(in);
-      }
-
-      if (this.performedPeriod == null) {
-        this.performedPeriod = new io.carrera.fhir.avro.models.performedPeriod();
-      }
-      this.performedPeriod.customDecode(in);
-
-    } else {
-      for (int i = 0; i < 7; i++) {
-        switch (fieldOrder[i].pos()) {
-        case 0:
-          this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
-          break;
-
-        case 1:
-          this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-          break;
-
-        case 2:
-          this.status = in.readString(this.status instanceof Utf8 ? (Utf8)this.status : null);
-          break;
-
-        case 3:
-          if (this.code == null) {
-            this.code = new io.carrera.fhir.avro.models.CodeableConcept();
-          }
-          this.code.customDecode(in);
-          break;
-
-        case 4:
-          if (this.subject == null) {
-            this.subject = new io.carrera.fhir.avro.models.Reference();
-          }
-          this.subject.customDecode(in);
-          break;
-
-        case 5:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.encounter = null;
-          } else {
-            if (this.encounter == null) {
-              this.encounter = new io.carrera.fhir.avro.models.Reference();
-            }
-            this.encounter.customDecode(in);
-          }
-          break;
-
-        case 6:
-          if (this.performedPeriod == null) {
-            this.performedPeriod = new io.carrera.fhir.avro.models.performedPeriod();
-          }
-          this.performedPeriod.customDecode(in);
-          break;
-
-        default:
-          throw new java.io.IOException("Corrupt ResolvingDecoder.");
-        }
-      }
-    }
-  }
 }
 
 

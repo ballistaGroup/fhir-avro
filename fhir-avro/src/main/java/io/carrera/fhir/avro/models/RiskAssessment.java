@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class RiskAssessment extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 5783277246393476725L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"RiskAssessment\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"prediction\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"RiskAssessment_Prediction\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"outcome\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"probabilityDecimal\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"probabilityRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"low\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"float\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}],\"default\":null},{\"name\":\"qualitativeRisk\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"relativeRisk\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"whenPeriod\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null}]}],\"default\":null},{\"name\":\"whenRange\",\"type\":[\"null\",\"Range\"],\"default\":null},{\"name\":\"rationale\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null}]}");
+  private static final long serialVersionUID = -4984599085824417874L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"RiskAssessment\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"prediction\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"RiskAssessment_Prediction\",\"fields\":[{\"name\":\"outcome\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"probabilityDecimal\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"probabilityRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"float\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}],\"default\":null},{\"name\":\"qualitativeRisk\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"relativeRisk\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"whenPeriod\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null}]}],\"default\":null},{\"name\":\"whenRange\",\"type\":[\"null\",\"Range\"],\"default\":null},{\"name\":\"rationale\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -74,6 +74,9 @@ static {
     return DECODER.decode(b);
   }
 
+  @Deprecated public java.lang.CharSequence id;
+  @Deprecated public java.lang.CharSequence status;
+  @Deprecated public io.carrera.fhir.avro.models.Reference subject;
   @Deprecated public java.util.List<io.carrera.fhir.avro.models.RiskAssessment_Prediction> prediction;
 
   /**
@@ -85,9 +88,15 @@ static {
 
   /**
    * All-args constructor.
+   * @param id The new value for id
+   * @param status The new value for status
+   * @param subject The new value for subject
    * @param prediction The new value for prediction
    */
-  public RiskAssessment(java.util.List<io.carrera.fhir.avro.models.RiskAssessment_Prediction> prediction) {
+  public RiskAssessment(java.lang.CharSequence id, java.lang.CharSequence status, io.carrera.fhir.avro.models.Reference subject, java.util.List<io.carrera.fhir.avro.models.RiskAssessment_Prediction> prediction) {
+    this.id = id;
+    this.status = status;
+    this.subject = subject;
     this.prediction = prediction;
   }
 
@@ -96,7 +105,10 @@ static {
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return prediction;
+    case 0: return id;
+    case 1: return status;
+    case 2: return subject;
+    case 3: return prediction;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -105,9 +117,63 @@ static {
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: prediction = (java.util.List<io.carrera.fhir.avro.models.RiskAssessment_Prediction>)value$; break;
+    case 0: id = (java.lang.CharSequence)value$; break;
+    case 1: status = (java.lang.CharSequence)value$; break;
+    case 2: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 3: prediction = (java.util.List<io.carrera.fhir.avro.models.RiskAssessment_Prediction>)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
+  }
+
+  /**
+   * Gets the value of the 'id' field.
+   * @return The value of the 'id' field.
+   */
+  public java.lang.CharSequence getId() {
+    return id;
+  }
+
+
+  /**
+   * Sets the value of the 'id' field.
+   * @param value the value to set.
+   */
+  public void setId(java.lang.CharSequence value) {
+    this.id = value;
+  }
+
+  /**
+   * Gets the value of the 'status' field.
+   * @return The value of the 'status' field.
+   */
+  public java.lang.CharSequence getStatus() {
+    return status;
+  }
+
+
+  /**
+   * Sets the value of the 'status' field.
+   * @param value the value to set.
+   */
+  public void setStatus(java.lang.CharSequence value) {
+    this.status = value;
+  }
+
+  /**
+   * Gets the value of the 'subject' field.
+   * @return The value of the 'subject' field.
+   */
+  public io.carrera.fhir.avro.models.Reference getSubject() {
+    return subject;
+  }
+
+
+  /**
+   * Sets the value of the 'subject' field.
+   * @param value the value to set.
+   */
+  public void setSubject(io.carrera.fhir.avro.models.Reference value) {
+    this.subject = value;
   }
 
   /**
@@ -168,6 +234,10 @@ static {
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<RiskAssessment>
     implements org.apache.avro.data.RecordBuilder<RiskAssessment> {
 
+    private java.lang.CharSequence id;
+    private java.lang.CharSequence status;
+    private io.carrera.fhir.avro.models.Reference subject;
+    private io.carrera.fhir.avro.models.Reference.Builder subjectBuilder;
     private java.util.List<io.carrera.fhir.avro.models.RiskAssessment_Prediction> prediction;
 
     /** Creates a new Builder */
@@ -181,9 +251,24 @@ static {
      */
     private Builder(io.carrera.fhir.avro.models.RiskAssessment.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.prediction)) {
-        this.prediction = data().deepCopy(fields()[0].schema(), other.prediction);
+      if (isValidValue(fields()[0], other.id)) {
+        this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
+      }
+      if (isValidValue(fields()[1], other.status)) {
+        this.status = data().deepCopy(fields()[1].schema(), other.status);
+        fieldSetFlags()[1] = other.fieldSetFlags()[1];
+      }
+      if (isValidValue(fields()[2], other.subject)) {
+        this.subject = data().deepCopy(fields()[2].schema(), other.subject);
+        fieldSetFlags()[2] = other.fieldSetFlags()[2];
+      }
+      if (other.hasSubjectBuilder()) {
+        this.subjectBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getSubjectBuilder());
+      }
+      if (isValidValue(fields()[3], other.prediction)) {
+        this.prediction = data().deepCopy(fields()[3].schema(), other.prediction);
+        fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
     }
 
@@ -193,10 +278,178 @@ static {
      */
     private Builder(io.carrera.fhir.avro.models.RiskAssessment other) {
       super(SCHEMA$);
-      if (isValidValue(fields()[0], other.prediction)) {
-        this.prediction = data().deepCopy(fields()[0].schema(), other.prediction);
+      if (isValidValue(fields()[0], other.id)) {
+        this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = true;
       }
+      if (isValidValue(fields()[1], other.status)) {
+        this.status = data().deepCopy(fields()[1].schema(), other.status);
+        fieldSetFlags()[1] = true;
+      }
+      if (isValidValue(fields()[2], other.subject)) {
+        this.subject = data().deepCopy(fields()[2].schema(), other.subject);
+        fieldSetFlags()[2] = true;
+      }
+      this.subjectBuilder = null;
+      if (isValidValue(fields()[3], other.prediction)) {
+        this.prediction = data().deepCopy(fields()[3].schema(), other.prediction);
+        fieldSetFlags()[3] = true;
+      }
+    }
+
+    /**
+      * Gets the value of the 'id' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getId() {
+      return id;
+    }
+
+
+    /**
+      * Sets the value of the 'id' field.
+      * @param value The value of 'id'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setId(java.lang.CharSequence value) {
+      validate(fields()[0], value);
+      this.id = value;
+      fieldSetFlags()[0] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'id' field has been set.
+      * @return True if the 'id' field has been set, false otherwise.
+      */
+    public boolean hasId() {
+      return fieldSetFlags()[0];
+    }
+
+
+    /**
+      * Clears the value of the 'id' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearId() {
+      id = null;
+      fieldSetFlags()[0] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'status' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getStatus() {
+      return status;
+    }
+
+
+    /**
+      * Sets the value of the 'status' field.
+      * @param value The value of 'status'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setStatus(java.lang.CharSequence value) {
+      validate(fields()[1], value);
+      this.status = value;
+      fieldSetFlags()[1] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'status' field has been set.
+      * @return True if the 'status' field has been set, false otherwise.
+      */
+    public boolean hasStatus() {
+      return fieldSetFlags()[1];
+    }
+
+
+    /**
+      * Clears the value of the 'status' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearStatus() {
+      status = null;
+      fieldSetFlags()[1] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'subject' field.
+      * @return The value.
+      */
+    public io.carrera.fhir.avro.models.Reference getSubject() {
+      return subject;
+    }
+
+
+    /**
+      * Sets the value of the 'subject' field.
+      * @param value The value of 'subject'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setSubject(io.carrera.fhir.avro.models.Reference value) {
+      validate(fields()[2], value);
+      this.subjectBuilder = null;
+      this.subject = value;
+      fieldSetFlags()[2] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'subject' field has been set.
+      * @return True if the 'subject' field has been set, false otherwise.
+      */
+    public boolean hasSubject() {
+      return fieldSetFlags()[2];
+    }
+
+    /**
+     * Gets the Builder instance for the 'subject' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.Reference.Builder getSubjectBuilder() {
+      if (subjectBuilder == null) {
+        if (hasSubject()) {
+          setSubjectBuilder(io.carrera.fhir.avro.models.Reference.newBuilder(subject));
+        } else {
+          setSubjectBuilder(io.carrera.fhir.avro.models.Reference.newBuilder());
+        }
+      }
+      return subjectBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'subject' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder setSubjectBuilder(io.carrera.fhir.avro.models.Reference.Builder value) {
+      clearSubject();
+      subjectBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'subject' field has an active Builder instance
+     * @return True if the 'subject' field has an active Builder instance
+     */
+    public boolean hasSubjectBuilder() {
+      return subjectBuilder != null;
+    }
+
+    /**
+      * Clears the value of the 'subject' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.RiskAssessment.Builder clearSubject() {
+      subject = null;
+      subjectBuilder = null;
+      fieldSetFlags()[2] = false;
+      return this;
     }
 
     /**
@@ -214,9 +467,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.RiskAssessment.Builder setPrediction(java.util.List<io.carrera.fhir.avro.models.RiskAssessment_Prediction> value) {
-      validate(fields()[0], value);
+      validate(fields()[3], value);
       this.prediction = value;
-      fieldSetFlags()[0] = true;
+      fieldSetFlags()[3] = true;
       return this;
     }
 
@@ -225,7 +478,7 @@ static {
       * @return True if the 'prediction' field has been set, false otherwise.
       */
     public boolean hasPrediction() {
-      return fieldSetFlags()[0];
+      return fieldSetFlags()[3];
     }
 
 
@@ -235,7 +488,7 @@ static {
       */
     public io.carrera.fhir.avro.models.RiskAssessment.Builder clearPrediction() {
       prediction = null;
-      fieldSetFlags()[0] = false;
+      fieldSetFlags()[3] = false;
       return this;
     }
 
@@ -244,7 +497,19 @@ static {
     public RiskAssessment build() {
       try {
         RiskAssessment record = new RiskAssessment();
-        record.prediction = fieldSetFlags()[0] ? this.prediction : (java.util.List<io.carrera.fhir.avro.models.RiskAssessment_Prediction>) defaultValue(fields()[0]);
+        record.id = fieldSetFlags()[0] ? this.id : (java.lang.CharSequence) defaultValue(fields()[0]);
+        record.status = fieldSetFlags()[1] ? this.status : (java.lang.CharSequence) defaultValue(fields()[1]);
+        if (subjectBuilder != null) {
+          try {
+            record.subject = this.subjectBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("subject"));
+            throw e;
+          }
+        } else {
+          record.subject = fieldSetFlags()[2] ? this.subject : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[2]);
+        }
+        record.prediction = fieldSetFlags()[3] ? this.prediction : (java.util.List<io.carrera.fhir.avro.models.RiskAssessment_Prediction>) defaultValue(fields()[3]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;

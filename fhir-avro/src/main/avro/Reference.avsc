@@ -13,11 +13,11 @@
       "type": ["null", "string"],
       "default": null
     },
-    {
-      "name": "identifier",
-      "type": ["null", "identifier_record"],
-      "default": null
-    },
+    //{
+    //  "name": "identifier",
+    //  "type": ["null", "identifier_record"],
+    //  "default": null
+    //},
     {
       "name": "display",
       "type": ["null", "string"],

@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 3080751168402771959L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"DiagnosticReport\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"effectiveDateTime\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"issued\",\"type\":\"int\",\"logicalType\":\"date\"},{\"name\":\"result\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"result_record\",\"fields\":[{\"name\":\"reference\",\"type\":\"string\"},{\"name\":\"display\",\"type\":\"string\"}]}}}]}");
+  private static final long serialVersionUID = 7179350864894063356L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"DiagnosticReport\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"subject\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"effectiveDateTime\",\"type\":[\"null\",\"int\"],\"default\":null,\"logicalType\":\"date\"},{\"name\":\"issued\",\"type\":[\"null\",\"int\"],\"default\":null,\"logicalType\":\"date\"},{\"name\":\"result\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -78,9 +78,9 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
   @Deprecated public io.carrera.fhir.avro.models.CodeableConcept code;
   @Deprecated public io.carrera.fhir.avro.models.Reference subject;
   @Deprecated public io.carrera.fhir.avro.models.Reference encounter;
-  @Deprecated public int effectiveDateTime;
-  @Deprecated public int issued;
-  @Deprecated public java.util.List<io.carrera.fhir.avro.models.result_record> result;
+  @Deprecated public java.lang.Integer effectiveDateTime;
+  @Deprecated public java.lang.Integer issued;
+  @Deprecated public java.util.List<io.carrera.fhir.avro.models.Reference> result;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -102,7 +102,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
    * @param issued The new value for issued
    * @param result The new value for result
    */
-  public DiagnosticReport(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.lang.Integer effectiveDateTime, java.lang.Integer issued, java.util.List<io.carrera.fhir.avro.models.result_record> result) {
+  public DiagnosticReport(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.lang.Integer effectiveDateTime, java.lang.Integer issued, java.util.List<io.carrera.fhir.avro.models.Reference> result) {
     this.resourceType = resourceType;
     this.id = id;
     this.status = status;
@@ -147,7 +147,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
     case 6: encounter = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 7: effectiveDateTime = (java.lang.Integer)value$; break;
     case 8: issued = (java.lang.Integer)value$; break;
-    case 9: result = (java.util.List<io.carrera.fhir.avro.models.result_record>)value$; break;
+    case 9: result = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -275,7 +275,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
    * Gets the value of the 'effectiveDateTime' field.
    * @return The value of the 'effectiveDateTime' field.
    */
-  public int getEffectiveDateTime() {
+  public java.lang.Integer getEffectiveDateTime() {
     return effectiveDateTime;
   }
 
@@ -284,7 +284,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
    * Sets the value of the 'effectiveDateTime' field.
    * @param value the value to set.
    */
-  public void setEffectiveDateTime(int value) {
+  public void setEffectiveDateTime(java.lang.Integer value) {
     this.effectiveDateTime = value;
   }
 
@@ -292,7 +292,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
    * Gets the value of the 'issued' field.
    * @return The value of the 'issued' field.
    */
-  public int getIssued() {
+  public java.lang.Integer getIssued() {
     return issued;
   }
 
@@ -301,7 +301,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
    * Sets the value of the 'issued' field.
    * @param value the value to set.
    */
-  public void setIssued(int value) {
+  public void setIssued(java.lang.Integer value) {
     this.issued = value;
   }
 
@@ -309,7 +309,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
    * Gets the value of the 'result' field.
    * @return The value of the 'result' field.
    */
-  public java.util.List<io.carrera.fhir.avro.models.result_record> getResult() {
+  public java.util.List<io.carrera.fhir.avro.models.Reference> getResult() {
     return result;
   }
 
@@ -318,7 +318,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
    * Sets the value of the 'result' field.
    * @param value the value to set.
    */
-  public void setResult(java.util.List<io.carrera.fhir.avro.models.result_record> value) {
+  public void setResult(java.util.List<io.carrera.fhir.avro.models.Reference> value) {
     this.result = value;
   }
 
@@ -374,9 +374,9 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
     private io.carrera.fhir.avro.models.Reference.Builder subjectBuilder;
     private io.carrera.fhir.avro.models.Reference encounter;
     private io.carrera.fhir.avro.models.Reference.Builder encounterBuilder;
-    private int effectiveDateTime;
-    private int issued;
-    private java.util.List<io.carrera.fhir.avro.models.result_record> result;
+    private java.lang.Integer effectiveDateTime;
+    private java.lang.Integer issued;
+    private java.util.List<io.carrera.fhir.avro.models.Reference> result;
 
     /** Creates a new Builder */
     private Builder() {
@@ -919,7 +919,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
       * Gets the value of the 'effectiveDateTime' field.
       * @return The value.
       */
-    public int getEffectiveDateTime() {
+    public java.lang.Integer getEffectiveDateTime() {
       return effectiveDateTime;
     }
 
@@ -929,7 +929,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
       * @param value The value of 'effectiveDateTime'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.DiagnosticReport.Builder setEffectiveDateTime(int value) {
+    public io.carrera.fhir.avro.models.DiagnosticReport.Builder setEffectiveDateTime(java.lang.Integer value) {
       validate(fields()[7], value);
       this.effectiveDateTime = value;
       fieldSetFlags()[7] = true;
@@ -950,6 +950,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.DiagnosticReport.Builder clearEffectiveDateTime() {
+      effectiveDateTime = null;
       fieldSetFlags()[7] = false;
       return this;
     }
@@ -958,7 +959,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
       * Gets the value of the 'issued' field.
       * @return The value.
       */
-    public int getIssued() {
+    public java.lang.Integer getIssued() {
       return issued;
     }
 
@@ -968,7 +969,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
       * @param value The value of 'issued'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.DiagnosticReport.Builder setIssued(int value) {
+    public io.carrera.fhir.avro.models.DiagnosticReport.Builder setIssued(java.lang.Integer value) {
       validate(fields()[8], value);
       this.issued = value;
       fieldSetFlags()[8] = true;
@@ -989,6 +990,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.DiagnosticReport.Builder clearIssued() {
+      issued = null;
       fieldSetFlags()[8] = false;
       return this;
     }
@@ -997,7 +999,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
       * Gets the value of the 'result' field.
       * @return The value.
       */
-    public java.util.List<io.carrera.fhir.avro.models.result_record> getResult() {
+    public java.util.List<io.carrera.fhir.avro.models.Reference> getResult() {
       return result;
     }
 
@@ -1007,7 +1009,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
       * @param value The value of 'result'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.DiagnosticReport.Builder setResult(java.util.List<io.carrera.fhir.avro.models.result_record> value) {
+    public io.carrera.fhir.avro.models.DiagnosticReport.Builder setResult(java.util.List<io.carrera.fhir.avro.models.Reference> value) {
       validate(fields()[9], value);
       this.result = value;
       fieldSetFlags()[9] = true;
@@ -1083,7 +1085,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
         }
         record.effectiveDateTime = fieldSetFlags()[7] ? this.effectiveDateTime : (java.lang.Integer) defaultValue(fields()[7]);
         record.issued = fieldSetFlags()[8] ? this.issued : (java.lang.Integer) defaultValue(fields()[8]);
-        record.result = fieldSetFlags()[9] ? this.result : (java.util.List<io.carrera.fhir.avro.models.result_record>) defaultValue(fields()[9]);
+        record.result = fieldSetFlags()[9] ? this.result : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[9]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -1118,15 +1120,33 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
   {
     out.writeString(this.resourceType);
 
-    out.writeString(this.id);
+    if (this.id == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeString(this.id);
+    }
 
     out.writeString(this.status);
 
-    this.category.customEncode(out);
+    if (this.category == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      this.category.customEncode(out);
+    }
 
     this.code.customEncode(out);
 
-    this.subject.customEncode(out);
+    if (this.subject == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      this.subject.customEncode(out);
+    }
 
     if (this.encounter == null) {
       out.writeIndex(0);
@@ -1136,22 +1156,40 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
       this.encounter.customEncode(out);
     }
 
-    out.writeInt(this.effectiveDateTime);
-
-    out.writeInt(this.issued);
-
-    long size0 = this.result.size();
-    out.writeArrayStart();
-    out.setItemCount(size0);
-    long actualSize0 = 0;
-    for (io.carrera.fhir.avro.models.result_record e0: this.result) {
-      actualSize0++;
-      out.startItem();
-      e0.customEncode(out);
+    if (this.effectiveDateTime == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeInt(this.effectiveDateTime);
     }
-    out.writeArrayEnd();
-    if (actualSize0 != size0)
-      throw new java.util.ConcurrentModificationException("Array-size written was " + size0 + ", but element count was " + actualSize0 + ".");
+
+    if (this.issued == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeInt(this.issued);
+    }
+
+    if (this.result == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      long size0 = this.result.size();
+      out.writeArrayStart();
+      out.setItemCount(size0);
+      long actualSize0 = 0;
+      for (io.carrera.fhir.avro.models.Reference e0: this.result) {
+        actualSize0++;
+        out.startItem();
+        e0.customEncode(out);
+      }
+      out.writeArrayEnd();
+      if (actualSize0 != size0)
+        throw new java.util.ConcurrentModificationException("Array-size written was " + size0 + ", but element count was " + actualSize0 + ".");
+    }
 
   }
 
@@ -1162,24 +1200,39 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
     if (fieldOrder == null) {
       this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
 
-      this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.id = null;
+      } else {
+        this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
+      }
 
       this.status = in.readString(this.status instanceof Utf8 ? (Utf8)this.status : null);
 
-      if (this.category == null) {
-        this.category = new io.carrera.fhir.avro.models.CodeableConcept();
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.category = null;
+      } else {
+        if (this.category == null) {
+          this.category = new io.carrera.fhir.avro.models.CodeableConcept();
+        }
+        this.category.customDecode(in);
       }
-      this.category.customDecode(in);
 
       if (this.code == null) {
         this.code = new io.carrera.fhir.avro.models.CodeableConcept();
       }
       this.code.customDecode(in);
 
-      if (this.subject == null) {
-        this.subject = new io.carrera.fhir.avro.models.Reference();
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.subject = null;
+      } else {
+        if (this.subject == null) {
+          this.subject = new io.carrera.fhir.avro.models.Reference();
+        }
+        this.subject.customDecode(in);
       }
-      this.subject.customDecode(in);
 
       if (in.readIndex() != 1) {
         in.readNull();
@@ -1191,25 +1244,40 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
         this.encounter.customDecode(in);
       }
 
-      this.effectiveDateTime = in.readInt();
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.effectiveDateTime = null;
+      } else {
+        this.effectiveDateTime = in.readInt();
+      }
 
-      this.issued = in.readInt();
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.issued = null;
+      } else {
+        this.issued = in.readInt();
+      }
 
-      long size0 = in.readArrayStart();
-      java.util.List<io.carrera.fhir.avro.models.result_record> a0 = this.result;
-      if (a0 == null) {
-        a0 = new SpecificData.Array<io.carrera.fhir.avro.models.result_record>((int)size0, SCHEMA$.getField("result").schema());
-        this.result = a0;
-      } else a0.clear();
-      SpecificData.Array<io.carrera.fhir.avro.models.result_record> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.result_record>)a0 : null);
-      for ( ; 0 < size0; size0 = in.arrayNext()) {
-        for ( ; size0 != 0; size0--) {
-          io.carrera.fhir.avro.models.result_record e0 = (ga0 != null ? ga0.peek() : null);
-          if (e0 == null) {
-            e0 = new io.carrera.fhir.avro.models.result_record();
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.result = null;
+      } else {
+        long size0 = in.readArrayStart();
+        java.util.List<io.carrera.fhir.avro.models.Reference> a0 = this.result;
+        if (a0 == null) {
+          a0 = new SpecificData.Array<io.carrera.fhir.avro.models.Reference>((int)size0, SCHEMA$.getField("result").schema().getTypes().get(1));
+          this.result = a0;
+        } else a0.clear();
+        SpecificData.Array<io.carrera.fhir.avro.models.Reference> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.Reference>)a0 : null);
+        for ( ; 0 < size0; size0 = in.arrayNext()) {
+          for ( ; size0 != 0; size0--) {
+            io.carrera.fhir.avro.models.Reference e0 = (ga0 != null ? ga0.peek() : null);
+            if (e0 == null) {
+              e0 = new io.carrera.fhir.avro.models.Reference();
+            }
+            e0.customDecode(in);
+            a0.add(e0);
           }
-          e0.customDecode(in);
-          a0.add(e0);
         }
       }
 
@@ -1221,7 +1289,12 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
           break;
 
         case 1:
-          this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.id = null;
+          } else {
+            this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
+          }
           break;
 
         case 2:
@@ -1229,10 +1302,15 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
           break;
 
         case 3:
-          if (this.category == null) {
-            this.category = new io.carrera.fhir.avro.models.CodeableConcept();
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.category = null;
+          } else {
+            if (this.category == null) {
+              this.category = new io.carrera.fhir.avro.models.CodeableConcept();
+            }
+            this.category.customDecode(in);
           }
-          this.category.customDecode(in);
           break;
 
         case 4:
@@ -1243,10 +1321,15 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
           break;
 
         case 5:
-          if (this.subject == null) {
-            this.subject = new io.carrera.fhir.avro.models.Reference();
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.subject = null;
+          } else {
+            if (this.subject == null) {
+              this.subject = new io.carrera.fhir.avro.models.Reference();
+            }
+            this.subject.customDecode(in);
           }
-          this.subject.customDecode(in);
           break;
 
         case 6:
@@ -1262,29 +1345,44 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
           break;
 
         case 7:
-          this.effectiveDateTime = in.readInt();
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.effectiveDateTime = null;
+          } else {
+            this.effectiveDateTime = in.readInt();
+          }
           break;
 
         case 8:
-          this.issued = in.readInt();
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.issued = null;
+          } else {
+            this.issued = in.readInt();
+          }
           break;
 
         case 9:
-          long size0 = in.readArrayStart();
-          java.util.List<io.carrera.fhir.avro.models.result_record> a0 = this.result;
-          if (a0 == null) {
-            a0 = new SpecificData.Array<io.carrera.fhir.avro.models.result_record>((int)size0, SCHEMA$.getField("result").schema());
-            this.result = a0;
-          } else a0.clear();
-          SpecificData.Array<io.carrera.fhir.avro.models.result_record> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.result_record>)a0 : null);
-          for ( ; 0 < size0; size0 = in.arrayNext()) {
-            for ( ; size0 != 0; size0--) {
-              io.carrera.fhir.avro.models.result_record e0 = (ga0 != null ? ga0.peek() : null);
-              if (e0 == null) {
-                e0 = new io.carrera.fhir.avro.models.result_record();
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.result = null;
+          } else {
+            long size0 = in.readArrayStart();
+            java.util.List<io.carrera.fhir.avro.models.Reference> a0 = this.result;
+            if (a0 == null) {
+              a0 = new SpecificData.Array<io.carrera.fhir.avro.models.Reference>((int)size0, SCHEMA$.getField("result").schema().getTypes().get(1));
+              this.result = a0;
+            } else a0.clear();
+            SpecificData.Array<io.carrera.fhir.avro.models.Reference> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.Reference>)a0 : null);
+            for ( ; 0 < size0; size0 = in.arrayNext()) {
+              for ( ; size0 != 0; size0--) {
+                io.carrera.fhir.avro.models.Reference e0 = (ga0 != null ? ga0.peek() : null);
+                if (e0 == null) {
+                  e0 = new io.carrera.fhir.avro.models.Reference();
+                }
+                e0.customDecode(in);
+                a0.add(e0);
               }
-              e0.customDecode(in);
-              a0.add(e0);
             }
           }
           break;
