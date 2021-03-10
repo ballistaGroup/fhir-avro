@@ -17,6 +17,16 @@
         "name": "display",
         "type": ["null", "string"],
         "default": null
+      },
+      {
+        "name": "version",
+        "type": ["null", "string"],
+        "default": null
+      },
+      {
+        "name": "userSelected",
+        "type": ["null", "boolean"],
+        "default": null
       }
     ]
 }
