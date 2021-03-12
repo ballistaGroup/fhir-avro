@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Quantity extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 1333887467463220910L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Quantity\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"float\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
+  private static final long serialVersionUID = 5627686501179005338L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Quantity\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"float\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -75,6 +75,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
   @Deprecated public java.lang.CharSequence unit;
   @Deprecated public java.lang.CharSequence system;
   @Deprecated public java.lang.CharSequence code;
+  @Deprecated public java.lang.CharSequence comparator;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -89,12 +90,14 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
    * @param unit The new value for unit
    * @param system The new value for system
    * @param code The new value for code
+   * @param comparator The new value for comparator
    */
-  public Quantity(java.lang.Float value, java.lang.CharSequence unit, java.lang.CharSequence system, java.lang.CharSequence code) {
+  public Quantity(java.lang.Float value, java.lang.CharSequence unit, java.lang.CharSequence system, java.lang.CharSequence code, java.lang.CharSequence comparator) {
     this.value = value;
     this.unit = unit;
     this.system = system;
     this.code = code;
+    this.comparator = comparator;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -106,6 +109,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
     case 1: return unit;
     case 2: return system;
     case 3: return code;
+    case 4: return comparator;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -118,6 +122,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
     case 1: unit = (java.lang.CharSequence)value$; break;
     case 2: system = (java.lang.CharSequence)value$; break;
     case 3: code = (java.lang.CharSequence)value$; break;
+    case 4: comparator = (java.lang.CharSequence)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -191,6 +196,23 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
   }
 
   /**
+   * Gets the value of the 'comparator' field.
+   * @return The value of the 'comparator' field.
+   */
+  public java.lang.CharSequence getComparator() {
+    return comparator;
+  }
+
+
+  /**
+   * Sets the value of the 'comparator' field.
+   * @param value the value to set.
+   */
+  public void setComparator(java.lang.CharSequence value) {
+    this.comparator = value;
+  }
+
+  /**
    * Creates a new Quantity RecordBuilder.
    * @return A new Quantity RecordBuilder
    */
@@ -235,6 +257,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
     private java.lang.CharSequence unit;
     private java.lang.CharSequence system;
     private java.lang.CharSequence code;
+    private java.lang.CharSequence comparator;
 
     /** Creates a new Builder */
     private Builder() {
@@ -263,6 +286,10 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
         this.code = data().deepCopy(fields()[3].schema(), other.code);
         fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
+      if (isValidValue(fields()[4], other.comparator)) {
+        this.comparator = data().deepCopy(fields()[4].schema(), other.comparator);
+        fieldSetFlags()[4] = other.fieldSetFlags()[4];
+      }
     }
 
     /**
@@ -286,6 +313,10 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
       if (isValidValue(fields()[3], other.code)) {
         this.code = data().deepCopy(fields()[3].schema(), other.code);
         fieldSetFlags()[3] = true;
+      }
+      if (isValidValue(fields()[4], other.comparator)) {
+        this.comparator = data().deepCopy(fields()[4].schema(), other.comparator);
+        fieldSetFlags()[4] = true;
       }
     }
 
@@ -449,6 +480,46 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
       return this;
     }
 
+    /**
+      * Gets the value of the 'comparator' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getComparator() {
+      return comparator;
+    }
+
+
+    /**
+      * Sets the value of the 'comparator' field.
+      * @param value The value of 'comparator'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Quantity.Builder setComparator(java.lang.CharSequence value) {
+      validate(fields()[4], value);
+      this.comparator = value;
+      fieldSetFlags()[4] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'comparator' field has been set.
+      * @return True if the 'comparator' field has been set, false otherwise.
+      */
+    public boolean hasComparator() {
+      return fieldSetFlags()[4];
+    }
+
+
+    /**
+      * Clears the value of the 'comparator' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Quantity.Builder clearComparator() {
+      comparator = null;
+      fieldSetFlags()[4] = false;
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     public Quantity build() {
@@ -458,6 +529,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
         record.unit = fieldSetFlags()[1] ? this.unit : (java.lang.CharSequence) defaultValue(fields()[1]);
         record.system = fieldSetFlags()[2] ? this.system : (java.lang.CharSequence) defaultValue(fields()[2]);
         record.code = fieldSetFlags()[3] ? this.code : (java.lang.CharSequence) defaultValue(fields()[3]);
+        record.comparator = fieldSetFlags()[4] ? this.comparator : (java.lang.CharSequence) defaultValue(fields()[4]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -522,6 +594,14 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
       out.writeString(this.code);
     }
 
+    if (this.comparator == null) {
+      out.writeIndex(0);
+      out.writeNull();
+    } else {
+      out.writeIndex(1);
+      out.writeString(this.comparator);
+    }
+
   }
 
   @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
@@ -557,8 +637,15 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
         this.code = in.readString(this.code instanceof Utf8 ? (Utf8)this.code : null);
       }
 
+      if (in.readIndex() != 1) {
+        in.readNull();
+        this.comparator = null;
+      } else {
+        this.comparator = in.readString(this.comparator instanceof Utf8 ? (Utf8)this.comparator : null);
+      }
+
     } else {
-      for (int i = 0; i < 4; i++) {
+      for (int i = 0; i < 5; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
           if (in.readIndex() != 1) {
@@ -593,6 +680,15 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
             this.code = null;
           } else {
             this.code = in.readString(this.code instanceof Utf8 ? (Utf8)this.code : null);
+          }
+          break;
+
+        case 4:
+          if (in.readIndex() != 1) {
+            in.readNull();
+            this.comparator = null;
+          } else {
+            this.comparator = in.readString(this.comparator instanceof Utf8 ? (Utf8)this.comparator : null);
           }
           break;
 
