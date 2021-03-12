@@ -34,6 +34,14 @@
         "string"
       ],
       "default": null
+    },
+    {
+      "name": "comparator",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
     }
   ]
 }
