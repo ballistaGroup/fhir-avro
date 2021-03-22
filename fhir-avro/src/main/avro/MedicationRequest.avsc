@@ -39,8 +39,13 @@
     },
     {
       "name": "authoredOn",
-      "type": ["null", "int"],
-      "logicalType": "date",
+      "type": [
+        "null",
+        {
+          "type" : "long",
+          "logicalType" : "timestamp-millis"
+        }
+      ],
       "default": null
     },
     {
