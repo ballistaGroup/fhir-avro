@@ -14,11 +14,14 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -1835823253533099732L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MedicationRequest\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"intent\",\"type\":\"string\"},{\"name\":\"medicationCodeableConcept\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"authoredOn\",\"type\":[\"null\",\"int\"],\"default\":null,\"logicalType\":\"date\"},{\"name\":\"requester\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"medicationReference\",\"type\":[\"null\",\"Reference\"],\"default\":null}]}");
+  private static final long serialVersionUID = -8668707963539327250L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MedicationRequest\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"intent\",\"type\":\"string\"},{\"name\":\"medicationCodeableConcept\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"authoredOn\",\"type\":[\"null\",{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}],\"default\":null},{\"name\":\"requester\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"medicationReference\",\"type\":[\"null\",\"Reference\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
+static {
+    MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.TimestampMillisConversion());
+  }
 
   private static final BinaryMessageEncoder<MedicationRequest> ENCODER =
       new BinaryMessageEncoder<MedicationRequest>(MODEL$, SCHEMA$);
@@ -78,7 +81,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
   @Deprecated public io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept;
   @Deprecated public io.carrera.fhir.avro.models.Reference subject;
   @Deprecated public io.carrera.fhir.avro.models.Reference encounter;
-  @Deprecated public java.lang.Integer authoredOn;
+  @Deprecated public java.time.Instant authoredOn;
   @Deprecated public io.carrera.fhir.avro.models.Reference requester;
   @Deprecated public io.carrera.fhir.avro.models.Reference medicationReference;
 
@@ -102,7 +105,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
    * @param requester The new value for requester
    * @param medicationReference The new value for medicationReference
    */
-  public MedicationRequest(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, java.lang.CharSequence intent, io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.lang.Integer authoredOn, io.carrera.fhir.avro.models.Reference requester, io.carrera.fhir.avro.models.Reference medicationReference) {
+  public MedicationRequest(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, java.lang.CharSequence intent, io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.time.Instant authoredOn, io.carrera.fhir.avro.models.Reference requester, io.carrera.fhir.avro.models.Reference medicationReference) {
     this.resourceType = resourceType;
     this.id = id;
     this.status = status;
@@ -145,7 +148,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
     case 4: medicationCodeableConcept = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     case 5: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 6: encounter = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 7: authoredOn = (java.lang.Integer)value$; break;
+    case 7: authoredOn = (java.time.Instant)value$; break;
     case 8: requester = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 9: medicationReference = (io.carrera.fhir.avro.models.Reference)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
@@ -275,7 +278,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
    * Gets the value of the 'authoredOn' field.
    * @return The value of the 'authoredOn' field.
    */
-  public java.lang.Integer getAuthoredOn() {
+  public java.time.Instant getAuthoredOn() {
     return authoredOn;
   }
 
@@ -284,7 +287,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
    * Sets the value of the 'authoredOn' field.
    * @param value the value to set.
    */
-  public void setAuthoredOn(java.lang.Integer value) {
+  public void setAuthoredOn(java.time.Instant value) {
     this.authoredOn = value;
   }
 
@@ -373,7 +376,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
     private io.carrera.fhir.avro.models.Reference.Builder subjectBuilder;
     private io.carrera.fhir.avro.models.Reference encounter;
     private io.carrera.fhir.avro.models.Reference.Builder encounterBuilder;
-    private java.lang.Integer authoredOn;
+    private java.time.Instant authoredOn;
     private io.carrera.fhir.avro.models.Reference requester;
     private io.carrera.fhir.avro.models.Reference.Builder requesterBuilder;
     private io.carrera.fhir.avro.models.Reference medicationReference;
@@ -889,7 +892,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
       * Gets the value of the 'authoredOn' field.
       * @return The value.
       */
-    public java.lang.Integer getAuthoredOn() {
+    public java.time.Instant getAuthoredOn() {
       return authoredOn;
     }
 
@@ -899,7 +902,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
       * @param value The value of 'authoredOn'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder setAuthoredOn(java.lang.Integer value) {
+    public io.carrera.fhir.avro.models.MedicationRequest.Builder setAuthoredOn(java.time.Instant value) {
       validate(fields()[7], value);
       this.authoredOn = value;
       fieldSetFlags()[7] = true;
@@ -1114,7 +1117,7 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
         } else {
           record.encounter = fieldSetFlags()[6] ? this.encounter : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[6]);
         }
-        record.authoredOn = fieldSetFlags()[7] ? this.authoredOn : (java.lang.Integer) defaultValue(fields()[7]);
+        record.authoredOn = fieldSetFlags()[7] ? this.authoredOn : (java.time.Instant) defaultValue(fields()[7]);
         if (requesterBuilder != null) {
           try {
             record.requester = this.requesterBuilder.build();
@@ -1162,233 +1165,6 @@ public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBa
     READER$.read(this, SpecificData.getDecoder(in));
   }
 
-  @Override protected boolean hasCustomCoders() { return true; }
-
-  @Override public void customEncode(org.apache.avro.io.Encoder out)
-    throws java.io.IOException
-  {
-    out.writeString(this.resourceType);
-
-    if (this.id == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeString(this.id);
-    }
-
-    out.writeString(this.status);
-
-    out.writeString(this.intent);
-
-    if (this.medicationCodeableConcept == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      this.medicationCodeableConcept.customEncode(out);
-    }
-
-    this.subject.customEncode(out);
-
-    if (this.encounter == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      this.encounter.customEncode(out);
-    }
-
-    if (this.authoredOn == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeInt(this.authoredOn);
-    }
-
-    if (this.requester == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      this.requester.customEncode(out);
-    }
-
-    if (this.medicationReference == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      this.medicationReference.customEncode(out);
-    }
-
-  }
-
-  @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
-    throws java.io.IOException
-  {
-    org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
-    if (fieldOrder == null) {
-      this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.id = null;
-      } else {
-        this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-      }
-
-      this.status = in.readString(this.status instanceof Utf8 ? (Utf8)this.status : null);
-
-      this.intent = in.readString(this.intent instanceof Utf8 ? (Utf8)this.intent : null);
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.medicationCodeableConcept = null;
-      } else {
-        if (this.medicationCodeableConcept == null) {
-          this.medicationCodeableConcept = new io.carrera.fhir.avro.models.CodeableConcept();
-        }
-        this.medicationCodeableConcept.customDecode(in);
-      }
-
-      if (this.subject == null) {
-        this.subject = new io.carrera.fhir.avro.models.Reference();
-      }
-      this.subject.customDecode(in);
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.encounter = null;
-      } else {
-        if (this.encounter == null) {
-          this.encounter = new io.carrera.fhir.avro.models.Reference();
-        }
-        this.encounter.customDecode(in);
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.authoredOn = null;
-      } else {
-        this.authoredOn = in.readInt();
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.requester = null;
-      } else {
-        if (this.requester == null) {
-          this.requester = new io.carrera.fhir.avro.models.Reference();
-        }
-        this.requester.customDecode(in);
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.medicationReference = null;
-      } else {
-        if (this.medicationReference == null) {
-          this.medicationReference = new io.carrera.fhir.avro.models.Reference();
-        }
-        this.medicationReference.customDecode(in);
-      }
-
-    } else {
-      for (int i = 0; i < 10; i++) {
-        switch (fieldOrder[i].pos()) {
-        case 0:
-          this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
-          break;
-
-        case 1:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.id = null;
-          } else {
-            this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-          }
-          break;
-
-        case 2:
-          this.status = in.readString(this.status instanceof Utf8 ? (Utf8)this.status : null);
-          break;
-
-        case 3:
-          this.intent = in.readString(this.intent instanceof Utf8 ? (Utf8)this.intent : null);
-          break;
-
-        case 4:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.medicationCodeableConcept = null;
-          } else {
-            if (this.medicationCodeableConcept == null) {
-              this.medicationCodeableConcept = new io.carrera.fhir.avro.models.CodeableConcept();
-            }
-            this.medicationCodeableConcept.customDecode(in);
-          }
-          break;
-
-        case 5:
-          if (this.subject == null) {
-            this.subject = new io.carrera.fhir.avro.models.Reference();
-          }
-          this.subject.customDecode(in);
-          break;
-
-        case 6:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.encounter = null;
-          } else {
-            if (this.encounter == null) {
-              this.encounter = new io.carrera.fhir.avro.models.Reference();
-            }
-            this.encounter.customDecode(in);
-          }
-          break;
-
-        case 7:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.authoredOn = null;
-          } else {
-            this.authoredOn = in.readInt();
-          }
-          break;
-
-        case 8:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.requester = null;
-          } else {
-            if (this.requester == null) {
-              this.requester = new io.carrera.fhir.avro.models.Reference();
-            }
-            this.requester.customDecode(in);
-          }
-          break;
-
-        case 9:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.medicationReference = null;
-          } else {
-            if (this.medicationReference == null) {
-              this.medicationReference = new io.carrera.fhir.avro.models.Reference();
-            }
-            this.medicationReference.customDecode(in);
-          }
-          break;
-
-        default:
-          throw new java.io.IOException("Corrupt ResolvingDecoder.");
-        }
-      }
-    }
-  }
 }
 
 
