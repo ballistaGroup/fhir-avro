@@ -38,6 +38,7 @@
             <import>${project.basedir}/src/main/avro/Coding.avsc</import>
             <import>${project.basedir}/src/main/avro/CodeableConcept.avsc</import>
             <import>${project.basedir}/src/main/avro/Reference.avsc</import>
+            <import>${project.basedir}/src/main/avro/DiagnosticReport.avsc</import>
             <import>${project.basedir}/src/main/avro/SimpleCode.avsc</import>
             <import>${project.basedir}/src/main/avro/ValueSetPointer.avsc</import>
             <import>${project.basedir}/src/main/avro/ValueSet.avsc</import>
@@ -46,6 +47,7 @@
             <import>${project.basedir}/src/main/avro/Patient.avsc</import>
             <import>${project.basedir}/src/main/avro/Condition_Stage.avsc</import>
             <import>${project.basedir}/src/main/avro/Condition.avsc</import>
+            <import>${project.basedir}/src/main/avro/MedicationRequest.avsc</import>
             <import>${project.basedir}/src/main/avro/MedicationStatement.avsc</import>
             <import>${project.basedir}/src/main/avro/AllergyIntolerance_Reaction.avsc</import>
             <import>${project.basedir}/src/main/avro/AllergyIntolerance.avsc</import>
