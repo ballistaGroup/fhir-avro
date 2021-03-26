@@ -39,13 +39,7 @@
     },
     {
       "name": "authoredOn",
-      "type": [
-        "null",
-        {
-          "type" : "long",
-          "logicalType" : "timestamp-millis"
-        }
-      ],
+      "type" : ["null", {"type": "int", "logicalType": "date"}, "io.carrera.fhir.avro.models.DateTime"],
       "default": null
     },
     {
