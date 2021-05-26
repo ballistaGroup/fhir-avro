@@ -71,11 +71,11 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.Float value;
-  @Deprecated public java.lang.CharSequence unit;
-  @Deprecated public java.lang.CharSequence system;
-  @Deprecated public java.lang.CharSequence code;
-  @Deprecated public java.lang.CharSequence comparator;
+   private java.lang.Float value;
+   private java.lang.CharSequence unit;
+   private java.lang.CharSequence system;
+   private java.lang.CharSequence code;
+   private java.lang.CharSequence comparator;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -110,7 +110,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
     case 2: return system;
     case 3: return code;
     case 4: return comparator;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -123,7 +123,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
     case 2: system = (java.lang.CharSequence)value$; break;
     case 3: code = (java.lang.CharSequence)value$; break;
     case 4: comparator = (java.lang.CharSequence)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
