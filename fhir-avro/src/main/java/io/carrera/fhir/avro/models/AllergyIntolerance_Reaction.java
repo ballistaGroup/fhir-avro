@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class AllergyIntolerance_Reaction extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -4042587140183317018L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"AllergyIntolerance_Reaction\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"substance\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"manifestation\",\"type\":{\"type\":\"array\",\"items\":\"CodeableConcept\"}}]}");
+  private static final long serialVersionUID = 6635893383058747102L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"AllergyIntolerance_Reaction\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"substance\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"manifestation\",\"type\":{\"type\":\"array\",\"items\":\"CodeableConcept\"}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,8 +71,8 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
     return DECODER.decode(b);
   }
 
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept substance;
-  @Deprecated public java.util.List<io.carrera.fhir.avro.models.CodeableConcept> manifestation;
+   private io.carrera.fhir.avro.models.CodeableConcept substance;
+   private java.util.List<io.carrera.fhir.avro.models.CodeableConcept> manifestation;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -98,7 +98,7 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
     switch (field$) {
     case 0: return substance;
     case 1: return manifestation;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -108,7 +108,7 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
     switch (field$) {
     case 0: substance = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     case 1: manifestation = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -282,6 +282,7 @@ public class AllergyIntolerance_Reaction extends org.apache.avro.specific.Specif
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.AllergyIntolerance_Reaction.Builder setSubstanceBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
       clearSubstance();
       substanceBuilder = value;

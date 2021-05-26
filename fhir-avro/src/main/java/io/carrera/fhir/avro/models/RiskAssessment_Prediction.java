@@ -14,13 +14,14 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class RiskAssessment_Prediction extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 518149240247430507L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"RiskAssessment_Prediction\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"outcome\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"probabilityDecimal\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"probabilityRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"float\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}],\"default\":null},{\"name\":\"qualitativeRisk\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"relativeRisk\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"whenPeriod\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null}]}],\"default\":null},{\"name\":\"whenRange\",\"type\":[\"null\",\"Range\"],\"default\":null},{\"name\":\"rationale\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
+  private static final long serialVersionUID = -692214641619749012L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"RiskAssessment_Prediction\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"outcome\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"probabilityDecimal\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"probabilityRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}],\"default\":null},{\"name\":\"qualitativeRisk\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"relativeRisk\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"whenPeriod\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null}]}],\"default\":null},{\"name\":\"whenRange\",\"type\":[\"null\",\"Range\"],\"default\":null},{\"name\":\"rationale\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
 static {
     MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.DateConversion());
+    MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.LocalTimestampMicrosConversion());
   }
 
   private static final BinaryMessageEncoder<RiskAssessment_Prediction> ENCODER =
@@ -74,14 +75,14 @@ static {
     return DECODER.decode(b);
   }
 
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept outcome;
-  @Deprecated public java.lang.Double probabilityDecimal;
-  @Deprecated public io.carrera.fhir.avro.models.Range probabilityRange;
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept qualitativeRisk;
-  @Deprecated public java.lang.Double relativeRisk;
-  @Deprecated public io.carrera.fhir.avro.models.Period whenPeriod;
-  @Deprecated public io.carrera.fhir.avro.models.Range whenRange;
-  @Deprecated public java.lang.CharSequence rationale;
+   private io.carrera.fhir.avro.models.CodeableConcept outcome;
+   private java.lang.Double probabilityDecimal;
+   private io.carrera.fhir.avro.models.Range probabilityRange;
+   private io.carrera.fhir.avro.models.CodeableConcept qualitativeRisk;
+   private java.lang.Double relativeRisk;
+   private io.carrera.fhir.avro.models.Period whenPeriod;
+   private io.carrera.fhir.avro.models.Range whenRange;
+   private java.lang.CharSequence rationale;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -125,7 +126,7 @@ static {
     case 5: return whenPeriod;
     case 6: return whenRange;
     case 7: return rationale;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -141,7 +142,7 @@ static {
     case 5: whenPeriod = (io.carrera.fhir.avro.models.Period)value$; break;
     case 6: whenRange = (io.carrera.fhir.avro.models.Range)value$; break;
     case 7: rationale = (java.lang.CharSequence)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -491,6 +492,7 @@ static {
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder setOutcomeBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
       clearOutcome();
       outcomeBuilder = value;
@@ -606,6 +608,7 @@ static {
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder setProbabilityRangeBuilder(io.carrera.fhir.avro.models.Range.Builder value) {
       clearProbabilityRange();
       probabilityRangeBuilder = value;
@@ -681,6 +684,7 @@ static {
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder setQualitativeRiskBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
       clearQualitativeRisk();
       qualitativeRiskBuilder = value;
@@ -796,6 +800,7 @@ static {
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder setWhenPeriodBuilder(io.carrera.fhir.avro.models.Period.Builder value) {
       clearWhenPeriod();
       whenPeriodBuilder = value;
@@ -871,6 +876,7 @@ static {
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.RiskAssessment_Prediction.Builder setWhenRangeBuilder(io.carrera.fhir.avro.models.Range.Builder value) {
       clearWhenRange();
       whenRangeBuilder = value;

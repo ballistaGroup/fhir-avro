@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -854080888726033082L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"AllergyIntolerance\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"clinicalStatus\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"verificationStatus\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"patient\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"reaction\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"AllergyIntolerance_Reaction\",\"fields\":[{\"name\":\"substance\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"manifestation\",\"type\":{\"type\":\"array\",\"items\":\"CodeableConcept\"}}]}}],\"default\":null}]}");
+  private static final long serialVersionUID = 421598972086410918L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"AllergyIntolerance\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"clinicalStatus\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"verificationStatus\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"patient\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"reaction\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"AllergyIntolerance_Reaction\",\"fields\":[{\"name\":\"substance\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"manifestation\",\"type\":{\"type\":\"array\",\"items\":\"CodeableConcept\"}}]}}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,15 +71,15 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence resourceType;
-  @Deprecated public java.lang.CharSequence id;
-  @Deprecated public java.lang.CharSequence type;
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept clinicalStatus;
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept verificationStatus;
-  @Deprecated public java.util.List<java.lang.CharSequence> category;
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept code;
-  @Deprecated public io.carrera.fhir.avro.models.Reference patient;
-  @Deprecated public java.util.List<io.carrera.fhir.avro.models.AllergyIntolerance_Reaction> reaction;
+   private java.lang.CharSequence resourceType;
+   private java.lang.CharSequence id;
+   private java.lang.CharSequence type;
+   private io.carrera.fhir.avro.models.CodeableConcept clinicalStatus;
+   private io.carrera.fhir.avro.models.CodeableConcept verificationStatus;
+   private java.util.List<java.lang.CharSequence> category;
+   private io.carrera.fhir.avro.models.CodeableConcept code;
+   private io.carrera.fhir.avro.models.Reference patient;
+   private java.util.List<io.carrera.fhir.avro.models.AllergyIntolerance_Reaction> reaction;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -126,7 +126,7 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
     case 6: return code;
     case 7: return patient;
     case 8: return reaction;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -143,7 +143,7 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
     case 6: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     case 7: patient = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 8: reaction = (java.util.List<io.carrera.fhir.avro.models.AllergyIntolerance_Reaction>)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -634,6 +634,7 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.AllergyIntolerance.Builder setClinicalStatusBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
       clearClinicalStatus();
       clinicalStatusBuilder = value;
@@ -709,6 +710,7 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.AllergyIntolerance.Builder setVerificationStatusBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
       clearVerificationStatus();
       verificationStatusBuilder = value;
@@ -824,6 +826,7 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.AllergyIntolerance.Builder setCodeBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
       clearCode();
       codeBuilder = value;
@@ -899,6 +902,7 @@ public class AllergyIntolerance extends org.apache.avro.specific.SpecificRecordB
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.AllergyIntolerance.Builder setPatientBuilder(io.carrera.fhir.avro.models.Reference.Builder value) {
       clearPatient();
       patientBuilder = value;
