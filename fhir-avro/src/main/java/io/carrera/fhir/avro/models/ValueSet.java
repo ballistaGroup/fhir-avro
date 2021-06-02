@@ -71,16 +71,16 @@ public class ValueSet extends org.apache.avro.specific.SpecificRecordBase implem
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence resourceType;
-  @Deprecated public java.lang.CharSequence id;
-  @Deprecated public java.lang.CharSequence name;
-  @Deprecated public java.lang.CharSequence title;
-  @Deprecated public java.lang.CharSequence description;
-  @Deprecated public java.lang.CharSequence status;
-  @Deprecated public java.lang.Boolean experimental;
-  @Deprecated public java.lang.Integer date;
-  @Deprecated public java.lang.CharSequence publisher;
-  @Deprecated public io.carrera.fhir.avro.models.compose compose;
+   private java.lang.CharSequence resourceType;
+   private java.lang.CharSequence id;
+   private java.lang.CharSequence name;
+   private java.lang.CharSequence title;
+   private java.lang.CharSequence description;
+   private java.lang.CharSequence status;
+   private java.lang.Boolean experimental;
+   private java.lang.Integer date;
+   private java.lang.CharSequence publisher;
+   private io.carrera.fhir.avro.models.compose compose;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -130,7 +130,7 @@ public class ValueSet extends org.apache.avro.specific.SpecificRecordBase implem
     case 7: return date;
     case 8: return publisher;
     case 9: return compose;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -148,7 +148,7 @@ public class ValueSet extends org.apache.avro.specific.SpecificRecordBase implem
     case 7: date = (java.lang.Integer)value$; break;
     case 8: publisher = (java.lang.CharSequence)value$; break;
     case 9: compose = (io.carrera.fhir.avro.models.compose)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -890,6 +890,7 @@ public class ValueSet extends org.apache.avro.specific.SpecificRecordBase implem
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.ValueSet.Builder setComposeBuilder(io.carrera.fhir.avro.models.compose.Builder value) {
       clearCompose();
       composeBuilder = value;

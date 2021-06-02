@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Range extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -8284270193147057048L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Range\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"float\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}");
+  private static final long serialVersionUID = -2763018004549553048L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Range\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,8 +71,8 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
     return DECODER.decode(b);
   }
 
-  @Deprecated public io.carrera.fhir.avro.models.Quantity low;
-  @Deprecated public io.carrera.fhir.avro.models.Quantity high;
+   private io.carrera.fhir.avro.models.Quantity low;
+   private io.carrera.fhir.avro.models.Quantity high;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -98,7 +98,7 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
     switch (field$) {
     case 0: return low;
     case 1: return high;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -108,7 +108,7 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
     switch (field$) {
     case 0: low = (io.carrera.fhir.avro.models.Quantity)value$; break;
     case 1: high = (io.carrera.fhir.avro.models.Quantity)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -287,6 +287,7 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.Range.Builder setLowBuilder(io.carrera.fhir.avro.models.Quantity.Builder value) {
       clearLow();
       lowBuilder = value;
@@ -362,6 +363,7 @@ public class Range extends org.apache.avro.specific.SpecificRecordBase implement
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.Range.Builder setHighBuilder(io.carrera.fhir.avro.models.Quantity.Builder value) {
       clearHigh();
       highBuilder = value;

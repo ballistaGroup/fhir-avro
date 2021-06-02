@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Ratio extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 6173606672339518289L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Ratio\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"numerator\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"float\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"denominator\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}");
+  private static final long serialVersionUID = -4812455693146702077L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Ratio\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"numerator\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"denominator\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,8 +71,8 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
     return DECODER.decode(b);
   }
 
-  @Deprecated public io.carrera.fhir.avro.models.Quantity numerator;
-  @Deprecated public io.carrera.fhir.avro.models.Quantity denominator;
+   private io.carrera.fhir.avro.models.Quantity numerator;
+   private io.carrera.fhir.avro.models.Quantity denominator;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -98,7 +98,7 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
     switch (field$) {
     case 0: return numerator;
     case 1: return denominator;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -108,7 +108,7 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
     switch (field$) {
     case 0: numerator = (io.carrera.fhir.avro.models.Quantity)value$; break;
     case 1: denominator = (io.carrera.fhir.avro.models.Quantity)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -287,6 +287,7 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.Ratio.Builder setNumeratorBuilder(io.carrera.fhir.avro.models.Quantity.Builder value) {
       clearNumerator();
       numeratorBuilder = value;
@@ -362,6 +363,7 @@ public class Ratio extends org.apache.avro.specific.SpecificRecordBase implement
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.Ratio.Builder setDenominatorBuilder(io.carrera.fhir.avro.models.Quantity.Builder value) {
       clearDenominator();
       denominatorBuilder = value;

@@ -71,16 +71,16 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence resourceType;
-  @Deprecated public java.lang.CharSequence id;
-  @Deprecated public java.lang.CharSequence status;
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept category;
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept code;
-  @Deprecated public io.carrera.fhir.avro.models.Reference subject;
-  @Deprecated public io.carrera.fhir.avro.models.Reference encounter;
-  @Deprecated public java.lang.Integer effectiveDateTime;
-  @Deprecated public java.lang.Integer issued;
-  @Deprecated public java.util.List<io.carrera.fhir.avro.models.Reference> result;
+   private java.lang.CharSequence resourceType;
+   private java.lang.CharSequence id;
+   private java.lang.CharSequence status;
+   private io.carrera.fhir.avro.models.CodeableConcept category;
+   private io.carrera.fhir.avro.models.CodeableConcept code;
+   private io.carrera.fhir.avro.models.Reference subject;
+   private io.carrera.fhir.avro.models.Reference encounter;
+   private java.lang.Integer effectiveDateTime;
+   private java.lang.Integer issued;
+   private java.util.List<io.carrera.fhir.avro.models.Reference> result;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -130,7 +130,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
     case 7: return effectiveDateTime;
     case 8: return issued;
     case 9: return result;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -148,7 +148,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
     case 7: effectiveDateTime = (java.lang.Integer)value$; break;
     case 8: issued = (java.lang.Integer)value$; break;
     case 9: result = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -665,6 +665,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.DiagnosticReport.Builder setCategoryBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
       clearCategory();
       categoryBuilder = value;
@@ -740,6 +741,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.DiagnosticReport.Builder setCodeBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
       clearCode();
       codeBuilder = value;
@@ -815,6 +817,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.DiagnosticReport.Builder setSubjectBuilder(io.carrera.fhir.avro.models.Reference.Builder value) {
       clearSubject();
       subjectBuilder = value;
@@ -890,6 +893,7 @@ public class DiagnosticReport extends org.apache.avro.specific.SpecificRecordBas
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.DiagnosticReport.Builder setEncounterBuilder(io.carrera.fhir.avro.models.Reference.Builder value) {
       clearEncounter();
       encounterBuilder = value;

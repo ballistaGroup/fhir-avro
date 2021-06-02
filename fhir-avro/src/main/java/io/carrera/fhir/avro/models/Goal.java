@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Goal extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -702829797872298377L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Goal\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"target\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Goal_Target\",\"fields\":[{\"name\":\"measure\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"detailQuantity\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"float\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"detailRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}],\"default\":null},{\"name\":\"detailCodeableConcept\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"detailString\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"detailBoolean\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"detailInteger\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"detailRatio\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Ratio\",\"fields\":[{\"name\":\"numerator\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"denominator\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}],\"default\":null}]}}],\"default\":null},{\"name\":\"startDate\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"}],\"default\":null},{\"name\":\"startCodeableConcept\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"lifecycleStatus\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]}");
+  private static final long serialVersionUID = -1527913224740019355L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Goal\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"target\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Goal_Target\",\"fields\":[{\"name\":\"measure\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"detailQuantity\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"detailRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}],\"default\":null},{\"name\":\"detailCodeableConcept\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"detailString\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"detailBoolean\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"detailInteger\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"detailRatio\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Ratio\",\"fields\":[{\"name\":\"numerator\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"denominator\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}],\"default\":null}]}}],\"default\":null},{\"name\":\"startDate\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"}],\"default\":null},{\"name\":\"startCodeableConcept\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"lifecycleStatus\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -74,13 +74,13 @@ static {
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence resourceType;
-  @Deprecated public java.lang.CharSequence id;
-  @Deprecated public java.util.List<io.carrera.fhir.avro.models.Goal_Target> target;
-  @Deprecated public java.time.LocalDate startDate;
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept startCodeableConcept;
-  @Deprecated public java.lang.CharSequence lifecycleStatus;
-  @Deprecated public io.carrera.fhir.avro.models.Reference subject;
+   private java.lang.CharSequence resourceType;
+   private java.lang.CharSequence id;
+   private java.util.List<io.carrera.fhir.avro.models.Goal_Target> target;
+   private java.time.LocalDate startDate;
+   private io.carrera.fhir.avro.models.CodeableConcept startCodeableConcept;
+   private java.lang.CharSequence lifecycleStatus;
+   private io.carrera.fhir.avro.models.Reference subject;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -121,7 +121,7 @@ static {
     case 4: return startCodeableConcept;
     case 5: return lifecycleStatus;
     case 6: return subject;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -136,7 +136,7 @@ static {
     case 4: startCodeableConcept = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     case 5: lifecycleStatus = (java.lang.CharSequence)value$; break;
     case 6: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -605,6 +605,7 @@ static {
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.Goal.Builder setStartCodeableConceptBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
       clearStartCodeableConcept();
       startCodeableConceptBuilder = value;
@@ -720,6 +721,7 @@ static {
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.Goal.Builder setSubjectBuilder(io.carrera.fhir.avro.models.Reference.Builder value) {
       clearSubject();
       subjectBuilder = value;

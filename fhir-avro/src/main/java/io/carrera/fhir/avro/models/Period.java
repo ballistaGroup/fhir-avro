@@ -21,6 +21,7 @@ public class Period extends org.apache.avro.specific.SpecificRecordBase implemen
   private static SpecificData MODEL$ = new SpecificData();
 static {
     MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.DateConversion());
+    MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.LocalTimestampMicrosConversion());
   }
 
   private static final BinaryMessageEncoder<Period> ENCODER =
@@ -74,8 +75,8 @@ static {
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.Object start;
-  @Deprecated public java.lang.Object end;
+   private java.lang.Object start;
+   private java.lang.Object end;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -101,7 +102,7 @@ static {
     switch (field$) {
     case 0: return start;
     case 1: return end;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -111,7 +112,7 @@ static {
     switch (field$) {
     case 0: start = value$; break;
     case 1: end = value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 

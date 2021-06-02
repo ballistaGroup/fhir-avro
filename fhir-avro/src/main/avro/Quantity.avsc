@@ -7,7 +7,7 @@
       "name": "value",
       "type": [
         "null",
-        "float"
+        "double"
       ],
       "default": null
     },

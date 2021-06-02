@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Goal_Target extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 8718620043468545884L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Goal_Target\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"measure\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"detailQuantity\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"float\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"detailRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}],\"default\":null},{\"name\":\"detailCodeableConcept\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"detailString\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"detailBoolean\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"detailInteger\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"detailRatio\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Ratio\",\"fields\":[{\"name\":\"numerator\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"denominator\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}],\"default\":null}]}");
+  private static final long serialVersionUID = 5126827763223593278L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Goal_Target\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"measure\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"detailQuantity\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"detailRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}],\"default\":null},{\"name\":\"detailCodeableConcept\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"detailString\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"detailBoolean\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"detailInteger\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"detailRatio\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Ratio\",\"fields\":[{\"name\":\"numerator\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"denominator\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,14 +71,14 @@ public class Goal_Target extends org.apache.avro.specific.SpecificRecordBase imp
     return DECODER.decode(b);
   }
 
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept measure;
-  @Deprecated public io.carrera.fhir.avro.models.Quantity detailQuantity;
-  @Deprecated public io.carrera.fhir.avro.models.Range detailRange;
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept detailCodeableConcept;
-  @Deprecated public java.lang.CharSequence detailString;
-  @Deprecated public java.lang.Boolean detailBoolean;
-  @Deprecated public java.lang.Integer detailInteger;
-  @Deprecated public io.carrera.fhir.avro.models.Ratio detailRatio;
+   private io.carrera.fhir.avro.models.CodeableConcept measure;
+   private io.carrera.fhir.avro.models.Quantity detailQuantity;
+   private io.carrera.fhir.avro.models.Range detailRange;
+   private io.carrera.fhir.avro.models.CodeableConcept detailCodeableConcept;
+   private java.lang.CharSequence detailString;
+   private java.lang.Boolean detailBoolean;
+   private java.lang.Integer detailInteger;
+   private io.carrera.fhir.avro.models.Ratio detailRatio;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -122,7 +122,7 @@ public class Goal_Target extends org.apache.avro.specific.SpecificRecordBase imp
     case 5: return detailBoolean;
     case 6: return detailInteger;
     case 7: return detailRatio;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -138,7 +138,7 @@ public class Goal_Target extends org.apache.avro.specific.SpecificRecordBase imp
     case 5: detailBoolean = (java.lang.Boolean)value$; break;
     case 6: detailInteger = (java.lang.Integer)value$; break;
     case 7: detailRatio = (io.carrera.fhir.avro.models.Ratio)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -488,6 +488,7 @@ public class Goal_Target extends org.apache.avro.specific.SpecificRecordBase imp
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.Goal_Target.Builder setMeasureBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
       clearMeasure();
       measureBuilder = value;
@@ -563,6 +564,7 @@ public class Goal_Target extends org.apache.avro.specific.SpecificRecordBase imp
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.Goal_Target.Builder setDetailQuantityBuilder(io.carrera.fhir.avro.models.Quantity.Builder value) {
       clearDetailQuantity();
       detailQuantityBuilder = value;
@@ -638,6 +640,7 @@ public class Goal_Target extends org.apache.avro.specific.SpecificRecordBase imp
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.Goal_Target.Builder setDetailRangeBuilder(io.carrera.fhir.avro.models.Range.Builder value) {
       clearDetailRange();
       detailRangeBuilder = value;
@@ -713,6 +716,7 @@ public class Goal_Target extends org.apache.avro.specific.SpecificRecordBase imp
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.Goal_Target.Builder setDetailCodeableConceptBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
       clearDetailCodeableConcept();
       detailCodeableConceptBuilder = value;
@@ -908,6 +912,7 @@ public class Goal_Target extends org.apache.avro.specific.SpecificRecordBase imp
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.Goal_Target.Builder setDetailRatioBuilder(io.carrera.fhir.avro.models.Ratio.Builder value) {
       clearDetailRatio();
       detailRatioBuilder = value;

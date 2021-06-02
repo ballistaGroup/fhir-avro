@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Condition extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 1789215365635028624L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Condition\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"clinicalStatus\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"verificationStatus\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"stage\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Condition_Stage\",\"fields\":[{\"name\":\"summary\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"assessment\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null}]}}],\"default\":null},{\"name\":\"onsetDateTime\",\"type\":[\"null\",\"int\"],\"default\":null,\"logicalType\":\"date\"},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null}]}");
+  private static final long serialVersionUID = 7342503173586978147L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Condition\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"clinicalStatus\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"verificationStatus\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"stage\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Condition_Stage\",\"fields\":[{\"name\":\"summary\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"assessment\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null}]}}],\"default\":null},{\"name\":\"onsetDateTime\",\"type\":[\"null\",\"int\"],\"default\":null,\"logicalType\":\"date\"},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,14 +71,14 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence resourceType;
-  @Deprecated public java.lang.CharSequence id;
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept clinicalStatus;
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept verificationStatus;
-  @Deprecated public io.carrera.fhir.avro.models.Reference subject;
-  @Deprecated public java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage;
-  @Deprecated public java.lang.Integer onsetDateTime;
-  @Deprecated public io.carrera.fhir.avro.models.CodeableConcept code;
+   private java.lang.CharSequence resourceType;
+   private java.lang.CharSequence id;
+   private io.carrera.fhir.avro.models.CodeableConcept clinicalStatus;
+   private io.carrera.fhir.avro.models.CodeableConcept verificationStatus;
+   private io.carrera.fhir.avro.models.Reference subject;
+   private java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage;
+   private java.lang.Integer onsetDateTime;
+   private io.carrera.fhir.avro.models.CodeableConcept code;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -122,7 +122,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
     case 5: return stage;
     case 6: return onsetDateTime;
     case 7: return code;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -138,7 +138,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
     case 5: stage = (java.util.List<io.carrera.fhir.avro.models.Condition_Stage>)value$; break;
     case 6: onsetDateTime = (java.lang.Integer)value$; break;
     case 7: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
@@ -563,6 +563,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.Condition.Builder setClinicalStatusBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
       clearClinicalStatus();
       clinicalStatusBuilder = value;
@@ -638,6 +639,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.Condition.Builder setVerificationStatusBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
       clearVerificationStatus();
       verificationStatusBuilder = value;
@@ -713,6 +715,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.Condition.Builder setSubjectBuilder(io.carrera.fhir.avro.models.Reference.Builder value) {
       clearSubject();
       subjectBuilder = value;
@@ -868,6 +871,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
      * @param value The builder instance that must be set.
      * @return This builder.
      */
+
     public io.carrera.fhir.avro.models.Condition.Builder setCodeBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
       clearCode();
       codeBuilder = value;
