@@ -31,7 +31,7 @@
     },
     {
       "name": "subject",
-      "type": ["null", "Reference"],
+      "type": ["null", "Reference"]
     },
     {
       "name": "context",
