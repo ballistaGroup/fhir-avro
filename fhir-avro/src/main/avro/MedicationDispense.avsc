@@ -8,7 +8,7 @@
       "type": "string"
     },
     {
-      "name": "id",
+      "name": "identifier",
       "type": [
         "null",
         "string"
