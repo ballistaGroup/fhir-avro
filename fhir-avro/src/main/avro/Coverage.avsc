@@ -1,0 +1,176 @@
+{
+    "type": "record",
+    "name": "Coverage",
+    "doc": "Insurance or medical plan or a payment agreement",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "resourceType",
+            "doc": "FHIR resource type",
+            "type": "string"
+        },
+        {
+            "name": "identifier",
+            "doc": "Business Identifier for the coverage",
+            "type": ["null", "record"],
+            "fields": [
+                {
+                    "name": "status",
+                    "doc": "",
+                    "type": ["null", "string"]
+                },
+                {
+                    "name": "value",
+                    "doc": "FHIR resource type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "status",
+            "doc": "Financial Resource Status Code",
+            "type": "string"
+        },
+        {
+            "name": "type",
+            "doc": "FHIR resource type",
+            "type": "string"
+        },
+        {
+            "name": "policyHolder",
+            "doc": "FHIR resource type",
+            "type": "string"
+        },
+        {
+            "name": "subscriber",
+            "doc": "FHIR resource type",
+            "type": "string"
+        },
+        {
+            "name": "subscriberId",
+            "doc": "FHIR resource type",
+            "type": "string"
+        },
+        {
+            "name": "beneficiary",
+            "doc": "FHIR resource type",
+            "type": "string"
+        },
+        {
+            "name": "dependent",
+            "doc": "FHIR resource type",
+            "type": "string"
+        },
+        {
+            "name": "relationship",
+            "doc": "FHIR resource type",
+            "type": "string"
+        },
+        {
+            "name": "period",
+            "doc": "FHIR resource type",
+            "type": "string"
+        },
+        {
+            "name": "payor",
+            "doc": "FHIR resource type",
+            "type": "string"
+        },
+        {
+            "name": "class",
+            "doc": "FHIR resource type",
+            "type": {
+                "type": "record",
+                "name": "",
+                "doc": "",
+                "namespace": "com.optum.avro",
+                "fields": [
+                    {
+                        "name": "type",
+                        "doc": "FHIR resource type",
+                        "type": "string"
+                    },
+                    {
+                        "name": "value",
+                        "doc": "FHIR resource type",
+                        "type": "string"
+                    },
+                    {
+                        "name": "name",
+                        "doc": "FHIR resource type",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "order",
+            "doc": "FHIR resource type",
+            "type": "string"
+        },
+        {
+            "name": "network",
+            "doc": "FHIR resource type",
+            "type": "string"
+        },
+        {
+            "name": "costToBeneficiary",
+            "doc": "FHIR resource type",
+            "type": {
+                "type": "record",
+                "name": "",
+                "doc": "",
+                "namespace": "com.optum.avro",
+                "fields": [
+                    {
+                        "name": "type",
+                        "doc": "FHIR resource type",
+                        "type": "string"
+                    },
+                    {
+                        "name": "valueQuantity",
+                        "doc": "FHIR resource type",
+                        "type": "string"
+                    },
+                    {
+                        "name": "valueMoney",
+                        "doc": "FHIR resource type",
+                        "type": "string"
+                    },
+                    {
+                        "name": "valueMoney",
+                        "doc": "FHIR resource type",
+                        "type": {
+                            "type": "record",
+                            "name": "",
+                            "doc": "",
+                            "namespace": "com.optum.avro",
+                            "fields": [
+                                {
+                                    "name": "type",
+                                    "doc": "FHIR resource type",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "period",
+                                    "doc": "FHIR resource type",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+               ]
+            }
+        },
+        {
+            "name": "subrogation",
+            "doc": "FHIR resource type",
+            "type": "string"
+        },
+        {
+            "name": "contract",
+            "doc": "FHIR resource type",
+            "type": "string"
+        }
+    ]
+}
