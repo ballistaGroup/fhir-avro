@@ -1,0 +1,62 @@
+{
+  "name": "MedicationDispense",
+  "type": "record",
+  "namespace": "io.carrera.fhir.avro.models",
+  "fields": [
+    {
+      "name": "resourceType",
+      "type": "string"
+    },
+    {
+      "name": "id",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "status",
+      "type": "string"
+    },
+    {
+      "name": "category",
+      "type": ["null","CodeableConcept"],
+      "default" : null
+    },
+    {
+      "name": "medicationCodeableConcept",
+      "type": ["null","CodeableConcept"],
+      "default" : null
+    },
+    {
+      "name": "subject",
+      "type": ["null", "Reference"],
+    },
+    {
+      "name": "context",
+      "type": ["null", "Reference"],
+      "default" : null
+    },
+    {
+      "name": "type",
+      "type": ["null","CodeableConcept"],
+      "default" : null
+    },
+    {
+      "name": "quantity",
+      "type": ["null","Quantity"],
+      "default" : null
+    },
+    {
+      "name": "whenPrepared",
+      "type" : ["null", {"type": "int", "logicalType": "date"}, "io.carrera.fhir.avro.models.DateTime"],
+      "default": null
+    },
+    {
+      "name" : "medicationReference",
+      "type" : [ "null", "Reference" ],
+      "default" : null
+    }
+  ]
+}
