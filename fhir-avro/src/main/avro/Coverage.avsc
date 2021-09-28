@@ -52,9 +52,11 @@
         },
         {
             "name": "payor",
-            "type": "array",
-            "items": ["null", "Reference"]
-    },
+            "type": ["null",{
+                "type": "array",
+                "items": "Reference"
+              }]
+        },
         {
             "name": "order",
             "type": ["null", "int"]
