@@ -1,6 +1,6 @@
 {
-    "type": "record",
     "name": "Item",
+    "type": "record",
     "namespace": "io.carrera.fhir.avro.models",
     "fields": [
         {

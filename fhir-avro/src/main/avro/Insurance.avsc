@@ -1,6 +1,6 @@
 {
-    "type": "record",
     "name": "Insurance",
+    "type": "record",
     "namespace": "io.carrera.fhir.avro.models",
     "fields": [
         {

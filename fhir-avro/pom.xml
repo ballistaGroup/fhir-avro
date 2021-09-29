@@ -60,6 +60,9 @@
             <import>${project.basedir}/src/main/avro/Period.avsc</import>
             <import>${project.basedir}/src/main/avro/RiskAssessment_Prediction.avsc</import>
             <import>${project.basedir}/src/main/avro/RiskAssessment.avsc</import>
+            <import>${project.basedir}/src/main/avro/Coverage.avsc</import>
+            <import>${project.basedir}/src/main/avro/Insurance.avsc</import>
+            <import>${project.basedir}/src/main/avro/Item.avsc</import>
         </imports>
       </configuration>
     </execution>
