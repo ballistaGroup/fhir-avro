@@ -50,7 +50,27 @@
         {
             "name": "created",
             "type": "int",
-            "logicalType": "date",
+            "logicalType": "date"
         },
+        {
+            "name": "provider",
+            "type": "Reference"
+        },
+        {
+            "name": "priority",
+            "type": "CodeableConcept"
+        },
+        {
+            "name": "insurance",
+            "type": "Insurance"
+        },
+        {
+            "name": "item",
+            "type": ["null",{
+                "type": "array",
+                "items": "Item"
+              }],
+            "default": null
+        }
     ]
 }

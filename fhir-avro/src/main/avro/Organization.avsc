@@ -1,0 +1,20 @@
+{
+    "type": "record",
+    "name": "Organization",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "id",
+            "type": [ "null", "string" ],
+            "default": null
+        },
+        {
+            "name": "identifier",
+            "type": ["null",{
+                "type": "array",
+                "items": "identifier_record"
+              }],
+              "default": null
+        }
+    ]
+}
