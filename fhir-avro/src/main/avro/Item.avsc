@@ -1,0 +1,15 @@
+{
+    "name": "Item",
+    "type": "record",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "sequence",
+            "type": "int"
+        },
+        {
+            "name": "productOrService",
+            "type": "CodeableConcept"
+        }
+    ]
+}

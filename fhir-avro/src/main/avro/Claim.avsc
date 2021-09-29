@@ -1,0 +1,76 @@
+{
+    "type": "record",
+    "name": "Claim",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "resourceType",
+            "type": "string"
+        },
+        {
+            "name": "id",
+            "type": [ "null", "string" ],
+            "default": null
+        },
+        {
+            "name": "identifier",
+            "type": ["null",{
+                "type": "array",
+                "items": "identifier_record"
+              }],
+              "default": null
+            },
+        {
+            "name": "status",
+            "type": "string"
+        },
+        {
+            "name": "type",
+            "type": ["null", "CodeableConcept"],
+            "default": null
+        },
+        {
+            "name": "subType",
+            "type": ["null", "CodeableConcept"],
+            "default": null
+        },
+        {
+            "name": "use",
+            "type": "string"
+        },
+        {
+            "name": "patient",
+            "type": "Patient"
+        },
+        {
+            "name": "billablePeriod",
+            "type": ["null", "Period"],
+            "default": null
+        },
+        {
+            "name": "created",
+            "type": "int",
+            "logicalType": "date"
+        },
+        {
+            "name": "provider",
+            "type": "Reference"
+        },
+        {
+            "name": "priority",
+            "type": "CodeableConcept"
+        },
+        {
+            "name": "insurance",
+            "type": "Insurance"
+        },
+        {
+            "name": "item",
+            "type": ["null",{
+                "type": "array",
+                "items": "Item"
+              }],
+            "default": null
+        }
+    ]
+}

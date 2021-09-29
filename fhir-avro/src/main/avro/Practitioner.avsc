@@ -1,0 +1,55 @@
+{
+  "name": "Practitioner",
+  "type": "record",
+  "namespace": "io.carrera.fhir.avro.models",
+  "fields": [
+    {
+      "name": "resourceType",
+      "type": "string"
+    },
+    {
+      "name": "id",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "identifier",
+      "type": ["null",{
+        "type": "array",
+        "items": "identifier_record"
+      }],
+      "default": null
+    },
+    {
+      "name": "name",
+      "type": ["null",{
+        "type": "array",
+        "items": "name_record"
+      }],
+      "default": null
+    },
+    {
+      "name": "gender",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "birthDate",
+      "type": [
+        "null",
+        "string",
+        {
+          "type": "int",
+          "logicalType": "date"
+        }
+      ],
+      "default" : null
+    }
+  ]
+}

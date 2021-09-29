@@ -1,0 +1,24 @@
+{
+    "name": "Insurance",
+    "type": "record",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "id",
+            "type": [ "null", "string" ],
+            "default": null
+        },
+        {
+            "name": "sequence",
+            "type": "int"
+        },
+        {
+            "name": "focal",
+            "type": "boolean"
+        },
+        {
+            "name": "coverage",
+            "type": "Coverage"
+        }
+    ]
+}
