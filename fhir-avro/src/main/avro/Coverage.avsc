@@ -10,7 +10,7 @@
         {
             "name": "id",
             "type": [ "null", "string" ],
-            "default": "null"
+            "default": null
         },
         {
             "name": "identifier",
@@ -18,7 +18,7 @@
                 "type": "array",
                 "items": "identifier_record"
               }],
-              "default": "null"
+              "default": null
             },
         {
             "name": "status",
@@ -27,22 +27,22 @@
         {
             "name": "type",
             "type": ["null", "CodeableConcept"],
-            "default": "null"
+            "default": null
         },
         {
             "name": "policyHolder",
             "type": ["null", "Reference"],
-            "default": "null"
+            "default": null
         },
         {
             "name": "subscriber",
             "type": ["null", "Reference"],
-            "default": "null"
+            "default": null
         },
         {
             "name": "subscriberId",
             "type": ["null", "string"],
-            "default": "null"
+            "default": null
         },
         {
             "name": "beneficiary",
@@ -51,17 +51,17 @@
         {
             "name": "dependent",
             "type": ["null", "string"],
-            "default": "null"
+            "default": null
         },
         {
             "name": "relationship",
             "type": ["null", "CodeableConcept"],
-            "default": "null"
+            "default": null
         },
         {
             "name": "period",
             "type": ["null", "Period"],
-            "default": "null"
+            "default": null
         },
         {
             "name": "payor",
@@ -69,22 +69,22 @@
                 "type": "array",
                 "items": "Reference"
               }],
-              "default": "null"
+              "default": null
             },
         {
             "name": "order",
             "type": ["null", "int"],
-            "default": "null"
+            "default": null
         },
         {
             "name": "network",
             "type": ["null", "string"],
-            "default": "null"
+            "default": null
         },
         {
             "name": "subrogation",
             "type": ["null", "boolean"],
-            "default": "null"
+            "default": null
         }
     ]
 }

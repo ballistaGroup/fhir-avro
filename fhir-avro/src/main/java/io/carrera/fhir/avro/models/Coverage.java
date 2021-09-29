@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Coverage extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 1431664218851991689L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Coverage\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"identifier\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"identifier_record\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"value\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"type\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}]},{\"name\":\"policyHolder\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}]},{\"name\":\"subscriber\",\"type\":[\"null\",\"Reference\"]},{\"name\":\"subscriberId\",\"type\":[\"null\",\"string\"]},{\"name\":\"beneficiary\",\"type\":\"Reference\"},{\"name\":\"dependent\",\"type\":[\"null\",\"string\"]},{\"name\":\"relationship\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"period\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null}]}]},{\"name\":\"payor\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"order\",\"type\":[\"null\",\"int\"]},{\"name\":\"network\",\"type\":[\"null\",\"string\"]},{\"name\":\"subrogation\",\"type\":[\"null\",\"boolean\"]}]}");
+  private static final long serialVersionUID = 1638165817292690179L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Coverage\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"identifier\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"identifier_record\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"value\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"type\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"policyHolder\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"subscriber\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"subscriberId\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"beneficiary\",\"type\":\"Reference\"},{\"name\":\"dependent\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"relationship\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"period\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null}]}],\"default\":null},{\"name\":\"payor\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"order\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"network\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"subrogation\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -76,6 +76,7 @@ static {
   }
 
    private java.lang.CharSequence resourceType;
+   private java.lang.CharSequence id;
    private java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier;
    private java.lang.CharSequence status;
    private io.carrera.fhir.avro.models.CodeableConcept type;
@@ -101,6 +102,7 @@ static {
   /**
    * All-args constructor.
    * @param resourceType The new value for resourceType
+   * @param id The new value for id
    * @param identifier The new value for identifier
    * @param status The new value for status
    * @param type The new value for type
@@ -116,8 +118,9 @@ static {
    * @param network The new value for network
    * @param subrogation The new value for subrogation
    */
-  public Coverage(java.lang.CharSequence resourceType, java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept type, io.carrera.fhir.avro.models.Reference policyHolder, io.carrera.fhir.avro.models.Reference subscriber, java.lang.CharSequence subscriberId, io.carrera.fhir.avro.models.Reference beneficiary, java.lang.CharSequence dependent, io.carrera.fhir.avro.models.CodeableConcept relationship, io.carrera.fhir.avro.models.Period period, java.util.List<io.carrera.fhir.avro.models.Reference> payor, java.lang.Integer order, java.lang.CharSequence network, java.lang.Boolean subrogation) {
+  public Coverage(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept type, io.carrera.fhir.avro.models.Reference policyHolder, io.carrera.fhir.avro.models.Reference subscriber, java.lang.CharSequence subscriberId, io.carrera.fhir.avro.models.Reference beneficiary, java.lang.CharSequence dependent, io.carrera.fhir.avro.models.CodeableConcept relationship, io.carrera.fhir.avro.models.Period period, java.util.List<io.carrera.fhir.avro.models.Reference> payor, java.lang.Integer order, java.lang.CharSequence network, java.lang.Boolean subrogation) {
     this.resourceType = resourceType;
+    this.id = id;
     this.identifier = identifier;
     this.status = status;
     this.type = type;
@@ -140,20 +143,21 @@ static {
   public java.lang.Object get(int field$) {
     switch (field$) {
     case 0: return resourceType;
-    case 1: return identifier;
-    case 2: return status;
-    case 3: return type;
-    case 4: return policyHolder;
-    case 5: return subscriber;
-    case 6: return subscriberId;
-    case 7: return beneficiary;
-    case 8: return dependent;
-    case 9: return relationship;
-    case 10: return period;
-    case 11: return payor;
-    case 12: return order;
-    case 13: return network;
-    case 14: return subrogation;
+    case 1: return id;
+    case 2: return identifier;
+    case 3: return status;
+    case 4: return type;
+    case 5: return policyHolder;
+    case 6: return subscriber;
+    case 7: return subscriberId;
+    case 8: return beneficiary;
+    case 9: return dependent;
+    case 10: return relationship;
+    case 11: return period;
+    case 12: return payor;
+    case 13: return order;
+    case 14: return network;
+    case 15: return subrogation;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -163,20 +167,21 @@ static {
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
     case 0: resourceType = (java.lang.CharSequence)value$; break;
-    case 1: identifier = (java.util.List<io.carrera.fhir.avro.models.identifier_record>)value$; break;
-    case 2: status = (java.lang.CharSequence)value$; break;
-    case 3: type = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 4: policyHolder = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 5: subscriber = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 6: subscriberId = (java.lang.CharSequence)value$; break;
-    case 7: beneficiary = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 8: dependent = (java.lang.CharSequence)value$; break;
-    case 9: relationship = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 10: period = (io.carrera.fhir.avro.models.Period)value$; break;
-    case 11: payor = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
-    case 12: order = (java.lang.Integer)value$; break;
-    case 13: network = (java.lang.CharSequence)value$; break;
-    case 14: subrogation = (java.lang.Boolean)value$; break;
+    case 1: id = (java.lang.CharSequence)value$; break;
+    case 2: identifier = (java.util.List<io.carrera.fhir.avro.models.identifier_record>)value$; break;
+    case 3: status = (java.lang.CharSequence)value$; break;
+    case 4: type = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 5: policyHolder = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 6: subscriber = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 7: subscriberId = (java.lang.CharSequence)value$; break;
+    case 8: beneficiary = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 9: dependent = (java.lang.CharSequence)value$; break;
+    case 10: relationship = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 11: period = (io.carrera.fhir.avro.models.Period)value$; break;
+    case 12: payor = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
+    case 13: order = (java.lang.Integer)value$; break;
+    case 14: network = (java.lang.CharSequence)value$; break;
+    case 15: subrogation = (java.lang.Boolean)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -196,6 +201,23 @@ static {
    */
   public void setResourceType(java.lang.CharSequence value) {
     this.resourceType = value;
+  }
+
+  /**
+   * Gets the value of the 'id' field.
+   * @return The value of the 'id' field.
+   */
+  public java.lang.CharSequence getId() {
+    return id;
+  }
+
+
+  /**
+   * Sets the value of the 'id' field.
+   * @param value the value to set.
+   */
+  public void setId(java.lang.CharSequence value) {
+    this.id = value;
   }
 
   /**
@@ -478,6 +500,7 @@ static {
     implements org.apache.avro.data.RecordBuilder<Coverage> {
 
     private java.lang.CharSequence resourceType;
+    private java.lang.CharSequence id;
     private java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier;
     private java.lang.CharSequence status;
     private io.carrera.fhir.avro.models.CodeableConcept type;
@@ -514,79 +537,83 @@ static {
         this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
-      if (isValidValue(fields()[1], other.identifier)) {
-        this.identifier = data().deepCopy(fields()[1].schema(), other.identifier);
+      if (isValidValue(fields()[1], other.id)) {
+        this.id = data().deepCopy(fields()[1].schema(), other.id);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
-      if (isValidValue(fields()[2], other.status)) {
-        this.status = data().deepCopy(fields()[2].schema(), other.status);
+      if (isValidValue(fields()[2], other.identifier)) {
+        this.identifier = data().deepCopy(fields()[2].schema(), other.identifier);
         fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
-      if (isValidValue(fields()[3], other.type)) {
-        this.type = data().deepCopy(fields()[3].schema(), other.type);
+      if (isValidValue(fields()[3], other.status)) {
+        this.status = data().deepCopy(fields()[3].schema(), other.status);
         fieldSetFlags()[3] = other.fieldSetFlags()[3];
+      }
+      if (isValidValue(fields()[4], other.type)) {
+        this.type = data().deepCopy(fields()[4].schema(), other.type);
+        fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
       if (other.hasTypeBuilder()) {
         this.typeBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getTypeBuilder());
       }
-      if (isValidValue(fields()[4], other.policyHolder)) {
-        this.policyHolder = data().deepCopy(fields()[4].schema(), other.policyHolder);
-        fieldSetFlags()[4] = other.fieldSetFlags()[4];
+      if (isValidValue(fields()[5], other.policyHolder)) {
+        this.policyHolder = data().deepCopy(fields()[5].schema(), other.policyHolder);
+        fieldSetFlags()[5] = other.fieldSetFlags()[5];
       }
       if (other.hasPolicyHolderBuilder()) {
         this.policyHolderBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getPolicyHolderBuilder());
       }
-      if (isValidValue(fields()[5], other.subscriber)) {
-        this.subscriber = data().deepCopy(fields()[5].schema(), other.subscriber);
-        fieldSetFlags()[5] = other.fieldSetFlags()[5];
+      if (isValidValue(fields()[6], other.subscriber)) {
+        this.subscriber = data().deepCopy(fields()[6].schema(), other.subscriber);
+        fieldSetFlags()[6] = other.fieldSetFlags()[6];
       }
       if (other.hasSubscriberBuilder()) {
         this.subscriberBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getSubscriberBuilder());
       }
-      if (isValidValue(fields()[6], other.subscriberId)) {
-        this.subscriberId = data().deepCopy(fields()[6].schema(), other.subscriberId);
-        fieldSetFlags()[6] = other.fieldSetFlags()[6];
-      }
-      if (isValidValue(fields()[7], other.beneficiary)) {
-        this.beneficiary = data().deepCopy(fields()[7].schema(), other.beneficiary);
+      if (isValidValue(fields()[7], other.subscriberId)) {
+        this.subscriberId = data().deepCopy(fields()[7].schema(), other.subscriberId);
         fieldSetFlags()[7] = other.fieldSetFlags()[7];
+      }
+      if (isValidValue(fields()[8], other.beneficiary)) {
+        this.beneficiary = data().deepCopy(fields()[8].schema(), other.beneficiary);
+        fieldSetFlags()[8] = other.fieldSetFlags()[8];
       }
       if (other.hasBeneficiaryBuilder()) {
         this.beneficiaryBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getBeneficiaryBuilder());
       }
-      if (isValidValue(fields()[8], other.dependent)) {
-        this.dependent = data().deepCopy(fields()[8].schema(), other.dependent);
-        fieldSetFlags()[8] = other.fieldSetFlags()[8];
-      }
-      if (isValidValue(fields()[9], other.relationship)) {
-        this.relationship = data().deepCopy(fields()[9].schema(), other.relationship);
+      if (isValidValue(fields()[9], other.dependent)) {
+        this.dependent = data().deepCopy(fields()[9].schema(), other.dependent);
         fieldSetFlags()[9] = other.fieldSetFlags()[9];
+      }
+      if (isValidValue(fields()[10], other.relationship)) {
+        this.relationship = data().deepCopy(fields()[10].schema(), other.relationship);
+        fieldSetFlags()[10] = other.fieldSetFlags()[10];
       }
       if (other.hasRelationshipBuilder()) {
         this.relationshipBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getRelationshipBuilder());
       }
-      if (isValidValue(fields()[10], other.period)) {
-        this.period = data().deepCopy(fields()[10].schema(), other.period);
-        fieldSetFlags()[10] = other.fieldSetFlags()[10];
+      if (isValidValue(fields()[11], other.period)) {
+        this.period = data().deepCopy(fields()[11].schema(), other.period);
+        fieldSetFlags()[11] = other.fieldSetFlags()[11];
       }
       if (other.hasPeriodBuilder()) {
         this.periodBuilder = io.carrera.fhir.avro.models.Period.newBuilder(other.getPeriodBuilder());
       }
-      if (isValidValue(fields()[11], other.payor)) {
-        this.payor = data().deepCopy(fields()[11].schema(), other.payor);
-        fieldSetFlags()[11] = other.fieldSetFlags()[11];
-      }
-      if (isValidValue(fields()[12], other.order)) {
-        this.order = data().deepCopy(fields()[12].schema(), other.order);
+      if (isValidValue(fields()[12], other.payor)) {
+        this.payor = data().deepCopy(fields()[12].schema(), other.payor);
         fieldSetFlags()[12] = other.fieldSetFlags()[12];
       }
-      if (isValidValue(fields()[13], other.network)) {
-        this.network = data().deepCopy(fields()[13].schema(), other.network);
+      if (isValidValue(fields()[13], other.order)) {
+        this.order = data().deepCopy(fields()[13].schema(), other.order);
         fieldSetFlags()[13] = other.fieldSetFlags()[13];
       }
-      if (isValidValue(fields()[14], other.subrogation)) {
-        this.subrogation = data().deepCopy(fields()[14].schema(), other.subrogation);
+      if (isValidValue(fields()[14], other.network)) {
+        this.network = data().deepCopy(fields()[14].schema(), other.network);
         fieldSetFlags()[14] = other.fieldSetFlags()[14];
+      }
+      if (isValidValue(fields()[15], other.subrogation)) {
+        this.subrogation = data().deepCopy(fields()[15].schema(), other.subrogation);
+        fieldSetFlags()[15] = other.fieldSetFlags()[15];
       }
     }
 
@@ -600,67 +627,71 @@ static {
         this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.identifier)) {
-        this.identifier = data().deepCopy(fields()[1].schema(), other.identifier);
+      if (isValidValue(fields()[1], other.id)) {
+        this.id = data().deepCopy(fields()[1].schema(), other.id);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.status)) {
-        this.status = data().deepCopy(fields()[2].schema(), other.status);
+      if (isValidValue(fields()[2], other.identifier)) {
+        this.identifier = data().deepCopy(fields()[2].schema(), other.identifier);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.type)) {
-        this.type = data().deepCopy(fields()[3].schema(), other.type);
+      if (isValidValue(fields()[3], other.status)) {
+        this.status = data().deepCopy(fields()[3].schema(), other.status);
         fieldSetFlags()[3] = true;
       }
-      this.typeBuilder = null;
-      if (isValidValue(fields()[4], other.policyHolder)) {
-        this.policyHolder = data().deepCopy(fields()[4].schema(), other.policyHolder);
+      if (isValidValue(fields()[4], other.type)) {
+        this.type = data().deepCopy(fields()[4].schema(), other.type);
         fieldSetFlags()[4] = true;
       }
-      this.policyHolderBuilder = null;
-      if (isValidValue(fields()[5], other.subscriber)) {
-        this.subscriber = data().deepCopy(fields()[5].schema(), other.subscriber);
+      this.typeBuilder = null;
+      if (isValidValue(fields()[5], other.policyHolder)) {
+        this.policyHolder = data().deepCopy(fields()[5].schema(), other.policyHolder);
         fieldSetFlags()[5] = true;
       }
-      this.subscriberBuilder = null;
-      if (isValidValue(fields()[6], other.subscriberId)) {
-        this.subscriberId = data().deepCopy(fields()[6].schema(), other.subscriberId);
+      this.policyHolderBuilder = null;
+      if (isValidValue(fields()[6], other.subscriber)) {
+        this.subscriber = data().deepCopy(fields()[6].schema(), other.subscriber);
         fieldSetFlags()[6] = true;
       }
-      if (isValidValue(fields()[7], other.beneficiary)) {
-        this.beneficiary = data().deepCopy(fields()[7].schema(), other.beneficiary);
+      this.subscriberBuilder = null;
+      if (isValidValue(fields()[7], other.subscriberId)) {
+        this.subscriberId = data().deepCopy(fields()[7].schema(), other.subscriberId);
         fieldSetFlags()[7] = true;
       }
-      this.beneficiaryBuilder = null;
-      if (isValidValue(fields()[8], other.dependent)) {
-        this.dependent = data().deepCopy(fields()[8].schema(), other.dependent);
+      if (isValidValue(fields()[8], other.beneficiary)) {
+        this.beneficiary = data().deepCopy(fields()[8].schema(), other.beneficiary);
         fieldSetFlags()[8] = true;
       }
-      if (isValidValue(fields()[9], other.relationship)) {
-        this.relationship = data().deepCopy(fields()[9].schema(), other.relationship);
+      this.beneficiaryBuilder = null;
+      if (isValidValue(fields()[9], other.dependent)) {
+        this.dependent = data().deepCopy(fields()[9].schema(), other.dependent);
         fieldSetFlags()[9] = true;
       }
-      this.relationshipBuilder = null;
-      if (isValidValue(fields()[10], other.period)) {
-        this.period = data().deepCopy(fields()[10].schema(), other.period);
+      if (isValidValue(fields()[10], other.relationship)) {
+        this.relationship = data().deepCopy(fields()[10].schema(), other.relationship);
         fieldSetFlags()[10] = true;
       }
-      this.periodBuilder = null;
-      if (isValidValue(fields()[11], other.payor)) {
-        this.payor = data().deepCopy(fields()[11].schema(), other.payor);
+      this.relationshipBuilder = null;
+      if (isValidValue(fields()[11], other.period)) {
+        this.period = data().deepCopy(fields()[11].schema(), other.period);
         fieldSetFlags()[11] = true;
       }
-      if (isValidValue(fields()[12], other.order)) {
-        this.order = data().deepCopy(fields()[12].schema(), other.order);
+      this.periodBuilder = null;
+      if (isValidValue(fields()[12], other.payor)) {
+        this.payor = data().deepCopy(fields()[12].schema(), other.payor);
         fieldSetFlags()[12] = true;
       }
-      if (isValidValue(fields()[13], other.network)) {
-        this.network = data().deepCopy(fields()[13].schema(), other.network);
+      if (isValidValue(fields()[13], other.order)) {
+        this.order = data().deepCopy(fields()[13].schema(), other.order);
         fieldSetFlags()[13] = true;
       }
-      if (isValidValue(fields()[14], other.subrogation)) {
-        this.subrogation = data().deepCopy(fields()[14].schema(), other.subrogation);
+      if (isValidValue(fields()[14], other.network)) {
+        this.network = data().deepCopy(fields()[14].schema(), other.network);
         fieldSetFlags()[14] = true;
+      }
+      if (isValidValue(fields()[15], other.subrogation)) {
+        this.subrogation = data().deepCopy(fields()[15].schema(), other.subrogation);
+        fieldSetFlags()[15] = true;
       }
     }
 
@@ -705,6 +736,46 @@ static {
     }
 
     /**
+      * Gets the value of the 'id' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getId() {
+      return id;
+    }
+
+
+    /**
+      * Sets the value of the 'id' field.
+      * @param value The value of 'id'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Coverage.Builder setId(java.lang.CharSequence value) {
+      validate(fields()[1], value);
+      this.id = value;
+      fieldSetFlags()[1] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'id' field has been set.
+      * @return True if the 'id' field has been set, false otherwise.
+      */
+    public boolean hasId() {
+      return fieldSetFlags()[1];
+    }
+
+
+    /**
+      * Clears the value of the 'id' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Coverage.Builder clearId() {
+      id = null;
+      fieldSetFlags()[1] = false;
+      return this;
+    }
+
+    /**
       * Gets the value of the 'identifier' field.
       * @return The value.
       */
@@ -719,9 +790,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Coverage.Builder setIdentifier(java.util.List<io.carrera.fhir.avro.models.identifier_record> value) {
-      validate(fields()[1], value);
+      validate(fields()[2], value);
       this.identifier = value;
-      fieldSetFlags()[1] = true;
+      fieldSetFlags()[2] = true;
       return this;
     }
 
@@ -730,7 +801,7 @@ static {
       * @return True if the 'identifier' field has been set, false otherwise.
       */
     public boolean hasIdentifier() {
-      return fieldSetFlags()[1];
+      return fieldSetFlags()[2];
     }
 
 
@@ -740,7 +811,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Coverage.Builder clearIdentifier() {
       identifier = null;
-      fieldSetFlags()[1] = false;
+      fieldSetFlags()[2] = false;
       return this;
     }
 
@@ -759,9 +830,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Coverage.Builder setStatus(java.lang.CharSequence value) {
-      validate(fields()[2], value);
+      validate(fields()[3], value);
       this.status = value;
-      fieldSetFlags()[2] = true;
+      fieldSetFlags()[3] = true;
       return this;
     }
 
@@ -770,7 +841,7 @@ static {
       * @return True if the 'status' field has been set, false otherwise.
       */
     public boolean hasStatus() {
-      return fieldSetFlags()[2];
+      return fieldSetFlags()[3];
     }
 
 
@@ -780,7 +851,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Coverage.Builder clearStatus() {
       status = null;
-      fieldSetFlags()[2] = false;
+      fieldSetFlags()[3] = false;
       return this;
     }
 
@@ -799,10 +870,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Coverage.Builder setType(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[3], value);
+      validate(fields()[4], value);
       this.typeBuilder = null;
       this.type = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[4] = true;
       return this;
     }
 
@@ -811,7 +882,7 @@ static {
       * @return True if the 'type' field has been set, false otherwise.
       */
     public boolean hasType() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[4];
     }
 
     /**
@@ -856,7 +927,7 @@ static {
     public io.carrera.fhir.avro.models.Coverage.Builder clearType() {
       type = null;
       typeBuilder = null;
-      fieldSetFlags()[3] = false;
+      fieldSetFlags()[4] = false;
       return this;
     }
 
@@ -875,10 +946,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Coverage.Builder setPolicyHolder(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[4], value);
+      validate(fields()[5], value);
       this.policyHolderBuilder = null;
       this.policyHolder = value;
-      fieldSetFlags()[4] = true;
+      fieldSetFlags()[5] = true;
       return this;
     }
 
@@ -887,7 +958,7 @@ static {
       * @return True if the 'policyHolder' field has been set, false otherwise.
       */
     public boolean hasPolicyHolder() {
-      return fieldSetFlags()[4];
+      return fieldSetFlags()[5];
     }
 
     /**
@@ -932,7 +1003,7 @@ static {
     public io.carrera.fhir.avro.models.Coverage.Builder clearPolicyHolder() {
       policyHolder = null;
       policyHolderBuilder = null;
-      fieldSetFlags()[4] = false;
+      fieldSetFlags()[5] = false;
       return this;
     }
 
@@ -951,10 +1022,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Coverage.Builder setSubscriber(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[5], value);
+      validate(fields()[6], value);
       this.subscriberBuilder = null;
       this.subscriber = value;
-      fieldSetFlags()[5] = true;
+      fieldSetFlags()[6] = true;
       return this;
     }
 
@@ -963,7 +1034,7 @@ static {
       * @return True if the 'subscriber' field has been set, false otherwise.
       */
     public boolean hasSubscriber() {
-      return fieldSetFlags()[5];
+      return fieldSetFlags()[6];
     }
 
     /**
@@ -1008,7 +1079,7 @@ static {
     public io.carrera.fhir.avro.models.Coverage.Builder clearSubscriber() {
       subscriber = null;
       subscriberBuilder = null;
-      fieldSetFlags()[5] = false;
+      fieldSetFlags()[6] = false;
       return this;
     }
 
@@ -1027,9 +1098,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Coverage.Builder setSubscriberId(java.lang.CharSequence value) {
-      validate(fields()[6], value);
+      validate(fields()[7], value);
       this.subscriberId = value;
-      fieldSetFlags()[6] = true;
+      fieldSetFlags()[7] = true;
       return this;
     }
 
@@ -1038,7 +1109,7 @@ static {
       * @return True if the 'subscriberId' field has been set, false otherwise.
       */
     public boolean hasSubscriberId() {
-      return fieldSetFlags()[6];
+      return fieldSetFlags()[7];
     }
 
 
@@ -1048,7 +1119,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Coverage.Builder clearSubscriberId() {
       subscriberId = null;
-      fieldSetFlags()[6] = false;
+      fieldSetFlags()[7] = false;
       return this;
     }
 
@@ -1067,10 +1138,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Coverage.Builder setBeneficiary(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[7], value);
+      validate(fields()[8], value);
       this.beneficiaryBuilder = null;
       this.beneficiary = value;
-      fieldSetFlags()[7] = true;
+      fieldSetFlags()[8] = true;
       return this;
     }
 
@@ -1079,7 +1150,7 @@ static {
       * @return True if the 'beneficiary' field has been set, false otherwise.
       */
     public boolean hasBeneficiary() {
-      return fieldSetFlags()[7];
+      return fieldSetFlags()[8];
     }
 
     /**
@@ -1124,7 +1195,7 @@ static {
     public io.carrera.fhir.avro.models.Coverage.Builder clearBeneficiary() {
       beneficiary = null;
       beneficiaryBuilder = null;
-      fieldSetFlags()[7] = false;
+      fieldSetFlags()[8] = false;
       return this;
     }
 
@@ -1143,9 +1214,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Coverage.Builder setDependent(java.lang.CharSequence value) {
-      validate(fields()[8], value);
+      validate(fields()[9], value);
       this.dependent = value;
-      fieldSetFlags()[8] = true;
+      fieldSetFlags()[9] = true;
       return this;
     }
 
@@ -1154,7 +1225,7 @@ static {
       * @return True if the 'dependent' field has been set, false otherwise.
       */
     public boolean hasDependent() {
-      return fieldSetFlags()[8];
+      return fieldSetFlags()[9];
     }
 
 
@@ -1164,7 +1235,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Coverage.Builder clearDependent() {
       dependent = null;
-      fieldSetFlags()[8] = false;
+      fieldSetFlags()[9] = false;
       return this;
     }
 
@@ -1183,10 +1254,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Coverage.Builder setRelationship(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[9], value);
+      validate(fields()[10], value);
       this.relationshipBuilder = null;
       this.relationship = value;
-      fieldSetFlags()[9] = true;
+      fieldSetFlags()[10] = true;
       return this;
     }
 
@@ -1195,7 +1266,7 @@ static {
       * @return True if the 'relationship' field has been set, false otherwise.
       */
     public boolean hasRelationship() {
-      return fieldSetFlags()[9];
+      return fieldSetFlags()[10];
     }
 
     /**
@@ -1240,7 +1311,7 @@ static {
     public io.carrera.fhir.avro.models.Coverage.Builder clearRelationship() {
       relationship = null;
       relationshipBuilder = null;
-      fieldSetFlags()[9] = false;
+      fieldSetFlags()[10] = false;
       return this;
     }
 
@@ -1259,10 +1330,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Coverage.Builder setPeriod(io.carrera.fhir.avro.models.Period value) {
-      validate(fields()[10], value);
+      validate(fields()[11], value);
       this.periodBuilder = null;
       this.period = value;
-      fieldSetFlags()[10] = true;
+      fieldSetFlags()[11] = true;
       return this;
     }
 
@@ -1271,7 +1342,7 @@ static {
       * @return True if the 'period' field has been set, false otherwise.
       */
     public boolean hasPeriod() {
-      return fieldSetFlags()[10];
+      return fieldSetFlags()[11];
     }
 
     /**
@@ -1316,7 +1387,7 @@ static {
     public io.carrera.fhir.avro.models.Coverage.Builder clearPeriod() {
       period = null;
       periodBuilder = null;
-      fieldSetFlags()[10] = false;
+      fieldSetFlags()[11] = false;
       return this;
     }
 
@@ -1335,9 +1406,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Coverage.Builder setPayor(java.util.List<io.carrera.fhir.avro.models.Reference> value) {
-      validate(fields()[11], value);
+      validate(fields()[12], value);
       this.payor = value;
-      fieldSetFlags()[11] = true;
+      fieldSetFlags()[12] = true;
       return this;
     }
 
@@ -1346,7 +1417,7 @@ static {
       * @return True if the 'payor' field has been set, false otherwise.
       */
     public boolean hasPayor() {
-      return fieldSetFlags()[11];
+      return fieldSetFlags()[12];
     }
 
 
@@ -1356,7 +1427,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Coverage.Builder clearPayor() {
       payor = null;
-      fieldSetFlags()[11] = false;
+      fieldSetFlags()[12] = false;
       return this;
     }
 
@@ -1375,9 +1446,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Coverage.Builder setOrder(java.lang.Integer value) {
-      validate(fields()[12], value);
+      validate(fields()[13], value);
       this.order = value;
-      fieldSetFlags()[12] = true;
+      fieldSetFlags()[13] = true;
       return this;
     }
 
@@ -1386,7 +1457,7 @@ static {
       * @return True if the 'order' field has been set, false otherwise.
       */
     public boolean hasOrder() {
-      return fieldSetFlags()[12];
+      return fieldSetFlags()[13];
     }
 
 
@@ -1396,7 +1467,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Coverage.Builder clearOrder() {
       order = null;
-      fieldSetFlags()[12] = false;
+      fieldSetFlags()[13] = false;
       return this;
     }
 
@@ -1415,9 +1486,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Coverage.Builder setNetwork(java.lang.CharSequence value) {
-      validate(fields()[13], value);
+      validate(fields()[14], value);
       this.network = value;
-      fieldSetFlags()[13] = true;
+      fieldSetFlags()[14] = true;
       return this;
     }
 
@@ -1426,7 +1497,7 @@ static {
       * @return True if the 'network' field has been set, false otherwise.
       */
     public boolean hasNetwork() {
-      return fieldSetFlags()[13];
+      return fieldSetFlags()[14];
     }
 
 
@@ -1436,7 +1507,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Coverage.Builder clearNetwork() {
       network = null;
-      fieldSetFlags()[13] = false;
+      fieldSetFlags()[14] = false;
       return this;
     }
 
@@ -1455,9 +1526,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Coverage.Builder setSubrogation(java.lang.Boolean value) {
-      validate(fields()[14], value);
+      validate(fields()[15], value);
       this.subrogation = value;
-      fieldSetFlags()[14] = true;
+      fieldSetFlags()[15] = true;
       return this;
     }
 
@@ -1466,7 +1537,7 @@ static {
       * @return True if the 'subrogation' field has been set, false otherwise.
       */
     public boolean hasSubrogation() {
-      return fieldSetFlags()[14];
+      return fieldSetFlags()[15];
     }
 
 
@@ -1476,7 +1547,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Coverage.Builder clearSubrogation() {
       subrogation = null;
-      fieldSetFlags()[14] = false;
+      fieldSetFlags()[15] = false;
       return this;
     }
 
@@ -1486,8 +1557,9 @@ static {
       try {
         Coverage record = new Coverage();
         record.resourceType = fieldSetFlags()[0] ? this.resourceType : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.identifier = fieldSetFlags()[1] ? this.identifier : (java.util.List<io.carrera.fhir.avro.models.identifier_record>) defaultValue(fields()[1]);
-        record.status = fieldSetFlags()[2] ? this.status : (java.lang.CharSequence) defaultValue(fields()[2]);
+        record.id = fieldSetFlags()[1] ? this.id : (java.lang.CharSequence) defaultValue(fields()[1]);
+        record.identifier = fieldSetFlags()[2] ? this.identifier : (java.util.List<io.carrera.fhir.avro.models.identifier_record>) defaultValue(fields()[2]);
+        record.status = fieldSetFlags()[3] ? this.status : (java.lang.CharSequence) defaultValue(fields()[3]);
         if (typeBuilder != null) {
           try {
             record.type = this.typeBuilder.build();
@@ -1496,7 +1568,7 @@ static {
             throw e;
           }
         } else {
-          record.type = fieldSetFlags()[3] ? this.type : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[3]);
+          record.type = fieldSetFlags()[4] ? this.type : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[4]);
         }
         if (policyHolderBuilder != null) {
           try {
@@ -1506,7 +1578,7 @@ static {
             throw e;
           }
         } else {
-          record.policyHolder = fieldSetFlags()[4] ? this.policyHolder : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[4]);
+          record.policyHolder = fieldSetFlags()[5] ? this.policyHolder : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[5]);
         }
         if (subscriberBuilder != null) {
           try {
@@ -1516,9 +1588,9 @@ static {
             throw e;
           }
         } else {
-          record.subscriber = fieldSetFlags()[5] ? this.subscriber : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[5]);
+          record.subscriber = fieldSetFlags()[6] ? this.subscriber : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[6]);
         }
-        record.subscriberId = fieldSetFlags()[6] ? this.subscriberId : (java.lang.CharSequence) defaultValue(fields()[6]);
+        record.subscriberId = fieldSetFlags()[7] ? this.subscriberId : (java.lang.CharSequence) defaultValue(fields()[7]);
         if (beneficiaryBuilder != null) {
           try {
             record.beneficiary = this.beneficiaryBuilder.build();
@@ -1527,9 +1599,9 @@ static {
             throw e;
           }
         } else {
-          record.beneficiary = fieldSetFlags()[7] ? this.beneficiary : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[7]);
+          record.beneficiary = fieldSetFlags()[8] ? this.beneficiary : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[8]);
         }
-        record.dependent = fieldSetFlags()[8] ? this.dependent : (java.lang.CharSequence) defaultValue(fields()[8]);
+        record.dependent = fieldSetFlags()[9] ? this.dependent : (java.lang.CharSequence) defaultValue(fields()[9]);
         if (relationshipBuilder != null) {
           try {
             record.relationship = this.relationshipBuilder.build();
@@ -1538,7 +1610,7 @@ static {
             throw e;
           }
         } else {
-          record.relationship = fieldSetFlags()[9] ? this.relationship : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[9]);
+          record.relationship = fieldSetFlags()[10] ? this.relationship : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[10]);
         }
         if (periodBuilder != null) {
           try {
@@ -1548,12 +1620,12 @@ static {
             throw e;
           }
         } else {
-          record.period = fieldSetFlags()[10] ? this.period : (io.carrera.fhir.avro.models.Period) defaultValue(fields()[10]);
+          record.period = fieldSetFlags()[11] ? this.period : (io.carrera.fhir.avro.models.Period) defaultValue(fields()[11]);
         }
-        record.payor = fieldSetFlags()[11] ? this.payor : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[11]);
-        record.order = fieldSetFlags()[12] ? this.order : (java.lang.Integer) defaultValue(fields()[12]);
-        record.network = fieldSetFlags()[13] ? this.network : (java.lang.CharSequence) defaultValue(fields()[13]);
-        record.subrogation = fieldSetFlags()[14] ? this.subrogation : (java.lang.Boolean) defaultValue(fields()[14]);
+        record.payor = fieldSetFlags()[12] ? this.payor : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[12]);
+        record.order = fieldSetFlags()[13] ? this.order : (java.lang.Integer) defaultValue(fields()[13]);
+        record.network = fieldSetFlags()[14] ? this.network : (java.lang.CharSequence) defaultValue(fields()[14]);
+        record.subrogation = fieldSetFlags()[15] ? this.subrogation : (java.lang.Boolean) defaultValue(fields()[15]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
