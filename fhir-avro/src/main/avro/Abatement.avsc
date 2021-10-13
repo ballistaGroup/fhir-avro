@@ -1,0 +1,22 @@
+{
+  "name": "AllergyIntolerance_Reaction",
+  "type": "record",
+  "namespace": "io.carrera.fhir.avro.models",
+  "fields": [
+    {
+      "name": "substance",
+      "type": [
+        "null",
+        "CodeableConcept"
+      ],
+      "default": null
+    },
+    {
+      "name": "manifestation",
+      "type": {
+        "type": "array",
+        "items": "CodeableConcept"
+      }
+    }
+  ]
+}
