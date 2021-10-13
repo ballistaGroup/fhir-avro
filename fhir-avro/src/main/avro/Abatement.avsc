@@ -1,22 +1,27 @@
 {
-  "name": "AllergyIntolerance_Reaction",
+  "name": "Abatement",
   "type": "record",
   "namespace": "io.carrera.fhir.avro.models",
   "fields": [
     {
-      "name": "substance",
-      "type": [
-        "null",
-        "CodeableConcept"
-      ],
-      "default": null
+      "name": "abatementDateTime",
+      "type": "DateTime"
     },
     {
-      "name": "manifestation",
-      "type": {
-        "type": "array",
-        "items": "CodeableConcept"
-      }
+      "name": "abatementAge",
+      "type": "Age"
+    },
+    {
+      "name":"abatementPeriod",
+      "type":"Period"
+    },
+    {
+      "name":"abatementRange",
+      "type":"Range"
+    },
+    {
+      "name":"abatementString",
+      "type":"string"
     }
   ]
 }
