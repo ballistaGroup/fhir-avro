@@ -14,11 +14,14 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Condition extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 7342503173586978147L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Condition\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"clinicalStatus\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"verificationStatus\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"stage\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Condition_Stage\",\"fields\":[{\"name\":\"summary\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"assessment\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null}]}}],\"default\":null},{\"name\":\"onsetDateTime\",\"type\":[\"null\",\"int\"],\"default\":null,\"logicalType\":\"date\"},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null}]}");
+  private static final long serialVersionUID = 146008246615944870L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Condition\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"clinicalStatus\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"verificationStatus\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"stage\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Condition_Stage\",\"fields\":[{\"name\":\"summary\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"assessment\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null}]}}],\"default\":null},{\"name\":\"onsetDateTime\",\"type\":[\"null\",\"int\"],\"default\":null,\"logicalType\":\"date\"},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"abatementDateTime\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"localDateTime\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
+static {
+    MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.TimestampMillisConversion());
+  }
 
   private static final BinaryMessageEncoder<Condition> ENCODER =
       new BinaryMessageEncoder<Condition>(MODEL$, SCHEMA$);
@@ -79,6 +82,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
    private java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage;
    private java.lang.Integer onsetDateTime;
    private io.carrera.fhir.avro.models.CodeableConcept code;
+   private io.carrera.fhir.avro.models.DateTime abatementDateTime;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -97,8 +101,9 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
    * @param stage The new value for stage
    * @param onsetDateTime The new value for onsetDateTime
    * @param code The new value for code
+   * @param abatementDateTime The new value for abatementDateTime
    */
-  public Condition(java.lang.CharSequence resourceType, java.lang.CharSequence id, io.carrera.fhir.avro.models.CodeableConcept clinicalStatus, io.carrera.fhir.avro.models.CodeableConcept verificationStatus, io.carrera.fhir.avro.models.Reference subject, java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage, java.lang.Integer onsetDateTime, io.carrera.fhir.avro.models.CodeableConcept code) {
+  public Condition(java.lang.CharSequence resourceType, java.lang.CharSequence id, io.carrera.fhir.avro.models.CodeableConcept clinicalStatus, io.carrera.fhir.avro.models.CodeableConcept verificationStatus, io.carrera.fhir.avro.models.Reference subject, java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage, java.lang.Integer onsetDateTime, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.DateTime abatementDateTime) {
     this.resourceType = resourceType;
     this.id = id;
     this.clinicalStatus = clinicalStatus;
@@ -107,6 +112,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
     this.stage = stage;
     this.onsetDateTime = onsetDateTime;
     this.code = code;
+    this.abatementDateTime = abatementDateTime;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -122,6 +128,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
     case 5: return stage;
     case 6: return onsetDateTime;
     case 7: return code;
+    case 8: return abatementDateTime;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -138,6 +145,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
     case 5: stage = (java.util.List<io.carrera.fhir.avro.models.Condition_Stage>)value$; break;
     case 6: onsetDateTime = (java.lang.Integer)value$; break;
     case 7: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 8: abatementDateTime = (io.carrera.fhir.avro.models.DateTime)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -279,6 +287,23 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
   }
 
   /**
+   * Gets the value of the 'abatementDateTime' field.
+   * @return The value of the 'abatementDateTime' field.
+   */
+  public io.carrera.fhir.avro.models.DateTime getAbatementDateTime() {
+    return abatementDateTime;
+  }
+
+
+  /**
+   * Sets the value of the 'abatementDateTime' field.
+   * @param value the value to set.
+   */
+  public void setAbatementDateTime(io.carrera.fhir.avro.models.DateTime value) {
+    this.abatementDateTime = value;
+  }
+
+  /**
    * Creates a new Condition RecordBuilder.
    * @return A new Condition RecordBuilder
    */
@@ -331,6 +356,8 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
     private java.lang.Integer onsetDateTime;
     private io.carrera.fhir.avro.models.CodeableConcept code;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder codeBuilder;
+    private io.carrera.fhir.avro.models.DateTime abatementDateTime;
+    private io.carrera.fhir.avro.models.DateTime.Builder abatementDateTimeBuilder;
 
     /** Creates a new Builder */
     private Builder() {
@@ -387,6 +414,13 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
       if (other.hasCodeBuilder()) {
         this.codeBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getCodeBuilder());
       }
+      if (isValidValue(fields()[8], other.abatementDateTime)) {
+        this.abatementDateTime = data().deepCopy(fields()[8].schema(), other.abatementDateTime);
+        fieldSetFlags()[8] = other.fieldSetFlags()[8];
+      }
+      if (other.hasAbatementDateTimeBuilder()) {
+        this.abatementDateTimeBuilder = io.carrera.fhir.avro.models.DateTime.newBuilder(other.getAbatementDateTimeBuilder());
+      }
     }
 
     /**
@@ -431,6 +465,11 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
         fieldSetFlags()[7] = true;
       }
       this.codeBuilder = null;
+      if (isValidValue(fields()[8], other.abatementDateTime)) {
+        this.abatementDateTime = data().deepCopy(fields()[8].schema(), other.abatementDateTime);
+        fieldSetFlags()[8] = true;
+      }
+      this.abatementDateTimeBuilder = null;
     }
 
     /**
@@ -897,6 +936,82 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
       return this;
     }
 
+    /**
+      * Gets the value of the 'abatementDateTime' field.
+      * @return The value.
+      */
+    public io.carrera.fhir.avro.models.DateTime getAbatementDateTime() {
+      return abatementDateTime;
+    }
+
+
+    /**
+      * Sets the value of the 'abatementDateTime' field.
+      * @param value The value of 'abatementDateTime'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Condition.Builder setAbatementDateTime(io.carrera.fhir.avro.models.DateTime value) {
+      validate(fields()[8], value);
+      this.abatementDateTimeBuilder = null;
+      this.abatementDateTime = value;
+      fieldSetFlags()[8] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'abatementDateTime' field has been set.
+      * @return True if the 'abatementDateTime' field has been set, false otherwise.
+      */
+    public boolean hasAbatementDateTime() {
+      return fieldSetFlags()[8];
+    }
+
+    /**
+     * Gets the Builder instance for the 'abatementDateTime' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.DateTime.Builder getAbatementDateTimeBuilder() {
+      if (abatementDateTimeBuilder == null) {
+        if (hasAbatementDateTime()) {
+          setAbatementDateTimeBuilder(io.carrera.fhir.avro.models.DateTime.newBuilder(abatementDateTime));
+        } else {
+          setAbatementDateTimeBuilder(io.carrera.fhir.avro.models.DateTime.newBuilder());
+        }
+      }
+      return abatementDateTimeBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'abatementDateTime' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+
+    public io.carrera.fhir.avro.models.Condition.Builder setAbatementDateTimeBuilder(io.carrera.fhir.avro.models.DateTime.Builder value) {
+      clearAbatementDateTime();
+      abatementDateTimeBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'abatementDateTime' field has an active Builder instance
+     * @return True if the 'abatementDateTime' field has an active Builder instance
+     */
+    public boolean hasAbatementDateTimeBuilder() {
+      return abatementDateTimeBuilder != null;
+    }
+
+    /**
+      * Clears the value of the 'abatementDateTime' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Condition.Builder clearAbatementDateTime() {
+      abatementDateTime = null;
+      abatementDateTimeBuilder = null;
+      fieldSetFlags()[8] = false;
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     public Condition build() {
@@ -946,6 +1061,16 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
         } else {
           record.code = fieldSetFlags()[7] ? this.code : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[7]);
         }
+        if (abatementDateTimeBuilder != null) {
+          try {
+            record.abatementDateTime = this.abatementDateTimeBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("abatementDateTime"));
+            throw e;
+          }
+        } else {
+          record.abatementDateTime = fieldSetFlags()[8] ? this.abatementDateTime : (io.carrera.fhir.avro.models.DateTime) defaultValue(fields()[8]);
+        }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -973,254 +1098,6 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
     READER$.read(this, SpecificData.getDecoder(in));
   }
 
-  @Override protected boolean hasCustomCoders() { return true; }
-
-  @Override public void customEncode(org.apache.avro.io.Encoder out)
-    throws java.io.IOException
-  {
-    out.writeString(this.resourceType);
-
-    if (this.id == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeString(this.id);
-    }
-
-    if (this.clinicalStatus == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      this.clinicalStatus.customEncode(out);
-    }
-
-    if (this.verificationStatus == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      this.verificationStatus.customEncode(out);
-    }
-
-    this.subject.customEncode(out);
-
-    if (this.stage == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      long size0 = this.stage.size();
-      out.writeArrayStart();
-      out.setItemCount(size0);
-      long actualSize0 = 0;
-      for (io.carrera.fhir.avro.models.Condition_Stage e0: this.stage) {
-        actualSize0++;
-        out.startItem();
-        e0.customEncode(out);
-      }
-      out.writeArrayEnd();
-      if (actualSize0 != size0)
-        throw new java.util.ConcurrentModificationException("Array-size written was " + size0 + ", but element count was " + actualSize0 + ".");
-    }
-
-    if (this.onsetDateTime == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeInt(this.onsetDateTime);
-    }
-
-    if (this.code == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      this.code.customEncode(out);
-    }
-
-  }
-
-  @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
-    throws java.io.IOException
-  {
-    org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
-    if (fieldOrder == null) {
-      this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.id = null;
-      } else {
-        this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.clinicalStatus = null;
-      } else {
-        if (this.clinicalStatus == null) {
-          this.clinicalStatus = new io.carrera.fhir.avro.models.CodeableConcept();
-        }
-        this.clinicalStatus.customDecode(in);
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.verificationStatus = null;
-      } else {
-        if (this.verificationStatus == null) {
-          this.verificationStatus = new io.carrera.fhir.avro.models.CodeableConcept();
-        }
-        this.verificationStatus.customDecode(in);
-      }
-
-      if (this.subject == null) {
-        this.subject = new io.carrera.fhir.avro.models.Reference();
-      }
-      this.subject.customDecode(in);
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.stage = null;
-      } else {
-        long size0 = in.readArrayStart();
-        java.util.List<io.carrera.fhir.avro.models.Condition_Stage> a0 = this.stage;
-        if (a0 == null) {
-          a0 = new SpecificData.Array<io.carrera.fhir.avro.models.Condition_Stage>((int)size0, SCHEMA$.getField("stage").schema().getTypes().get(1));
-          this.stage = a0;
-        } else a0.clear();
-        SpecificData.Array<io.carrera.fhir.avro.models.Condition_Stage> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.Condition_Stage>)a0 : null);
-        for ( ; 0 < size0; size0 = in.arrayNext()) {
-          for ( ; size0 != 0; size0--) {
-            io.carrera.fhir.avro.models.Condition_Stage e0 = (ga0 != null ? ga0.peek() : null);
-            if (e0 == null) {
-              e0 = new io.carrera.fhir.avro.models.Condition_Stage();
-            }
-            e0.customDecode(in);
-            a0.add(e0);
-          }
-        }
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.onsetDateTime = null;
-      } else {
-        this.onsetDateTime = in.readInt();
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.code = null;
-      } else {
-        if (this.code == null) {
-          this.code = new io.carrera.fhir.avro.models.CodeableConcept();
-        }
-        this.code.customDecode(in);
-      }
-
-    } else {
-      for (int i = 0; i < 8; i++) {
-        switch (fieldOrder[i].pos()) {
-        case 0:
-          this.resourceType = in.readString(this.resourceType instanceof Utf8 ? (Utf8)this.resourceType : null);
-          break;
-
-        case 1:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.id = null;
-          } else {
-            this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-          }
-          break;
-
-        case 2:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.clinicalStatus = null;
-          } else {
-            if (this.clinicalStatus == null) {
-              this.clinicalStatus = new io.carrera.fhir.avro.models.CodeableConcept();
-            }
-            this.clinicalStatus.customDecode(in);
-          }
-          break;
-
-        case 3:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.verificationStatus = null;
-          } else {
-            if (this.verificationStatus == null) {
-              this.verificationStatus = new io.carrera.fhir.avro.models.CodeableConcept();
-            }
-            this.verificationStatus.customDecode(in);
-          }
-          break;
-
-        case 4:
-          if (this.subject == null) {
-            this.subject = new io.carrera.fhir.avro.models.Reference();
-          }
-          this.subject.customDecode(in);
-          break;
-
-        case 5:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.stage = null;
-          } else {
-            long size0 = in.readArrayStart();
-            java.util.List<io.carrera.fhir.avro.models.Condition_Stage> a0 = this.stage;
-            if (a0 == null) {
-              a0 = new SpecificData.Array<io.carrera.fhir.avro.models.Condition_Stage>((int)size0, SCHEMA$.getField("stage").schema().getTypes().get(1));
-              this.stage = a0;
-            } else a0.clear();
-            SpecificData.Array<io.carrera.fhir.avro.models.Condition_Stage> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.Condition_Stage>)a0 : null);
-            for ( ; 0 < size0; size0 = in.arrayNext()) {
-              for ( ; size0 != 0; size0--) {
-                io.carrera.fhir.avro.models.Condition_Stage e0 = (ga0 != null ? ga0.peek() : null);
-                if (e0 == null) {
-                  e0 = new io.carrera.fhir.avro.models.Condition_Stage();
-                }
-                e0.customDecode(in);
-                a0.add(e0);
-              }
-            }
-          }
-          break;
-
-        case 6:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.onsetDateTime = null;
-          } else {
-            this.onsetDateTime = in.readInt();
-          }
-          break;
-
-        case 7:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.code = null;
-          } else {
-            if (this.code == null) {
-              this.code = new io.carrera.fhir.avro.models.CodeableConcept();
-            }
-            this.code.customDecode(in);
-          }
-          break;
-
-        default:
-          throw new java.io.IOException("Corrupt ResolvingDecoder.");
-        }
-      }
-    }
-  }
 }
 
 
