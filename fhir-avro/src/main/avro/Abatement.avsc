@@ -1,27 +1,27 @@
-{
-  "name": "Abatement",
-  "type": "record",
-  "namespace": "io.carrera.fhir.avro.models",
-  "fields": [
-    {
-      "name": "abatementDateTime",
-      "type": "DateTime"
-    },
-    {
-      "name": "abatementAge",
-      "type": "Age"
-    },
-    {
-      "name":"abatementPeriod",
-      "type":"Period"
-    },
-    {
-      "name":"abatementRange",
-      "type":"Range"
-    },
-    {
-      "name":"abatementString",
-      "type":"string"
-    }
-  ]
-}
+// {
+//   "name": "Abatement",
+//   "type": "record",
+//   "namespace": "io.carrera.fhir.avro.models",
+//   "fields": [
+//     {
+//       "name": "abatementDateTime",
+//       "type": "DateTime"
+//     },
+//     {
+//       "name": "abatementAge",
+//       "type": "Age"
+//     },
+//     {
+//       "name":"abatementPeriod",
+//       "type":"Period"
+//     },
+//     {
+//       "name":"abatementRange",
+//       "type":"Range"
+//     },
+//     {
+//       "name":"abatementString",
+//       "type":"string"
+//     }
+//   ]
+// }
