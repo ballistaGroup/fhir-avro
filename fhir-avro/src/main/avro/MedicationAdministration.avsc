@@ -1,7 +1,6 @@
 {
-  "name": "Procedure",
+  "name": "MedicationAdministration",
   "type": "record",
-  "namespace": "io.carrera.fhir.avro.models",
   "fields": [
     {
       "name": "resourceType",
@@ -12,9 +11,15 @@
       "type": [
         "null",
         "string"
-      ],
-      "default": null
+      ]
     },
+    // {
+    //   "name": "meta",
+    //   "type": [
+    //     "null",
+    //     "Meta"
+    //   ]
+    // },
     {
       "name": "implicitRules",
       "type": [
@@ -77,32 +82,12 @@
     //   ]
     // },
     {
-      "name": "instantiatesCanonical",
+      "name": "instantiates",
       "type": [
         "null",
         {
           "type": "array",
           "items": "string"
-        }
-      ]
-    },
-    {
-      "name": "instantiatesUri",
-      "type": [
-        "null",
-        {
-          "type": "array",
-          "items": "string"
-        }
-      ]
-    },
-    {
-      "name": "basedOn",
-      "type": [
-        "null",
-        {
-          "type": "array",
-          "items": "Reference"
         }
       ]
     },
@@ -127,7 +112,10 @@
       "name": "statusReason",
       "type": [
         "null",
-        "CodeableConcept"
+        {
+          "type": "array",
+          "items": "CodeableConcept"
+        }
       ]
     },
     {
@@ -138,10 +126,17 @@
       ]
     },
     {
-      "name": "code",
+      "name": "medicationCodeableConcept",
       "type": [
         "null",
         "CodeableConcept"
+      ]
+    },
+    {
+      "name": "medicationReference",
+      "type": [
+        "null",
+        "Reference"
       ]
     },
     {
@@ -149,14 +144,24 @@
       "type": "Reference"
     },
     {
-      "name": "encounter",
+      "name": "context",
       "type": [
         "null",
         "Reference"
       ]
     },
     {
-      "name": "performedDateTime",
+      "name": "supportingInformation",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "Reference"
+        }
+      ]
+    },
+    {
+      "name": "effectiveDateTime",
       "type": [
         "null",
         {
@@ -170,45 +175,10 @@
       ]
     },
     {
-      "name": "performedPeriod",
+      "name": "effectivePeriod",
       "type": [
         "null",
         "Period"
-      ]
-    },
-    {
-      "name": "performedString",
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    // {
-    //   "name": "performedAge",
-    //   "type": [
-    //     "null",
-    //     "Age"
-    //   ]
-    // },
-    {
-      "name": "performedRange",
-      "type": [
-        "null",
-        "Range"
-      ]
-    },
-    {
-      "name": "recorder",
-      "type": [
-        "null",
-        "Reference"
-      ]
-    },
-    {
-      "name": "asserter",
-      "type": [
-        "null",
-        "Reference"
       ]
     },
     // {
@@ -217,17 +187,10 @@
     //     "null",
     //     {
     //       "type": "array",
-    //       "items": "Procedure_Performer"
+    //       "items": "MedicationAdministration_Performer"
     //     }
     //   ]
     // },
-    {
-      "name": "location",
-      "type": [
-        "null",
-        "Reference"
-      ]
-    },
     {
       "name": "reasonCode",
       "type": [
@@ -249,59 +212,19 @@
       ]
     },
     {
-      "name": "bodySite",
+      "name": "request",
       "type": [
         "null",
-        {
-          "type": "array",
-          "items": "CodeableConcept"
-        }
+        "Reference"
       ]
     },
     {
-      "name": "outcome",
-      "type": [
-        "null",
-        "CodeableConcept"
-      ]
-    },
-    {
-      "name": "report",
+      "name": "device",
       "type": [
         "null",
         {
           "type": "array",
           "items": "Reference"
-        }
-      ]
-    },
-    {
-      "name": "complication",
-      "type": [
-        "null",
-        {
-          "type": "array",
-          "items": "CodeableConcept"
-        }
-      ]
-    },
-    {
-      "name": "complicationDetail",
-      "type": [
-        "null",
-        {
-          "type": "array",
-          "items": "Reference"
-        }
-      ]
-    },
-    {
-      "name": "followUp",
-      "type": [
-        "null",
-        {
-          "type": "array",
-          "items": "CodeableConcept"
         }
       ]
     },
@@ -316,17 +239,14 @@
     //   ]
     // },
     // {
-    //   "name": "focalDevice",
+    //   "name": "dosage",
     //   "type": [
     //     "null",
-    //     {
-    //       "type": "array",
-    //       "items": "Procedure_FocalDevice"
-    //     }
+    //     "MedicationAdministration_Dosage"
     //   ]
     // },
     {
-      "name": "usedReference",
+      "name": "eventHistory",
       "type": [
         "null",
         {
@@ -334,16 +254,7 @@
           "items": "Reference"
         }
       ]
-    },
-    {
-      "name": "usedCode",
-      "type": [
-        "null",
-        {
-          "type": "array",
-          "items": "CodeableConcept"
-        }
-      ]
     }
-  ]
+  ],
+  "namespace": "io.carrera.fhir.avro.models"
 }
