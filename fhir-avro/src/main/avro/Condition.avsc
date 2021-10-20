@@ -47,6 +47,11 @@
       "name" : "code",
       "type" : [ "null", "CodeableConcept" ],
       "default": null
+    },
+    {
+      "name": "abatementDateTime",
+      "type": ["null","DateTime"],
+      "default" : null
     }
   ]
 }
