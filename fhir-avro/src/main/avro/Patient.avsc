@@ -58,6 +58,28 @@
         "CodeableConcept"
       ],
       "default" : null
+    },
+    {
+      "name": "extension",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "Extension"
+        }
+      ],
+     "default" : null
+    },
+    {
+      "name": "modifierExtension",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "Extension"
+        }
+      ],
+      "default" : null
     }
   ]
 }

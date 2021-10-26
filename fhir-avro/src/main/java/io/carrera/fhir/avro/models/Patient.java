@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Patient extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -4804417182327041181L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Patient\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"identifier\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"identifier_record\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"value\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"name\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"name_record\",\"fields\":[{\"name\":\"use\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"family\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"given\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null},{\"name\":\"prefix\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null}]}}],\"default\":null},{\"name\":\"gender\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"birthDate\",\"type\":[\"null\",\"string\",{\"type\":\"int\",\"logicalType\":\"date\"}],\"default\":null},{\"name\":\"maritalStatus\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null}]}");
+  private static final long serialVersionUID = -7530809344049127096L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Patient\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"identifier\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"identifier_record\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"value\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"name\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"name_record\",\"fields\":[{\"name\":\"use\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"family\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"given\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null},{\"name\":\"prefix\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null}]}}],\"default\":null},{\"name\":\"gender\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"birthDate\",\"type\":[\"null\",\"string\",{\"type\":\"int\",\"logicalType\":\"date\"}],\"default\":null},{\"name\":\"maritalStatus\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}],\"default\":null},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -81,6 +81,8 @@ static {
    private java.lang.CharSequence gender;
    private java.lang.Object birthDate;
    private io.carrera.fhir.avro.models.CodeableConcept maritalStatus;
+   private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
+   private java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -98,8 +100,10 @@ static {
    * @param gender The new value for gender
    * @param birthDate The new value for birthDate
    * @param maritalStatus The new value for maritalStatus
+   * @param extension The new value for extension
+   * @param modifierExtension The new value for modifierExtension
    */
-  public Patient(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier, java.util.List<io.carrera.fhir.avro.models.name_record> name, java.lang.CharSequence gender, java.lang.Object birthDate, io.carrera.fhir.avro.models.CodeableConcept maritalStatus) {
+  public Patient(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier, java.util.List<io.carrera.fhir.avro.models.name_record> name, java.lang.CharSequence gender, java.lang.Object birthDate, io.carrera.fhir.avro.models.CodeableConcept maritalStatus, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension) {
     this.resourceType = resourceType;
     this.id = id;
     this.identifier = identifier;
@@ -107,6 +111,8 @@ static {
     this.gender = gender;
     this.birthDate = birthDate;
     this.maritalStatus = maritalStatus;
+    this.extension = extension;
+    this.modifierExtension = modifierExtension;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -121,6 +127,8 @@ static {
     case 4: return gender;
     case 5: return birthDate;
     case 6: return maritalStatus;
+    case 7: return extension;
+    case 8: return modifierExtension;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -136,6 +144,8 @@ static {
     case 4: gender = (java.lang.CharSequence)value$; break;
     case 5: birthDate = value$; break;
     case 6: maritalStatus = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 7: extension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
+    case 8: modifierExtension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -260,6 +270,40 @@ static {
   }
 
   /**
+   * Gets the value of the 'extension' field.
+   * @return The value of the 'extension' field.
+   */
+  public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
+    return extension;
+  }
+
+
+  /**
+   * Sets the value of the 'extension' field.
+   * @param value the value to set.
+   */
+  public void setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
+    this.extension = value;
+  }
+
+  /**
+   * Gets the value of the 'modifierExtension' field.
+   * @return The value of the 'modifierExtension' field.
+   */
+  public java.util.List<io.carrera.fhir.avro.models.Extension> getModifierExtension() {
+    return modifierExtension;
+  }
+
+
+  /**
+   * Sets the value of the 'modifierExtension' field.
+   * @param value the value to set.
+   */
+  public void setModifierExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
+    this.modifierExtension = value;
+  }
+
+  /**
    * Creates a new Patient RecordBuilder.
    * @return A new Patient RecordBuilder
    */
@@ -308,6 +352,8 @@ static {
     private java.lang.Object birthDate;
     private io.carrera.fhir.avro.models.CodeableConcept maritalStatus;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder maritalStatusBuilder;
+    private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
+    private java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension;
 
     /** Creates a new Builder */
     private Builder() {
@@ -351,6 +397,14 @@ static {
       if (other.hasMaritalStatusBuilder()) {
         this.maritalStatusBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getMaritalStatusBuilder());
       }
+      if (isValidValue(fields()[7], other.extension)) {
+        this.extension = data().deepCopy(fields()[7].schema(), other.extension);
+        fieldSetFlags()[7] = other.fieldSetFlags()[7];
+      }
+      if (isValidValue(fields()[8], other.modifierExtension)) {
+        this.modifierExtension = data().deepCopy(fields()[8].schema(), other.modifierExtension);
+        fieldSetFlags()[8] = other.fieldSetFlags()[8];
+      }
     }
 
     /**
@@ -388,6 +442,14 @@ static {
         fieldSetFlags()[6] = true;
       }
       this.maritalStatusBuilder = null;
+      if (isValidValue(fields()[7], other.extension)) {
+        this.extension = data().deepCopy(fields()[7].schema(), other.extension);
+        fieldSetFlags()[7] = true;
+      }
+      if (isValidValue(fields()[8], other.modifierExtension)) {
+        this.modifierExtension = data().deepCopy(fields()[8].schema(), other.modifierExtension);
+        fieldSetFlags()[8] = true;
+      }
     }
 
     /**
@@ -706,6 +768,86 @@ static {
       return this;
     }
 
+    /**
+      * Gets the value of the 'extension' field.
+      * @return The value.
+      */
+    public java.util.List<io.carrera.fhir.avro.models.Extension> getExtension() {
+      return extension;
+    }
+
+
+    /**
+      * Sets the value of the 'extension' field.
+      * @param value The value of 'extension'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Patient.Builder setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
+      validate(fields()[7], value);
+      this.extension = value;
+      fieldSetFlags()[7] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'extension' field has been set.
+      * @return True if the 'extension' field has been set, false otherwise.
+      */
+    public boolean hasExtension() {
+      return fieldSetFlags()[7];
+    }
+
+
+    /**
+      * Clears the value of the 'extension' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Patient.Builder clearExtension() {
+      extension = null;
+      fieldSetFlags()[7] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'modifierExtension' field.
+      * @return The value.
+      */
+    public java.util.List<io.carrera.fhir.avro.models.Extension> getModifierExtension() {
+      return modifierExtension;
+    }
+
+
+    /**
+      * Sets the value of the 'modifierExtension' field.
+      * @param value The value of 'modifierExtension'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Patient.Builder setModifierExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
+      validate(fields()[8], value);
+      this.modifierExtension = value;
+      fieldSetFlags()[8] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'modifierExtension' field has been set.
+      * @return True if the 'modifierExtension' field has been set, false otherwise.
+      */
+    public boolean hasModifierExtension() {
+      return fieldSetFlags()[8];
+    }
+
+
+    /**
+      * Clears the value of the 'modifierExtension' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Patient.Builder clearModifierExtension() {
+      modifierExtension = null;
+      fieldSetFlags()[8] = false;
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     public Patient build() {
@@ -727,6 +869,8 @@ static {
         } else {
           record.maritalStatus = fieldSetFlags()[6] ? this.maritalStatus : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[6]);
         }
+        record.extension = fieldSetFlags()[7] ? this.extension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[7]);
+        record.modifierExtension = fieldSetFlags()[8] ? this.modifierExtension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[8]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;

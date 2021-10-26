@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Extension extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 6043628739067939242L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Extension\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}");
+  private static final long serialVersionUID = 138794737985682050L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Extension\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}],\"default\":null},{\"name\":\"url\",\"type\":[\"null\",\"string\"]},{\"name\":\"value\",\"type\":[\"null\",\"string\",\"int\",\"boolean\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]},{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -74,6 +74,7 @@ public class Extension extends org.apache.avro.specific.SpecificRecordBase imple
    private java.lang.CharSequence id;
    private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
    private java.lang.CharSequence url;
+   private java.lang.Object value;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -87,11 +88,13 @@ public class Extension extends org.apache.avro.specific.SpecificRecordBase imple
    * @param id The new value for id
    * @param extension The new value for extension
    * @param url The new value for url
+   * @param value The new value for value
    */
-  public Extension(java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.lang.CharSequence url) {
+  public Extension(java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.lang.CharSequence url, java.lang.Object value) {
     this.id = id;
     this.extension = extension;
     this.url = url;
+    this.value = value;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -102,6 +105,7 @@ public class Extension extends org.apache.avro.specific.SpecificRecordBase imple
     case 0: return id;
     case 1: return extension;
     case 2: return url;
+    case 3: return value;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -113,6 +117,7 @@ public class Extension extends org.apache.avro.specific.SpecificRecordBase imple
     case 0: id = (java.lang.CharSequence)value$; break;
     case 1: extension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
     case 2: url = (java.lang.CharSequence)value$; break;
+    case 3: value = value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -169,6 +174,23 @@ public class Extension extends org.apache.avro.specific.SpecificRecordBase imple
   }
 
   /**
+   * Gets the value of the 'value' field.
+   * @return The value of the 'value' field.
+   */
+  public java.lang.Object getValue() {
+    return value;
+  }
+
+
+  /**
+   * Sets the value of the 'value' field.
+   * @param value the value to set.
+   */
+  public void setValue(java.lang.Object value) {
+    this.value = value;
+  }
+
+  /**
    * Creates a new Extension RecordBuilder.
    * @return A new Extension RecordBuilder
    */
@@ -212,6 +234,7 @@ public class Extension extends org.apache.avro.specific.SpecificRecordBase imple
     private java.lang.CharSequence id;
     private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
     private java.lang.CharSequence url;
+    private java.lang.Object value;
 
     /** Creates a new Builder */
     private Builder() {
@@ -236,6 +259,10 @@ public class Extension extends org.apache.avro.specific.SpecificRecordBase imple
         this.url = data().deepCopy(fields()[2].schema(), other.url);
         fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
+      if (isValidValue(fields()[3], other.value)) {
+        this.value = data().deepCopy(fields()[3].schema(), other.value);
+        fieldSetFlags()[3] = other.fieldSetFlags()[3];
+      }
     }
 
     /**
@@ -255,6 +282,10 @@ public class Extension extends org.apache.avro.specific.SpecificRecordBase imple
       if (isValidValue(fields()[2], other.url)) {
         this.url = data().deepCopy(fields()[2].schema(), other.url);
         fieldSetFlags()[2] = true;
+      }
+      if (isValidValue(fields()[3], other.value)) {
+        this.value = data().deepCopy(fields()[3].schema(), other.value);
+        fieldSetFlags()[3] = true;
       }
     }
 
@@ -378,6 +409,46 @@ public class Extension extends org.apache.avro.specific.SpecificRecordBase imple
       return this;
     }
 
+    /**
+      * Gets the value of the 'value' field.
+      * @return The value.
+      */
+    public java.lang.Object getValue() {
+      return value;
+    }
+
+
+    /**
+      * Sets the value of the 'value' field.
+      * @param value The value of 'value'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Extension.Builder setValue(java.lang.Object value) {
+      validate(fields()[3], value);
+      this.value = value;
+      fieldSetFlags()[3] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'value' field has been set.
+      * @return True if the 'value' field has been set, false otherwise.
+      */
+    public boolean hasValue() {
+      return fieldSetFlags()[3];
+    }
+
+
+    /**
+      * Clears the value of the 'value' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Extension.Builder clearValue() {
+      value = null;
+      fieldSetFlags()[3] = false;
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     public Extension build() {
@@ -386,6 +457,7 @@ public class Extension extends org.apache.avro.specific.SpecificRecordBase imple
         record.id = fieldSetFlags()[0] ? this.id : (java.lang.CharSequence) defaultValue(fields()[0]);
         record.extension = fieldSetFlags()[1] ? this.extension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[1]);
         record.url = fieldSetFlags()[2] ? this.url : (java.lang.CharSequence) defaultValue(fields()[2]);
+        record.value = fieldSetFlags()[3] ? this.value :  defaultValue(fields()[3]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -413,142 +485,6 @@ public class Extension extends org.apache.avro.specific.SpecificRecordBase imple
     READER$.read(this, SpecificData.getDecoder(in));
   }
 
-  @Override protected boolean hasCustomCoders() { return true; }
-
-  @Override public void customEncode(org.apache.avro.io.Encoder out)
-    throws java.io.IOException
-  {
-    if (this.id == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeString(this.id);
-    }
-
-    if (this.extension == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      long size0 = this.extension.size();
-      out.writeArrayStart();
-      out.setItemCount(size0);
-      long actualSize0 = 0;
-      for (io.carrera.fhir.avro.models.Extension e0: this.extension) {
-        actualSize0++;
-        out.startItem();
-        e0.customEncode(out);
-      }
-      out.writeArrayEnd();
-      if (actualSize0 != size0)
-        throw new java.util.ConcurrentModificationException("Array-size written was " + size0 + ", but element count was " + actualSize0 + ".");
-    }
-
-    if (this.url == null) {
-      out.writeIndex(0);
-      out.writeNull();
-    } else {
-      out.writeIndex(1);
-      out.writeString(this.url);
-    }
-
-  }
-
-  @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
-    throws java.io.IOException
-  {
-    org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
-    if (fieldOrder == null) {
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.id = null;
-      } else {
-        this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.extension = null;
-      } else {
-        long size0 = in.readArrayStart();
-        java.util.List<io.carrera.fhir.avro.models.Extension> a0 = this.extension;
-        if (a0 == null) {
-          a0 = new SpecificData.Array<io.carrera.fhir.avro.models.Extension>((int)size0, SCHEMA$.getField("extension").schema().getTypes().get(1));
-          this.extension = a0;
-        } else a0.clear();
-        SpecificData.Array<io.carrera.fhir.avro.models.Extension> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.Extension>)a0 : null);
-        for ( ; 0 < size0; size0 = in.arrayNext()) {
-          for ( ; size0 != 0; size0--) {
-            io.carrera.fhir.avro.models.Extension e0 = (ga0 != null ? ga0.peek() : null);
-            if (e0 == null) {
-              e0 = new io.carrera.fhir.avro.models.Extension();
-            }
-            e0.customDecode(in);
-            a0.add(e0);
-          }
-        }
-      }
-
-      if (in.readIndex() != 1) {
-        in.readNull();
-        this.url = null;
-      } else {
-        this.url = in.readString(this.url instanceof Utf8 ? (Utf8)this.url : null);
-      }
-
-    } else {
-      for (int i = 0; i < 3; i++) {
-        switch (fieldOrder[i].pos()) {
-        case 0:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.id = null;
-          } else {
-            this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
-          }
-          break;
-
-        case 1:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.extension = null;
-          } else {
-            long size0 = in.readArrayStart();
-            java.util.List<io.carrera.fhir.avro.models.Extension> a0 = this.extension;
-            if (a0 == null) {
-              a0 = new SpecificData.Array<io.carrera.fhir.avro.models.Extension>((int)size0, SCHEMA$.getField("extension").schema().getTypes().get(1));
-              this.extension = a0;
-            } else a0.clear();
-            SpecificData.Array<io.carrera.fhir.avro.models.Extension> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<io.carrera.fhir.avro.models.Extension>)a0 : null);
-            for ( ; 0 < size0; size0 = in.arrayNext()) {
-              for ( ; size0 != 0; size0--) {
-                io.carrera.fhir.avro.models.Extension e0 = (ga0 != null ? ga0.peek() : null);
-                if (e0 == null) {
-                  e0 = new io.carrera.fhir.avro.models.Extension();
-                }
-                e0.customDecode(in);
-                a0.add(e0);
-              }
-            }
-          }
-          break;
-
-        case 2:
-          if (in.readIndex() != 1) {
-            in.readNull();
-            this.url = null;
-          } else {
-            this.url = in.readString(this.url instanceof Utf8 ? (Utf8)this.url : null);
-          }
-          break;
-
-        default:
-          throw new java.io.IOException("Corrupt ResolvingDecoder.");
-        }
-      }
-    }
-  }
 }
 
 
