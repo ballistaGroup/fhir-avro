@@ -36,7 +36,7 @@
         <imports>
             <import>${project.basedir}/src/main/avro/DateTime.avsc</import>
             <import>${project.basedir}/src/main/avro/Quantity.avsc</import>
-            <import>${project.basedir}/src/main/avro/Coding.avsc</import>            
+            <import>${project.basedir}/src/main/avro/Coding.avsc</import>
             <import>${project.basedir}/src/main/avro/Extension.avsc</import>
             <import>${project.basedir}/src/main/avro/CodeableConcept.avsc</import>
             <import>${project.basedir}/src/main/avro/Reference.avsc</import>
@@ -66,6 +66,7 @@
             <import>${project.basedir}/src/main/avro/Item.avsc</import>
             <import>${project.basedir}/src/main/avro/Procedure.avsc</import>
             <import>${project.basedir}/src/main/avro/MedicationAdministration.avsc</import>
+            <import>${project.basedir}/src/main/avro/Encounter.avsc</import>
         </imports>
       </configuration>
     </execution>
