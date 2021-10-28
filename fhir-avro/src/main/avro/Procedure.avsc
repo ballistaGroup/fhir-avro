@@ -20,14 +20,16 @@
       "type": [
         "null",
         "string"
-      ]
+      ],
+      "default": null
     },
     {
       "name": "language",
       "type": [
         "null",
         "string"
-      ]
+      ],
+      "default": null
     },
     // {
     //   "name": "text",
@@ -54,7 +56,8 @@
           "type": "array",
           "items": "Extension"
         }
-      ]
+      ],
+      "default": null
     },
     {
       "name": "modifierExtension",
@@ -64,7 +67,8 @@
           "type": "array",
           "items": "Extension"
         }
-      ]
+      ],
+      "default": null
     },
     // {
     //   "name": "identifier",
@@ -84,7 +88,8 @@
           "type": "array",
           "items": "string"
         }
-      ]
+      ],
+      "default": null
     },
     {
       "name": "instantiatesUri",
@@ -94,7 +99,8 @@
           "type": "array",
           "items": "string"
         }
-      ]
+      ],
+      "default": null
     },
     {
       "name": "basedOn",
@@ -104,7 +110,8 @@
           "type": "array",
           "items": "Reference"
         }
-      ]
+      ],
+      "default": null
     },
     {
       "name": "partOf",
@@ -114,12 +121,12 @@
           "type": "array",
           "items": "Reference"
         }
-      ]
+      ],
+      "default": null
     },
     {
       "name": "status",
       "type": [
-        "null",
         "string"
       ]
     },
@@ -128,32 +135,40 @@
       "type": [
         "null",
         "CodeableConcept"
-      ]
+      ],
+      "default": null
     },
     {
       "name": "category",
       "type": [
         "null",
         "CodeableConcept"
-      ]
+      ],
+      "default": null
     },
     {
       "name": "code",
       "type": [
         "null",
         "CodeableConcept"
-      ]
+      ],
+      "default": null
     },
     {
       "name": "subject",
-      "type": "Reference"
+      "type": [
+        "null",
+        "Reference"
+      ],
+      "default": null
     },
     {
       "name": "encounter",
       "type": [
         "null",
         "Reference"
-      ]
+      ],
+      "default": null
     },
     {
       "name": "performedDateTime",
@@ -167,21 +182,24 @@
           "type": "long",
           "logicalType": "local-timestamp-micros"
         }
-      ]
+      ],
+      "default": null
     },
     {
       "name": "performedPeriod",
       "type": [
         "null",
         "Period"
-      ]
+      ],
+      "default": null
     },
     {
       "name": "performedString",
       "type": [
         "null",
         "string"
-      ]
+      ],
+      "default": null
     },
     // {
     //   "name": "performedAge",
@@ -195,21 +213,24 @@
       "type": [
         "null",
         "Range"
-      ]
+      ],
+      "default": null
     },
     {
       "name": "recorder",
       "type": [
         "null",
         "Reference"
-      ]
+      ],
+      "default": null
     },
     {
       "name": "asserter",
       "type": [
         "null",
         "Reference"
-      ]
+      ],
+      "default": null
     },
     // {
     //   "name": "performer",
@@ -226,7 +247,8 @@
       "type": [
         "null",
         "Reference"
-      ]
+      ],
+      "default": null
     },
     {
       "name": "reasonCode",
@@ -236,7 +258,8 @@
           "type": "array",
           "items": "CodeableConcept"
         }
-      ]
+      ],
+      "default": null
     },
     {
       "name": "reasonReference",
@@ -246,7 +269,8 @@
           "type": "array",
           "items": "Reference"
         }
-      ]
+      ],
+      "default": null
     },
     {
       "name": "bodySite",
@@ -256,14 +280,16 @@
           "type": "array",
           "items": "CodeableConcept"
         }
-      ]
+      ],
+      "default": null
     },
     {
       "name": "outcome",
       "type": [
         "null",
         "CodeableConcept"
-      ]
+      ],
+      "default": null
     },
     {
       "name": "report",
@@ -273,7 +299,8 @@
           "type": "array",
           "items": "Reference"
         }
-      ]
+      ],
+      "default": null
     },
     {
       "name": "complication",
@@ -283,7 +310,8 @@
           "type": "array",
           "items": "CodeableConcept"
         }
-      ]
+      ],
+      "default": null
     },
     {
       "name": "complicationDetail",
@@ -293,7 +321,8 @@
           "type": "array",
           "items": "Reference"
         }
-      ]
+      ],
+      "default": null
     },
     {
       "name": "followUp",
@@ -303,7 +332,8 @@
           "type": "array",
           "items": "CodeableConcept"
         }
-      ]
+      ],
+      "default": null
     },
     // {
     //   "name": "note",
@@ -333,7 +363,8 @@
           "type": "array",
           "items": "Reference"
         }
-      ]
+      ],
+      "default": null
     },
     {
       "name": "usedCode",
@@ -343,7 +374,8 @@
           "type": "array",
           "items": "CodeableConcept"
         }
-      ]
+      ],
+      "default": null
     }
   ]
 }
