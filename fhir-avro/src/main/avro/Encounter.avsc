@@ -28,6 +28,10 @@
             "default": null
         },
         {
+            "name": "status",
+            "type": "string"
+        },
+        {
             "name": "class",
             "type": "Coding"
         },
