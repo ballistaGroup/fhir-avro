@@ -28,6 +28,7 @@
         <goal>schema</goal>
       </goals>
       <configuration>
+        <enableDecimalLogicalType>true</enableDecimalLogicalType>
         <sourceDirectory>${project.basedir}/src/main/avro/</sourceDirectory>
         <outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
         <includes>
@@ -35,6 +36,7 @@
         </includes>
         <imports>
             <import>${project.basedir}/src/main/avro/DateTime.avsc</import>
+            <import>${project.basedir}/src/main/avro/Decimal.avsc</import>
             <import>${project.basedir}/src/main/avro/Quantity.avsc</import>
             <import>${project.basedir}/src/main/avro/Coding.avsc</import>
             <import>${project.basedir}/src/main/avro/Extension.avsc</import>

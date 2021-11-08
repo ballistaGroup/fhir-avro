@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Quantity extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -2536417302206127044L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Quantity\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
+  private static final long serialVersionUID = -8948444293744206828L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Quantity\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Decimal\",\"fields\":[{\"name\":\"unscaled_value\",\"type\":\"bytes\",\"logicalType\":\"decimal\"},{\"name\":\"precision\",\"type\":\"int\"},{\"name\":\"scale\",\"type\":\"int\"}]}],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,7 +71,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
     return DECODER.decode(b);
   }
 
-   private java.lang.Double value;
+   private io.carrera.fhir.avro.models.Decimal value;
    private java.lang.CharSequence unit;
    private java.lang.CharSequence system;
    private java.lang.CharSequence code;
@@ -92,7 +92,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
    * @param code The new value for code
    * @param comparator The new value for comparator
    */
-  public Quantity(java.lang.Double value, java.lang.CharSequence unit, java.lang.CharSequence system, java.lang.CharSequence code, java.lang.CharSequence comparator) {
+  public Quantity(io.carrera.fhir.avro.models.Decimal value, java.lang.CharSequence unit, java.lang.CharSequence system, java.lang.CharSequence code, java.lang.CharSequence comparator) {
     this.value = value;
     this.unit = unit;
     this.system = system;
@@ -118,7 +118,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: value = (java.lang.Double)value$; break;
+    case 0: value = (io.carrera.fhir.avro.models.Decimal)value$; break;
     case 1: unit = (java.lang.CharSequence)value$; break;
     case 2: system = (java.lang.CharSequence)value$; break;
     case 3: code = (java.lang.CharSequence)value$; break;
@@ -131,7 +131,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
    * Gets the value of the 'value' field.
    * @return The value of the 'value' field.
    */
-  public java.lang.Double getValue() {
+  public io.carrera.fhir.avro.models.Decimal getValue() {
     return value;
   }
 
@@ -140,7 +140,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
    * Sets the value of the 'value' field.
    * @param value the value to set.
    */
-  public void setValue(java.lang.Double value) {
+  public void setValue(io.carrera.fhir.avro.models.Decimal value) {
     this.value = value;
   }
 
@@ -253,7 +253,8 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Quantity>
     implements org.apache.avro.data.RecordBuilder<Quantity> {
 
-    private java.lang.Double value;
+    private io.carrera.fhir.avro.models.Decimal value;
+    private io.carrera.fhir.avro.models.Decimal.Builder valueBuilder;
     private java.lang.CharSequence unit;
     private java.lang.CharSequence system;
     private java.lang.CharSequence code;
@@ -273,6 +274,9 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
       if (isValidValue(fields()[0], other.value)) {
         this.value = data().deepCopy(fields()[0].schema(), other.value);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
+      }
+      if (other.hasValueBuilder()) {
+        this.valueBuilder = io.carrera.fhir.avro.models.Decimal.newBuilder(other.getValueBuilder());
       }
       if (isValidValue(fields()[1], other.unit)) {
         this.unit = data().deepCopy(fields()[1].schema(), other.unit);
@@ -302,6 +306,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
         this.value = data().deepCopy(fields()[0].schema(), other.value);
         fieldSetFlags()[0] = true;
       }
+      this.valueBuilder = null;
       if (isValidValue(fields()[1], other.unit)) {
         this.unit = data().deepCopy(fields()[1].schema(), other.unit);
         fieldSetFlags()[1] = true;
@@ -324,7 +329,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
       * Gets the value of the 'value' field.
       * @return The value.
       */
-    public java.lang.Double getValue() {
+    public io.carrera.fhir.avro.models.Decimal getValue() {
       return value;
     }
 
@@ -334,8 +339,9 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'value'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Quantity.Builder setValue(java.lang.Double value) {
+    public io.carrera.fhir.avro.models.Quantity.Builder setValue(io.carrera.fhir.avro.models.Decimal value) {
       validate(fields()[0], value);
+      this.valueBuilder = null;
       this.value = value;
       fieldSetFlags()[0] = true;
       return this;
@@ -349,6 +355,40 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
       return fieldSetFlags()[0];
     }
 
+    /**
+     * Gets the Builder instance for the 'value' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.Decimal.Builder getValueBuilder() {
+      if (valueBuilder == null) {
+        if (hasValue()) {
+          setValueBuilder(io.carrera.fhir.avro.models.Decimal.newBuilder(value));
+        } else {
+          setValueBuilder(io.carrera.fhir.avro.models.Decimal.newBuilder());
+        }
+      }
+      return valueBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'value' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+
+    public io.carrera.fhir.avro.models.Quantity.Builder setValueBuilder(io.carrera.fhir.avro.models.Decimal.Builder value) {
+      clearValue();
+      valueBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'value' field has an active Builder instance
+     * @return True if the 'value' field has an active Builder instance
+     */
+    public boolean hasValueBuilder() {
+      return valueBuilder != null;
+    }
 
     /**
       * Clears the value of the 'value' field.
@@ -356,6 +396,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
       */
     public io.carrera.fhir.avro.models.Quantity.Builder clearValue() {
       value = null;
+      valueBuilder = null;
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -525,7 +566,16 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
     public Quantity build() {
       try {
         Quantity record = new Quantity();
-        record.value = fieldSetFlags()[0] ? this.value : (java.lang.Double) defaultValue(fields()[0]);
+        if (valueBuilder != null) {
+          try {
+            record.value = this.valueBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("value"));
+            throw e;
+          }
+        } else {
+          record.value = fieldSetFlags()[0] ? this.value : (io.carrera.fhir.avro.models.Decimal) defaultValue(fields()[0]);
+        }
         record.unit = fieldSetFlags()[1] ? this.unit : (java.lang.CharSequence) defaultValue(fields()[1]);
         record.system = fieldSetFlags()[2] ? this.system : (java.lang.CharSequence) defaultValue(fields()[2]);
         record.code = fieldSetFlags()[3] ? this.code : (java.lang.CharSequence) defaultValue(fields()[3]);
@@ -567,7 +617,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
       out.writeNull();
     } else {
       out.writeIndex(1);
-      out.writeDouble(this.value);
+      this.value.customEncode(out);
     }
 
     if (this.unit == null) {
@@ -613,7 +663,10 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
         in.readNull();
         this.value = null;
       } else {
-        this.value = in.readDouble();
+        if (this.value == null) {
+          this.value = new io.carrera.fhir.avro.models.Decimal();
+        }
+        this.value.customDecode(in);
       }
 
       if (in.readIndex() != 1) {
@@ -652,7 +705,10 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
             in.readNull();
             this.value = null;
           } else {
-            this.value = in.readDouble();
+            if (this.value == null) {
+              this.value = new io.carrera.fhir.avro.models.Decimal();
+            }
+            this.value.customDecode(in);
           }
           break;
 
