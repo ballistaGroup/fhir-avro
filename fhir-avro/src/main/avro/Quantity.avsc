@@ -7,7 +7,10 @@
       "name": "value",
       "type": [
         "null",
-        "double"
+        {
+          "type": "bytes",
+          "logicalType": "decimal"
+        }
       ],
       "default": null
     },

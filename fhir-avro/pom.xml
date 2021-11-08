@@ -28,6 +28,7 @@
         <goal>schema</goal>
       </goals>
       <configuration>
+        <enableDecimalLogicalType>true</enableDecimalLogicalType>
         <sourceDirectory>${project.basedir}/src/main/avro/</sourceDirectory>
         <outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
         <includes>
