@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Quantity extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -2536417302206127044L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Quantity\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
+  private static final long serialVersionUID = 2701966802654608281L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Quantity\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"bytes\",\"logicalType\":\"decimal\"}],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,7 +71,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
     return DECODER.decode(b);
   }
 
-   private java.lang.Double value;
+   private java.nio.ByteBuffer value;
    private java.lang.CharSequence unit;
    private java.lang.CharSequence system;
    private java.lang.CharSequence code;
@@ -92,7 +92,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
    * @param code The new value for code
    * @param comparator The new value for comparator
    */
-  public Quantity(java.lang.Double value, java.lang.CharSequence unit, java.lang.CharSequence system, java.lang.CharSequence code, java.lang.CharSequence comparator) {
+  public Quantity(java.nio.ByteBuffer value, java.lang.CharSequence unit, java.lang.CharSequence system, java.lang.CharSequence code, java.lang.CharSequence comparator) {
     this.value = value;
     this.unit = unit;
     this.system = system;
@@ -118,7 +118,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: value = (java.lang.Double)value$; break;
+    case 0: value = (java.nio.ByteBuffer)value$; break;
     case 1: unit = (java.lang.CharSequence)value$; break;
     case 2: system = (java.lang.CharSequence)value$; break;
     case 3: code = (java.lang.CharSequence)value$; break;
@@ -131,7 +131,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
    * Gets the value of the 'value' field.
    * @return The value of the 'value' field.
    */
-  public java.lang.Double getValue() {
+  public java.nio.ByteBuffer getValue() {
     return value;
   }
 
@@ -140,7 +140,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
    * Sets the value of the 'value' field.
    * @param value the value to set.
    */
-  public void setValue(java.lang.Double value) {
+  public void setValue(java.nio.ByteBuffer value) {
     this.value = value;
   }
 
@@ -253,7 +253,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Quantity>
     implements org.apache.avro.data.RecordBuilder<Quantity> {
 
-    private java.lang.Double value;
+    private java.nio.ByteBuffer value;
     private java.lang.CharSequence unit;
     private java.lang.CharSequence system;
     private java.lang.CharSequence code;
@@ -324,7 +324,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
       * Gets the value of the 'value' field.
       * @return The value.
       */
-    public java.lang.Double getValue() {
+    public java.nio.ByteBuffer getValue() {
       return value;
     }
 
@@ -334,7 +334,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'value'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Quantity.Builder setValue(java.lang.Double value) {
+    public io.carrera.fhir.avro.models.Quantity.Builder setValue(java.nio.ByteBuffer value) {
       validate(fields()[0], value);
       this.value = value;
       fieldSetFlags()[0] = true;
@@ -525,7 +525,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
     public Quantity build() {
       try {
         Quantity record = new Quantity();
-        record.value = fieldSetFlags()[0] ? this.value : (java.lang.Double) defaultValue(fields()[0]);
+        record.value = fieldSetFlags()[0] ? this.value : (java.nio.ByteBuffer) defaultValue(fields()[0]);
         record.unit = fieldSetFlags()[1] ? this.unit : (java.lang.CharSequence) defaultValue(fields()[1]);
         record.system = fieldSetFlags()[2] ? this.system : (java.lang.CharSequence) defaultValue(fields()[2]);
         record.code = fieldSetFlags()[3] ? this.code : (java.lang.CharSequence) defaultValue(fields()[3]);
@@ -567,7 +567,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
       out.writeNull();
     } else {
       out.writeIndex(1);
-      out.writeDouble(this.value);
+      out.writeBytes(this.value);
     }
 
     if (this.unit == null) {
@@ -613,7 +613,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
         in.readNull();
         this.value = null;
       } else {
-        this.value = in.readDouble();
+        this.value = in.readBytes(this.value);
       }
 
       if (in.readIndex() != 1) {
@@ -652,7 +652,7 @@ public class Quantity extends org.apache.avro.specific.SpecificRecordBase implem
             in.readNull();
             this.value = null;
           } else {
-            this.value = in.readDouble();
+            this.value = in.readBytes(this.value);
           }
           break;
 
