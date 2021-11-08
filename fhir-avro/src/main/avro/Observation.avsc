@@ -21,8 +21,11 @@
     },
     {
       "name": "category",
-      "type": ["null", "CodeableConcept"],
-      "default" : null
+      "type": ["null",{
+          "type": "array",
+          "items": "CodeableConcept"
+        }],
+        "default": null
     },
     {
       "name": "code",

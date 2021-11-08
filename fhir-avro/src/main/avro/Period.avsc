@@ -9,7 +9,8 @@
     }, {
       "type" : "long",
       "logicalType" : "local-timestamp-micros"
-    } ],
+    },
+    "io.carrera.fhir.avro.models.DateTime" ],
     "default": null
   }, {
     "name" : "end",
@@ -19,7 +20,9 @@
     }, {
       "type" : "long",
       "logicalType" : "local-timestamp-micros"
-    } ],
+    },
+    "io.carrera.fhir.avro.models.DateTime"
+    ],
     "default": null
   } ],
   "namespace" : "io.carrera.fhir.avro.models"

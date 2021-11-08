@@ -1,0 +1,126 @@
+{
+    "name": "Encounter",
+    "type": "record",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "resourceType",
+            "type": "string"
+        },
+         {
+              "name": "id",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            }
+        ,
+        {
+            "name": "identifier",
+            "type": [
+                "null",
+                {
+                    "type": "array",
+                    "items": "identifier_record"
+                }
+            ],
+            "default": null
+        },
+        {
+            "name": "status",
+            "type": "string"
+        },
+        {
+            "name": "class",
+            "type": "Coding"
+        },
+        {
+            "name": "type",
+            "type": [
+                "null",
+                {
+                    "type": "array",
+                    "items": "CodeableConcept"
+                }
+            ],
+            "default": null
+        },
+        {
+            "name": "priority",
+            "type": [
+                "null",
+                "CodeableConcept"
+            ],
+            "default": null
+        },
+        {
+            "name": "subject",
+            "type": [
+                "null",
+                "Reference"
+            ],
+            "default": null
+        },
+        {
+            "name": "basedOn",
+            "type": [
+                "null",
+                {
+                    "type": "array",
+                    "items": "Reference"
+                }
+            ],
+            "default": null
+        },
+        {
+          "name": "diagnosis",
+          "type": [
+              "null",
+              {
+                  "type": "array",
+                  "items": "EncounterDiagnosis"
+              }
+          ],
+          "default": null
+      },
+        {
+            "name": "period",
+            "type": [
+                "null",
+                "Period"
+            ],
+            "default": null
+        },
+        {
+            "name": "reasonCode",
+            "type": [
+                "null",
+                {
+                    "type": "array",
+                    "items": "CodeableConcept"
+                }
+            ],
+            "default": null
+        },
+        {
+            "name": "reasonReference",
+            "type": [
+                "null",
+                {
+                    "type": "array",
+                    "items": "Reference"
+                }
+            ],
+            "default": null
+        },
+        {
+            "name": "partOf",
+            "type": [
+                "null",
+                "Reference"
+            ],
+            "default": null
+        }
+    ]
+}

@@ -14,13 +14,14 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Procedure extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 3120560004296803913L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Procedure\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"implicitRules\",\"type\":[\"null\",\"string\"]},{\"name\":\"language\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"url\",\"type\":[\"null\",\"string\"]}]}}]},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"instantiatesCanonical\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"instantiatesUri\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"basedOn\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]},{\"name\":\"partOf\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"status\",\"type\":[\"null\",\"string\"]},{\"name\":\"statusReason\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}]},{\"name\":\"category\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"subject\",\"type\":\"Reference\"},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"]},{\"name\":\"performedDateTime\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]},{\"name\":\"performedPeriod\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null}]}]},{\"name\":\"performedString\",\"type\":[\"null\",\"string\"]},{\"name\":\"performedRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}]},{\"name\":\"recorder\",\"type\":[\"null\",\"Reference\"]},{\"name\":\"asserter\",\"type\":[\"null\",\"Reference\"]},{\"name\":\"location\",\"type\":[\"null\",\"Reference\"]},{\"name\":\"reasonCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}]},{\"name\":\"reasonReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"bodySite\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}]},{\"name\":\"outcome\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"report\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"complication\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}]},{\"name\":\"complicationDetail\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"followUp\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}]},{\"name\":\"usedReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"usedCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}]}]}");
+  private static final long serialVersionUID = -7710440440195994773L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Procedure\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"implicitRules\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"language\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}],\"default\":null},{\"name\":\"url\",\"type\":[\"null\",\"string\"]},{\"name\":\"value\",\"type\":[\"null\",\"string\",\"int\",\"boolean\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]},{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}],\"default\":null}]}}],\"default\":null},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}],\"default\":null},{\"name\":\"instantiatesCanonical\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null},{\"name\":\"instantiatesUri\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null},{\"name\":\"basedOn\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"partOf\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"status\",\"type\":[\"string\"]},{\"name\":\"statusReason\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Coding\"}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"category\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"subject\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"performedDateTime\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"},{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"localDateTime\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]}],\"default\":null},{\"name\":\"performedPeriod\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"},\"DateTime\"],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"},\"DateTime\"],\"default\":null}]}],\"default\":null},{\"name\":\"performedString\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"performedRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}],\"default\":null},{\"name\":\"recorder\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"asserter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"location\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"reasonCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"reasonReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"bodySite\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"outcome\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"report\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"complication\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"complicationDetail\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"followUp\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"usedReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"usedCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
 static {
     MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.DateConversion());
+    MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.TimestampMillisConversion());
     MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.LocalTimestampMicrosConversion());
   }
 
@@ -85,7 +86,7 @@ static {
    private java.util.List<java.lang.CharSequence> instantiatesUri;
    private java.util.List<io.carrera.fhir.avro.models.Reference> basedOn;
    private java.util.List<io.carrera.fhir.avro.models.Reference> partOf;
-   private java.lang.CharSequence status;
+   private java.lang.Object status;
    private io.carrera.fhir.avro.models.CodeableConcept statusReason;
    private io.carrera.fhir.avro.models.CodeableConcept category;
    private io.carrera.fhir.avro.models.CodeableConcept code;
@@ -152,7 +153,7 @@ static {
    * @param usedReference The new value for usedReference
    * @param usedCode The new value for usedCode
    */
-  public Procedure(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence implicitRules, java.lang.CharSequence language, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension, java.util.List<java.lang.CharSequence> instantiatesCanonical, java.util.List<java.lang.CharSequence> instantiatesUri, java.util.List<io.carrera.fhir.avro.models.Reference> basedOn, java.util.List<io.carrera.fhir.avro.models.Reference> partOf, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept statusReason, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.lang.Object performedDateTime, io.carrera.fhir.avro.models.Period performedPeriod, java.lang.CharSequence performedString, io.carrera.fhir.avro.models.Range performedRange, io.carrera.fhir.avro.models.Reference recorder, io.carrera.fhir.avro.models.Reference asserter, io.carrera.fhir.avro.models.Reference location, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> reasonCode, java.util.List<io.carrera.fhir.avro.models.Reference> reasonReference, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> bodySite, io.carrera.fhir.avro.models.CodeableConcept outcome, java.util.List<io.carrera.fhir.avro.models.Reference> report, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> complication, java.util.List<io.carrera.fhir.avro.models.Reference> complicationDetail, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> followUp, java.util.List<io.carrera.fhir.avro.models.Reference> usedReference, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> usedCode) {
+  public Procedure(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence implicitRules, java.lang.CharSequence language, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension, java.util.List<java.lang.CharSequence> instantiatesCanonical, java.util.List<java.lang.CharSequence> instantiatesUri, java.util.List<io.carrera.fhir.avro.models.Reference> basedOn, java.util.List<io.carrera.fhir.avro.models.Reference> partOf, java.lang.Object status, io.carrera.fhir.avro.models.CodeableConcept statusReason, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.lang.Object performedDateTime, io.carrera.fhir.avro.models.Period performedPeriod, java.lang.CharSequence performedString, io.carrera.fhir.avro.models.Range performedRange, io.carrera.fhir.avro.models.Reference recorder, io.carrera.fhir.avro.models.Reference asserter, io.carrera.fhir.avro.models.Reference location, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> reasonCode, java.util.List<io.carrera.fhir.avro.models.Reference> reasonReference, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> bodySite, io.carrera.fhir.avro.models.CodeableConcept outcome, java.util.List<io.carrera.fhir.avro.models.Reference> report, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> complication, java.util.List<io.carrera.fhir.avro.models.Reference> complicationDetail, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> followUp, java.util.List<io.carrera.fhir.avro.models.Reference> usedReference, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> usedCode) {
     this.resourceType = resourceType;
     this.id = id;
     this.implicitRules = implicitRules;
@@ -244,7 +245,7 @@ static {
     case 7: instantiatesUri = (java.util.List<java.lang.CharSequence>)value$; break;
     case 8: basedOn = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
     case 9: partOf = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
-    case 10: status = (java.lang.CharSequence)value$; break;
+    case 10: status = value$; break;
     case 11: statusReason = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     case 12: category = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     case 13: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
@@ -445,7 +446,7 @@ static {
    * Gets the value of the 'status' field.
    * @return The value of the 'status' field.
    */
-  public java.lang.CharSequence getStatus() {
+  public java.lang.Object getStatus() {
     return status;
   }
 
@@ -454,7 +455,7 @@ static {
    * Sets the value of the 'status' field.
    * @param value the value to set.
    */
-  public void setStatus(java.lang.CharSequence value) {
+  public void setStatus(java.lang.Object value) {
     this.status = value;
   }
 
@@ -883,7 +884,7 @@ static {
     private java.util.List<java.lang.CharSequence> instantiatesUri;
     private java.util.List<io.carrera.fhir.avro.models.Reference> basedOn;
     private java.util.List<io.carrera.fhir.avro.models.Reference> partOf;
-    private java.lang.CharSequence status;
+    private java.lang.Object status;
     private io.carrera.fhir.avro.models.CodeableConcept statusReason;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder statusReasonBuilder;
     private io.carrera.fhir.avro.models.CodeableConcept category;
@@ -1651,7 +1652,7 @@ static {
       * Gets the value of the 'status' field.
       * @return The value.
       */
-    public java.lang.CharSequence getStatus() {
+    public java.lang.Object getStatus() {
       return status;
     }
 
@@ -1661,7 +1662,7 @@ static {
       * @param value The value of 'status'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Procedure.Builder setStatus(java.lang.CharSequence value) {
+    public io.carrera.fhir.avro.models.Procedure.Builder setStatus(java.lang.Object value) {
       validate(fields()[10], value);
       this.status = value;
       fieldSetFlags()[10] = true;
@@ -2978,7 +2979,7 @@ static {
         record.instantiatesUri = fieldSetFlags()[7] ? this.instantiatesUri : (java.util.List<java.lang.CharSequence>) defaultValue(fields()[7]);
         record.basedOn = fieldSetFlags()[8] ? this.basedOn : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[8]);
         record.partOf = fieldSetFlags()[9] ? this.partOf : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[9]);
-        record.status = fieldSetFlags()[10] ? this.status : (java.lang.CharSequence) defaultValue(fields()[10]);
+        record.status = fieldSetFlags()[10] ? this.status :  defaultValue(fields()[10]);
         if (statusReasonBuilder != null) {
           try {
             record.statusReason = this.statusReasonBuilder.build();

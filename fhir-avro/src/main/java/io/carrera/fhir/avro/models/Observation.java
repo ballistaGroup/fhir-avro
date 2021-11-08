@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Observation extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -3502266598020516711L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Observation\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"subject\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"effective\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"localDateTime\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]}],\"default\":null},{\"name\":\"issued\",\"type\":[\"null\",\"int\"],\"default\":null,\"logicalType\":\"date\"},{\"name\":\"value\",\"type\":[\"null\",\"string\",\"int\",\"boolean\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]},\"CodeableConcept\"],\"default\":null},{\"name\":\"interpretation\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null}]}");
+  private static final long serialVersionUID = 6098090167661496272L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Observation\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"subject\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"effective\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"localDateTime\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]}],\"default\":null},{\"name\":\"issued\",\"type\":[\"null\",\"int\"],\"default\":null,\"logicalType\":\"date\"},{\"name\":\"value\",\"type\":[\"null\",\"string\",\"int\",\"boolean\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]},\"CodeableConcept\"],\"default\":null},{\"name\":\"interpretation\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -78,7 +78,7 @@ static {
    private java.lang.CharSequence resourceType;
    private java.lang.CharSequence id;
    private java.lang.CharSequence status;
-   private io.carrera.fhir.avro.models.CodeableConcept category;
+   private java.util.List<io.carrera.fhir.avro.models.CodeableConcept> category;
    private io.carrera.fhir.avro.models.CodeableConcept code;
    private io.carrera.fhir.avro.models.Reference subject;
    private io.carrera.fhir.avro.models.Reference encounter;
@@ -108,7 +108,7 @@ static {
    * @param value The new value for value
    * @param interpretation The new value for interpretation
    */
-  public Observation(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.lang.Object effective, java.lang.Integer issued, java.lang.Object value, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> interpretation) {
+  public Observation(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.lang.Object effective, java.lang.Integer issued, java.lang.Object value, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> interpretation) {
     this.resourceType = resourceType;
     this.id = id;
     this.status = status;
@@ -149,7 +149,7 @@ static {
     case 0: resourceType = (java.lang.CharSequence)value$; break;
     case 1: id = (java.lang.CharSequence)value$; break;
     case 2: status = (java.lang.CharSequence)value$; break;
-    case 3: category = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 3: category = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
     case 4: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     case 5: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 6: encounter = (io.carrera.fhir.avro.models.Reference)value$; break;
@@ -216,7 +216,7 @@ static {
    * Gets the value of the 'category' field.
    * @return The value of the 'category' field.
    */
-  public io.carrera.fhir.avro.models.CodeableConcept getCategory() {
+  public java.util.List<io.carrera.fhir.avro.models.CodeableConcept> getCategory() {
     return category;
   }
 
@@ -225,7 +225,7 @@ static {
    * Sets the value of the 'category' field.
    * @param value the value to set.
    */
-  public void setCategory(io.carrera.fhir.avro.models.CodeableConcept value) {
+  public void setCategory(java.util.List<io.carrera.fhir.avro.models.CodeableConcept> value) {
     this.category = value;
   }
 
@@ -392,8 +392,7 @@ static {
     private java.lang.CharSequence resourceType;
     private java.lang.CharSequence id;
     private java.lang.CharSequence status;
-    private io.carrera.fhir.avro.models.CodeableConcept category;
-    private io.carrera.fhir.avro.models.CodeableConcept.Builder categoryBuilder;
+    private java.util.List<io.carrera.fhir.avro.models.CodeableConcept> category;
     private io.carrera.fhir.avro.models.CodeableConcept code;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder codeBuilder;
     private io.carrera.fhir.avro.models.Reference subject;
@@ -431,9 +430,6 @@ static {
       if (isValidValue(fields()[3], other.category)) {
         this.category = data().deepCopy(fields()[3].schema(), other.category);
         fieldSetFlags()[3] = other.fieldSetFlags()[3];
-      }
-      if (other.hasCategoryBuilder()) {
-        this.categoryBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getCategoryBuilder());
       }
       if (isValidValue(fields()[4], other.code)) {
         this.code = data().deepCopy(fields()[4].schema(), other.code);
@@ -496,7 +492,6 @@ static {
         this.category = data().deepCopy(fields()[3].schema(), other.category);
         fieldSetFlags()[3] = true;
       }
-      this.categoryBuilder = null;
       if (isValidValue(fields()[4], other.code)) {
         this.code = data().deepCopy(fields()[4].schema(), other.code);
         fieldSetFlags()[4] = true;
@@ -654,7 +649,7 @@ static {
       * Gets the value of the 'category' field.
       * @return The value.
       */
-    public io.carrera.fhir.avro.models.CodeableConcept getCategory() {
+    public java.util.List<io.carrera.fhir.avro.models.CodeableConcept> getCategory() {
       return category;
     }
 
@@ -664,9 +659,8 @@ static {
       * @param value The value of 'category'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Observation.Builder setCategory(io.carrera.fhir.avro.models.CodeableConcept value) {
+    public io.carrera.fhir.avro.models.Observation.Builder setCategory(java.util.List<io.carrera.fhir.avro.models.CodeableConcept> value) {
       validate(fields()[3], value);
-      this.categoryBuilder = null;
       this.category = value;
       fieldSetFlags()[3] = true;
       return this;
@@ -680,40 +674,6 @@ static {
       return fieldSetFlags()[3];
     }
 
-    /**
-     * Gets the Builder instance for the 'category' field and creates one if it doesn't exist yet.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.CodeableConcept.Builder getCategoryBuilder() {
-      if (categoryBuilder == null) {
-        if (hasCategory()) {
-          setCategoryBuilder(io.carrera.fhir.avro.models.CodeableConcept.newBuilder(category));
-        } else {
-          setCategoryBuilder(io.carrera.fhir.avro.models.CodeableConcept.newBuilder());
-        }
-      }
-      return categoryBuilder;
-    }
-
-    /**
-     * Sets the Builder instance for the 'category' field
-     * @param value The builder instance that must be set.
-     * @return This builder.
-     */
-
-    public io.carrera.fhir.avro.models.Observation.Builder setCategoryBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
-      clearCategory();
-      categoryBuilder = value;
-      return this;
-    }
-
-    /**
-     * Checks whether the 'category' field has an active Builder instance
-     * @return True if the 'category' field has an active Builder instance
-     */
-    public boolean hasCategoryBuilder() {
-      return categoryBuilder != null;
-    }
 
     /**
       * Clears the value of the 'category' field.
@@ -721,7 +681,6 @@ static {
       */
     public io.carrera.fhir.avro.models.Observation.Builder clearCategory() {
       category = null;
-      categoryBuilder = null;
       fieldSetFlags()[3] = false;
       return this;
     }
@@ -1122,16 +1081,7 @@ static {
         record.resourceType = fieldSetFlags()[0] ? this.resourceType : (java.lang.CharSequence) defaultValue(fields()[0]);
         record.id = fieldSetFlags()[1] ? this.id : (java.lang.CharSequence) defaultValue(fields()[1]);
         record.status = fieldSetFlags()[2] ? this.status : (java.lang.CharSequence) defaultValue(fields()[2]);
-        if (categoryBuilder != null) {
-          try {
-            record.category = this.categoryBuilder.build();
-          } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("category"));
-            throw e;
-          }
-        } else {
-          record.category = fieldSetFlags()[3] ? this.category : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[3]);
-        }
+        record.category = fieldSetFlags()[3] ? this.category : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[3]);
         if (codeBuilder != null) {
           try {
             record.code = this.codeBuilder.build();

@@ -10,9 +10,16 @@
       "type" : [ "null", {
         "type" : "array",
         "items" : "Extension"
-      } ]
+      } ],
+      "default" : null
     }, {
       "name" : "url",
       "type" : [ "null", "string" ]
-    } ]
+    },
+     {
+       "name": "value",
+       "type": ["null", "string", "int", "boolean", "Quantity", "Coding"],
+       "default" : null
+     }
+    ]
   }
