@@ -66,6 +66,7 @@
             <import>${project.basedir}/src/main/avro/Item.avsc</import>
             <import>${project.basedir}/src/main/avro/Procedure.avsc</import>
             <import>${project.basedir}/src/main/avro/MedicationAdministration.avsc</import>
+            <import>${project.basedir}/src/main/avro/EncounterDiagnosis.avsc</import>
             <import>${project.basedir}/src/main/avro/Encounter.avsc</import>
         </imports>
       </configuration>

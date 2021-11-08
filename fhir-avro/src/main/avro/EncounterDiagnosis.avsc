@@ -1,0 +1,22 @@
+{
+  "name": "EncounterDiagnosis",
+  "type": "record",
+  "namespace": "io.carrera.fhir.avro.models",
+  "fields": [
+      {
+        "name": "condition",
+        "type": "Reference"
+      },
+       {
+           "name": "use",
+           "type": ["null", "CodeableConcept"],
+           "default": null
+       },
+       {
+          "name": "rank",
+          "type": ["null", "int"],
+          "default": null
+      }
+    ]
+}
+

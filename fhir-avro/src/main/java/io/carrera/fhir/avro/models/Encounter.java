@@ -14,13 +14,14 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Encounter extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -4761293372965695658L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Encounter\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"identifier\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"identifier_record\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"value\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"class\",\"type\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}},{\"name\":\"type\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Coding\"}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"priority\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"subject\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"basedOn\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"period\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}],\"default\":null}]}],\"default\":null},{\"name\":\"reasonCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"reasonReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"partOf\",\"type\":[\"null\",\"Reference\"],\"default\":null}]}");
+  private static final long serialVersionUID = 7742197035988189351L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Encounter\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"identifier\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"identifier_record\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"value\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"class\",\"type\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}},{\"name\":\"type\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Coding\"}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"priority\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"subject\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"basedOn\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"diagnosis\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"EncounterDiagnosis\",\"fields\":[{\"name\":\"condition\",\"type\":\"Reference\"},{\"name\":\"use\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"rank\",\"type\":[\"null\",\"int\"],\"default\":null}]}}],\"default\":null},{\"name\":\"period\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"},{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"localDateTime\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"},\"DateTime\"],\"default\":null}]}],\"default\":null},{\"name\":\"reasonCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"reasonReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"partOf\",\"type\":[\"null\",\"Reference\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
 static {
     MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.DateConversion());
+    MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.TimestampMillisConversion());
     MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.LocalTimestampMicrosConversion());
   }
 
@@ -84,6 +85,7 @@ static {
    private io.carrera.fhir.avro.models.CodeableConcept priority;
    private io.carrera.fhir.avro.models.Reference subject;
    private java.util.List<io.carrera.fhir.avro.models.Reference> basedOn;
+   private java.util.List<io.carrera.fhir.avro.models.EncounterDiagnosis> diagnosis;
    private io.carrera.fhir.avro.models.Period period;
    private java.util.List<io.carrera.fhir.avro.models.CodeableConcept> reasonCode;
    private java.util.List<io.carrera.fhir.avro.models.Reference> reasonReference;
@@ -107,12 +109,13 @@ static {
    * @param priority The new value for priority
    * @param subject The new value for subject
    * @param basedOn The new value for basedOn
+   * @param diagnosis The new value for diagnosis
    * @param period The new value for period
    * @param reasonCode The new value for reasonCode
    * @param reasonReference The new value for reasonReference
    * @param partOf The new value for partOf
    */
-  public Encounter(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier, java.lang.CharSequence status, io.carrera.fhir.avro.models.Coding class$, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> type, io.carrera.fhir.avro.models.CodeableConcept priority, io.carrera.fhir.avro.models.Reference subject, java.util.List<io.carrera.fhir.avro.models.Reference> basedOn, io.carrera.fhir.avro.models.Period period, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> reasonCode, java.util.List<io.carrera.fhir.avro.models.Reference> reasonReference, io.carrera.fhir.avro.models.Reference partOf) {
+  public Encounter(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier, java.lang.CharSequence status, io.carrera.fhir.avro.models.Coding class$, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> type, io.carrera.fhir.avro.models.CodeableConcept priority, io.carrera.fhir.avro.models.Reference subject, java.util.List<io.carrera.fhir.avro.models.Reference> basedOn, java.util.List<io.carrera.fhir.avro.models.EncounterDiagnosis> diagnosis, io.carrera.fhir.avro.models.Period period, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> reasonCode, java.util.List<io.carrera.fhir.avro.models.Reference> reasonReference, io.carrera.fhir.avro.models.Reference partOf) {
     this.resourceType = resourceType;
     this.id = id;
     this.identifier = identifier;
@@ -122,6 +125,7 @@ static {
     this.priority = priority;
     this.subject = subject;
     this.basedOn = basedOn;
+    this.diagnosis = diagnosis;
     this.period = period;
     this.reasonCode = reasonCode;
     this.reasonReference = reasonReference;
@@ -142,10 +146,11 @@ static {
     case 6: return priority;
     case 7: return subject;
     case 8: return basedOn;
-    case 9: return period;
-    case 10: return reasonCode;
-    case 11: return reasonReference;
-    case 12: return partOf;
+    case 9: return diagnosis;
+    case 10: return period;
+    case 11: return reasonCode;
+    case 12: return reasonReference;
+    case 13: return partOf;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -163,10 +168,11 @@ static {
     case 6: priority = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     case 7: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 8: basedOn = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
-    case 9: period = (io.carrera.fhir.avro.models.Period)value$; break;
-    case 10: reasonCode = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
-    case 11: reasonReference = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
-    case 12: partOf = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 9: diagnosis = (java.util.List<io.carrera.fhir.avro.models.EncounterDiagnosis>)value$; break;
+    case 10: period = (io.carrera.fhir.avro.models.Period)value$; break;
+    case 11: reasonCode = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
+    case 12: reasonReference = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
+    case 13: partOf = (io.carrera.fhir.avro.models.Reference)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -325,6 +331,23 @@ static {
   }
 
   /**
+   * Gets the value of the 'diagnosis' field.
+   * @return The value of the 'diagnosis' field.
+   */
+  public java.util.List<io.carrera.fhir.avro.models.EncounterDiagnosis> getDiagnosis() {
+    return diagnosis;
+  }
+
+
+  /**
+   * Sets the value of the 'diagnosis' field.
+   * @param value the value to set.
+   */
+  public void setDiagnosis(java.util.List<io.carrera.fhir.avro.models.EncounterDiagnosis> value) {
+    this.diagnosis = value;
+  }
+
+  /**
    * Gets the value of the 'period' field.
    * @return The value of the 'period' field.
    */
@@ -445,6 +468,7 @@ static {
     private io.carrera.fhir.avro.models.Reference subject;
     private io.carrera.fhir.avro.models.Reference.Builder subjectBuilder;
     private java.util.List<io.carrera.fhir.avro.models.Reference> basedOn;
+    private java.util.List<io.carrera.fhir.avro.models.EncounterDiagnosis> diagnosis;
     private io.carrera.fhir.avro.models.Period period;
     private io.carrera.fhir.avro.models.Period.Builder periodBuilder;
     private java.util.List<io.carrera.fhir.avro.models.CodeableConcept> reasonCode;
@@ -508,24 +532,28 @@ static {
         this.basedOn = data().deepCopy(fields()[8].schema(), other.basedOn);
         fieldSetFlags()[8] = other.fieldSetFlags()[8];
       }
-      if (isValidValue(fields()[9], other.period)) {
-        this.period = data().deepCopy(fields()[9].schema(), other.period);
+      if (isValidValue(fields()[9], other.diagnosis)) {
+        this.diagnosis = data().deepCopy(fields()[9].schema(), other.diagnosis);
         fieldSetFlags()[9] = other.fieldSetFlags()[9];
+      }
+      if (isValidValue(fields()[10], other.period)) {
+        this.period = data().deepCopy(fields()[10].schema(), other.period);
+        fieldSetFlags()[10] = other.fieldSetFlags()[10];
       }
       if (other.hasPeriodBuilder()) {
         this.periodBuilder = io.carrera.fhir.avro.models.Period.newBuilder(other.getPeriodBuilder());
       }
-      if (isValidValue(fields()[10], other.reasonCode)) {
-        this.reasonCode = data().deepCopy(fields()[10].schema(), other.reasonCode);
-        fieldSetFlags()[10] = other.fieldSetFlags()[10];
-      }
-      if (isValidValue(fields()[11], other.reasonReference)) {
-        this.reasonReference = data().deepCopy(fields()[11].schema(), other.reasonReference);
+      if (isValidValue(fields()[11], other.reasonCode)) {
+        this.reasonCode = data().deepCopy(fields()[11].schema(), other.reasonCode);
         fieldSetFlags()[11] = other.fieldSetFlags()[11];
       }
-      if (isValidValue(fields()[12], other.partOf)) {
-        this.partOf = data().deepCopy(fields()[12].schema(), other.partOf);
+      if (isValidValue(fields()[12], other.reasonReference)) {
+        this.reasonReference = data().deepCopy(fields()[12].schema(), other.reasonReference);
         fieldSetFlags()[12] = other.fieldSetFlags()[12];
+      }
+      if (isValidValue(fields()[13], other.partOf)) {
+        this.partOf = data().deepCopy(fields()[13].schema(), other.partOf);
+        fieldSetFlags()[13] = other.fieldSetFlags()[13];
       }
       if (other.hasPartOfBuilder()) {
         this.partOfBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getPartOfBuilder());
@@ -577,22 +605,26 @@ static {
         this.basedOn = data().deepCopy(fields()[8].schema(), other.basedOn);
         fieldSetFlags()[8] = true;
       }
-      if (isValidValue(fields()[9], other.period)) {
-        this.period = data().deepCopy(fields()[9].schema(), other.period);
+      if (isValidValue(fields()[9], other.diagnosis)) {
+        this.diagnosis = data().deepCopy(fields()[9].schema(), other.diagnosis);
         fieldSetFlags()[9] = true;
       }
-      this.periodBuilder = null;
-      if (isValidValue(fields()[10], other.reasonCode)) {
-        this.reasonCode = data().deepCopy(fields()[10].schema(), other.reasonCode);
+      if (isValidValue(fields()[10], other.period)) {
+        this.period = data().deepCopy(fields()[10].schema(), other.period);
         fieldSetFlags()[10] = true;
       }
-      if (isValidValue(fields()[11], other.reasonReference)) {
-        this.reasonReference = data().deepCopy(fields()[11].schema(), other.reasonReference);
+      this.periodBuilder = null;
+      if (isValidValue(fields()[11], other.reasonCode)) {
+        this.reasonCode = data().deepCopy(fields()[11].schema(), other.reasonCode);
         fieldSetFlags()[11] = true;
       }
-      if (isValidValue(fields()[12], other.partOf)) {
-        this.partOf = data().deepCopy(fields()[12].schema(), other.partOf);
+      if (isValidValue(fields()[12], other.reasonReference)) {
+        this.reasonReference = data().deepCopy(fields()[12].schema(), other.reasonReference);
         fieldSetFlags()[12] = true;
+      }
+      if (isValidValue(fields()[13], other.partOf)) {
+        this.partOf = data().deepCopy(fields()[13].schema(), other.partOf);
+        fieldSetFlags()[13] = true;
       }
       this.partOfBuilder = null;
     }
@@ -1066,6 +1098,46 @@ static {
     }
 
     /**
+      * Gets the value of the 'diagnosis' field.
+      * @return The value.
+      */
+    public java.util.List<io.carrera.fhir.avro.models.EncounterDiagnosis> getDiagnosis() {
+      return diagnosis;
+    }
+
+
+    /**
+      * Sets the value of the 'diagnosis' field.
+      * @param value The value of 'diagnosis'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Encounter.Builder setDiagnosis(java.util.List<io.carrera.fhir.avro.models.EncounterDiagnosis> value) {
+      validate(fields()[9], value);
+      this.diagnosis = value;
+      fieldSetFlags()[9] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'diagnosis' field has been set.
+      * @return True if the 'diagnosis' field has been set, false otherwise.
+      */
+    public boolean hasDiagnosis() {
+      return fieldSetFlags()[9];
+    }
+
+
+    /**
+      * Clears the value of the 'diagnosis' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Encounter.Builder clearDiagnosis() {
+      diagnosis = null;
+      fieldSetFlags()[9] = false;
+      return this;
+    }
+
+    /**
       * Gets the value of the 'period' field.
       * @return The value.
       */
@@ -1080,10 +1152,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Encounter.Builder setPeriod(io.carrera.fhir.avro.models.Period value) {
-      validate(fields()[9], value);
+      validate(fields()[10], value);
       this.periodBuilder = null;
       this.period = value;
-      fieldSetFlags()[9] = true;
+      fieldSetFlags()[10] = true;
       return this;
     }
 
@@ -1092,7 +1164,7 @@ static {
       * @return True if the 'period' field has been set, false otherwise.
       */
     public boolean hasPeriod() {
-      return fieldSetFlags()[9];
+      return fieldSetFlags()[10];
     }
 
     /**
@@ -1137,7 +1209,7 @@ static {
     public io.carrera.fhir.avro.models.Encounter.Builder clearPeriod() {
       period = null;
       periodBuilder = null;
-      fieldSetFlags()[9] = false;
+      fieldSetFlags()[10] = false;
       return this;
     }
 
@@ -1156,9 +1228,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Encounter.Builder setReasonCode(java.util.List<io.carrera.fhir.avro.models.CodeableConcept> value) {
-      validate(fields()[10], value);
+      validate(fields()[11], value);
       this.reasonCode = value;
-      fieldSetFlags()[10] = true;
+      fieldSetFlags()[11] = true;
       return this;
     }
 
@@ -1167,7 +1239,7 @@ static {
       * @return True if the 'reasonCode' field has been set, false otherwise.
       */
     public boolean hasReasonCode() {
-      return fieldSetFlags()[10];
+      return fieldSetFlags()[11];
     }
 
 
@@ -1177,7 +1249,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Encounter.Builder clearReasonCode() {
       reasonCode = null;
-      fieldSetFlags()[10] = false;
+      fieldSetFlags()[11] = false;
       return this;
     }
 
@@ -1196,9 +1268,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Encounter.Builder setReasonReference(java.util.List<io.carrera.fhir.avro.models.Reference> value) {
-      validate(fields()[11], value);
+      validate(fields()[12], value);
       this.reasonReference = value;
-      fieldSetFlags()[11] = true;
+      fieldSetFlags()[12] = true;
       return this;
     }
 
@@ -1207,7 +1279,7 @@ static {
       * @return True if the 'reasonReference' field has been set, false otherwise.
       */
     public boolean hasReasonReference() {
-      return fieldSetFlags()[11];
+      return fieldSetFlags()[12];
     }
 
 
@@ -1217,7 +1289,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Encounter.Builder clearReasonReference() {
       reasonReference = null;
-      fieldSetFlags()[11] = false;
+      fieldSetFlags()[12] = false;
       return this;
     }
 
@@ -1236,10 +1308,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Encounter.Builder setPartOf(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[12], value);
+      validate(fields()[13], value);
       this.partOfBuilder = null;
       this.partOf = value;
-      fieldSetFlags()[12] = true;
+      fieldSetFlags()[13] = true;
       return this;
     }
 
@@ -1248,7 +1320,7 @@ static {
       * @return True if the 'partOf' field has been set, false otherwise.
       */
     public boolean hasPartOf() {
-      return fieldSetFlags()[12];
+      return fieldSetFlags()[13];
     }
 
     /**
@@ -1293,7 +1365,7 @@ static {
     public io.carrera.fhir.avro.models.Encounter.Builder clearPartOf() {
       partOf = null;
       partOfBuilder = null;
-      fieldSetFlags()[12] = false;
+      fieldSetFlags()[13] = false;
       return this;
     }
 
@@ -1338,6 +1410,7 @@ static {
           record.subject = fieldSetFlags()[7] ? this.subject : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[7]);
         }
         record.basedOn = fieldSetFlags()[8] ? this.basedOn : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[8]);
+        record.diagnosis = fieldSetFlags()[9] ? this.diagnosis : (java.util.List<io.carrera.fhir.avro.models.EncounterDiagnosis>) defaultValue(fields()[9]);
         if (periodBuilder != null) {
           try {
             record.period = this.periodBuilder.build();
@@ -1346,10 +1419,10 @@ static {
             throw e;
           }
         } else {
-          record.period = fieldSetFlags()[9] ? this.period : (io.carrera.fhir.avro.models.Period) defaultValue(fields()[9]);
+          record.period = fieldSetFlags()[10] ? this.period : (io.carrera.fhir.avro.models.Period) defaultValue(fields()[10]);
         }
-        record.reasonCode = fieldSetFlags()[10] ? this.reasonCode : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[10]);
-        record.reasonReference = fieldSetFlags()[11] ? this.reasonReference : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[11]);
+        record.reasonCode = fieldSetFlags()[11] ? this.reasonCode : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[11]);
+        record.reasonReference = fieldSetFlags()[12] ? this.reasonReference : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[12]);
         if (partOfBuilder != null) {
           try {
             record.partOf = this.partOfBuilder.build();
@@ -1358,7 +1431,7 @@ static {
             throw e;
           }
         } else {
-          record.partOf = fieldSetFlags()[12] ? this.partOf : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[12]);
+          record.partOf = fieldSetFlags()[13] ? this.partOf : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[13]);
         }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {

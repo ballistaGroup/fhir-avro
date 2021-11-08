@@ -181,7 +181,8 @@
         {
           "type": "long",
           "logicalType": "local-timestamp-micros"
-        }
+        },
+        "io.carrera.fhir.avro.models.DateTime"
       ],
       "default": null
     },

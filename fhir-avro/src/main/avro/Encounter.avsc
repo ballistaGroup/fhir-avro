@@ -74,6 +74,17 @@
             "default": null
         },
         {
+          "name": "diagnosis",
+          "type": [
+              "null",
+              {
+                  "type": "array",
+                  "items": "EncounterDiagnosis"
+              }
+          ],
+          "default": null
+      },
+        {
             "name": "period",
             "type": [
                 "null",
