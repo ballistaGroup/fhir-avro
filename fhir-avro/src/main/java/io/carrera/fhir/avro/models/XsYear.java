@@ -13,28 +13,24 @@ import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
-public class DateTime extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 4645005520567355314L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"DateTime\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]}");
+public class XsYear extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+  private static final long serialVersionUID = -4329957062274900170L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"XsYear\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
-static {
-    MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.DateConversion());
-    MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.TimestampMillisConversion());
-  }
 
-  private static final BinaryMessageEncoder<DateTime> ENCODER =
-      new BinaryMessageEncoder<DateTime>(MODEL$, SCHEMA$);
+  private static final BinaryMessageEncoder<XsYear> ENCODER =
+      new BinaryMessageEncoder<XsYear>(MODEL$, SCHEMA$);
 
-  private static final BinaryMessageDecoder<DateTime> DECODER =
-      new BinaryMessageDecoder<DateTime>(MODEL$, SCHEMA$);
+  private static final BinaryMessageDecoder<XsYear> DECODER =
+      new BinaryMessageDecoder<XsYear>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageEncoder instance used by this class.
    * @return the message encoder used by this class
    */
-  public static BinaryMessageEncoder<DateTime> getEncoder() {
+  public static BinaryMessageEncoder<XsYear> getEncoder() {
     return ENCODER;
   }
 
@@ -42,7 +38,7 @@ static {
    * Return the BinaryMessageDecoder instance used by this class.
    * @return the message decoder used by this class
    */
-  public static BinaryMessageDecoder<DateTime> getDecoder() {
+  public static BinaryMessageDecoder<XsYear> getDecoder() {
     return DECODER;
   }
 
@@ -51,12 +47,12 @@ static {
    * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
    * @return a BinaryMessageDecoder instance for this class backed by the given SchemaStore
    */
-  public static BinaryMessageDecoder<DateTime> createDecoder(SchemaStore resolver) {
-    return new BinaryMessageDecoder<DateTime>(MODEL$, SCHEMA$, resolver);
+  public static BinaryMessageDecoder<XsYear> createDecoder(SchemaStore resolver) {
+    return new BinaryMessageDecoder<XsYear>(MODEL$, SCHEMA$, resolver);
   }
 
   /**
-   * Serializes this DateTime to a ByteBuffer.
+   * Serializes this XsYear to a ByteBuffer.
    * @return a buffer holding the serialized data for this instance
    * @throws java.io.IOException if this instance could not be serialized
    */
@@ -65,30 +61,30 @@ static {
   }
 
   /**
-   * Deserializes a DateTime from a ByteBuffer.
+   * Deserializes a XsYear from a ByteBuffer.
    * @param b a byte buffer holding serialized data for an instance of this class
-   * @return a DateTime instance decoded from the given buffer
+   * @return a XsYear instance decoded from the given buffer
    * @throws java.io.IOException if the given bytes could not be deserialized into an instance of this class
    */
-  public static DateTime fromByteBuffer(
+  public static XsYear fromByteBuffer(
       java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
   }
 
-   private java.lang.Object value;
+   private int value;
 
   /**
    * Default constructor.  Note that this does not initialize fields
    * to their default values from the schema.  If that is desired then
    * one should use <code>newBuilder()</code>.
    */
-  public DateTime() {}
+  public XsYear() {}
 
   /**
    * All-args constructor.
    * @param value The new value for value
    */
-  public DateTime(java.lang.Object value) {
+  public XsYear(java.lang.Integer value) {
     this.value = value;
   }
 
@@ -106,7 +102,7 @@ static {
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: value = value$; break;
+    case 0: value = (java.lang.Integer)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -115,7 +111,7 @@ static {
    * Gets the value of the 'value' field.
    * @return The value of the 'value' field.
    */
-  public java.lang.Object getValue() {
+  public int getValue() {
     return value;
   }
 
@@ -124,52 +120,52 @@ static {
    * Sets the value of the 'value' field.
    * @param value the value to set.
    */
-  public void setValue(java.lang.Object value) {
+  public void setValue(int value) {
     this.value = value;
   }
 
   /**
-   * Creates a new DateTime RecordBuilder.
-   * @return A new DateTime RecordBuilder
+   * Creates a new XsYear RecordBuilder.
+   * @return A new XsYear RecordBuilder
    */
-  public static io.carrera.fhir.avro.models.DateTime.Builder newBuilder() {
-    return new io.carrera.fhir.avro.models.DateTime.Builder();
+  public static io.carrera.fhir.avro.models.XsYear.Builder newBuilder() {
+    return new io.carrera.fhir.avro.models.XsYear.Builder();
   }
 
   /**
-   * Creates a new DateTime RecordBuilder by copying an existing Builder.
+   * Creates a new XsYear RecordBuilder by copying an existing Builder.
    * @param other The existing builder to copy.
-   * @return A new DateTime RecordBuilder
+   * @return A new XsYear RecordBuilder
    */
-  public static io.carrera.fhir.avro.models.DateTime.Builder newBuilder(io.carrera.fhir.avro.models.DateTime.Builder other) {
+  public static io.carrera.fhir.avro.models.XsYear.Builder newBuilder(io.carrera.fhir.avro.models.XsYear.Builder other) {
     if (other == null) {
-      return new io.carrera.fhir.avro.models.DateTime.Builder();
+      return new io.carrera.fhir.avro.models.XsYear.Builder();
     } else {
-      return new io.carrera.fhir.avro.models.DateTime.Builder(other);
+      return new io.carrera.fhir.avro.models.XsYear.Builder(other);
     }
   }
 
   /**
-   * Creates a new DateTime RecordBuilder by copying an existing DateTime instance.
+   * Creates a new XsYear RecordBuilder by copying an existing XsYear instance.
    * @param other The existing instance to copy.
-   * @return A new DateTime RecordBuilder
+   * @return A new XsYear RecordBuilder
    */
-  public static io.carrera.fhir.avro.models.DateTime.Builder newBuilder(io.carrera.fhir.avro.models.DateTime other) {
+  public static io.carrera.fhir.avro.models.XsYear.Builder newBuilder(io.carrera.fhir.avro.models.XsYear other) {
     if (other == null) {
-      return new io.carrera.fhir.avro.models.DateTime.Builder();
+      return new io.carrera.fhir.avro.models.XsYear.Builder();
     } else {
-      return new io.carrera.fhir.avro.models.DateTime.Builder(other);
+      return new io.carrera.fhir.avro.models.XsYear.Builder(other);
     }
   }
 
   /**
-   * RecordBuilder for DateTime instances.
+   * RecordBuilder for XsYear instances.
    */
   @org.apache.avro.specific.AvroGenerated
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<DateTime>
-    implements org.apache.avro.data.RecordBuilder<DateTime> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<XsYear>
+    implements org.apache.avro.data.RecordBuilder<XsYear> {
 
-    private java.lang.Object value;
+    private int value;
 
     /** Creates a new Builder */
     private Builder() {
@@ -180,7 +176,7 @@ static {
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(io.carrera.fhir.avro.models.DateTime.Builder other) {
+    private Builder(io.carrera.fhir.avro.models.XsYear.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.value)) {
         this.value = data().deepCopy(fields()[0].schema(), other.value);
@@ -189,10 +185,10 @@ static {
     }
 
     /**
-     * Creates a Builder by copying an existing DateTime instance
+     * Creates a Builder by copying an existing XsYear instance
      * @param other The existing instance to copy.
      */
-    private Builder(io.carrera.fhir.avro.models.DateTime other) {
+    private Builder(io.carrera.fhir.avro.models.XsYear other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.value)) {
         this.value = data().deepCopy(fields()[0].schema(), other.value);
@@ -204,7 +200,7 @@ static {
       * Gets the value of the 'value' field.
       * @return The value.
       */
-    public java.lang.Object getValue() {
+    public int getValue() {
       return value;
     }
 
@@ -214,7 +210,7 @@ static {
       * @param value The value of 'value'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.DateTime.Builder setValue(java.lang.Object value) {
+    public io.carrera.fhir.avro.models.XsYear.Builder setValue(int value) {
       validate(fields()[0], value);
       this.value = value;
       fieldSetFlags()[0] = true;
@@ -234,18 +230,17 @@ static {
       * Clears the value of the 'value' field.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.DateTime.Builder clearValue() {
-      value = null;
+    public io.carrera.fhir.avro.models.XsYear.Builder clearValue() {
       fieldSetFlags()[0] = false;
       return this;
     }
 
     @Override
     @SuppressWarnings("unchecked")
-    public DateTime build() {
+    public XsYear build() {
       try {
-        DateTime record = new DateTime();
-        record.value = fieldSetFlags()[0] ? this.value :  defaultValue(fields()[0]);
+        XsYear record = new XsYear();
+        record.value = fieldSetFlags()[0] ? this.value : (java.lang.Integer) defaultValue(fields()[0]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -256,8 +251,8 @@ static {
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumWriter<DateTime>
-    WRITER$ = (org.apache.avro.io.DatumWriter<DateTime>)MODEL$.createDatumWriter(SCHEMA$);
+  private static final org.apache.avro.io.DatumWriter<XsYear>
+    WRITER$ = (org.apache.avro.io.DatumWriter<XsYear>)MODEL$.createDatumWriter(SCHEMA$);
 
   @Override public void writeExternal(java.io.ObjectOutput out)
     throws java.io.IOException {
@@ -265,14 +260,43 @@ static {
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumReader<DateTime>
-    READER$ = (org.apache.avro.io.DatumReader<DateTime>)MODEL$.createDatumReader(SCHEMA$);
+  private static final org.apache.avro.io.DatumReader<XsYear>
+    READER$ = (org.apache.avro.io.DatumReader<XsYear>)MODEL$.createDatumReader(SCHEMA$);
 
   @Override public void readExternal(java.io.ObjectInput in)
     throws java.io.IOException {
     READER$.read(this, SpecificData.getDecoder(in));
   }
 
+  @Override protected boolean hasCustomCoders() { return true; }
+
+  @Override public void customEncode(org.apache.avro.io.Encoder out)
+    throws java.io.IOException
+  {
+    out.writeInt(this.value);
+
+  }
+
+  @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
+    throws java.io.IOException
+  {
+    org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
+    if (fieldOrder == null) {
+      this.value = in.readInt();
+
+    } else {
+      for (int i = 0; i < 1; i++) {
+        switch (fieldOrder[i].pos()) {
+        case 0:
+          this.value = in.readInt();
+          break;
+
+        default:
+          throw new java.io.IOException("Corrupt ResolvingDecoder.");
+        }
+      }
+    }
+  }
 }
 
 

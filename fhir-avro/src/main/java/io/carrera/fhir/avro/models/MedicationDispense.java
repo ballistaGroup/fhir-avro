@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class MedicationDispense extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -85710295643513350L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MedicationDispense\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"identifier\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"medicationCodeableConcept\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"subject\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}]},{\"name\":\"context\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"quantity\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Decimal\",\"fields\":[{\"name\":\"unscaled_value\",\"type\":\"bytes\",\"logicalType\":\"decimal\"},{\"name\":\"precision\",\"type\":\"int\"},{\"name\":\"scale\",\"type\":\"int\"}]}],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"whenPrepared\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"localDateTime\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]}],\"default\":null},{\"name\":\"medicationReference\",\"type\":[\"null\",\"Reference\"],\"default\":null}]}");
+  private static final long serialVersionUID = 3245384193082826584L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MedicationDispense\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"identifier\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"medicationCodeableConcept\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"subject\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}]},{\"name\":\"context\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"quantity\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Decimal\",\"fields\":[{\"name\":\"unscaled_value\",\"type\":\"bytes\",\"logicalType\":\"decimal\"},{\"name\":\"precision\",\"type\":\"int\"},{\"name\":\"scale\",\"type\":\"int\"}]}],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"whenPrepared\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]}],\"default\":null},{\"name\":\"medicationReference\",\"type\":[\"null\",\"Reference\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -84,7 +84,7 @@ static {
    private io.carrera.fhir.avro.models.Reference context;
    private io.carrera.fhir.avro.models.CodeableConcept type;
    private io.carrera.fhir.avro.models.Quantity quantity;
-   private java.lang.Object whenPrepared;
+   private io.carrera.fhir.avro.models.DateTime whenPrepared;
    private io.carrera.fhir.avro.models.Reference medicationReference;
 
   /**
@@ -108,7 +108,7 @@ static {
    * @param whenPrepared The new value for whenPrepared
    * @param medicationReference The new value for medicationReference
    */
-  public MedicationDispense(java.lang.CharSequence resourceType, java.lang.CharSequence identifier, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference context, io.carrera.fhir.avro.models.CodeableConcept type, io.carrera.fhir.avro.models.Quantity quantity, java.lang.Object whenPrepared, io.carrera.fhir.avro.models.Reference medicationReference) {
+  public MedicationDispense(java.lang.CharSequence resourceType, java.lang.CharSequence identifier, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference context, io.carrera.fhir.avro.models.CodeableConcept type, io.carrera.fhir.avro.models.Quantity quantity, io.carrera.fhir.avro.models.DateTime whenPrepared, io.carrera.fhir.avro.models.Reference medicationReference) {
     this.resourceType = resourceType;
     this.identifier = identifier;
     this.status = status;
@@ -155,7 +155,7 @@ static {
     case 6: context = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 7: type = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     case 8: quantity = (io.carrera.fhir.avro.models.Quantity)value$; break;
-    case 9: whenPrepared = value$; break;
+    case 9: whenPrepared = (io.carrera.fhir.avro.models.DateTime)value$; break;
     case 10: medicationReference = (io.carrera.fhir.avro.models.Reference)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
@@ -318,7 +318,7 @@ static {
    * Gets the value of the 'whenPrepared' field.
    * @return The value of the 'whenPrepared' field.
    */
-  public java.lang.Object getWhenPrepared() {
+  public io.carrera.fhir.avro.models.DateTime getWhenPrepared() {
     return whenPrepared;
   }
 
@@ -327,7 +327,7 @@ static {
    * Sets the value of the 'whenPrepared' field.
    * @param value the value to set.
    */
-  public void setWhenPrepared(java.lang.Object value) {
+  public void setWhenPrepared(io.carrera.fhir.avro.models.DateTime value) {
     this.whenPrepared = value;
   }
 
@@ -404,7 +404,8 @@ static {
     private io.carrera.fhir.avro.models.CodeableConcept.Builder typeBuilder;
     private io.carrera.fhir.avro.models.Quantity quantity;
     private io.carrera.fhir.avro.models.Quantity.Builder quantityBuilder;
-    private java.lang.Object whenPrepared;
+    private io.carrera.fhir.avro.models.DateTime whenPrepared;
+    private io.carrera.fhir.avro.models.DateTime.Builder whenPreparedBuilder;
     private io.carrera.fhir.avro.models.Reference medicationReference;
     private io.carrera.fhir.avro.models.Reference.Builder medicationReferenceBuilder;
 
@@ -477,6 +478,9 @@ static {
         this.whenPrepared = data().deepCopy(fields()[9].schema(), other.whenPrepared);
         fieldSetFlags()[9] = other.fieldSetFlags()[9];
       }
+      if (other.hasWhenPreparedBuilder()) {
+        this.whenPreparedBuilder = io.carrera.fhir.avro.models.DateTime.newBuilder(other.getWhenPreparedBuilder());
+      }
       if (isValidValue(fields()[10], other.medicationReference)) {
         this.medicationReference = data().deepCopy(fields()[10].schema(), other.medicationReference);
         fieldSetFlags()[10] = other.fieldSetFlags()[10];
@@ -538,6 +542,7 @@ static {
         this.whenPrepared = data().deepCopy(fields()[9].schema(), other.whenPrepared);
         fieldSetFlags()[9] = true;
       }
+      this.whenPreparedBuilder = null;
       if (isValidValue(fields()[10], other.medicationReference)) {
         this.medicationReference = data().deepCopy(fields()[10].schema(), other.medicationReference);
         fieldSetFlags()[10] = true;
@@ -1125,7 +1130,7 @@ static {
       * Gets the value of the 'whenPrepared' field.
       * @return The value.
       */
-    public java.lang.Object getWhenPrepared() {
+    public io.carrera.fhir.avro.models.DateTime getWhenPrepared() {
       return whenPrepared;
     }
 
@@ -1135,8 +1140,9 @@ static {
       * @param value The value of 'whenPrepared'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.MedicationDispense.Builder setWhenPrepared(java.lang.Object value) {
+    public io.carrera.fhir.avro.models.MedicationDispense.Builder setWhenPrepared(io.carrera.fhir.avro.models.DateTime value) {
       validate(fields()[9], value);
+      this.whenPreparedBuilder = null;
       this.whenPrepared = value;
       fieldSetFlags()[9] = true;
       return this;
@@ -1150,6 +1156,40 @@ static {
       return fieldSetFlags()[9];
     }
 
+    /**
+     * Gets the Builder instance for the 'whenPrepared' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.DateTime.Builder getWhenPreparedBuilder() {
+      if (whenPreparedBuilder == null) {
+        if (hasWhenPrepared()) {
+          setWhenPreparedBuilder(io.carrera.fhir.avro.models.DateTime.newBuilder(whenPrepared));
+        } else {
+          setWhenPreparedBuilder(io.carrera.fhir.avro.models.DateTime.newBuilder());
+        }
+      }
+      return whenPreparedBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'whenPrepared' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+
+    public io.carrera.fhir.avro.models.MedicationDispense.Builder setWhenPreparedBuilder(io.carrera.fhir.avro.models.DateTime.Builder value) {
+      clearWhenPrepared();
+      whenPreparedBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'whenPrepared' field has an active Builder instance
+     * @return True if the 'whenPrepared' field has an active Builder instance
+     */
+    public boolean hasWhenPreparedBuilder() {
+      return whenPreparedBuilder != null;
+    }
 
     /**
       * Clears the value of the 'whenPrepared' field.
@@ -1157,6 +1197,7 @@ static {
       */
     public io.carrera.fhir.avro.models.MedicationDispense.Builder clearWhenPrepared() {
       whenPrepared = null;
+      whenPreparedBuilder = null;
       fieldSetFlags()[9] = false;
       return this;
     }
@@ -1305,7 +1346,16 @@ static {
         } else {
           record.quantity = fieldSetFlags()[8] ? this.quantity : (io.carrera.fhir.avro.models.Quantity) defaultValue(fields()[8]);
         }
-        record.whenPrepared = fieldSetFlags()[9] ? this.whenPrepared :  defaultValue(fields()[9]);
+        if (whenPreparedBuilder != null) {
+          try {
+            record.whenPrepared = this.whenPreparedBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("whenPrepared"));
+            throw e;
+          }
+        } else {
+          record.whenPrepared = fieldSetFlags()[9] ? this.whenPrepared : (io.carrera.fhir.avro.models.DateTime) defaultValue(fields()[9]);
+        }
         if (medicationReferenceBuilder != null) {
           try {
             record.medicationReference = this.medicationReferenceBuilder.build();

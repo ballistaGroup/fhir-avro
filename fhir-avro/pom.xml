@@ -35,7 +35,13 @@
          <include>**/*.avsc</include>
         </includes>
         <imports>
+            <import>${project.basedir}/src/main/avro/XsDateTime.avsc</import>
+            <import>${project.basedir}/src/main/avro/XsDate.avsc</import>
+            <import>${project.basedir}/src/main/avro/XsYear.avsc</import>
+            <import>${project.basedir}/src/main/avro/XsYearMonth.avsc</import>
+            <import>${project.basedir}/src/main/avro/Instant.avsc</import>
             <import>${project.basedir}/src/main/avro/DateTime.avsc</import>
+            <import>${project.basedir}/src/main/avro/Period.avsc</import>
             <import>${project.basedir}/src/main/avro/Decimal.avsc</import>
             <import>${project.basedir}/src/main/avro/Quantity.avsc</import>
             <import>${project.basedir}/src/main/avro/Coding.avsc</import>
@@ -60,7 +66,6 @@
             <import>${project.basedir}/src/main/avro/Ratio.avsc</import>
             <import>${project.basedir}/src/main/avro/Goal_Target.avsc</import>
             <import>${project.basedir}/src/main/avro/Goal.avsc</import>
-            <import>${project.basedir}/src/main/avro/Period.avsc</import>
             <import>${project.basedir}/src/main/avro/RiskAssessment_Prediction.avsc</import>
             <import>${project.basedir}/src/main/avro/RiskAssessment.avsc</import>
             <import>${project.basedir}/src/main/avro/Coverage.avsc</import>

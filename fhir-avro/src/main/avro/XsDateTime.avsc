@@ -1,0 +1,19 @@
+{
+  "name": "XsDateTime",
+  "type": "record",
+  "namespace": "io.carrera.fhir.avro.models",
+  "fields": [
+      {
+        "name": "millis",
+        "type": {
+          "type": "long",
+          "logicalType": "timestamp-millis"
+        }
+      },
+      {
+        "name": "zoneId",
+        "type": "string"
+      }
+    ]
+}
+

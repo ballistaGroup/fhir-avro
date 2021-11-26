@@ -1,0 +1,14 @@
+{
+  "name": "XsYearMonth",
+  "namespace": "io.carrera.fhir.avro.models",
+  "type" : "record",
+  "fields" : [ {
+    "name" : "year",
+    "type": "int"
+  }, 
+  {
+    "name" : "month",
+    "type": "int"
+  }]
+}
+

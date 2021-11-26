@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class MedicationRequest extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -6649072465863584899L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MedicationRequest\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"intent\",\"type\":\"string\"},{\"name\":\"medicationCodeableConcept\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"authoredOn\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"localDateTime\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]}],\"default\":null},{\"name\":\"requester\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"medicationReference\",\"type\":[\"null\",\"Reference\"],\"default\":null}]}");
+  private static final long serialVersionUID = -4861264791700308970L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MedicationRequest\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"intent\",\"type\":\"string\"},{\"name\":\"medicationCodeableConcept\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"authoredOn\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]}],\"default\":null},{\"name\":\"requester\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"medicationReference\",\"type\":[\"null\",\"Reference\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -82,7 +82,7 @@ static {
    private io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept;
    private io.carrera.fhir.avro.models.Reference subject;
    private io.carrera.fhir.avro.models.Reference encounter;
-   private java.lang.Object authoredOn;
+   private io.carrera.fhir.avro.models.DateTime authoredOn;
    private io.carrera.fhir.avro.models.Reference requester;
    private io.carrera.fhir.avro.models.Reference medicationReference;
 
@@ -106,7 +106,7 @@ static {
    * @param requester The new value for requester
    * @param medicationReference The new value for medicationReference
    */
-  public MedicationRequest(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, java.lang.CharSequence intent, io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.lang.Object authoredOn, io.carrera.fhir.avro.models.Reference requester, io.carrera.fhir.avro.models.Reference medicationReference) {
+  public MedicationRequest(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, java.lang.CharSequence intent, io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, io.carrera.fhir.avro.models.DateTime authoredOn, io.carrera.fhir.avro.models.Reference requester, io.carrera.fhir.avro.models.Reference medicationReference) {
     this.resourceType = resourceType;
     this.id = id;
     this.status = status;
@@ -149,7 +149,7 @@ static {
     case 4: medicationCodeableConcept = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     case 5: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 6: encounter = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 7: authoredOn = value$; break;
+    case 7: authoredOn = (io.carrera.fhir.avro.models.DateTime)value$; break;
     case 8: requester = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 9: medicationReference = (io.carrera.fhir.avro.models.Reference)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
@@ -279,7 +279,7 @@ static {
    * Gets the value of the 'authoredOn' field.
    * @return The value of the 'authoredOn' field.
    */
-  public java.lang.Object getAuthoredOn() {
+  public io.carrera.fhir.avro.models.DateTime getAuthoredOn() {
     return authoredOn;
   }
 
@@ -288,7 +288,7 @@ static {
    * Sets the value of the 'authoredOn' field.
    * @param value the value to set.
    */
-  public void setAuthoredOn(java.lang.Object value) {
+  public void setAuthoredOn(io.carrera.fhir.avro.models.DateTime value) {
     this.authoredOn = value;
   }
 
@@ -377,7 +377,8 @@ static {
     private io.carrera.fhir.avro.models.Reference.Builder subjectBuilder;
     private io.carrera.fhir.avro.models.Reference encounter;
     private io.carrera.fhir.avro.models.Reference.Builder encounterBuilder;
-    private java.lang.Object authoredOn;
+    private io.carrera.fhir.avro.models.DateTime authoredOn;
+    private io.carrera.fhir.avro.models.DateTime.Builder authoredOnBuilder;
     private io.carrera.fhir.avro.models.Reference requester;
     private io.carrera.fhir.avro.models.Reference.Builder requesterBuilder;
     private io.carrera.fhir.avro.models.Reference medicationReference;
@@ -434,6 +435,9 @@ static {
       if (isValidValue(fields()[7], other.authoredOn)) {
         this.authoredOn = data().deepCopy(fields()[7].schema(), other.authoredOn);
         fieldSetFlags()[7] = other.fieldSetFlags()[7];
+      }
+      if (other.hasAuthoredOnBuilder()) {
+        this.authoredOnBuilder = io.carrera.fhir.avro.models.DateTime.newBuilder(other.getAuthoredOnBuilder());
       }
       if (isValidValue(fields()[8], other.requester)) {
         this.requester = data().deepCopy(fields()[8].schema(), other.requester);
@@ -492,6 +496,7 @@ static {
         this.authoredOn = data().deepCopy(fields()[7].schema(), other.authoredOn);
         fieldSetFlags()[7] = true;
       }
+      this.authoredOnBuilder = null;
       if (isValidValue(fields()[8], other.requester)) {
         this.requester = data().deepCopy(fields()[8].schema(), other.requester);
         fieldSetFlags()[8] = true;
@@ -896,7 +901,7 @@ static {
       * Gets the value of the 'authoredOn' field.
       * @return The value.
       */
-    public java.lang.Object getAuthoredOn() {
+    public io.carrera.fhir.avro.models.DateTime getAuthoredOn() {
       return authoredOn;
     }
 
@@ -906,8 +911,9 @@ static {
       * @param value The value of 'authoredOn'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.MedicationRequest.Builder setAuthoredOn(java.lang.Object value) {
+    public io.carrera.fhir.avro.models.MedicationRequest.Builder setAuthoredOn(io.carrera.fhir.avro.models.DateTime value) {
       validate(fields()[7], value);
+      this.authoredOnBuilder = null;
       this.authoredOn = value;
       fieldSetFlags()[7] = true;
       return this;
@@ -921,6 +927,40 @@ static {
       return fieldSetFlags()[7];
     }
 
+    /**
+     * Gets the Builder instance for the 'authoredOn' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.DateTime.Builder getAuthoredOnBuilder() {
+      if (authoredOnBuilder == null) {
+        if (hasAuthoredOn()) {
+          setAuthoredOnBuilder(io.carrera.fhir.avro.models.DateTime.newBuilder(authoredOn));
+        } else {
+          setAuthoredOnBuilder(io.carrera.fhir.avro.models.DateTime.newBuilder());
+        }
+      }
+      return authoredOnBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'authoredOn' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+
+    public io.carrera.fhir.avro.models.MedicationRequest.Builder setAuthoredOnBuilder(io.carrera.fhir.avro.models.DateTime.Builder value) {
+      clearAuthoredOn();
+      authoredOnBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'authoredOn' field has an active Builder instance
+     * @return True if the 'authoredOn' field has an active Builder instance
+     */
+    public boolean hasAuthoredOnBuilder() {
+      return authoredOnBuilder != null;
+    }
 
     /**
       * Clears the value of the 'authoredOn' field.
@@ -928,6 +968,7 @@ static {
       */
     public io.carrera.fhir.avro.models.MedicationRequest.Builder clearAuthoredOn() {
       authoredOn = null;
+      authoredOnBuilder = null;
       fieldSetFlags()[7] = false;
       return this;
     }
@@ -1123,7 +1164,16 @@ static {
         } else {
           record.encounter = fieldSetFlags()[6] ? this.encounter : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[6]);
         }
-        record.authoredOn = fieldSetFlags()[7] ? this.authoredOn :  defaultValue(fields()[7]);
+        if (authoredOnBuilder != null) {
+          try {
+            record.authoredOn = this.authoredOnBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("authoredOn"));
+            throw e;
+          }
+        } else {
+          record.authoredOn = fieldSetFlags()[7] ? this.authoredOn : (io.carrera.fhir.avro.models.DateTime) defaultValue(fields()[7]);
+        }
         if (requesterBuilder != null) {
           try {
             record.requester = this.requesterBuilder.build();

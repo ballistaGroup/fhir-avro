@@ -50,7 +50,7 @@
     },
     {
       "name": "whenPrepared",
-      "type" : ["null", {"type": "int", "logicalType": "date"}, "io.carrera.fhir.avro.models.DateTime"],
+      "type" : ["null", "io.carrera.fhir.avro.models.DateTime"],
       "default": null
     },
     {

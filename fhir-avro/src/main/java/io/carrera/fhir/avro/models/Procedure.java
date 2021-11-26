@@ -14,15 +14,14 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Procedure extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -4864188081500652763L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Procedure\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"implicitRules\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"language\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}],\"default\":null},{\"name\":\"url\",\"type\":[\"null\",\"string\"]},{\"name\":\"value\",\"type\":[\"null\",\"string\",\"int\",\"boolean\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Decimal\",\"fields\":[{\"name\":\"unscaled_value\",\"type\":\"bytes\",\"logicalType\":\"decimal\"},{\"name\":\"precision\",\"type\":\"int\"},{\"name\":\"scale\",\"type\":\"int\"}]}],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]},{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}],\"default\":null}]}}],\"default\":null},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}],\"default\":null},{\"name\":\"instantiatesCanonical\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null},{\"name\":\"instantiatesUri\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null},{\"name\":\"basedOn\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"partOf\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"status\",\"type\":[\"string\"]},{\"name\":\"statusReason\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Coding\"}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"category\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"subject\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"performedDateTime\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"},{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"localDateTime\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]}],\"default\":null},{\"name\":\"performedPeriod\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"},\"DateTime\"],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"},\"DateTime\"],\"default\":null}]}],\"default\":null},{\"name\":\"performedString\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"performedRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}],\"default\":null},{\"name\":\"recorder\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"asserter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"location\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"reasonCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"reasonReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"bodySite\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"outcome\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"report\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"complication\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"complicationDetail\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"followUp\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"usedReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"usedCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null}]}");
+  private static final long serialVersionUID = -2709095292243218463L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Procedure\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"implicitRules\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"language\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}],\"default\":null},{\"name\":\"url\",\"type\":[\"null\",\"string\"]},{\"name\":\"value\",\"type\":[\"null\",\"string\",\"int\",\"boolean\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Decimal\",\"fields\":[{\"name\":\"unscaled_value\",\"type\":\"bytes\",\"logicalType\":\"decimal\"},{\"name\":\"precision\",\"type\":\"int\"},{\"name\":\"scale\",\"type\":\"int\"}]}],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]},{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}],\"default\":null}]}}],\"default\":null},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}],\"default\":null},{\"name\":\"instantiatesCanonical\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null},{\"name\":\"instantiatesUri\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null},{\"name\":\"basedOn\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"partOf\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"status\",\"type\":[\"string\"]},{\"name\":\"statusReason\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Coding\"}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"category\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"subject\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"performedDateTime\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]}],\"default\":null},{\"name\":\"performedPeriod\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",\"DateTime\"],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",\"DateTime\"],\"default\":null}]}],\"default\":null},{\"name\":\"performedString\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"performedRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}],\"default\":null},{\"name\":\"recorder\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"asserter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"location\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"reasonCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"reasonReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"bodySite\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"outcome\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"report\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"complication\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"complicationDetail\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"followUp\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"usedReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"usedCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
 static {
     MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.DateConversion());
     MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.TimestampMillisConversion());
-    MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.LocalTimestampMicrosConversion());
   }
 
   private static final BinaryMessageEncoder<Procedure> ENCODER =
@@ -92,7 +91,7 @@ static {
    private io.carrera.fhir.avro.models.CodeableConcept code;
    private io.carrera.fhir.avro.models.Reference subject;
    private io.carrera.fhir.avro.models.Reference encounter;
-   private java.lang.Object performedDateTime;
+   private io.carrera.fhir.avro.models.DateTime performedDateTime;
    private io.carrera.fhir.avro.models.Period performedPeriod;
    private java.lang.CharSequence performedString;
    private io.carrera.fhir.avro.models.Range performedRange;
@@ -153,7 +152,7 @@ static {
    * @param usedReference The new value for usedReference
    * @param usedCode The new value for usedCode
    */
-  public Procedure(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence implicitRules, java.lang.CharSequence language, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension, java.util.List<java.lang.CharSequence> instantiatesCanonical, java.util.List<java.lang.CharSequence> instantiatesUri, java.util.List<io.carrera.fhir.avro.models.Reference> basedOn, java.util.List<io.carrera.fhir.avro.models.Reference> partOf, java.lang.Object status, io.carrera.fhir.avro.models.CodeableConcept statusReason, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.lang.Object performedDateTime, io.carrera.fhir.avro.models.Period performedPeriod, java.lang.CharSequence performedString, io.carrera.fhir.avro.models.Range performedRange, io.carrera.fhir.avro.models.Reference recorder, io.carrera.fhir.avro.models.Reference asserter, io.carrera.fhir.avro.models.Reference location, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> reasonCode, java.util.List<io.carrera.fhir.avro.models.Reference> reasonReference, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> bodySite, io.carrera.fhir.avro.models.CodeableConcept outcome, java.util.List<io.carrera.fhir.avro.models.Reference> report, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> complication, java.util.List<io.carrera.fhir.avro.models.Reference> complicationDetail, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> followUp, java.util.List<io.carrera.fhir.avro.models.Reference> usedReference, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> usedCode) {
+  public Procedure(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence implicitRules, java.lang.CharSequence language, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension, java.util.List<java.lang.CharSequence> instantiatesCanonical, java.util.List<java.lang.CharSequence> instantiatesUri, java.util.List<io.carrera.fhir.avro.models.Reference> basedOn, java.util.List<io.carrera.fhir.avro.models.Reference> partOf, java.lang.Object status, io.carrera.fhir.avro.models.CodeableConcept statusReason, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, io.carrera.fhir.avro.models.DateTime performedDateTime, io.carrera.fhir.avro.models.Period performedPeriod, java.lang.CharSequence performedString, io.carrera.fhir.avro.models.Range performedRange, io.carrera.fhir.avro.models.Reference recorder, io.carrera.fhir.avro.models.Reference asserter, io.carrera.fhir.avro.models.Reference location, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> reasonCode, java.util.List<io.carrera.fhir.avro.models.Reference> reasonReference, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> bodySite, io.carrera.fhir.avro.models.CodeableConcept outcome, java.util.List<io.carrera.fhir.avro.models.Reference> report, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> complication, java.util.List<io.carrera.fhir.avro.models.Reference> complicationDetail, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> followUp, java.util.List<io.carrera.fhir.avro.models.Reference> usedReference, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> usedCode) {
     this.resourceType = resourceType;
     this.id = id;
     this.implicitRules = implicitRules;
@@ -251,7 +250,7 @@ static {
     case 13: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     case 14: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 15: encounter = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 16: performedDateTime = value$; break;
+    case 16: performedDateTime = (io.carrera.fhir.avro.models.DateTime)value$; break;
     case 17: performedPeriod = (io.carrera.fhir.avro.models.Period)value$; break;
     case 18: performedString = (java.lang.CharSequence)value$; break;
     case 19: performedRange = (io.carrera.fhir.avro.models.Range)value$; break;
@@ -548,7 +547,7 @@ static {
    * Gets the value of the 'performedDateTime' field.
    * @return The value of the 'performedDateTime' field.
    */
-  public java.lang.Object getPerformedDateTime() {
+  public io.carrera.fhir.avro.models.DateTime getPerformedDateTime() {
     return performedDateTime;
   }
 
@@ -557,7 +556,7 @@ static {
    * Sets the value of the 'performedDateTime' field.
    * @param value the value to set.
    */
-  public void setPerformedDateTime(java.lang.Object value) {
+  public void setPerformedDateTime(io.carrera.fhir.avro.models.DateTime value) {
     this.performedDateTime = value;
   }
 
@@ -895,7 +894,8 @@ static {
     private io.carrera.fhir.avro.models.Reference.Builder subjectBuilder;
     private io.carrera.fhir.avro.models.Reference encounter;
     private io.carrera.fhir.avro.models.Reference.Builder encounterBuilder;
-    private java.lang.Object performedDateTime;
+    private io.carrera.fhir.avro.models.DateTime performedDateTime;
+    private io.carrera.fhir.avro.models.DateTime.Builder performedDateTimeBuilder;
     private io.carrera.fhir.avro.models.Period performedPeriod;
     private io.carrera.fhir.avro.models.Period.Builder performedPeriodBuilder;
     private java.lang.CharSequence performedString;
@@ -1012,6 +1012,9 @@ static {
       if (isValidValue(fields()[16], other.performedDateTime)) {
         this.performedDateTime = data().deepCopy(fields()[16].schema(), other.performedDateTime);
         fieldSetFlags()[16] = other.fieldSetFlags()[16];
+      }
+      if (other.hasPerformedDateTimeBuilder()) {
+        this.performedDateTimeBuilder = io.carrera.fhir.avro.models.DateTime.newBuilder(other.getPerformedDateTimeBuilder());
       }
       if (isValidValue(fields()[17], other.performedPeriod)) {
         this.performedPeriod = data().deepCopy(fields()[17].schema(), other.performedPeriod);
@@ -1176,6 +1179,7 @@ static {
         this.performedDateTime = data().deepCopy(fields()[16].schema(), other.performedDateTime);
         fieldSetFlags()[16] = true;
       }
+      this.performedDateTimeBuilder = null;
       if (isValidValue(fields()[17], other.performedPeriod)) {
         this.performedPeriod = data().deepCopy(fields()[17].schema(), other.performedPeriod);
         fieldSetFlags()[17] = true;
@@ -2072,7 +2076,7 @@ static {
       * Gets the value of the 'performedDateTime' field.
       * @return The value.
       */
-    public java.lang.Object getPerformedDateTime() {
+    public io.carrera.fhir.avro.models.DateTime getPerformedDateTime() {
       return performedDateTime;
     }
 
@@ -2082,8 +2086,9 @@ static {
       * @param value The value of 'performedDateTime'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Procedure.Builder setPerformedDateTime(java.lang.Object value) {
+    public io.carrera.fhir.avro.models.Procedure.Builder setPerformedDateTime(io.carrera.fhir.avro.models.DateTime value) {
       validate(fields()[16], value);
+      this.performedDateTimeBuilder = null;
       this.performedDateTime = value;
       fieldSetFlags()[16] = true;
       return this;
@@ -2097,6 +2102,40 @@ static {
       return fieldSetFlags()[16];
     }
 
+    /**
+     * Gets the Builder instance for the 'performedDateTime' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.DateTime.Builder getPerformedDateTimeBuilder() {
+      if (performedDateTimeBuilder == null) {
+        if (hasPerformedDateTime()) {
+          setPerformedDateTimeBuilder(io.carrera.fhir.avro.models.DateTime.newBuilder(performedDateTime));
+        } else {
+          setPerformedDateTimeBuilder(io.carrera.fhir.avro.models.DateTime.newBuilder());
+        }
+      }
+      return performedDateTimeBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'performedDateTime' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+
+    public io.carrera.fhir.avro.models.Procedure.Builder setPerformedDateTimeBuilder(io.carrera.fhir.avro.models.DateTime.Builder value) {
+      clearPerformedDateTime();
+      performedDateTimeBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'performedDateTime' field has an active Builder instance
+     * @return True if the 'performedDateTime' field has an active Builder instance
+     */
+    public boolean hasPerformedDateTimeBuilder() {
+      return performedDateTimeBuilder != null;
+    }
 
     /**
       * Clears the value of the 'performedDateTime' field.
@@ -2104,6 +2143,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearPerformedDateTime() {
       performedDateTime = null;
+      performedDateTimeBuilder = null;
       fieldSetFlags()[16] = false;
       return this;
     }
@@ -3030,7 +3070,16 @@ static {
         } else {
           record.encounter = fieldSetFlags()[15] ? this.encounter : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[15]);
         }
-        record.performedDateTime = fieldSetFlags()[16] ? this.performedDateTime :  defaultValue(fields()[16]);
+        if (performedDateTimeBuilder != null) {
+          try {
+            record.performedDateTime = this.performedDateTimeBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("performedDateTime"));
+            throw e;
+          }
+        } else {
+          record.performedDateTime = fieldSetFlags()[16] ? this.performedDateTime : (io.carrera.fhir.avro.models.DateTime) defaultValue(fields()[16]);
+        }
         if (performedPeriodBuilder != null) {
           try {
             record.performedPeriod = this.performedPeriodBuilder.build();
