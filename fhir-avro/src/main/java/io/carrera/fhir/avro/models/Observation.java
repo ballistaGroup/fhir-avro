@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Observation extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -1560923457748360316L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Observation\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"subject\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"effective\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"localDateTime\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]}],\"default\":null},{\"name\":\"issued\",\"type\":[\"null\",\"int\"],\"default\":null,\"logicalType\":\"date\"},{\"name\":\"value\",\"type\":[\"null\",\"string\",\"int\",\"boolean\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Decimal\",\"fields\":[{\"name\":\"unscaled_value\",\"type\":\"bytes\",\"logicalType\":\"decimal\"},{\"name\":\"precision\",\"type\":\"int\"},{\"name\":\"scale\",\"type\":\"int\"}]}],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]},\"CodeableConcept\"],\"default\":null},{\"name\":\"interpretation\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null}]}");
+  private static final long serialVersionUID = -3566114306873315872L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Observation\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"subject\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"effective\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]},{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",\"DateTime\"],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",\"DateTime\"],\"default\":null}]}],\"default\":null},{\"name\":\"issued\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Instant\",\"fields\":[{\"name\":\"value\",\"type\":\"XsDateTime\"}]}],\"default\":null},{\"name\":\"value\",\"type\":[\"null\",\"string\",\"int\",\"boolean\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Decimal\",\"fields\":[{\"name\":\"unscaled_value\",\"type\":\"bytes\",\"logicalType\":\"decimal\"},{\"name\":\"precision\",\"type\":\"int\"},{\"name\":\"scale\",\"type\":\"int\"}]}],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]},\"CodeableConcept\"],\"default\":null},{\"name\":\"interpretation\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -83,7 +83,7 @@ static {
    private io.carrera.fhir.avro.models.Reference subject;
    private io.carrera.fhir.avro.models.Reference encounter;
    private java.lang.Object effective;
-   private java.lang.Integer issued;
+   private io.carrera.fhir.avro.models.Instant issued;
    private java.lang.Object value;
    private java.util.List<io.carrera.fhir.avro.models.CodeableConcept> interpretation;
 
@@ -108,7 +108,7 @@ static {
    * @param value The new value for value
    * @param interpretation The new value for interpretation
    */
-  public Observation(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.lang.Object effective, java.lang.Integer issued, java.lang.Object value, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> interpretation) {
+  public Observation(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.lang.Object effective, io.carrera.fhir.avro.models.Instant issued, java.lang.Object value, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> interpretation) {
     this.resourceType = resourceType;
     this.id = id;
     this.status = status;
@@ -154,7 +154,7 @@ static {
     case 5: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 6: encounter = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 7: effective = value$; break;
-    case 8: issued = (java.lang.Integer)value$; break;
+    case 8: issued = (io.carrera.fhir.avro.models.Instant)value$; break;
     case 9: value = value$; break;
     case 10: interpretation = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
@@ -301,7 +301,7 @@ static {
    * Gets the value of the 'issued' field.
    * @return The value of the 'issued' field.
    */
-  public java.lang.Integer getIssued() {
+  public io.carrera.fhir.avro.models.Instant getIssued() {
     return issued;
   }
 
@@ -310,7 +310,7 @@ static {
    * Sets the value of the 'issued' field.
    * @param value the value to set.
    */
-  public void setIssued(java.lang.Integer value) {
+  public void setIssued(io.carrera.fhir.avro.models.Instant value) {
     this.issued = value;
   }
 
@@ -400,7 +400,8 @@ static {
     private io.carrera.fhir.avro.models.Reference encounter;
     private io.carrera.fhir.avro.models.Reference.Builder encounterBuilder;
     private java.lang.Object effective;
-    private java.lang.Integer issued;
+    private io.carrera.fhir.avro.models.Instant issued;
+    private io.carrera.fhir.avro.models.Instant.Builder issuedBuilder;
     private java.lang.Object value;
     private java.util.List<io.carrera.fhir.avro.models.CodeableConcept> interpretation;
 
@@ -460,6 +461,9 @@ static {
         this.issued = data().deepCopy(fields()[8].schema(), other.issued);
         fieldSetFlags()[8] = other.fieldSetFlags()[8];
       }
+      if (other.hasIssuedBuilder()) {
+        this.issuedBuilder = io.carrera.fhir.avro.models.Instant.newBuilder(other.getIssuedBuilder());
+      }
       if (isValidValue(fields()[9], other.value)) {
         this.value = data().deepCopy(fields()[9].schema(), other.value);
         fieldSetFlags()[9] = other.fieldSetFlags()[9];
@@ -515,6 +519,7 @@ static {
         this.issued = data().deepCopy(fields()[8].schema(), other.issued);
         fieldSetFlags()[8] = true;
       }
+      this.issuedBuilder = null;
       if (isValidValue(fields()[9], other.value)) {
         this.value = data().deepCopy(fields()[9].schema(), other.value);
         fieldSetFlags()[9] = true;
@@ -957,7 +962,7 @@ static {
       * Gets the value of the 'issued' field.
       * @return The value.
       */
-    public java.lang.Integer getIssued() {
+    public io.carrera.fhir.avro.models.Instant getIssued() {
       return issued;
     }
 
@@ -967,8 +972,9 @@ static {
       * @param value The value of 'issued'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Observation.Builder setIssued(java.lang.Integer value) {
+    public io.carrera.fhir.avro.models.Observation.Builder setIssued(io.carrera.fhir.avro.models.Instant value) {
       validate(fields()[8], value);
+      this.issuedBuilder = null;
       this.issued = value;
       fieldSetFlags()[8] = true;
       return this;
@@ -982,6 +988,40 @@ static {
       return fieldSetFlags()[8];
     }
 
+    /**
+     * Gets the Builder instance for the 'issued' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.Instant.Builder getIssuedBuilder() {
+      if (issuedBuilder == null) {
+        if (hasIssued()) {
+          setIssuedBuilder(io.carrera.fhir.avro.models.Instant.newBuilder(issued));
+        } else {
+          setIssuedBuilder(io.carrera.fhir.avro.models.Instant.newBuilder());
+        }
+      }
+      return issuedBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'issued' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+
+    public io.carrera.fhir.avro.models.Observation.Builder setIssuedBuilder(io.carrera.fhir.avro.models.Instant.Builder value) {
+      clearIssued();
+      issuedBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'issued' field has an active Builder instance
+     * @return True if the 'issued' field has an active Builder instance
+     */
+    public boolean hasIssuedBuilder() {
+      return issuedBuilder != null;
+    }
 
     /**
       * Clears the value of the 'issued' field.
@@ -989,6 +1029,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Observation.Builder clearIssued() {
       issued = null;
+      issuedBuilder = null;
       fieldSetFlags()[8] = false;
       return this;
     }
@@ -1113,7 +1154,16 @@ static {
           record.encounter = fieldSetFlags()[6] ? this.encounter : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[6]);
         }
         record.effective = fieldSetFlags()[7] ? this.effective :  defaultValue(fields()[7]);
-        record.issued = fieldSetFlags()[8] ? this.issued : (java.lang.Integer) defaultValue(fields()[8]);
+        if (issuedBuilder != null) {
+          try {
+            record.issued = this.issuedBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("issued"));
+            throw e;
+          }
+        } else {
+          record.issued = fieldSetFlags()[8] ? this.issued : (io.carrera.fhir.avro.models.Instant) defaultValue(fields()[8]);
+        }
         record.value = fieldSetFlags()[9] ? this.value :  defaultValue(fields()[9]);
         record.interpretation = fieldSetFlags()[10] ? this.interpretation : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[10]);
         return record;

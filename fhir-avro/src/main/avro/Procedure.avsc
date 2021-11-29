@@ -173,16 +173,7 @@
     {
       "name": "performedDateTime",
       "type": [
-        "null",
-        {
-          "type": "int",
-          "logicalType": "date"
-        },
-        {
-          "type": "long",
-          "logicalType": "local-timestamp-micros"
-        },
-        "io.carrera.fhir.avro.models.DateTime"
+        "null", "io.carrera.fhir.avro.models.DateTime"
       ],
       "default": null
     },

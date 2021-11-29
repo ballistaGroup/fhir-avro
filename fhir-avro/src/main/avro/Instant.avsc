@@ -1,0 +1,11 @@
+{
+  "name": "Instant",
+  "namespace": "io.carrera.fhir.avro.models",
+  "type": "record",
+  "fields": [{
+    "name": "value",
+    "type": "io.carrera.fhir.avro.models.XsDateTime"
+  }]
+  
+}
+

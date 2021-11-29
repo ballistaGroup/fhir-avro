@@ -43,13 +43,12 @@
     },
     {
       "name" : "effective",
-      "type" : ["null", {"type": "int", "logicalType": "date"}, "io.carrera.fhir.avro.models.DateTime"],
+      "type" : ["null", "io.carrera.fhir.avro.models.DateTime", "io.carrera.fhir.avro.models.Period"],
       "default": null
     },
     {
       "name": "issued",
-      "type": ["null", "int"],
-      "logicalType": "date",
+      "type" : ["null", "io.carrera.fhir.avro.models.Instant"],
       "default": null
     },
     {

@@ -1,0 +1,13 @@
+{
+  "name": "XsDate",
+  "namespace": "io.carrera.fhir.avro.models",
+  "type": "record",
+  "fields": [{
+    "name": "value",
+    "type": {
+      "type": "int",
+      "logicalType": "date"
+    }
+  }]
+}
+

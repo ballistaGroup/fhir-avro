@@ -1,19 +1,10 @@
 {
   "name": "DateTime",
-  "type": "record",
   "namespace": "io.carrera.fhir.avro.models",
-  "fields": [
-      {
-        "name": "localDateTime",
-        "type": {
-          "type": "long",
-          "logicalType": "timestamp-millis"
-        }
-      },
-      {
-        "name": "zoneId",
-        "type": "string"
-      }
-    ]
+  "type": "record",
+  "fields" : [ {
+    "name" : "value",
+    "type": ["XsDateTime", "XsDate", "XsYearMonth", "XsYear"]
+  }]
 }
 

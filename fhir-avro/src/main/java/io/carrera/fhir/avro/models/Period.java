@@ -14,15 +14,14 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Period extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -554198887123572977L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Period\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"},{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"localDateTime\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"},\"DateTime\"],\"default\":null}]}");
+  private static final long serialVersionUID = 6274041953503256027L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Period\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",\"DateTime\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
 static {
     MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.DateConversion());
     MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.TimestampMillisConversion());
-    MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.LocalTimestampMicrosConversion());
   }
 
   private static final BinaryMessageEncoder<Period> ENCODER =
@@ -76,8 +75,8 @@ static {
     return DECODER.decode(b);
   }
 
-   private java.lang.Object start;
-   private java.lang.Object end;
+   private io.carrera.fhir.avro.models.DateTime start;
+   private io.carrera.fhir.avro.models.DateTime end;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -91,7 +90,7 @@ static {
    * @param start The new value for start
    * @param end The new value for end
    */
-  public Period(java.lang.Object start, java.lang.Object end) {
+  public Period(io.carrera.fhir.avro.models.DateTime start, io.carrera.fhir.avro.models.DateTime end) {
     this.start = start;
     this.end = end;
   }
@@ -111,8 +110,8 @@ static {
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: start = value$; break;
-    case 1: end = value$; break;
+    case 0: start = (io.carrera.fhir.avro.models.DateTime)value$; break;
+    case 1: end = (io.carrera.fhir.avro.models.DateTime)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -121,7 +120,7 @@ static {
    * Gets the value of the 'start' field.
    * @return The value of the 'start' field.
    */
-  public java.lang.Object getStart() {
+  public io.carrera.fhir.avro.models.DateTime getStart() {
     return start;
   }
 
@@ -130,7 +129,7 @@ static {
    * Sets the value of the 'start' field.
    * @param value the value to set.
    */
-  public void setStart(java.lang.Object value) {
+  public void setStart(io.carrera.fhir.avro.models.DateTime value) {
     this.start = value;
   }
 
@@ -138,7 +137,7 @@ static {
    * Gets the value of the 'end' field.
    * @return The value of the 'end' field.
    */
-  public java.lang.Object getEnd() {
+  public io.carrera.fhir.avro.models.DateTime getEnd() {
     return end;
   }
 
@@ -147,7 +146,7 @@ static {
    * Sets the value of the 'end' field.
    * @param value the value to set.
    */
-  public void setEnd(java.lang.Object value) {
+  public void setEnd(io.carrera.fhir.avro.models.DateTime value) {
     this.end = value;
   }
 
@@ -192,8 +191,10 @@ static {
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Period>
     implements org.apache.avro.data.RecordBuilder<Period> {
 
-    private java.lang.Object start;
-    private java.lang.Object end;
+    private io.carrera.fhir.avro.models.DateTime start;
+    private io.carrera.fhir.avro.models.DateTime.Builder startBuilder;
+    private io.carrera.fhir.avro.models.DateTime end;
+    private io.carrera.fhir.avro.models.DateTime.Builder endBuilder;
 
     /** Creates a new Builder */
     private Builder() {
@@ -210,9 +211,15 @@ static {
         this.start = data().deepCopy(fields()[0].schema(), other.start);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
+      if (other.hasStartBuilder()) {
+        this.startBuilder = io.carrera.fhir.avro.models.DateTime.newBuilder(other.getStartBuilder());
+      }
       if (isValidValue(fields()[1], other.end)) {
         this.end = data().deepCopy(fields()[1].schema(), other.end);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
+      }
+      if (other.hasEndBuilder()) {
+        this.endBuilder = io.carrera.fhir.avro.models.DateTime.newBuilder(other.getEndBuilder());
       }
     }
 
@@ -226,17 +233,19 @@ static {
         this.start = data().deepCopy(fields()[0].schema(), other.start);
         fieldSetFlags()[0] = true;
       }
+      this.startBuilder = null;
       if (isValidValue(fields()[1], other.end)) {
         this.end = data().deepCopy(fields()[1].schema(), other.end);
         fieldSetFlags()[1] = true;
       }
+      this.endBuilder = null;
     }
 
     /**
       * Gets the value of the 'start' field.
       * @return The value.
       */
-    public java.lang.Object getStart() {
+    public io.carrera.fhir.avro.models.DateTime getStart() {
       return start;
     }
 
@@ -246,8 +255,9 @@ static {
       * @param value The value of 'start'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Period.Builder setStart(java.lang.Object value) {
+    public io.carrera.fhir.avro.models.Period.Builder setStart(io.carrera.fhir.avro.models.DateTime value) {
       validate(fields()[0], value);
+      this.startBuilder = null;
       this.start = value;
       fieldSetFlags()[0] = true;
       return this;
@@ -261,6 +271,40 @@ static {
       return fieldSetFlags()[0];
     }
 
+    /**
+     * Gets the Builder instance for the 'start' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.DateTime.Builder getStartBuilder() {
+      if (startBuilder == null) {
+        if (hasStart()) {
+          setStartBuilder(io.carrera.fhir.avro.models.DateTime.newBuilder(start));
+        } else {
+          setStartBuilder(io.carrera.fhir.avro.models.DateTime.newBuilder());
+        }
+      }
+      return startBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'start' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+
+    public io.carrera.fhir.avro.models.Period.Builder setStartBuilder(io.carrera.fhir.avro.models.DateTime.Builder value) {
+      clearStart();
+      startBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'start' field has an active Builder instance
+     * @return True if the 'start' field has an active Builder instance
+     */
+    public boolean hasStartBuilder() {
+      return startBuilder != null;
+    }
 
     /**
       * Clears the value of the 'start' field.
@@ -268,6 +312,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Period.Builder clearStart() {
       start = null;
+      startBuilder = null;
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -276,7 +321,7 @@ static {
       * Gets the value of the 'end' field.
       * @return The value.
       */
-    public java.lang.Object getEnd() {
+    public io.carrera.fhir.avro.models.DateTime getEnd() {
       return end;
     }
 
@@ -286,8 +331,9 @@ static {
       * @param value The value of 'end'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Period.Builder setEnd(java.lang.Object value) {
+    public io.carrera.fhir.avro.models.Period.Builder setEnd(io.carrera.fhir.avro.models.DateTime value) {
       validate(fields()[1], value);
+      this.endBuilder = null;
       this.end = value;
       fieldSetFlags()[1] = true;
       return this;
@@ -301,6 +347,40 @@ static {
       return fieldSetFlags()[1];
     }
 
+    /**
+     * Gets the Builder instance for the 'end' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.DateTime.Builder getEndBuilder() {
+      if (endBuilder == null) {
+        if (hasEnd()) {
+          setEndBuilder(io.carrera.fhir.avro.models.DateTime.newBuilder(end));
+        } else {
+          setEndBuilder(io.carrera.fhir.avro.models.DateTime.newBuilder());
+        }
+      }
+      return endBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'end' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+
+    public io.carrera.fhir.avro.models.Period.Builder setEndBuilder(io.carrera.fhir.avro.models.DateTime.Builder value) {
+      clearEnd();
+      endBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'end' field has an active Builder instance
+     * @return True if the 'end' field has an active Builder instance
+     */
+    public boolean hasEndBuilder() {
+      return endBuilder != null;
+    }
 
     /**
       * Clears the value of the 'end' field.
@@ -308,6 +388,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Period.Builder clearEnd() {
       end = null;
+      endBuilder = null;
       fieldSetFlags()[1] = false;
       return this;
     }
@@ -317,8 +398,26 @@ static {
     public Period build() {
       try {
         Period record = new Period();
-        record.start = fieldSetFlags()[0] ? this.start :  defaultValue(fields()[0]);
-        record.end = fieldSetFlags()[1] ? this.end :  defaultValue(fields()[1]);
+        if (startBuilder != null) {
+          try {
+            record.start = this.startBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("start"));
+            throw e;
+          }
+        } else {
+          record.start = fieldSetFlags()[0] ? this.start : (io.carrera.fhir.avro.models.DateTime) defaultValue(fields()[0]);
+        }
+        if (endBuilder != null) {
+          try {
+            record.end = this.endBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("end"));
+            throw e;
+          }
+        } else {
+          record.end = fieldSetFlags()[1] ? this.end : (io.carrera.fhir.avro.models.DateTime) defaultValue(fields()[1]);
+        }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;

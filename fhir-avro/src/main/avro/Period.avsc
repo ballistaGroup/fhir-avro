@@ -3,24 +3,12 @@
   "type" : "record",
   "fields" : [ {
     "name" : "start",
-    "type" : [ "null",  {
-      "type" : "int",
-      "logicalType" : "date"
-    }, {
-      "type" : "long",
-      "logicalType" : "local-timestamp-micros"
-    },
+    "type" : [ "null",
     "io.carrera.fhir.avro.models.DateTime" ],
     "default": null
   }, {
     "name" : "end",
-    "type" : [ "null", {
-      "type" : "int",
-      "logicalType" : "date"
-    }, {
-      "type" : "long",
-      "logicalType" : "local-timestamp-micros"
-    },
+    "type" : [ "null",
     "io.carrera.fhir.avro.models.DateTime"
     ],
     "default": null
