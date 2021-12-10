@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class MedicationAdministration extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -8667227564901406955L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MedicationAdministration\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"implicitRules\",\"type\":[\"null\",\"string\"]},{\"name\":\"language\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}],\"default\":null},{\"name\":\"url\",\"type\":[\"null\",\"string\"]},{\"name\":\"value\",\"type\":[\"null\",\"string\",\"int\",\"boolean\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Decimal\",\"fields\":[{\"name\":\"unscaled_value\",\"type\":\"bytes\",\"logicalType\":\"decimal\"},{\"name\":\"precision\",\"type\":\"int\"},{\"name\":\"scale\",\"type\":\"int\"}]}],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]},{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}],\"default\":null}]}}]},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"instantiates\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"partOf\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]},{\"name\":\"status\",\"type\":[\"null\",\"string\"]},{\"name\":\"statusReason\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Coding\"}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]},{\"name\":\"category\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"medicationCodeableConcept\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"medicationReference\",\"type\":[\"null\",\"Reference\"]},{\"name\":\"subject\",\"type\":\"Reference\"},{\"name\":\"context\",\"type\":[\"null\",\"Reference\"]},{\"name\":\"supportingInformation\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"effectiveDateTime\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]},{\"name\":\"effectivePeriod\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",\"DateTime\"],\"default\":null}]}]},{\"name\":\"reasonCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}]},{\"name\":\"reasonReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"request\",\"type\":[\"null\",\"Reference\"]},{\"name\":\"device\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"eventHistory\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]}]}");
+  private static final long serialVersionUID = 2843123323866566114L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MedicationAdministration\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"instantiates\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}]},{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"implicitRules\",\"type\":[\"null\",\"string\"]},{\"name\":\"language\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}],\"default\":null},{\"name\":\"url\",\"type\":[\"null\",\"string\"]},{\"name\":\"value\",\"type\":[\"null\",\"string\",\"int\",\"boolean\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Decimal\",\"fields\":[{\"name\":\"unscaled_value\",\"type\":\"bytes\",\"logicalType\":\"decimal\"},{\"name\":\"precision\",\"type\":\"int\"},{\"name\":\"scale\",\"type\":\"int\"}]}],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]},{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}],\"default\":null}]}}]},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}]},{\"name\":\"partOf\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]},{\"name\":\"status\",\"type\":[\"null\",\"string\"]},{\"name\":\"statusReason\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Coding\"}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]},{\"name\":\"category\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"medicationCodeableConcept\",\"type\":[\"null\",\"CodeableConcept\"]},{\"name\":\"medicationReference\",\"type\":[\"null\",\"Reference\"]},{\"name\":\"subject\",\"type\":\"Reference\"},{\"name\":\"context\",\"type\":[\"null\",\"Reference\"]},{\"name\":\"supportingInformation\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"effectiveDateTime\",\"type\":[\"null\",{\"type\":\"int\",\"logicalType\":\"date\"},{\"type\":\"long\",\"logicalType\":\"local-timestamp-micros\"}]},{\"name\":\"effectivePeriod\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",\"DateTime\"],\"default\":null}]}]},{\"name\":\"reasonCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}]},{\"name\":\"reasonReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"request\",\"type\":[\"null\",\"Reference\"]},{\"name\":\"device\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]},{\"name\":\"eventHistory\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -76,13 +76,13 @@ static {
     return DECODER.decode(b);
   }
 
+   private java.util.List<java.lang.CharSequence> instantiates;
    private java.lang.CharSequence resourceType;
    private java.lang.CharSequence id;
    private java.lang.CharSequence implicitRules;
    private java.lang.CharSequence language;
    private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
    private java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension;
-   private java.util.List<java.lang.CharSequence> instantiates;
    private java.util.List<io.carrera.fhir.avro.models.Reference> partOf;
    private java.lang.CharSequence status;
    private java.util.List<io.carrera.fhir.avro.models.CodeableConcept> statusReason;
@@ -109,13 +109,13 @@ static {
 
   /**
    * All-args constructor.
+   * @param instantiates The new value for instantiates
    * @param resourceType The new value for resourceType
    * @param id The new value for id
    * @param implicitRules The new value for implicitRules
    * @param language The new value for language
    * @param extension The new value for extension
    * @param modifierExtension The new value for modifierExtension
-   * @param instantiates The new value for instantiates
    * @param partOf The new value for partOf
    * @param status The new value for status
    * @param statusReason The new value for statusReason
@@ -133,14 +133,14 @@ static {
    * @param device The new value for device
    * @param eventHistory The new value for eventHistory
    */
-  public MedicationAdministration(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence implicitRules, java.lang.CharSequence language, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension, java.util.List<java.lang.CharSequence> instantiates, java.util.List<io.carrera.fhir.avro.models.Reference> partOf, java.lang.CharSequence status, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> statusReason, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept, io.carrera.fhir.avro.models.Reference medicationReference, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference context, java.util.List<io.carrera.fhir.avro.models.Reference> supportingInformation, java.lang.Object effectiveDateTime, io.carrera.fhir.avro.models.Period effectivePeriod, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> reasonCode, java.util.List<io.carrera.fhir.avro.models.Reference> reasonReference, io.carrera.fhir.avro.models.Reference request, java.util.List<io.carrera.fhir.avro.models.Reference> device, java.util.List<io.carrera.fhir.avro.models.Reference> eventHistory) {
+  public MedicationAdministration(java.util.List<java.lang.CharSequence> instantiates, java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence implicitRules, java.lang.CharSequence language, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension, java.util.List<io.carrera.fhir.avro.models.Reference> partOf, java.lang.CharSequence status, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> statusReason, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept, io.carrera.fhir.avro.models.Reference medicationReference, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference context, java.util.List<io.carrera.fhir.avro.models.Reference> supportingInformation, java.lang.Object effectiveDateTime, io.carrera.fhir.avro.models.Period effectivePeriod, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> reasonCode, java.util.List<io.carrera.fhir.avro.models.Reference> reasonReference, io.carrera.fhir.avro.models.Reference request, java.util.List<io.carrera.fhir.avro.models.Reference> device, java.util.List<io.carrera.fhir.avro.models.Reference> eventHistory) {
+    this.instantiates = instantiates;
     this.resourceType = resourceType;
     this.id = id;
     this.implicitRules = implicitRules;
     this.language = language;
     this.extension = extension;
     this.modifierExtension = modifierExtension;
-    this.instantiates = instantiates;
     this.partOf = partOf;
     this.status = status;
     this.statusReason = statusReason;
@@ -164,13 +164,13 @@ static {
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return resourceType;
-    case 1: return id;
-    case 2: return implicitRules;
-    case 3: return language;
-    case 4: return extension;
-    case 5: return modifierExtension;
-    case 6: return instantiates;
+    case 0: return instantiates;
+    case 1: return resourceType;
+    case 2: return id;
+    case 3: return implicitRules;
+    case 4: return language;
+    case 5: return extension;
+    case 6: return modifierExtension;
     case 7: return partOf;
     case 8: return status;
     case 9: return statusReason;
@@ -195,13 +195,13 @@ static {
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: resourceType = (java.lang.CharSequence)value$; break;
-    case 1: id = (java.lang.CharSequence)value$; break;
-    case 2: implicitRules = (java.lang.CharSequence)value$; break;
-    case 3: language = (java.lang.CharSequence)value$; break;
-    case 4: extension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 5: modifierExtension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 6: instantiates = (java.util.List<java.lang.CharSequence>)value$; break;
+    case 0: instantiates = (java.util.List<java.lang.CharSequence>)value$; break;
+    case 1: resourceType = (java.lang.CharSequence)value$; break;
+    case 2: id = (java.lang.CharSequence)value$; break;
+    case 3: implicitRules = (java.lang.CharSequence)value$; break;
+    case 4: language = (java.lang.CharSequence)value$; break;
+    case 5: extension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
+    case 6: modifierExtension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
     case 7: partOf = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
     case 8: status = (java.lang.CharSequence)value$; break;
     case 9: statusReason = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
@@ -220,6 +220,23 @@ static {
     case 22: eventHistory = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
+  }
+
+  /**
+   * Gets the value of the 'instantiates' field.
+   * @return The value of the 'instantiates' field.
+   */
+  public java.util.List<java.lang.CharSequence> getInstantiates() {
+    return instantiates;
+  }
+
+
+  /**
+   * Sets the value of the 'instantiates' field.
+   * @param value the value to set.
+   */
+  public void setInstantiates(java.util.List<java.lang.CharSequence> value) {
+    this.instantiates = value;
   }
 
   /**
@@ -322,23 +339,6 @@ static {
    */
   public void setModifierExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
     this.modifierExtension = value;
-  }
-
-  /**
-   * Gets the value of the 'instantiates' field.
-   * @return The value of the 'instantiates' field.
-   */
-  public java.util.List<java.lang.CharSequence> getInstantiates() {
-    return instantiates;
-  }
-
-
-  /**
-   * Sets the value of the 'instantiates' field.
-   * @param value the value to set.
-   */
-  public void setInstantiates(java.util.List<java.lang.CharSequence> value) {
-    this.instantiates = value;
   }
 
   /**
@@ -654,13 +654,13 @@ static {
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<MedicationAdministration>
     implements org.apache.avro.data.RecordBuilder<MedicationAdministration> {
 
+    private java.util.List<java.lang.CharSequence> instantiates;
     private java.lang.CharSequence resourceType;
     private java.lang.CharSequence id;
     private java.lang.CharSequence implicitRules;
     private java.lang.CharSequence language;
     private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
     private java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension;
-    private java.util.List<java.lang.CharSequence> instantiates;
     private java.util.List<io.carrera.fhir.avro.models.Reference> partOf;
     private java.lang.CharSequence status;
     private java.util.List<io.carrera.fhir.avro.models.CodeableConcept> statusReason;
@@ -696,32 +696,32 @@ static {
      */
     private Builder(io.carrera.fhir.avro.models.MedicationAdministration.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.resourceType)) {
-        this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
+      if (isValidValue(fields()[0], other.instantiates)) {
+        this.instantiates = data().deepCopy(fields()[0].schema(), other.instantiates);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
-      if (isValidValue(fields()[1], other.id)) {
-        this.id = data().deepCopy(fields()[1].schema(), other.id);
+      if (isValidValue(fields()[1], other.resourceType)) {
+        this.resourceType = data().deepCopy(fields()[1].schema(), other.resourceType);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
-      if (isValidValue(fields()[2], other.implicitRules)) {
-        this.implicitRules = data().deepCopy(fields()[2].schema(), other.implicitRules);
+      if (isValidValue(fields()[2], other.id)) {
+        this.id = data().deepCopy(fields()[2].schema(), other.id);
         fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
-      if (isValidValue(fields()[3], other.language)) {
-        this.language = data().deepCopy(fields()[3].schema(), other.language);
+      if (isValidValue(fields()[3], other.implicitRules)) {
+        this.implicitRules = data().deepCopy(fields()[3].schema(), other.implicitRules);
         fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
-      if (isValidValue(fields()[4], other.extension)) {
-        this.extension = data().deepCopy(fields()[4].schema(), other.extension);
+      if (isValidValue(fields()[4], other.language)) {
+        this.language = data().deepCopy(fields()[4].schema(), other.language);
         fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
-      if (isValidValue(fields()[5], other.modifierExtension)) {
-        this.modifierExtension = data().deepCopy(fields()[5].schema(), other.modifierExtension);
+      if (isValidValue(fields()[5], other.extension)) {
+        this.extension = data().deepCopy(fields()[5].schema(), other.extension);
         fieldSetFlags()[5] = other.fieldSetFlags()[5];
       }
-      if (isValidValue(fields()[6], other.instantiates)) {
-        this.instantiates = data().deepCopy(fields()[6].schema(), other.instantiates);
+      if (isValidValue(fields()[6], other.modifierExtension)) {
+        this.modifierExtension = data().deepCopy(fields()[6].schema(), other.modifierExtension);
         fieldSetFlags()[6] = other.fieldSetFlags()[6];
       }
       if (isValidValue(fields()[7], other.partOf)) {
@@ -817,32 +817,32 @@ static {
      */
     private Builder(io.carrera.fhir.avro.models.MedicationAdministration other) {
       super(SCHEMA$);
-      if (isValidValue(fields()[0], other.resourceType)) {
-        this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
+      if (isValidValue(fields()[0], other.instantiates)) {
+        this.instantiates = data().deepCopy(fields()[0].schema(), other.instantiates);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.id)) {
-        this.id = data().deepCopy(fields()[1].schema(), other.id);
+      if (isValidValue(fields()[1], other.resourceType)) {
+        this.resourceType = data().deepCopy(fields()[1].schema(), other.resourceType);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.implicitRules)) {
-        this.implicitRules = data().deepCopy(fields()[2].schema(), other.implicitRules);
+      if (isValidValue(fields()[2], other.id)) {
+        this.id = data().deepCopy(fields()[2].schema(), other.id);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.language)) {
-        this.language = data().deepCopy(fields()[3].schema(), other.language);
+      if (isValidValue(fields()[3], other.implicitRules)) {
+        this.implicitRules = data().deepCopy(fields()[3].schema(), other.implicitRules);
         fieldSetFlags()[3] = true;
       }
-      if (isValidValue(fields()[4], other.extension)) {
-        this.extension = data().deepCopy(fields()[4].schema(), other.extension);
+      if (isValidValue(fields()[4], other.language)) {
+        this.language = data().deepCopy(fields()[4].schema(), other.language);
         fieldSetFlags()[4] = true;
       }
-      if (isValidValue(fields()[5], other.modifierExtension)) {
-        this.modifierExtension = data().deepCopy(fields()[5].schema(), other.modifierExtension);
+      if (isValidValue(fields()[5], other.extension)) {
+        this.extension = data().deepCopy(fields()[5].schema(), other.extension);
         fieldSetFlags()[5] = true;
       }
-      if (isValidValue(fields()[6], other.instantiates)) {
-        this.instantiates = data().deepCopy(fields()[6].schema(), other.instantiates);
+      if (isValidValue(fields()[6], other.modifierExtension)) {
+        this.modifierExtension = data().deepCopy(fields()[6].schema(), other.modifierExtension);
         fieldSetFlags()[6] = true;
       }
       if (isValidValue(fields()[7], other.partOf)) {
@@ -919,6 +919,46 @@ static {
     }
 
     /**
+      * Gets the value of the 'instantiates' field.
+      * @return The value.
+      */
+    public java.util.List<java.lang.CharSequence> getInstantiates() {
+      return instantiates;
+    }
+
+
+    /**
+      * Sets the value of the 'instantiates' field.
+      * @param value The value of 'instantiates'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.MedicationAdministration.Builder setInstantiates(java.util.List<java.lang.CharSequence> value) {
+      validate(fields()[0], value);
+      this.instantiates = value;
+      fieldSetFlags()[0] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'instantiates' field has been set.
+      * @return True if the 'instantiates' field has been set, false otherwise.
+      */
+    public boolean hasInstantiates() {
+      return fieldSetFlags()[0];
+    }
+
+
+    /**
+      * Clears the value of the 'instantiates' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.MedicationAdministration.Builder clearInstantiates() {
+      instantiates = null;
+      fieldSetFlags()[0] = false;
+      return this;
+    }
+
+    /**
       * Gets the value of the 'resourceType' field.
       * @return The value.
       */
@@ -933,9 +973,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.MedicationAdministration.Builder setResourceType(java.lang.CharSequence value) {
-      validate(fields()[0], value);
+      validate(fields()[1], value);
       this.resourceType = value;
-      fieldSetFlags()[0] = true;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
@@ -944,7 +984,7 @@ static {
       * @return True if the 'resourceType' field has been set, false otherwise.
       */
     public boolean hasResourceType() {
-      return fieldSetFlags()[0];
+      return fieldSetFlags()[1];
     }
 
 
@@ -954,7 +994,7 @@ static {
       */
     public io.carrera.fhir.avro.models.MedicationAdministration.Builder clearResourceType() {
       resourceType = null;
-      fieldSetFlags()[0] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -973,9 +1013,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.MedicationAdministration.Builder setId(java.lang.CharSequence value) {
-      validate(fields()[1], value);
+      validate(fields()[2], value);
       this.id = value;
-      fieldSetFlags()[1] = true;
+      fieldSetFlags()[2] = true;
       return this;
     }
 
@@ -984,7 +1024,7 @@ static {
       * @return True if the 'id' field has been set, false otherwise.
       */
     public boolean hasId() {
-      return fieldSetFlags()[1];
+      return fieldSetFlags()[2];
     }
 
 
@@ -994,7 +1034,7 @@ static {
       */
     public io.carrera.fhir.avro.models.MedicationAdministration.Builder clearId() {
       id = null;
-      fieldSetFlags()[1] = false;
+      fieldSetFlags()[2] = false;
       return this;
     }
 
@@ -1013,9 +1053,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.MedicationAdministration.Builder setImplicitRules(java.lang.CharSequence value) {
-      validate(fields()[2], value);
+      validate(fields()[3], value);
       this.implicitRules = value;
-      fieldSetFlags()[2] = true;
+      fieldSetFlags()[3] = true;
       return this;
     }
 
@@ -1024,7 +1064,7 @@ static {
       * @return True if the 'implicitRules' field has been set, false otherwise.
       */
     public boolean hasImplicitRules() {
-      return fieldSetFlags()[2];
+      return fieldSetFlags()[3];
     }
 
 
@@ -1034,7 +1074,7 @@ static {
       */
     public io.carrera.fhir.avro.models.MedicationAdministration.Builder clearImplicitRules() {
       implicitRules = null;
-      fieldSetFlags()[2] = false;
+      fieldSetFlags()[3] = false;
       return this;
     }
 
@@ -1053,9 +1093,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.MedicationAdministration.Builder setLanguage(java.lang.CharSequence value) {
-      validate(fields()[3], value);
+      validate(fields()[4], value);
       this.language = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[4] = true;
       return this;
     }
 
@@ -1064,7 +1104,7 @@ static {
       * @return True if the 'language' field has been set, false otherwise.
       */
     public boolean hasLanguage() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[4];
     }
 
 
@@ -1074,7 +1114,7 @@ static {
       */
     public io.carrera.fhir.avro.models.MedicationAdministration.Builder clearLanguage() {
       language = null;
-      fieldSetFlags()[3] = false;
+      fieldSetFlags()[4] = false;
       return this;
     }
 
@@ -1093,9 +1133,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.MedicationAdministration.Builder setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-      validate(fields()[4], value);
+      validate(fields()[5], value);
       this.extension = value;
-      fieldSetFlags()[4] = true;
+      fieldSetFlags()[5] = true;
       return this;
     }
 
@@ -1104,7 +1144,7 @@ static {
       * @return True if the 'extension' field has been set, false otherwise.
       */
     public boolean hasExtension() {
-      return fieldSetFlags()[4];
+      return fieldSetFlags()[5];
     }
 
 
@@ -1114,7 +1154,7 @@ static {
       */
     public io.carrera.fhir.avro.models.MedicationAdministration.Builder clearExtension() {
       extension = null;
-      fieldSetFlags()[4] = false;
+      fieldSetFlags()[5] = false;
       return this;
     }
 
@@ -1133,9 +1173,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.MedicationAdministration.Builder setModifierExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-      validate(fields()[5], value);
+      validate(fields()[6], value);
       this.modifierExtension = value;
-      fieldSetFlags()[5] = true;
+      fieldSetFlags()[6] = true;
       return this;
     }
 
@@ -1144,7 +1184,7 @@ static {
       * @return True if the 'modifierExtension' field has been set, false otherwise.
       */
     public boolean hasModifierExtension() {
-      return fieldSetFlags()[5];
+      return fieldSetFlags()[6];
     }
 
 
@@ -1154,46 +1194,6 @@ static {
       */
     public io.carrera.fhir.avro.models.MedicationAdministration.Builder clearModifierExtension() {
       modifierExtension = null;
-      fieldSetFlags()[5] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'instantiates' field.
-      * @return The value.
-      */
-    public java.util.List<java.lang.CharSequence> getInstantiates() {
-      return instantiates;
-    }
-
-
-    /**
-      * Sets the value of the 'instantiates' field.
-      * @param value The value of 'instantiates'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.MedicationAdministration.Builder setInstantiates(java.util.List<java.lang.CharSequence> value) {
-      validate(fields()[6], value);
-      this.instantiates = value;
-      fieldSetFlags()[6] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'instantiates' field has been set.
-      * @return True if the 'instantiates' field has been set, false otherwise.
-      */
-    public boolean hasInstantiates() {
-      return fieldSetFlags()[6];
-    }
-
-
-    /**
-      * Clears the value of the 'instantiates' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.MedicationAdministration.Builder clearInstantiates() {
-      instantiates = null;
       fieldSetFlags()[6] = false;
       return this;
     }
@@ -2095,13 +2095,13 @@ static {
     public MedicationAdministration build() {
       try {
         MedicationAdministration record = new MedicationAdministration();
-        record.resourceType = fieldSetFlags()[0] ? this.resourceType : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.id = fieldSetFlags()[1] ? this.id : (java.lang.CharSequence) defaultValue(fields()[1]);
-        record.implicitRules = fieldSetFlags()[2] ? this.implicitRules : (java.lang.CharSequence) defaultValue(fields()[2]);
-        record.language = fieldSetFlags()[3] ? this.language : (java.lang.CharSequence) defaultValue(fields()[3]);
-        record.extension = fieldSetFlags()[4] ? this.extension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[4]);
-        record.modifierExtension = fieldSetFlags()[5] ? this.modifierExtension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[5]);
-        record.instantiates = fieldSetFlags()[6] ? this.instantiates : (java.util.List<java.lang.CharSequence>) defaultValue(fields()[6]);
+        record.instantiates = fieldSetFlags()[0] ? this.instantiates : (java.util.List<java.lang.CharSequence>) defaultValue(fields()[0]);
+        record.resourceType = fieldSetFlags()[1] ? this.resourceType : (java.lang.CharSequence) defaultValue(fields()[1]);
+        record.id = fieldSetFlags()[2] ? this.id : (java.lang.CharSequence) defaultValue(fields()[2]);
+        record.implicitRules = fieldSetFlags()[3] ? this.implicitRules : (java.lang.CharSequence) defaultValue(fields()[3]);
+        record.language = fieldSetFlags()[4] ? this.language : (java.lang.CharSequence) defaultValue(fields()[4]);
+        record.extension = fieldSetFlags()[5] ? this.extension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[5]);
+        record.modifierExtension = fieldSetFlags()[6] ? this.modifierExtension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[6]);
         record.partOf = fieldSetFlags()[7] ? this.partOf : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[7]);
         record.status = fieldSetFlags()[8] ? this.status : (java.lang.CharSequence) defaultValue(fields()[8]);
         record.statusReason = fieldSetFlags()[9] ? this.statusReason : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[9]);

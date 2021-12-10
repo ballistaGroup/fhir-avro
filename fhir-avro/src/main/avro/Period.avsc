@@ -4,12 +4,13 @@
   "fields" : [ {
     "name" : "start",
     "type" : [ "null",
-    "io.carrera.fhir.avro.models.DateTime" ],
+      "io.carrera.fhir.avro.models.DateTime"
+    ],
     "default": null
   }, {
     "name" : "end",
     "type" : [ "null",
-    "io.carrera.fhir.avro.models.DateTime"
+      "io.carrera.fhir.avro.models.DateTime"
     ],
     "default": null
   } ],

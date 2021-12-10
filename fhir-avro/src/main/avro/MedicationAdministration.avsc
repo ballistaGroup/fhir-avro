@@ -2,6 +2,26 @@
   "name": "MedicationAdministration",
   "type": "record",
   "fields": [
+    // {
+    //   "name": "identifier",
+    //   "type": [
+    //     "null",
+    //     {
+    //       "type": "array",
+    //       "items": "Identifier"
+    //     }
+    //   ]
+    // },
+    {
+      "name": "instantiates",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "string"
+        }
+      ]
+    },
     {
       "name": "resourceType",
       "type": "string"
@@ -68,26 +88,6 @@
         {
           "type": "array",
           "items": "Extension"
-        }
-      ]
-    },
-    // {
-    //   "name": "identifier",
-    //   "type": [
-    //     "null",
-    //     {
-    //       "type": "array",
-    //       "items": "Identifier"
-    //     }
-    //   ]
-    // },
-    {
-      "name": "instantiates",
-      "type": [
-        "null",
-        {
-          "type": "array",
-          "items": "string"
         }
       ]
     },

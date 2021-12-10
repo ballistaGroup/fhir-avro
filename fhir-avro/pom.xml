@@ -44,6 +44,7 @@
             <import>${project.basedir}/src/main/avro/Period.avsc</import>
             <import>${project.basedir}/src/main/avro/Decimal.avsc</import>
             <import>${project.basedir}/src/main/avro/Quantity.avsc</import>
+            <import>${project.basedir}/src/main/avro/Range.avsc</import>
             <import>${project.basedir}/src/main/avro/Coding.avsc</import>
             <import>${project.basedir}/src/main/avro/Extension.avsc</import>
             <import>${project.basedir}/src/main/avro/CodeableConcept.avsc</import>
@@ -62,7 +63,6 @@
             <import>${project.basedir}/src/main/avro/AllergyIntolerance_Reaction.avsc</import>
             <import>${project.basedir}/src/main/avro/AllergyIntolerance.avsc</import>
             <import>${project.basedir}/src/main/avro/Observation.avsc</import>
-            <import>${project.basedir}/src/main/avro/Range.avsc</import>
             <import>${project.basedir}/src/main/avro/Ratio.avsc</import>
             <import>${project.basedir}/src/main/avro/Goal_Target.avsc</import>
             <import>${project.basedir}/src/main/avro/Goal.avsc</import>
