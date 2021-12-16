@@ -41,7 +41,6 @@
             <import>${project.basedir}/src/main/avro/XsYearMonth.avsc</import>
             <import>${project.basedir}/src/main/avro/Instant.avsc</import>
             <import>${project.basedir}/src/main/avro/DateTime.avsc</import>
-            <import>${project.basedir}/src/main/avro/Period.avsc</import>
             <import>${project.basedir}/src/main/avro/Decimal.avsc</import>
             <import>${project.basedir}/src/main/avro/Quantity.avsc</import>
             <import>${project.basedir}/src/main/avro/Coding.avsc</import>
@@ -78,7 +77,6 @@
             <import>${project.basedir}/src/main/avro/Encounter.avsc</import>
             <import>${project.basedir}/src/main/avro/ClaimResponse.avsc</import>
             <import>${project.basedir}/src/main/avro/Immunization.avsc</import>
-            <import>${project.basedir}/src/main/avro/Reference.avsc</import>
         </imports>
       </configuration>
     </execution>

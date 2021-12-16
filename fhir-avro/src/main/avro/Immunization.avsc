@@ -33,16 +33,10 @@
             "type": "Reference"
         },
         {
-            "name": "occurrenceDateTime",
-            "type" : "io.carrera.fhir.avro.models.DateTime",
-            "default": null
-        },
-        {
-            "name": "occurrenceString",
-            "type" : "string",
-            "default": null
-        },
-        {
+            "name" : "occurrence",
+            "type" : ["io.carrera.fhir.avro.models.DateTime", "string"]
+          },
+              {
             "name": "doseNumberPositiveInt",
             "type" : "int"
         },
