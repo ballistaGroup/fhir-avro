@@ -57,7 +57,14 @@
         {
             "name": "outcome",
             "type": "string"
+        },
+        {
+            "name" : "insurance",
+            "type" : [ "null", {
+              "type" : "array",
+              "items" : "ExplanationOfBenefit_Insurance"
+            } ],
+            "default": null
         }
-        //insurance
     ]
 }

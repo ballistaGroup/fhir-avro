@@ -23,7 +23,14 @@
         {
             "name": "status",
             "type": "string"
+        },
+        {
+            "name" : "content",
+            "type" : [ "null", {
+              "type" : "array",
+              "items" : "DocumentReference_Content"
+            } ],
+            "default": null
         }
-        //content
     ]
 }

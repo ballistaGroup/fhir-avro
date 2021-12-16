@@ -25,7 +25,14 @@
             "name": "recorded",
             "type" : ["null", "io.carrera.fhir.avro.models.Instant"],
             "default": null
+        },
+        {
+            "name" : "agent",
+            "type" : [ "null", {
+              "type" : "array",
+              "items" : "Provenance_Agent"
+            } ],
+            "default": null
         }
-        //agent
     ]
 }
