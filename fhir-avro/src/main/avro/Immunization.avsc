@@ -39,7 +39,7 @@
         },
         {
             "name": "occurrenceString",
-            "type" : ["null", "string"],
+            "type" : "string",
             "default": null
         },
         {
