@@ -39,8 +39,22 @@
     },
     {
       "name": "onsetDateTime",
-      "type": ["null", "int"],
-      "logicalType": "date",
+      "type" : "io.carrera.fhir.avro.models.DateTime",
+      "default": null
+    },
+    {
+      "name": "onsetPeriod",
+      "type" : ["null", "Period"],
+      "default": null
+    },
+    {
+      "name": "onsetRange",
+      "type" : ["null", "Range"],
+      "default": null
+    },
+    {
+      "name": "onsetString",
+      "type" : ["null", "string"],
       "default": null
     },
     {
@@ -52,6 +66,21 @@
       "name": "abatementDateTime",
       "type": ["null","DateTime"],
       "default" : null
+    },
+    {
+      "name": "abatementPeriod",
+      "type" : ["null", "Period"],
+      "default": null
+    },
+    {
+      "name": "abatementRange",
+      "type" : ["null", "Range"],
+      "default": null
+    },
+    {
+      "name": "abatementString",
+      "type" : ["null", "string"],
+      "default": null
     }
   ]
 }

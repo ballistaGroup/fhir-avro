@@ -22,6 +22,7 @@ public class Condition extends org.apache.avro.specific.SpecificRecordBase imple
 static {
     MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.DateConversion());
     MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.TimestampMillisConversion());
+    MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.LocalTimestampMicrosConversion());
   }
 
   private static final BinaryMessageEncoder<Condition> ENCODER =
@@ -81,9 +82,15 @@ static {
    private io.carrera.fhir.avro.models.CodeableConcept verificationStatus;
    private io.carrera.fhir.avro.models.Reference subject;
    private java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage;
-   private java.lang.Integer onsetDateTime;
+   private java.lang.Object onsetDateTime;
+   private io.carrera.fhir.avro.models.Period onsetPeriod;
+   private io.carrera.fhir.avro.models.Range onsetRange;
+   private java.lang.CharSequence onsetString;
    private io.carrera.fhir.avro.models.CodeableConcept code;
    private io.carrera.fhir.avro.models.DateTime abatementDateTime;
+   private io.carrera.fhir.avro.models.Period abatementPeriod;
+   private io.carrera.fhir.avro.models.Range abatementRange;
+   private java.lang.CharSequence abatementString;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -101,10 +108,16 @@ static {
    * @param subject The new value for subject
    * @param stage The new value for stage
    * @param onsetDateTime The new value for onsetDateTime
+   * @param onsetPeriod The new value for onsetPeriod
+   * @param onsetRange The new value for onsetRange
+   * @param onsetString The new value for onsetString
    * @param code The new value for code
    * @param abatementDateTime The new value for abatementDateTime
+   * @param abatementPeriod The new value for abatementPeriod
+   * @param abatementRange The new value for abatementRange
+   * @param abatementString The new value for abatementString
    */
-  public Condition(java.lang.CharSequence resourceType, java.lang.CharSequence id, io.carrera.fhir.avro.models.CodeableConcept clinicalStatus, io.carrera.fhir.avro.models.CodeableConcept verificationStatus, io.carrera.fhir.avro.models.Reference subject, java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage, java.lang.Integer onsetDateTime, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.DateTime abatementDateTime) {
+  public Condition(java.lang.CharSequence resourceType, java.lang.CharSequence id, io.carrera.fhir.avro.models.CodeableConcept clinicalStatus, io.carrera.fhir.avro.models.CodeableConcept verificationStatus, io.carrera.fhir.avro.models.Reference subject, java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage, java.lang.Object onsetDateTime, io.carrera.fhir.avro.models.Period onsetPeriod, io.carrera.fhir.avro.models.Range onsetRange, java.lang.CharSequence onsetString, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.DateTime abatementDateTime, io.carrera.fhir.avro.models.Period abatementPeriod, io.carrera.fhir.avro.models.Range abatementRange, java.lang.CharSequence abatementString) {
     this.resourceType = resourceType;
     this.id = id;
     this.clinicalStatus = clinicalStatus;
@@ -112,8 +125,14 @@ static {
     this.subject = subject;
     this.stage = stage;
     this.onsetDateTime = onsetDateTime;
+    this.onsetPeriod = onsetPeriod;
+    this.onsetRange = onsetRange;
+    this.onsetString = onsetString;
     this.code = code;
     this.abatementDateTime = abatementDateTime;
+    this.abatementPeriod = abatementPeriod;
+    this.abatementRange = abatementRange;
+    this.abatementString = abatementString;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -128,8 +147,14 @@ static {
     case 4: return subject;
     case 5: return stage;
     case 6: return onsetDateTime;
-    case 7: return code;
-    case 8: return abatementDateTime;
+    case 7: return onsetPeriod;
+    case 8: return onsetRange;
+    case 9: return onsetString;
+    case 10: return code;
+    case 11: return abatementDateTime;
+    case 12: return abatementPeriod;
+    case 13: return abatementRange;
+    case 14: return abatementString;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -144,9 +169,15 @@ static {
     case 3: verificationStatus = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     case 4: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 5: stage = (java.util.List<io.carrera.fhir.avro.models.Condition_Stage>)value$; break;
-    case 6: onsetDateTime = (java.lang.Integer)value$; break;
-    case 7: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 8: abatementDateTime = (io.carrera.fhir.avro.models.DateTime)value$; break;
+    case 6: onsetDateTime = value$; break;
+    case 7: onsetPeriod = (io.carrera.fhir.avro.models.Period)value$; break;
+    case 8: onsetRange = (io.carrera.fhir.avro.models.Range)value$; break;
+    case 9: onsetString = (java.lang.CharSequence)value$; break;
+    case 10: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 11: abatementDateTime = (io.carrera.fhir.avro.models.DateTime)value$; break;
+    case 12: abatementPeriod = (io.carrera.fhir.avro.models.Period)value$; break;
+    case 13: abatementRange = (io.carrera.fhir.avro.models.Range)value$; break;
+    case 14: abatementString = (java.lang.CharSequence)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -257,7 +288,7 @@ static {
    * Gets the value of the 'onsetDateTime' field.
    * @return The value of the 'onsetDateTime' field.
    */
-  public java.lang.Integer getOnsetDateTime() {
+  public java.lang.Object getOnsetDateTime() {
     return onsetDateTime;
   }
 
@@ -266,8 +297,59 @@ static {
    * Sets the value of the 'onsetDateTime' field.
    * @param value the value to set.
    */
-  public void setOnsetDateTime(java.lang.Integer value) {
+  public void setOnsetDateTime(java.lang.Object value) {
     this.onsetDateTime = value;
+  }
+
+  /**
+   * Gets the value of the 'onsetPeriod' field.
+   * @return The value of the 'onsetPeriod' field.
+   */
+  public io.carrera.fhir.avro.models.Period getOnsetPeriod() {
+    return onsetPeriod;
+  }
+
+
+  /**
+   * Sets the value of the 'onsetPeriod' field.
+   * @param value the value to set.
+   */
+  public void setOnsetPeriod(io.carrera.fhir.avro.models.Period value) {
+    this.onsetPeriod = value;
+  }
+
+  /**
+   * Gets the value of the 'onsetRange' field.
+   * @return The value of the 'onsetRange' field.
+   */
+  public io.carrera.fhir.avro.models.Range getOnsetRange() {
+    return onsetRange;
+  }
+
+
+  /**
+   * Sets the value of the 'onsetRange' field.
+   * @param value the value to set.
+   */
+  public void setOnsetRange(io.carrera.fhir.avro.models.Range value) {
+    this.onsetRange = value;
+  }
+
+  /**
+   * Gets the value of the 'onsetString' field.
+   * @return The value of the 'onsetString' field.
+   */
+  public java.lang.CharSequence getOnsetString() {
+    return onsetString;
+  }
+
+
+  /**
+   * Sets the value of the 'onsetString' field.
+   * @param value the value to set.
+   */
+  public void setOnsetString(java.lang.CharSequence value) {
+    this.onsetString = value;
   }
 
   /**
@@ -302,6 +384,57 @@ static {
    */
   public void setAbatementDateTime(io.carrera.fhir.avro.models.DateTime value) {
     this.abatementDateTime = value;
+  }
+
+  /**
+   * Gets the value of the 'abatementPeriod' field.
+   * @return The value of the 'abatementPeriod' field.
+   */
+  public io.carrera.fhir.avro.models.Period getAbatementPeriod() {
+    return abatementPeriod;
+  }
+
+
+  /**
+   * Sets the value of the 'abatementPeriod' field.
+   * @param value the value to set.
+   */
+  public void setAbatementPeriod(io.carrera.fhir.avro.models.Period value) {
+    this.abatementPeriod = value;
+  }
+
+  /**
+   * Gets the value of the 'abatementRange' field.
+   * @return The value of the 'abatementRange' field.
+   */
+  public io.carrera.fhir.avro.models.Range getAbatementRange() {
+    return abatementRange;
+  }
+
+
+  /**
+   * Sets the value of the 'abatementRange' field.
+   * @param value the value to set.
+   */
+  public void setAbatementRange(io.carrera.fhir.avro.models.Range value) {
+    this.abatementRange = value;
+  }
+
+  /**
+   * Gets the value of the 'abatementString' field.
+   * @return The value of the 'abatementString' field.
+   */
+  public java.lang.CharSequence getAbatementString() {
+    return abatementString;
+  }
+
+
+  /**
+   * Sets the value of the 'abatementString' field.
+   * @param value the value to set.
+   */
+  public void setAbatementString(java.lang.CharSequence value) {
+    this.abatementString = value;
   }
 
   /**
@@ -354,11 +487,21 @@ static {
     private io.carrera.fhir.avro.models.Reference subject;
     private io.carrera.fhir.avro.models.Reference.Builder subjectBuilder;
     private java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage;
-    private java.lang.Integer onsetDateTime;
+    private java.lang.Object onsetDateTime;
+    private io.carrera.fhir.avro.models.Period onsetPeriod;
+    private io.carrera.fhir.avro.models.Period.Builder onsetPeriodBuilder;
+    private io.carrera.fhir.avro.models.Range onsetRange;
+    private io.carrera.fhir.avro.models.Range.Builder onsetRangeBuilder;
+    private java.lang.CharSequence onsetString;
     private io.carrera.fhir.avro.models.CodeableConcept code;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder codeBuilder;
     private io.carrera.fhir.avro.models.DateTime abatementDateTime;
     private io.carrera.fhir.avro.models.DateTime.Builder abatementDateTimeBuilder;
+    private io.carrera.fhir.avro.models.Period abatementPeriod;
+    private io.carrera.fhir.avro.models.Period.Builder abatementPeriodBuilder;
+    private io.carrera.fhir.avro.models.Range abatementRange;
+    private io.carrera.fhir.avro.models.Range.Builder abatementRangeBuilder;
+    private java.lang.CharSequence abatementString;
 
     /** Creates a new Builder */
     private Builder() {
@@ -408,19 +551,55 @@ static {
         this.onsetDateTime = data().deepCopy(fields()[6].schema(), other.onsetDateTime);
         fieldSetFlags()[6] = other.fieldSetFlags()[6];
       }
-      if (isValidValue(fields()[7], other.code)) {
-        this.code = data().deepCopy(fields()[7].schema(), other.code);
+      if (isValidValue(fields()[7], other.onsetPeriod)) {
+        this.onsetPeriod = data().deepCopy(fields()[7].schema(), other.onsetPeriod);
         fieldSetFlags()[7] = other.fieldSetFlags()[7];
+      }
+      if (other.hasOnsetPeriodBuilder()) {
+        this.onsetPeriodBuilder = io.carrera.fhir.avro.models.Period.newBuilder(other.getOnsetPeriodBuilder());
+      }
+      if (isValidValue(fields()[8], other.onsetRange)) {
+        this.onsetRange = data().deepCopy(fields()[8].schema(), other.onsetRange);
+        fieldSetFlags()[8] = other.fieldSetFlags()[8];
+      }
+      if (other.hasOnsetRangeBuilder()) {
+        this.onsetRangeBuilder = io.carrera.fhir.avro.models.Range.newBuilder(other.getOnsetRangeBuilder());
+      }
+      if (isValidValue(fields()[9], other.onsetString)) {
+        this.onsetString = data().deepCopy(fields()[9].schema(), other.onsetString);
+        fieldSetFlags()[9] = other.fieldSetFlags()[9];
+      }
+      if (isValidValue(fields()[10], other.code)) {
+        this.code = data().deepCopy(fields()[10].schema(), other.code);
+        fieldSetFlags()[10] = other.fieldSetFlags()[10];
       }
       if (other.hasCodeBuilder()) {
         this.codeBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getCodeBuilder());
       }
-      if (isValidValue(fields()[8], other.abatementDateTime)) {
-        this.abatementDateTime = data().deepCopy(fields()[8].schema(), other.abatementDateTime);
-        fieldSetFlags()[8] = other.fieldSetFlags()[8];
+      if (isValidValue(fields()[11], other.abatementDateTime)) {
+        this.abatementDateTime = data().deepCopy(fields()[11].schema(), other.abatementDateTime);
+        fieldSetFlags()[11] = other.fieldSetFlags()[11];
       }
       if (other.hasAbatementDateTimeBuilder()) {
         this.abatementDateTimeBuilder = io.carrera.fhir.avro.models.DateTime.newBuilder(other.getAbatementDateTimeBuilder());
+      }
+      if (isValidValue(fields()[12], other.abatementPeriod)) {
+        this.abatementPeriod = data().deepCopy(fields()[12].schema(), other.abatementPeriod);
+        fieldSetFlags()[12] = other.fieldSetFlags()[12];
+      }
+      if (other.hasAbatementPeriodBuilder()) {
+        this.abatementPeriodBuilder = io.carrera.fhir.avro.models.Period.newBuilder(other.getAbatementPeriodBuilder());
+      }
+      if (isValidValue(fields()[13], other.abatementRange)) {
+        this.abatementRange = data().deepCopy(fields()[13].schema(), other.abatementRange);
+        fieldSetFlags()[13] = other.fieldSetFlags()[13];
+      }
+      if (other.hasAbatementRangeBuilder()) {
+        this.abatementRangeBuilder = io.carrera.fhir.avro.models.Range.newBuilder(other.getAbatementRangeBuilder());
+      }
+      if (isValidValue(fields()[14], other.abatementString)) {
+        this.abatementString = data().deepCopy(fields()[14].schema(), other.abatementString);
+        fieldSetFlags()[14] = other.fieldSetFlags()[14];
       }
     }
 
@@ -461,16 +640,44 @@ static {
         this.onsetDateTime = data().deepCopy(fields()[6].schema(), other.onsetDateTime);
         fieldSetFlags()[6] = true;
       }
-      if (isValidValue(fields()[7], other.code)) {
-        this.code = data().deepCopy(fields()[7].schema(), other.code);
+      if (isValidValue(fields()[7], other.onsetPeriod)) {
+        this.onsetPeriod = data().deepCopy(fields()[7].schema(), other.onsetPeriod);
         fieldSetFlags()[7] = true;
       }
-      this.codeBuilder = null;
-      if (isValidValue(fields()[8], other.abatementDateTime)) {
-        this.abatementDateTime = data().deepCopy(fields()[8].schema(), other.abatementDateTime);
+      this.onsetPeriodBuilder = null;
+      if (isValidValue(fields()[8], other.onsetRange)) {
+        this.onsetRange = data().deepCopy(fields()[8].schema(), other.onsetRange);
         fieldSetFlags()[8] = true;
       }
+      this.onsetRangeBuilder = null;
+      if (isValidValue(fields()[9], other.onsetString)) {
+        this.onsetString = data().deepCopy(fields()[9].schema(), other.onsetString);
+        fieldSetFlags()[9] = true;
+      }
+      if (isValidValue(fields()[10], other.code)) {
+        this.code = data().deepCopy(fields()[10].schema(), other.code);
+        fieldSetFlags()[10] = true;
+      }
+      this.codeBuilder = null;
+      if (isValidValue(fields()[11], other.abatementDateTime)) {
+        this.abatementDateTime = data().deepCopy(fields()[11].schema(), other.abatementDateTime);
+        fieldSetFlags()[11] = true;
+      }
       this.abatementDateTimeBuilder = null;
+      if (isValidValue(fields()[12], other.abatementPeriod)) {
+        this.abatementPeriod = data().deepCopy(fields()[12].schema(), other.abatementPeriod);
+        fieldSetFlags()[12] = true;
+      }
+      this.abatementPeriodBuilder = null;
+      if (isValidValue(fields()[13], other.abatementRange)) {
+        this.abatementRange = data().deepCopy(fields()[13].schema(), other.abatementRange);
+        fieldSetFlags()[13] = true;
+      }
+      this.abatementRangeBuilder = null;
+      if (isValidValue(fields()[14], other.abatementString)) {
+        this.abatementString = data().deepCopy(fields()[14].schema(), other.abatementString);
+        fieldSetFlags()[14] = true;
+      }
     }
 
     /**
@@ -825,7 +1032,7 @@ static {
       * Gets the value of the 'onsetDateTime' field.
       * @return The value.
       */
-    public java.lang.Integer getOnsetDateTime() {
+    public java.lang.Object getOnsetDateTime() {
       return onsetDateTime;
     }
 
@@ -835,7 +1042,7 @@ static {
       * @param value The value of 'onsetDateTime'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Condition.Builder setOnsetDateTime(java.lang.Integer value) {
+    public io.carrera.fhir.avro.models.Condition.Builder setOnsetDateTime(java.lang.Object value) {
       validate(fields()[6], value);
       this.onsetDateTime = value;
       fieldSetFlags()[6] = true;
@@ -862,6 +1069,198 @@ static {
     }
 
     /**
+      * Gets the value of the 'onsetPeriod' field.
+      * @return The value.
+      */
+    public io.carrera.fhir.avro.models.Period getOnsetPeriod() {
+      return onsetPeriod;
+    }
+
+
+    /**
+      * Sets the value of the 'onsetPeriod' field.
+      * @param value The value of 'onsetPeriod'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Condition.Builder setOnsetPeriod(io.carrera.fhir.avro.models.Period value) {
+      validate(fields()[7], value);
+      this.onsetPeriodBuilder = null;
+      this.onsetPeriod = value;
+      fieldSetFlags()[7] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'onsetPeriod' field has been set.
+      * @return True if the 'onsetPeriod' field has been set, false otherwise.
+      */
+    public boolean hasOnsetPeriod() {
+      return fieldSetFlags()[7];
+    }
+
+    /**
+     * Gets the Builder instance for the 'onsetPeriod' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.Period.Builder getOnsetPeriodBuilder() {
+      if (onsetPeriodBuilder == null) {
+        if (hasOnsetPeriod()) {
+          setOnsetPeriodBuilder(io.carrera.fhir.avro.models.Period.newBuilder(onsetPeriod));
+        } else {
+          setOnsetPeriodBuilder(io.carrera.fhir.avro.models.Period.newBuilder());
+        }
+      }
+      return onsetPeriodBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'onsetPeriod' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+
+    public io.carrera.fhir.avro.models.Condition.Builder setOnsetPeriodBuilder(io.carrera.fhir.avro.models.Period.Builder value) {
+      clearOnsetPeriod();
+      onsetPeriodBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'onsetPeriod' field has an active Builder instance
+     * @return True if the 'onsetPeriod' field has an active Builder instance
+     */
+    public boolean hasOnsetPeriodBuilder() {
+      return onsetPeriodBuilder != null;
+    }
+
+    /**
+      * Clears the value of the 'onsetPeriod' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Condition.Builder clearOnsetPeriod() {
+      onsetPeriod = null;
+      onsetPeriodBuilder = null;
+      fieldSetFlags()[7] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'onsetRange' field.
+      * @return The value.
+      */
+    public io.carrera.fhir.avro.models.Range getOnsetRange() {
+      return onsetRange;
+    }
+
+
+    /**
+      * Sets the value of the 'onsetRange' field.
+      * @param value The value of 'onsetRange'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Condition.Builder setOnsetRange(io.carrera.fhir.avro.models.Range value) {
+      validate(fields()[8], value);
+      this.onsetRangeBuilder = null;
+      this.onsetRange = value;
+      fieldSetFlags()[8] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'onsetRange' field has been set.
+      * @return True if the 'onsetRange' field has been set, false otherwise.
+      */
+    public boolean hasOnsetRange() {
+      return fieldSetFlags()[8];
+    }
+
+    /**
+     * Gets the Builder instance for the 'onsetRange' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.Range.Builder getOnsetRangeBuilder() {
+      if (onsetRangeBuilder == null) {
+        if (hasOnsetRange()) {
+          setOnsetRangeBuilder(io.carrera.fhir.avro.models.Range.newBuilder(onsetRange));
+        } else {
+          setOnsetRangeBuilder(io.carrera.fhir.avro.models.Range.newBuilder());
+        }
+      }
+      return onsetRangeBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'onsetRange' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+
+    public io.carrera.fhir.avro.models.Condition.Builder setOnsetRangeBuilder(io.carrera.fhir.avro.models.Range.Builder value) {
+      clearOnsetRange();
+      onsetRangeBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'onsetRange' field has an active Builder instance
+     * @return True if the 'onsetRange' field has an active Builder instance
+     */
+    public boolean hasOnsetRangeBuilder() {
+      return onsetRangeBuilder != null;
+    }
+
+    /**
+      * Clears the value of the 'onsetRange' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Condition.Builder clearOnsetRange() {
+      onsetRange = null;
+      onsetRangeBuilder = null;
+      fieldSetFlags()[8] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'onsetString' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getOnsetString() {
+      return onsetString;
+    }
+
+
+    /**
+      * Sets the value of the 'onsetString' field.
+      * @param value The value of 'onsetString'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Condition.Builder setOnsetString(java.lang.CharSequence value) {
+      validate(fields()[9], value);
+      this.onsetString = value;
+      fieldSetFlags()[9] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'onsetString' field has been set.
+      * @return True if the 'onsetString' field has been set, false otherwise.
+      */
+    public boolean hasOnsetString() {
+      return fieldSetFlags()[9];
+    }
+
+
+    /**
+      * Clears the value of the 'onsetString' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Condition.Builder clearOnsetString() {
+      onsetString = null;
+      fieldSetFlags()[9] = false;
+      return this;
+    }
+
+    /**
       * Gets the value of the 'code' field.
       * @return The value.
       */
@@ -876,10 +1275,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Condition.Builder setCode(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[7], value);
+      validate(fields()[10], value);
       this.codeBuilder = null;
       this.code = value;
-      fieldSetFlags()[7] = true;
+      fieldSetFlags()[10] = true;
       return this;
     }
 
@@ -888,7 +1287,7 @@ static {
       * @return True if the 'code' field has been set, false otherwise.
       */
     public boolean hasCode() {
-      return fieldSetFlags()[7];
+      return fieldSetFlags()[10];
     }
 
     /**
@@ -933,7 +1332,7 @@ static {
     public io.carrera.fhir.avro.models.Condition.Builder clearCode() {
       code = null;
       codeBuilder = null;
-      fieldSetFlags()[7] = false;
+      fieldSetFlags()[10] = false;
       return this;
     }
 
@@ -952,10 +1351,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Condition.Builder setAbatementDateTime(io.carrera.fhir.avro.models.DateTime value) {
-      validate(fields()[8], value);
+      validate(fields()[11], value);
       this.abatementDateTimeBuilder = null;
       this.abatementDateTime = value;
-      fieldSetFlags()[8] = true;
+      fieldSetFlags()[11] = true;
       return this;
     }
 
@@ -964,7 +1363,7 @@ static {
       * @return True if the 'abatementDateTime' field has been set, false otherwise.
       */
     public boolean hasAbatementDateTime() {
-      return fieldSetFlags()[8];
+      return fieldSetFlags()[11];
     }
 
     /**
@@ -1009,7 +1408,199 @@ static {
     public io.carrera.fhir.avro.models.Condition.Builder clearAbatementDateTime() {
       abatementDateTime = null;
       abatementDateTimeBuilder = null;
-      fieldSetFlags()[8] = false;
+      fieldSetFlags()[11] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'abatementPeriod' field.
+      * @return The value.
+      */
+    public io.carrera.fhir.avro.models.Period getAbatementPeriod() {
+      return abatementPeriod;
+    }
+
+
+    /**
+      * Sets the value of the 'abatementPeriod' field.
+      * @param value The value of 'abatementPeriod'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Condition.Builder setAbatementPeriod(io.carrera.fhir.avro.models.Period value) {
+      validate(fields()[12], value);
+      this.abatementPeriodBuilder = null;
+      this.abatementPeriod = value;
+      fieldSetFlags()[12] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'abatementPeriod' field has been set.
+      * @return True if the 'abatementPeriod' field has been set, false otherwise.
+      */
+    public boolean hasAbatementPeriod() {
+      return fieldSetFlags()[12];
+    }
+
+    /**
+     * Gets the Builder instance for the 'abatementPeriod' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.Period.Builder getAbatementPeriodBuilder() {
+      if (abatementPeriodBuilder == null) {
+        if (hasAbatementPeriod()) {
+          setAbatementPeriodBuilder(io.carrera.fhir.avro.models.Period.newBuilder(abatementPeriod));
+        } else {
+          setAbatementPeriodBuilder(io.carrera.fhir.avro.models.Period.newBuilder());
+        }
+      }
+      return abatementPeriodBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'abatementPeriod' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+
+    public io.carrera.fhir.avro.models.Condition.Builder setAbatementPeriodBuilder(io.carrera.fhir.avro.models.Period.Builder value) {
+      clearAbatementPeriod();
+      abatementPeriodBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'abatementPeriod' field has an active Builder instance
+     * @return True if the 'abatementPeriod' field has an active Builder instance
+     */
+    public boolean hasAbatementPeriodBuilder() {
+      return abatementPeriodBuilder != null;
+    }
+
+    /**
+      * Clears the value of the 'abatementPeriod' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Condition.Builder clearAbatementPeriod() {
+      abatementPeriod = null;
+      abatementPeriodBuilder = null;
+      fieldSetFlags()[12] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'abatementRange' field.
+      * @return The value.
+      */
+    public io.carrera.fhir.avro.models.Range getAbatementRange() {
+      return abatementRange;
+    }
+
+
+    /**
+      * Sets the value of the 'abatementRange' field.
+      * @param value The value of 'abatementRange'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Condition.Builder setAbatementRange(io.carrera.fhir.avro.models.Range value) {
+      validate(fields()[13], value);
+      this.abatementRangeBuilder = null;
+      this.abatementRange = value;
+      fieldSetFlags()[13] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'abatementRange' field has been set.
+      * @return True if the 'abatementRange' field has been set, false otherwise.
+      */
+    public boolean hasAbatementRange() {
+      return fieldSetFlags()[13];
+    }
+
+    /**
+     * Gets the Builder instance for the 'abatementRange' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.Range.Builder getAbatementRangeBuilder() {
+      if (abatementRangeBuilder == null) {
+        if (hasAbatementRange()) {
+          setAbatementRangeBuilder(io.carrera.fhir.avro.models.Range.newBuilder(abatementRange));
+        } else {
+          setAbatementRangeBuilder(io.carrera.fhir.avro.models.Range.newBuilder());
+        }
+      }
+      return abatementRangeBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'abatementRange' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+
+    public io.carrera.fhir.avro.models.Condition.Builder setAbatementRangeBuilder(io.carrera.fhir.avro.models.Range.Builder value) {
+      clearAbatementRange();
+      abatementRangeBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'abatementRange' field has an active Builder instance
+     * @return True if the 'abatementRange' field has an active Builder instance
+     */
+    public boolean hasAbatementRangeBuilder() {
+      return abatementRangeBuilder != null;
+    }
+
+    /**
+      * Clears the value of the 'abatementRange' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Condition.Builder clearAbatementRange() {
+      abatementRange = null;
+      abatementRangeBuilder = null;
+      fieldSetFlags()[13] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'abatementString' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getAbatementString() {
+      return abatementString;
+    }
+
+
+    /**
+      * Sets the value of the 'abatementString' field.
+      * @param value The value of 'abatementString'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Condition.Builder setAbatementString(java.lang.CharSequence value) {
+      validate(fields()[14], value);
+      this.abatementString = value;
+      fieldSetFlags()[14] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'abatementString' field has been set.
+      * @return True if the 'abatementString' field has been set, false otherwise.
+      */
+    public boolean hasAbatementString() {
+      return fieldSetFlags()[14];
+    }
+
+
+    /**
+      * Clears the value of the 'abatementString' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Condition.Builder clearAbatementString() {
+      abatementString = null;
+      fieldSetFlags()[14] = false;
       return this;
     }
 
@@ -1051,7 +1642,28 @@ static {
           record.subject = fieldSetFlags()[4] ? this.subject : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[4]);
         }
         record.stage = fieldSetFlags()[5] ? this.stage : (java.util.List<io.carrera.fhir.avro.models.Condition_Stage>) defaultValue(fields()[5]);
-        record.onsetDateTime = fieldSetFlags()[6] ? this.onsetDateTime : (java.lang.Integer) defaultValue(fields()[6]);
+        record.onsetDateTime = fieldSetFlags()[6] ? this.onsetDateTime :  defaultValue(fields()[6]);
+        if (onsetPeriodBuilder != null) {
+          try {
+            record.onsetPeriod = this.onsetPeriodBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("onsetPeriod"));
+            throw e;
+          }
+        } else {
+          record.onsetPeriod = fieldSetFlags()[7] ? this.onsetPeriod : (io.carrera.fhir.avro.models.Period) defaultValue(fields()[7]);
+        }
+        if (onsetRangeBuilder != null) {
+          try {
+            record.onsetRange = this.onsetRangeBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("onsetRange"));
+            throw e;
+          }
+        } else {
+          record.onsetRange = fieldSetFlags()[8] ? this.onsetRange : (io.carrera.fhir.avro.models.Range) defaultValue(fields()[8]);
+        }
+        record.onsetString = fieldSetFlags()[9] ? this.onsetString : (java.lang.CharSequence) defaultValue(fields()[9]);
         if (codeBuilder != null) {
           try {
             record.code = this.codeBuilder.build();
@@ -1060,7 +1672,7 @@ static {
             throw e;
           }
         } else {
-          record.code = fieldSetFlags()[7] ? this.code : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[7]);
+          record.code = fieldSetFlags()[10] ? this.code : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[10]);
         }
         if (abatementDateTimeBuilder != null) {
           try {
@@ -1070,8 +1682,29 @@ static {
             throw e;
           }
         } else {
-          record.abatementDateTime = fieldSetFlags()[8] ? this.abatementDateTime : (io.carrera.fhir.avro.models.DateTime) defaultValue(fields()[8]);
+          record.abatementDateTime = fieldSetFlags()[11] ? this.abatementDateTime : (io.carrera.fhir.avro.models.DateTime) defaultValue(fields()[11]);
         }
+        if (abatementPeriodBuilder != null) {
+          try {
+            record.abatementPeriod = this.abatementPeriodBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("abatementPeriod"));
+            throw e;
+          }
+        } else {
+          record.abatementPeriod = fieldSetFlags()[12] ? this.abatementPeriod : (io.carrera.fhir.avro.models.Period) defaultValue(fields()[12]);
+        }
+        if (abatementRangeBuilder != null) {
+          try {
+            record.abatementRange = this.abatementRangeBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("abatementRange"));
+            throw e;
+          }
+        } else {
+          record.abatementRange = fieldSetFlags()[13] ? this.abatementRange : (io.carrera.fhir.avro.models.Range) defaultValue(fields()[13]);
+        }
+        record.abatementString = fieldSetFlags()[14] ? this.abatementString : (java.lang.CharSequence) defaultValue(fields()[14]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;

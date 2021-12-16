@@ -1,6 +1,6 @@
 {
     "type": "record",
-    "name": "Claim",
+    "name": "ClaimResponse",
     "namespace": "io.carrera.fhir.avro.models",
     "fields": [
         {
@@ -43,33 +43,16 @@
             "type": "Reference"
         },
         {
-            "name": "billablePeriod",
-            "type": ["null", "Period"],
-            "default": null
-        },
-        {
             "name": "created",
             "type" : "io.carrera.fhir.avro.models.DateTime"
         },
         {
-            "name": "provider",
+            "name": "insurer",
             "type": "Reference"
         },
         {
-            "name": "priority",
-            "type": "CodeableConcept"
-        },
-        {
-            "name": "insurance",
-            "type": "Insurance"
-        },
-        {
-            "name": "item",
-            "type": ["null",{
-                "type": "array",
-                "items": "Item"
-              }],
-            "default": null
+            "name": "outcome",
+            "type": "string"
         }
     ]
 }
