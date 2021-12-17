@@ -38,9 +38,8 @@
       "default" : null
     },
     {
-      "name": "onsetDateTime",
-      "type": ["null", "int"],
-      "logicalType": "date",
+      "name" : "onset",
+      "type" : ["null", "io.carrera.fhir.avro.models.DateTime", "io.carrera.fhir.avro.models.Period"],
       "default": null
     },
     {
@@ -49,9 +48,9 @@
       "default": null
     },
     {
-      "name": "abatementDateTime",
-      "type": ["null","DateTime"],
-      "default" : null
+      "name" : "abatement",
+      "type" : ["null", "io.carrera.fhir.avro.models.DateTime", "io.carrera.fhir.avro.models.Period"],
+      "default": null
     }
   ]
 }

@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Condition extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 7829040116811808646L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Condition\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"clinicalStatus\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"verificationStatus\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"stage\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Condition_Stage\",\"fields\":[{\"name\":\"summary\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"assessment\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null}]}}],\"default\":null},{\"name\":\"onsetDateTime\",\"type\":[\"null\",\"int\"],\"default\":null,\"logicalType\":\"date\"},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"abatementDateTime\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]}],\"default\":null}]}");
+  private static final long serialVersionUID = 4564604450914636820L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Condition\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"clinicalStatus\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"verificationStatus\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"subject\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"stage\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Condition_Stage\",\"fields\":[{\"name\":\"summary\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"assessment\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null}]}}],\"default\":null},{\"name\":\"onset\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]},{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",\"DateTime\"],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",\"DateTime\"],\"default\":null}]}],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"abatement\",\"type\":[\"null\",\"DateTime\",\"Period\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -81,9 +81,9 @@ static {
    private io.carrera.fhir.avro.models.CodeableConcept verificationStatus;
    private io.carrera.fhir.avro.models.Reference subject;
    private java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage;
-   private java.lang.Integer onsetDateTime;
+   private java.lang.Object onset;
    private io.carrera.fhir.avro.models.CodeableConcept code;
-   private io.carrera.fhir.avro.models.DateTime abatementDateTime;
+   private java.lang.Object abatement;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -100,20 +100,20 @@ static {
    * @param verificationStatus The new value for verificationStatus
    * @param subject The new value for subject
    * @param stage The new value for stage
-   * @param onsetDateTime The new value for onsetDateTime
+   * @param onset The new value for onset
    * @param code The new value for code
-   * @param abatementDateTime The new value for abatementDateTime
+   * @param abatement The new value for abatement
    */
-  public Condition(java.lang.CharSequence resourceType, java.lang.CharSequence id, io.carrera.fhir.avro.models.CodeableConcept clinicalStatus, io.carrera.fhir.avro.models.CodeableConcept verificationStatus, io.carrera.fhir.avro.models.Reference subject, java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage, java.lang.Integer onsetDateTime, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.DateTime abatementDateTime) {
+  public Condition(java.lang.CharSequence resourceType, java.lang.CharSequence id, io.carrera.fhir.avro.models.CodeableConcept clinicalStatus, io.carrera.fhir.avro.models.CodeableConcept verificationStatus, io.carrera.fhir.avro.models.Reference subject, java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage, java.lang.Object onset, io.carrera.fhir.avro.models.CodeableConcept code, java.lang.Object abatement) {
     this.resourceType = resourceType;
     this.id = id;
     this.clinicalStatus = clinicalStatus;
     this.verificationStatus = verificationStatus;
     this.subject = subject;
     this.stage = stage;
-    this.onsetDateTime = onsetDateTime;
+    this.onset = onset;
     this.code = code;
-    this.abatementDateTime = abatementDateTime;
+    this.abatement = abatement;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -127,9 +127,9 @@ static {
     case 3: return verificationStatus;
     case 4: return subject;
     case 5: return stage;
-    case 6: return onsetDateTime;
+    case 6: return onset;
     case 7: return code;
-    case 8: return abatementDateTime;
+    case 8: return abatement;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -144,9 +144,9 @@ static {
     case 3: verificationStatus = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
     case 4: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 5: stage = (java.util.List<io.carrera.fhir.avro.models.Condition_Stage>)value$; break;
-    case 6: onsetDateTime = (java.lang.Integer)value$; break;
+    case 6: onset = value$; break;
     case 7: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 8: abatementDateTime = (io.carrera.fhir.avro.models.DateTime)value$; break;
+    case 8: abatement = value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -254,20 +254,20 @@ static {
   }
 
   /**
-   * Gets the value of the 'onsetDateTime' field.
-   * @return The value of the 'onsetDateTime' field.
+   * Gets the value of the 'onset' field.
+   * @return The value of the 'onset' field.
    */
-  public java.lang.Integer getOnsetDateTime() {
-    return onsetDateTime;
+  public java.lang.Object getOnset() {
+    return onset;
   }
 
 
   /**
-   * Sets the value of the 'onsetDateTime' field.
+   * Sets the value of the 'onset' field.
    * @param value the value to set.
    */
-  public void setOnsetDateTime(java.lang.Integer value) {
-    this.onsetDateTime = value;
+  public void setOnset(java.lang.Object value) {
+    this.onset = value;
   }
 
   /**
@@ -288,20 +288,20 @@ static {
   }
 
   /**
-   * Gets the value of the 'abatementDateTime' field.
-   * @return The value of the 'abatementDateTime' field.
+   * Gets the value of the 'abatement' field.
+   * @return The value of the 'abatement' field.
    */
-  public io.carrera.fhir.avro.models.DateTime getAbatementDateTime() {
-    return abatementDateTime;
+  public java.lang.Object getAbatement() {
+    return abatement;
   }
 
 
   /**
-   * Sets the value of the 'abatementDateTime' field.
+   * Sets the value of the 'abatement' field.
    * @param value the value to set.
    */
-  public void setAbatementDateTime(io.carrera.fhir.avro.models.DateTime value) {
-    this.abatementDateTime = value;
+  public void setAbatement(java.lang.Object value) {
+    this.abatement = value;
   }
 
   /**
@@ -354,11 +354,10 @@ static {
     private io.carrera.fhir.avro.models.Reference subject;
     private io.carrera.fhir.avro.models.Reference.Builder subjectBuilder;
     private java.util.List<io.carrera.fhir.avro.models.Condition_Stage> stage;
-    private java.lang.Integer onsetDateTime;
+    private java.lang.Object onset;
     private io.carrera.fhir.avro.models.CodeableConcept code;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder codeBuilder;
-    private io.carrera.fhir.avro.models.DateTime abatementDateTime;
-    private io.carrera.fhir.avro.models.DateTime.Builder abatementDateTimeBuilder;
+    private java.lang.Object abatement;
 
     /** Creates a new Builder */
     private Builder() {
@@ -404,8 +403,8 @@ static {
         this.stage = data().deepCopy(fields()[5].schema(), other.stage);
         fieldSetFlags()[5] = other.fieldSetFlags()[5];
       }
-      if (isValidValue(fields()[6], other.onsetDateTime)) {
-        this.onsetDateTime = data().deepCopy(fields()[6].schema(), other.onsetDateTime);
+      if (isValidValue(fields()[6], other.onset)) {
+        this.onset = data().deepCopy(fields()[6].schema(), other.onset);
         fieldSetFlags()[6] = other.fieldSetFlags()[6];
       }
       if (isValidValue(fields()[7], other.code)) {
@@ -415,12 +414,9 @@ static {
       if (other.hasCodeBuilder()) {
         this.codeBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getCodeBuilder());
       }
-      if (isValidValue(fields()[8], other.abatementDateTime)) {
-        this.abatementDateTime = data().deepCopy(fields()[8].schema(), other.abatementDateTime);
+      if (isValidValue(fields()[8], other.abatement)) {
+        this.abatement = data().deepCopy(fields()[8].schema(), other.abatement);
         fieldSetFlags()[8] = other.fieldSetFlags()[8];
-      }
-      if (other.hasAbatementDateTimeBuilder()) {
-        this.abatementDateTimeBuilder = io.carrera.fhir.avro.models.DateTime.newBuilder(other.getAbatementDateTimeBuilder());
       }
     }
 
@@ -457,8 +453,8 @@ static {
         this.stage = data().deepCopy(fields()[5].schema(), other.stage);
         fieldSetFlags()[5] = true;
       }
-      if (isValidValue(fields()[6], other.onsetDateTime)) {
-        this.onsetDateTime = data().deepCopy(fields()[6].schema(), other.onsetDateTime);
+      if (isValidValue(fields()[6], other.onset)) {
+        this.onset = data().deepCopy(fields()[6].schema(), other.onset);
         fieldSetFlags()[6] = true;
       }
       if (isValidValue(fields()[7], other.code)) {
@@ -466,11 +462,10 @@ static {
         fieldSetFlags()[7] = true;
       }
       this.codeBuilder = null;
-      if (isValidValue(fields()[8], other.abatementDateTime)) {
-        this.abatementDateTime = data().deepCopy(fields()[8].schema(), other.abatementDateTime);
+      if (isValidValue(fields()[8], other.abatement)) {
+        this.abatement = data().deepCopy(fields()[8].schema(), other.abatement);
         fieldSetFlags()[8] = true;
       }
-      this.abatementDateTimeBuilder = null;
     }
 
     /**
@@ -822,41 +817,41 @@ static {
     }
 
     /**
-      * Gets the value of the 'onsetDateTime' field.
+      * Gets the value of the 'onset' field.
       * @return The value.
       */
-    public java.lang.Integer getOnsetDateTime() {
-      return onsetDateTime;
+    public java.lang.Object getOnset() {
+      return onset;
     }
 
 
     /**
-      * Sets the value of the 'onsetDateTime' field.
-      * @param value The value of 'onsetDateTime'.
+      * Sets the value of the 'onset' field.
+      * @param value The value of 'onset'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Condition.Builder setOnsetDateTime(java.lang.Integer value) {
+    public io.carrera.fhir.avro.models.Condition.Builder setOnset(java.lang.Object value) {
       validate(fields()[6], value);
-      this.onsetDateTime = value;
+      this.onset = value;
       fieldSetFlags()[6] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'onsetDateTime' field has been set.
-      * @return True if the 'onsetDateTime' field has been set, false otherwise.
+      * Checks whether the 'onset' field has been set.
+      * @return True if the 'onset' field has been set, false otherwise.
       */
-    public boolean hasOnsetDateTime() {
+    public boolean hasOnset() {
       return fieldSetFlags()[6];
     }
 
 
     /**
-      * Clears the value of the 'onsetDateTime' field.
+      * Clears the value of the 'onset' field.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Condition.Builder clearOnsetDateTime() {
-      onsetDateTime = null;
+    public io.carrera.fhir.avro.models.Condition.Builder clearOnset() {
+      onset = null;
       fieldSetFlags()[6] = false;
       return this;
     }
@@ -938,77 +933,41 @@ static {
     }
 
     /**
-      * Gets the value of the 'abatementDateTime' field.
+      * Gets the value of the 'abatement' field.
       * @return The value.
       */
-    public io.carrera.fhir.avro.models.DateTime getAbatementDateTime() {
-      return abatementDateTime;
+    public java.lang.Object getAbatement() {
+      return abatement;
     }
 
 
     /**
-      * Sets the value of the 'abatementDateTime' field.
-      * @param value The value of 'abatementDateTime'.
+      * Sets the value of the 'abatement' field.
+      * @param value The value of 'abatement'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Condition.Builder setAbatementDateTime(io.carrera.fhir.avro.models.DateTime value) {
+    public io.carrera.fhir.avro.models.Condition.Builder setAbatement(java.lang.Object value) {
       validate(fields()[8], value);
-      this.abatementDateTimeBuilder = null;
-      this.abatementDateTime = value;
+      this.abatement = value;
       fieldSetFlags()[8] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'abatementDateTime' field has been set.
-      * @return True if the 'abatementDateTime' field has been set, false otherwise.
+      * Checks whether the 'abatement' field has been set.
+      * @return True if the 'abatement' field has been set, false otherwise.
       */
-    public boolean hasAbatementDateTime() {
+    public boolean hasAbatement() {
       return fieldSetFlags()[8];
     }
 
-    /**
-     * Gets the Builder instance for the 'abatementDateTime' field and creates one if it doesn't exist yet.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.DateTime.Builder getAbatementDateTimeBuilder() {
-      if (abatementDateTimeBuilder == null) {
-        if (hasAbatementDateTime()) {
-          setAbatementDateTimeBuilder(io.carrera.fhir.avro.models.DateTime.newBuilder(abatementDateTime));
-        } else {
-          setAbatementDateTimeBuilder(io.carrera.fhir.avro.models.DateTime.newBuilder());
-        }
-      }
-      return abatementDateTimeBuilder;
-    }
 
     /**
-     * Sets the Builder instance for the 'abatementDateTime' field
-     * @param value The builder instance that must be set.
-     * @return This builder.
-     */
-
-    public io.carrera.fhir.avro.models.Condition.Builder setAbatementDateTimeBuilder(io.carrera.fhir.avro.models.DateTime.Builder value) {
-      clearAbatementDateTime();
-      abatementDateTimeBuilder = value;
-      return this;
-    }
-
-    /**
-     * Checks whether the 'abatementDateTime' field has an active Builder instance
-     * @return True if the 'abatementDateTime' field has an active Builder instance
-     */
-    public boolean hasAbatementDateTimeBuilder() {
-      return abatementDateTimeBuilder != null;
-    }
-
-    /**
-      * Clears the value of the 'abatementDateTime' field.
+      * Clears the value of the 'abatement' field.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Condition.Builder clearAbatementDateTime() {
-      abatementDateTime = null;
-      abatementDateTimeBuilder = null;
+    public io.carrera.fhir.avro.models.Condition.Builder clearAbatement() {
+      abatement = null;
       fieldSetFlags()[8] = false;
       return this;
     }
@@ -1051,7 +1010,7 @@ static {
           record.subject = fieldSetFlags()[4] ? this.subject : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[4]);
         }
         record.stage = fieldSetFlags()[5] ? this.stage : (java.util.List<io.carrera.fhir.avro.models.Condition_Stage>) defaultValue(fields()[5]);
-        record.onsetDateTime = fieldSetFlags()[6] ? this.onsetDateTime : (java.lang.Integer) defaultValue(fields()[6]);
+        record.onset = fieldSetFlags()[6] ? this.onset :  defaultValue(fields()[6]);
         if (codeBuilder != null) {
           try {
             record.code = this.codeBuilder.build();
@@ -1062,16 +1021,7 @@ static {
         } else {
           record.code = fieldSetFlags()[7] ? this.code : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[7]);
         }
-        if (abatementDateTimeBuilder != null) {
-          try {
-            record.abatementDateTime = this.abatementDateTimeBuilder.build();
-          } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("abatementDateTime"));
-            throw e;
-          }
-        } else {
-          record.abatementDateTime = fieldSetFlags()[8] ? this.abatementDateTime : (io.carrera.fhir.avro.models.DateTime) defaultValue(fields()[8]);
-        }
+        record.abatement = fieldSetFlags()[8] ? this.abatement :  defaultValue(fields()[8]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;

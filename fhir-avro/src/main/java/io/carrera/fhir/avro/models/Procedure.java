@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Procedure extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -2709095292243218463L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Procedure\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"implicitRules\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"language\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}],\"default\":null},{\"name\":\"url\",\"type\":[\"null\",\"string\"]},{\"name\":\"value\",\"type\":[\"null\",\"string\",\"int\",\"boolean\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Decimal\",\"fields\":[{\"name\":\"unscaled_value\",\"type\":\"bytes\",\"logicalType\":\"decimal\"},{\"name\":\"precision\",\"type\":\"int\"},{\"name\":\"scale\",\"type\":\"int\"}]}],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]},{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}],\"default\":null}]}}],\"default\":null},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}],\"default\":null},{\"name\":\"instantiatesCanonical\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null},{\"name\":\"instantiatesUri\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null},{\"name\":\"basedOn\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"partOf\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"status\",\"type\":[\"string\"]},{\"name\":\"statusReason\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Coding\"}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"category\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"subject\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"performedDateTime\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]}],\"default\":null},{\"name\":\"performedPeriod\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",\"DateTime\"],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",\"DateTime\"],\"default\":null}]}],\"default\":null},{\"name\":\"performedString\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"performedRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}],\"default\":null},{\"name\":\"recorder\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"asserter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"location\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"reasonCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"reasonReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"bodySite\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"outcome\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"report\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"complication\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"complicationDetail\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"followUp\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"usedReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"usedCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null}]}");
+  private static final long serialVersionUID = -2628398742656098497L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Procedure\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"implicitRules\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"language\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"identifier\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"identifier_record\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"value\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Extension\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"]},{\"name\":\"extension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}],\"default\":null},{\"name\":\"url\",\"type\":[\"null\",\"string\"]},{\"name\":\"value\",\"type\":[\"null\",\"string\",\"int\",\"boolean\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Decimal\",\"fields\":[{\"name\":\"unscaled_value\",\"type\":\"bytes\",\"logicalType\":\"decimal\"},{\"name\":\"precision\",\"type\":\"int\"},{\"name\":\"scale\",\"type\":\"int\"}]}],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]},{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}],\"default\":null}]}}],\"default\":null},{\"name\":\"modifierExtension\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Extension\"}],\"default\":null},{\"name\":\"instantiatesCanonical\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null},{\"name\":\"instantiatesUri\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"string\"}],\"default\":null},{\"name\":\"basedOn\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"partOf\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"status\",\"type\":[\"string\"]},{\"name\":\"statusReason\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Coding\"}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"category\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"subject\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"performedDateTime\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]}],\"default\":null},{\"name\":\"performedPeriod\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",\"DateTime\"],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",\"DateTime\"],\"default\":null}]}],\"default\":null},{\"name\":\"performedString\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"performedRange\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]}],\"default\":null},{\"name\":\"recorder\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"asserter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"location\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"reasonCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"reasonReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"bodySite\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"outcome\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"report\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"complication\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"complicationDetail\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"followUp\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"usedReference\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"usedCode\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -79,6 +79,7 @@ static {
    private java.lang.CharSequence id;
    private java.lang.CharSequence implicitRules;
    private java.lang.CharSequence language;
+   private java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier;
    private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
    private java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension;
    private java.util.List<java.lang.CharSequence> instantiatesCanonical;
@@ -122,6 +123,7 @@ static {
    * @param id The new value for id
    * @param implicitRules The new value for implicitRules
    * @param language The new value for language
+   * @param identifier The new value for identifier
    * @param extension The new value for extension
    * @param modifierExtension The new value for modifierExtension
    * @param instantiatesCanonical The new value for instantiatesCanonical
@@ -152,11 +154,12 @@ static {
    * @param usedReference The new value for usedReference
    * @param usedCode The new value for usedCode
    */
-  public Procedure(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence implicitRules, java.lang.CharSequence language, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension, java.util.List<java.lang.CharSequence> instantiatesCanonical, java.util.List<java.lang.CharSequence> instantiatesUri, java.util.List<io.carrera.fhir.avro.models.Reference> basedOn, java.util.List<io.carrera.fhir.avro.models.Reference> partOf, java.lang.Object status, io.carrera.fhir.avro.models.CodeableConcept statusReason, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, io.carrera.fhir.avro.models.DateTime performedDateTime, io.carrera.fhir.avro.models.Period performedPeriod, java.lang.CharSequence performedString, io.carrera.fhir.avro.models.Range performedRange, io.carrera.fhir.avro.models.Reference recorder, io.carrera.fhir.avro.models.Reference asserter, io.carrera.fhir.avro.models.Reference location, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> reasonCode, java.util.List<io.carrera.fhir.avro.models.Reference> reasonReference, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> bodySite, io.carrera.fhir.avro.models.CodeableConcept outcome, java.util.List<io.carrera.fhir.avro.models.Reference> report, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> complication, java.util.List<io.carrera.fhir.avro.models.Reference> complicationDetail, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> followUp, java.util.List<io.carrera.fhir.avro.models.Reference> usedReference, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> usedCode) {
+  public Procedure(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence implicitRules, java.lang.CharSequence language, java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier, java.util.List<io.carrera.fhir.avro.models.Extension> extension, java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension, java.util.List<java.lang.CharSequence> instantiatesCanonical, java.util.List<java.lang.CharSequence> instantiatesUri, java.util.List<io.carrera.fhir.avro.models.Reference> basedOn, java.util.List<io.carrera.fhir.avro.models.Reference> partOf, java.lang.Object status, io.carrera.fhir.avro.models.CodeableConcept statusReason, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, io.carrera.fhir.avro.models.DateTime performedDateTime, io.carrera.fhir.avro.models.Period performedPeriod, java.lang.CharSequence performedString, io.carrera.fhir.avro.models.Range performedRange, io.carrera.fhir.avro.models.Reference recorder, io.carrera.fhir.avro.models.Reference asserter, io.carrera.fhir.avro.models.Reference location, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> reasonCode, java.util.List<io.carrera.fhir.avro.models.Reference> reasonReference, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> bodySite, io.carrera.fhir.avro.models.CodeableConcept outcome, java.util.List<io.carrera.fhir.avro.models.Reference> report, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> complication, java.util.List<io.carrera.fhir.avro.models.Reference> complicationDetail, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> followUp, java.util.List<io.carrera.fhir.avro.models.Reference> usedReference, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> usedCode) {
     this.resourceType = resourceType;
     this.id = id;
     this.implicitRules = implicitRules;
     this.language = language;
+    this.identifier = identifier;
     this.extension = extension;
     this.modifierExtension = modifierExtension;
     this.instantiatesCanonical = instantiatesCanonical;
@@ -197,35 +200,36 @@ static {
     case 1: return id;
     case 2: return implicitRules;
     case 3: return language;
-    case 4: return extension;
-    case 5: return modifierExtension;
-    case 6: return instantiatesCanonical;
-    case 7: return instantiatesUri;
-    case 8: return basedOn;
-    case 9: return partOf;
-    case 10: return status;
-    case 11: return statusReason;
-    case 12: return category;
-    case 13: return code;
-    case 14: return subject;
-    case 15: return encounter;
-    case 16: return performedDateTime;
-    case 17: return performedPeriod;
-    case 18: return performedString;
-    case 19: return performedRange;
-    case 20: return recorder;
-    case 21: return asserter;
-    case 22: return location;
-    case 23: return reasonCode;
-    case 24: return reasonReference;
-    case 25: return bodySite;
-    case 26: return outcome;
-    case 27: return report;
-    case 28: return complication;
-    case 29: return complicationDetail;
-    case 30: return followUp;
-    case 31: return usedReference;
-    case 32: return usedCode;
+    case 4: return identifier;
+    case 5: return extension;
+    case 6: return modifierExtension;
+    case 7: return instantiatesCanonical;
+    case 8: return instantiatesUri;
+    case 9: return basedOn;
+    case 10: return partOf;
+    case 11: return status;
+    case 12: return statusReason;
+    case 13: return category;
+    case 14: return code;
+    case 15: return subject;
+    case 16: return encounter;
+    case 17: return performedDateTime;
+    case 18: return performedPeriod;
+    case 19: return performedString;
+    case 20: return performedRange;
+    case 21: return recorder;
+    case 22: return asserter;
+    case 23: return location;
+    case 24: return reasonCode;
+    case 25: return reasonReference;
+    case 26: return bodySite;
+    case 27: return outcome;
+    case 28: return report;
+    case 29: return complication;
+    case 30: return complicationDetail;
+    case 31: return followUp;
+    case 32: return usedReference;
+    case 33: return usedCode;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -238,35 +242,36 @@ static {
     case 1: id = (java.lang.CharSequence)value$; break;
     case 2: implicitRules = (java.lang.CharSequence)value$; break;
     case 3: language = (java.lang.CharSequence)value$; break;
-    case 4: extension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 5: modifierExtension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
-    case 6: instantiatesCanonical = (java.util.List<java.lang.CharSequence>)value$; break;
-    case 7: instantiatesUri = (java.util.List<java.lang.CharSequence>)value$; break;
-    case 8: basedOn = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
-    case 9: partOf = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
-    case 10: status = value$; break;
-    case 11: statusReason = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 12: category = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 13: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 14: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 15: encounter = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 16: performedDateTime = (io.carrera.fhir.avro.models.DateTime)value$; break;
-    case 17: performedPeriod = (io.carrera.fhir.avro.models.Period)value$; break;
-    case 18: performedString = (java.lang.CharSequence)value$; break;
-    case 19: performedRange = (io.carrera.fhir.avro.models.Range)value$; break;
-    case 20: recorder = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 21: asserter = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 22: location = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 23: reasonCode = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
-    case 24: reasonReference = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
-    case 25: bodySite = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
-    case 26: outcome = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 27: report = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
-    case 28: complication = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
-    case 29: complicationDetail = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
-    case 30: followUp = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
-    case 31: usedReference = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
-    case 32: usedCode = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
+    case 4: identifier = (java.util.List<io.carrera.fhir.avro.models.identifier_record>)value$; break;
+    case 5: extension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
+    case 6: modifierExtension = (java.util.List<io.carrera.fhir.avro.models.Extension>)value$; break;
+    case 7: instantiatesCanonical = (java.util.List<java.lang.CharSequence>)value$; break;
+    case 8: instantiatesUri = (java.util.List<java.lang.CharSequence>)value$; break;
+    case 9: basedOn = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
+    case 10: partOf = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
+    case 11: status = value$; break;
+    case 12: statusReason = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 13: category = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 14: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 15: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 16: encounter = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 17: performedDateTime = (io.carrera.fhir.avro.models.DateTime)value$; break;
+    case 18: performedPeriod = (io.carrera.fhir.avro.models.Period)value$; break;
+    case 19: performedString = (java.lang.CharSequence)value$; break;
+    case 20: performedRange = (io.carrera.fhir.avro.models.Range)value$; break;
+    case 21: recorder = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 22: asserter = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 23: location = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 24: reasonCode = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
+    case 25: reasonReference = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
+    case 26: bodySite = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
+    case 27: outcome = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 28: report = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
+    case 29: complication = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
+    case 30: complicationDetail = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
+    case 31: followUp = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
+    case 32: usedReference = (java.util.List<io.carrera.fhir.avro.models.Reference>)value$; break;
+    case 33: usedCode = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -337,6 +342,23 @@ static {
    */
   public void setLanguage(java.lang.CharSequence value) {
     this.language = value;
+  }
+
+  /**
+   * Gets the value of the 'identifier' field.
+   * @return The value of the 'identifier' field.
+   */
+  public java.util.List<io.carrera.fhir.avro.models.identifier_record> getIdentifier() {
+    return identifier;
+  }
+
+
+  /**
+   * Sets the value of the 'identifier' field.
+   * @param value the value to set.
+   */
+  public void setIdentifier(java.util.List<io.carrera.fhir.avro.models.identifier_record> value) {
+    this.identifier = value;
   }
 
   /**
@@ -877,6 +899,7 @@ static {
     private java.lang.CharSequence id;
     private java.lang.CharSequence implicitRules;
     private java.lang.CharSequence language;
+    private java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier;
     private java.util.List<io.carrera.fhir.avro.models.Extension> extension;
     private java.util.List<io.carrera.fhir.avro.models.Extension> modifierExtension;
     private java.util.List<java.lang.CharSequence> instantiatesCanonical;
@@ -946,157 +969,161 @@ static {
         this.language = data().deepCopy(fields()[3].schema(), other.language);
         fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
-      if (isValidValue(fields()[4], other.extension)) {
-        this.extension = data().deepCopy(fields()[4].schema(), other.extension);
+      if (isValidValue(fields()[4], other.identifier)) {
+        this.identifier = data().deepCopy(fields()[4].schema(), other.identifier);
         fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
-      if (isValidValue(fields()[5], other.modifierExtension)) {
-        this.modifierExtension = data().deepCopy(fields()[5].schema(), other.modifierExtension);
+      if (isValidValue(fields()[5], other.extension)) {
+        this.extension = data().deepCopy(fields()[5].schema(), other.extension);
         fieldSetFlags()[5] = other.fieldSetFlags()[5];
       }
-      if (isValidValue(fields()[6], other.instantiatesCanonical)) {
-        this.instantiatesCanonical = data().deepCopy(fields()[6].schema(), other.instantiatesCanonical);
+      if (isValidValue(fields()[6], other.modifierExtension)) {
+        this.modifierExtension = data().deepCopy(fields()[6].schema(), other.modifierExtension);
         fieldSetFlags()[6] = other.fieldSetFlags()[6];
       }
-      if (isValidValue(fields()[7], other.instantiatesUri)) {
-        this.instantiatesUri = data().deepCopy(fields()[7].schema(), other.instantiatesUri);
+      if (isValidValue(fields()[7], other.instantiatesCanonical)) {
+        this.instantiatesCanonical = data().deepCopy(fields()[7].schema(), other.instantiatesCanonical);
         fieldSetFlags()[7] = other.fieldSetFlags()[7];
       }
-      if (isValidValue(fields()[8], other.basedOn)) {
-        this.basedOn = data().deepCopy(fields()[8].schema(), other.basedOn);
+      if (isValidValue(fields()[8], other.instantiatesUri)) {
+        this.instantiatesUri = data().deepCopy(fields()[8].schema(), other.instantiatesUri);
         fieldSetFlags()[8] = other.fieldSetFlags()[8];
       }
-      if (isValidValue(fields()[9], other.partOf)) {
-        this.partOf = data().deepCopy(fields()[9].schema(), other.partOf);
+      if (isValidValue(fields()[9], other.basedOn)) {
+        this.basedOn = data().deepCopy(fields()[9].schema(), other.basedOn);
         fieldSetFlags()[9] = other.fieldSetFlags()[9];
       }
-      if (isValidValue(fields()[10], other.status)) {
-        this.status = data().deepCopy(fields()[10].schema(), other.status);
+      if (isValidValue(fields()[10], other.partOf)) {
+        this.partOf = data().deepCopy(fields()[10].schema(), other.partOf);
         fieldSetFlags()[10] = other.fieldSetFlags()[10];
       }
-      if (isValidValue(fields()[11], other.statusReason)) {
-        this.statusReason = data().deepCopy(fields()[11].schema(), other.statusReason);
+      if (isValidValue(fields()[11], other.status)) {
+        this.status = data().deepCopy(fields()[11].schema(), other.status);
         fieldSetFlags()[11] = other.fieldSetFlags()[11];
+      }
+      if (isValidValue(fields()[12], other.statusReason)) {
+        this.statusReason = data().deepCopy(fields()[12].schema(), other.statusReason);
+        fieldSetFlags()[12] = other.fieldSetFlags()[12];
       }
       if (other.hasStatusReasonBuilder()) {
         this.statusReasonBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getStatusReasonBuilder());
       }
-      if (isValidValue(fields()[12], other.category)) {
-        this.category = data().deepCopy(fields()[12].schema(), other.category);
-        fieldSetFlags()[12] = other.fieldSetFlags()[12];
+      if (isValidValue(fields()[13], other.category)) {
+        this.category = data().deepCopy(fields()[13].schema(), other.category);
+        fieldSetFlags()[13] = other.fieldSetFlags()[13];
       }
       if (other.hasCategoryBuilder()) {
         this.categoryBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getCategoryBuilder());
       }
-      if (isValidValue(fields()[13], other.code)) {
-        this.code = data().deepCopy(fields()[13].schema(), other.code);
-        fieldSetFlags()[13] = other.fieldSetFlags()[13];
+      if (isValidValue(fields()[14], other.code)) {
+        this.code = data().deepCopy(fields()[14].schema(), other.code);
+        fieldSetFlags()[14] = other.fieldSetFlags()[14];
       }
       if (other.hasCodeBuilder()) {
         this.codeBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getCodeBuilder());
       }
-      if (isValidValue(fields()[14], other.subject)) {
-        this.subject = data().deepCopy(fields()[14].schema(), other.subject);
-        fieldSetFlags()[14] = other.fieldSetFlags()[14];
+      if (isValidValue(fields()[15], other.subject)) {
+        this.subject = data().deepCopy(fields()[15].schema(), other.subject);
+        fieldSetFlags()[15] = other.fieldSetFlags()[15];
       }
       if (other.hasSubjectBuilder()) {
         this.subjectBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getSubjectBuilder());
       }
-      if (isValidValue(fields()[15], other.encounter)) {
-        this.encounter = data().deepCopy(fields()[15].schema(), other.encounter);
-        fieldSetFlags()[15] = other.fieldSetFlags()[15];
+      if (isValidValue(fields()[16], other.encounter)) {
+        this.encounter = data().deepCopy(fields()[16].schema(), other.encounter);
+        fieldSetFlags()[16] = other.fieldSetFlags()[16];
       }
       if (other.hasEncounterBuilder()) {
         this.encounterBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getEncounterBuilder());
       }
-      if (isValidValue(fields()[16], other.performedDateTime)) {
-        this.performedDateTime = data().deepCopy(fields()[16].schema(), other.performedDateTime);
-        fieldSetFlags()[16] = other.fieldSetFlags()[16];
+      if (isValidValue(fields()[17], other.performedDateTime)) {
+        this.performedDateTime = data().deepCopy(fields()[17].schema(), other.performedDateTime);
+        fieldSetFlags()[17] = other.fieldSetFlags()[17];
       }
       if (other.hasPerformedDateTimeBuilder()) {
         this.performedDateTimeBuilder = io.carrera.fhir.avro.models.DateTime.newBuilder(other.getPerformedDateTimeBuilder());
       }
-      if (isValidValue(fields()[17], other.performedPeriod)) {
-        this.performedPeriod = data().deepCopy(fields()[17].schema(), other.performedPeriod);
-        fieldSetFlags()[17] = other.fieldSetFlags()[17];
+      if (isValidValue(fields()[18], other.performedPeriod)) {
+        this.performedPeriod = data().deepCopy(fields()[18].schema(), other.performedPeriod);
+        fieldSetFlags()[18] = other.fieldSetFlags()[18];
       }
       if (other.hasPerformedPeriodBuilder()) {
         this.performedPeriodBuilder = io.carrera.fhir.avro.models.Period.newBuilder(other.getPerformedPeriodBuilder());
       }
-      if (isValidValue(fields()[18], other.performedString)) {
-        this.performedString = data().deepCopy(fields()[18].schema(), other.performedString);
-        fieldSetFlags()[18] = other.fieldSetFlags()[18];
-      }
-      if (isValidValue(fields()[19], other.performedRange)) {
-        this.performedRange = data().deepCopy(fields()[19].schema(), other.performedRange);
+      if (isValidValue(fields()[19], other.performedString)) {
+        this.performedString = data().deepCopy(fields()[19].schema(), other.performedString);
         fieldSetFlags()[19] = other.fieldSetFlags()[19];
+      }
+      if (isValidValue(fields()[20], other.performedRange)) {
+        this.performedRange = data().deepCopy(fields()[20].schema(), other.performedRange);
+        fieldSetFlags()[20] = other.fieldSetFlags()[20];
       }
       if (other.hasPerformedRangeBuilder()) {
         this.performedRangeBuilder = io.carrera.fhir.avro.models.Range.newBuilder(other.getPerformedRangeBuilder());
       }
-      if (isValidValue(fields()[20], other.recorder)) {
-        this.recorder = data().deepCopy(fields()[20].schema(), other.recorder);
-        fieldSetFlags()[20] = other.fieldSetFlags()[20];
+      if (isValidValue(fields()[21], other.recorder)) {
+        this.recorder = data().deepCopy(fields()[21].schema(), other.recorder);
+        fieldSetFlags()[21] = other.fieldSetFlags()[21];
       }
       if (other.hasRecorderBuilder()) {
         this.recorderBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getRecorderBuilder());
       }
-      if (isValidValue(fields()[21], other.asserter)) {
-        this.asserter = data().deepCopy(fields()[21].schema(), other.asserter);
-        fieldSetFlags()[21] = other.fieldSetFlags()[21];
+      if (isValidValue(fields()[22], other.asserter)) {
+        this.asserter = data().deepCopy(fields()[22].schema(), other.asserter);
+        fieldSetFlags()[22] = other.fieldSetFlags()[22];
       }
       if (other.hasAsserterBuilder()) {
         this.asserterBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getAsserterBuilder());
       }
-      if (isValidValue(fields()[22], other.location)) {
-        this.location = data().deepCopy(fields()[22].schema(), other.location);
-        fieldSetFlags()[22] = other.fieldSetFlags()[22];
+      if (isValidValue(fields()[23], other.location)) {
+        this.location = data().deepCopy(fields()[23].schema(), other.location);
+        fieldSetFlags()[23] = other.fieldSetFlags()[23];
       }
       if (other.hasLocationBuilder()) {
         this.locationBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getLocationBuilder());
       }
-      if (isValidValue(fields()[23], other.reasonCode)) {
-        this.reasonCode = data().deepCopy(fields()[23].schema(), other.reasonCode);
-        fieldSetFlags()[23] = other.fieldSetFlags()[23];
-      }
-      if (isValidValue(fields()[24], other.reasonReference)) {
-        this.reasonReference = data().deepCopy(fields()[24].schema(), other.reasonReference);
+      if (isValidValue(fields()[24], other.reasonCode)) {
+        this.reasonCode = data().deepCopy(fields()[24].schema(), other.reasonCode);
         fieldSetFlags()[24] = other.fieldSetFlags()[24];
       }
-      if (isValidValue(fields()[25], other.bodySite)) {
-        this.bodySite = data().deepCopy(fields()[25].schema(), other.bodySite);
+      if (isValidValue(fields()[25], other.reasonReference)) {
+        this.reasonReference = data().deepCopy(fields()[25].schema(), other.reasonReference);
         fieldSetFlags()[25] = other.fieldSetFlags()[25];
       }
-      if (isValidValue(fields()[26], other.outcome)) {
-        this.outcome = data().deepCopy(fields()[26].schema(), other.outcome);
+      if (isValidValue(fields()[26], other.bodySite)) {
+        this.bodySite = data().deepCopy(fields()[26].schema(), other.bodySite);
         fieldSetFlags()[26] = other.fieldSetFlags()[26];
+      }
+      if (isValidValue(fields()[27], other.outcome)) {
+        this.outcome = data().deepCopy(fields()[27].schema(), other.outcome);
+        fieldSetFlags()[27] = other.fieldSetFlags()[27];
       }
       if (other.hasOutcomeBuilder()) {
         this.outcomeBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getOutcomeBuilder());
       }
-      if (isValidValue(fields()[27], other.report)) {
-        this.report = data().deepCopy(fields()[27].schema(), other.report);
-        fieldSetFlags()[27] = other.fieldSetFlags()[27];
-      }
-      if (isValidValue(fields()[28], other.complication)) {
-        this.complication = data().deepCopy(fields()[28].schema(), other.complication);
+      if (isValidValue(fields()[28], other.report)) {
+        this.report = data().deepCopy(fields()[28].schema(), other.report);
         fieldSetFlags()[28] = other.fieldSetFlags()[28];
       }
-      if (isValidValue(fields()[29], other.complicationDetail)) {
-        this.complicationDetail = data().deepCopy(fields()[29].schema(), other.complicationDetail);
+      if (isValidValue(fields()[29], other.complication)) {
+        this.complication = data().deepCopy(fields()[29].schema(), other.complication);
         fieldSetFlags()[29] = other.fieldSetFlags()[29];
       }
-      if (isValidValue(fields()[30], other.followUp)) {
-        this.followUp = data().deepCopy(fields()[30].schema(), other.followUp);
+      if (isValidValue(fields()[30], other.complicationDetail)) {
+        this.complicationDetail = data().deepCopy(fields()[30].schema(), other.complicationDetail);
         fieldSetFlags()[30] = other.fieldSetFlags()[30];
       }
-      if (isValidValue(fields()[31], other.usedReference)) {
-        this.usedReference = data().deepCopy(fields()[31].schema(), other.usedReference);
+      if (isValidValue(fields()[31], other.followUp)) {
+        this.followUp = data().deepCopy(fields()[31].schema(), other.followUp);
         fieldSetFlags()[31] = other.fieldSetFlags()[31];
       }
-      if (isValidValue(fields()[32], other.usedCode)) {
-        this.usedCode = data().deepCopy(fields()[32].schema(), other.usedCode);
+      if (isValidValue(fields()[32], other.usedReference)) {
+        this.usedReference = data().deepCopy(fields()[32].schema(), other.usedReference);
         fieldSetFlags()[32] = other.fieldSetFlags()[32];
+      }
+      if (isValidValue(fields()[33], other.usedCode)) {
+        this.usedCode = data().deepCopy(fields()[33].schema(), other.usedCode);
+        fieldSetFlags()[33] = other.fieldSetFlags()[33];
       }
     }
 
@@ -1122,133 +1149,137 @@ static {
         this.language = data().deepCopy(fields()[3].schema(), other.language);
         fieldSetFlags()[3] = true;
       }
-      if (isValidValue(fields()[4], other.extension)) {
-        this.extension = data().deepCopy(fields()[4].schema(), other.extension);
+      if (isValidValue(fields()[4], other.identifier)) {
+        this.identifier = data().deepCopy(fields()[4].schema(), other.identifier);
         fieldSetFlags()[4] = true;
       }
-      if (isValidValue(fields()[5], other.modifierExtension)) {
-        this.modifierExtension = data().deepCopy(fields()[5].schema(), other.modifierExtension);
+      if (isValidValue(fields()[5], other.extension)) {
+        this.extension = data().deepCopy(fields()[5].schema(), other.extension);
         fieldSetFlags()[5] = true;
       }
-      if (isValidValue(fields()[6], other.instantiatesCanonical)) {
-        this.instantiatesCanonical = data().deepCopy(fields()[6].schema(), other.instantiatesCanonical);
+      if (isValidValue(fields()[6], other.modifierExtension)) {
+        this.modifierExtension = data().deepCopy(fields()[6].schema(), other.modifierExtension);
         fieldSetFlags()[6] = true;
       }
-      if (isValidValue(fields()[7], other.instantiatesUri)) {
-        this.instantiatesUri = data().deepCopy(fields()[7].schema(), other.instantiatesUri);
+      if (isValidValue(fields()[7], other.instantiatesCanonical)) {
+        this.instantiatesCanonical = data().deepCopy(fields()[7].schema(), other.instantiatesCanonical);
         fieldSetFlags()[7] = true;
       }
-      if (isValidValue(fields()[8], other.basedOn)) {
-        this.basedOn = data().deepCopy(fields()[8].schema(), other.basedOn);
+      if (isValidValue(fields()[8], other.instantiatesUri)) {
+        this.instantiatesUri = data().deepCopy(fields()[8].schema(), other.instantiatesUri);
         fieldSetFlags()[8] = true;
       }
-      if (isValidValue(fields()[9], other.partOf)) {
-        this.partOf = data().deepCopy(fields()[9].schema(), other.partOf);
+      if (isValidValue(fields()[9], other.basedOn)) {
+        this.basedOn = data().deepCopy(fields()[9].schema(), other.basedOn);
         fieldSetFlags()[9] = true;
       }
-      if (isValidValue(fields()[10], other.status)) {
-        this.status = data().deepCopy(fields()[10].schema(), other.status);
+      if (isValidValue(fields()[10], other.partOf)) {
+        this.partOf = data().deepCopy(fields()[10].schema(), other.partOf);
         fieldSetFlags()[10] = true;
       }
-      if (isValidValue(fields()[11], other.statusReason)) {
-        this.statusReason = data().deepCopy(fields()[11].schema(), other.statusReason);
+      if (isValidValue(fields()[11], other.status)) {
+        this.status = data().deepCopy(fields()[11].schema(), other.status);
         fieldSetFlags()[11] = true;
       }
-      this.statusReasonBuilder = null;
-      if (isValidValue(fields()[12], other.category)) {
-        this.category = data().deepCopy(fields()[12].schema(), other.category);
+      if (isValidValue(fields()[12], other.statusReason)) {
+        this.statusReason = data().deepCopy(fields()[12].schema(), other.statusReason);
         fieldSetFlags()[12] = true;
       }
-      this.categoryBuilder = null;
-      if (isValidValue(fields()[13], other.code)) {
-        this.code = data().deepCopy(fields()[13].schema(), other.code);
+      this.statusReasonBuilder = null;
+      if (isValidValue(fields()[13], other.category)) {
+        this.category = data().deepCopy(fields()[13].schema(), other.category);
         fieldSetFlags()[13] = true;
       }
-      this.codeBuilder = null;
-      if (isValidValue(fields()[14], other.subject)) {
-        this.subject = data().deepCopy(fields()[14].schema(), other.subject);
+      this.categoryBuilder = null;
+      if (isValidValue(fields()[14], other.code)) {
+        this.code = data().deepCopy(fields()[14].schema(), other.code);
         fieldSetFlags()[14] = true;
       }
-      this.subjectBuilder = null;
-      if (isValidValue(fields()[15], other.encounter)) {
-        this.encounter = data().deepCopy(fields()[15].schema(), other.encounter);
+      this.codeBuilder = null;
+      if (isValidValue(fields()[15], other.subject)) {
+        this.subject = data().deepCopy(fields()[15].schema(), other.subject);
         fieldSetFlags()[15] = true;
       }
-      this.encounterBuilder = null;
-      if (isValidValue(fields()[16], other.performedDateTime)) {
-        this.performedDateTime = data().deepCopy(fields()[16].schema(), other.performedDateTime);
+      this.subjectBuilder = null;
+      if (isValidValue(fields()[16], other.encounter)) {
+        this.encounter = data().deepCopy(fields()[16].schema(), other.encounter);
         fieldSetFlags()[16] = true;
       }
-      this.performedDateTimeBuilder = null;
-      if (isValidValue(fields()[17], other.performedPeriod)) {
-        this.performedPeriod = data().deepCopy(fields()[17].schema(), other.performedPeriod);
+      this.encounterBuilder = null;
+      if (isValidValue(fields()[17], other.performedDateTime)) {
+        this.performedDateTime = data().deepCopy(fields()[17].schema(), other.performedDateTime);
         fieldSetFlags()[17] = true;
       }
-      this.performedPeriodBuilder = null;
-      if (isValidValue(fields()[18], other.performedString)) {
-        this.performedString = data().deepCopy(fields()[18].schema(), other.performedString);
+      this.performedDateTimeBuilder = null;
+      if (isValidValue(fields()[18], other.performedPeriod)) {
+        this.performedPeriod = data().deepCopy(fields()[18].schema(), other.performedPeriod);
         fieldSetFlags()[18] = true;
       }
-      if (isValidValue(fields()[19], other.performedRange)) {
-        this.performedRange = data().deepCopy(fields()[19].schema(), other.performedRange);
+      this.performedPeriodBuilder = null;
+      if (isValidValue(fields()[19], other.performedString)) {
+        this.performedString = data().deepCopy(fields()[19].schema(), other.performedString);
         fieldSetFlags()[19] = true;
       }
-      this.performedRangeBuilder = null;
-      if (isValidValue(fields()[20], other.recorder)) {
-        this.recorder = data().deepCopy(fields()[20].schema(), other.recorder);
+      if (isValidValue(fields()[20], other.performedRange)) {
+        this.performedRange = data().deepCopy(fields()[20].schema(), other.performedRange);
         fieldSetFlags()[20] = true;
       }
-      this.recorderBuilder = null;
-      if (isValidValue(fields()[21], other.asserter)) {
-        this.asserter = data().deepCopy(fields()[21].schema(), other.asserter);
+      this.performedRangeBuilder = null;
+      if (isValidValue(fields()[21], other.recorder)) {
+        this.recorder = data().deepCopy(fields()[21].schema(), other.recorder);
         fieldSetFlags()[21] = true;
       }
-      this.asserterBuilder = null;
-      if (isValidValue(fields()[22], other.location)) {
-        this.location = data().deepCopy(fields()[22].schema(), other.location);
+      this.recorderBuilder = null;
+      if (isValidValue(fields()[22], other.asserter)) {
+        this.asserter = data().deepCopy(fields()[22].schema(), other.asserter);
         fieldSetFlags()[22] = true;
       }
-      this.locationBuilder = null;
-      if (isValidValue(fields()[23], other.reasonCode)) {
-        this.reasonCode = data().deepCopy(fields()[23].schema(), other.reasonCode);
+      this.asserterBuilder = null;
+      if (isValidValue(fields()[23], other.location)) {
+        this.location = data().deepCopy(fields()[23].schema(), other.location);
         fieldSetFlags()[23] = true;
       }
-      if (isValidValue(fields()[24], other.reasonReference)) {
-        this.reasonReference = data().deepCopy(fields()[24].schema(), other.reasonReference);
+      this.locationBuilder = null;
+      if (isValidValue(fields()[24], other.reasonCode)) {
+        this.reasonCode = data().deepCopy(fields()[24].schema(), other.reasonCode);
         fieldSetFlags()[24] = true;
       }
-      if (isValidValue(fields()[25], other.bodySite)) {
-        this.bodySite = data().deepCopy(fields()[25].schema(), other.bodySite);
+      if (isValidValue(fields()[25], other.reasonReference)) {
+        this.reasonReference = data().deepCopy(fields()[25].schema(), other.reasonReference);
         fieldSetFlags()[25] = true;
       }
-      if (isValidValue(fields()[26], other.outcome)) {
-        this.outcome = data().deepCopy(fields()[26].schema(), other.outcome);
+      if (isValidValue(fields()[26], other.bodySite)) {
+        this.bodySite = data().deepCopy(fields()[26].schema(), other.bodySite);
         fieldSetFlags()[26] = true;
       }
-      this.outcomeBuilder = null;
-      if (isValidValue(fields()[27], other.report)) {
-        this.report = data().deepCopy(fields()[27].schema(), other.report);
+      if (isValidValue(fields()[27], other.outcome)) {
+        this.outcome = data().deepCopy(fields()[27].schema(), other.outcome);
         fieldSetFlags()[27] = true;
       }
-      if (isValidValue(fields()[28], other.complication)) {
-        this.complication = data().deepCopy(fields()[28].schema(), other.complication);
+      this.outcomeBuilder = null;
+      if (isValidValue(fields()[28], other.report)) {
+        this.report = data().deepCopy(fields()[28].schema(), other.report);
         fieldSetFlags()[28] = true;
       }
-      if (isValidValue(fields()[29], other.complicationDetail)) {
-        this.complicationDetail = data().deepCopy(fields()[29].schema(), other.complicationDetail);
+      if (isValidValue(fields()[29], other.complication)) {
+        this.complication = data().deepCopy(fields()[29].schema(), other.complication);
         fieldSetFlags()[29] = true;
       }
-      if (isValidValue(fields()[30], other.followUp)) {
-        this.followUp = data().deepCopy(fields()[30].schema(), other.followUp);
+      if (isValidValue(fields()[30], other.complicationDetail)) {
+        this.complicationDetail = data().deepCopy(fields()[30].schema(), other.complicationDetail);
         fieldSetFlags()[30] = true;
       }
-      if (isValidValue(fields()[31], other.usedReference)) {
-        this.usedReference = data().deepCopy(fields()[31].schema(), other.usedReference);
+      if (isValidValue(fields()[31], other.followUp)) {
+        this.followUp = data().deepCopy(fields()[31].schema(), other.followUp);
         fieldSetFlags()[31] = true;
       }
-      if (isValidValue(fields()[32], other.usedCode)) {
-        this.usedCode = data().deepCopy(fields()[32].schema(), other.usedCode);
+      if (isValidValue(fields()[32], other.usedReference)) {
+        this.usedReference = data().deepCopy(fields()[32].schema(), other.usedReference);
         fieldSetFlags()[32] = true;
+      }
+      if (isValidValue(fields()[33], other.usedCode)) {
+        this.usedCode = data().deepCopy(fields()[33].schema(), other.usedCode);
+        fieldSetFlags()[33] = true;
       }
     }
 
@@ -1413,6 +1444,46 @@ static {
     }
 
     /**
+      * Gets the value of the 'identifier' field.
+      * @return The value.
+      */
+    public java.util.List<io.carrera.fhir.avro.models.identifier_record> getIdentifier() {
+      return identifier;
+    }
+
+
+    /**
+      * Sets the value of the 'identifier' field.
+      * @param value The value of 'identifier'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Procedure.Builder setIdentifier(java.util.List<io.carrera.fhir.avro.models.identifier_record> value) {
+      validate(fields()[4], value);
+      this.identifier = value;
+      fieldSetFlags()[4] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'identifier' field has been set.
+      * @return True if the 'identifier' field has been set, false otherwise.
+      */
+    public boolean hasIdentifier() {
+      return fieldSetFlags()[4];
+    }
+
+
+    /**
+      * Clears the value of the 'identifier' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Procedure.Builder clearIdentifier() {
+      identifier = null;
+      fieldSetFlags()[4] = false;
+      return this;
+    }
+
+    /**
       * Gets the value of the 'extension' field.
       * @return The value.
       */
@@ -1427,9 +1498,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-      validate(fields()[4], value);
+      validate(fields()[5], value);
       this.extension = value;
-      fieldSetFlags()[4] = true;
+      fieldSetFlags()[5] = true;
       return this;
     }
 
@@ -1438,7 +1509,7 @@ static {
       * @return True if the 'extension' field has been set, false otherwise.
       */
     public boolean hasExtension() {
-      return fieldSetFlags()[4];
+      return fieldSetFlags()[5];
     }
 
 
@@ -1448,7 +1519,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearExtension() {
       extension = null;
-      fieldSetFlags()[4] = false;
+      fieldSetFlags()[5] = false;
       return this;
     }
 
@@ -1467,9 +1538,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setModifierExtension(java.util.List<io.carrera.fhir.avro.models.Extension> value) {
-      validate(fields()[5], value);
+      validate(fields()[6], value);
       this.modifierExtension = value;
-      fieldSetFlags()[5] = true;
+      fieldSetFlags()[6] = true;
       return this;
     }
 
@@ -1478,7 +1549,7 @@ static {
       * @return True if the 'modifierExtension' field has been set, false otherwise.
       */
     public boolean hasModifierExtension() {
-      return fieldSetFlags()[5];
+      return fieldSetFlags()[6];
     }
 
 
@@ -1488,7 +1559,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearModifierExtension() {
       modifierExtension = null;
-      fieldSetFlags()[5] = false;
+      fieldSetFlags()[6] = false;
       return this;
     }
 
@@ -1507,9 +1578,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setInstantiatesCanonical(java.util.List<java.lang.CharSequence> value) {
-      validate(fields()[6], value);
+      validate(fields()[7], value);
       this.instantiatesCanonical = value;
-      fieldSetFlags()[6] = true;
+      fieldSetFlags()[7] = true;
       return this;
     }
 
@@ -1518,7 +1589,7 @@ static {
       * @return True if the 'instantiatesCanonical' field has been set, false otherwise.
       */
     public boolean hasInstantiatesCanonical() {
-      return fieldSetFlags()[6];
+      return fieldSetFlags()[7];
     }
 
 
@@ -1528,7 +1599,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearInstantiatesCanonical() {
       instantiatesCanonical = null;
-      fieldSetFlags()[6] = false;
+      fieldSetFlags()[7] = false;
       return this;
     }
 
@@ -1547,9 +1618,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setInstantiatesUri(java.util.List<java.lang.CharSequence> value) {
-      validate(fields()[7], value);
+      validate(fields()[8], value);
       this.instantiatesUri = value;
-      fieldSetFlags()[7] = true;
+      fieldSetFlags()[8] = true;
       return this;
     }
 
@@ -1558,7 +1629,7 @@ static {
       * @return True if the 'instantiatesUri' field has been set, false otherwise.
       */
     public boolean hasInstantiatesUri() {
-      return fieldSetFlags()[7];
+      return fieldSetFlags()[8];
     }
 
 
@@ -1568,7 +1639,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearInstantiatesUri() {
       instantiatesUri = null;
-      fieldSetFlags()[7] = false;
+      fieldSetFlags()[8] = false;
       return this;
     }
 
@@ -1587,9 +1658,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setBasedOn(java.util.List<io.carrera.fhir.avro.models.Reference> value) {
-      validate(fields()[8], value);
+      validate(fields()[9], value);
       this.basedOn = value;
-      fieldSetFlags()[8] = true;
+      fieldSetFlags()[9] = true;
       return this;
     }
 
@@ -1598,7 +1669,7 @@ static {
       * @return True if the 'basedOn' field has been set, false otherwise.
       */
     public boolean hasBasedOn() {
-      return fieldSetFlags()[8];
+      return fieldSetFlags()[9];
     }
 
 
@@ -1608,7 +1679,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearBasedOn() {
       basedOn = null;
-      fieldSetFlags()[8] = false;
+      fieldSetFlags()[9] = false;
       return this;
     }
 
@@ -1627,9 +1698,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setPartOf(java.util.List<io.carrera.fhir.avro.models.Reference> value) {
-      validate(fields()[9], value);
+      validate(fields()[10], value);
       this.partOf = value;
-      fieldSetFlags()[9] = true;
+      fieldSetFlags()[10] = true;
       return this;
     }
 
@@ -1638,7 +1709,7 @@ static {
       * @return True if the 'partOf' field has been set, false otherwise.
       */
     public boolean hasPartOf() {
-      return fieldSetFlags()[9];
+      return fieldSetFlags()[10];
     }
 
 
@@ -1648,7 +1719,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearPartOf() {
       partOf = null;
-      fieldSetFlags()[9] = false;
+      fieldSetFlags()[10] = false;
       return this;
     }
 
@@ -1667,9 +1738,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setStatus(java.lang.Object value) {
-      validate(fields()[10], value);
+      validate(fields()[11], value);
       this.status = value;
-      fieldSetFlags()[10] = true;
+      fieldSetFlags()[11] = true;
       return this;
     }
 
@@ -1678,7 +1749,7 @@ static {
       * @return True if the 'status' field has been set, false otherwise.
       */
     public boolean hasStatus() {
-      return fieldSetFlags()[10];
+      return fieldSetFlags()[11];
     }
 
 
@@ -1688,7 +1759,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearStatus() {
       status = null;
-      fieldSetFlags()[10] = false;
+      fieldSetFlags()[11] = false;
       return this;
     }
 
@@ -1707,10 +1778,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setStatusReason(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[11], value);
+      validate(fields()[12], value);
       this.statusReasonBuilder = null;
       this.statusReason = value;
-      fieldSetFlags()[11] = true;
+      fieldSetFlags()[12] = true;
       return this;
     }
 
@@ -1719,7 +1790,7 @@ static {
       * @return True if the 'statusReason' field has been set, false otherwise.
       */
     public boolean hasStatusReason() {
-      return fieldSetFlags()[11];
+      return fieldSetFlags()[12];
     }
 
     /**
@@ -1764,7 +1835,7 @@ static {
     public io.carrera.fhir.avro.models.Procedure.Builder clearStatusReason() {
       statusReason = null;
       statusReasonBuilder = null;
-      fieldSetFlags()[11] = false;
+      fieldSetFlags()[12] = false;
       return this;
     }
 
@@ -1783,10 +1854,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setCategory(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[12], value);
+      validate(fields()[13], value);
       this.categoryBuilder = null;
       this.category = value;
-      fieldSetFlags()[12] = true;
+      fieldSetFlags()[13] = true;
       return this;
     }
 
@@ -1795,7 +1866,7 @@ static {
       * @return True if the 'category' field has been set, false otherwise.
       */
     public boolean hasCategory() {
-      return fieldSetFlags()[12];
+      return fieldSetFlags()[13];
     }
 
     /**
@@ -1840,7 +1911,7 @@ static {
     public io.carrera.fhir.avro.models.Procedure.Builder clearCategory() {
       category = null;
       categoryBuilder = null;
-      fieldSetFlags()[12] = false;
+      fieldSetFlags()[13] = false;
       return this;
     }
 
@@ -1859,10 +1930,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setCode(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[13], value);
+      validate(fields()[14], value);
       this.codeBuilder = null;
       this.code = value;
-      fieldSetFlags()[13] = true;
+      fieldSetFlags()[14] = true;
       return this;
     }
 
@@ -1871,7 +1942,7 @@ static {
       * @return True if the 'code' field has been set, false otherwise.
       */
     public boolean hasCode() {
-      return fieldSetFlags()[13];
+      return fieldSetFlags()[14];
     }
 
     /**
@@ -1916,7 +1987,7 @@ static {
     public io.carrera.fhir.avro.models.Procedure.Builder clearCode() {
       code = null;
       codeBuilder = null;
-      fieldSetFlags()[13] = false;
+      fieldSetFlags()[14] = false;
       return this;
     }
 
@@ -1935,10 +2006,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setSubject(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[14], value);
+      validate(fields()[15], value);
       this.subjectBuilder = null;
       this.subject = value;
-      fieldSetFlags()[14] = true;
+      fieldSetFlags()[15] = true;
       return this;
     }
 
@@ -1947,7 +2018,7 @@ static {
       * @return True if the 'subject' field has been set, false otherwise.
       */
     public boolean hasSubject() {
-      return fieldSetFlags()[14];
+      return fieldSetFlags()[15];
     }
 
     /**
@@ -1992,7 +2063,7 @@ static {
     public io.carrera.fhir.avro.models.Procedure.Builder clearSubject() {
       subject = null;
       subjectBuilder = null;
-      fieldSetFlags()[14] = false;
+      fieldSetFlags()[15] = false;
       return this;
     }
 
@@ -2011,10 +2082,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setEncounter(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[15], value);
+      validate(fields()[16], value);
       this.encounterBuilder = null;
       this.encounter = value;
-      fieldSetFlags()[15] = true;
+      fieldSetFlags()[16] = true;
       return this;
     }
 
@@ -2023,7 +2094,7 @@ static {
       * @return True if the 'encounter' field has been set, false otherwise.
       */
     public boolean hasEncounter() {
-      return fieldSetFlags()[15];
+      return fieldSetFlags()[16];
     }
 
     /**
@@ -2068,7 +2139,7 @@ static {
     public io.carrera.fhir.avro.models.Procedure.Builder clearEncounter() {
       encounter = null;
       encounterBuilder = null;
-      fieldSetFlags()[15] = false;
+      fieldSetFlags()[16] = false;
       return this;
     }
 
@@ -2087,10 +2158,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setPerformedDateTime(io.carrera.fhir.avro.models.DateTime value) {
-      validate(fields()[16], value);
+      validate(fields()[17], value);
       this.performedDateTimeBuilder = null;
       this.performedDateTime = value;
-      fieldSetFlags()[16] = true;
+      fieldSetFlags()[17] = true;
       return this;
     }
 
@@ -2099,7 +2170,7 @@ static {
       * @return True if the 'performedDateTime' field has been set, false otherwise.
       */
     public boolean hasPerformedDateTime() {
-      return fieldSetFlags()[16];
+      return fieldSetFlags()[17];
     }
 
     /**
@@ -2144,7 +2215,7 @@ static {
     public io.carrera.fhir.avro.models.Procedure.Builder clearPerformedDateTime() {
       performedDateTime = null;
       performedDateTimeBuilder = null;
-      fieldSetFlags()[16] = false;
+      fieldSetFlags()[17] = false;
       return this;
     }
 
@@ -2163,10 +2234,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setPerformedPeriod(io.carrera.fhir.avro.models.Period value) {
-      validate(fields()[17], value);
+      validate(fields()[18], value);
       this.performedPeriodBuilder = null;
       this.performedPeriod = value;
-      fieldSetFlags()[17] = true;
+      fieldSetFlags()[18] = true;
       return this;
     }
 
@@ -2175,7 +2246,7 @@ static {
       * @return True if the 'performedPeriod' field has been set, false otherwise.
       */
     public boolean hasPerformedPeriod() {
-      return fieldSetFlags()[17];
+      return fieldSetFlags()[18];
     }
 
     /**
@@ -2220,7 +2291,7 @@ static {
     public io.carrera.fhir.avro.models.Procedure.Builder clearPerformedPeriod() {
       performedPeriod = null;
       performedPeriodBuilder = null;
-      fieldSetFlags()[17] = false;
+      fieldSetFlags()[18] = false;
       return this;
     }
 
@@ -2239,9 +2310,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setPerformedString(java.lang.CharSequence value) {
-      validate(fields()[18], value);
+      validate(fields()[19], value);
       this.performedString = value;
-      fieldSetFlags()[18] = true;
+      fieldSetFlags()[19] = true;
       return this;
     }
 
@@ -2250,7 +2321,7 @@ static {
       * @return True if the 'performedString' field has been set, false otherwise.
       */
     public boolean hasPerformedString() {
-      return fieldSetFlags()[18];
+      return fieldSetFlags()[19];
     }
 
 
@@ -2260,7 +2331,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearPerformedString() {
       performedString = null;
-      fieldSetFlags()[18] = false;
+      fieldSetFlags()[19] = false;
       return this;
     }
 
@@ -2279,10 +2350,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setPerformedRange(io.carrera.fhir.avro.models.Range value) {
-      validate(fields()[19], value);
+      validate(fields()[20], value);
       this.performedRangeBuilder = null;
       this.performedRange = value;
-      fieldSetFlags()[19] = true;
+      fieldSetFlags()[20] = true;
       return this;
     }
 
@@ -2291,7 +2362,7 @@ static {
       * @return True if the 'performedRange' field has been set, false otherwise.
       */
     public boolean hasPerformedRange() {
-      return fieldSetFlags()[19];
+      return fieldSetFlags()[20];
     }
 
     /**
@@ -2336,7 +2407,7 @@ static {
     public io.carrera.fhir.avro.models.Procedure.Builder clearPerformedRange() {
       performedRange = null;
       performedRangeBuilder = null;
-      fieldSetFlags()[19] = false;
+      fieldSetFlags()[20] = false;
       return this;
     }
 
@@ -2355,10 +2426,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setRecorder(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[20], value);
+      validate(fields()[21], value);
       this.recorderBuilder = null;
       this.recorder = value;
-      fieldSetFlags()[20] = true;
+      fieldSetFlags()[21] = true;
       return this;
     }
 
@@ -2367,7 +2438,7 @@ static {
       * @return True if the 'recorder' field has been set, false otherwise.
       */
     public boolean hasRecorder() {
-      return fieldSetFlags()[20];
+      return fieldSetFlags()[21];
     }
 
     /**
@@ -2412,7 +2483,7 @@ static {
     public io.carrera.fhir.avro.models.Procedure.Builder clearRecorder() {
       recorder = null;
       recorderBuilder = null;
-      fieldSetFlags()[20] = false;
+      fieldSetFlags()[21] = false;
       return this;
     }
 
@@ -2431,10 +2502,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setAsserter(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[21], value);
+      validate(fields()[22], value);
       this.asserterBuilder = null;
       this.asserter = value;
-      fieldSetFlags()[21] = true;
+      fieldSetFlags()[22] = true;
       return this;
     }
 
@@ -2443,7 +2514,7 @@ static {
       * @return True if the 'asserter' field has been set, false otherwise.
       */
     public boolean hasAsserter() {
-      return fieldSetFlags()[21];
+      return fieldSetFlags()[22];
     }
 
     /**
@@ -2488,7 +2559,7 @@ static {
     public io.carrera.fhir.avro.models.Procedure.Builder clearAsserter() {
       asserter = null;
       asserterBuilder = null;
-      fieldSetFlags()[21] = false;
+      fieldSetFlags()[22] = false;
       return this;
     }
 
@@ -2507,10 +2578,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setLocation(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[22], value);
+      validate(fields()[23], value);
       this.locationBuilder = null;
       this.location = value;
-      fieldSetFlags()[22] = true;
+      fieldSetFlags()[23] = true;
       return this;
     }
 
@@ -2519,7 +2590,7 @@ static {
       * @return True if the 'location' field has been set, false otherwise.
       */
     public boolean hasLocation() {
-      return fieldSetFlags()[22];
+      return fieldSetFlags()[23];
     }
 
     /**
@@ -2564,7 +2635,7 @@ static {
     public io.carrera.fhir.avro.models.Procedure.Builder clearLocation() {
       location = null;
       locationBuilder = null;
-      fieldSetFlags()[22] = false;
+      fieldSetFlags()[23] = false;
       return this;
     }
 
@@ -2583,9 +2654,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setReasonCode(java.util.List<io.carrera.fhir.avro.models.CodeableConcept> value) {
-      validate(fields()[23], value);
+      validate(fields()[24], value);
       this.reasonCode = value;
-      fieldSetFlags()[23] = true;
+      fieldSetFlags()[24] = true;
       return this;
     }
 
@@ -2594,7 +2665,7 @@ static {
       * @return True if the 'reasonCode' field has been set, false otherwise.
       */
     public boolean hasReasonCode() {
-      return fieldSetFlags()[23];
+      return fieldSetFlags()[24];
     }
 
 
@@ -2604,7 +2675,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearReasonCode() {
       reasonCode = null;
-      fieldSetFlags()[23] = false;
+      fieldSetFlags()[24] = false;
       return this;
     }
 
@@ -2623,9 +2694,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setReasonReference(java.util.List<io.carrera.fhir.avro.models.Reference> value) {
-      validate(fields()[24], value);
+      validate(fields()[25], value);
       this.reasonReference = value;
-      fieldSetFlags()[24] = true;
+      fieldSetFlags()[25] = true;
       return this;
     }
 
@@ -2634,7 +2705,7 @@ static {
       * @return True if the 'reasonReference' field has been set, false otherwise.
       */
     public boolean hasReasonReference() {
-      return fieldSetFlags()[24];
+      return fieldSetFlags()[25];
     }
 
 
@@ -2644,7 +2715,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearReasonReference() {
       reasonReference = null;
-      fieldSetFlags()[24] = false;
+      fieldSetFlags()[25] = false;
       return this;
     }
 
@@ -2663,9 +2734,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setBodySite(java.util.List<io.carrera.fhir.avro.models.CodeableConcept> value) {
-      validate(fields()[25], value);
+      validate(fields()[26], value);
       this.bodySite = value;
-      fieldSetFlags()[25] = true;
+      fieldSetFlags()[26] = true;
       return this;
     }
 
@@ -2674,7 +2745,7 @@ static {
       * @return True if the 'bodySite' field has been set, false otherwise.
       */
     public boolean hasBodySite() {
-      return fieldSetFlags()[25];
+      return fieldSetFlags()[26];
     }
 
 
@@ -2684,7 +2755,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearBodySite() {
       bodySite = null;
-      fieldSetFlags()[25] = false;
+      fieldSetFlags()[26] = false;
       return this;
     }
 
@@ -2703,10 +2774,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setOutcome(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[26], value);
+      validate(fields()[27], value);
       this.outcomeBuilder = null;
       this.outcome = value;
-      fieldSetFlags()[26] = true;
+      fieldSetFlags()[27] = true;
       return this;
     }
 
@@ -2715,7 +2786,7 @@ static {
       * @return True if the 'outcome' field has been set, false otherwise.
       */
     public boolean hasOutcome() {
-      return fieldSetFlags()[26];
+      return fieldSetFlags()[27];
     }
 
     /**
@@ -2760,7 +2831,7 @@ static {
     public io.carrera.fhir.avro.models.Procedure.Builder clearOutcome() {
       outcome = null;
       outcomeBuilder = null;
-      fieldSetFlags()[26] = false;
+      fieldSetFlags()[27] = false;
       return this;
     }
 
@@ -2779,9 +2850,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setReport(java.util.List<io.carrera.fhir.avro.models.Reference> value) {
-      validate(fields()[27], value);
+      validate(fields()[28], value);
       this.report = value;
-      fieldSetFlags()[27] = true;
+      fieldSetFlags()[28] = true;
       return this;
     }
 
@@ -2790,7 +2861,7 @@ static {
       * @return True if the 'report' field has been set, false otherwise.
       */
     public boolean hasReport() {
-      return fieldSetFlags()[27];
+      return fieldSetFlags()[28];
     }
 
 
@@ -2800,7 +2871,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearReport() {
       report = null;
-      fieldSetFlags()[27] = false;
+      fieldSetFlags()[28] = false;
       return this;
     }
 
@@ -2819,9 +2890,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setComplication(java.util.List<io.carrera.fhir.avro.models.CodeableConcept> value) {
-      validate(fields()[28], value);
+      validate(fields()[29], value);
       this.complication = value;
-      fieldSetFlags()[28] = true;
+      fieldSetFlags()[29] = true;
       return this;
     }
 
@@ -2830,7 +2901,7 @@ static {
       * @return True if the 'complication' field has been set, false otherwise.
       */
     public boolean hasComplication() {
-      return fieldSetFlags()[28];
+      return fieldSetFlags()[29];
     }
 
 
@@ -2840,7 +2911,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearComplication() {
       complication = null;
-      fieldSetFlags()[28] = false;
+      fieldSetFlags()[29] = false;
       return this;
     }
 
@@ -2859,9 +2930,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setComplicationDetail(java.util.List<io.carrera.fhir.avro.models.Reference> value) {
-      validate(fields()[29], value);
+      validate(fields()[30], value);
       this.complicationDetail = value;
-      fieldSetFlags()[29] = true;
+      fieldSetFlags()[30] = true;
       return this;
     }
 
@@ -2870,7 +2941,7 @@ static {
       * @return True if the 'complicationDetail' field has been set, false otherwise.
       */
     public boolean hasComplicationDetail() {
-      return fieldSetFlags()[29];
+      return fieldSetFlags()[30];
     }
 
 
@@ -2880,7 +2951,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearComplicationDetail() {
       complicationDetail = null;
-      fieldSetFlags()[29] = false;
+      fieldSetFlags()[30] = false;
       return this;
     }
 
@@ -2899,9 +2970,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setFollowUp(java.util.List<io.carrera.fhir.avro.models.CodeableConcept> value) {
-      validate(fields()[30], value);
+      validate(fields()[31], value);
       this.followUp = value;
-      fieldSetFlags()[30] = true;
+      fieldSetFlags()[31] = true;
       return this;
     }
 
@@ -2910,7 +2981,7 @@ static {
       * @return True if the 'followUp' field has been set, false otherwise.
       */
     public boolean hasFollowUp() {
-      return fieldSetFlags()[30];
+      return fieldSetFlags()[31];
     }
 
 
@@ -2920,7 +2991,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearFollowUp() {
       followUp = null;
-      fieldSetFlags()[30] = false;
+      fieldSetFlags()[31] = false;
       return this;
     }
 
@@ -2939,9 +3010,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setUsedReference(java.util.List<io.carrera.fhir.avro.models.Reference> value) {
-      validate(fields()[31], value);
+      validate(fields()[32], value);
       this.usedReference = value;
-      fieldSetFlags()[31] = true;
+      fieldSetFlags()[32] = true;
       return this;
     }
 
@@ -2950,7 +3021,7 @@ static {
       * @return True if the 'usedReference' field has been set, false otherwise.
       */
     public boolean hasUsedReference() {
-      return fieldSetFlags()[31];
+      return fieldSetFlags()[32];
     }
 
 
@@ -2960,7 +3031,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearUsedReference() {
       usedReference = null;
-      fieldSetFlags()[31] = false;
+      fieldSetFlags()[32] = false;
       return this;
     }
 
@@ -2979,9 +3050,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Procedure.Builder setUsedCode(java.util.List<io.carrera.fhir.avro.models.CodeableConcept> value) {
-      validate(fields()[32], value);
+      validate(fields()[33], value);
       this.usedCode = value;
-      fieldSetFlags()[32] = true;
+      fieldSetFlags()[33] = true;
       return this;
     }
 
@@ -2990,7 +3061,7 @@ static {
       * @return True if the 'usedCode' field has been set, false otherwise.
       */
     public boolean hasUsedCode() {
-      return fieldSetFlags()[32];
+      return fieldSetFlags()[33];
     }
 
 
@@ -3000,7 +3071,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Procedure.Builder clearUsedCode() {
       usedCode = null;
-      fieldSetFlags()[32] = false;
+      fieldSetFlags()[33] = false;
       return this;
     }
 
@@ -3013,13 +3084,14 @@ static {
         record.id = fieldSetFlags()[1] ? this.id : (java.lang.CharSequence) defaultValue(fields()[1]);
         record.implicitRules = fieldSetFlags()[2] ? this.implicitRules : (java.lang.CharSequence) defaultValue(fields()[2]);
         record.language = fieldSetFlags()[3] ? this.language : (java.lang.CharSequence) defaultValue(fields()[3]);
-        record.extension = fieldSetFlags()[4] ? this.extension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[4]);
-        record.modifierExtension = fieldSetFlags()[5] ? this.modifierExtension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[5]);
-        record.instantiatesCanonical = fieldSetFlags()[6] ? this.instantiatesCanonical : (java.util.List<java.lang.CharSequence>) defaultValue(fields()[6]);
-        record.instantiatesUri = fieldSetFlags()[7] ? this.instantiatesUri : (java.util.List<java.lang.CharSequence>) defaultValue(fields()[7]);
-        record.basedOn = fieldSetFlags()[8] ? this.basedOn : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[8]);
-        record.partOf = fieldSetFlags()[9] ? this.partOf : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[9]);
-        record.status = fieldSetFlags()[10] ? this.status :  defaultValue(fields()[10]);
+        record.identifier = fieldSetFlags()[4] ? this.identifier : (java.util.List<io.carrera.fhir.avro.models.identifier_record>) defaultValue(fields()[4]);
+        record.extension = fieldSetFlags()[5] ? this.extension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[5]);
+        record.modifierExtension = fieldSetFlags()[6] ? this.modifierExtension : (java.util.List<io.carrera.fhir.avro.models.Extension>) defaultValue(fields()[6]);
+        record.instantiatesCanonical = fieldSetFlags()[7] ? this.instantiatesCanonical : (java.util.List<java.lang.CharSequence>) defaultValue(fields()[7]);
+        record.instantiatesUri = fieldSetFlags()[8] ? this.instantiatesUri : (java.util.List<java.lang.CharSequence>) defaultValue(fields()[8]);
+        record.basedOn = fieldSetFlags()[9] ? this.basedOn : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[9]);
+        record.partOf = fieldSetFlags()[10] ? this.partOf : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[10]);
+        record.status = fieldSetFlags()[11] ? this.status :  defaultValue(fields()[11]);
         if (statusReasonBuilder != null) {
           try {
             record.statusReason = this.statusReasonBuilder.build();
@@ -3028,7 +3100,7 @@ static {
             throw e;
           }
         } else {
-          record.statusReason = fieldSetFlags()[11] ? this.statusReason : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[11]);
+          record.statusReason = fieldSetFlags()[12] ? this.statusReason : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[12]);
         }
         if (categoryBuilder != null) {
           try {
@@ -3038,7 +3110,7 @@ static {
             throw e;
           }
         } else {
-          record.category = fieldSetFlags()[12] ? this.category : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[12]);
+          record.category = fieldSetFlags()[13] ? this.category : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[13]);
         }
         if (codeBuilder != null) {
           try {
@@ -3048,7 +3120,7 @@ static {
             throw e;
           }
         } else {
-          record.code = fieldSetFlags()[13] ? this.code : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[13]);
+          record.code = fieldSetFlags()[14] ? this.code : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[14]);
         }
         if (subjectBuilder != null) {
           try {
@@ -3058,7 +3130,7 @@ static {
             throw e;
           }
         } else {
-          record.subject = fieldSetFlags()[14] ? this.subject : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[14]);
+          record.subject = fieldSetFlags()[15] ? this.subject : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[15]);
         }
         if (encounterBuilder != null) {
           try {
@@ -3068,7 +3140,7 @@ static {
             throw e;
           }
         } else {
-          record.encounter = fieldSetFlags()[15] ? this.encounter : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[15]);
+          record.encounter = fieldSetFlags()[16] ? this.encounter : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[16]);
         }
         if (performedDateTimeBuilder != null) {
           try {
@@ -3078,7 +3150,7 @@ static {
             throw e;
           }
         } else {
-          record.performedDateTime = fieldSetFlags()[16] ? this.performedDateTime : (io.carrera.fhir.avro.models.DateTime) defaultValue(fields()[16]);
+          record.performedDateTime = fieldSetFlags()[17] ? this.performedDateTime : (io.carrera.fhir.avro.models.DateTime) defaultValue(fields()[17]);
         }
         if (performedPeriodBuilder != null) {
           try {
@@ -3088,9 +3160,9 @@ static {
             throw e;
           }
         } else {
-          record.performedPeriod = fieldSetFlags()[17] ? this.performedPeriod : (io.carrera.fhir.avro.models.Period) defaultValue(fields()[17]);
+          record.performedPeriod = fieldSetFlags()[18] ? this.performedPeriod : (io.carrera.fhir.avro.models.Period) defaultValue(fields()[18]);
         }
-        record.performedString = fieldSetFlags()[18] ? this.performedString : (java.lang.CharSequence) defaultValue(fields()[18]);
+        record.performedString = fieldSetFlags()[19] ? this.performedString : (java.lang.CharSequence) defaultValue(fields()[19]);
         if (performedRangeBuilder != null) {
           try {
             record.performedRange = this.performedRangeBuilder.build();
@@ -3099,7 +3171,7 @@ static {
             throw e;
           }
         } else {
-          record.performedRange = fieldSetFlags()[19] ? this.performedRange : (io.carrera.fhir.avro.models.Range) defaultValue(fields()[19]);
+          record.performedRange = fieldSetFlags()[20] ? this.performedRange : (io.carrera.fhir.avro.models.Range) defaultValue(fields()[20]);
         }
         if (recorderBuilder != null) {
           try {
@@ -3109,7 +3181,7 @@ static {
             throw e;
           }
         } else {
-          record.recorder = fieldSetFlags()[20] ? this.recorder : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[20]);
+          record.recorder = fieldSetFlags()[21] ? this.recorder : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[21]);
         }
         if (asserterBuilder != null) {
           try {
@@ -3119,7 +3191,7 @@ static {
             throw e;
           }
         } else {
-          record.asserter = fieldSetFlags()[21] ? this.asserter : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[21]);
+          record.asserter = fieldSetFlags()[22] ? this.asserter : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[22]);
         }
         if (locationBuilder != null) {
           try {
@@ -3129,11 +3201,11 @@ static {
             throw e;
           }
         } else {
-          record.location = fieldSetFlags()[22] ? this.location : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[22]);
+          record.location = fieldSetFlags()[23] ? this.location : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[23]);
         }
-        record.reasonCode = fieldSetFlags()[23] ? this.reasonCode : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[23]);
-        record.reasonReference = fieldSetFlags()[24] ? this.reasonReference : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[24]);
-        record.bodySite = fieldSetFlags()[25] ? this.bodySite : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[25]);
+        record.reasonCode = fieldSetFlags()[24] ? this.reasonCode : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[24]);
+        record.reasonReference = fieldSetFlags()[25] ? this.reasonReference : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[25]);
+        record.bodySite = fieldSetFlags()[26] ? this.bodySite : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[26]);
         if (outcomeBuilder != null) {
           try {
             record.outcome = this.outcomeBuilder.build();
@@ -3142,14 +3214,14 @@ static {
             throw e;
           }
         } else {
-          record.outcome = fieldSetFlags()[26] ? this.outcome : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[26]);
+          record.outcome = fieldSetFlags()[27] ? this.outcome : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[27]);
         }
-        record.report = fieldSetFlags()[27] ? this.report : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[27]);
-        record.complication = fieldSetFlags()[28] ? this.complication : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[28]);
-        record.complicationDetail = fieldSetFlags()[29] ? this.complicationDetail : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[29]);
-        record.followUp = fieldSetFlags()[30] ? this.followUp : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[30]);
-        record.usedReference = fieldSetFlags()[31] ? this.usedReference : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[31]);
-        record.usedCode = fieldSetFlags()[32] ? this.usedCode : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[32]);
+        record.report = fieldSetFlags()[28] ? this.report : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[28]);
+        record.complication = fieldSetFlags()[29] ? this.complication : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[29]);
+        record.complicationDetail = fieldSetFlags()[30] ? this.complicationDetail : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[30]);
+        record.followUp = fieldSetFlags()[31] ? this.followUp : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[31]);
+        record.usedReference = fieldSetFlags()[32] ? this.usedReference : (java.util.List<io.carrera.fhir.avro.models.Reference>) defaultValue(fields()[32]);
+        record.usedCode = fieldSetFlags()[33] ? this.usedCode : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[33]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;

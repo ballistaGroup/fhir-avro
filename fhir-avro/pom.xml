@@ -41,13 +41,14 @@
             <import>${project.basedir}/src/main/avro/XsYearMonth.avsc</import>
             <import>${project.basedir}/src/main/avro/Instant.avsc</import>
             <import>${project.basedir}/src/main/avro/DateTime.avsc</import>
-            <import>${project.basedir}/src/main/avro/Period.avsc</import>
             <import>${project.basedir}/src/main/avro/Decimal.avsc</import>
             <import>${project.basedir}/src/main/avro/Quantity.avsc</import>
             <import>${project.basedir}/src/main/avro/Coding.avsc</import>
             <import>${project.basedir}/src/main/avro/Extension.avsc</import>
             <import>${project.basedir}/src/main/avro/CodeableConcept.avsc</import>
             <import>${project.basedir}/src/main/avro/Reference.avsc</import>
+            <import>${project.basedir}/src/main/avro/Period.avsc</import>
+            <import>${project.basedir}/src/main/avro/Range.avsc</import>
             <import>${project.basedir}/src/main/avro/DiagnosticReport.avsc</import>
             <import>${project.basedir}/src/main/avro/SimpleCode.avsc</import>
             <import>${project.basedir}/src/main/avro/ValueSetPointer.avsc</import>
@@ -62,7 +63,6 @@
             <import>${project.basedir}/src/main/avro/AllergyIntolerance_Reaction.avsc</import>
             <import>${project.basedir}/src/main/avro/AllergyIntolerance.avsc</import>
             <import>${project.basedir}/src/main/avro/Observation.avsc</import>
-            <import>${project.basedir}/src/main/avro/Range.avsc</import>
             <import>${project.basedir}/src/main/avro/Ratio.avsc</import>
             <import>${project.basedir}/src/main/avro/Goal_Target.avsc</import>
             <import>${project.basedir}/src/main/avro/Goal.avsc</import>
@@ -75,6 +75,8 @@
             <import>${project.basedir}/src/main/avro/MedicationAdministration.avsc</import>
             <import>${project.basedir}/src/main/avro/EncounterDiagnosis.avsc</import>
             <import>${project.basedir}/src/main/avro/Encounter.avsc</import>
+            <import>${project.basedir}/src/main/avro/ClaimResponse.avsc</import>
+            <import>${project.basedir}/src/main/avro/Immunization.avsc</import>
         </imports>
       </configuration>
     </execution>

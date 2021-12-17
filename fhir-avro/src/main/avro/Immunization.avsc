@@ -1,0 +1,48 @@
+{
+    "type": "record",
+    "name": "Immunization",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "resourceType",
+            "type": "string"
+        },
+        {
+            "name": "id",
+            "type": [ "null", "string" ],
+            "default": null
+        },
+        {
+            "name": "identifier",
+            "type": ["null",{
+                "type": "array",
+                "items": "identifier_record"
+              }],
+              "default": null
+        },
+        {
+            "name": "status",
+            "type": "string"
+        },
+        {
+            "name": "vaccineCode",
+            "type": "CodeableConcept"
+        },
+        {
+            "name": "patient",
+            "type": "Reference"
+        },
+        {
+            "name" : "occurrence",
+            "type" : ["io.carrera.fhir.avro.models.DateTime", "string"]
+          },
+              {
+            "name": "doseNumberPositiveInt",
+            "type" : "int"
+        },
+        {
+            "name": "doseNumberString",
+            "type" : "string"
+        }
+    ]
+}
