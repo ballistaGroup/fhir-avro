@@ -1,0 +1,16 @@
+{
+    "type": "record",
+    "name": "DocumentReference_Content",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "attachment",
+            "type": "Attachment"
+        },
+        {
+            "name": "format",
+            "type": ["null", "Coding"],
+            "default": null
+        }
+    ]
+}

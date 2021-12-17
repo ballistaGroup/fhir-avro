@@ -1,0 +1,22 @@
+{
+    "type": "record",
+    "name": "Attachment",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "id",
+            "type": [ "null", "string" ],
+            "default": null
+        },
+        {
+            "name": "contentType",
+            "type": ["null", "string"],
+            "default": null
+        },
+        {
+            "name": "url",
+            "type": ["null", "string"],
+            "default": null
+        }
+    ]
+}

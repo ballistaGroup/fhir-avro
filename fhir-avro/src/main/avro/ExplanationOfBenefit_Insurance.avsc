@@ -1,0 +1,23 @@
+{
+    "type": "record",
+    "name": "ExplanationOfBenefit_Insurance",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "focal",
+            "type": "boolean"
+        },
+        {
+            "name": "coverage",
+            "type": "Reference"
+        },
+        {
+            "name" : "preAuthRef",
+            "type" : [ "null", {
+              "type" : "array",
+              "items" : "string"
+            } ],
+            "default": null
+        }
+    ]
+}

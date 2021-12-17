@@ -1,0 +1,29 @@
+{
+    "type": "record",
+    "name": "Provenance_Agent",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "type",
+            "type": [ "null", "CodeableConcept" ],
+            "default": null
+        },
+        {
+            "name" : "role",
+            "type" : [ "null", {
+              "type" : "array",
+              "items" : "CodeableConcept"
+            } ],
+            "default": null
+        },
+        {
+            "name": "who",
+            "type": "Reference"
+        },
+        {
+            "name": "onBehalfOf",
+            "type": [ "null", "Reference" ],
+            "default": null
+        }
+    ]
+}
