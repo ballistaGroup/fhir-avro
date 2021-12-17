@@ -77,6 +77,16 @@
             <import>${project.basedir}/src/main/avro/Encounter.avsc</import>
             <import>${project.basedir}/src/main/avro/ClaimResponse.avsc</import>
             <import>${project.basedir}/src/main/avro/Immunization.avsc</import>
+            <import>${project.basedir}/src/main/avro/CarePlan.avsc</import>
+            <import>${project.basedir}/src/main/avro/CareTeam.avsc</import>
+            <import>${project.basedir}/src/main/avro/Attachment.avsc</import>
+            <import>${project.basedir}/src/main/avro/DocumentReference_Content.avsc</import>
+            <import>${project.basedir}/src/main/avro/DocumentReference.avsc</import>
+            <import>${project.basedir}/src/main/avro/ExplanationOfBenefit_Insurance.avsc</import>
+            <import>${project.basedir}/src/main/avro/ExplanationOfBenefit.avsc</import>
+            <import>${project.basedir}/src/main/avro/ImagingStudy.avsc</import>
+            <import>${project.basedir}/src/main/avro/Provenance_Agent.avsc</import>
+            <import>${project.basedir}/src/main/avro/Provenance.avsc</import>
         </imports>
       </configuration>
     </execution>
