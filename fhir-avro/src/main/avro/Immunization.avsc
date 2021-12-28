@@ -29,6 +29,10 @@
             "type": "CodeableConcept"
         },
         {
+            "name": "code",
+            "type": "CodeableConcept"
+        },
+        {
             "name": "patient",
             "type": "Reference"
         },

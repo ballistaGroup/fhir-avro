@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class MedicationDispense extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 3245384193082826584L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MedicationDispense\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"identifier\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"medicationCodeableConcept\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"subject\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}]},{\"name\":\"context\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"quantity\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Decimal\",\"fields\":[{\"name\":\"unscaled_value\",\"type\":\"bytes\",\"logicalType\":\"decimal\"},{\"name\":\"precision\",\"type\":\"int\"},{\"name\":\"scale\",\"type\":\"int\"}]}],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"whenPrepared\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]}],\"default\":null},{\"name\":\"medicationReference\",\"type\":[\"null\",\"Reference\"],\"default\":null}]}");
+  private static final long serialVersionUID = 3735313972568043721L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MedicationDispense\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"identifier\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"identifier_record\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"value\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"medication\",\"type\":[\"CodeableConcept\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}]},{\"name\":\"code\",\"type\":[\"CodeableConcept\",\"Reference\"]},{\"name\":\"subject\",\"type\":[\"null\",\"Reference\"]},{\"name\":\"context\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"quantity\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Decimal\",\"fields\":[{\"name\":\"unscaled_value\",\"type\":\"bytes\",\"logicalType\":\"decimal\"},{\"name\":\"precision\",\"type\":\"int\"},{\"name\":\"scale\",\"type\":\"int\"}]}],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"whenPrepared\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]}],\"default\":null},{\"name\":\"daysSupply\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"whenHandedOver\",\"type\":[\"null\",\"DateTime\"],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -76,16 +76,19 @@ static {
   }
 
    private java.lang.CharSequence resourceType;
-   private java.lang.CharSequence identifier;
+   private java.lang.CharSequence id;
+   private java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier;
    private java.lang.CharSequence status;
    private io.carrera.fhir.avro.models.CodeableConcept category;
-   private io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept;
+   private java.lang.Object medication;
+   private java.lang.Object code;
    private io.carrera.fhir.avro.models.Reference subject;
    private io.carrera.fhir.avro.models.Reference context;
    private io.carrera.fhir.avro.models.CodeableConcept type;
    private io.carrera.fhir.avro.models.Quantity quantity;
    private io.carrera.fhir.avro.models.DateTime whenPrepared;
-   private io.carrera.fhir.avro.models.Reference medicationReference;
+   private io.carrera.fhir.avro.models.Quantity daysSupply;
+   private io.carrera.fhir.avro.models.DateTime whenHandedOver;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -97,29 +100,35 @@ static {
   /**
    * All-args constructor.
    * @param resourceType The new value for resourceType
+   * @param id The new value for id
    * @param identifier The new value for identifier
    * @param status The new value for status
    * @param category The new value for category
-   * @param medicationCodeableConcept The new value for medicationCodeableConcept
+   * @param medication The new value for medication
+   * @param code The new value for code
    * @param subject The new value for subject
    * @param context The new value for context
    * @param type The new value for type
    * @param quantity The new value for quantity
    * @param whenPrepared The new value for whenPrepared
-   * @param medicationReference The new value for medicationReference
+   * @param daysSupply The new value for daysSupply
+   * @param whenHandedOver The new value for whenHandedOver
    */
-  public MedicationDispense(java.lang.CharSequence resourceType, java.lang.CharSequence identifier, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept category, io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference context, io.carrera.fhir.avro.models.CodeableConcept type, io.carrera.fhir.avro.models.Quantity quantity, io.carrera.fhir.avro.models.DateTime whenPrepared, io.carrera.fhir.avro.models.Reference medicationReference) {
+  public MedicationDispense(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept category, java.lang.Object medication, java.lang.Object code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference context, io.carrera.fhir.avro.models.CodeableConcept type, io.carrera.fhir.avro.models.Quantity quantity, io.carrera.fhir.avro.models.DateTime whenPrepared, io.carrera.fhir.avro.models.Quantity daysSupply, io.carrera.fhir.avro.models.DateTime whenHandedOver) {
     this.resourceType = resourceType;
+    this.id = id;
     this.identifier = identifier;
     this.status = status;
     this.category = category;
-    this.medicationCodeableConcept = medicationCodeableConcept;
+    this.medication = medication;
+    this.code = code;
     this.subject = subject;
     this.context = context;
     this.type = type;
     this.quantity = quantity;
     this.whenPrepared = whenPrepared;
-    this.medicationReference = medicationReference;
+    this.daysSupply = daysSupply;
+    this.whenHandedOver = whenHandedOver;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -128,16 +137,19 @@ static {
   public java.lang.Object get(int field$) {
     switch (field$) {
     case 0: return resourceType;
-    case 1: return identifier;
-    case 2: return status;
-    case 3: return category;
-    case 4: return medicationCodeableConcept;
-    case 5: return subject;
-    case 6: return context;
-    case 7: return type;
-    case 8: return quantity;
-    case 9: return whenPrepared;
-    case 10: return medicationReference;
+    case 1: return id;
+    case 2: return identifier;
+    case 3: return status;
+    case 4: return category;
+    case 5: return medication;
+    case 6: return code;
+    case 7: return subject;
+    case 8: return context;
+    case 9: return type;
+    case 10: return quantity;
+    case 11: return whenPrepared;
+    case 12: return daysSupply;
+    case 13: return whenHandedOver;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -147,16 +159,19 @@ static {
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
     case 0: resourceType = (java.lang.CharSequence)value$; break;
-    case 1: identifier = (java.lang.CharSequence)value$; break;
-    case 2: status = (java.lang.CharSequence)value$; break;
-    case 3: category = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 4: medicationCodeableConcept = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 5: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 6: context = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 7: type = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 8: quantity = (io.carrera.fhir.avro.models.Quantity)value$; break;
-    case 9: whenPrepared = (io.carrera.fhir.avro.models.DateTime)value$; break;
-    case 10: medicationReference = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 1: id = (java.lang.CharSequence)value$; break;
+    case 2: identifier = (java.util.List<io.carrera.fhir.avro.models.identifier_record>)value$; break;
+    case 3: status = (java.lang.CharSequence)value$; break;
+    case 4: category = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 5: medication = value$; break;
+    case 6: code = value$; break;
+    case 7: subject = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 8: context = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 9: type = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 10: quantity = (io.carrera.fhir.avro.models.Quantity)value$; break;
+    case 11: whenPrepared = (io.carrera.fhir.avro.models.DateTime)value$; break;
+    case 12: daysSupply = (io.carrera.fhir.avro.models.Quantity)value$; break;
+    case 13: whenHandedOver = (io.carrera.fhir.avro.models.DateTime)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -179,10 +194,27 @@ static {
   }
 
   /**
+   * Gets the value of the 'id' field.
+   * @return The value of the 'id' field.
+   */
+  public java.lang.CharSequence getId() {
+    return id;
+  }
+
+
+  /**
+   * Sets the value of the 'id' field.
+   * @param value the value to set.
+   */
+  public void setId(java.lang.CharSequence value) {
+    this.id = value;
+  }
+
+  /**
    * Gets the value of the 'identifier' field.
    * @return The value of the 'identifier' field.
    */
-  public java.lang.CharSequence getIdentifier() {
+  public java.util.List<io.carrera.fhir.avro.models.identifier_record> getIdentifier() {
     return identifier;
   }
 
@@ -191,7 +223,7 @@ static {
    * Sets the value of the 'identifier' field.
    * @param value the value to set.
    */
-  public void setIdentifier(java.lang.CharSequence value) {
+  public void setIdentifier(java.util.List<io.carrera.fhir.avro.models.identifier_record> value) {
     this.identifier = value;
   }
 
@@ -230,20 +262,37 @@ static {
   }
 
   /**
-   * Gets the value of the 'medicationCodeableConcept' field.
-   * @return The value of the 'medicationCodeableConcept' field.
+   * Gets the value of the 'medication' field.
+   * @return The value of the 'medication' field.
    */
-  public io.carrera.fhir.avro.models.CodeableConcept getMedicationCodeableConcept() {
-    return medicationCodeableConcept;
+  public java.lang.Object getMedication() {
+    return medication;
   }
 
 
   /**
-   * Sets the value of the 'medicationCodeableConcept' field.
+   * Sets the value of the 'medication' field.
    * @param value the value to set.
    */
-  public void setMedicationCodeableConcept(io.carrera.fhir.avro.models.CodeableConcept value) {
-    this.medicationCodeableConcept = value;
+  public void setMedication(java.lang.Object value) {
+    this.medication = value;
+  }
+
+  /**
+   * Gets the value of the 'code' field.
+   * @return The value of the 'code' field.
+   */
+  public java.lang.Object getCode() {
+    return code;
+  }
+
+
+  /**
+   * Sets the value of the 'code' field.
+   * @param value the value to set.
+   */
+  public void setCode(java.lang.Object value) {
+    this.code = value;
   }
 
   /**
@@ -332,20 +381,37 @@ static {
   }
 
   /**
-   * Gets the value of the 'medicationReference' field.
-   * @return The value of the 'medicationReference' field.
+   * Gets the value of the 'daysSupply' field.
+   * @return The value of the 'daysSupply' field.
    */
-  public io.carrera.fhir.avro.models.Reference getMedicationReference() {
-    return medicationReference;
+  public io.carrera.fhir.avro.models.Quantity getDaysSupply() {
+    return daysSupply;
   }
 
 
   /**
-   * Sets the value of the 'medicationReference' field.
+   * Sets the value of the 'daysSupply' field.
    * @param value the value to set.
    */
-  public void setMedicationReference(io.carrera.fhir.avro.models.Reference value) {
-    this.medicationReference = value;
+  public void setDaysSupply(io.carrera.fhir.avro.models.Quantity value) {
+    this.daysSupply = value;
+  }
+
+  /**
+   * Gets the value of the 'whenHandedOver' field.
+   * @return The value of the 'whenHandedOver' field.
+   */
+  public io.carrera.fhir.avro.models.DateTime getWhenHandedOver() {
+    return whenHandedOver;
+  }
+
+
+  /**
+   * Sets the value of the 'whenHandedOver' field.
+   * @param value the value to set.
+   */
+  public void setWhenHandedOver(io.carrera.fhir.avro.models.DateTime value) {
+    this.whenHandedOver = value;
   }
 
   /**
@@ -390,12 +456,13 @@ static {
     implements org.apache.avro.data.RecordBuilder<MedicationDispense> {
 
     private java.lang.CharSequence resourceType;
-    private java.lang.CharSequence identifier;
+    private java.lang.CharSequence id;
+    private java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier;
     private java.lang.CharSequence status;
     private io.carrera.fhir.avro.models.CodeableConcept category;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder categoryBuilder;
-    private io.carrera.fhir.avro.models.CodeableConcept medicationCodeableConcept;
-    private io.carrera.fhir.avro.models.CodeableConcept.Builder medicationCodeableConceptBuilder;
+    private java.lang.Object medication;
+    private java.lang.Object code;
     private io.carrera.fhir.avro.models.Reference subject;
     private io.carrera.fhir.avro.models.Reference.Builder subjectBuilder;
     private io.carrera.fhir.avro.models.Reference context;
@@ -406,8 +473,10 @@ static {
     private io.carrera.fhir.avro.models.Quantity.Builder quantityBuilder;
     private io.carrera.fhir.avro.models.DateTime whenPrepared;
     private io.carrera.fhir.avro.models.DateTime.Builder whenPreparedBuilder;
-    private io.carrera.fhir.avro.models.Reference medicationReference;
-    private io.carrera.fhir.avro.models.Reference.Builder medicationReferenceBuilder;
+    private io.carrera.fhir.avro.models.Quantity daysSupply;
+    private io.carrera.fhir.avro.models.Quantity.Builder daysSupplyBuilder;
+    private io.carrera.fhir.avro.models.DateTime whenHandedOver;
+    private io.carrera.fhir.avro.models.DateTime.Builder whenHandedOverBuilder;
 
     /** Creates a new Builder */
     private Builder() {
@@ -424,69 +493,81 @@ static {
         this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
-      if (isValidValue(fields()[1], other.identifier)) {
-        this.identifier = data().deepCopy(fields()[1].schema(), other.identifier);
+      if (isValidValue(fields()[1], other.id)) {
+        this.id = data().deepCopy(fields()[1].schema(), other.id);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
-      if (isValidValue(fields()[2], other.status)) {
-        this.status = data().deepCopy(fields()[2].schema(), other.status);
+      if (isValidValue(fields()[2], other.identifier)) {
+        this.identifier = data().deepCopy(fields()[2].schema(), other.identifier);
         fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
-      if (isValidValue(fields()[3], other.category)) {
-        this.category = data().deepCopy(fields()[3].schema(), other.category);
+      if (isValidValue(fields()[3], other.status)) {
+        this.status = data().deepCopy(fields()[3].schema(), other.status);
         fieldSetFlags()[3] = other.fieldSetFlags()[3];
+      }
+      if (isValidValue(fields()[4], other.category)) {
+        this.category = data().deepCopy(fields()[4].schema(), other.category);
+        fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
       if (other.hasCategoryBuilder()) {
         this.categoryBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getCategoryBuilder());
       }
-      if (isValidValue(fields()[4], other.medicationCodeableConcept)) {
-        this.medicationCodeableConcept = data().deepCopy(fields()[4].schema(), other.medicationCodeableConcept);
-        fieldSetFlags()[4] = other.fieldSetFlags()[4];
-      }
-      if (other.hasMedicationCodeableConceptBuilder()) {
-        this.medicationCodeableConceptBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getMedicationCodeableConceptBuilder());
-      }
-      if (isValidValue(fields()[5], other.subject)) {
-        this.subject = data().deepCopy(fields()[5].schema(), other.subject);
+      if (isValidValue(fields()[5], other.medication)) {
+        this.medication = data().deepCopy(fields()[5].schema(), other.medication);
         fieldSetFlags()[5] = other.fieldSetFlags()[5];
+      }
+      if (isValidValue(fields()[6], other.code)) {
+        this.code = data().deepCopy(fields()[6].schema(), other.code);
+        fieldSetFlags()[6] = other.fieldSetFlags()[6];
+      }
+      if (isValidValue(fields()[7], other.subject)) {
+        this.subject = data().deepCopy(fields()[7].schema(), other.subject);
+        fieldSetFlags()[7] = other.fieldSetFlags()[7];
       }
       if (other.hasSubjectBuilder()) {
         this.subjectBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getSubjectBuilder());
       }
-      if (isValidValue(fields()[6], other.context)) {
-        this.context = data().deepCopy(fields()[6].schema(), other.context);
-        fieldSetFlags()[6] = other.fieldSetFlags()[6];
+      if (isValidValue(fields()[8], other.context)) {
+        this.context = data().deepCopy(fields()[8].schema(), other.context);
+        fieldSetFlags()[8] = other.fieldSetFlags()[8];
       }
       if (other.hasContextBuilder()) {
         this.contextBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getContextBuilder());
       }
-      if (isValidValue(fields()[7], other.type)) {
-        this.type = data().deepCopy(fields()[7].schema(), other.type);
-        fieldSetFlags()[7] = other.fieldSetFlags()[7];
+      if (isValidValue(fields()[9], other.type)) {
+        this.type = data().deepCopy(fields()[9].schema(), other.type);
+        fieldSetFlags()[9] = other.fieldSetFlags()[9];
       }
       if (other.hasTypeBuilder()) {
         this.typeBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getTypeBuilder());
       }
-      if (isValidValue(fields()[8], other.quantity)) {
-        this.quantity = data().deepCopy(fields()[8].schema(), other.quantity);
-        fieldSetFlags()[8] = other.fieldSetFlags()[8];
+      if (isValidValue(fields()[10], other.quantity)) {
+        this.quantity = data().deepCopy(fields()[10].schema(), other.quantity);
+        fieldSetFlags()[10] = other.fieldSetFlags()[10];
       }
       if (other.hasQuantityBuilder()) {
         this.quantityBuilder = io.carrera.fhir.avro.models.Quantity.newBuilder(other.getQuantityBuilder());
       }
-      if (isValidValue(fields()[9], other.whenPrepared)) {
-        this.whenPrepared = data().deepCopy(fields()[9].schema(), other.whenPrepared);
-        fieldSetFlags()[9] = other.fieldSetFlags()[9];
+      if (isValidValue(fields()[11], other.whenPrepared)) {
+        this.whenPrepared = data().deepCopy(fields()[11].schema(), other.whenPrepared);
+        fieldSetFlags()[11] = other.fieldSetFlags()[11];
       }
       if (other.hasWhenPreparedBuilder()) {
         this.whenPreparedBuilder = io.carrera.fhir.avro.models.DateTime.newBuilder(other.getWhenPreparedBuilder());
       }
-      if (isValidValue(fields()[10], other.medicationReference)) {
-        this.medicationReference = data().deepCopy(fields()[10].schema(), other.medicationReference);
-        fieldSetFlags()[10] = other.fieldSetFlags()[10];
+      if (isValidValue(fields()[12], other.daysSupply)) {
+        this.daysSupply = data().deepCopy(fields()[12].schema(), other.daysSupply);
+        fieldSetFlags()[12] = other.fieldSetFlags()[12];
       }
-      if (other.hasMedicationReferenceBuilder()) {
-        this.medicationReferenceBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getMedicationReferenceBuilder());
+      if (other.hasDaysSupplyBuilder()) {
+        this.daysSupplyBuilder = io.carrera.fhir.avro.models.Quantity.newBuilder(other.getDaysSupplyBuilder());
+      }
+      if (isValidValue(fields()[13], other.whenHandedOver)) {
+        this.whenHandedOver = data().deepCopy(fields()[13].schema(), other.whenHandedOver);
+        fieldSetFlags()[13] = other.fieldSetFlags()[13];
+      }
+      if (other.hasWhenHandedOverBuilder()) {
+        this.whenHandedOverBuilder = io.carrera.fhir.avro.models.DateTime.newBuilder(other.getWhenHandedOverBuilder());
       }
     }
 
@@ -500,54 +581,66 @@ static {
         this.resourceType = data().deepCopy(fields()[0].schema(), other.resourceType);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.identifier)) {
-        this.identifier = data().deepCopy(fields()[1].schema(), other.identifier);
+      if (isValidValue(fields()[1], other.id)) {
+        this.id = data().deepCopy(fields()[1].schema(), other.id);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.status)) {
-        this.status = data().deepCopy(fields()[2].schema(), other.status);
+      if (isValidValue(fields()[2], other.identifier)) {
+        this.identifier = data().deepCopy(fields()[2].schema(), other.identifier);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.category)) {
-        this.category = data().deepCopy(fields()[3].schema(), other.category);
+      if (isValidValue(fields()[3], other.status)) {
+        this.status = data().deepCopy(fields()[3].schema(), other.status);
         fieldSetFlags()[3] = true;
       }
-      this.categoryBuilder = null;
-      if (isValidValue(fields()[4], other.medicationCodeableConcept)) {
-        this.medicationCodeableConcept = data().deepCopy(fields()[4].schema(), other.medicationCodeableConcept);
+      if (isValidValue(fields()[4], other.category)) {
+        this.category = data().deepCopy(fields()[4].schema(), other.category);
         fieldSetFlags()[4] = true;
       }
-      this.medicationCodeableConceptBuilder = null;
-      if (isValidValue(fields()[5], other.subject)) {
-        this.subject = data().deepCopy(fields()[5].schema(), other.subject);
+      this.categoryBuilder = null;
+      if (isValidValue(fields()[5], other.medication)) {
+        this.medication = data().deepCopy(fields()[5].schema(), other.medication);
         fieldSetFlags()[5] = true;
       }
-      this.subjectBuilder = null;
-      if (isValidValue(fields()[6], other.context)) {
-        this.context = data().deepCopy(fields()[6].schema(), other.context);
+      if (isValidValue(fields()[6], other.code)) {
+        this.code = data().deepCopy(fields()[6].schema(), other.code);
         fieldSetFlags()[6] = true;
       }
-      this.contextBuilder = null;
-      if (isValidValue(fields()[7], other.type)) {
-        this.type = data().deepCopy(fields()[7].schema(), other.type);
+      if (isValidValue(fields()[7], other.subject)) {
+        this.subject = data().deepCopy(fields()[7].schema(), other.subject);
         fieldSetFlags()[7] = true;
       }
-      this.typeBuilder = null;
-      if (isValidValue(fields()[8], other.quantity)) {
-        this.quantity = data().deepCopy(fields()[8].schema(), other.quantity);
+      this.subjectBuilder = null;
+      if (isValidValue(fields()[8], other.context)) {
+        this.context = data().deepCopy(fields()[8].schema(), other.context);
         fieldSetFlags()[8] = true;
       }
-      this.quantityBuilder = null;
-      if (isValidValue(fields()[9], other.whenPrepared)) {
-        this.whenPrepared = data().deepCopy(fields()[9].schema(), other.whenPrepared);
+      this.contextBuilder = null;
+      if (isValidValue(fields()[9], other.type)) {
+        this.type = data().deepCopy(fields()[9].schema(), other.type);
         fieldSetFlags()[9] = true;
       }
-      this.whenPreparedBuilder = null;
-      if (isValidValue(fields()[10], other.medicationReference)) {
-        this.medicationReference = data().deepCopy(fields()[10].schema(), other.medicationReference);
+      this.typeBuilder = null;
+      if (isValidValue(fields()[10], other.quantity)) {
+        this.quantity = data().deepCopy(fields()[10].schema(), other.quantity);
         fieldSetFlags()[10] = true;
       }
-      this.medicationReferenceBuilder = null;
+      this.quantityBuilder = null;
+      if (isValidValue(fields()[11], other.whenPrepared)) {
+        this.whenPrepared = data().deepCopy(fields()[11].schema(), other.whenPrepared);
+        fieldSetFlags()[11] = true;
+      }
+      this.whenPreparedBuilder = null;
+      if (isValidValue(fields()[12], other.daysSupply)) {
+        this.daysSupply = data().deepCopy(fields()[12].schema(), other.daysSupply);
+        fieldSetFlags()[12] = true;
+      }
+      this.daysSupplyBuilder = null;
+      if (isValidValue(fields()[13], other.whenHandedOver)) {
+        this.whenHandedOver = data().deepCopy(fields()[13].schema(), other.whenHandedOver);
+        fieldSetFlags()[13] = true;
+      }
+      this.whenHandedOverBuilder = null;
     }
 
     /**
@@ -591,10 +684,50 @@ static {
     }
 
     /**
+      * Gets the value of the 'id' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getId() {
+      return id;
+    }
+
+
+    /**
+      * Sets the value of the 'id' field.
+      * @param value The value of 'id'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.MedicationDispense.Builder setId(java.lang.CharSequence value) {
+      validate(fields()[1], value);
+      this.id = value;
+      fieldSetFlags()[1] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'id' field has been set.
+      * @return True if the 'id' field has been set, false otherwise.
+      */
+    public boolean hasId() {
+      return fieldSetFlags()[1];
+    }
+
+
+    /**
+      * Clears the value of the 'id' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.MedicationDispense.Builder clearId() {
+      id = null;
+      fieldSetFlags()[1] = false;
+      return this;
+    }
+
+    /**
       * Gets the value of the 'identifier' field.
       * @return The value.
       */
-    public java.lang.CharSequence getIdentifier() {
+    public java.util.List<io.carrera.fhir.avro.models.identifier_record> getIdentifier() {
       return identifier;
     }
 
@@ -604,10 +737,10 @@ static {
       * @param value The value of 'identifier'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.MedicationDispense.Builder setIdentifier(java.lang.CharSequence value) {
-      validate(fields()[1], value);
+    public io.carrera.fhir.avro.models.MedicationDispense.Builder setIdentifier(java.util.List<io.carrera.fhir.avro.models.identifier_record> value) {
+      validate(fields()[2], value);
       this.identifier = value;
-      fieldSetFlags()[1] = true;
+      fieldSetFlags()[2] = true;
       return this;
     }
 
@@ -616,7 +749,7 @@ static {
       * @return True if the 'identifier' field has been set, false otherwise.
       */
     public boolean hasIdentifier() {
-      return fieldSetFlags()[1];
+      return fieldSetFlags()[2];
     }
 
 
@@ -626,7 +759,7 @@ static {
       */
     public io.carrera.fhir.avro.models.MedicationDispense.Builder clearIdentifier() {
       identifier = null;
-      fieldSetFlags()[1] = false;
+      fieldSetFlags()[2] = false;
       return this;
     }
 
@@ -645,9 +778,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.MedicationDispense.Builder setStatus(java.lang.CharSequence value) {
-      validate(fields()[2], value);
+      validate(fields()[3], value);
       this.status = value;
-      fieldSetFlags()[2] = true;
+      fieldSetFlags()[3] = true;
       return this;
     }
 
@@ -656,7 +789,7 @@ static {
       * @return True if the 'status' field has been set, false otherwise.
       */
     public boolean hasStatus() {
-      return fieldSetFlags()[2];
+      return fieldSetFlags()[3];
     }
 
 
@@ -666,7 +799,7 @@ static {
       */
     public io.carrera.fhir.avro.models.MedicationDispense.Builder clearStatus() {
       status = null;
-      fieldSetFlags()[2] = false;
+      fieldSetFlags()[3] = false;
       return this;
     }
 
@@ -685,10 +818,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.MedicationDispense.Builder setCategory(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[3], value);
+      validate(fields()[4], value);
       this.categoryBuilder = null;
       this.category = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[4] = true;
       return this;
     }
 
@@ -697,7 +830,7 @@ static {
       * @return True if the 'category' field has been set, false otherwise.
       */
     public boolean hasCategory() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[4];
     }
 
     /**
@@ -742,83 +875,87 @@ static {
     public io.carrera.fhir.avro.models.MedicationDispense.Builder clearCategory() {
       category = null;
       categoryBuilder = null;
-      fieldSetFlags()[3] = false;
+      fieldSetFlags()[4] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'medicationCodeableConcept' field.
+      * Gets the value of the 'medication' field.
       * @return The value.
       */
-    public io.carrera.fhir.avro.models.CodeableConcept getMedicationCodeableConcept() {
-      return medicationCodeableConcept;
+    public java.lang.Object getMedication() {
+      return medication;
     }
 
 
     /**
-      * Sets the value of the 'medicationCodeableConcept' field.
-      * @param value The value of 'medicationCodeableConcept'.
+      * Sets the value of the 'medication' field.
+      * @param value The value of 'medication'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.MedicationDispense.Builder setMedicationCodeableConcept(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[4], value);
-      this.medicationCodeableConceptBuilder = null;
-      this.medicationCodeableConcept = value;
-      fieldSetFlags()[4] = true;
+    public io.carrera.fhir.avro.models.MedicationDispense.Builder setMedication(java.lang.Object value) {
+      validate(fields()[5], value);
+      this.medication = value;
+      fieldSetFlags()[5] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'medicationCodeableConcept' field has been set.
-      * @return True if the 'medicationCodeableConcept' field has been set, false otherwise.
+      * Checks whether the 'medication' field has been set.
+      * @return True if the 'medication' field has been set, false otherwise.
       */
-    public boolean hasMedicationCodeableConcept() {
-      return fieldSetFlags()[4];
+    public boolean hasMedication() {
+      return fieldSetFlags()[5];
     }
 
-    /**
-     * Gets the Builder instance for the 'medicationCodeableConcept' field and creates one if it doesn't exist yet.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.CodeableConcept.Builder getMedicationCodeableConceptBuilder() {
-      if (medicationCodeableConceptBuilder == null) {
-        if (hasMedicationCodeableConcept()) {
-          setMedicationCodeableConceptBuilder(io.carrera.fhir.avro.models.CodeableConcept.newBuilder(medicationCodeableConcept));
-        } else {
-          setMedicationCodeableConceptBuilder(io.carrera.fhir.avro.models.CodeableConcept.newBuilder());
-        }
-      }
-      return medicationCodeableConceptBuilder;
-    }
 
     /**
-     * Sets the Builder instance for the 'medicationCodeableConcept' field
-     * @param value The builder instance that must be set.
-     * @return This builder.
-     */
-
-    public io.carrera.fhir.avro.models.MedicationDispense.Builder setMedicationCodeableConceptBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
-      clearMedicationCodeableConcept();
-      medicationCodeableConceptBuilder = value;
+      * Clears the value of the 'medication' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.MedicationDispense.Builder clearMedication() {
+      medication = null;
+      fieldSetFlags()[5] = false;
       return this;
     }
 
     /**
-     * Checks whether the 'medicationCodeableConcept' field has an active Builder instance
-     * @return True if the 'medicationCodeableConcept' field has an active Builder instance
-     */
-    public boolean hasMedicationCodeableConceptBuilder() {
-      return medicationCodeableConceptBuilder != null;
+      * Gets the value of the 'code' field.
+      * @return The value.
+      */
+    public java.lang.Object getCode() {
+      return code;
+    }
+
+
+    /**
+      * Sets the value of the 'code' field.
+      * @param value The value of 'code'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.MedicationDispense.Builder setCode(java.lang.Object value) {
+      validate(fields()[6], value);
+      this.code = value;
+      fieldSetFlags()[6] = true;
+      return this;
     }
 
     /**
-      * Clears the value of the 'medicationCodeableConcept' field.
+      * Checks whether the 'code' field has been set.
+      * @return True if the 'code' field has been set, false otherwise.
+      */
+    public boolean hasCode() {
+      return fieldSetFlags()[6];
+    }
+
+
+    /**
+      * Clears the value of the 'code' field.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.MedicationDispense.Builder clearMedicationCodeableConcept() {
-      medicationCodeableConcept = null;
-      medicationCodeableConceptBuilder = null;
-      fieldSetFlags()[4] = false;
+    public io.carrera.fhir.avro.models.MedicationDispense.Builder clearCode() {
+      code = null;
+      fieldSetFlags()[6] = false;
       return this;
     }
 
@@ -837,10 +974,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.MedicationDispense.Builder setSubject(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[5], value);
+      validate(fields()[7], value);
       this.subjectBuilder = null;
       this.subject = value;
-      fieldSetFlags()[5] = true;
+      fieldSetFlags()[7] = true;
       return this;
     }
 
@@ -849,7 +986,7 @@ static {
       * @return True if the 'subject' field has been set, false otherwise.
       */
     public boolean hasSubject() {
-      return fieldSetFlags()[5];
+      return fieldSetFlags()[7];
     }
 
     /**
@@ -894,7 +1031,7 @@ static {
     public io.carrera.fhir.avro.models.MedicationDispense.Builder clearSubject() {
       subject = null;
       subjectBuilder = null;
-      fieldSetFlags()[5] = false;
+      fieldSetFlags()[7] = false;
       return this;
     }
 
@@ -913,10 +1050,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.MedicationDispense.Builder setContext(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[6], value);
+      validate(fields()[8], value);
       this.contextBuilder = null;
       this.context = value;
-      fieldSetFlags()[6] = true;
+      fieldSetFlags()[8] = true;
       return this;
     }
 
@@ -925,7 +1062,7 @@ static {
       * @return True if the 'context' field has been set, false otherwise.
       */
     public boolean hasContext() {
-      return fieldSetFlags()[6];
+      return fieldSetFlags()[8];
     }
 
     /**
@@ -970,7 +1107,7 @@ static {
     public io.carrera.fhir.avro.models.MedicationDispense.Builder clearContext() {
       context = null;
       contextBuilder = null;
-      fieldSetFlags()[6] = false;
+      fieldSetFlags()[8] = false;
       return this;
     }
 
@@ -989,10 +1126,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.MedicationDispense.Builder setType(io.carrera.fhir.avro.models.CodeableConcept value) {
-      validate(fields()[7], value);
+      validate(fields()[9], value);
       this.typeBuilder = null;
       this.type = value;
-      fieldSetFlags()[7] = true;
+      fieldSetFlags()[9] = true;
       return this;
     }
 
@@ -1001,7 +1138,7 @@ static {
       * @return True if the 'type' field has been set, false otherwise.
       */
     public boolean hasType() {
-      return fieldSetFlags()[7];
+      return fieldSetFlags()[9];
     }
 
     /**
@@ -1046,7 +1183,7 @@ static {
     public io.carrera.fhir.avro.models.MedicationDispense.Builder clearType() {
       type = null;
       typeBuilder = null;
-      fieldSetFlags()[7] = false;
+      fieldSetFlags()[9] = false;
       return this;
     }
 
@@ -1065,10 +1202,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.MedicationDispense.Builder setQuantity(io.carrera.fhir.avro.models.Quantity value) {
-      validate(fields()[8], value);
+      validate(fields()[10], value);
       this.quantityBuilder = null;
       this.quantity = value;
-      fieldSetFlags()[8] = true;
+      fieldSetFlags()[10] = true;
       return this;
     }
 
@@ -1077,7 +1214,7 @@ static {
       * @return True if the 'quantity' field has been set, false otherwise.
       */
     public boolean hasQuantity() {
-      return fieldSetFlags()[8];
+      return fieldSetFlags()[10];
     }
 
     /**
@@ -1122,7 +1259,7 @@ static {
     public io.carrera.fhir.avro.models.MedicationDispense.Builder clearQuantity() {
       quantity = null;
       quantityBuilder = null;
-      fieldSetFlags()[8] = false;
+      fieldSetFlags()[10] = false;
       return this;
     }
 
@@ -1141,10 +1278,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.MedicationDispense.Builder setWhenPrepared(io.carrera.fhir.avro.models.DateTime value) {
-      validate(fields()[9], value);
+      validate(fields()[11], value);
       this.whenPreparedBuilder = null;
       this.whenPrepared = value;
-      fieldSetFlags()[9] = true;
+      fieldSetFlags()[11] = true;
       return this;
     }
 
@@ -1153,7 +1290,7 @@ static {
       * @return True if the 'whenPrepared' field has been set, false otherwise.
       */
     public boolean hasWhenPrepared() {
-      return fieldSetFlags()[9];
+      return fieldSetFlags()[11];
     }
 
     /**
@@ -1198,83 +1335,159 @@ static {
     public io.carrera.fhir.avro.models.MedicationDispense.Builder clearWhenPrepared() {
       whenPrepared = null;
       whenPreparedBuilder = null;
-      fieldSetFlags()[9] = false;
+      fieldSetFlags()[11] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'medicationReference' field.
+      * Gets the value of the 'daysSupply' field.
       * @return The value.
       */
-    public io.carrera.fhir.avro.models.Reference getMedicationReference() {
-      return medicationReference;
+    public io.carrera.fhir.avro.models.Quantity getDaysSupply() {
+      return daysSupply;
     }
 
 
     /**
-      * Sets the value of the 'medicationReference' field.
-      * @param value The value of 'medicationReference'.
+      * Sets the value of the 'daysSupply' field.
+      * @param value The value of 'daysSupply'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.MedicationDispense.Builder setMedicationReference(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[10], value);
-      this.medicationReferenceBuilder = null;
-      this.medicationReference = value;
-      fieldSetFlags()[10] = true;
+    public io.carrera.fhir.avro.models.MedicationDispense.Builder setDaysSupply(io.carrera.fhir.avro.models.Quantity value) {
+      validate(fields()[12], value);
+      this.daysSupplyBuilder = null;
+      this.daysSupply = value;
+      fieldSetFlags()[12] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'medicationReference' field has been set.
-      * @return True if the 'medicationReference' field has been set, false otherwise.
+      * Checks whether the 'daysSupply' field has been set.
+      * @return True if the 'daysSupply' field has been set, false otherwise.
       */
-    public boolean hasMedicationReference() {
-      return fieldSetFlags()[10];
+    public boolean hasDaysSupply() {
+      return fieldSetFlags()[12];
     }
 
     /**
-     * Gets the Builder instance for the 'medicationReference' field and creates one if it doesn't exist yet.
+     * Gets the Builder instance for the 'daysSupply' field and creates one if it doesn't exist yet.
      * @return This builder.
      */
-    public io.carrera.fhir.avro.models.Reference.Builder getMedicationReferenceBuilder() {
-      if (medicationReferenceBuilder == null) {
-        if (hasMedicationReference()) {
-          setMedicationReferenceBuilder(io.carrera.fhir.avro.models.Reference.newBuilder(medicationReference));
+    public io.carrera.fhir.avro.models.Quantity.Builder getDaysSupplyBuilder() {
+      if (daysSupplyBuilder == null) {
+        if (hasDaysSupply()) {
+          setDaysSupplyBuilder(io.carrera.fhir.avro.models.Quantity.newBuilder(daysSupply));
         } else {
-          setMedicationReferenceBuilder(io.carrera.fhir.avro.models.Reference.newBuilder());
+          setDaysSupplyBuilder(io.carrera.fhir.avro.models.Quantity.newBuilder());
         }
       }
-      return medicationReferenceBuilder;
+      return daysSupplyBuilder;
     }
 
     /**
-     * Sets the Builder instance for the 'medicationReference' field
+     * Sets the Builder instance for the 'daysSupply' field
      * @param value The builder instance that must be set.
      * @return This builder.
      */
 
-    public io.carrera.fhir.avro.models.MedicationDispense.Builder setMedicationReferenceBuilder(io.carrera.fhir.avro.models.Reference.Builder value) {
-      clearMedicationReference();
-      medicationReferenceBuilder = value;
+    public io.carrera.fhir.avro.models.MedicationDispense.Builder setDaysSupplyBuilder(io.carrera.fhir.avro.models.Quantity.Builder value) {
+      clearDaysSupply();
+      daysSupplyBuilder = value;
       return this;
     }
 
     /**
-     * Checks whether the 'medicationReference' field has an active Builder instance
-     * @return True if the 'medicationReference' field has an active Builder instance
+     * Checks whether the 'daysSupply' field has an active Builder instance
+     * @return True if the 'daysSupply' field has an active Builder instance
      */
-    public boolean hasMedicationReferenceBuilder() {
-      return medicationReferenceBuilder != null;
+    public boolean hasDaysSupplyBuilder() {
+      return daysSupplyBuilder != null;
     }
 
     /**
-      * Clears the value of the 'medicationReference' field.
+      * Clears the value of the 'daysSupply' field.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.MedicationDispense.Builder clearMedicationReference() {
-      medicationReference = null;
-      medicationReferenceBuilder = null;
-      fieldSetFlags()[10] = false;
+    public io.carrera.fhir.avro.models.MedicationDispense.Builder clearDaysSupply() {
+      daysSupply = null;
+      daysSupplyBuilder = null;
+      fieldSetFlags()[12] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'whenHandedOver' field.
+      * @return The value.
+      */
+    public io.carrera.fhir.avro.models.DateTime getWhenHandedOver() {
+      return whenHandedOver;
+    }
+
+
+    /**
+      * Sets the value of the 'whenHandedOver' field.
+      * @param value The value of 'whenHandedOver'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.MedicationDispense.Builder setWhenHandedOver(io.carrera.fhir.avro.models.DateTime value) {
+      validate(fields()[13], value);
+      this.whenHandedOverBuilder = null;
+      this.whenHandedOver = value;
+      fieldSetFlags()[13] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'whenHandedOver' field has been set.
+      * @return True if the 'whenHandedOver' field has been set, false otherwise.
+      */
+    public boolean hasWhenHandedOver() {
+      return fieldSetFlags()[13];
+    }
+
+    /**
+     * Gets the Builder instance for the 'whenHandedOver' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.DateTime.Builder getWhenHandedOverBuilder() {
+      if (whenHandedOverBuilder == null) {
+        if (hasWhenHandedOver()) {
+          setWhenHandedOverBuilder(io.carrera.fhir.avro.models.DateTime.newBuilder(whenHandedOver));
+        } else {
+          setWhenHandedOverBuilder(io.carrera.fhir.avro.models.DateTime.newBuilder());
+        }
+      }
+      return whenHandedOverBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'whenHandedOver' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+
+    public io.carrera.fhir.avro.models.MedicationDispense.Builder setWhenHandedOverBuilder(io.carrera.fhir.avro.models.DateTime.Builder value) {
+      clearWhenHandedOver();
+      whenHandedOverBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'whenHandedOver' field has an active Builder instance
+     * @return True if the 'whenHandedOver' field has an active Builder instance
+     */
+    public boolean hasWhenHandedOverBuilder() {
+      return whenHandedOverBuilder != null;
+    }
+
+    /**
+      * Clears the value of the 'whenHandedOver' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.MedicationDispense.Builder clearWhenHandedOver() {
+      whenHandedOver = null;
+      whenHandedOverBuilder = null;
+      fieldSetFlags()[13] = false;
       return this;
     }
 
@@ -1284,8 +1497,9 @@ static {
       try {
         MedicationDispense record = new MedicationDispense();
         record.resourceType = fieldSetFlags()[0] ? this.resourceType : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.identifier = fieldSetFlags()[1] ? this.identifier : (java.lang.CharSequence) defaultValue(fields()[1]);
-        record.status = fieldSetFlags()[2] ? this.status : (java.lang.CharSequence) defaultValue(fields()[2]);
+        record.id = fieldSetFlags()[1] ? this.id : (java.lang.CharSequence) defaultValue(fields()[1]);
+        record.identifier = fieldSetFlags()[2] ? this.identifier : (java.util.List<io.carrera.fhir.avro.models.identifier_record>) defaultValue(fields()[2]);
+        record.status = fieldSetFlags()[3] ? this.status : (java.lang.CharSequence) defaultValue(fields()[3]);
         if (categoryBuilder != null) {
           try {
             record.category = this.categoryBuilder.build();
@@ -1294,18 +1508,10 @@ static {
             throw e;
           }
         } else {
-          record.category = fieldSetFlags()[3] ? this.category : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[3]);
+          record.category = fieldSetFlags()[4] ? this.category : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[4]);
         }
-        if (medicationCodeableConceptBuilder != null) {
-          try {
-            record.medicationCodeableConcept = this.medicationCodeableConceptBuilder.build();
-          } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("medicationCodeableConcept"));
-            throw e;
-          }
-        } else {
-          record.medicationCodeableConcept = fieldSetFlags()[4] ? this.medicationCodeableConcept : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[4]);
-        }
+        record.medication = fieldSetFlags()[5] ? this.medication :  defaultValue(fields()[5]);
+        record.code = fieldSetFlags()[6] ? this.code :  defaultValue(fields()[6]);
         if (subjectBuilder != null) {
           try {
             record.subject = this.subjectBuilder.build();
@@ -1314,7 +1520,7 @@ static {
             throw e;
           }
         } else {
-          record.subject = fieldSetFlags()[5] ? this.subject : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[5]);
+          record.subject = fieldSetFlags()[7] ? this.subject : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[7]);
         }
         if (contextBuilder != null) {
           try {
@@ -1324,7 +1530,7 @@ static {
             throw e;
           }
         } else {
-          record.context = fieldSetFlags()[6] ? this.context : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[6]);
+          record.context = fieldSetFlags()[8] ? this.context : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[8]);
         }
         if (typeBuilder != null) {
           try {
@@ -1334,7 +1540,7 @@ static {
             throw e;
           }
         } else {
-          record.type = fieldSetFlags()[7] ? this.type : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[7]);
+          record.type = fieldSetFlags()[9] ? this.type : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[9]);
         }
         if (quantityBuilder != null) {
           try {
@@ -1344,7 +1550,7 @@ static {
             throw e;
           }
         } else {
-          record.quantity = fieldSetFlags()[8] ? this.quantity : (io.carrera.fhir.avro.models.Quantity) defaultValue(fields()[8]);
+          record.quantity = fieldSetFlags()[10] ? this.quantity : (io.carrera.fhir.avro.models.Quantity) defaultValue(fields()[10]);
         }
         if (whenPreparedBuilder != null) {
           try {
@@ -1354,17 +1560,27 @@ static {
             throw e;
           }
         } else {
-          record.whenPrepared = fieldSetFlags()[9] ? this.whenPrepared : (io.carrera.fhir.avro.models.DateTime) defaultValue(fields()[9]);
+          record.whenPrepared = fieldSetFlags()[11] ? this.whenPrepared : (io.carrera.fhir.avro.models.DateTime) defaultValue(fields()[11]);
         }
-        if (medicationReferenceBuilder != null) {
+        if (daysSupplyBuilder != null) {
           try {
-            record.medicationReference = this.medicationReferenceBuilder.build();
+            record.daysSupply = this.daysSupplyBuilder.build();
           } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("medicationReference"));
+            e.addParentField(record.getSchema().getField("daysSupply"));
             throw e;
           }
         } else {
-          record.medicationReference = fieldSetFlags()[10] ? this.medicationReference : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[10]);
+          record.daysSupply = fieldSetFlags()[12] ? this.daysSupply : (io.carrera.fhir.avro.models.Quantity) defaultValue(fields()[12]);
+        }
+        if (whenHandedOverBuilder != null) {
+          try {
+            record.whenHandedOver = this.whenHandedOverBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("whenHandedOver"));
+            throw e;
+          }
+        } else {
+          record.whenHandedOver = fieldSetFlags()[13] ? this.whenHandedOver : (io.carrera.fhir.avro.models.DateTime) defaultValue(fields()[13]);
         }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {

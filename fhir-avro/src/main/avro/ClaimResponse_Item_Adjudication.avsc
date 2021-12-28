@@ -1,0 +1,26 @@
+{
+    "name": "ClaimResponse_Item_Adjudication",
+    "type": "record",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "category",
+            "type": "CodeableConcept"
+        },
+        {
+            "name": "reason",
+            "type": ["null", "CodeableConcept"],
+            "default": null
+        },
+        {
+            "name": "amount",
+            "type": [ "null", "Money" ],
+            "default": null
+        },
+        {
+            "name": "value",
+            "type": [ "null", "Decimal" ],
+            "default": null
+        }
+    ]
+}

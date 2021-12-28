@@ -8,11 +8,16 @@
       "type": "string"
     },
     {
+      "name": "id",
+      "type": [ "null", "string" ],
+      "default": null
+    },
+    {
       "name": "identifier",
-      "type": [
-        "null",
-        "string"
-      ],
+      "type": [ "null", {
+        "type": "array",
+        "items": "identifier_record"
+        }],
       "default": null
     },
     {
@@ -25,9 +30,12 @@
       "default" : null
     },
     {
-      "name": "medicationCodeableConcept",
-      "type": ["null","CodeableConcept"],
-      "default" : null
+      "name": "medication",
+      "type": ["CodeableConcept", "Reference"]
+    },
+    {
+      "name": "code",
+      "type": ["CodeableConcept", "Reference"]
     },
     {
       "name": "subject",
@@ -50,12 +58,17 @@
     },
     {
       "name": "whenPrepared",
-      "type" : ["null", "io.carrera.fhir.avro.models.DateTime"],
+      "type" : ["null", "DateTime"],
       "default": null
     },
     {
-      "name" : "medicationReference",
-      "type" : [ "null", "Reference" ],
+      "name": "daysSupply",
+      "type": ["null","Quantity"],
+      "default" : null
+    },
+    {
+      "name": "whenHandedOver",
+      "type": ["null","DateTime"],
       "default" : null
     }
   ]

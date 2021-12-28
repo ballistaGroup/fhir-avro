@@ -1,0 +1,35 @@
+{
+    "name": "Claim_Item",
+    "type": "record",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "sequence",
+            "type": "int"
+        },
+        {
+            "name": "productOrService",
+            "type": "CodeableConcept"
+        },
+        {
+            "name": "serviced",
+            "type": [ "null", "Date", "Period" ],
+            "default": null
+        },
+        {
+            "name": "location",
+            "type": [ "null", "CodeableConcept", "Reference" ],
+            "default": null
+        },
+        {
+            "name": "quantity",
+            "type": [ "null", "Quantity" ],
+            "default": null
+        },
+        {
+            "name": "revenue",
+            "type": [ "null", "CodeableConcept" ],
+            "default": null
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "name": "ClaimResponse_Item_Detail",
+    "type": "record",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "detailSequence",
+            "type": "int"
+        },
+        {
+            "name": "noteNumber",
+            "type": ["null", {
+                "type": "array",
+                "items": "int"
+            }],
+            "default": null
+        },
+        {
+            "name": "adjudication",
+            "type": {
+                "type": "array",
+                "items": "ClaimResponse_Item_Adjudication"
+            }
+        },
+        {
+            "name": "subDetail",
+            "type": {
+                "type": "array",
+                "items": "ClaimResponse_Item_Detail_SubDetail"
+            }
+        }
+    ]
+}

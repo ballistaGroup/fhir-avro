@@ -41,7 +41,9 @@
             <import>${project.basedir}/src/main/avro/XsYearMonth.avsc</import>
             <import>${project.basedir}/src/main/avro/Instant.avsc</import>
             <import>${project.basedir}/src/main/avro/DateTime.avsc</import>
+            <import>${project.basedir}/src/main/avro/Date.avsc</import>
             <import>${project.basedir}/src/main/avro/Decimal.avsc</import>
+            <import>${project.basedir}/src/main/avro/Money.avsc</import>
             <import>${project.basedir}/src/main/avro/Quantity.avsc</import>
             <import>${project.basedir}/src/main/avro/Coding.avsc</import>
             <import>${project.basedir}/src/main/avro/Extension.avsc</import>
@@ -69,12 +71,20 @@
             <import>${project.basedir}/src/main/avro/RiskAssessment_Prediction.avsc</import>
             <import>${project.basedir}/src/main/avro/RiskAssessment.avsc</import>
             <import>${project.basedir}/src/main/avro/Coverage.avsc</import>
-            <import>${project.basedir}/src/main/avro/Insurance.avsc</import>
-            <import>${project.basedir}/src/main/avro/Item.avsc</import>
+            <import>${project.basedir}/src/main/avro/Claim_Insurance.avsc</import>
             <import>${project.basedir}/src/main/avro/Procedure.avsc</import>
             <import>${project.basedir}/src/main/avro/MedicationAdministration.avsc</import>
             <import>${project.basedir}/src/main/avro/EncounterDiagnosis.avsc</import>
             <import>${project.basedir}/src/main/avro/Encounter.avsc</import>
+            <import>${project.basedir}/src/main/avro/Claim_Diagnosis.avsc</import>
+            <import>${project.basedir}/src/main/avro/Claim_Procedure.avsc</import>
+            <import>${project.basedir}/src/main/avro/Claim_Item.avsc</import>
+            <import>${project.basedir}/src/main/avro/Claim.avsc</import>
+            <import>${project.basedir}/src/main/avro/ClaimResponse_Item_Adjudication.avsc</import>
+            <import>${project.basedir}/src/main/avro/ClaimResponse_Item_Detail_SubDetail.avsc</import>
+            <import>${project.basedir}/src/main/avro/ClaimResponse_Item_Detail.avsc</import>
+            <import>${project.basedir}/src/main/avro/ClaimResponse_Item.avsc</import>
+            <import>${project.basedir}/src/main/avro/ClaimResponse_AddItem.avsc</import>
             <import>${project.basedir}/src/main/avro/ClaimResponse.avsc</import>
             <import>${project.basedir}/src/main/avro/Immunization.avsc</import>
             <import>${project.basedir}/src/main/avro/CarePlan.avsc</import>
@@ -87,6 +97,7 @@
             <import>${project.basedir}/src/main/avro/ImagingStudy.avsc</import>
             <import>${project.basedir}/src/main/avro/Provenance_Agent.avsc</import>
             <import>${project.basedir}/src/main/avro/Provenance.avsc</import>
+            <import>${project.basedir}/src/main/avro/MedicationDispense.avsc</import>
         </imports>
       </configuration>
     </execution>

@@ -1,0 +1,36 @@
+{
+    "type": "record",
+    "name": "Claim_Procedure",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "sequence",
+            "type": "int"
+        },
+        {
+            "name": "type",
+            "type": [ "null", {
+                "type": "array",
+                "items": "CodeableConcept"
+            }],
+            "default": null
+        },
+        {
+            "name": "date",
+            "type": [ "null", "DateTime" ],
+            "default": null
+        },
+        {
+            "name": "procedure",
+            "type": [ "Reference", "CodeableConcept" ]
+        },
+        {
+            "name": "udi",
+            "type": [ "null", {
+                "type": "array",
+                "items": "Reference"
+            }],
+            "default": null
+        }
+    ]
+}

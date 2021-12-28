@@ -127,9 +127,7 @@
     },
     {
       "name": "status",
-      "type": [
-        "string"
-      ]
+      "type": "string"
     },
     {
       "name": "statusReason",
