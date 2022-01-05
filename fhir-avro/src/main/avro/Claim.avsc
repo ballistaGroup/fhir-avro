@@ -49,7 +49,7 @@
         },
         {
             "name": "created",
-            "type" : "io.carrera.fhir.avro.models.DateTime"
+            "type" : "DateTime"
         },
         {
             "name": "provider",
