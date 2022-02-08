@@ -1,0 +1,30 @@
+{
+    "name": "Observation_Component",
+    "type": "record",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "code",
+            "type": "CodeableConcept"
+        },
+        {
+            "name": "value",
+            "type": ["null", "Quantity", "CodeableConcept", "string", "boolean", "int", "Range", "Ratio", "Time", "DateTime", "Period"],
+            "default": null
+        },
+        {
+            "name": "dateAbsentReason",
+            "type": ["null", "CodeableConcept"],
+            "default": null
+        },
+        {
+            "name": "interpretation",
+            "type": ["null", {
+                "type": "array",
+                "items": "CodeableConcept"
+            }],
+            "default": null
+        }
+
+    ]
+}

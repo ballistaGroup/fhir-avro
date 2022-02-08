@@ -1,0 +1,25 @@
+{
+  "name": "Time",
+  "namespace": "io.carrera.fhir.avro.models",
+  "type": "record",
+  "fields" : [ {
+      "name" : "hour",
+      "type": "int"
+    },
+    {
+      "name" : "minute",
+      "type": "int"
+    },
+    {
+      "name" : "second",
+      "type": "int"
+    },
+    {
+      "name": "millisecond",
+      "type": ["null", "int"],
+      "default": null
+    }
+    ]
+
+}
+
