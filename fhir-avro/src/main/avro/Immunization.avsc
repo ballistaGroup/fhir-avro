@@ -29,20 +29,17 @@
             "type": "CodeableConcept"
         },
         {
+            "name": "code",
+            "type": "CodeableConcept"
+        },
+        {
             "name": "patient",
             "type": "Reference"
         },
         {
             "name" : "occurrence",
-            "type" : ["io.carrera.fhir.avro.models.DateTime", "string"]
-          },
-              {
-            "name": "doseNumberPositiveInt",
-            "type" : "int"
-        },
-        {
-            "name": "doseNumberString",
-            "type" : "string"
+            "type" : ["DateTime", "string"]
         }
+
     ]
 }

@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Claim extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 6201517560115104219L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Claim\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"identifier\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"identifier_record\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"value\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"type\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"subType\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"use\",\"type\":\"string\"},{\"name\":\"patient\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"billablePeriod\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",\"DateTime\"],\"default\":null}]}],\"default\":null},{\"name\":\"created\",\"type\":\"DateTime\"},{\"name\":\"provider\",\"type\":\"Reference\"},{\"name\":\"priority\",\"type\":\"CodeableConcept\"},{\"name\":\"insurance\",\"type\":{\"type\":\"record\",\"name\":\"Insurance\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"sequence\",\"type\":\"int\"},{\"name\":\"focal\",\"type\":\"boolean\"},{\"name\":\"coverage\",\"type\":{\"type\":\"record\",\"name\":\"Coverage\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"identifier\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"identifier_record\"}],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"policyHolder\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"subscriber\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"subscriberId\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"beneficiary\",\"type\":\"Reference\"},{\"name\":\"dependent\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"relationship\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"period\",\"type\":[\"null\",\"Period\"],\"default\":null},{\"name\":\"payor\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null},{\"name\":\"order\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"network\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"subrogation\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}]}},{\"name\":\"item\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Item\",\"fields\":[{\"name\":\"sequence\",\"type\":\"int\"},{\"name\":\"productOrService\",\"type\":\"CodeableConcept\"}]}}],\"default\":null}]}");
+  private static final long serialVersionUID = 6247048950639056108L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Claim\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"identifier\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"identifier_record\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"value\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"type\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"subType\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"use\",\"type\":\"string\"},{\"name\":\"patient\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"billablePeriod\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]}],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",\"DateTime\"],\"default\":null}]}],\"default\":null},{\"name\":\"created\",\"type\":\"DateTime\"},{\"name\":\"provider\",\"type\":\"Reference\"},{\"name\":\"priority\",\"type\":\"CodeableConcept\"},{\"name\":\"insurance\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Claim_Insurance\",\"fields\":[{\"name\":\"identifier\",\"type\":[\"null\",\"identifier_record\"],\"default\":null},{\"name\":\"sequence\",\"type\":\"int\"},{\"name\":\"focal\",\"type\":\"boolean\"},{\"name\":\"coverage\",\"type\":\"Reference\"}]}}},{\"name\":\"diagnosis\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Claim_Diagnosis\",\"fields\":[{\"name\":\"sequence\",\"type\":\"int\"},{\"name\":\"diagnosis\",\"type\":[\"Reference\",\"CodeableConcept\"]},{\"name\":\"type\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"onAdmission\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"packageCode\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null}]}}],\"default\":null},{\"name\":\"procedure\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Claim_Procedure\",\"fields\":[{\"name\":\"sequence\",\"type\":\"int\"},{\"name\":\"type\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"date\",\"type\":[\"null\",\"DateTime\"],\"default\":null},{\"name\":\"procedure\",\"type\":[\"Reference\",\"CodeableConcept\"]},{\"name\":\"udi\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"Reference\"}],\"default\":null}]}}],\"default\":null},{\"name\":\"item\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Claim_Item\",\"fields\":[{\"name\":\"sequence\",\"type\":\"int\"},{\"name\":\"productOrService\",\"type\":\"CodeableConcept\"},{\"name\":\"serviced\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Date\",\"fields\":[{\"name\":\"value\",\"type\":[\"XsDate\",\"XsYearMonth\",\"XsYear\"]}]},\"Period\"],\"default\":null},{\"name\":\"location\",\"type\":[\"null\",\"CodeableConcept\",\"Reference\"],\"default\":null},{\"name\":\"quantity\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Decimal\",\"fields\":[{\"name\":\"unscaled_value\",\"type\":\"bytes\",\"logicalType\":\"decimal\"},{\"name\":\"precision\",\"type\":\"int\"},{\"name\":\"scale\",\"type\":\"int\"}]}],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"revenue\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null}]}}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -87,8 +87,10 @@ static {
    private io.carrera.fhir.avro.models.DateTime created;
    private io.carrera.fhir.avro.models.Reference provider;
    private io.carrera.fhir.avro.models.CodeableConcept priority;
-   private io.carrera.fhir.avro.models.Insurance insurance;
-   private java.util.List<io.carrera.fhir.avro.models.Item> item;
+   private java.util.List<io.carrera.fhir.avro.models.Claim_Insurance> insurance;
+   private java.util.List<io.carrera.fhir.avro.models.Claim_Diagnosis> diagnosis;
+   private java.util.List<io.carrera.fhir.avro.models.Claim_Procedure> procedure;
+   private java.util.List<io.carrera.fhir.avro.models.Claim_Item> item;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -112,9 +114,11 @@ static {
    * @param provider The new value for provider
    * @param priority The new value for priority
    * @param insurance The new value for insurance
+   * @param diagnosis The new value for diagnosis
+   * @param procedure The new value for procedure
    * @param item The new value for item
    */
-  public Claim(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept type, io.carrera.fhir.avro.models.CodeableConcept subType, java.lang.CharSequence use, io.carrera.fhir.avro.models.Reference patient, io.carrera.fhir.avro.models.Period billablePeriod, io.carrera.fhir.avro.models.DateTime created, io.carrera.fhir.avro.models.Reference provider, io.carrera.fhir.avro.models.CodeableConcept priority, io.carrera.fhir.avro.models.Insurance insurance, java.util.List<io.carrera.fhir.avro.models.Item> item) {
+  public Claim(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept type, io.carrera.fhir.avro.models.CodeableConcept subType, java.lang.CharSequence use, io.carrera.fhir.avro.models.Reference patient, io.carrera.fhir.avro.models.Period billablePeriod, io.carrera.fhir.avro.models.DateTime created, io.carrera.fhir.avro.models.Reference provider, io.carrera.fhir.avro.models.CodeableConcept priority, java.util.List<io.carrera.fhir.avro.models.Claim_Insurance> insurance, java.util.List<io.carrera.fhir.avro.models.Claim_Diagnosis> diagnosis, java.util.List<io.carrera.fhir.avro.models.Claim_Procedure> procedure, java.util.List<io.carrera.fhir.avro.models.Claim_Item> item) {
     this.resourceType = resourceType;
     this.id = id;
     this.identifier = identifier;
@@ -128,6 +132,8 @@ static {
     this.provider = provider;
     this.priority = priority;
     this.insurance = insurance;
+    this.diagnosis = diagnosis;
+    this.procedure = procedure;
     this.item = item;
   }
 
@@ -149,7 +155,9 @@ static {
     case 10: return provider;
     case 11: return priority;
     case 12: return insurance;
-    case 13: return item;
+    case 13: return diagnosis;
+    case 14: return procedure;
+    case 15: return item;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -170,8 +178,10 @@ static {
     case 9: created = (io.carrera.fhir.avro.models.DateTime)value$; break;
     case 10: provider = (io.carrera.fhir.avro.models.Reference)value$; break;
     case 11: priority = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 12: insurance = (io.carrera.fhir.avro.models.Insurance)value$; break;
-    case 13: item = (java.util.List<io.carrera.fhir.avro.models.Item>)value$; break;
+    case 12: insurance = (java.util.List<io.carrera.fhir.avro.models.Claim_Insurance>)value$; break;
+    case 13: diagnosis = (java.util.List<io.carrera.fhir.avro.models.Claim_Diagnosis>)value$; break;
+    case 14: procedure = (java.util.List<io.carrera.fhir.avro.models.Claim_Procedure>)value$; break;
+    case 15: item = (java.util.List<io.carrera.fhir.avro.models.Claim_Item>)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -384,7 +394,7 @@ static {
    * Gets the value of the 'insurance' field.
    * @return The value of the 'insurance' field.
    */
-  public io.carrera.fhir.avro.models.Insurance getInsurance() {
+  public java.util.List<io.carrera.fhir.avro.models.Claim_Insurance> getInsurance() {
     return insurance;
   }
 
@@ -393,15 +403,49 @@ static {
    * Sets the value of the 'insurance' field.
    * @param value the value to set.
    */
-  public void setInsurance(io.carrera.fhir.avro.models.Insurance value) {
+  public void setInsurance(java.util.List<io.carrera.fhir.avro.models.Claim_Insurance> value) {
     this.insurance = value;
+  }
+
+  /**
+   * Gets the value of the 'diagnosis' field.
+   * @return The value of the 'diagnosis' field.
+   */
+  public java.util.List<io.carrera.fhir.avro.models.Claim_Diagnosis> getDiagnosis() {
+    return diagnosis;
+  }
+
+
+  /**
+   * Sets the value of the 'diagnosis' field.
+   * @param value the value to set.
+   */
+  public void setDiagnosis(java.util.List<io.carrera.fhir.avro.models.Claim_Diagnosis> value) {
+    this.diagnosis = value;
+  }
+
+  /**
+   * Gets the value of the 'procedure' field.
+   * @return The value of the 'procedure' field.
+   */
+  public java.util.List<io.carrera.fhir.avro.models.Claim_Procedure> getProcedure() {
+    return procedure;
+  }
+
+
+  /**
+   * Sets the value of the 'procedure' field.
+   * @param value the value to set.
+   */
+  public void setProcedure(java.util.List<io.carrera.fhir.avro.models.Claim_Procedure> value) {
+    this.procedure = value;
   }
 
   /**
    * Gets the value of the 'item' field.
    * @return The value of the 'item' field.
    */
-  public java.util.List<io.carrera.fhir.avro.models.Item> getItem() {
+  public java.util.List<io.carrera.fhir.avro.models.Claim_Item> getItem() {
     return item;
   }
 
@@ -410,7 +454,7 @@ static {
    * Sets the value of the 'item' field.
    * @param value the value to set.
    */
-  public void setItem(java.util.List<io.carrera.fhir.avro.models.Item> value) {
+  public void setItem(java.util.List<io.carrera.fhir.avro.models.Claim_Item> value) {
     this.item = value;
   }
 
@@ -474,9 +518,10 @@ static {
     private io.carrera.fhir.avro.models.Reference.Builder providerBuilder;
     private io.carrera.fhir.avro.models.CodeableConcept priority;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder priorityBuilder;
-    private io.carrera.fhir.avro.models.Insurance insurance;
-    private io.carrera.fhir.avro.models.Insurance.Builder insuranceBuilder;
-    private java.util.List<io.carrera.fhir.avro.models.Item> item;
+    private java.util.List<io.carrera.fhir.avro.models.Claim_Insurance> insurance;
+    private java.util.List<io.carrera.fhir.avro.models.Claim_Diagnosis> diagnosis;
+    private java.util.List<io.carrera.fhir.avro.models.Claim_Procedure> procedure;
+    private java.util.List<io.carrera.fhir.avro.models.Claim_Item> item;
 
     /** Creates a new Builder */
     private Builder() {
@@ -562,12 +607,17 @@ static {
         this.insurance = data().deepCopy(fields()[12].schema(), other.insurance);
         fieldSetFlags()[12] = other.fieldSetFlags()[12];
       }
-      if (other.hasInsuranceBuilder()) {
-        this.insuranceBuilder = io.carrera.fhir.avro.models.Insurance.newBuilder(other.getInsuranceBuilder());
-      }
-      if (isValidValue(fields()[13], other.item)) {
-        this.item = data().deepCopy(fields()[13].schema(), other.item);
+      if (isValidValue(fields()[13], other.diagnosis)) {
+        this.diagnosis = data().deepCopy(fields()[13].schema(), other.diagnosis);
         fieldSetFlags()[13] = other.fieldSetFlags()[13];
+      }
+      if (isValidValue(fields()[14], other.procedure)) {
+        this.procedure = data().deepCopy(fields()[14].schema(), other.procedure);
+        fieldSetFlags()[14] = other.fieldSetFlags()[14];
+      }
+      if (isValidValue(fields()[15], other.item)) {
+        this.item = data().deepCopy(fields()[15].schema(), other.item);
+        fieldSetFlags()[15] = other.fieldSetFlags()[15];
       }
     }
 
@@ -636,10 +686,17 @@ static {
         this.insurance = data().deepCopy(fields()[12].schema(), other.insurance);
         fieldSetFlags()[12] = true;
       }
-      this.insuranceBuilder = null;
-      if (isValidValue(fields()[13], other.item)) {
-        this.item = data().deepCopy(fields()[13].schema(), other.item);
+      if (isValidValue(fields()[13], other.diagnosis)) {
+        this.diagnosis = data().deepCopy(fields()[13].schema(), other.diagnosis);
         fieldSetFlags()[13] = true;
+      }
+      if (isValidValue(fields()[14], other.procedure)) {
+        this.procedure = data().deepCopy(fields()[14].schema(), other.procedure);
+        fieldSetFlags()[14] = true;
+      }
+      if (isValidValue(fields()[15], other.item)) {
+        this.item = data().deepCopy(fields()[15].schema(), other.item);
+        fieldSetFlags()[15] = true;
       }
     }
 
@@ -1379,7 +1436,7 @@ static {
       * Gets the value of the 'insurance' field.
       * @return The value.
       */
-    public io.carrera.fhir.avro.models.Insurance getInsurance() {
+    public java.util.List<io.carrera.fhir.avro.models.Claim_Insurance> getInsurance() {
       return insurance;
     }
 
@@ -1389,9 +1446,8 @@ static {
       * @param value The value of 'insurance'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Claim.Builder setInsurance(io.carrera.fhir.avro.models.Insurance value) {
+    public io.carrera.fhir.avro.models.Claim.Builder setInsurance(java.util.List<io.carrera.fhir.avro.models.Claim_Insurance> value) {
       validate(fields()[12], value);
-      this.insuranceBuilder = null;
       this.insurance = value;
       fieldSetFlags()[12] = true;
       return this;
@@ -1405,40 +1461,6 @@ static {
       return fieldSetFlags()[12];
     }
 
-    /**
-     * Gets the Builder instance for the 'insurance' field and creates one if it doesn't exist yet.
-     * @return This builder.
-     */
-    public io.carrera.fhir.avro.models.Insurance.Builder getInsuranceBuilder() {
-      if (insuranceBuilder == null) {
-        if (hasInsurance()) {
-          setInsuranceBuilder(io.carrera.fhir.avro.models.Insurance.newBuilder(insurance));
-        } else {
-          setInsuranceBuilder(io.carrera.fhir.avro.models.Insurance.newBuilder());
-        }
-      }
-      return insuranceBuilder;
-    }
-
-    /**
-     * Sets the Builder instance for the 'insurance' field
-     * @param value The builder instance that must be set.
-     * @return This builder.
-     */
-
-    public io.carrera.fhir.avro.models.Claim.Builder setInsuranceBuilder(io.carrera.fhir.avro.models.Insurance.Builder value) {
-      clearInsurance();
-      insuranceBuilder = value;
-      return this;
-    }
-
-    /**
-     * Checks whether the 'insurance' field has an active Builder instance
-     * @return True if the 'insurance' field has an active Builder instance
-     */
-    public boolean hasInsuranceBuilder() {
-      return insuranceBuilder != null;
-    }
 
     /**
       * Clears the value of the 'insurance' field.
@@ -1446,8 +1468,87 @@ static {
       */
     public io.carrera.fhir.avro.models.Claim.Builder clearInsurance() {
       insurance = null;
-      insuranceBuilder = null;
       fieldSetFlags()[12] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'diagnosis' field.
+      * @return The value.
+      */
+    public java.util.List<io.carrera.fhir.avro.models.Claim_Diagnosis> getDiagnosis() {
+      return diagnosis;
+    }
+
+
+    /**
+      * Sets the value of the 'diagnosis' field.
+      * @param value The value of 'diagnosis'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Claim.Builder setDiagnosis(java.util.List<io.carrera.fhir.avro.models.Claim_Diagnosis> value) {
+      validate(fields()[13], value);
+      this.diagnosis = value;
+      fieldSetFlags()[13] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'diagnosis' field has been set.
+      * @return True if the 'diagnosis' field has been set, false otherwise.
+      */
+    public boolean hasDiagnosis() {
+      return fieldSetFlags()[13];
+    }
+
+
+    /**
+      * Clears the value of the 'diagnosis' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Claim.Builder clearDiagnosis() {
+      diagnosis = null;
+      fieldSetFlags()[13] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'procedure' field.
+      * @return The value.
+      */
+    public java.util.List<io.carrera.fhir.avro.models.Claim_Procedure> getProcedure() {
+      return procedure;
+    }
+
+
+    /**
+      * Sets the value of the 'procedure' field.
+      * @param value The value of 'procedure'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Claim.Builder setProcedure(java.util.List<io.carrera.fhir.avro.models.Claim_Procedure> value) {
+      validate(fields()[14], value);
+      this.procedure = value;
+      fieldSetFlags()[14] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'procedure' field has been set.
+      * @return True if the 'procedure' field has been set, false otherwise.
+      */
+    public boolean hasProcedure() {
+      return fieldSetFlags()[14];
+    }
+
+
+    /**
+      * Clears the value of the 'procedure' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Claim.Builder clearProcedure() {
+      procedure = null;
+      fieldSetFlags()[14] = false;
       return this;
     }
 
@@ -1455,7 +1556,7 @@ static {
       * Gets the value of the 'item' field.
       * @return The value.
       */
-    public java.util.List<io.carrera.fhir.avro.models.Item> getItem() {
+    public java.util.List<io.carrera.fhir.avro.models.Claim_Item> getItem() {
       return item;
     }
 
@@ -1465,10 +1566,10 @@ static {
       * @param value The value of 'item'.
       * @return This builder.
       */
-    public io.carrera.fhir.avro.models.Claim.Builder setItem(java.util.List<io.carrera.fhir.avro.models.Item> value) {
-      validate(fields()[13], value);
+    public io.carrera.fhir.avro.models.Claim.Builder setItem(java.util.List<io.carrera.fhir.avro.models.Claim_Item> value) {
+      validate(fields()[15], value);
       this.item = value;
-      fieldSetFlags()[13] = true;
+      fieldSetFlags()[15] = true;
       return this;
     }
 
@@ -1477,7 +1578,7 @@ static {
       * @return True if the 'item' field has been set, false otherwise.
       */
     public boolean hasItem() {
-      return fieldSetFlags()[13];
+      return fieldSetFlags()[15];
     }
 
 
@@ -1487,7 +1588,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Claim.Builder clearItem() {
       item = null;
-      fieldSetFlags()[13] = false;
+      fieldSetFlags()[15] = false;
       return this;
     }
 
@@ -1571,17 +1672,10 @@ static {
         } else {
           record.priority = fieldSetFlags()[11] ? this.priority : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[11]);
         }
-        if (insuranceBuilder != null) {
-          try {
-            record.insurance = this.insuranceBuilder.build();
-          } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("insurance"));
-            throw e;
-          }
-        } else {
-          record.insurance = fieldSetFlags()[12] ? this.insurance : (io.carrera.fhir.avro.models.Insurance) defaultValue(fields()[12]);
-        }
-        record.item = fieldSetFlags()[13] ? this.item : (java.util.List<io.carrera.fhir.avro.models.Item>) defaultValue(fields()[13]);
+        record.insurance = fieldSetFlags()[12] ? this.insurance : (java.util.List<io.carrera.fhir.avro.models.Claim_Insurance>) defaultValue(fields()[12]);
+        record.diagnosis = fieldSetFlags()[13] ? this.diagnosis : (java.util.List<io.carrera.fhir.avro.models.Claim_Diagnosis>) defaultValue(fields()[13]);
+        record.procedure = fieldSetFlags()[14] ? this.procedure : (java.util.List<io.carrera.fhir.avro.models.Claim_Procedure>) defaultValue(fields()[14]);
+        record.item = fieldSetFlags()[15] ? this.item : (java.util.List<io.carrera.fhir.avro.models.Claim_Item>) defaultValue(fields()[15]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;

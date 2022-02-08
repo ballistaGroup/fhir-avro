@@ -1,0 +1,10 @@
+{
+  "name": "Date",
+  "namespace": "io.carrera.fhir.avro.models",
+  "type": "record",
+  "fields" : [ {
+    "name" : "value",
+    "type": ["XsDate", "XsYearMonth", "XsYear"]
+  }]
+}
+

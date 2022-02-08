@@ -43,11 +43,7 @@
       "name": "birthDate",
       "type": [
         "null",
-        "string",
-        {
-          "type": "int",
-          "logicalType": "date"
-        }
+        "Date"
       ],
       "default" : null
     },

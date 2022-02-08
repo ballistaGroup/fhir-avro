@@ -44,7 +44,7 @@
         },
         {
             "name": "created",
-            "type" : "io.carrera.fhir.avro.models.DateTime"
+            "type" : "DateTime"
         },
         {
             "name": "insurer",
@@ -53,6 +53,27 @@
         {
             "name": "outcome",
             "type": "string"
+        },
+        {
+            "name": "request",
+            "type": ["null", "Reference"],
+            "default": null
+        },
+        {
+            "name": "item",
+            "type": ["null",{
+                "type": "array",
+                "items": "ClaimResponse_Item"
+              }],
+              "default": null
+        },
+        {
+            "name": "addItem",
+            "type": ["null",{
+                "type": "array",
+                "items": "ClaimResponse_AddItem"
+            }],
+            "default": null
         }
     ]
 }

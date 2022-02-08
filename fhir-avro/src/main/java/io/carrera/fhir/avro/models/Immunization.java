@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Immunization extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 1393352242887582673L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Immunization\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"identifier\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"identifier_record\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"value\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"vaccineCode\",\"type\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"patient\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"occurrence\",\"type\":[{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]},\"string\"]},{\"name\":\"doseNumberPositiveInt\",\"type\":\"int\"},{\"name\":\"doseNumberString\",\"type\":\"string\"}]}");
+  private static final long serialVersionUID = 6947432024129571871L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Immunization\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"identifier\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"identifier_record\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"value\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"vaccineCode\",\"type\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"patient\",\"type\":{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}},{\"name\":\"occurrence\",\"type\":[{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]},\"string\"]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -80,10 +80,9 @@ static {
    private java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier;
    private java.lang.CharSequence status;
    private io.carrera.fhir.avro.models.CodeableConcept vaccineCode;
+   private io.carrera.fhir.avro.models.CodeableConcept code;
    private io.carrera.fhir.avro.models.Reference patient;
    private java.lang.Object occurrence;
-   private int doseNumberPositiveInt;
-   private java.lang.CharSequence doseNumberString;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -99,21 +98,19 @@ static {
    * @param identifier The new value for identifier
    * @param status The new value for status
    * @param vaccineCode The new value for vaccineCode
+   * @param code The new value for code
    * @param patient The new value for patient
    * @param occurrence The new value for occurrence
-   * @param doseNumberPositiveInt The new value for doseNumberPositiveInt
-   * @param doseNumberString The new value for doseNumberString
    */
-  public Immunization(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept vaccineCode, io.carrera.fhir.avro.models.Reference patient, java.lang.Object occurrence, java.lang.Integer doseNumberPositiveInt, java.lang.CharSequence doseNumberString) {
+  public Immunization(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.util.List<io.carrera.fhir.avro.models.identifier_record> identifier, java.lang.CharSequence status, io.carrera.fhir.avro.models.CodeableConcept vaccineCode, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference patient, java.lang.Object occurrence) {
     this.resourceType = resourceType;
     this.id = id;
     this.identifier = identifier;
     this.status = status;
     this.vaccineCode = vaccineCode;
+    this.code = code;
     this.patient = patient;
     this.occurrence = occurrence;
-    this.doseNumberPositiveInt = doseNumberPositiveInt;
-    this.doseNumberString = doseNumberString;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -126,10 +123,9 @@ static {
     case 2: return identifier;
     case 3: return status;
     case 4: return vaccineCode;
-    case 5: return patient;
-    case 6: return occurrence;
-    case 7: return doseNumberPositiveInt;
-    case 8: return doseNumberString;
+    case 5: return code;
+    case 6: return patient;
+    case 7: return occurrence;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -143,10 +139,9 @@ static {
     case 2: identifier = (java.util.List<io.carrera.fhir.avro.models.identifier_record>)value$; break;
     case 3: status = (java.lang.CharSequence)value$; break;
     case 4: vaccineCode = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
-    case 5: patient = (io.carrera.fhir.avro.models.Reference)value$; break;
-    case 6: occurrence = value$; break;
-    case 7: doseNumberPositiveInt = (java.lang.Integer)value$; break;
-    case 8: doseNumberString = (java.lang.CharSequence)value$; break;
+    case 5: code = (io.carrera.fhir.avro.models.CodeableConcept)value$; break;
+    case 6: patient = (io.carrera.fhir.avro.models.Reference)value$; break;
+    case 7: occurrence = value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -237,6 +232,23 @@ static {
   }
 
   /**
+   * Gets the value of the 'code' field.
+   * @return The value of the 'code' field.
+   */
+  public io.carrera.fhir.avro.models.CodeableConcept getCode() {
+    return code;
+  }
+
+
+  /**
+   * Sets the value of the 'code' field.
+   * @param value the value to set.
+   */
+  public void setCode(io.carrera.fhir.avro.models.CodeableConcept value) {
+    this.code = value;
+  }
+
+  /**
    * Gets the value of the 'patient' field.
    * @return The value of the 'patient' field.
    */
@@ -268,40 +280,6 @@ static {
    */
   public void setOccurrence(java.lang.Object value) {
     this.occurrence = value;
-  }
-
-  /**
-   * Gets the value of the 'doseNumberPositiveInt' field.
-   * @return The value of the 'doseNumberPositiveInt' field.
-   */
-  public int getDoseNumberPositiveInt() {
-    return doseNumberPositiveInt;
-  }
-
-
-  /**
-   * Sets the value of the 'doseNumberPositiveInt' field.
-   * @param value the value to set.
-   */
-  public void setDoseNumberPositiveInt(int value) {
-    this.doseNumberPositiveInt = value;
-  }
-
-  /**
-   * Gets the value of the 'doseNumberString' field.
-   * @return The value of the 'doseNumberString' field.
-   */
-  public java.lang.CharSequence getDoseNumberString() {
-    return doseNumberString;
-  }
-
-
-  /**
-   * Sets the value of the 'doseNumberString' field.
-   * @param value the value to set.
-   */
-  public void setDoseNumberString(java.lang.CharSequence value) {
-    this.doseNumberString = value;
   }
 
   /**
@@ -351,11 +329,11 @@ static {
     private java.lang.CharSequence status;
     private io.carrera.fhir.avro.models.CodeableConcept vaccineCode;
     private io.carrera.fhir.avro.models.CodeableConcept.Builder vaccineCodeBuilder;
+    private io.carrera.fhir.avro.models.CodeableConcept code;
+    private io.carrera.fhir.avro.models.CodeableConcept.Builder codeBuilder;
     private io.carrera.fhir.avro.models.Reference patient;
     private io.carrera.fhir.avro.models.Reference.Builder patientBuilder;
     private java.lang.Object occurrence;
-    private int doseNumberPositiveInt;
-    private java.lang.CharSequence doseNumberString;
 
     /** Creates a new Builder */
     private Builder() {
@@ -391,24 +369,23 @@ static {
       if (other.hasVaccineCodeBuilder()) {
         this.vaccineCodeBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getVaccineCodeBuilder());
       }
-      if (isValidValue(fields()[5], other.patient)) {
-        this.patient = data().deepCopy(fields()[5].schema(), other.patient);
+      if (isValidValue(fields()[5], other.code)) {
+        this.code = data().deepCopy(fields()[5].schema(), other.code);
         fieldSetFlags()[5] = other.fieldSetFlags()[5];
+      }
+      if (other.hasCodeBuilder()) {
+        this.codeBuilder = io.carrera.fhir.avro.models.CodeableConcept.newBuilder(other.getCodeBuilder());
+      }
+      if (isValidValue(fields()[6], other.patient)) {
+        this.patient = data().deepCopy(fields()[6].schema(), other.patient);
+        fieldSetFlags()[6] = other.fieldSetFlags()[6];
       }
       if (other.hasPatientBuilder()) {
         this.patientBuilder = io.carrera.fhir.avro.models.Reference.newBuilder(other.getPatientBuilder());
       }
-      if (isValidValue(fields()[6], other.occurrence)) {
-        this.occurrence = data().deepCopy(fields()[6].schema(), other.occurrence);
-        fieldSetFlags()[6] = other.fieldSetFlags()[6];
-      }
-      if (isValidValue(fields()[7], other.doseNumberPositiveInt)) {
-        this.doseNumberPositiveInt = data().deepCopy(fields()[7].schema(), other.doseNumberPositiveInt);
+      if (isValidValue(fields()[7], other.occurrence)) {
+        this.occurrence = data().deepCopy(fields()[7].schema(), other.occurrence);
         fieldSetFlags()[7] = other.fieldSetFlags()[7];
-      }
-      if (isValidValue(fields()[8], other.doseNumberString)) {
-        this.doseNumberString = data().deepCopy(fields()[8].schema(), other.doseNumberString);
-        fieldSetFlags()[8] = other.fieldSetFlags()[8];
       }
     }
 
@@ -439,22 +416,19 @@ static {
         fieldSetFlags()[4] = true;
       }
       this.vaccineCodeBuilder = null;
-      if (isValidValue(fields()[5], other.patient)) {
-        this.patient = data().deepCopy(fields()[5].schema(), other.patient);
+      if (isValidValue(fields()[5], other.code)) {
+        this.code = data().deepCopy(fields()[5].schema(), other.code);
         fieldSetFlags()[5] = true;
       }
-      this.patientBuilder = null;
-      if (isValidValue(fields()[6], other.occurrence)) {
-        this.occurrence = data().deepCopy(fields()[6].schema(), other.occurrence);
+      this.codeBuilder = null;
+      if (isValidValue(fields()[6], other.patient)) {
+        this.patient = data().deepCopy(fields()[6].schema(), other.patient);
         fieldSetFlags()[6] = true;
       }
-      if (isValidValue(fields()[7], other.doseNumberPositiveInt)) {
-        this.doseNumberPositiveInt = data().deepCopy(fields()[7].schema(), other.doseNumberPositiveInt);
+      this.patientBuilder = null;
+      if (isValidValue(fields()[7], other.occurrence)) {
+        this.occurrence = data().deepCopy(fields()[7].schema(), other.occurrence);
         fieldSetFlags()[7] = true;
-      }
-      if (isValidValue(fields()[8], other.doseNumberString)) {
-        this.doseNumberString = data().deepCopy(fields()[8].schema(), other.doseNumberString);
-        fieldSetFlags()[8] = true;
       }
     }
 
@@ -695,6 +669,82 @@ static {
     }
 
     /**
+      * Gets the value of the 'code' field.
+      * @return The value.
+      */
+    public io.carrera.fhir.avro.models.CodeableConcept getCode() {
+      return code;
+    }
+
+
+    /**
+      * Sets the value of the 'code' field.
+      * @param value The value of 'code'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Immunization.Builder setCode(io.carrera.fhir.avro.models.CodeableConcept value) {
+      validate(fields()[5], value);
+      this.codeBuilder = null;
+      this.code = value;
+      fieldSetFlags()[5] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'code' field has been set.
+      * @return True if the 'code' field has been set, false otherwise.
+      */
+    public boolean hasCode() {
+      return fieldSetFlags()[5];
+    }
+
+    /**
+     * Gets the Builder instance for the 'code' field and creates one if it doesn't exist yet.
+     * @return This builder.
+     */
+    public io.carrera.fhir.avro.models.CodeableConcept.Builder getCodeBuilder() {
+      if (codeBuilder == null) {
+        if (hasCode()) {
+          setCodeBuilder(io.carrera.fhir.avro.models.CodeableConcept.newBuilder(code));
+        } else {
+          setCodeBuilder(io.carrera.fhir.avro.models.CodeableConcept.newBuilder());
+        }
+      }
+      return codeBuilder;
+    }
+
+    /**
+     * Sets the Builder instance for the 'code' field
+     * @param value The builder instance that must be set.
+     * @return This builder.
+     */
+
+    public io.carrera.fhir.avro.models.Immunization.Builder setCodeBuilder(io.carrera.fhir.avro.models.CodeableConcept.Builder value) {
+      clearCode();
+      codeBuilder = value;
+      return this;
+    }
+
+    /**
+     * Checks whether the 'code' field has an active Builder instance
+     * @return True if the 'code' field has an active Builder instance
+     */
+    public boolean hasCodeBuilder() {
+      return codeBuilder != null;
+    }
+
+    /**
+      * Clears the value of the 'code' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Immunization.Builder clearCode() {
+      code = null;
+      codeBuilder = null;
+      fieldSetFlags()[5] = false;
+      return this;
+    }
+
+    /**
       * Gets the value of the 'patient' field.
       * @return The value.
       */
@@ -709,10 +759,10 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Immunization.Builder setPatient(io.carrera.fhir.avro.models.Reference value) {
-      validate(fields()[5], value);
+      validate(fields()[6], value);
       this.patientBuilder = null;
       this.patient = value;
-      fieldSetFlags()[5] = true;
+      fieldSetFlags()[6] = true;
       return this;
     }
 
@@ -721,7 +771,7 @@ static {
       * @return True if the 'patient' field has been set, false otherwise.
       */
     public boolean hasPatient() {
-      return fieldSetFlags()[5];
+      return fieldSetFlags()[6];
     }
 
     /**
@@ -766,7 +816,7 @@ static {
     public io.carrera.fhir.avro.models.Immunization.Builder clearPatient() {
       patient = null;
       patientBuilder = null;
-      fieldSetFlags()[5] = false;
+      fieldSetFlags()[6] = false;
       return this;
     }
 
@@ -785,9 +835,9 @@ static {
       * @return This builder.
       */
     public io.carrera.fhir.avro.models.Immunization.Builder setOccurrence(java.lang.Object value) {
-      validate(fields()[6], value);
+      validate(fields()[7], value);
       this.occurrence = value;
-      fieldSetFlags()[6] = true;
+      fieldSetFlags()[7] = true;
       return this;
     }
 
@@ -796,7 +846,7 @@ static {
       * @return True if the 'occurrence' field has been set, false otherwise.
       */
     public boolean hasOccurrence() {
-      return fieldSetFlags()[6];
+      return fieldSetFlags()[7];
     }
 
 
@@ -806,86 +856,7 @@ static {
       */
     public io.carrera.fhir.avro.models.Immunization.Builder clearOccurrence() {
       occurrence = null;
-      fieldSetFlags()[6] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'doseNumberPositiveInt' field.
-      * @return The value.
-      */
-    public int getDoseNumberPositiveInt() {
-      return doseNumberPositiveInt;
-    }
-
-
-    /**
-      * Sets the value of the 'doseNumberPositiveInt' field.
-      * @param value The value of 'doseNumberPositiveInt'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Immunization.Builder setDoseNumberPositiveInt(int value) {
-      validate(fields()[7], value);
-      this.doseNumberPositiveInt = value;
-      fieldSetFlags()[7] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'doseNumberPositiveInt' field has been set.
-      * @return True if the 'doseNumberPositiveInt' field has been set, false otherwise.
-      */
-    public boolean hasDoseNumberPositiveInt() {
-      return fieldSetFlags()[7];
-    }
-
-
-    /**
-      * Clears the value of the 'doseNumberPositiveInt' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Immunization.Builder clearDoseNumberPositiveInt() {
       fieldSetFlags()[7] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'doseNumberString' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getDoseNumberString() {
-      return doseNumberString;
-    }
-
-
-    /**
-      * Sets the value of the 'doseNumberString' field.
-      * @param value The value of 'doseNumberString'.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Immunization.Builder setDoseNumberString(java.lang.CharSequence value) {
-      validate(fields()[8], value);
-      this.doseNumberString = value;
-      fieldSetFlags()[8] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'doseNumberString' field has been set.
-      * @return True if the 'doseNumberString' field has been set, false otherwise.
-      */
-    public boolean hasDoseNumberString() {
-      return fieldSetFlags()[8];
-    }
-
-
-    /**
-      * Clears the value of the 'doseNumberString' field.
-      * @return This builder.
-      */
-    public io.carrera.fhir.avro.models.Immunization.Builder clearDoseNumberString() {
-      doseNumberString = null;
-      fieldSetFlags()[8] = false;
       return this;
     }
 
@@ -908,6 +879,16 @@ static {
         } else {
           record.vaccineCode = fieldSetFlags()[4] ? this.vaccineCode : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[4]);
         }
+        if (codeBuilder != null) {
+          try {
+            record.code = this.codeBuilder.build();
+          } catch (org.apache.avro.AvroMissingFieldException e) {
+            e.addParentField(record.getSchema().getField("code"));
+            throw e;
+          }
+        } else {
+          record.code = fieldSetFlags()[5] ? this.code : (io.carrera.fhir.avro.models.CodeableConcept) defaultValue(fields()[5]);
+        }
         if (patientBuilder != null) {
           try {
             record.patient = this.patientBuilder.build();
@@ -916,11 +897,9 @@ static {
             throw e;
           }
         } else {
-          record.patient = fieldSetFlags()[5] ? this.patient : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[5]);
+          record.patient = fieldSetFlags()[6] ? this.patient : (io.carrera.fhir.avro.models.Reference) defaultValue(fields()[6]);
         }
-        record.occurrence = fieldSetFlags()[6] ? this.occurrence :  defaultValue(fields()[6]);
-        record.doseNumberPositiveInt = fieldSetFlags()[7] ? this.doseNumberPositiveInt : (java.lang.Integer) defaultValue(fields()[7]);
-        record.doseNumberString = fieldSetFlags()[8] ? this.doseNumberString : (java.lang.CharSequence) defaultValue(fields()[8]);
+        record.occurrence = fieldSetFlags()[7] ? this.occurrence :  defaultValue(fields()[7]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;

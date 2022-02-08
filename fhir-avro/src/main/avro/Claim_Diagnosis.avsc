@@ -1,0 +1,33 @@
+{
+    "type": "record",
+    "name": "Claim_Diagnosis",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "sequence",
+            "type": "int"
+        },
+        {
+            "name": "diagnosis",
+            "type": [ "Reference", "CodeableConcept" ]
+        },
+        {
+            "name": "type",
+            "type": [ "null", {
+                "type": "array",
+                "items": "CodeableConcept"
+            } ],
+            "default": null
+        },
+        {
+            "name": "onAdmission",
+            "type": [ "null", "CodeableConcept" ],
+            "default": null
+        },
+        {
+            "name": "packageCode",
+            "type": [ "null", "CodeableConcept" ],
+            "default": null
+        }
+    ]
+}

@@ -1,11 +1,11 @@
 {
-    "name": "Insurance",
+    "name": "Claim_Insurance",
     "type": "record",
     "namespace": "io.carrera.fhir.avro.models",
     "fields": [
         {
-            "name": "id",
-            "type": [ "null", "string" ],
+            "name": "identifier",
+            "type": [ "null", "identifier_record" ],
             "default": null
         },
         {
@@ -18,7 +18,7 @@
         },
         {
             "name": "coverage",
-            "type": "Coverage"
+            "type": "Reference"
         }
     ]
 }

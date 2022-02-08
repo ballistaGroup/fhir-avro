@@ -1,0 +1,35 @@
+{
+    "name": "ClaimResponse_AddItem",
+    "type": "record",
+    "namespace": "io.carrera.fhir.avro.models",
+    "fields": [
+        {
+            "name": "itemSequence",
+            "type": ["null", {
+                "type": "array",
+                "items": "int"
+            }],
+            "default": null
+        },
+        {
+            "name": "detailSequence",
+            "type": ["null", {
+                "type": "array",
+                "items": "int"
+            }],
+            "default": null
+        },
+        {
+            "name": "adjudication",
+            "type": {
+                "type": "array",
+                "items": "ClaimResponse_Item_Adjudication"
+            }
+        },
+        {
+            "name": "serviced",
+            "type": ["null", "Date", "Period"],
+            "default": null
+        }
+    ]
+}
