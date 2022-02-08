@@ -41,6 +41,7 @@
             <import>${project.basedir}/src/main/avro/XsYearMonth.avsc</import>
             <import>${project.basedir}/src/main/avro/Instant.avsc</import>
             <import>${project.basedir}/src/main/avro/DateTime.avsc</import>
+            <import>${project.basedir}/src/main/avro/Time.avsc</import>
             <import>${project.basedir}/src/main/avro/Date.avsc</import>
             <import>${project.basedir}/src/main/avro/Decimal.avsc</import>
             <import>${project.basedir}/src/main/avro/Money.avsc</import>
@@ -64,8 +65,9 @@
             <import>${project.basedir}/src/main/avro/MedicationStatement.avsc</import>
             <import>${project.basedir}/src/main/avro/AllergyIntolerance_Reaction.avsc</import>
             <import>${project.basedir}/src/main/avro/AllergyIntolerance.avsc</import>
-            <import>${project.basedir}/src/main/avro/Observation.avsc</import>
             <import>${project.basedir}/src/main/avro/Ratio.avsc</import>
+            <import>${project.basedir}/src/main/avro/Observation_Component.avsc</import>
+            <import>${project.basedir}/src/main/avro/Observation.avsc</import>
             <import>${project.basedir}/src/main/avro/Goal_Target.avsc</import>
             <import>${project.basedir}/src/main/avro/Goal.avsc</import>
             <import>${project.basedir}/src/main/avro/RiskAssessment_Prediction.avsc</import>
