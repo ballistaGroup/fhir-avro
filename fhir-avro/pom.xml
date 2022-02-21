@@ -66,6 +66,7 @@
             <import>${project.basedir}/src/main/avro/AllergyIntolerance_Reaction.avsc</import>
             <import>${project.basedir}/src/main/avro/AllergyIntolerance.avsc</import>
             <import>${project.basedir}/src/main/avro/Ratio.avsc</import>
+            <import>${project.basedir}/src/main/avro/Observation_ReferenceRange.avsc</import>
             <import>${project.basedir}/src/main/avro/Observation_Component.avsc</import>
             <import>${project.basedir}/src/main/avro/Observation.avsc</import>
             <import>${project.basedir}/src/main/avro/Goal_Target.avsc</import>
