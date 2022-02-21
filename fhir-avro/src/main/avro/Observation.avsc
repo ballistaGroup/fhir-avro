@@ -71,6 +71,14 @@
         "items" : "Observation_Component"
       } ],
       "default" : null
+    },
+    {
+      "name" : "referenceRange",
+      "type" : ["null", {
+        "type" : "array",
+        "items" : "Observation_ReferenceRange"
+      } ],
+      "default" : null
     }
   ]
 }

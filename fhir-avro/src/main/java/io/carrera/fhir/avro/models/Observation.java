@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Observation extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 440105938732468712L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Observation\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"subject\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"effective\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]},{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",\"DateTime\"],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",\"DateTime\"],\"default\":null}]}],\"default\":null},{\"name\":\"issued\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Instant\",\"fields\":[{\"name\":\"value\",\"type\":\"XsDateTime\"}]}],\"default\":null},{\"name\":\"value\",\"type\":[\"null\",\"string\",\"int\",\"boolean\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Decimal\",\"fields\":[{\"name\":\"unscaled_value\",\"type\":\"bytes\",\"logicalType\":\"decimal\"},{\"name\":\"precision\",\"type\":\"int\"},{\"name\":\"scale\",\"type\":\"int\"}]}],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]},\"CodeableConcept\"],\"default\":null},{\"name\":\"interpretation\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"component\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Observation_Component\",\"fields\":[{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"value\",\"type\":[\"null\",\"Quantity\",\"CodeableConcept\",\"string\",\"boolean\",\"int\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]},{\"type\":\"record\",\"name\":\"Ratio\",\"fields\":[{\"name\":\"numerator\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"denominator\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]},{\"type\":\"record\",\"name\":\"Time\",\"fields\":[{\"name\":\"hour\",\"type\":\"int\"},{\"name\":\"minute\",\"type\":\"int\"},{\"name\":\"second\",\"type\":\"int\"},{\"name\":\"millisecond\",\"type\":[\"null\",\"int\"],\"default\":null}]},\"DateTime\",\"Period\"],\"default\":null},{\"name\":\"dateAbsentReason\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"interpretation\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null}]}}],\"default\":null}]}");
+  private static final long serialVersionUID = -4271542659961589416L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Observation\",\"namespace\":\"io.carrera.fhir.avro.models\",\"fields\":[{\"name\":\"resourceType\",\"type\":\"string\"},{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"status\",\"type\":\"string\"},{\"name\":\"category\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"CodeableConcept\",\"fields\":[{\"name\":\"coding\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coding\",\"fields\":[{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"version\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"userSelected\",\"type\":[\"null\",\"boolean\"],\"default\":null}]}}],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"subject\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Reference\",\"fields\":[{\"name\":\"reference\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"display\",\"type\":[\"null\",\"string\"],\"default\":null}]}],\"default\":null},{\"name\":\"encounter\",\"type\":[\"null\",\"Reference\"],\"default\":null},{\"name\":\"effective\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"DateTime\",\"fields\":[{\"name\":\"value\",\"type\":[{\"type\":\"record\",\"name\":\"XsDateTime\",\"fields\":[{\"name\":\"millis\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"zoneId\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"XsDate\",\"fields\":[{\"name\":\"value\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]},{\"type\":\"record\",\"name\":\"XsYearMonth\",\"fields\":[{\"name\":\"year\",\"type\":\"int\"},{\"name\":\"month\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"XsYear\",\"fields\":[{\"name\":\"value\",\"type\":\"int\"}]}]}]},{\"type\":\"record\",\"name\":\"Period\",\"fields\":[{\"name\":\"start\",\"type\":[\"null\",\"DateTime\"],\"default\":null},{\"name\":\"end\",\"type\":[\"null\",\"DateTime\"],\"default\":null}]}],\"default\":null},{\"name\":\"issued\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Instant\",\"fields\":[{\"name\":\"value\",\"type\":\"XsDateTime\"}]}],\"default\":null},{\"name\":\"value\",\"type\":[\"null\",\"string\",\"int\",\"boolean\",{\"type\":\"record\",\"name\":\"Quantity\",\"fields\":[{\"name\":\"value\",\"type\":[\"null\",{\"type\":\"record\",\"name\":\"Decimal\",\"fields\":[{\"name\":\"unscaled_value\",\"type\":\"bytes\",\"logicalType\":\"decimal\"},{\"name\":\"precision\",\"type\":\"int\"},{\"name\":\"scale\",\"type\":\"int\"}]}],\"default\":null},{\"name\":\"unit\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"system\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"code\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"comparator\",\"type\":[\"null\",\"string\"],\"default\":null}]},\"CodeableConcept\"],\"default\":null},{\"name\":\"interpretation\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"component\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Observation_Component\",\"fields\":[{\"name\":\"code\",\"type\":\"CodeableConcept\"},{\"name\":\"value\",\"type\":[\"null\",\"Quantity\",\"CodeableConcept\",\"string\",\"boolean\",\"int\",{\"type\":\"record\",\"name\":\"Range\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]},{\"type\":\"record\",\"name\":\"Ratio\",\"fields\":[{\"name\":\"numerator\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"denominator\",\"type\":[\"null\",\"Quantity\"],\"default\":null}]},{\"type\":\"record\",\"name\":\"Time\",\"fields\":[{\"name\":\"hour\",\"type\":\"int\"},{\"name\":\"minute\",\"type\":\"int\"},{\"name\":\"second\",\"type\":\"int\"},{\"name\":\"millisecond\",\"type\":[\"null\",\"int\"],\"default\":null}]},\"DateTime\",\"Period\"],\"default\":null},{\"name\":\"dateAbsentReason\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"interpretation\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null}]}}],\"default\":null},{\"name\":\"referenceRange\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Observation_ReferenceRange\",\"fields\":[{\"name\":\"low\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"high\",\"type\":[\"null\",\"Quantity\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"CodeableConcept\"],\"default\":null},{\"name\":\"appliesTo\",\"type\":[\"null\",{\"type\":\"array\",\"items\":\"CodeableConcept\"}],\"default\":null},{\"name\":\"age\",\"type\":[\"null\",\"Range\"],\"default\":null},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -87,6 +87,7 @@ static {
    private java.lang.Object value;
    private java.util.List<io.carrera.fhir.avro.models.CodeableConcept> interpretation;
    private java.util.List<io.carrera.fhir.avro.models.Observation_Component> component;
+   private java.util.List<io.carrera.fhir.avro.models.Observation_ReferenceRange> referenceRange;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -109,8 +110,9 @@ static {
    * @param value The new value for value
    * @param interpretation The new value for interpretation
    * @param component The new value for component
+   * @param referenceRange The new value for referenceRange
    */
-  public Observation(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.lang.Object effective, io.carrera.fhir.avro.models.Instant issued, java.lang.Object value, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> interpretation, java.util.List<io.carrera.fhir.avro.models.Observation_Component> component) {
+  public Observation(java.lang.CharSequence resourceType, java.lang.CharSequence id, java.lang.CharSequence status, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> category, io.carrera.fhir.avro.models.CodeableConcept code, io.carrera.fhir.avro.models.Reference subject, io.carrera.fhir.avro.models.Reference encounter, java.lang.Object effective, io.carrera.fhir.avro.models.Instant issued, java.lang.Object value, java.util.List<io.carrera.fhir.avro.models.CodeableConcept> interpretation, java.util.List<io.carrera.fhir.avro.models.Observation_Component> component, java.util.List<io.carrera.fhir.avro.models.Observation_ReferenceRange> referenceRange) {
     this.resourceType = resourceType;
     this.id = id;
     this.status = status;
@@ -123,6 +125,7 @@ static {
     this.value = value;
     this.interpretation = interpretation;
     this.component = component;
+    this.referenceRange = referenceRange;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -142,6 +145,7 @@ static {
     case 9: return value;
     case 10: return interpretation;
     case 11: return component;
+    case 12: return referenceRange;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -162,6 +166,7 @@ static {
     case 9: value = value$; break;
     case 10: interpretation = (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>)value$; break;
     case 11: component = (java.util.List<io.carrera.fhir.avro.models.Observation_Component>)value$; break;
+    case 12: referenceRange = (java.util.List<io.carrera.fhir.avro.models.Observation_ReferenceRange>)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -371,6 +376,23 @@ static {
   }
 
   /**
+   * Gets the value of the 'referenceRange' field.
+   * @return The value of the 'referenceRange' field.
+   */
+  public java.util.List<io.carrera.fhir.avro.models.Observation_ReferenceRange> getReferenceRange() {
+    return referenceRange;
+  }
+
+
+  /**
+   * Sets the value of the 'referenceRange' field.
+   * @param value the value to set.
+   */
+  public void setReferenceRange(java.util.List<io.carrera.fhir.avro.models.Observation_ReferenceRange> value) {
+    this.referenceRange = value;
+  }
+
+  /**
    * Creates a new Observation RecordBuilder.
    * @return A new Observation RecordBuilder
    */
@@ -427,6 +449,7 @@ static {
     private java.lang.Object value;
     private java.util.List<io.carrera.fhir.avro.models.CodeableConcept> interpretation;
     private java.util.List<io.carrera.fhir.avro.models.Observation_Component> component;
+    private java.util.List<io.carrera.fhir.avro.models.Observation_ReferenceRange> referenceRange;
 
     /** Creates a new Builder */
     private Builder() {
@@ -499,6 +522,10 @@ static {
         this.component = data().deepCopy(fields()[11].schema(), other.component);
         fieldSetFlags()[11] = other.fieldSetFlags()[11];
       }
+      if (isValidValue(fields()[12], other.referenceRange)) {
+        this.referenceRange = data().deepCopy(fields()[12].schema(), other.referenceRange);
+        fieldSetFlags()[12] = other.fieldSetFlags()[12];
+      }
     }
 
     /**
@@ -558,6 +585,10 @@ static {
       if (isValidValue(fields()[11], other.component)) {
         this.component = data().deepCopy(fields()[11].schema(), other.component);
         fieldSetFlags()[11] = true;
+      }
+      if (isValidValue(fields()[12], other.referenceRange)) {
+        this.referenceRange = data().deepCopy(fields()[12].schema(), other.referenceRange);
+        fieldSetFlags()[12] = true;
       }
     }
 
@@ -1185,6 +1216,46 @@ static {
       return this;
     }
 
+    /**
+      * Gets the value of the 'referenceRange' field.
+      * @return The value.
+      */
+    public java.util.List<io.carrera.fhir.avro.models.Observation_ReferenceRange> getReferenceRange() {
+      return referenceRange;
+    }
+
+
+    /**
+      * Sets the value of the 'referenceRange' field.
+      * @param value The value of 'referenceRange'.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Observation.Builder setReferenceRange(java.util.List<io.carrera.fhir.avro.models.Observation_ReferenceRange> value) {
+      validate(fields()[12], value);
+      this.referenceRange = value;
+      fieldSetFlags()[12] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'referenceRange' field has been set.
+      * @return True if the 'referenceRange' field has been set, false otherwise.
+      */
+    public boolean hasReferenceRange() {
+      return fieldSetFlags()[12];
+    }
+
+
+    /**
+      * Clears the value of the 'referenceRange' field.
+      * @return This builder.
+      */
+    public io.carrera.fhir.avro.models.Observation.Builder clearReferenceRange() {
+      referenceRange = null;
+      fieldSetFlags()[12] = false;
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     public Observation build() {
@@ -1238,6 +1309,7 @@ static {
         record.value = fieldSetFlags()[9] ? this.value :  defaultValue(fields()[9]);
         record.interpretation = fieldSetFlags()[10] ? this.interpretation : (java.util.List<io.carrera.fhir.avro.models.CodeableConcept>) defaultValue(fields()[10]);
         record.component = fieldSetFlags()[11] ? this.component : (java.util.List<io.carrera.fhir.avro.models.Observation_Component>) defaultValue(fields()[11]);
+        record.referenceRange = fieldSetFlags()[12] ? this.referenceRange : (java.util.List<io.carrera.fhir.avro.models.Observation_ReferenceRange>) defaultValue(fields()[12]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
