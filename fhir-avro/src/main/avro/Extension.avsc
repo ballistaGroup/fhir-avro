@@ -18,7 +18,7 @@
     },
      {
        "name": "value",
-       "type": ["null", "string", "int", "boolean", "Quantity", "Coding"],
+       "type": ["null", "string", "int", "boolean", "Quantity", "Coding", "Reference"],
        "default" : null
      }
     ]
